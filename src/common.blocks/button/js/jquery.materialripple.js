@@ -8,6 +8,7 @@ $.fn.materialripple = function(options) {
 	$.extend(defaults, options);
 
 	$('body').on('animationend webkitAnimationEnd oAnimationEnd', '.' + defaults.rippleClass, function () {
+	$('.button').removeAttr('style');
     removeRippleElement(this);
 });
 
