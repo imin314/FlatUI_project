@@ -1,0 +1,25 @@
+.arrow-button
+	cursor pointer
+	display inline-block
+	width 86px
+	height @width
+	border 6px color-cold solid
+	border-radius 50%
+	background-color white
+	&:hover
+		background-color color-cold
+		& .left
+		& .right
+			background-color color-cold
+			border-color white
+	&.disabled
+		pointer-events none
+		background-color color-bg
+		border-color color-bg
+		& .left
+		& .right
+			background-color color-bg
+			border-color white
+		
+
+@import 'arrow.styl'
