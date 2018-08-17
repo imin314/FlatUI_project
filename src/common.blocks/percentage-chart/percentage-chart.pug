@@ -1,24 +1,12 @@
-mixin percentageChart(percent)
-	if percent > 100
-		percent = 100
-	else if percent < 0
-		percent = 0
-	- var deg = Math.round(360 * (percent / 100));
-
-	.percentage-chart
+mixin percentageChart(idValue, percent)
+	.percentage-chart(id=idValue)
 		span.label= percent
-		if percent > 50
-			.pie(style='clip: rect(auto, auto, auto, auto)')
-		else
-			.pie
-		.left-side(style='transform: rotate('+deg+'deg)').half-circle
-		if percent > 50
-			.right-side(style='transform: rotate(180deg)').half-circle
-		else
+		.pie
+			.left-side.half-circle
 			.right-side.half-circle
 		.shadow
 
-+percentageChart(0)
-+percentageChart(38)
-+percentageChart(62)
-+percentageChart(89)
++percentageChart('percentage-chart1', 0)
++percentageChart('percentage-chart2', 38)
++percentageChart('percentage-chart3', 62)
++percentageChart('percentage-chart4', 89)

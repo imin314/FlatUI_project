@@ -14,9 +14,6 @@ $.fn.updateDonutChart = function () {
     if (percent > 50) {
     	el.find('.pie').css('clip', 'rect(auto, auto, auto, auto)');
     	el.find('.right-side').css('transform', 'rotate(180deg)');
-    } else {
-    	el.find('.pie').css('clip', 'rect(0, 1em, 1em, 0.5em)');
-    	el.find('.right-side').css('transform', 'rotate(0deg)');
     }
     el.find('.left-side').css('transform', 'rotate(' + deg + 'deg)');
 };
