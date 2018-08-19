@@ -1,0 +1,11 @@
+.tick-box
+	position relative
+	& input[type="checkbox"]
+		visibility hidden
+	& input[type="checkbox"]:checked + .tick-box__label
+		background-color #66bb6a
+		border-color #66bb6a
+	& input[type="checkbox"]:checked + .tick-box__label::after
+		opacity 1
+
+@import 'tick-box__label.styl'
