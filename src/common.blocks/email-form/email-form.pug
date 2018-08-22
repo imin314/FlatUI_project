@@ -1,0 +1,10 @@
+include ../input-field/input-field.pug
+
+mixin emailForm()
+	form.email-form(action='send_email.php' method='post' novalidate)
+		+inputField(type='text' name='name' placeholder='Your Name' arealabel='Name' required).email-form__name
+		+inputField(type='email' name='email' placeholder='Your Email' arealabel='Email' required).email-form__email
+		textarea.input-field.email-form__message(name='message' placeholder='Your Message' arealabel='Message')
+		input.email-form__button(type='submit' value='Submit')
+
++emailForm()
