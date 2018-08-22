@@ -1,0 +1,23 @@
+.bread-crumbs__item
+	width 2em
+	height @width
+	line-height 2em
+	text-align center
+	border-radius 50%
+	background color-warm
+	display inline-block
+	margin 0 1em
+	color white
+	font-weight bold
+	position relative
+	&::before
+		content ''
+		position absolute
+		top .9em
+		left -4em
+		width 4em
+		height .2em
+		background color-warm
+		z-index -1
+	&:first-child::before
+		display none
