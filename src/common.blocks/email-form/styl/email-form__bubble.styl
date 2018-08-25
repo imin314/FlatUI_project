@@ -1,0 +1,30 @@
+.email-form__bubble
+	display none
+	width 139px
+	padding 20px
+	border-radius 10px
+	position relative
+	&::before
+		display none
+		content ''
+		position absolute
+		top 20px
+		left -10px
+		width 10px
+		height @width
+		border-radius 3px
+		transform rotate(45deg)
+
+.email-form__bubble_error
+	background-color color-warm
+	display inline-block
+	&::before
+		background-color color-warm
+		display inline-block
+
+.email-form__bubble_good
+	background-color color-cold
+	display inline-block
+	&::before
+		background-color color-cold
+		display inline-block	
