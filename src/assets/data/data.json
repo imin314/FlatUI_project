@@ -1,0 +1,83 @@
+{
+	"buttons": [
+	{
+		"title": "button",
+		"size": "small",
+		"color": "main"
+	},
+	{
+		"title": "button",
+		"size": "normal",
+		"color": "main"
+	},
+	{
+		"title": "button",
+		"size": "normal",
+		"color": "secondary"
+	},
+	{
+		"title": "button",
+		"size": "small",
+		"color": "secondary"
+	},
+	{
+		"title": "button",
+		"size": "small",
+		"color": "main"
+	},
+	{
+		"title": "button",
+		"size": "normal",
+		"color": "main"
+	},
+	{
+		"title": "button",
+		"size": "normal",
+		"color": "secondary"
+	},
+	{
+		"title": "button",
+		"size": "small",
+		"color": "secondary"
+	},
+	{
+		"title": "button",
+		"size": "small",
+		"color": "main"
+	},
+	{
+		"title": "button",
+		"size": "normal",
+		"color": "main"
+	},
+	{
+		"title": "button",
+		"size": "normal",
+		"color": "secondary"
+	},
+	{
+		"title": "button",
+		"size": "small",
+		"color": "secondary"
+	}
+	],
+	"percentage-chart": {
+		"value-1": 0,
+		"value-2": 38,
+		"value-3": 62,
+		"value-4": 89
+	},
+	"donut-chart": {
+		"value-1": 10,
+		"value-2": 20,
+		"value-3": 40,
+		"value-4": 30
+	},
+	"slider": {
+		"value-1": 40,
+		"value-2": 75
+	},
+	"stages": {
+		"max": 5
+	}
+}

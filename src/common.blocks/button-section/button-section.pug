@@ -1,0 +1,15 @@
+include ../button/button.pug
+
+mixin button-section(content)
+	.button-section
+		h1.button-section__header standard buttons
+		.button-section__container
+			each val in content
+				- var buttonClass = ''
+				if val.size == 'small'
+					- buttonClass += 'button_size_small'
+				if val.color == 'secondary'
+					- buttonClass += ' button_color_secondary'
+				.button-section__button
+					+button(val.title)(class = buttonClass)
+		
