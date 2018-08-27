@@ -1,11 +1,3 @@
-a.arrow-button.left
-	.arrow
-
-a.arrow-button.right
-	.arrow
-
-a.arrow-button.disabled.left
-	.arrow
-
-a.arrow-button.disabled.right
-	.arrow
+mixin arrowButton()
+	a.arrow-button&attributes(attributes)
+		.arrow

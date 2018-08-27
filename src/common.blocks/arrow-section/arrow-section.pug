@@ -1,0 +1,12 @@
+include ../arrow-button/arrow-button.pug
+
+mixin arrowSection(content)
+	.arrow-section
+		h1.arrow-section__header arrow buttons
+		.arrow-section__container
+			each val in content
+				- var className = val.direction
+				if val.disabled
+					- className += ' disabled'
+				.arrow-section__button
+					+arrowButton()(class = className)

@@ -61,6 +61,32 @@
 		"color": "secondary"
 	}
 	],
+	"arrows": [
+	{
+		"direction" : "left",
+		"disabled" : false
+	},
+	{
+		"direction" : "right",
+		"disabled" : false
+	},
+	{
+		"direction" : "left",
+		"disabled" : true
+	},
+	{
+		"direction" : "right",
+		"disabled" : true
+	},
+	{
+		"direction" : "left",
+		"disabled" : false
+	},
+	{
+		"direction" : "right",
+		"disabled" : false
+	}
+	],
 	"percentage-chart": {
 		"value-1": 0,
 		"value-2": 38,

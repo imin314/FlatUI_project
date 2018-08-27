@@ -1,4 +1,5 @@
 include common.blocks/button-section/button-section.pug
+include common.blocks/arrow-section/arrow-section.pug
 
 - var data = require('./assets/data/data.json')
 
@@ -11,13 +12,6 @@ html
 	body
 		.page-container
 			.page-container__button-section
-				+button-section(data.buttons)
-		//-include common.blocks/button/button.pug
-		//-include common.blocks/arrow-button/arrow-button.pug
-		//-include common.blocks/percentage-chart/percentage-chart.pug
-		//-include common.blocks/donut-chart/donut-chart.pug
-		//-include common.blocks/slider/slider.pug
-		//-include common.blocks/toggle-switch/toggle-switch.pug
-		//-include common.blocks/tick-box/tick-box.pug
-		//-include common.blocks/bread-crumbs/bread-crumbs.pug
-		//-include common.blocks/news/news.pug
+				+buttonSection(data.buttons)
+			.page-container__arrow-section
+				+arrowSection(data.arrows)
