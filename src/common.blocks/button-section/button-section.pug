@@ -4,12 +4,27 @@ mixin buttonSection(content)
 	.button-section
 		h1.button-section__header standard buttons
 		.button-section__container
-			each val in content
-				- var buttonClass = ''
-				if val.size == 'small'
-					- buttonClass += 'button_size_small'
-				if val.color == 'secondary'
-					- buttonClass += ' button_color_secondary'
-				.button-section__button
-					+button(val.title)(class = buttonClass)
-		
+			.button-section__button
+				+button('button')(class = 'button_size_small')
+			.button-section__button
+				+button('button')
+			.button-section__button
+				+button('button')(class = 'button_color_secondary')
+			.button-section__button
+				+button('button')(class = 'button_color_secondary button_size_small')
+			.button-section__button
+				+button('button')(class = 'button_size_small')
+			.button-section__button
+				+button('button')
+			.button-section__button
+				+button('button')(class = 'button_color_secondary')
+			.button-section__button
+				+button('button')(class = 'button_color_secondary button_size_small')
+			.button-section__button
+				+button('button')(class = 'button_size_small')
+			.button-section__button
+				+button('button')
+			.button-section__button
+				+button('button')(class = 'button_color_secondary')
+			.button-section__button
+				+button('button')(class = 'button_color_secondary button_size_small')

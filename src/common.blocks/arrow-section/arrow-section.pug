@@ -4,9 +4,15 @@ mixin arrowSection(content)
 	.arrow-section
 		h1.arrow-section__header arrow buttons
 		.arrow-section__container
-			each val in content
-				- var className = val.direction
-				if val.disabled
-					- className += ' disabled'
-				.arrow-section__button
-					+arrowButton()(class = className)
+			.arrow-section__button
+				+arrowButton('left')
+			.arrow-section__button
+				+arrowButton('right')
+			.arrow-section__button
+				+arrowButton('left')(class='disabled')
+			.arrow-section__button
+				+arrowButton('right')(class='disabled')
+			.arrow-section__button
+				+arrowButton('left')
+			.arrow-section__button
+				+arrowButton('right')

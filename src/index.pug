@@ -1,8 +1,6 @@
 include common.blocks/button-section/button-section.pug
 include common.blocks/arrow-section/arrow-section.pug
 
-- var data = require('./assets/data/data.json')
-
 doctype html
 html
 	head
@@ -12,6 +10,6 @@ html
 	body
 		.page-container
 			.page-container__button-section
-				+buttonSection(data.buttons)
+				+buttonSection()
 			.page-container__arrow-section
-				+arrowSection(data.arrows)
+				+arrowSection()
