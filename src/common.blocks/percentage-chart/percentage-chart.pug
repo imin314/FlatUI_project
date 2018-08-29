@@ -1,12 +1,7 @@
-mixin percentageChart(idValue, percent)
-	.percentage-chart(id=idValue)
+mixin percentageChart(id, percent)
+	.percentage-chart(id= id)
 		span.label= percent
 		.pie
 			.left-side.half-circle
 			.right-side.half-circle
 		.shadow
-
-+percentageChart('percentage-chart1', 0)
-+percentageChart('percentage-chart2', 38)
-+percentageChart('percentage-chart3', 62)
-+percentageChart('percentage-chart4', 89)
