@@ -1,0 +1,10 @@
+include ../slider/slider.pug
+
+mixin sliderSection()
+	.slider-section
+		h1.slider-section__header sliders
+		.slider-section__container
+			.slider-section__slider
+				+slider('slider_type_tooltip')
+			.slider-section__slider
+				+slider('slider_type_scale')

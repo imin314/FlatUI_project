@@ -238,7 +238,7 @@
             value = value.toFixed(decimal.length);
           }
 
-          return parseFloat(value);
+          return parseInt(value);
         }
       },
       {

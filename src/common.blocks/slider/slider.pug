@@ -1,8 +1,7 @@
-.slider1
-
-.slider-container
-	.slider2
-	ul.scale
-		- for (var i = 0; i <= 100; i+=25){
-			li.scale-item= i
-		- }
+mixin slider(className)
+	.slider(class= className)
+	- if (className == 'slider_type_scale')
+		ul.slider__scale
+			- for (var i = 0; i <= 100; i+=25){
+				li.slider__scale-item= i
+			- }

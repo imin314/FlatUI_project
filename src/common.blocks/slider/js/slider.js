@@ -1,13 +1,13 @@
-import './jquery-asRange.js'
-	
+import './asRange.js'
 $(document).ready(function() {
-	$('.slider1').asRange({
+	$('.slider_type_tooltip').asRange({
 	tip: { 
 		active: 'onMove',
 	},
 	step: 0.1
 	}); 
-	$('.slider2').asRange({
+	
+	$('.slider_type_scale').asRange({
 		tip: false,
 		scale: {
     scale: {
