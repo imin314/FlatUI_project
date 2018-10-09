@@ -1,4 +1,5 @@
 .bread-crumbs__item
+	font-size 26.98px
 	width 2em
 	height @width
 	line-height 2em
@@ -6,18 +7,7 @@
 	border-radius 50%
 	background color-warm
 	display inline-block
-	margin 0 1em
 	color white
 	font-weight bold
-	position relative
-	&::before
-		content ''
-		position absolute
-		top .9em
-		left -4em
-		width 4em
-		height .2em
-		background color-warm
-		z-index -1
-	&:first-child::before
-		display none
+	flex-grow 0
+	flex-shrink 0
