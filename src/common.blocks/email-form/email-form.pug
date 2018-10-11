@@ -1,7 +1,8 @@
 include ../input-field/input-field.pug
+include ../button/button.pug
 
-mixin emailForm()
-	form.email-form(id='email-form' action='send_email.php' method='post')
+mixin emailForm(id)
+	form.email-form(id=id action='send_email.php' method='post')
 		.email-form__name
 			+inputField(type='text' name='name' placeholder='Your Name' arealabel='Name' required)
 			.email-form__bubble
@@ -9,6 +10,5 @@ mixin emailForm()
 			+inputField(type='email' id='email' name='email' placeholder='Your Email' arealabel='Email' required)
 			.email-form__bubble
 		textarea.input-field.email-form__message(name='message' placeholder='Your Message' arealabel='Message')
-		input.email-form__button(type='submit' value='Submit')
-
-+emailForm()
+		.email-form__button
+			+button('submit')(type='submit' value='Submit')

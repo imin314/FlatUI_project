@@ -1,3 +1,8 @@
-label.toggle-switch
-	input.toggle-switch__checkbox(type="checkbox")
-	span.toggle-switch__slider
+mixin toggleSwitch(value)
+	label.toggle-switch
+		- if (value)
+			input.toggle-switch__checkbox(type="checkbox" checked)
+		- else
+			input.toggle-switch__checkbox(type="checkbox")
+		span.toggle-switch__slider
+		.toggle-switch__text

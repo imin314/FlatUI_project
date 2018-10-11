@@ -25,8 +25,8 @@ form.addEventListener("submit", function (event) {
 }, false);*/
 import 'jquery-validation';
 
-$(document).ready(function(){
-	var form = $('#email-form');
+$.fn.addEmailForm = function () {
+	var form = $(this);
 	var inputs = form.find('input[type=text],input[type=email]');
 	
 	form.validate({
@@ -50,8 +50,7 @@ $(document).ready(function(){
 		});
 	});
     
-    
-});
+};
 
 /*
 $.fn.checkValidity = function () {
