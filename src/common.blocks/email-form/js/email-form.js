@@ -37,8 +37,7 @@ $.fn.addEmailForm = function () {
 	inputs.each(function () {
 		var input = $(this);
 		input.blur(function() {
-			var bubble = input.next();
-			console.log(bubble);
+			var bubble = input.parent().next();
 			if(!input.valid()) {
 				bubble.removeClass("email-form__bubble_good").addClass("email-form__bubble_error");
 				bubble.text("Error");

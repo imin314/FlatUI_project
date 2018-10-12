@@ -4,11 +4,13 @@ include ../button/button.pug
 mixin emailForm(id)
 	form.email-form(id=id action='send_email.php' method='post')
 		.email-form__name
-			+inputField(type='text' name='name' placeholder='Your Name' arealabel='Name' required)
+			.email-form__input
+				+inputField(type='text' name='name' placeholder='Your Name' arealabel='Name' required)
 			.email-form__bubble
 		.email-form__email
-			+inputField(type='email' id='email' name='email' placeholder='Your Email' arealabel='Email' required)
+			.email-form__input
+				+inputField(type='email' id='email' name='email' placeholder='Your Email' arealabel='Email' required)
 			.email-form__bubble
 		textarea.input-field.email-form__message(name='message' placeholder='Your Message' arealabel='Message')
 		.email-form__button
-			+button('submit')(type='submit' value='Submit')
+			+button('submit')(type='submit' value='Submit' class='button_color_reverse')
