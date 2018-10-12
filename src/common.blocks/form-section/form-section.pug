@@ -10,9 +10,13 @@ mixin formSection()
 				+emailForm('email-form')
 			.form-section__toggles
 				h1.form-section__header toggles
-				+toggleSwitch(false)
-				+toggleSwitch(true)
-			.form-section__tickbox
+				.form-section__toggle
+					+toggleSwitch(false)
+				.form-section__toggle
+					+toggleSwitch(true)
+			.form-section__tickboxes
 				h1.form-section__header tick boxes
-				+tickBox('tickbox1', true)
-				+tickBox('tickbox2', false)
+				.form-section__tickbox
+					+tickBox('tickbox1', true)
+				.form-section__tickbox
+					+tickBox('tickbox2', false)
