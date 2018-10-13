@@ -1,0 +1,12 @@
+mixin userCard(user)
+	- var image = require("./assets/img/"+ user.img)
+
+	.user-card&attributes(attributes)
+		.user-card__photo(style='background-image: url('+image+')')
+		.user-card__box
+			h2.user-card__name= user.name
+			h3.user-card__position= user.position
+			.user-card__icons
+				i.user-card__icon.fab.fa-facebook-f
+				i.user-card__icon.user-card__icon_highlighted.fab.fa-twitter
+				i.user-card__icon.fab.fa-dribbble

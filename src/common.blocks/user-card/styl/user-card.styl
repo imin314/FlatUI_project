@@ -1,0 +1,62 @@
+.user-card__box
+	display inline-block
+	vertical-align top
+	background-color color-bg
+	width 312px
+	height 179px
+	border-radius 10px
+	text-align center
+	position relative
+	padding 23px
+	&::before
+		background-color inherit
+		content ''
+		position absolute
+		top 70px
+		left -12px
+		width 35px
+		height @width
+		mask-image url('/assets/img/user-box-bubble.svg')
+
+.user-card__photo
+	display inline-block
+	border-radius 50%
+	border 10px solid color-bg
+	margin-right 20px
+	width 181px
+	height @width
+
+.user-card__name
+	font-size 34.69px
+	color color-warm
+	text-transform capitalize
+	font-weight normal
+	margin-bottom 10px
+
+.user-card__position
+	font-size 21.2px
+	color #4f4f4f
+	font-weight bold
+	margin-bottom 20px
+	text-transform uppercase
+
+.user-card__icon
+	font-size 40px
+	color #4f4f4f
+	margin-right 20px
+	&:last-child
+		margin-right 0
+	
+.user-card__icon_highlighted
+	color color-warm
+
+.user-card_colored
+	& .user-card__box
+		background-color color-cold
+		&::before
+			background-color color-cold
+		& *
+			color white
+
+
+	

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('.drop-down__button').click(function () {
+	$('.drop-down__button, .drop-down__label').click(function () {
 		var list = $(this).parent().siblings(".drop-down__list");
 		list.toggleClass("drop-down__list_active");
 	});
