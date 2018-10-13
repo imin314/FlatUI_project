@@ -1,0 +1,11 @@
+include ..\search-box\search-box.pug
+
+mixin searchSection()
+	.search-section
+		h1.search-section__header search / drop down
+		.search-section__container
+			.search-section__search-box
+				+searchBox()
+			.search-section__search-box
+				+searchBox()(class="search-box__input-field_filled")
+			
