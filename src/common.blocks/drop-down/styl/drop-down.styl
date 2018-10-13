@@ -1,0 +1,60 @@
+.drop-down__textarea
+	display flex
+	flex-direction row
+	flex-wrap nowrap
+
+.drop-down__label
+	background color-bg
+	font-size 26.98px
+	padding 11px 28px
+	color #888
+	border none
+	border-top-left-radius 6px
+	border-bottom-left-radius 6px
+	width 100%
+	-webkit-appearance none
+
+.drop-down__button
+	border none
+	background-color color-cold
+	border-top-right-radius 6px
+	border-bottom-right-radius 6px
+	cursor pointer
+	-webkit-appearance none
+	font-size 26.98px
+	padding 11px 22px
+	vertical-align top
+	position relative
+	&::before
+		border 3px solid white
+		border-top none
+		border-right none
+		content ""
+		height 21px
+		width 21px
+		left 11px
+		position absolute
+		top 11px
+		transform rotate(-45deg)
+
+.drop-down__list
+	margin 0
+	padding 0
+	display none
+
+.drop-down__item
+	background-color color-cold
+	color white
+	font-size 26.98px
+	padding 10px 20px
+	list-style none
+	&:last-of-type
+		border-bottom-left-radius 6px
+		border-bottom-right-radius 6px
+	&:hover
+	&:active
+		background-color #28a290
+
+.drop-down__list_active
+	display block
+		

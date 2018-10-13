@@ -1,4 +1,5 @@
 include ..\search-box\search-box.pug
+include ..\drop-down\drop-down.pug
 
 mixin searchSection()
 	.search-section
@@ -8,4 +9,6 @@ mixin searchSection()
 				+searchBox()
 			.search-section__search-box
 				+searchBox()(class="search-box__input-field_filled")
+			.search-section__drop-down
+				+dropDown('dropDown', ['This is option 1','This is option 2','This is option 3','This is option 4'])
 			
