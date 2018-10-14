@@ -8,7 +8,6 @@ import './jquery.materialripple.js';
 				"color": currentColors["color"],
 				"box-shadow": "none"
 			});
-			alert("test");
 		}
 		});
 		$('.ripple').materialripple();

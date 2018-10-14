@@ -1,0 +1,9 @@
+mixin newsCard(data)
+	- var image = require("./assets/img/"+ data.image)
+
+	.news-card
+		.news-card__image(style='background-image: url('+image+')')
+		.news-card__content
+			.news-card__title= data.title
+			.news-card__date= data.date
+			.news-card__text= data.text

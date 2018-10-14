@@ -1,0 +1,11 @@
+mixin eventCard(data)
+	- var image = require("./assets/img/"+ data.image)
+
+	.event-card
+		.event-card__image(style='background-image: url('+image+')')
+		.event-card__date= 24
+			.event-card__month= aug
+		.event-card__title= data.title
+		.event-card__text= data.text
+		.event-section__button
+			+button('add to calendar')
