@@ -2,13 +2,21 @@
 	background-color color-cold
 	border-radius 10px
 	width 100%
-	position relative
-	padding 45px
+	height @width
+	display flex
 
 .event-card__image
-	width 185px
 	background-repeat no-repeat
-	float left
+	background-position 0px 0px
+	background-clip border-box
+	width 182px
+	flex-shrink 0
+	border-top-left-radius 10px
+	border-bottom-left-radius 10px
+
+.event-card__content
+	padding 20px
+	overflow hidden
 
 .event-card__title
 	font-size 24.09px
@@ -19,7 +27,6 @@
 .event-card__date
 	font-size 140px
 	color white
-	margin-bottom 50px
 	font-weight bold
 
 .event-card__month
@@ -30,4 +37,5 @@
 .event-card__text
 	font-size 21.2px
 	overflow hidden
+	color white
 
