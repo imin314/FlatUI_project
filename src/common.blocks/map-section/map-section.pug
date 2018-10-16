@@ -1,3 +1,5 @@
+include ../map/map.pug
+
 mixin mapSection()
     .map-section
         .map-section__header location
@@ -5,8 +7,10 @@ mixin mapSection()
             .map-section__map
                 +map()
             .map-section__footer
-                .map-section__title
+                .map-section__title Meet us!
                 .map-section__address
+                    div 1259 California st
+                    div San francisco, Ca
                 .map-section__icons
                     .map-section__search
-                    .map-section__tag
+                    .map-section__marker

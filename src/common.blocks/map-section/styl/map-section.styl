@@ -1,0 +1,60 @@
+.map-section__header
+	text-transform uppercase
+	font-size 34.69px
+	color color-text
+	font-weight bold
+	text-align center
+	margin-bottom 57px
+
+.map-section__container
+	width 100%
+
+.map-section__map
+	width 100%
+
+.map-section__footer
+	padding 40px 60px
+	background-color color-warm
+	border-bottom-left-radius 10px
+	border-bottom-right-radius 10px
+
+.map-section__title
+	color white
+	float left
+	font-size 58px
+
+.map-section__address
+	float left
+	& div
+		color white
+		text-transform uppercase
+		font-size 24.09px
+		font-weight bold
+
+.map-section__icons
+	float right
+
+.map-section__search
+	width 20px
+	height @width 
+	border-radius 50%
+	border 3px solid white
+	position relative
+	&::before
+		content ''
+		height 3px
+		width 40px
+		position absolute
+		border-left 10px solid white
+		border-right 10px solid white
+		top 10px
+		left -5px
+	&::after
+		content ''
+		height 40px
+		width 3px
+		position absolute
+		border-top 10px solid white
+		border-bottom 10px solid white
+		top -10px
+		left 10px
