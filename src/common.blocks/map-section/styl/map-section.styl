@@ -8,15 +8,19 @@
 
 .map-section__container
 	width 100%
+	position relative
 
 .map-section__map
 	width 100%
+	height 400px
 
 .map-section__footer
 	padding 40px 60px
 	background-color color-warm
 	border-bottom-left-radius 10px
 	border-bottom-right-radius 10px
+	clearfix()
+
 
 .map-section__title
 	color white
@@ -35,26 +39,42 @@
 	float right
 
 .map-section__search
-	width 20px
+	display inline-block
+	width 30px
 	height @width 
 	border-radius 50%
 	border 3px solid white
 	position relative
 	&::before
 		content ''
+		box-sizing content-box
 		height 3px
-		width 40px
+		width 10px
 		position absolute
-		border-left 10px solid white
-		border-right 10px solid white
+		border-left 16px solid white
+		border-right 16px solid white
 		top 10px
-		left -5px
+		left -10px
 	&::after
 		content ''
-		height 40px
+		box-sizing content-box
+		height 10px
 		width 3px
 		position absolute
-		border-top 10px solid white
-		border-bottom 10px solid white
+		border-top 16px solid white
+		border-bottom 16px solid white
 		top -10px
 		left 10px
+
+.map-section__pin
+	display inline-block
+	width 32px
+	height 44px
+
+.map-section__main-pin
+	width 76px
+	height 107px
+	position absolute
+	top 50%
+	left 50%
+	filter drop-shadow(2em 1em 1em rgba(0,0,0,0.25))

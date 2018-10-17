@@ -1,5 +1,5 @@
 include ../map/map.pug
-
+include ../pin/pin.pug
 mixin mapSection()
     .map-section
         .map-section__header location
@@ -13,4 +13,7 @@ mixin mapSection()
                     div San francisco, Ca
                 .map-section__icons
                     .map-section__search
-                    .map-section__marker
+                    .map-section__pin
+                        +pin("white", "transparent")
+            .map-section__main-pin
+                +pin("#e75735", "white")
