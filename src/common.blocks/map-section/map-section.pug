@@ -4,8 +4,10 @@ mixin mapSection()
     .map-section
         .map-section__header location
         .map-section__container
-            .map-section__map
-                +map()
+            .map-section__map(id="map-id")
+                +map("map1")
+                .map-section__main-pin
+                    +pin("#e75735", "white")
             .map-section__footer
                 .map-section__title Meet us!
                 .map-section__address
@@ -15,5 +17,3 @@ mixin mapSection()
                     .map-section__search
                     .map-section__pin
                         +pin("white", "transparent")
-            .map-section__main-pin
-                +pin("#e75735", "white")
