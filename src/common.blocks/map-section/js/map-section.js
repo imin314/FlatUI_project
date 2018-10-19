@@ -5,25 +5,32 @@ $(document).ready(function(){
 		//$('#your_iframe').attr('src', $('#your_iframe').attr('src'));
 	});
 
+	var drag = false;
 	$('.map-section__pin').click(function(){
-		
-	}
-	);
+		drag = drag === true ? false : true;
+	});
 
-	var map = $("#map-id");
-		var mapOffset = map.offset();
-		map.mousemove(function(e){
-			
+	$(".map-section__map").mousedown(function () {
+			if (drag === true){
+				var map = $(this);
+				var mapOffset = map.offset();
+				map.mousemove(function(e){
+					var leftPos  = map[0].getBoundingClientRect().left + $(window)['scrollLeft']();
+					var topPos   = map[0].getBoundingClientRect().top + $(window)['scrollTop']();
+					var pin = $('.map-section__main-pin');
+					var pinWidth = pin.width();
+					var pinHeight = pin.height();
+					$('.map-section__main-pin').css({'top': e.pageY - topPos - (pinHeight/2), 'left': e.pageX-leftPos - pinWidth/2, cursor: 'pointer'});
+			});
+			}	
+		});
 
-var leftPos  = map[0].getBoundingClientRect().left   + $(window)['scrollLeft']();
-var rightPos = map[0].getBoundingClientRect().right  + $(window)['scrollLeft']();
-var topPos   = map[0].getBoundingClientRect().top    + $(window)['scrollTop']();
-var bottomPos= map[0].getBoundingClientRect().bottom + $(window)['scrollTop']();
-
-			console.log('x '+ e.pageX);
-			console.log('y '+ e.pageY);
-			console.log('mapOffset.leftD '+ leftPos);
-			console.log('mapOffset.topD '+ topPos);
-			$('.map-section__main-pin').css({'top': e.pageY - topPos, 'left': e.pageX-leftPos});
-	  });
-});
+		$(".map-section__map").mouseup(function() {
+		if (drag === true){
+			$(this).off("mousemove");
+			drag = false;
+			alert(drag)
+		}
+		});
+	
+	});
