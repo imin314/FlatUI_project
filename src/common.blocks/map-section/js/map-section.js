@@ -42,9 +42,5 @@ $(document).ready(function(){
 			$("#map1").css("pointer-events", "auto");
 		}
 		});
-
-		$("#map1").mousedown(function() {
-			$('.map-section__main-pin').css('display', 'none');
-		});
 	
 	});
