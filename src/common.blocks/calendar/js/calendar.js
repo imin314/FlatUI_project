@@ -45,11 +45,17 @@ if (typeof jQuery === 'undefined') { throw new Error('DCalendar.Picker: This plu
 
 				//Trigger select event
 				that.selectDate();
+				$('.calendar-selected-day').text(that.selected.getDate());
 				that.selectedView();
 			});
 			this.calendar.find('.calendar-prev').click(function () { that.getNewMonth('left', true); });
 			this.calendar.find('.calendar-next').click(function () { that.getNewMonth('right', true); });
-			this.calendar.find('.calendar-curr-month').click(function () { that.getMonths(); });
+			this.calendar.find('.calendar-curr-month').click(function () { that.getMonths(); 
+				
+				////////////////////////
+				////////////////////////////ext("Months");});
+//////////////////////////////
+
 		    this.calendar.find('.calendar-date-holder').on('click', '.calendar-dates .date:not(.date.month) a', function () {
 		    	var span = $(this).parent(),
 		    		day = parseInt($(this).text()),
@@ -68,6 +74,8 @@ if (typeof jQuery === 'undefined') { throw new Error('DCalendar.Picker: This plu
 			}).on('click', '.calendar-dates .date.month a', function () {
 				var selMonth = parseInt($(this).parent().attr('data-month'));
 				that.viewMode = 'days';
+				that.date.setDate(1);
+				$('.calendar-selected-day').text('1');
 				that.date.setMonth(selMonth);
 				that.getNewMonth(null, false);
 			});
@@ -398,7 +406,7 @@ if (typeof jQuery === 'undefined') { throw new Error('DCalendar.Picker: This plu
 				wrapper = $('<div class="calendar-wrapper load"></div>'),
 				cardhead = $('<section class="calendar-head-card"><div class="calendar-selected-day"></div></section>'),
 				container = $('<div class="calendar-container"></div>'),
-				calhead = $('<section class="calendar-top-selector"><span class="calendar-prev">&lsaquo;</span><span class="calendar-curr-month"></span><span class="calendar-next">&rsaquo;</span></section>'),
+				calhead = $('<section class="calendar-top-selector"><div class="calendar-prev"></div><div class="calendar-curr-month"></div><div class="calendar-next"></div></section>'),
 				datesgrid = $('<section class="calendar-grid">'
 							+ '<div class="calendar-labels"><span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span></div>'
 							+ '<div class="calendar-date-holder"><section class="calendar-dates"></section></div></section>'),
@@ -470,7 +478,7 @@ if (typeof jQuery === 'undefined') { throw new Error('DCalendar.Picker: This plu
 	$.fn.dcalendar.defaults = {
 		mode : 'calendar',
 		format: 'mm/dd/yyyy',
-		theme: 'blue',
+		theme: 'orange',
 		readOnly: true
 	};
 
