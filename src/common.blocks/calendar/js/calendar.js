@@ -51,10 +51,9 @@ if (typeof jQuery === 'undefined') { throw new Error('DCalendar.Picker: This plu
 			this.calendar.find('.calendar-prev').click(function () { that.getNewMonth('left', true); });
 			this.calendar.find('.calendar-next').click(function () { that.getNewMonth('right', true); });
 			this.calendar.find('.calendar-curr-month').click(function () { that.getMonths(); 
-				
-				////////////////////////
-				////////////////////////////ext("Months");});
-//////////////////////////////
+			that.calendar.find('.calendar-top-selector').addClass('large');
+			that.calendar.find('.calendar-head-card').addClass('hidden');
+			});
 
 		    this.calendar.find('.calendar-date-holder').on('click', '.calendar-dates .date:not(.date.month) a', function () {
 		    	var span = $(this).parent(),
@@ -75,7 +74,9 @@ if (typeof jQuery === 'undefined') { throw new Error('DCalendar.Picker: This plu
 				var selMonth = parseInt($(this).parent().attr('data-month'));
 				that.viewMode = 'days';
 				that.date.setDate(1);
-				$('.calendar-selected-day').text('1');
+				that.calendar.find('.calendar-selected-day').text('1');
+				that.calendar.find('.calendar-top-selector').removeClass('large');
+				that.calendar.find('.calendar-head-card').removeClass('hidden');
 				that.date.setMonth(selMonth);
 				that.getNewMonth(null, false);
 			});

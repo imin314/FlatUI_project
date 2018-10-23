@@ -57,12 +57,14 @@
 	font-size: 18px;
 	padding: 20px;
 }
+.calendar-head-card.hidden{
+		display: none;
+	}
 	.calendar-selected-day{
 		font-family: 'Lato Light', sans-serif;
 		font-size: 154.16px;
 		text-align: center;
 		color: white;
-		height: 208px;
 	}
 
 	.calendar-footer .calendar-date-wrapper {
@@ -87,6 +89,9 @@
 	transition: all .25s ease;
 }
 
+.calendar-top-selector.large {
+	height: 200px;
+}
 	.calendar-top-selector .calendar-curr-month { 
 		padding-bottom: 4px;
 		font-family: 'Lato Light', sans-serif;
