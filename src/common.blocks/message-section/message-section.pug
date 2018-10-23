@@ -1,0 +1,7 @@
+include ../messenger/messenger.pug
+
+mixin messageSection()
+	.message-section
+		.message-section__header messaging
+		.message-section__chat
+			+messenger({name: "Sarah Brown", image: "sarah-brown.jpg"})
