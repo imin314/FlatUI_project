@@ -22,6 +22,7 @@
   margin-left: -20px;
   background-color: #e75735;
   border-radius: 50%;
+  outline: none;
 }
 /*.asRange .asRange-pointer:before {
   position: absolute;

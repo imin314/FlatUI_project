@@ -6,11 +6,11 @@ mixin messenger(data)
 		.messenger__header
 			.messenger__name= data.name
 			.messenger__photo(style='background-image: url('+image+')')
+		.messenger__icons
 		.messenger__container
-			.messenger__icons
 			.messenger__inbox= "Hey! So are we cool to meet at the art gallery? Say 8pm"
 			textarea.messenger__outbox(name='outbox' placeholder='Type Something' ) Yeah that sounds great. See you then.
 			.messenger__button
-				+button('reply')(type='submit' value='Submit')
+				+button('reply')(type='submit' value='Submit' class='button_color_reverse')
 
 		

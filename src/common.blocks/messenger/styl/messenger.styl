@@ -1,0 +1,98 @@
+.messenger
+	width 100%
+	height 826px
+	border-radius 20px
+	overflow hidden
+
+	&__header
+		background-color #4eb7a8
+		height 225px
+		width 100%
+		box-shadow inset 0 -65px 0 #46ab9d
+		position relative
+		text-align center
+		padding-top 45px
+	&__name
+		color white
+		font-size 65.52px
+		font-family 'Lato-Light', sans-serif
+		font-weight normal
+		text-transform capitalize
+	&__photo
+		width 165px
+		height @width 
+		border 10px solid #e5e5e5
+		border-radius 50%
+		position absolute
+		left 50%
+		top 100%
+		transform translateX(-50%) translateY(-50%)
+		background-size cover
+		background-repeat no-repeat
+	&__icons
+		position relative 
+		&::before
+			content ''
+			background-image url('/assets/img/bubble-icon.svg')
+			background-repeat no-repeat
+			position absolute
+			top 42px
+			left 56px
+			width 40px
+			height @width
+		&::after
+			content ''
+			background-image url('/assets/img/camera-icon.svg')
+			background-repeat no-repeat
+			position absolute
+			top 42px
+			right 56px
+			width 47px
+			height 38px
+	&__container
+		background-color #f2f2f2
+		height 600px
+		padding 35px
+		padding-top 120px
+		display flex
+		flex-direction column
+		flex-wrap nowrap
+		justify-content space-between
+	&__inbox
+		color #8e8d8d
+		font-size 24.08px
+		font-weight bold
+		background-color white
+		border-radius 20px
+		padding 20px
+		height 135px
+		width 100%
+		position relative
+		&::before
+			content ''
+			width 20px
+			height @width
+			display block
+			position absolute
+			background-color white
+			top -10px
+			left 50%
+			transform translateX(-50%) rotate(45deg)
+			border-radius 5px
+	&__outbox
+		color #8e8d8d
+		font-size 24.08px
+		font-weight bold
+		background-color #e5e5e5
+		border-radius 20px
+		border 8px solid white
+		padding 20px
+		resize none
+		width 100%
+		height 170px
+		outline none
+	&__button
+		width 100%
+
+
+
