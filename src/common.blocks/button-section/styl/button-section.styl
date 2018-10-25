@@ -1,6 +1,17 @@
-@import 'button-section__header.styl'
-@import 'button-section__container.styl'
-@import 'button-section__button.styl'
-
 .button-section
     width 100%
+
+    &__header
+        margin-bottom 5rem
+
+    &__container
+        display flex
+        flex-direction row
+        flex-wrap wrap
+        justify-content space-between
+        align-content space-between
+        align-items baseline
+        width 100%
+        height 184px
+    &__button:nth-child()
+        @media screen and (max-width: screen-sm)
