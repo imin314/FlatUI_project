@@ -1,2 +1,18 @@
-@import 'arrow-section__header.styl'
-@import 'arrow-section__container.styl'
+.arrow-section
+	&__header
+		margin-bottom 2.5rem
+
+	&__container
+		display flex
+		flex-direction row
+		justify-content space-between
+		@media screen and (max-width: screen-sm)
+			width 260px
+			flex-wrap wrap
+			margin 0 auto
+	
+	&__button
+		margin-bottom 1.3rem
+		&:nth-child(2n+2)
+			@media screen and (max-width: screen-sm)
+				order: 2

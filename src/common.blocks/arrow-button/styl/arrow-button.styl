@@ -1,46 +1,42 @@
-@import 'arrow.styl'
-
 .arrow-button
 	cursor pointer
 	display inline-block
-	width 86px
+	width 66px
 	height @width
-	border 6px color-cold solid
+	border 4px color-cold solid
 	border-radius 50%
 	background-color white
 	&:hover, &:focus
 		background-color color-cold
-		& .arrow
+		& .arrow-button__arrow
 			background-color color-cold
 			border-color white
-	&.disabled
+	&_disabled
 		pointer-events none
 		background-color color-bg
 		border-color color-bg
-		& .arrow
+		& .arrow-button__arrow
 			background-color color-bg
 			border-color white
 	
-.right
-	&:active
-		transform translateX(1px)
-	& .arrow
-		border solid color-cold
-		border-width 0 6px 6px 0
-		width 29px
-		height @width
-		transform rotate(-45deg)
-		margin-top 23px
-		margin-left 18px
+	&_direction_right
+		&:active
+			transform translateX(1px)
+		& .arrow-button__arrow
+			transform rotate(-45deg)
+			margin-top 18px
+			margin-left 12px
 		
-.left
-	&:active
-		transform translateX(-1px)
-	& .arrow
+	&_direction_left
+		&:active
+			transform translateX(-1px)
+		& .arrow-button__arrow
+			transform rotate(135deg)
+			margin-top 18px
+			margin-left 23px
+
+	&__arrow
 		border solid color-cold
-		border-width 0 6px 6px 0
-		width 29px
+		border-width 0 5px 5px 0
+		width 23px
 		height @width
-		transform rotate(135deg)
-		margin-top 23px
-		margin-left 28px

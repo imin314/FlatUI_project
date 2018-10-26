@@ -1,3 +1,7 @@
-mixin arrowButton(direction)
-	a.arrow-button(class=direction)&attributes(attributes)
-		.arrow
+mixin arrowButton(direction, disabled)
+	- var className = "arrow-button_direction_"+direction
+	- if (disabled === true) {
+	- className += " arrow-button_disabled"
+	- }
+	a.arrow-button(class=className)
+		.arrow-button__arrow

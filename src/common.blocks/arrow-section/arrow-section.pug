@@ -2,16 +2,16 @@ include ../arrow-button/arrow-button.pug
 
 mixin arrowSection(content)
 	.arrow-section
-		h1.arrow-section__header arrow buttons
+		h1.arrow-section__header.section-title arrow buttons
 		.arrow-section__container
 			.arrow-section__button
 				+arrowButton('left')
 			.arrow-section__button
 				+arrowButton('right')
 			.arrow-section__button
-				+arrowButton('left')(class='disabled')
+				+arrowButton('left', true)
 			.arrow-section__button
-				+arrowButton('right')(class='disabled')
+				+arrowButton('right', true)
 			.arrow-section__button
 				+arrowButton('left')
 			.arrow-section__button
