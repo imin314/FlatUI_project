@@ -5,22 +5,31 @@
 
 	&__container
 		display flex
-		justify-content left
-		flex-wrap nowrap
+		justify-content space-between
+		flex-wrap wrap
 		flex-direction row
+		@media screen and (max-width: screen-md2)
+			justify-content space-around
 
 	&__chart
 		width 125px
 		height @width
 		flex-shrink 0
+		margin-bottom 1.5rem
+		margin-right 1rem
 		&:nth-child(1)
-			margin-left percentage(88px/966.422px)
+			@media screen and (min-width: screen-md2)
+				margin-right percentage(18px/790px)
 		&:nth-child(2)
-			margin-left percentage(20px/966.422px)
+			@media screen and (min-width: screen-md2)
+				margin-right percentage(49px/790px)
 		&:nth-child(3)
-			margin-left percentage(47px/966.422px)
+			@media screen and (min-width: screen-md2)
+				margin-right percentage(44px/790px)
 		&:nth-child(4)
-			margin-left percentage(44px/966.422px)
+			@media screen and (min-width: screen-md2)
+				margin-right percentage(38px/790px)
 		&:nth-child(5)
-			margin-left percentage(39px/966.422px)
+			@media screen and (min-width: screen-md2)
+				margin-right percentage(15px/790px)
 	
