@@ -1,3 +1,26 @@
-@import 'chart-section__header.styl'
-@import 'chart-section__container.styl'
-@import 'chart-section__chart.styl'
+.chart-section
+	&__header
+		margin-bottom 1.7rem
+		letter-spacing 0.06rem
+
+	&__container
+		display flex
+		justify-content left
+		flex-wrap nowrap
+		flex-direction row
+
+	&__chart
+		width 125px
+		height @width
+		flex-shrink 0
+		&:nth-child(1)
+			margin-left percentage(88px/966.422px)
+		&:nth-child(2)
+			margin-left percentage(20px/966.422px)
+		&:nth-child(3)
+			margin-left percentage(47px/966.422px)
+		&:nth-child(4)
+			margin-left percentage(44px/966.422px)
+		&:nth-child(5)
+			margin-left percentage(39px/966.422px)
+	

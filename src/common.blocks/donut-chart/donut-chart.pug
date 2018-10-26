@@ -1,2 +1,6 @@
-﻿mixin donutChart(id)
-	.donut-chart(id= id)
+﻿mixin donutChart(id, isPercentage)
+	- var className = ""
+	- if (isPercentage) { className += "donut-chart_size_narrow"; }
+	.donut-chart(id= id class=className)
+		- if (isPercentage)
+			.donut-chart__label
