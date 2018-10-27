@@ -1,3 +1,17 @@
-@import 'slider-section__container.styl'
-@import 'slider-section__header.styl'
-@import 'slider-section__slider.styl'
+.slider-section
+	&__header
+		margin-bottom 3.3rem
+
+	&__container
+		display flex
+		justify-content space-between
+		flex-direction row
+		flex-wrap wrap
+		@media screen and (max-width: screen-md2)
+			justify-content center
+
+	&__slider
+		width 346px
+		margin-bottom 3rem
+		@media screen and (max-width: screen-md2)
+			flex 500px 1 1

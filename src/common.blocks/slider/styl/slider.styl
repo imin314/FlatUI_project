@@ -1,21 +1,20 @@
 @import '../common.blocks/slider/styl/asRange.css'
-@import 'slider_type_scale.styl'
-@import 'slider__scale.styl'
-@import 'slider__scale-item.styl'
+
 .slider
-	width 100%
-/*
-.slider1
-	margin-bottom 60px
+	width 98%
+	margin-left 2px
 
-.slider1 
-	
+	&_type_scale .asRange-pointer
+		background-color color-cold
 
-.slider1 
-	
+	&__scale
+		padding 0
+		margin 0.7rem 0 0 0
+		display flex
+		justify-content space-between
 
-.
-
-.slider2
-	margin-left 40px
-	*/
+	&__scale-item
+		display inline-block
+		color darken(color-bg, 8.5)
+		font-size (14.3px/initial-font-size)rem
+		font-weight bold

@@ -150,6 +150,8 @@
               '.asRange mousemove.asRange touchend.asRange mouseup.asRange touchcancel.asRange'
             );
             this.$element.trigger(this.parent.namespace + '::moveEnd', this);
+            //$(".asRange-pointer__active").removeClass();
+            this.deactive();
             return false;
           };
 
