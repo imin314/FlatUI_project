@@ -5,14 +5,14 @@ var bubble = document.querySelector('.email-form__bubble');
 
 email.addEventListener("blur", function (event) {
   if (!email.validity.valid) {
-	bubble.classList.remove("email-form__bubble_good");
-    bubble.classList.add("email-form__bubble_error");
+	bubble.classList.remove("email-form__bubble_type_good");
+    bubble.classList.add("email-form__bubble_type_error");
     bubble.innerHTML = "Error";
     console.log('ERROR');
   }
   else {
-    bubble.classList.remove("email-form__bubble_error");
-	bubble.classList.add("email-form__bubble_good");
+    bubble.classList.remove("email-form__bubble_type_error");
+	bubble.classList.add("email-form__bubble_type_good");
 	bubble.innerHTML = "Thanks!";
 	console.log('NO ERROR');
   }
@@ -39,11 +39,11 @@ $.fn.addEmailForm = function () {
 		input.blur(function() {
 			var bubble = input.parent().next();
 			if(!input.valid()) {
-				bubble.removeClass("email-form__bubble_good").addClass("email-form__bubble_error");
+				bubble.removeClass("email-form__bubble_type_good").addClass("email-form__bubble_type_error");
 				bubble.text("Error");
 			}
 			else{
-				bubble.removeClass("email-form__bubble_error").addClass("email-form__bubble_good");
+				bubble.removeClass("email-form__bubble_type_error").addClass("email-form__bubble_type_good");
 				bubble.text("Thanks!");
 			}
 		});

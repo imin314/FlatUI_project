@@ -2,9 +2,10 @@ mixin breadCrumbs(max, activeItem)
 	ul.bread-crumbs
 		- for (var i = 1; i <= max; i++) {
 			- if (i === activeItem) {
-			li.bread-crumbs__item.bread-crumbs__item_active= i
+			li.bread-crumbs__item.bread-crumbs__item_active
+				.bread-crumbs__circle= i
 			- } else {
-			li.bread-crumbs__item= i
+			li.bread-crumbs__item
+				.bread-crumbs__circle= i
 		- }
-			li.bread-crumbs__line
 		- }

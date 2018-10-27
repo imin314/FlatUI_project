@@ -1,8 +1,49 @@
 .toggle-switch
 	position relative
 	display inline-block
-	width 112px
-	height 45px
-@import 'toggle-switch__checkbox.styl'
-@import 'toggle-switch__slider.styl'
-@import 'toggle-switch__text.styl'
+	width 77px
+	height 31px
+
+	&__checkbox
+		display none
+		&:checked + .toggle-switch__slider
+			background-color color-cold
+		&:checked ~ .toggle-switch__text::before
+			content 'ON'
+			transform translateX(-27px)
+		&:focus + .toggle-switch__slider
+			box-shadow 0 0 1px color-cold
+		&:checked + .toggle-switch__slider::before
+			transform translateX(45px)
+
+	&__slider
+		position absolute
+		cursor pointer
+		top 0
+		left 0
+		right 0
+		bottom 0
+		background-color #ccc
+		transition .4s
+		border-radius 50px
+		&::before
+			position absolute
+			content ""
+			height 25px
+			width 25px
+			left 4px
+			top 3px
+			background-color white
+			transition .4s
+			border-radius 50%
+
+	&__text
+		&::before
+			content "OFF"
+			position absolute
+			top 5px
+			right 12px
+			color white
+			font-weight bold
+			font-size 0.85rem
+			transition .4s

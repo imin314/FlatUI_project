@@ -1,7 +1,3 @@
-@import 'bread-crumbs__item.styl'
-@import 'bread-crumbs__item_active.styl'
-@import 'bread-crumbs__line.styl'
-
 .bread-crumbs
 	display flex
 	justify-content space-between
@@ -10,3 +6,42 @@
 	width 100%
 	padding 0
 	align-items center
+
+	&__item
+		flex 179px 1 1
+		list-style-type none
+		position relative
+		&:last-child
+			flex auto 0 0
+			&::after
+				display none
+		&::after
+			content ""
+			display block
+			height 6px
+			width 100%
+			position absolute
+			background color-warm
+			top 50%
+			transform translateY(-50%)
+			z-index -1
+		&_active 
+			&::after
+			& ~ .bread-crumbs__item .bread-crumbs__circle
+			& ~ .bread-crumbs__item::after
+				background-color color-bg
+		
+
+	&__circle
+		font-size 1rem
+		font-weight bold
+		width 37px
+		height @width
+		padding-top 6px
+		text-align center
+		border-radius 50%
+		background color-warm
+		display inline-block
+		color white
+		font-weight bold
+

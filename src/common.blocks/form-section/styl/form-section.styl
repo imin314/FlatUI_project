@@ -1,7 +1,55 @@
-@import 'form-section__container.styl'
-@import 'form-section__header.styl'
-@import 'form-section__form.styl'
-@import 'form-section__tickbox.styl'
-@import 'form-section__tickboxes.styl'
-@import 'form-section__toggle.styl'
-@import 'form-section__toggles.styl'
+.form-section
+	&__header
+		margin-bottom 3.8rem
+		line-height 1rem
+		letter-spacing 0.08rem
+
+	&__container
+		display flex
+		justify-content space-between
+		flex-direction row
+		@media screen and (max-width: screen-md2)
+			flex-wrap wrap
+			justify-content center
+
+	&__form
+		min-width 250px
+		flex 375px 0 1
+		margin-bottom 2.5rem
+
+	&__checkboxes
+		flex 365px 0 2
+		display flex
+		flex-wrap wrap
+		justify-content space-around
+		align-content flex-start
+		@media screen and (min-width: screen-sm) and (max-width: screen-md2)
+			flex-grow 1
+
+	&__toggles
+		flex 100% 0 0
+		text-align center
+		margin-bottom 2.7rem
+		& .form-section__header
+			margin-bottom 2.5rem
+		@media screen and (min-width: screen-sm) and (max-width: screen-md2)
+			flex 200px 1 1
+	
+	&__toggle
+		display inline-block
+		&:first-of-type
+			margin-right 0.87rem
+
+	&__tickboxes
+		flex 100% 0 0
+		text-align center
+		& .form-section__header
+			margin-bottom 2.5rem
+			word-spacing 0.2rem
+		@media screen and (min-width: screen-sm) and (max-width: screen-md2)
+			flex 200px 1 1
+
+	&__tickbox
+		display inline-block
+		&:first-of-type
+			margin 0 0.9rem 0 -0.9rem

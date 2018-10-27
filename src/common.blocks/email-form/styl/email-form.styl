@@ -1,9 +1,61 @@
-/*.email-form
-	width 560px*/
+.email-form
+	clearfix()
+	
+	&__name
+		margin-bottom 0.7rem
+		display flex
 
-@import 'email-form__bubble.styl'
-@import 'email-form__name.styl'
-@import 'email-form__email.styl'
-@import 'email-form__input.styl'
-@import 'email-form__message.styl'
-@import 'email-form__button.styl'
+	&__input
+		flex 271px 1 1
+
+	&__email
+		margin-bottom 0.8rem
+		display flex
+
+	&__message
+		margin-bottom 0.5rem
+		padding 0.7rem 1rem
+		width 100%
+		resize none
+		height 115px
+
+	&__button
+		float right
+
+	&__bubble
+		visibility hidden
+		width 95px
+		padding 0.6rem
+		border-radius 5px
+		position relative
+		font-size 0.7rem
+		text-transform uppercase
+		text-align center
+		font-weight bold
+		color white
+		margin-left 12px
+		letter-spacing 0.06rem
+		&::before
+			visibility hidden
+			content ''
+			position absolute
+			top 50%
+			left 0
+			width 6px
+			height @width
+			border-radius 1px
+			transform translate(-50%, -50%) rotate(45deg)
+
+	&__bubble_type_error
+		background-color color-warm
+		visibility visible
+		&::before
+			background-color color-warm
+			visibility visible
+
+	&__bubble_type_good
+		background-color color-cold
+		visibility visible
+		&::before
+			background-color color-cold
+			visibility visible	

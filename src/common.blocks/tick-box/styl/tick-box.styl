@@ -1,6 +1,6 @@
 .tick-box
-	width 45px
-	height 45px
+	width 31px
+	height @width
 	position relative
 	display inline-block
 	& input[type="checkbox"]
@@ -11,4 +11,25 @@
 	& input[type="checkbox"]:checked + .tick-box__label::after
 		border-color white
 
-@import 'tick-box__label.styl'
+	&__label
+		background-color color-bg
+		border 1px solid color-bg
+		border-radius 50%
+		cursor pointer
+		width 31px
+		height @width
+		left 0
+		position absolute
+		cursor pointer
+		&::after
+			content ""
+			border 2px solid #c0c0c0
+			border-top none
+			border-right none
+			width 14px
+			height 8px
+			left 8px
+			position absolute
+			top 9px
+			transform rotate(-45deg)
+			

@@ -4,19 +4,20 @@ include ../toggle-switch/toggle-switch.pug
 
 mixin formSection()
 	.form-section
-		h1.form-section__header form elements
+		h1.form-section__header.section-title form elements
 		.form-section__container
 			.form-section__form
 				+emailForm('email-form')
-			.form-section__toggles
-				h1.form-section__header toggles
-				.form-section__toggle
-					+toggleSwitch(false)
-				.form-section__toggle
-					+toggleSwitch(true)
-			.form-section__tickboxes
-				h1.form-section__header tick boxes
-				.form-section__tickbox
-					+tickBox('tickbox1', true)
-				.form-section__tickbox
-					+tickBox('tickbox2', false)
+			.form-section__checkboxes
+				.form-section__toggles
+					h1.form-section__header.section-title toggles
+					.form-section__toggle
+						+toggleSwitch(false)
+					.form-section__toggle
+						+toggleSwitch(true)
+				.form-section__tickboxes
+					h1.form-section__header.section-title tick boxes
+					.form-section__tickbox
+						+tickBox('tickbox1', true)
+					.form-section__tickbox
+						+tickBox('tickbox2', false)
