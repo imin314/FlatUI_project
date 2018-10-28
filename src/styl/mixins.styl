@@ -6,3 +6,13 @@ clearfix()
   &:after
     clear: both
   zoom: 1 if support-for-ie
+
+remify(value) {
+    u = unit(value);
+
+    if (u is 'px') {
+        return unit(value/initial-font-size, 'rem');
+    } else {
+        return unit(value, u);
+    }
+}

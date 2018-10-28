@@ -1,61 +1,71 @@
-.drop-down__textarea
-	display flex
-	flex-direction row
-	flex-wrap nowrap
+.drop-down
 
-.drop-down__label
-	background color-bg
-	font-size 26.98px
-	padding 11px 28px
-	color #888
-	border none
-	border-top-left-radius 6px
-	border-bottom-left-radius 6px
-	width 100%
-	-webkit-appearance none
-	cursor pointer
+	&__textarea
+		display flex
+		flex-direction row
+		flex-wrap nowrap
 
-.drop-down__button
-	border none
-	background-color color-cold
-	border-top-right-radius 6px
-	border-bottom-right-radius 6px
-	cursor pointer
-	-webkit-appearance none
-	font-size 26.98px
-	padding 11px 22px
-	vertical-align top
-	position relative
-	&::before
-		border 3px solid white
-		border-top none
-		border-right none
-		content ""
-		height 21px
-		width 21px
-		left 11px
-		position absolute
-		top 11px
-		transform rotate(-45deg)
+	&__label
+		background color-bg
+		font-size 1rem
+		padding remify(6px) remify(17px) remify(7px)
+		color darken(color-bg, 40.5)
+		font-family ui-font-family
+		letter-spacing remify(0.2px)
+		border none
+		border-top-left-radius 3px
+		border-bottom-left-radius 3px
+		width 100%
+		-webkit-appearance none
+		cursor pointer
 
-.drop-down__list
-	margin 0
-	padding 0
-	display none
+	&__button
+		border none
+		background-color color-cold
+		border-top-right-radius 3px
+		border-bottom-right-radius 3px
+		cursor pointer
+		-webkit-appearance none
+		position relative
+		flex 43px 0 0
+		&::before
+			border 3px solid white
+			border-top none
+			border-right none
+			content ""
+			height remify(13px)
+			width @height
+			position absolute
+			left 50%
+			top 50%
+			transform translate(-55%, -55%) rotate(-45deg)
 
-.drop-down__item
-	background-color color-cold
-	color white
-	font-size 26.98px
-	padding 10px 20px
-	list-style none
-	&:last-of-type
-		border-bottom-left-radius 6px
-		border-bottom-right-radius 6px
-	&:hover
-	&:active
-		background-color #28a290
+	&__list
+		margin 0
+		padding 0
+		display none
+		background-color color-cold
+		padding remify(8px) 0
+		position relative
+		top -3px
+		border-radius 4px
 
-.drop-down__list_active
-	display block
-		
+	&__item
+		background-color inherit
+		color white
+		font-size 1rem
+		font-family ui-font-family
+		letter-spacing remify(0.2px)
+		padding remify(6px) remify(18px)
+		margin-bottom remify(4px)
+		list-style none
+		&:last-of-type
+			border-bottom-left-radius 3px
+			border-bottom-right-radius 3px
+		&:hover
+		&:active
+			background-color #28a290
+
+	&__list_active
+		display block
+			
