@@ -1,3 +1,7 @@
+include ../icon-facebook/icon-facebook.pug
+include ../icon-dribbble/icon-dribbble.pug
+include ../icon-twitter/icon-twitter.pug
+
 mixin userCard(user)
 	- var image = require("./assets/img/"+ user.img)
 
@@ -7,6 +11,9 @@ mixin userCard(user)
 			h2.user-card__name= user.name
 			h3.user-card__position= user.position
 			.user-card__icons
-				i.user-card__icon.fab.fa-facebook-f
-				i.user-card__icon.user-card__icon_highlighted.fab.fa-twitter
-				i.user-card__icon.fab.fa-dribbble
+				//i.user-card__icon.fab.fa-facebook-f
+				//i.user-card__icon.user-card__icon_highlighted.fab.fa-twitter
+				//i.user-card__icon.fab.fa-dribbble
+				+iconFacebook("#4f4f4f")
+				+iconTwitter("#4f4f4f")
+				+iconDribbble("#656565")
