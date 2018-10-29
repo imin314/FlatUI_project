@@ -2,9 +2,9 @@ include ..\user-card\user-card.pug
 
 mixin profileSection()
 	.profile-section
-		.profile-section__header user profile
+		.profile-section__header.section-title user profile
 		.profile-section__container
 			.profile-section__card
 				+userCard({name: 'John Smith', position: 'ux designer', img: 'john-smith.jpg'})
 			.profile-section__card
-				+userCard({name: 'Sarah Brown', position: 'developer', img: 'sarah-brown.jpg'})(class="user-card_colored")
+				+userCard({name: 'Sarah Brown', position: 'developer', img: 'sarah-brown.jpg'}, true)

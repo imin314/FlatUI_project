@@ -1,19 +1,22 @@
-include ../icon-facebook/icon-facebook.pug
-include ../icon-dribbble/icon-dribbble.pug
-include ../icon-twitter/icon-twitter.pug
+include ../social-icon/social-icon.pug
 
-mixin userCard(user)
+mixin userCard(user, colored)
 	- var image = require("./assets/img/"+ user.img)
-
-	.user-card&attributes(attributes)
+	- var icons = [{name: 'facebook'}, {name: 'twitter'}, {name: 'dribbble'}];
+	- var className = "user-card";
+	- if (colored === true) {
+	-	className += " user-card_colored";
+	-		icons.forEach(function(item) {
+	-			item.isWhite = true;
+	-	});
+	- }
+	div(class = className)
 		.user-card__photo(style='background-image: url('+image+')')
 		.user-card__box
 			h2.user-card__name= user.name
 			h3.user-card__position= user.position
 			.user-card__icons
-				//i.user-card__icon.fab.fa-facebook-f
-				//i.user-card__icon.user-card__icon_highlighted.fab.fa-twitter
-				//i.user-card__icon.fab.fa-dribbble
-				+iconFacebook("#4f4f4f")
-				+iconTwitter("#4f4f4f")
-				+iconDribbble("#656565")
+				each item in icons
+					a.user-card__icon(href="#" title=item.name)
+						+socialIcon(item)
+				
