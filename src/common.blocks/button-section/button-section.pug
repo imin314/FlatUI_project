@@ -4,27 +4,29 @@ mixin buttonSection(content)
 	.button-section
 		h1.section-title.button-section__header standard buttons
 		.button-section__container
-			.button-section__button
-				+button('button')(class = 'button_size_small')
-			.button-section__button
-				+button('button')
-			.button-section__button
-				+button('button')(class = 'button_color_secondary')
-			.button-section__button
-				+button('button')(class = 'button_color_secondary button_size_small')
-			.button-section__button
-				+button('button')(class = 'button_size_small')
-			.button-section__button
-				+button('button')
-			.button-section__button
-				+button('button')(class = 'button_color_secondary')
-			.button-section__button
-				+button('button')(class = 'button_color_secondary button_size_small')
-			.button-section__button
-				+button('button')(class = 'button_size_small')
-			.button-section__button
-				+button('button')
-			.button-section__button
-				+button('button')(class = 'button_color_secondary')
-			.button-section__button
-				+button('button')(class = 'button_color_secondary button_size_small')
+			.button-section__column
+				.button-section__button.button-section__button_size_small
+					+button('button')(class = 'button_size_small')
+				.button-section__button.button-section__button_size_small
+					+button('button')(class = 'button_size_small')
+				.button-section__button.button-section__button_size_small
+					+button('button')(class = 'button_size_small')
+				.button-section__button
+					+button('button')
+				.button-section__button
+					+button('button')
+				.button-section__button
+					+button('button')
+			.button-section__column
+				.button-section__button
+					+button('button')(class = 'button_color_secondary')
+				.button-section__button
+					+button('button')(class = 'button_color_secondary')
+				.button-section__button
+					+button('button')(class = 'button_color_secondary')
+				.button-section__button.button-section__button_size_small
+					+button('button')(class = 'button_color_secondary button_size_small')
+				.button-section__button.button-section__button_size_small
+					+button('button')(class = 'button_color_secondary button_size_small')
+				.button-section__button.button-section__button_size_small
+					+button('button')(class = 'button_color_secondary button_size_small')
