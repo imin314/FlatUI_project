@@ -14,24 +14,28 @@
         align-content space-between
         align-items baseline
         width 100%
-        @media screen and (max-width: screen-sm)
+        @media screen and (max-width: 920px)
+            justify-content space-around
+        @media screen and (max-width: 650px)
             flex-direction column
             height 440px
             align-content space-around
-            justify-content space-around
-            margin 0 auto
 
     &__button
         margin-bottom 1.3rem
+        margin-right percentage(30px/605px)
+        @media screen and (max-width: 735px)
+            margin-right 0
         &:nth-child(4n+1)
-            @media screen and (max-width: screen-sm)
+            @media screen and (max-width: 650px)
                 order: 3
         &:nth-child(4n+2)
-            @media screen and (max-width: screen-sm)
+            @media screen and (max-width: 650px)
                 order: 1
         &:nth-child(4n+3)
-            @media screen and (max-width: screen-sm)
+            @media screen and (max-width: 650px)
                 order: 2
         &:nth-child(4n+4)
-            @media screen and (max-width: screen-sm)
+            margin-right 0
+            @media screen and (max-width: 650px)
                 order: 4

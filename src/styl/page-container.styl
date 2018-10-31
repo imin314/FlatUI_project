@@ -1,43 +1,49 @@
 .page-container
-	width 92%
-	max-width 1145px
+	width percentage(771px/910px)
 	margin 0 auto
-	padding-top 5.4rem
-	display flex
+	padding-top remify(105px)
+	text-align center
+	@media screen and (max-width: 350px)
+		padding-top 4rem
+	/*display flex
 	flex-direction row
 	flex-wrap wrap
 	justify-content center
-	align-content space-between
+	align-content space-between*/
 
 .page-container__button-section
-	width 605px
+	width percentage(605px/771px)
+	max-width 763px
+	margin 0 auto
+	@media screen and (max-width: 920px)
+		width 100%
 
 .page-container__arrow-section
-	width 549px
+	//width 549px
 	margin-top 2.5rem
 
 .page-container__chart-section
-	width 790px
+	//width 790px
 	margin-top 1.65rem
 
 .page-container__slider-section
-	width 771px
+	//width 771px
 	margin-top 1rem
 
 .page-container__stages-section
-	width 776px
+	//width 776px
 
 .page-container__form-section
-	width 773px
+	//width 773px
 	margin-top 3.1rem
 
 .page-container__search-section
-	width 375px
+	//width 375px
 	margin-top 37px
 	margin-right 45px
 
 .page-container__profile-section
-	width 348px
+	//width 348px
 	margin-top 37px
 
 .page-container__news-section
