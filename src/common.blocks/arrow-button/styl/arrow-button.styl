@@ -1,11 +1,13 @@
 .arrow-button
+	font-size inherit
 	cursor pointer
 	display inline-block
-	width 66px
+	width 3.626373626373626em
 	height @width
-	border 4px color-cold solid
+	border 0.21978021978022em color-cold solid
 	border-radius 50%
 	background-color white
+	position relative
 	&:hover, &:focus
 		background-color color-cold
 		& .arrow-button__arrow
@@ -23,20 +25,21 @@
 		&:active
 			transform translateX(1px)
 		& .arrow-button__arrow
-			transform rotate(-45deg)
-			margin-top 18px
-			margin-left 12px
+			transform translate(30%, -50%) rotate(-45deg)
+			right 50%
+			
 		
 	&_direction_left
 		&:active
 			transform translateX(-1px)
 		& .arrow-button__arrow
-			transform rotate(135deg)
-			margin-top 18px
-			margin-left 23px
+			left 50%
+			transform translate(-30%, -50%) rotate(135deg)
 
 	&__arrow
 		border solid color-cold
-		border-width 0 5px 5px 0
-		width 23px
+		border-width 0 0.274725274725275em 0.274725274725275em 0
+		width 1.263736263736264em
 		height @width
+		position absolute
+		top 50%

@@ -3,7 +3,7 @@
 	margin 0 auto
 	padding-top remify(105px)
 	text-align center
-	@media screen and (max-width: 350px)
+	@media screen and (max-width: 689px)
 		padding-top 4rem
 	/*display flex
 	flex-direction row
@@ -18,8 +18,13 @@
 		width 100%
 
 .page-container__arrow-section
-	//width 549px
-	margin-top 2.5rem
+	width percentage(549px/771px)
+	margin 2rem auto 0
+	max-width 610px
+	@media screen and (max-width: 915px)
+		width 100%
+	@media screen and (max-width: 689px)	
+		max-width 260px
 
 .page-container__chart-section
 	//width 790px

@@ -8,13 +8,14 @@
 		display flex
 		flex-direction row
 		justify-content space-between
-		@media screen and (max-width: screen-sm)
-			width 260px
-			flex-wrap wrap
-			margin 0 auto
-	
+		flex-wrap wrap
+		margin 0 auto
+		//@media screen and (max-width: 689px)
+			
+			
 	&__button
+		font-size initial-font-size
 		margin-bottom 1.3rem
 		&:nth-child(2n+2)
-			@media screen and (max-width: screen-sm)
+			@media screen and (max-width: 689px)
 				order: 2
