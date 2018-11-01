@@ -6,30 +6,33 @@
 	&__container
 		display flex
 		justify-content space-between
-		flex-wrap wrap
 		flex-direction row
-		@media screen and (max-width: screen-md2)
+		@media screen and (max-width: 915px)
 			justify-content space-around
+			flex-wrap wrap
 
 	&__chart
-		width 125px
-		height @width
-		flex-shrink 0
-		margin-bottom 1.5rem
-		margin-right 1rem
+		font-size 1rem
+		flex 6.868131868131869em 0 0
+		margin 0 1rem 1.5rem
+		max-width 300px
+		@media screen and (min-width: 915px)
+			margin-left 0
+		@media screen and (min-width: 1000px)
+			flex-grow 1
 		&:nth-child(1)
-			@media screen and (min-width: screen-md2)
-				margin-right percentage(18px/790px)
+			@media screen and (min-width: 915px)
+				margin-right 2.278481012658228%
 		&:nth-child(2)
-			@media screen and (min-width: screen-md2)
-				margin-right percentage(49px/790px)
+			@media screen and (min-width: 915px)
+				margin-right 6.20253164556962%
 		&:nth-child(3)
-			@media screen and (min-width: screen-md2)
-				margin-right percentage(44px/790px)
+			@media screen and (min-width: 915px)
+				margin-right 5.569620253164556%
 		&:nth-child(4)
-			@media screen and (min-width: screen-md2)
-				margin-right percentage(38px/790px)
+			@media screen and (min-width: 915px)
+				margin-right 5%
 		&:nth-child(5)
-			@media screen and (min-width: screen-md2)
-				margin-right percentage(15px/790px)
+			@media screen and (min-width: 915px)
+				margin-right 2%
 	

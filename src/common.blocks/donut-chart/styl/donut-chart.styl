@@ -1,16 +1,19 @@
 .donut-chart
+	font-size inherit
 	position relative
 	& circle
-		stroke-width 7px
+		stroke-width 0.384615384615385em
 	&_size_narrow circle
-		stroke-width 2px
+		stroke-width 0.10989010989011em
 	&__label
 		display block
 		position absolute
 		color darken(color-bg, 49)
-		font-size 2.857142857142857rem
+		font-size 2.857142857142857em
 		font-weight lighter
 		top 46%
 		left 50%
 		transform translate(-50%, -50%)
+		@media screen and (min-width: 1000px)
+			font-size 5.5vw
 
