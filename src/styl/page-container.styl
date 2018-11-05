@@ -34,24 +34,36 @@
 		max-width 640px
 
 .page-container__slider-section
-	//width 771px
-	margin-top 1rem
+	width percentage(771px/791.69px)
+	margin remify(15px) auto 0
 
 .page-container__stages-section
-	//width 776px
+	width percentage(776px/791.69px)
+	margin 0 auto
 
 .page-container__form-section
-	//width 773px
-	margin-top 3.1rem
+	width percentage(773px/791.69px)
+	margin 4.1rem auto 0
 
 .page-container__search-section
-	//width 375px
-	margin-top 37px
-	margin-right 45px
+	width percentage(375px/791.69px)
+	margin remify(37px) percentage(45px/791.69px) 0 percentage(10px/791.69px)
+	float left
+	@media screen and (max-width: 915px)
+		float none
+		margin-left auto
+		margin-right auto
+		width 100%
 
 .page-container__profile-section
-	//width 348px
-	margin-top 37px
+	width percentage(348px/791.69px)
+	margin-top remify(37px)
+	float left
+	@media screen and (max-width: 915px)
+		float none
+		margin-left auto
+		margin-right auto
+		width 100%
 
 .page-container__news-section
 	width 1145px

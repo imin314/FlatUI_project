@@ -1,7 +1,16 @@
-.profile-section__header
-	margin-bottom 37px
-	text-align left
-	margin-left 72px
+.profile-section
+	&__header
+		margin-bottom remify(37px)
+		letter-spacing 0.05rem
+		word-spacing 0.3rem
 
-.profile-section__card
-	margin-bottom 37px
+	&__container
+		display flex
+		flex-direction row
+		flex-wrap wrap
+		justify-content space-around
+	&__card
+		margin-bottom 2rem
+		@media screen and (max-width: 900px)
+			margin-right 0.5rem
+			margin-left 0.5rem

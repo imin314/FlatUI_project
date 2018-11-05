@@ -8,23 +8,25 @@
 		display flex
 		justify-content space-between
 		flex-direction row
-		@media screen and (max-width: screen-md2)
+		@media screen and (max-width: 700px)
 			flex-wrap wrap
-			justify-content center
 
 	&__form
-		min-width 250px
-		flex 375px 0 1
-		margin-bottom 2.5rem
+		min-width 350px
+		flex 372px 2 1
+		margin 0 1.8rem 2.5rem 0
+		@media screen and (max-width: 700px)
+			margin-right 0
+		@media screen and (max-width: 420px)
+			min-width unset
 
 	&__checkboxes
-		flex 365px 0 2
+		flex 365px 1 2
 		display flex
 		flex-wrap wrap
+		flex-direction row
 		justify-content space-around
 		align-content flex-start
-		@media screen and (min-width: screen-sm) and (max-width: screen-md2)
-			flex-grow 1
 
 	&__toggles
 		flex 100% 0 0
@@ -32,13 +34,13 @@
 		margin-bottom 2.7rem
 		& .form-section__header
 			margin-bottom 2.5rem
-		@media screen and (min-width: screen-sm) and (max-width: screen-md2)
+		@media screen and (max-width: 700px)
 			flex 200px 1 1
 	
 	&__toggle
 		display inline-block
 		&:first-of-type
-			margin-right 0.87rem
+			margin-right 0.7rem
 
 	&__tickboxes
 		flex 100% 0 0
@@ -46,7 +48,7 @@
 		& .form-section__header
 			margin-bottom 2.5rem
 			word-spacing 0.2rem
-		@media screen and (min-width: screen-sm) and (max-width: screen-md2)
+		@media screen and (max-width: 700px)
 			flex 200px 1 1
 
 	&__tickbox
