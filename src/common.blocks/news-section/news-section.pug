@@ -1,13 +1,12 @@
 include ../news-card/news-card.pug
-include ../event-card/event-card.pug
 include ../button/button.pug
 
 mixin newsSection()
 	.news-section
-		.news-section__header news & events
+		.news-section__header.section-title news & events
 		.news-section__container
 			.news-section__news-card
 				+newsCard({title: 'It\'s all going downhill', date: '08.24.2013', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.', image: 'article-img.jpg'})
-			.news-section__event-card
-				+eventCard({title: 'This is the title', date: '08.24.2013', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', image: 'event-img.jpg'})
+			.news-section__news-card
+				+newsCard({title: 'This is the title', date: '08.24.2013', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', image: 'event-img.jpg'}, true)
 

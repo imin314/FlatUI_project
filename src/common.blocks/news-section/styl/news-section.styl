@@ -1,19 +1,25 @@
-.news-section__header
-	text-transform uppercase
-	font-size 34.69px
-	color color-text
-	font-weight bold
-	text-align center
-	margin-bottom 57px
+.news-section
+	&__header
+		margin-bottom 2.4rem
 
-.news-section__container
-	width 100%
-	display flex
-	flex-direction row
-	flex-wrap nowrap
-	justify-content space-between
+	&__container
+		width 100%
+		display flex
+		flex-direction row
+		flex-wrap wrap
+		justify-content center
 
-.news-section__news-card
-.news-section__event-card
-	width 555px
-	height 410px
+	&__news-card
+		width 48.44%
+		height 29.8vw
+		max-width 445.61px
+		max-height 327.8px
+		min-width 260.11px
+		min-height 193.69px
+		flex-shrink 1
+		&:first-child
+			margin-right 3%
+			@media screen and (max-width: 650px)
+				margin 2%
+			
+		

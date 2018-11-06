@@ -1,41 +1,23 @@
 .event-card
+	font-size 1rem
 	background-color color-cold
-	border-radius 10px
+	border-radius 5px
 	width 100%
 	height @width
-	display flex
-
-.event-card__image
-	background-repeat no-repeat
-	background-position 0px 0px
-	background-clip border-box
-	width 182px
-	flex-shrink 0
-	border-top-left-radius 10px
-	border-bottom-left-radius 10px
-
-.event-card__content
-	padding 20px
 	overflow hidden
 
-.event-card__title
-	font-size 24.09px
-	margin-bottom 18px
-	color white
-	font-weight bold
+	&__image
+		background-repeat no-repeat
+		background-position 0px 0px
+		background-clip border-box
+		display inline-block
+		width 33%
 
-.event-card__date
-	font-size 140px
-	color white
-	font-weight bold
+	&__content
+		font-size inherit
+		padding remify(30px)
+		overflow hidden
+		display inline-block
+		width 77%
 
-.event-card__month
-	font-size 57.81px
-	color white
-	text-transform capitalize
-
-.event-card__text
-	font-size 21.2px
-	overflow hidden
-	color white
-
+	
