@@ -2,7 +2,7 @@ include ../map/map.pug
 include ../pin/pin.pug
 mixin mapSection()
     .map-section
-        .map-section__header location
+        .map-section__header.section-title location
         .map-section__container
             .map-section__map(id="map-id")
                 +map("map1")
