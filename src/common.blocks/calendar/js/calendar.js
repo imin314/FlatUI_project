@@ -16,8 +16,8 @@ if (typeof jQuery === 'undefined') { throw new Error('DCalendar.Picker: This plu
 
 	var months = ['January','February','March','April','May','June','July','August','September','October','November','December'],
 		short_months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
-		daysofweek = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
-		short_days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],
+		daysofweek = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
+		short_days = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
 		ex_keys = [9,112,113,114,115,116,117,118,119,120,121,122,123],
 		DCAL_DATA = 'dcalendar',
 
@@ -238,7 +238,7 @@ if (typeof jQuery === 'undefined') { throw new Error('DCalendar.Picker: This plu
 				for(var i = 0; i < l; i++) { row.append(v[i]); }
 				cells.push(row);
 			});
-			container.parent().height(container.parent().outerHeight(true));
+			
 			cElem.empty().append(cells).addClass('months load').appendTo(container);
 			curr.addClass('hasmonths');
 			setTimeout(function () { cElem.removeClass('load'); }, 10);
@@ -252,6 +252,7 @@ if (typeof jQuery === 'undefined') { throw new Error('DCalendar.Picker: This plu
 				days = ndate.getDays(), day = 1,
 		        d = new Date(newDate.getFullYear(), newDate.getMonth(), newDate.getDate()),
 				nmStartDay = 1, weeks = [], dates = [];
+			var disableRow = false;
 
 			for(var i = 1; i <= 6; i++){
 				var week = [$('<span class="date"></span>'), $('<span class="date"></span>'), $('<span class="date"></span>'),
@@ -260,22 +261,26 @@ if (typeof jQuery === 'undefined') { throw new Error('DCalendar.Picker: This plu
 
 				while(day <= days) {
 					d.setDate(day);
-					var dayOfWeek = d.getDay();
-
+					var dayOfWeek = d.getDay() - 1;
+					if (dayOfWeek === -1) {
+						dayOfWeek = 6;
+					}
 					if (d.getTime() == today.getTime()) week[dayOfWeek].addClass('current');
 
                     if (that.disabledDate(d)) week[dayOfWeek].addClass('disabled');
 
-					if(i === 1 && dayOfWeek === 0){
+					if(i === 0 && dayOfWeek === 0){
 						break;
 					} else if (dayOfWeek < 6) {
 					    if (d.getTime() == that.selected.getTime()) week[dayOfWeek].addClass('selected');
 
 						week[dayOfWeek].html('<a href="javascript:void(0);">' + (day++) + '</a>');
+						
 					} else {
 					    if (d.getTime() == that.selected.getTime()) week[dayOfWeek].addClass('selected');
 
 						week[dayOfWeek].html('<a href="javascript:void(0);">' + (day++) + '</a>');
+						
 						break;
 					}
 				}
@@ -306,9 +311,8 @@ if (typeof jQuery === 'undefined') { throw new Error('DCalendar.Picker: This plu
 
 						    nmDate.setDate(nmStartDay);
 						    week[a].html('<a href="javascript:void(0);">' + (nmStartDay++) + '</a>').addClass('nm');
-
 							if (that.disabledDate(nmDate)) week[a].addClass('disabled');
-
+							if (a === 0) {disableRow = true;}
 							if (nmDate.getTime() == that.selected.getTime()) week[a].addClass('selected');
 							if (nmDate.getTime() == today.getTime()) week[a].addClass('current');
 						}
@@ -318,6 +322,7 @@ if (typeof jQuery === 'undefined') { throw new Error('DCalendar.Picker: This plu
 			}
 			$.each(weeks, function(i, v){
 				var row = $('<span class="cal-row"></span>'), l = v.length;
+				if (disableRow === true && i == weeks.length - 1) row.addClass('disabled');
 				for(var i = 0; i < l; i++) { row.append(v[i]); }
 				dates.push(row);
 			});
@@ -409,7 +414,7 @@ if (typeof jQuery === 'undefined') { throw new Error('DCalendar.Picker: This plu
 				container = $('<div class="calendar-container"></div>'),
 				calhead = $('<section class="calendar-top-selector"><div class="calendar-prev"></div><div class="calendar-curr-month"></div><div class="calendar-next"></div></section>'),
 				datesgrid = $('<section class="calendar-grid">'
-							+ '<div class="calendar-labels"><span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span></div>'
+							+ '<div class="calendar-labels"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>'
 							+ '<div class="calendar-date-holder"><section class="calendar-dates"></section></div></section>'),
 				cardfooter = $('<section class="calendar-footer"><span class="calendar-today">TODAY: </span><span class="calendar-date-wrapper" title="Select current date."><span class="calendar-dayofweek"></span>, <span class="calendar-date"></span> <span class="calendar-month"></span> <span class="calendar-year"></span></span></section>');
 
@@ -478,7 +483,7 @@ if (typeof jQuery === 'undefined') { throw new Error('DCalendar.Picker: This plu
 
 	$.fn.dcalendar.defaults = {
 		mode : 'calendar',
-		format: 'mm/dd/yyyy',
+		format: 'mmm/dd/yyyy',
 		theme: 'orange',
 		readOnly: true
 	};
