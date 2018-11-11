@@ -17,7 +17,7 @@
 	display: none;
 }
 .calendar-wrapper {
-	font-size: 1.96vw;
+	font-size: inherit;
 	position: relative;
 	width: 100%;
 }
@@ -117,7 +117,7 @@
 }
 	.calendar-grid .calendar-labels {
 		display: table;
-		width: 100.1%;
+		width: calc(100% + 1px);
 		visibility: visible;
 		opacity: 1;
 		transition: opacity .25s ease;
@@ -287,10 +287,4 @@
 
 body[datepicker-display='on'] {
 	overflow: hidden;
-}
-
-@media screen and (min-width: 1200px) {
-	.calendar-wrapper {
-		font-size: 1.292307692307692rem;
-	}
 }
