@@ -51,7 +51,6 @@ if (typeof jQuery === 'undefined') { throw new Error('DCalendar.Picker: This plu
 			this.calendar.find('.calendar-prev').click(function () { that.getNewMonth('left', true); });
 			this.calendar.find('.calendar-next').click(function () { that.getNewMonth('right', true); });
 			this.calendar.find('.calendar-curr-month').click(function () { that.getMonths(); 
-			that.calendar.find('.calendar-top-selector').addClass('large');
 			that.calendar.find('.calendar-head-card').addClass('hidden');
 			});
 
@@ -75,7 +74,7 @@ if (typeof jQuery === 'undefined') { throw new Error('DCalendar.Picker: This plu
 				that.viewMode = 'days';
 				that.date.setDate(1);
 				that.calendar.find('.calendar-selected-day').text('1');
-				that.calendar.find('.calendar-top-selector').removeClass('large');
+				that.calendar.find('.calendar-curr-month').removeClass('year');
 				that.calendar.find('.calendar-head-card').removeClass('hidden');
 				that.date.setMonth(selMonth);
 				that.getNewMonth(null, false);
@@ -224,6 +223,7 @@ if (typeof jQuery === 'undefined') { throw new Error('DCalendar.Picker: This plu
 
 			that.viewMode = 'months';
 			currMonth.text(that.date.getFullYear());
+			currMonth.addClass('year');
 			dayLabel.addClass('invis');
 			for (var i = 1; i < 4; i++) {
 				var row = [$("<span class='date month'></span>"), $("<span class='date month'></span>"), $("<span class='date month'></span>"), $("<span class='date month'></span>")];

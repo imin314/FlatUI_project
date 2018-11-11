@@ -17,7 +17,7 @@
 	display: none;
 }
 .calendar-wrapper {
-	font-size: 1rem;
+	font-size: 1.96vw;
 	position: relative;
 	width: 100%;
 }
@@ -72,10 +72,6 @@
 	transition: all .25s ease;
 	padding: 0.6em 1.4em 0.8em 1.2em;
 }
-
-.calendar-top-selector.large {
-	height: 200px;
-}
 	.calendar-top-selector .calendar-curr-month { 
 		font-size: 1.7em;
 		line-height: 1em;
@@ -85,6 +81,10 @@
 		text-align: center;
 		color: white;
 		cursor: pointer;
+	}
+	.calendar-top-selector .calendar-curr-month.year {
+		font-size: 2.5em;
+		padding: 1.45em;
 	}
 
 	.calendar-top-selector .calendar-curr-month:hover, .calendar-next:hover, .calendar-prev:hover{
@@ -128,7 +128,7 @@
 			width: 14.28571428571429%;
 			text-align: center;
 			color: white;
-			font-size: 0.6428571428571429em;
+			font-size: 0.6428571428571429rem;
 			text-transform: uppercase;
 			padding: 1em 0;
 			vertical-align: middle;
@@ -142,7 +142,6 @@
 .calendar-date-holder .calendar-dates {
 	display: table;
 	width: 100.1%;
-	height: 100%;
 	transition: margin-left .3s cubic-bezier(0.4, 0.0, 0.2, 1), transform .3s ease, opacity .3s ease;
 }
 	.calendar-date-holder .calendar-dates.hasmonths {
@@ -152,8 +151,18 @@
 		opacity: 0;
 		transform: scale(.5);
 	}
-	.calendar-date-holder .calendar-dates.left { margin-left: -260px; }
-	.calendar-date-holder .calendar-dates.right { margin-left: 260px; }
+	.calendar-date-holder .calendar-dates.left { 
+		margin-left: -260px;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.calendar-date-holder .calendar-dates.right { 
+		margin-left: 260px;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
 	.calendar-date-holder .calendar-dates.months {
 		position: relative;
 		opacity: 1;
@@ -215,7 +224,7 @@
 		}
 		.calendar-date-holder .calendar-dates .date.month a {
 			display: block;
-			padding: 38px 0;
+			padding: 0.8846153846153846em 0;
 		}
 
 .calendar-footer{
@@ -280,8 +289,8 @@ body[datepicker-display='on'] {
 	overflow: hidden;
 }
 
-@media (max-width: 350px) {
+@media screen and (min-width: 1200px) {
 	.calendar-wrapper {
-		max-width: 100%;
+		font-size: 1.292307692307692rem;
 	}
 }
