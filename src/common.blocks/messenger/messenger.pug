@@ -8,9 +8,9 @@ mixin messenger(data)
 			.messenger__photo(style='background-image: url('+image+')')
 		.messenger__icons
 		.messenger__container
-			.messenger__inbox= "Hey! So are we cool to meet at the art gallery? Say 8pm"
-			textarea.messenger__outbox(name='outbox' placeholder='Type Something' ) Yeah that sounds great. See you then.
+			.messenger__message.messenger__message_type_inbox= "Hey! So are we cool to meet at the art gallery? Say 8pm"
+			textarea.messenger__message.messenger__message_type_outbox(name='outbox' placeholder='Type Something' ) Yeah that sounds great. See you then.
 			.messenger__button
-				+button('reply')(type='submit' value='Submit' class='button_color_reverse')
+				+button('reply')(type='submit' value='Submit' class='button_color_reverse button_size_responsive')
 
 		

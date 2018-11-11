@@ -1,32 +1,34 @@
 .messenger
 	width 100%
-	height 826px
-	border-radius 20px
+	border-radius 0.3rem
 	overflow hidden
+	font-size 1.96vw
+	@media screen and (min-width: 1200px)
+		font-size 1.292307692307692rem
 
 	&__header
-		background-color #4eb7a8
-		height 225px
+		background-color color-cold
 		width 100%
-		box-shadow inset 0 -65px 0 #46ab9d
+		box-shadow inset 0 -2.5em 0 #46ab9d
 		position relative
 		text-align center
-		padding-top 45px
+		padding 1.2em 1.1em 4.2em
 	&__name
 		color white
-		font-size 65.52px
-		font-family 'Lato-Light', sans-serif
-		font-weight normal
+		font-size 2.428571428571429em
+		font-weight lighter
 		text-transform capitalize
+		word-spacing -0.1em
+		letter-spacing -0.045em
 	&__photo
-		width 165px
+		width 6.5em
 		height @width 
-		border 10px solid #e5e5e5
+		border 5px solid #e5e5e5
 		border-radius 50%
 		position absolute
 		left 50%
 		top 100%
-		transform translateX(-50%) translateY(-50%)
+		transform translateX(-54%) translateY(-50%)
 		background-size cover
 		background-repeat no-repeat
 	&__icons
@@ -36,63 +38,65 @@
 			background-image url('/assets/img/bubble-icon.svg')
 			background-repeat no-repeat
 			position absolute
-			top 42px
-			left 56px
-			width 40px
+			top 1.6em
+			left 1.923076923076923em
+			width 1.55em
 			height @width
 		&::after
 			content ''
 			background-image url('/assets/img/camera-icon.svg')
 			background-repeat no-repeat
 			position absolute
-			top 42px
-			right 56px
-			width 47px
-			height 38px
+			top 1.55em
+			right 1.923076923076923em
+			width 1.8em
+			height 1.41em
 	&__container
 		background-color #f2f2f2
-		height 600px
-		padding 35px
-		padding-top 120px
+		height 22.1978021978022em
+		padding 4.4em 1.6em 1.78em
 		display flex
 		flex-direction column
 		flex-wrap nowrap
 		justify-content space-between
-	&__inbox
+	&__message
 		color #8e8d8d
-		font-size 24.08px
+		font-size 0.8928571428571429em
 		font-weight bold
-		background-color white
-		border-radius 20px
-		padding 20px
-		height 135px
-		width 100%
-		position relative
-		&::before
-			content ''
-			width 20px
-			height @width
-			display block
-			position absolute
+		text-align left
+		letter-spacing 0.04em
+		&_type_inbox
 			background-color white
-			top -10px
-			left 50%
-			transform translateX(-50%) rotate(45deg)
+			position relative
+			padding 1.35em 1.5em 1.8em
+			width 100%
+			border-radius 10px
+			&::before
+				content ''
+				width 0.81em
+				height @width
+				display block
+				position absolute
+				background-color white
+				top 0
+				left 50%
+				transform translate(-90%, -40%) rotate(45deg)
+				border-radius 4px
+		&_type_outbox
+			background-color color-bg
+			resize none
+			outline none
+			box-shadow 0 0 0 4px white
+			border none 
 			border-radius 5px
-	&__outbox
-		color #8e8d8d
-		font-size 24.08px
-		font-weight bold
-		background-color #e5e5e5
-		border-radius 20px
-		border 8px solid white
-		padding 20px
-		resize none
-		width 100%
-		height 170px
-		outline none
+			margin 0 auto
+			width 98%
+			padding 1.2em 1.3em
+			height 6.5em
+
 	&__button
 		width 100%
+		font-size 0.85em
 
 
 
