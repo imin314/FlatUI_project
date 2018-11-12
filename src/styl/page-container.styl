@@ -46,25 +46,30 @@
 .page-container__form-section
 	width percentage(773px/791.69px)
 	margin 4.1rem auto 0
+	max-width 1300px
 
 .page-container__search-section
+	display inline-block
 	width percentage(375px/791.69px)
-	margin remify(37px) percentage(45px/791.69px) 0 percentage(10px/791.69px)
-	float left
+	margin remify(37px) percentage(45px/791.69px) 0 auto
+	max-width 600px
+	vertical-align top
 	@media screen and (max-width: 915px)
-		float none
-		margin-left auto
 		margin-right auto
 		width 100%
+	@media screen and (min-width: 1625px)
+		margin-right auto
 
 .page-container__profile-section
+	display inline-block
 	width percentage(348px/791.69px)
 	margin-top remify(37px)
-	float left
+	vertical-align top
+	max-width 634px
 	@media screen and (max-width: 915px)
-		float none
 		margin-left auto
 		margin-right auto
+		max-width unset
 		width 100%
 
 .page-container__news-section
@@ -78,27 +83,30 @@
 	margin 3.3rem auto 0
 
 .page-container__calendar-section
+	display inline-block
 	width percentage(363px/791.69px)
-	float left
-	margin 3.6rem 4.5% 0 1.2%
+	margin 3.6rem 4.4% 0 auto
+	vertical-align top
+	max-width 480px
+	min-width 300px
 	@media screen and (max-width: 751px)
-		width 100%
-		float none
-		margin-left auto
-		margin-right auto
-		width min-content
-
+		margin-left 2%
+		margin-right 2%
+	@media screen and (max-width: 420px)
+		min-width 260px
 
 .page-container__message-section
+	display inline-block
 	width percentage(374px/791.69px)
-	float left
 	margin-top 3.6rem
+	vertical-align top
+	max-width 494px
+	min-width 300px
 	@media screen and (max-width: 751px)
-		width 100%
-		float none
-		margin-left auto
-		margin-right auto
-		width min-content
+		margin-left 2%
+		margin-right 2%
+	@media screen and (max-width: 420px)
+		min-width 260px
 
 .page-container__video-section
 	width 97.7%

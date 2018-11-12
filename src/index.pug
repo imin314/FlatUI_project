@@ -1,3 +1,4 @@
+include common.blocks/loader/loader.pug
 include common.blocks/button-section/button-section.pug
 include common.blocks/arrow-section/arrow-section.pug
 include common.blocks/chart-section/chart-section.pug
@@ -20,6 +21,7 @@ html
 	meta(name='viewport', content="inital-scale=1.0, width=device-width")
 	title FlatUI project
 	body
+		+loader()
 		.page-container
 			.page-container__button-section
 				+buttonSection()
@@ -37,7 +39,6 @@ html
 				+searchSection()
 			.page-container__profile-section
 				+profileSection()
-			.clearfix
 			.page-container__news-section
 				+newsSection()
 			.page-container__map-section
@@ -46,6 +47,5 @@ html
 				+calendarSection()
 			.page-container__message-section
 				+messageSection()
-			.clearfix
 			.page-container__video-section
 				+videoSection()
