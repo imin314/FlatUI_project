@@ -36,6 +36,8 @@
 		color white
 		margin-left 0.6593406593406593rem
 		letter-spacing 0.06rem
+		transition 0.3s
+		transform translateX(-50px)
 		&::before
 			visibility hidden
 			content ''
@@ -50,6 +52,7 @@
 	&__bubble_type_error
 		background-color color-warm
 		visibility visible
+		transform translateX(0)
 		&::before
 			background-color color-warm
 			visibility visible
@@ -57,6 +60,7 @@
 	&__bubble_type_good
 		background-color color-cold
 		visibility visible
+		transform translateX(0)
 		&::before
 			background-color color-cold
 			visibility visible	

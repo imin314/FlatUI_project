@@ -47,6 +47,12 @@ $.fn.addEmailForm = function () {
 				bubble.text("Thanks!");
 			}
 		});
+
+		input.focus(function(){
+			var bubble = input.parent().next();
+			bubble.removeClass("email-form__bubble_type_good");
+			bubble.removeClass("email-form__bubble_type_error");
+		});
 	});
     
 };

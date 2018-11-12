@@ -95,6 +95,18 @@
 		top 0
 		left 50%
 		transform translate(-50%,-18%)
+	&:hover
+		transform scale(1.1)
+	&:hover::before
+		transform translate(-18%,-50%) scale(1.1)
+	&:hover::after
+		transform translate(-50%,-18%) scale(1.1)
+	&:active
+		transform scale(0.9)
+	&:active::before
+		transform translate(-18%,-50%) scale(0.9)
+	&:active::after
+		transform translate(-50%,-18%) scale(0.9)
 	@media screen and (max-width:515px)
 		margin-right 12%
 
@@ -104,6 +116,10 @@
 	width 1.208791208791209em
 	cursor pointer
 	height 3em
+	&:hover
+		transform scale(1.1)
+	&:active
+		transform scale(0.9)
 
 .map-section__main-pin
 	width 2.8rem

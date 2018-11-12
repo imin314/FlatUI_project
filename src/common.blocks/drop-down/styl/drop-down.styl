@@ -29,6 +29,7 @@
 		-webkit-appearance none
 		position relative
 		flex 43px 0 0
+		outline none
 		&::before
 			border 3px solid white
 			border-top none
@@ -40,6 +41,10 @@
 			left 50%
 			top 50%
 			transform translate(-55%, -55%) rotate(-45deg)
+		&:hover
+			background-color darken(color-cold, 5)
+		&:active::before
+			transform translate(-55%, -55%) rotate(-45deg) scale(0.9)
 
 	&__list
 		margin 0

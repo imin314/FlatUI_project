@@ -4,7 +4,14 @@
 		fill color-warm
 	& path
 		fill #757575	
+	&:active
+		transform scale(0.9)
 	
-	&_color_white path
-		fill #ffffff
+	&_color_white
+		& path
+			fill #ffffff
+		&:hover path
+			fill #ffffff
+			opacity 0.5
+	
 	

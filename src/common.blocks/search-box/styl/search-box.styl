@@ -31,6 +31,7 @@
 		-webkit-appearance none
 		flex 43px 0 0
 		position relative
+		outline none
 		&::before
 			content ""
 			display block
@@ -53,3 +54,11 @@
 			top 62%
 			left 50%
 			transform rotate(45deg)
+		&:hover
+			background-color darken(color-warm, 5)
+		&:active::before
+			transform translate(-65%, -60%) rotate(45deg) scale(0.9)
+		&:active::after
+			transform rotate(45deg) scale(0.9)
+
+		
