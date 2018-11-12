@@ -416,7 +416,7 @@ if (typeof jQuery === 'undefined') { throw new Error('DCalendar.Picker: This plu
 				datesgrid = $('<section class="calendar-grid">'
 							+ '<div class="calendar-labels"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>'
 							+ '<div class="calendar-date-holder"><section class="calendar-dates"></section></div></section>'),
-				cardfooter = $('<section class="calendar-footer"><span class="calendar-today">TODAY: </span><span class="calendar-date-wrapper" title="Select current date."><span class="calendar-dayofweek"></span>, <span class="calendar-date"></span> <span class="calendar-month"></span> <span class="calendar-year"></span></span></section>');
+				cardfooter = $('<section class="calendar-footer"><span class="calendar-date-wrapper" title="Select current date."><span class="calendar-today">TODAY</span><span class="calendar-date"></span> <span class="calendar-month"></span> <span class="calendar-year"></span></span></section>');
 
 			calhead.appendTo(container);
 			datesgrid.appendTo(container);

@@ -239,6 +239,11 @@
 	color: #868686;
 }
 
+.calendar-footer span:not(:first-child) {
+	display: none;
+}
+
+
 /* Color theme */
 .calendar-wrapper[data-theme='blue'] .calendar-head-card { background-color: #1565c0; }
 .calendar-wrapper[data-theme='blue'] .calendar-date-holder .calendar-dates .date.current a { color: #1976d2; }
