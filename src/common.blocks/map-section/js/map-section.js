@@ -13,10 +13,12 @@ $(document).ready(function(){
 		if (drag === false){
 			drag = true;
 			$("#map1").css("pointer-events", "none");
+			$('.map-section__main-pin').addClass('map-section__main-pin_type_waiting');
 		}
 		else{
 			drag = false;
 			$("#map1").css("pointer-events", "auto");
+			$('.map-section__main-pin').removeClass('map-section__main-pin_type_waiting');
 		}
 	});
 
@@ -24,13 +26,14 @@ $(document).ready(function(){
 			if (drag === true){
 				var map = $(this);
 				var mapOffset = map.offset();
+				$('.map-section__main-pin').removeClass('map-section__main-pin_type_waiting');
 				map.mousemove(function(e){
 					var leftPos  = map[0].getBoundingClientRect().left + $(window)['scrollLeft']();
 					var topPos   = map[0].getBoundingClientRect().top + $(window)['scrollTop']();
 					var pin = $('.map-section__main-pin');
 					var pinWidth = pin.width();
 					var pinHeight = pin.height();
-					$('.map-section__main-pin').css({'top': e.pageY - topPos - (pinHeight/2), 'left': e.pageX-leftPos - pinWidth/2, cursor: 'pointer'});
+					$('.map-section__main-pin').css({'top': e.pageY - topPos - (pinHeight/2), 'left': e.pageX-leftPos - pinWidth/2});
 			});
 			}	
 		});
@@ -40,6 +43,7 @@ $(document).ready(function(){
 			$(this).off("mousemove");
 			drag = false;
 			$("#map1").css("pointer-events", "auto");
+			$('.map-section__main-pin').removeClass('map-section__main-pin_type_waiting');
 		}
 		});
 	

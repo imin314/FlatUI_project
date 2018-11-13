@@ -7,6 +7,8 @@ mixin messenger(data)
 			.messenger__name= data.name
 			.messenger__photo(style='background-image: url('+image+')')
 		.messenger__icons
+			a.messenger__bubble-icon(href="#" title="")
+			a.messenger__camera-icon(href="#" title="add photo")
 		.messenger__container
 			.messenger__message.messenger__message_type_inbox= "Hey! So are we cool to meet at the art gallery? Say 8pm"
 			textarea.messenger__message.messenger__message_type_outbox(name='outbox' placeholder='Type Something' ) Yeah that sounds great. See you then.

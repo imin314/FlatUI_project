@@ -35,25 +35,31 @@
 		background-size cover
 		background-repeat no-repeat
 	&__icons
-		position relative 
-		&::before
-			content ''
-			background-image url('/assets/img/bubble-icon.svg')
-			background-repeat no-repeat
-			position absolute
-			top 1.6em
-			left 1.923076923076923em
-			width 1.55em
-			height @width
-		&::after
-			content ''
-			background-image url('/assets/img/camera-icon.svg')
-			background-repeat no-repeat
-			position absolute
-			top 1.55em
-			right 1.923076923076923em
-			width 1.8em
-			height 1.41em
+		position relative
+	&__bubble-icon
+		background-image url('/assets/img/bubble-icon.svg')
+		background-repeat no-repeat
+		position absolute
+		top 1.6em
+		left 1.923076923076923em
+		width 1.55em
+		height @width
+		&:hover
+			transform scale(1.1)
+		&:active
+			transform scale(0.9)
+	&__camera-icon
+		background-image url('/assets/img/camera-icon.svg')
+		background-repeat no-repeat
+		position absolute
+		top 1.55em
+		right 1.923076923076923em
+		width 1.8em
+		height 1.41em
+		&:hover
+			transform scale(1.1)
+		&:active
+			transform scale(0.9)
 	&__container
 		background-color #f2f2f2
 		height 22.1978021978022em
