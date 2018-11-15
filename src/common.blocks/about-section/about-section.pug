@@ -1,0 +1,13 @@
+include ../video/video.pug
+
+mixin aboutSection()
+	section.about-section
+		.about-section__text
+			h3.about-section__title.section-title About Web Talks 2019
+			p.about-section__intro
+				span We know that great products are hard to build, and just as difficult to manage. How can you improve your methods to make your processes easier and more efficient? For the fourth year in a row, we are organizing this Conference, where we hope to find the answers to this and other questions, with the goal of building better products.
+				span During 2 full days of workshops and talks in English, product related professionals will be able to discuss their perspectives and share insights on how to build great products together with the leading minds in Product Thinking, Product Management, Product Design and Product Experience.
+				a(href="https://www.youtube.com/channel/UCELSb-IYi_d5rYFOxWeOz5g" title="Watch more") See what happened in 2018 &gt;
+		.about-section__video
+			+video("https://www.youtube.com/embed/yNVLjsAvp3E")
+			

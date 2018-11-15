@@ -1,0 +1,10 @@
+include ../button/button.pug
+
+mixin bannerSection()
+	header.banner-section
+		h2.banner-section__location Tomsk / May 2019
+		h1.banner-section__title
+			span.banner-section__name Web Talks 2019
+			span.banner-section__tagline Three big tracks–Product, Design, and Developer focused, plus stellar keynotes and much more
+		.banner-section__register-button
+			+button('pre-register for 2019')(class='button_size_responsive')

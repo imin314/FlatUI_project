@@ -24,6 +24,14 @@ module.exports = {
       filename: 'uidemo.html',
       template: './src/views/uidemo.pug',
   }),
+  new HtmlWebpackPlugin({
+    filename: 'registration.html',
+    template: './src/views/registration.pug',
+}),
+new HtmlWebpackPlugin({
+    filename: 'contacts.html',
+    template: './src/views/contacts.pug',
+}),
     new webpack.ProvidePlugin({
     $: 'jquery',
     jQuery: 'jquery'
