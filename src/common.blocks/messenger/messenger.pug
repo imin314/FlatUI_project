@@ -1,7 +1,7 @@
 include ../button/button.pug
 
 mixin messenger(data)
-	- var image = require("./assets/img/"+ data.image)
+	- var image = require("../assets/img/"+ data.image)
 	.messenger
 		.messenger__header
 			.messenger__name= data.name

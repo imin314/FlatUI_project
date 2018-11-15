@@ -1,0 +1,23 @@
+//- index.pug
+extends ../layout.pug
+
+block content
+	include ../common.blocks/navigation-bar/navigation-bar.pug
+	include ../common.blocks/button/button.pug
+	+navigationBar()
+	.main-page-wrapper
+		header.main-page-wrapper__banner
+			h2.main-page-wrapper__location Tomsk / May 2019
+			h1.main-page-wrapper__title
+				span.main-page-wrapper__name Web Talks 2018
+				span.main-page-wrapper__tagline Three big tracks–Product, Design, and Developer focused, plus stellar keynotes and much more
+			.main-page-wrapper__register-button
+				+button('pre-register for 2019')(class='button_size_responsive')
+
+
+
+
+
+
+		
+		
