@@ -7,16 +7,19 @@ block content
 	include ../common.blocks/email-form/email-form.pug
 	include ../common.blocks/map-section/map-section.pug
 	.contacts-page
-		h1.contacts-page__header.page-title Contact Us
 		.contacts-page__navigation
 			+navigationBar()
-		.contacts-page__form
-			+emailForm('email-form')
-		.contacts-page__map
-			+mapSection()
+		main.contacts-page__main
+			h1.contacts-page__header.page-title Contact Us
+			section.contacts-page__email
+				p.contacts-page__text Got a question? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+				.contacts-page__form
+					+emailForm('email-form')
+			section.contacts-page__map
+				+mapSection()
 		.contacts-page__footer
 			+footerSection()
-		
+			
 
 
 		
