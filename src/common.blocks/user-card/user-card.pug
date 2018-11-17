@@ -13,10 +13,10 @@ mixin userCard(user, colored)
 	div(class = className)
 		.user-card__photo(style='background-image: url('+image+')')
 		.user-card__box
-			h2.user-card__name= user.name
-			h3.user-card__position= user.position
+			h2.user-card__name!= user.name
+			h3.user-card__position!= user.position
 			.user-card__icons
 				each item in icons
-					a.user-card__icon(href="#" title=item.name)
+					a.user-card__icon(href="#" title!=item.name)
 						+socialIcon(item)
 				

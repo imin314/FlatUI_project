@@ -1,22 +1,22 @@
 {
 	"speakers": [
 	{
-		"name": "Maria Leonova",
+		"name": "maria leonova",
 		"position": "founder &amp; lead instructor, Jack&amp;Bo",
 		"img": "maria-leonova.jpg",
-		"text": "Maria specialises in adding the missing pieces to many Agile transformations: training the product teams and consulting on strategy, structure, and process. A frequent speaker, Maria has had the pleasure of addressing audiences in over 20 different countries. Maria is currently writing about her experiences for O’Reilly in the book, Escaping the Build Trap, due out in 2020."
+		"text": "Maria specialises in adding the missing pieces to many Agile transformations: training the product teams and consulting on strategy, structure, and process. A frequent speaker, Maria has had the pleasure of addressing audiences in over 20 different countries. Maria is currently writing about her experiences for O'Reilly in the book."
 	},
 	{
 		"name": "nick brown",
 		"position": "software engineer, spotify",
 		"img": "nick-brown.jpg",
-		"text": "Nick is a NYC-based software engineer at Spotify working on developing data privacy infrastructure. In the past, he’s worked worked at Facebook, Snapchat and Google, and has lived in Germany and South Africa."
+		"text": "Nick is a NYC-based software engineer at Spotify working on developing data privacy infrastructure. In the past, he's worked worked at Facebook, Snapchat and Google, and has lived in Germany and South Africa."
 	},
 	{
 		"name": "piter wonderbilt",
 		"position": "program management lead, intercom",
 		"img": "piter-wonderbilt.jpg",
-		"text": "Piter is passionate about program management and bringing cross functional teams together to really deliver on company strategy. He introduced the discipline to Intercom, seizing the opportunity to enable the company to deliver product at scale, without slowing down. Piter has worked with clients from various industries in a strategic design agency."
+		"text": "Piter is passionate about program management and bringing cross functional teams together to really deliver on company strategy. He introduced the discipline to Intercom, seizing the opportunity to enable the company to deliver product at scale, without slowing down."
 	},
 	{
 		"name": "anna smith",
@@ -40,13 +40,13 @@
 		"name": "haruki yamada",
 		"position": "STRATEGIC DESIGNER, WITH COMPANY",
 		"img": "haruki-yamada.jpg",
-		"text": "Haruki is not an Innovation Coach, a Product Ideation Guru or a Creativity Mentor. He will not shatter your paradigms, make you forget everything you thought you knew, or unveil a new, futuristic model. What he is, however, is a creative Multidisciplinary Designer who works at Lisbon-based Strategic Design Consultancy With Company"
+		"text": "Haruki is not an Innovation Coach, a Product Ideation Guru or a Creativity Mentor. He will not shatter your paradigms, make you forget everything you thought you knew, or unveil a new, futuristic model. What he is, however, is a creative Multidisciplinary Designer who works at Lisbon-based Strategic Design Consultancy."
 	},
 	{
 		"name": "marcos caceres",
 		"position": "platform engineer, Mozilla",
 		"img": "marcos-caceres.jpg",
-		"text": "Marcos has spent the last four years working with Mozilla&apos;s DOM team hacking on Firefox, writing PWA-related W3C specifications, and co-chairing the W3C&apos;s Web Incubator Community Group - all proudly from Melbourne, Australia! Previously, Marcos worked at Opera Software in Oslo, Norway, where he managed the &quot;Core ExtApps&quot; team, which brought you Geolocation, getUserMedia(), and other goodies. Marcos has been developing for the Web since 1996, but still can&apos;t centre things properly with CSS."
+		"text": "Marcos has spent the last four years working with Mozilla&apos;s DOM team hacking on Firefox, writing PWA-related W3C specifications, and co-chairing the W3C&apos;s Web Incubator Community Group - all proudly from Melbourne, Australia! Previously, Marcos worked at Opera Software in Oslo, Norway."
 	},
 	{
 		"name": "jack zeman",
@@ -70,7 +70,7 @@
 		"name": "xavier ho",
 		"position": "Software Crafter, Data61",
 		"img": "xavier-ho.jpg",
-		"text": "Xavier&apos;s focuses on high-impact, real-time data visualisation, data-driven engineering, and design at CSIRO Data61. His recent work on CSIRO&apos;s TraNSIT was recommended by the Office of Northern Australia. In his spare time, he fiddles with generative art, code, and a bit of interactive installations. He dreams to be able to print chocolate directly in the oven one day with code."
+		"text": "Xavier&apos;s focuses on high-impact, real-time data visualisation, data-driven engineering, and design at CSIRO Data61. His recent work on CSIRO&apos;s TraNSIT was recommended by the Office of Northern Australia. In his spare time, he fiddles with generative art, and code."
 	},
 	{
 		"name": "marcin szczepanski",
@@ -82,7 +82,7 @@
 		"name": "mandy michael",
 		"position": "Front End Development Manager, Seven West Media",
 		"img": "mandy-michael.jpg",
-		"text": "Mandy is a community organiser, speaker, and developer working as the Front End Development Manager at Seven West Media in Western Australia. She is a co-organiser and Director of Mixin Conf, and the founder and co-organiser of Fenders, a local meetup for front-end developers providing events, mentoring and support to the Perth web community."
+		"text": "Mandy is a community organiser, speaker, and developer working as the Front End Development Manager at Seven West Media in Western Australia. She is a co-organiser and Director of Mixin Conf, and the founder and co-organiser of Fenders."
 	},
 	{
 		"name": "michael john pena",
@@ -107,5 +107,151 @@
 		"position": "web designer, Jewel Paymentech",
 		"img": "helga-willson.jpg",
 		"text": "Helga is a self-taught designer and developer with an inordinate love for CSS. Reducing lines of code in her web projects makes her extremely happy. She used to play basketball full-time and launched her web career during downtime between training sessions."
-	}]
+	}],
+	"talks": [
+	{
+		"title": "Shipping Product at Scale",
+		"speaker": "piter wonderbilt",
+		"date": "02.05.2019",
+		"time": "09:15 - 10:15",
+		"category": "management",
+		"description": "At scale, stuff breaks. There are more cross functional and go-to-market teams needed for launches, more dependencies, communication and collaboration become more difficult and it causes a strain on product teams and the company as launch dates are missed. At Intercom lived through this pain as we tried to launch new products and failed – until we introduced program management. The perception was that this would slow us down and add an extra layer of unnecessary management. But done well program management enables teams to do their jobs well, better, by acting as the glue that ties everyone together – product, go-to-market and leadership teams – and a driving force for delivering company strategy."
+	},
+	{
+		"title": "How Designers and Engineers Can Better Work With Each Other",
+		"speaker": "nick brown",
+		"date": "02.05.2019",
+		"time": "11:20 - 13:20",
+		"category": "development",
+		"description": "Nick worked on projects as an engineer, a designer, and sometimes even both. As an engineer, when Nick has given wireframes to work off of, he first works on breaking down the problem into smaller chunks of work and tackles them one at a time. As a designer, he imagines an end-product and then tries to build components in Sketch until he can develop the experience he's visualizing. Engineers tend to work bottom-up while designers tend to work top-down, and this can lead to a lot of frustration when collaborating. Here're some things designers can do to make collaborating with engineers smoother"
+	},
+	{
+		"title": "Defining and Measuring Value",
+		"speaker": "maria leonova",
+		"date": "03.05.2019",
+		"time": "14:30 - 18:00",
+		"category": "management",
+		"description": "Product Managers are responsible for finding the opportunities that maximize business and customer value. But what does value really mean? This workshop will go over how to define and measure value in product development. We'll talk about setting the right goals, from a business and customer standpoint, and how we choose the right metrics to measure to understand if we're on path to reach those goals. We'll discuss how products tie into the business goals of revenue and growth, so you can communicate effectively with leadership. This course is great for Product Managers and managers of product development teams. Anyone who has aspirations to be a Chief Product Officer one day should be sure not to miss it."
+	},
+	{
+		"title": "Product Discovery Micro Sprint",
+		"speaker": "anna smith",
+		"date": "03.05.2019",
+		"time": "09:00 - 13:00",
+		"category": "management",
+		"description": "Innovation will not happen unless, teams are able to connect business model and product strategy thinking with hands-on customer research, solution ideation and agile product development. Within the one day #PoDojo Lean Innovation Dojo we provide a micro-version of the toolchain that we are using in our daily practice as coaches of venture and organizational sponsored start-up teams. The day will begin with learning how to identify and model the customer jobs as possible opportunities for innovation. Next, we will practice several ideation techniques finding solutions that fit customer needs and that work within business models. And finally, we will learn how to test our ideas using a rich set of methods to validate hypotheses derived from conceptual models."
+	},
+	{
+		"title": "Creating products and services people will buy",
+		"speaker": "ben portman",
+		"date": "04.05.2019",
+		"time": "09:00 - 13:00",
+		"category": "design",
+		"description": "Customers don't want your product or what it does; they want help making themselves better, i.e. they want to evolve and make progress in their lives. – Alan Klement, author of When Coffee and Kale Compete. In the workshop, you will learn hands-on how to find out what customers want and how they form their jobs to be done. These insights will prove invaluable for making better product and design decisions and finding growth opportunities for your product or service."
+	},
+	{
+		"title": "Physical fights back: blending physical and digital design",
+		"speaker": "keith alexander",
+		"date": "02.05.2019",
+		"time": "13:00 - 16:00",
+		"category": "design",
+		"description": "For the past five years much emphasis was placed on creating experiences delivered through digital screens; as a result, people spent more time interacting via device than in person. Digital is no longer the centerpiece of user experience, but just one part of it. The emphasis is shifting onto how best to use it as an invisible enabler of physical and sensory experiences, and how to create the conditions to enable and deliver new experiences to the end users."
+	},
+	{
+		"title": "The Double-W Process: to Sprint a Sprinted Model",
+		"speaker": "haruki yamada",
+		"date": "04.05.2019",
+		"time": "14:30 - 18:30",
+		"category": "design",
+		"description": "With the rise and democratization of services like Fiverr, logo-making algorithms and freelance designers ready to deliver logos in less than 24 hours, small companies and startup now have no excuse for not having a shiny, up to date, professional looking logo. But wait: Is it a logo that they need… or a Brand? In this workshop, participants will be invited to take part in a super sprinted version of the Double-W process, a remote lean branding service developed by With Company, and understand how constant designer-client communication, a framework-based methodology and a thorough end-to-end process are the ingredients to develop a carefully co-created brand, which is encompassed by a bespoke brand strategy and can even influence all aspects of a company, from communication down to product strategy."
+	},
+	{
+		"title": "The State of Authentication",
+		"speaker": "marcos caceres",
+		"date": "03.05.2019",
+		"time": "10:00 - 13:00",
+		"category": "development",
+		"description": "Im addition to naming things and cache invalidation, add authentication to the list of the hardest problems in computer science (come to think of it authentication basically combines those two). In this session Marcos Carceres looks at the current state of authentication on the Web, and in particular Web Authentication, an effort to standardise web based authentication."
+	},
+	{
+		"title": "Using CSS (and SVG) for the Good of UX",
+		"speaker": "jack zeman",
+		"date": "06.05.2019",
+		"time": "10:00 - 13:00",
+		"category": "development",
+		"description": "Everyone knows that with great power comes great responsibility. Just like their range of skills, the front-end developer's responsibilities may vary across teams, but one things remains the same: a front-end developer can either make or break a user's experience. We build the interface that users interact with, and how we do it has a direct impact on how the user feels when they do, whether they find it delightful to use, and, most importantly, whether or not they *can* use it properly."
+	},
+	{
+		"title": "Return of the script tag",
+		"speaker": "paul heasley",
+		"date": "06.05.2019",
+		"time": "13:00 - 16:00",
+		"category": "development",
+		"description": "It doesn't feel that long ago that we all moved to Bower and then NPM as a way of managing and bundling our dependencies locally, but with ES6 native modules support landing in major browsers, and tools like unpkg.com there's a growing interest in front-end development without the build systems and local compilation."
+	},
+	{
+		"title": "Programming Generative Art",
+		"speaker": "xavier ho",
+		"date": "06.05.2019",
+		"time": "11:15 - 14:00",
+		"category": "development",
+		"description": "Programming generative art, also known as creative coding, is often a trial-and-error process, combining creativity and logic to present something aesthetic. However, creative coding has a high barrier to entry due to the breadth of knowledge and coding skills required. This talk aims to lower that barrier for you to take home and practice creative coding."
+	},
+	{
+		"title": "UI architecture in the age of design systems",
+		"speaker": "Isabel Brison",
+		"date": "06.05.2019",
+		"time": "14:00 - 17:00",
+		"category": "development",
+		"description": "Modern web app architecture, whichever framework you use, focuses on separation of concerns and reusability. The current trend towards design systems feeds into this logic, abstracting a highly reusable presentational layer. Design is Atomic; code is neatly separated into presentational and container components. But what happens when these different paradigms meet in the middle? Should the app architecture be influenced by Atomic principles? How do we represent state changes in the design system?"
+	},
+	{
+		"title": "Scaling frontend development",
+		"speaker": "marcin szczepanski",
+		"date": "07.05.2019",
+		"time": "10:00 - 13:00",
+		"category": "management",
+		"description": "Atlassian Jira's has a new frontend codebase that is only 18 months old, but already contains over 50 top level apps and 400,000+ lines of JavaScript code, from almost 200 committers. The problem was that with 50 apps we had 50 different approaches to how to build a frontend application. We needed to scale our development processes, so in late 2017 we embarked on Tangerine - a program to standardise principles that define a world class frontend application as it scales up, and apply this to Jira."
+	},
+	{
+		"title": "Functional HTML",
+		"speaker": "mandy michael",
+		"date": "07.05.2019",
+		"time": "13:00 - 16:00",
+		"category": "development",
+		"description": "HTML, the foundation of the web! With so much time being spent on typed javascript, functional programming, unit tests, visual regression testing, tools, frameworks and a drive to write better more efficient code we often forget that the web starts with HTML. Let's talk HTML, semantics and why choosing the right html elements will help you write better, cleaner more efficient code not just in your HTML but your CSS and Javascript as well. Most importantly why HTML is so vital in improving your projects overall functionality for people and for bots."
+	},
+	{
+		"title": "Blockchain for Web Developers",
+		"speaker": "michael john pena",
+		"date": "08.05.2019",
+		"time": "10:00 - 12:00",
+		"category": "development",
+		"description": "Blockchain has been a big buzz lately. There are a lot of demand for DApps (Decentralised Applications) developers in the market right now. In this session, the audience will understand the fundamentals of a Blockchain platform, what it means for web developers and how to get started writing your own Decentralised App. The speaker coming from a developer background himself, will bridge the gap the knowledge to fast-track the audience in DApps development."
+	},
+	{
+		"title": "Your web page never listens to me",
+		"speaker": "jason o'neil",
+		"date": "08.05.2019",
+		"time": "14:00 - 18:00",
+		"category": "development",
+		"description": "Siri, Alexa, Cortana and “Hey Google” - the big companies are all building services that can talk to us, and that we can talk back at. These tools are great for setting timers, adding reminders, and playing a song. But compared to the sheer amount of information and interaction available to us on the web, they can still feel quite limited. How can we, as standards-loving web developers, help shape the future of voice controlled, conversational user interfaces? How can we use the well supported Speech Synthesis API, and the still new Speech Recognition API, to teach our pages to talk, and to listen?"
+	},
+	{
+		"title": "Functional CSS yesterday",
+		"speaker": "craig sharkie",
+		"date": "09.05.2019",
+		"time": "10:00 - 13:00",
+		"category": "development",
+		"description": "Your CSS can already be just* as functional as JavaScript. It is pure, can be immutable, and can be reasoned about. If you start thinking about CSS in the same terms that other languages use, they can use their paradigms to learn your language. And when you start using their tooling, they'll be running out of excuses to not embrace Specificity."
+	},
+	{
+		"title": "Not in Kansas anymore: a new frontier for web design",
+		"speaker": "helga willson",
+		"date": "09.05.2019",
+		"time": "14:00 - 17:00",
+		"category": "development",
+		"description": "The web is a unique medium on its own and we need to establish a new normal for the web, breaking it free from the shackles of static print design. This new normal involves ceding control of our designs to the browsers that render them rather than constantly engage in this battle to dictate where every pixel should fall. Modern CSS gives us a comprehensive set of tools that lets us embrace the fluidity of the web."
+	}
+	]
 }
