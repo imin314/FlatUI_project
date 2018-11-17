@@ -1,121 +1,111 @@
 {
-	"buttons": [
+	"speakers": [
 	{
-		"title": "button",
-		"size": "small",
-		"color": "main"
-	},
-	{
-		"title": "button",
-		"size": "normal",
-		"color": "main"
+		"name": "Maria Leonova",
+		"position": "founder &amp; lead instructor, Jack&amp;Bo",
+		"img": "maria-leonova.jpg",
+		"text": "Maria specialises in adding the missing pieces to many Agile transformations: training the product teams and consulting on strategy, structure, and process. A frequent speaker, Maria has had the pleasure of addressing audiences in over 20 different countries. Maria is currently writing about her experiences for O’Reilly in the book, Escaping the Build Trap, due out in 2020."
 	},
 	{
-		"title": "button",
-		"size": "normal",
-		"color": "secondary"
+		"name": "nick brown",
+		"position": "software engineer, spotify",
+		"img": "nick-brown.jpg",
+		"text": "Nick is a NYC-based software engineer at Spotify working on developing data privacy infrastructure. In the past, he’s worked worked at Facebook, Snapchat and Google, and has lived in Germany and South Africa."
 	},
 	{
-		"title": "button",
-		"size": "small",
-		"color": "secondary"
+		"name": "piter wonderbilt",
+		"position": "program management lead, intercom",
+		"img": "piter-wonderbilt.jpg",
+		"text": "Piter is passionate about program management and bringing cross functional teams together to really deliver on company strategy. He introduced the discipline to Intercom, seizing the opportunity to enable the company to deliver product at scale, without slowing down. Piter has worked with clients from various industries in a strategic design agency."
 	},
 	{
-		"title": "button",
-		"size": "small",
-		"color": "main"
+		"name": "anna smith",
+		"position": "CO-FOUNDER &amp; AGILE COACH, podojo",
+		"img": "anna-smith.jpg",
+		"text": "With over 20 years of experience in complex product development in both software &amp; hardware, Anna has previously led Agile transition efforts in top telecommunications firms and worked with North Carolina State University to conduct research on Agile Test-Driven development."
 	},
 	{
-		"title": "button",
-		"size": "normal",
-		"color": "main"
+		"name": "ben portman",
+		"position": "SENIOR SERVICE AND UX DESIGNER, IXDS",
+		"img": "ben-portman.jpg",
+		"text": "Ben currently works as Senior Service and UX Designer at the leading German innovation agency IXDS covering every step of the service design process from research, strategy to the nitty-gritty details of interaction and visual design."
 	},
 	{
-		"title": "button",
-		"size": "normal",
-		"color": "secondary"
+		"name": "keith alexander",
+		"position": "",
+		"img": "keith-alexander.jpg",
+		"text": "Keith is a designer with a background in Service &amp; Interaction Design. During his career, Keith has served in a broad range of roles, designing digital products and services in several sectors, including healthcare, web development, and the automotive and travel &amp; leisure industries."
 	},
 	{
-		"title": "button",
-		"size": "small",
-		"color": "secondary"
+		"name": "haruki yamada",
+		"position": "STRATEGIC DESIGNER, WITH COMPANY",
+		"img": "haruki-yamada.jpg",
+		"text": "Haruki is not an Innovation Coach, a Product Ideation Guru or a Creativity Mentor. He will not shatter your paradigms, make you forget everything you thought you knew, or unveil a new, futuristic model. What he is, however, is a creative Multidisciplinary Designer who works at Lisbon-based Strategic Design Consultancy With Company"
 	},
 	{
-		"title": "button",
-		"size": "small",
-		"color": "main"
+		"name": "marcos caceres",
+		"position": "platform engineer, Mozilla",
+		"img": "marcos-caceres.jpg",
+		"text": "Marcos has spent the last four years working with Mozilla&apos;s DOM team hacking on Firefox, writing PWA-related W3C specifications, and co-chairing the W3C&apos;s Web Incubator Community Group - all proudly from Melbourne, Australia! Previously, Marcos worked at Opera Software in Oslo, Norway, where he managed the &quot;Core ExtApps&quot; team, which brought you Geolocation, getUserMedia(), and other goodies. Marcos has been developing for the Web since 1996, but still can&apos;t centre things properly with CSS."
 	},
 	{
-		"title": "button",
-		"size": "normal",
-		"color": "main"
+		"name": "jack zeman",
+		"position": "UI/UX developer",
+		"img": "jack-zeman.jpg",
+		"text": "Jack is a freelance front-end UI/UX developer, trainer and speaker from Lebanon. He partners with design teams to execute and build beautiful, progressive Web user interfaces and design systems, with a strong focus on responsive design, performance, and accessibility, using the latest front-end design techniques."
 	},
 	{
-		"title": "button",
-		"size": "normal",
-		"color": "secondary"
+		"name": "paul heasley",
+		"position": "Technical Lead, PageUp",
+		"img": "paul-heasley.jpg",
+		"text": "Paul is passionate about creating beautiful UI&apos;s that connect emotionally with users. He&apos;s excited by the opportunities that new technology opens up and is inspired by the innovators, free-thinkers and open source contributors in our community."
 	},
 	{
-		"title": "button",
-		"size": "small",
-		"color": "secondary"
-	}
-	],
-	"arrows": [
-	{
-		"direction" : "left",
-		"disabled" : false
+		"name": "Isabel Brison",
+		"position": "Front End Developer, Fairfax",
+		"img": "isabel-brison.jpg",
+		"text": "Isabel is a front end engineer at Fairfax Media, where she has worked on all the metro mastheads, across two completely different tech stacks and is currently building the second iteration of their design system. When she is not coding she can usually be found tending the veggie patch or spending quality time with her cats."
 	},
 	{
-		"direction" : "right",
-		"disabled" : false
+		"name": "xavier ho",
+		"position": "Software Crafter, Data61",
+		"img": "xavier-ho.jpg",
+		"text": "Xavier&apos;s focuses on high-impact, real-time data visualisation, data-driven engineering, and design at CSIRO Data61. His recent work on CSIRO&apos;s TraNSIT was recommended by the Office of Northern Australia. In his spare time, he fiddles with generative art, code, and a bit of interactive installations. He dreams to be able to print chocolate directly in the oven one day with code."
 	},
 	{
-		"direction" : "left",
-		"disabled" : true
+		"name": "marcin szczepanski",
+		"position": "Principal Front End Developer, Atlassian",
+		"img": "marcin-szczepanski.jpg",
+		"text": "A developer for almost twenty years, Marcin has worked with the web as it evolved from static pages to the rich JavaScript applications we see today. Starting in the corporate world, and later a digital agency, Marcin is currently a Principal Frontend Developer at Atlassian."
 	},
 	{
-		"direction" : "right",
-		"disabled" : true
+		"name": "mandy michael",
+		"position": "Front End Development Manager, Seven West Media",
+		"img": "mandy-michael.jpg",
+		"text": "Mandy is a community organiser, speaker, and developer working as the Front End Development Manager at Seven West Media in Western Australia. She is a co-organiser and Director of Mixin Conf, and the founder and co-organiser of Fenders, a local meetup for front-end developers providing events, mentoring and support to the Perth web community."
 	},
 	{
-		"direction" : "left",
-		"disabled" : false
+		"name": "michael john pena",
+		"position": "Technical Consultant, Readify",
+		"img": "michael-john-pena.jpg",
+		"text": "Michael is an experienced Technical Consultant currently working with Readify in Sydney, Australia, a Microsoft MVP and a certified professional with more than 5 years of working experience ranging from Mobile, Cloud, Web, DevOps and Blockchain."
 	},
 	{
-		"direction" : "right",
-		"disabled" : false
-	}
-	],
-	"charts":
-	{ "percentages" :
-	[{	"id": "percentage-chart1",
-		"value": 0
+		"name": "jason o&apos;neil",
+		"position": "Software Engineer, Culture Amp",
+		"img": "jason-o-neil.jpg",
+		"text": "Jason lives in Perth and works remotely as a front-end software engineer for Culture Amp. He loves thinking about ways we can improve developer experience, and make it easier and faster for us to make high quality, accessible websites and apps."
 	},
-	{	"id": "percentage-chart2",
-		"value": 38
+	{
+		"name": "craig sharkie",
+		"position": "Senior Developer, Seven West Media",
+		"img": "craig-sharkie.jpg",
+		"text": "Founder and lead wrangler at Sydney&apos;s JavaScript meet-up, SydJS, founder at SydJS, JavaScript communities for new Developers and inexperienced Developers"
 	},
-	{	"id": "percentage-chart3",
-		"value": 62
-	},
-	{	"id": "percentage-chart4",
-		"value": 89
-	}],
-	"donuts":
-	[{
-		"id": "donut-chart1",
-		"values": 
-		{	"value-1": 10,
-			"value-2": 20,
-			"value-3": 40,
-			"value-4": 30
-	}] 
-	},
-	"slider": {
-		"value-1": 40,
-		"value-2": 75
-	},
-	"stages": {
-		"max": 5
-	}
+	{
+		"name": "helga willson",
+		"position": "web designer, Jewel Paymentech",
+		"img": "helga-willson.jpg",
+		"text": "Helga is a self-taught designer and developer with an inordinate love for CSS. Reducing lines of code in her web projects makes her extremely happy. She used to play basketball full-time and launched her web career during downtime between training sessions."
+	}]
 }

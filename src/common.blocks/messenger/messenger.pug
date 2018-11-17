@@ -1,8 +1,12 @@
 include ../button/button.pug
 
-mixin messenger(data)
+mixin messenger(data, isFixed)
 	- var image = require("../assets/img/"+ data.image)
-	.messenger
+	- var className = 'messenger';
+	- if (isFixed === true) {
+	- className += ' messenger_fixed';
+	- }
+	div(class=className)
 		.messenger__header
 			.messenger__name= data.name
 			.messenger__photo(style='background-image: url('+image+')')
@@ -10,8 +14,8 @@ mixin messenger(data)
 			a.messenger__bubble-icon(href="#" title="")
 			a.messenger__camera-icon(href="#" title="add photo")
 		.messenger__container
-			.messenger__message.messenger__message_type_inbox= "Hey! So are we cool to meet at the art gallery? Say 8pm"
-			textarea.messenger__message.messenger__message_type_outbox(name='outbox' placeholder='Type Something' ) Yeah that sounds great. See you then.
+			.messenger__message.messenger__message_type_inbox= data.inbox
+			textarea.messenger__message.messenger__message_type_outbox(name='outbox' placeholder='Type your message...' )= data.outbox
 			.messenger__button
 				+button('reply')(type='submit' value='Submit' class='button_color_reverse button_size_responsive')
 

@@ -1,0 +1,11 @@
+//- speakers.pug
+extends ../layout.pug
+
+block content
+	include ../common.blocks/speaker-card/speaker-card.pug
+	- var data = require('../assets/data/data.json')
+	.speakers-page
+		section.speakers-page__cards
+			each item in data.speakers
+				.speakers-page__card
+					+speakerCard(item)

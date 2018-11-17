@@ -7,12 +7,13 @@
 		justify-content space-between
 		flex-direction row
 		flex-wrap wrap
-		@media screen and (max-width: screen-md2)
-			justify-content center
 
 	&__slider
-		flex 346px 2 0
+		flex 225px 1 1
 		margin-bottom 2.5rem
 		max-width 700px
-		@media screen and (max-width: screen-md2)
-			flex 500px 1 1
+		min-width 225px
+		&:first-child
+			margin-right 10%
+			@media screen and (max-width: 607px)
+				margin-right 0
