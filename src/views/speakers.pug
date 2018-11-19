@@ -3,9 +3,22 @@ extends ../layout.pug
 
 block content
 	include ../common.blocks/speaker-card/speaker-card.pug
+	include ../common.blocks/search-box/search-box.pug
+	include ../common.blocks/arrow-button/arrow-button.pug
+
 	- var data = require('../assets/data/data.json')
 	main.speakers-page
-		section.speakers-page__cards
-			each item in data.speakers
-				.speakers-page__card
-					+speakerCard(item)
+		h1.speakers-page__header.page-title Speakers
+		p.speakers-page__intro We've combed the country and the world for extraordinary spakers, covering the most relevant topics for today's front end developers, designers, and managers.
+		section.speakers-page__search
+			+searchBox()
+		section.speakers-page__card-carousel
+			.speakers-page__left-button
+				+arrowButton('left', true)
+			.speakers-page__card-wrapper
+				.speakers-page__cards
+					each item in data.speakers
+						.speakers-page__card
+							+speakerCard(item)
+			.speakers-page__right-button
+				+arrowButton('right')

@@ -1,6 +1,7 @@
 import './styl/style.styl';
 import './common.blocks/loader/js/loader.js';
 import './common.blocks/pin/js/pin.js'
+import './js/speakers.js';
 import './common.blocks/social-icon/js/social-icon.js'
 import './common.blocks/button/js/button.js';
 import './common.blocks/percentage-chart/js/percentage-chart.js'
