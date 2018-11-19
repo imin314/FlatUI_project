@@ -2,23 +2,16 @@
 extends ../layout.pug
 
 block content
-	include ../common.blocks/navigation-bar/navigation-bar.pug
-	include ../common.blocks/footer-section/footer-section.pug
 	include ../common.blocks/email-form/email-form.pug
 	include ../common.blocks/map-section/map-section.pug
-	.contacts-page
-		.contacts-page__navigation
-			+navigationBar()
-		main.contacts-page__main
-			h1.contacts-page__header.page-title Contact Us
-			section.contacts-page__email
-				p.contacts-page__text Got a question? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
-				.contacts-page__form
-					+emailForm('email-form')
-			section.contacts-page__map
-				+mapSection()
-		.contacts-page__footer
-			+footerSection()
+	main.contacts-page
+		h1.contacts-page__header.page-title Contact Us
+		section.contacts-page__email
+			p.contacts-page__text Got a question? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+			.contacts-page__form
+				+emailForm('email-form')
+		section.contacts-page__map
+			+mapSection()
 			
 
 

@@ -1,45 +1,48 @@
 //- uidemo.pug
-
-extends ../layout.pug
-
-block content
-	include ../common.blocks/button-section/button-section.pug
-	include ../common.blocks/arrow-section/arrow-section.pug
-	include ../common.blocks/chart-section/chart-section.pug
-	include ../common.blocks/slider-section/slider-section.pug
-	include ../common.blocks/stages-section/stages-section.pug
-	include ../common.blocks/form-section/form-section.pug
-	include ../common.blocks/search-section/search-section.pug
-	include ../common.blocks/profile-section/profile-section.pug
-	include ../common.blocks/news-section/news-section.pug
-	include ../common.blocks/map-section/map-section.pug
-	include ../common.blocks/calendar-section/calendar-section.pug
-	include ../common.blocks/message-section/message-section.pug
-	include ../common.blocks/video-section/video-section.pug
-	.page-container
-		.page-container__button-section
-			+buttonSection()
-		.page-container__arrow-section
-			+arrowSection()
-		.page-container__chart-section
-			+chartSection()
-		.page-container__slider-section
-			+sliderSection()
-		.page-container__stages-section
-			+stagesSection()
-		.page-container__form-section
-			+formSection()
-		.page-container__search-section
-			+searchSection()
-		.page-container__profile-section
-			+profileSection()
-		.page-container__news-section
-			+newsSection()
-		.page-container__map-section
-			+mapSection()
-		.page-container__calendar-section
-			+calendarSection()
-		.page-container__message-section
-			+messageSection()
-		.page-container__video-section
-			+videoSection()
+include ../common.blocks/button-section/button-section.pug
+include ../common.blocks/arrow-section/arrow-section.pug
+include ../common.blocks/chart-section/chart-section.pug
+include ../common.blocks/slider-section/slider-section.pug
+include ../common.blocks/stages-section/stages-section.pug
+include ../common.blocks/form-section/form-section.pug
+include ../common.blocks/search-section/search-section.pug
+include ../common.blocks/profile-section/profile-section.pug
+include ../common.blocks/news-section/news-section.pug
+include ../common.blocks/map-section/map-section.pug
+include ../common.blocks/calendar-section/calendar-section.pug
+include ../common.blocks/message-section/message-section.pug
+include ../common.blocks/video-section/video-section.pug
+doctype html
+html
+	head
+		meta(charset = 'utf-8')
+		meta(name='viewport', content="inital-scale=1.0, width=device-width")
+		title UI Kit demo
+	body
+		main.page-container
+			section.page-container__button-section
+				+buttonSection()
+			section.page-container__arrow-section
+				+arrowSection()
+			section.page-container__chart-section
+				+chartSection()
+			section.page-container__slider-section
+				+sliderSection()
+			section.page-container__stages-section
+				+stagesSection()
+			section.page-container__form-section
+				+formSection()
+			section.page-container__search-section
+				+searchSection()
+			section.page-container__profile-section
+				+profileSection()
+			section.page-container__news-section
+				+newsSection()
+			section.page-container__map-section
+				+mapSection()
+			section.page-container__calendar-section
+				+calendarSection()
+			section.page-container__message-section
+				+messageSection()
+			section.page-container__video-section
+				+videoSection()

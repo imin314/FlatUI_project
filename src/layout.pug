@@ -1,13 +1,22 @@
 //- layout.pug
 
 include common.blocks/loader/loader.pug
-
+include common.blocks/navigation-bar/navigation-bar.pug
+include common.blocks/footer-section/footer-section.pug
+include common.blocks/online-help/online-help.pug
 doctype html
 html
 	head
 		meta(charset = 'utf-8')
 		meta(name='viewport', content="inital-scale=1.0, width=device-width")
 		title #{title}
+		script.
+			document.documentElement.style.visibility = 'hidden';
+			document.addEventListener('DOMContentLoaded', function() {
+				document.documentElement.style.visibility = '';});
 	body
 		+loader()
+		+navigationBar()
 		block content
+		+footerSection()
+		+onlineHelp()
