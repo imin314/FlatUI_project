@@ -1,10 +1,10 @@
 $(document).ready(function() {
     $(".speakers-page__right-button").click(function(){
-		$(".speakers-page__cards").mCustomScrollbar("scrollTo","-=800");
+		$(".speakers-page__cards").mCustomScrollbar("scrollTo","-=500");
 	});
 
 	$(".speakers-page__left-button").click(function(){
-		$(".speakers-page__cards").mCustomScrollbar("scrollTo","+=800");
+		$(".speakers-page__cards").mCustomScrollbar("scrollTo","+=500");
 	});
 });
 
