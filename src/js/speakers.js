@@ -1,11 +1,34 @@
 $(document).ready(function() {
     $(".speakers-page__right-button").click(function(){
-		var cards = $(".speakers-page__cards");
-		var scrollValue = cards.scrollLeft() + 200;
-		cards.animate({scrollLeft: scrollValue}, 500);
+		$(".speakers-page__cards").mCustomScrollbar("scrollTo","-=800");
 	});
-	
+
+	$(".speakers-page__left-button").click(function(){
+		$(".speakers-page__cards").mCustomScrollbar("scrollTo","+=800");
+	});
 });
+
+$(window).on("load",function(){
+	$(".speakers-page__cards").mCustomScrollbar({
+		axis:"x",
+		theme:"dark-thin",
+		autoExpandScrollbar:true,
+		advanced:{autoExpandHorizontalScroll:true},
+		callbacks:{
+			onTotalScroll: function(){
+				$(".speakers-page__right-button").find(".arrow-button").addClass("arrow-button_disabled");
+			},
+			onTotalScrollBack: function(){
+				$(".speakers-page__left-button").find(".arrow-button").addClass("arrow-button_disabled");
+			},
+			onScrollStart: function(){
+				$(".speakers-page__left-button").find(".arrow-button").removeClass("arrow-button_disabled");
+				$(".speakers-page__right-button").find(".arrow-button").removeClass("arrow-button_disabled");
+			}
+		}
+	});
+});
+
 
 /*var cards = $(".speakers-page__cards");
 		var matrix = cards.css('transform').replace(/[^0-9\-.,]/g, '').split(',');

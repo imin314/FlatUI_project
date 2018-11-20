@@ -1,8 +1,10 @@
 import './styl/style.styl';
 import './common.blocks/loader/js/loader.js';
 import './common.blocks/pin/js/pin.js'
+import './common.blocks/scrollbar/js/scrollbar.js'
 import './js/speakers.js';
 import './common.blocks/social-icon/js/social-icon.js'
+import './common.blocks/speaker-card/js/speaker-card.js'
 import './common.blocks/button/js/button.js';
 import './common.blocks/percentage-chart/js/percentage-chart.js'
 import './common.blocks/donut-chart/js/donut-chart.js'

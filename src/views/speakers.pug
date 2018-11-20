@@ -15,10 +15,9 @@ block content
 		section.speakers-page__card-carousel
 			.speakers-page__left-button
 				+arrowButton('left', true)
-			.speakers-page__card-wrapper
-				.speakers-page__cards
-					each item in data.speakers
-						.speakers-page__card
-							+speakerCard(item)
+			.speakers-page__cards
+				each item in data.speakers
+					.speakers-page__card
+						+speakerCard(item)
 			.speakers-page__right-button
 				+arrowButton('right')
