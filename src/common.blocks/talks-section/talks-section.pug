@@ -1,0 +1,26 @@
+include ../news-card/news-card.pug
+- var data = require('../assets/data/data.json');
+
+mixin talksSection()
+	.talks-section
+		.talks-section__category
+			h2.talks-section__title.section-title Development
+			each item in data.talks
+				- if (item.category === "development") {
+					.talks-section__card
+						+newsCard(item)
+				-}
+		.talks-section__category
+			h2.talks-section__title Management
+			each item in data.talks
+				- if (item.category === "management") {
+					.talks-section__card
+						+newsCard(item)
+				-}
+		.talks-section__category
+			h2.talks-section__title Design
+			each item in data.talks
+				- if (item.category === "design") {
+					.talks-section__card
+						+newsCard(item)
+				-}

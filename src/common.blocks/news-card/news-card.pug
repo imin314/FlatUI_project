@@ -1,5 +1,5 @@
 mixin newsCard(data, isEvent)
-	- var image = require("../assets/img/"+ data.image)
+	- var img = require("../assets/img/"+ data.img)
 	- var className = 'news-card';
 	- var date = new Date(data.date);
 	- var day = date.getDate();
@@ -10,7 +10,7 @@ mixin newsCard(data, isEvent)
 	-	month = date.toLocaleString("en-us", { month: "short" });
 	- }
 	div(class=className)
-		.news-card__image(style='background-image: url('+image+')')
+		.news-card__image(style='background-image: url('+img+')')
 		.news-card__content
 			- if (isEvent === true) {
 				.news-card__date

@@ -36,6 +36,10 @@ new HtmlWebpackPlugin({
     filename: 'speakers.html',
     template: './src/views/speakers.pug',
 }),
+new HtmlWebpackPlugin({
+    filename: 'schedule.html',
+    template: './src/views/schedule.pug',
+}),
     new webpack.ProvidePlugin({
     $: 'jquery',
     jQuery: 'jquery'

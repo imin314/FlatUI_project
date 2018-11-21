@@ -1,0 +1,13 @@
+//- schedule.pug
+extends ../layout.pug
+
+block content
+	include ../common.blocks/calendar/calendar.pug
+	include ../common.blocks/talks-section/talks-section.pug
+	section.schedule-page
+		h1.speakers-page__header.page-title Schedule
+		aside.schedule-page__calendar
+			+calendar("calendar1")
+		main.schedule-page__main
+			+talksSection()
+			
