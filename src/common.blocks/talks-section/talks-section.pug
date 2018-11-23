@@ -3,22 +3,22 @@ include ../news-card/news-card.pug
 
 mixin talksSection()
 	.talks-section
+		h2.talks-section__title.section-title Development
 		.talks-section__category
-			h2.talks-section__title.section-title Development
 			each item in data.talks
 				- if (item.category === "development") {
 					.talks-section__card
 						+newsCard(item, false, true)
 				-}
+		h2.talks-section__title.section-title Management
 		.talks-section__category
-			h2.talks-section__title.section-title Management
 			each item in data.talks
 				- if (item.category === "management") {
 					.talks-section__card
 						+newsCard(item, false, true)
 				-}
+		h2.talks-section__title.section-title Design
 		.talks-section__category
-			h2.talks-section__title.section-title Design
 			each item in data.talks
 				- if (item.category === "design") {
 					.talks-section__card
