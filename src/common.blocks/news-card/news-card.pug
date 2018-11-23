@@ -1,4 +1,4 @@
-mixin newsCard(data, isEvent)
+mixin newsCard(data, isEvent, isCompact)
 	- var img = require("../assets/img/"+ data.img)
 	- var className = 'news-card';
 	- var date = new Date(data.date);
@@ -8,6 +8,9 @@ mixin newsCard(data, isEvent)
 	- if (isEvent === true) {
 	- 	className += ' news-card_type_event';
 	-	month = date.toLocaleString("en-us", { month: "short" });
+	- }
+	- if (isCompact === true) {
+	- 	className += ' news-card_size_compact';
 	- }
 	div(class=className)
 		.news-card__image(style='background-image: url('+img+')')

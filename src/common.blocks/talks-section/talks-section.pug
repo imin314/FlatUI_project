@@ -8,19 +8,19 @@ mixin talksSection()
 			each item in data.talks
 				- if (item.category === "development") {
 					.talks-section__card
-						+newsCard(item)
+						+newsCard(item, false, true)
 				-}
 		.talks-section__category
-			h2.talks-section__title Management
+			h2.talks-section__title.section-title Management
 			each item in data.talks
 				- if (item.category === "management") {
 					.talks-section__card
-						+newsCard(item)
+						+newsCard(item, false, true)
 				-}
 		.talks-section__category
-			h2.talks-section__title Design
+			h2.talks-section__title.section-title Design
 			each item in data.talks
 				- if (item.category === "design") {
 					.talks-section__card
-						+newsCard(item)
+						+newsCard(item, false, true)
 				-}
