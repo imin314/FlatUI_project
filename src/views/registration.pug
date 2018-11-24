@@ -2,5 +2,9 @@
 extends ../layout.pug
 
 block content
+	include ../common.blocks/registration-form/registration-form.pug
 	.registration-page
+		h1.registration-page__header.page-title Join us at Web Talks 2019
+		main.registration-page__form
+			+registrationForm("registration-form1")
 		

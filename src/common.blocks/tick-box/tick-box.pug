@@ -1,7 +1,7 @@
-mixin tickBox(id, value)
+mixin tickBox(_value, _name, _id, _isChecked)
 	.tick-box
-		- if (value)
-			input(type="checkbox" id= id checked)
+		- if (_isChecked)
+			input(type="checkbox" value=_value name=_name id=_id checked)
 		- else
-			input(type="checkbox" id= id)
-		label.tick-box__label(for=id)
+			input(type="checkbox" value=_value name=_name id=_id)
+		label.tick-box__label(for=_id)
