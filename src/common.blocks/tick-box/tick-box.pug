@@ -1,5 +1,9 @@
-mixin tickBox(_value, _name, _id, _isChecked)
-	.tick-box
+mixin tickBox(_value, _name, _id, _isChecked, _colorWarm)
+	- var className = "tick-box";
+	- if (_colorWarm) {
+	- className += " tick-box_color_warm";
+	- }
+	div(class=className)
 		- if (_isChecked)
 			input(type="checkbox" value=_value name=_name id=_id checked)
 		- else

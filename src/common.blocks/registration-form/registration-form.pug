@@ -6,26 +6,25 @@ include ../pass-selector/pass-selector.pug
 
 mixin registrationForm(id)
 	section.registration-form
-		.registration-form__bread-crumbs
-			+breadCrumbs(3, 1)
 		form.registration-form__form(id=id action='register.php' method='post')
-			.registration-form__name
-				.registration-form__input
-					+inputField(type='text' name='name' placeholder='Your Name' arealabel='Name' required)
-				.registration-form__bubble
-			.registration-form__email
-				.registration-form__input
-					+inputField(type='email' id='email' name='email' placeholder='Your Email' arealabel='Email' required)
-				.registration-form__bubble
-			.registration-form__subscribe
-				.registration-form__checkbox
-					+toggleSwitch(true)
-				.registration-form__checkbox-text Subscribe to Web Talks newsletters
+			.registration-form__first-stage
+				.registration-form__name
+					.registration-form__input
+						+inputField(type='text' name='name' placeholder='Your Name' arealabel='Name' required)
+					.registration-form__bubble
+				.registration-form__email
+					.registration-form__input
+						+inputField(type='email' id='email' name='email' placeholder='Your Email' arealabel='Email' required)
+					.registration-form__bubble
+				.registration-form__subscribe
+					.registration-form__subscribe-text Subscribe to Web Talks newsletters
+					.registration-form__checkbox
+						+toggleSwitch(true)
 			.registration-form__pass-selector
 				+passSelector()
-			.registration-form__policy
-				.registration-form__checkbox
+			.registration-form__last-stage
+				.registration-form__policy-checkbox
 					+tickBox('1', 'tickbox-policy', 'tickbox-policy', false)
-				.registration-form__checkbox-text I agree with Web Talks Terms and Conditions and the Privacy Policy
-			.registration-form__button
-				+button('Register')(type='submit' value='Submit' class='button_color_reverse')
+				.registration-form__policy-text I agree with Web Talks Terms and Conditions and the Privacy Policy
+				.registration-form__button
+					+button('Register')(type='submit' value='Submit' class='button_color_reverse')

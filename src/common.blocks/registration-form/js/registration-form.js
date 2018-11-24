@@ -29,7 +29,6 @@ $.fn.addRegistrationForm = function () {
 			bubble.removeClass("registration-form__bubble_type_error");
 		});
 	});
-    
 };
 
 /*

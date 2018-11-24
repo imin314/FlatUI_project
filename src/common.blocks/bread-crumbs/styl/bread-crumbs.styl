@@ -12,6 +12,7 @@
 		flex 179px 1 1
 		list-style-type none
 		position relative
+		transition all 0.2s ease
 		&:nth-child(1)
 			flex-basis 170px
 		&:nth-child(2)
@@ -31,11 +32,13 @@
 			top 50%
 			transform translateY(-50%)
 			z-index -1
+			transition all 0.2s ease
 		&_active 
 			&::after
 			& ~ .bread-crumbs__item .bread-crumbs__circle
 			& ~ .bread-crumbs__item::after
 				background-color color-bg
+				transition all 0.2s ease
 		@media screen and (max-width: 550px)
 			font-size 0.85rem
 		
@@ -51,4 +54,5 @@
 		background color-warm
 		color white
 		font-weight bold
+		transition all 0.2s ease
 
