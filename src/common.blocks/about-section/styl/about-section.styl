@@ -8,11 +8,15 @@
 		flex 600px 1 1
 		padding 2rem
 	&__title
-		margin-bottom 1rem
+		margin 2rem 0 1rem
+		&:first-of-type
+			margin-top 0
 	&__intro
 		font-size 1rem
 		color color-text
 		text-align justify
+		&:first-of-type
+			clearfix()
 		& span 
 			display block
 			padding-top 0.9rem
@@ -26,7 +30,63 @@
 			&:active
 				text-decoration underline
 				color color-text
-	&__video
+	&__subtitle
+		color color-warm
+		font-weight bold
+		font-size 1rem
+		margin-bottom 0.5rem
+	&__right-col
 		flex 500px 0 0
 		padding 2rem
 		padding-left 0
+	&__video
+		width 100%
+		margin-bottom 2rem
+	&__stats
+		margin 0
+		padding 0
+		display table
+		border-collapse collapse
+	&__stat-item
+		list-style none
+		margin 0
+		padding 0
+		display table-row
+		border-bottom 1rem solid transparent
+	&__comment
+		display table-cell
+		color color-text
+		font-size 1rem
+		font-weight lighter
+		vertical-align middle
+		border-left 1.3rem solid transparent
+		&:first-child
+			border-left none
+			border-right 1.3rem solid transparent
+	&__number
+		display table-cell
+		vertical-align middle
+		color color-cold-darker
+		font-weight bold
+		font-size 3rem
+		text-align right
+	&__chart
+		display table-cell
+		vertical-align middle
+		width 120px
+		font-size 0.8rem
+	&__topic
+		font-size 1.2rem
+		font-weight bold
+		&_color
+			&_blue
+				color #4eb7a8
+			&_red
+				color #e75735
+			&_gray
+				color #747474
+
+
+
+	
+		
