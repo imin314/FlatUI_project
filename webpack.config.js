@@ -101,7 +101,9 @@ new HtmlWebpackPlugin({
 		exclude: [/fonts/],
         loader: 'file-loader',
         options: {
-        name: './assets/img/[name].[ext]'
+        name: '/assets/img/[name].[ext]',
+        outputPath: '.',
+        publicPath: '././'
                  },
          }
     ]

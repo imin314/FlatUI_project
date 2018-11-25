@@ -12,6 +12,7 @@ include ../common.blocks/map-section/map-section.pug
 include ../common.blocks/calendar-section/calendar-section.pug
 include ../common.blocks/message-section/message-section.pug
 include ../common.blocks/video-section/video-section.pug
+include ../common.blocks/navigation-bar/navigation-bar.pug
 doctype html
 html
 	head
@@ -19,6 +20,7 @@ html
 		meta(name='viewport', content="inital-scale=1.0, width=device-width")
 		title UI Kit demo
 	body
+		+navigationBar()
 		main.page-container
 			section.page-container__button-section
 				+buttonSection()

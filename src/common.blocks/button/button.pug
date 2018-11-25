@@ -1,2 +1,2 @@
-mixin button(title)
-	a.button.ripple&attributes(attributes)= title
+mixin button(_title, _link="#")
+	a.button.ripple(href=_link title=_title)&attributes(attributes)= _title
