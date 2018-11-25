@@ -1,0 +1,10 @@
+- var data = require('../assets/data/data.json')
+include ../news-card/news-card.pug
+include ../calendar/calendar.pug
+
+mixin eventCarousel()
+	section.event-carousel
+		.event-carousel__cards
+			each item in data.talks
+					.event-carousel__card
+						+newsCard(item, true, true)

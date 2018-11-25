@@ -11,7 +11,7 @@
 	position: fixed;
 	top: 0; bottom: 0;
 	left: 0; right: 0;
-	background-color: rgba(10,10,10,.7);
+	background-color: rgba(10,10,10,.3);
 	z-index: 100001;
 	overflow: hidden;
 	display: none;
@@ -23,20 +23,22 @@
 }
 	.calendar-wrapper.picker {
 		position: absolute;
-		left: 50%;
-		bottom: 24px;
+		right: 5%;
+		bottom: 10%;
 		min-width: 280px;
 		opacity: 1;
 		overflow: hidden;
 		border-radius: 2px;
-		transform: translateX(-50%) scale(1);
+		transform: scale(1);
 	    box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
 		transition: transform .25s ease, opacity .25s ease;
+		width: 330px;
+		font-size: 0.8rem;
 	}
 		.calendar-wrapper.picker.load {
 			/*bottom: -32px;*/
 			opacity: 0;
-			transform: translateX(-50%) scale(1.05);
+			transform: scale(1.05);
 		}
 .calendar-head-card {
 	font-size: inherit;
@@ -209,8 +211,7 @@
 		.calendar-date-holder .calendar-dates .date.disabled a { cursor: not-allowed; color: rgb(200,200,200); 
 		pointer-events: none;
 		color: white;}
-		.calendar-date-holder .calendar-dates .date:not(.disabled):not(.selected) a:hover { color: white; background-color: #e75735; }
-		.calendar-date-holder .calendar-dates .date:not(.disabled):not(.selected) a:active { color: white; background-color: #e75735; }
+		
 		.calendar-date-holder .calendar-dates .date.current a {
 			color: #fff;
 		}
@@ -218,10 +219,7 @@
 			pointer-events: none;
 		color: white; 
 		}
-		.calendar-date-holder .calendar-dates .date.selected a {
-			color: white;
-			background-color: #e75735;
-		}
+
 		.calendar-date-holder .calendar-dates .date.month a {
 			display: block;
 			padding: 0.8846153846153846em 0;
@@ -245,11 +243,25 @@
 
 
 /* Color theme */
-.calendar-wrapper[data-theme='blue'] .calendar-head-card { background-color: #1565c0; }
-.calendar-wrapper[data-theme='blue'] .calendar-date-holder .calendar-dates .date.current a { color: #1976d2; }
-.calendar-wrapper[data-theme='blue'] .calendar-date-holder .calendar-dates .date.selected a { border-color: #1976d2; }
-.calendar-wrapper[data-theme='blue'] .calendar-date-holder .calendar-dates .date.selected a:hover { border-color: #0d47a1; }
-.calendar-wrapper[data-theme='blue'] .calendar-date-holder .calendar-dates .date.selected.current a { color: #1976d2; }
+.calendar-wrapper[data-theme='blue'] .calendar-head-card { background-color: #4eb7a8; }
+.calendar-wrapper[data-theme='blue'] .calendar-labels { background-color: #4eb7a8; }
+.calendar-wrapper[data-theme='blue'] .calendar-top-selector { background-color: #4eb7a8; }
+.calendar-wrapper[data-theme='blue'] .calendar-date-holder .calendar-dates .date.current a { color: #4eb7a8; }
+.calendar-wrapper[data-theme='blue'] .calendar-date-holder .calendar-dates .date.selected a { border-color: #4eb7a8; }
+.calendar-wrapper[data-theme='blue'] .calendar-date-holder .calendar-dates .date.selected a:hover {
+	color: white;
+	background-color: #4eb7a8;
+}
+.calendar-wrapper[data-theme='blue'] .calendar-date-holder .calendar-dates .date.selected.current a {
+	color: white;
+	background-color: #4eb7a8;
+}
+.calendar-wrapper[data-theme='blue'] .calendar-date-holder .calendar-dates .date:not(.disabled):not(.selected) a:hover { color: white; background-color: #4eb7a8; }
+.calendar-wrapper[data-theme='blue'] .calendar-date-holder .calendar-dates .date:not(.disabled):not(.selected) a:active { color: white; background-color: #4eb7a8; }
+.calendar-wrapper[data-theme='blue'] .calendar-date-holder .calendar-dates .date.selected a {
+	color: white;
+	background-color: #4eb7a8;
+}
 
 .calendar-wrapper[data-theme='orange'] .calendar-head-card { background-color: #e75735; }
 .calendar-wrapper[data-theme='orange'] .calendar-labels { background-color: #e75735; }
@@ -264,6 +276,13 @@
 	color: white;
 	background-color: #e75735;
 }
+.calendar-wrapper[data-theme='orange'] .calendar-date-holder .calendar-dates .date:not(.disabled):not(.selected) a:hover { color: white; background-color: #e75735; }
+.calendar-wrapper[data-theme='orange'] .calendar-date-holder .calendar-dates .date:not(.disabled):not(.selected) a:active { color: white; background-color: #e75735; }
+.calendar-wrapper[data-theme='orange'] .calendar-date-holder .calendar-dates .date.selected a {
+	color: white;
+	background-color: #e75735;
+}
+
 
 .calendar-wrapper[data-theme='purple'] .calendar-head-card { background-color: #6a1b9a; }
 .calendar-wrapper[data-theme='purple'] .calendar-date-holder .calendar-dates .date.current a { color: #7b1fa2; }
