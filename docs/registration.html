@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="inital-scale=1.0, width=device-width">
+    <title></title>
+    <script>
+      document.documentElement.style.visibility = 'hidden';
+      document.addEventListener('DOMContentLoaded', function() {
+      	document.documentElement.style.visibility = '';});
+    </script>
+  </head>
+  <body>
+    <div class="loader">
+      <div class="loader_inner"></div>
+    </div>
+    <nav class="navigation-bar">
+      <ul class="navigation-bar__menu">
+        <li class="navigation-bar__item"><a href="../index.html" title="Home">Home</a></li>
+        <li class="navigation-bar__item"><a href="../registration.html" title="Registration">Registration</a></li>
+        <li class="navigation-bar__item"><a href="../schedule.html" title="Schedule">Schedule</a></li>
+        <li class="navigation-bar__item"><a href="../speakers.html" title="Speakers">Speakers</a></li>
+        <li class="navigation-bar__item"><a href="../contacts.html" title="Contacts">Contacts</a></li>
+        <li class="navigation-bar__item"><a href="../uidemo.html" title="UI Kit Demo">UI Kit Demo</a></li>
+      </ul>
+    </nav>
+    <div class="registration-page">
+      <header class="registration-page__header">
+        <h1 class="page-title">Join us at Web Talks 2019</h1>
+        <div class="registration-page__stages">
+              <ul class="bread-crumbs">
+                <li class="bread-crumbs__item bread-crumbs__item_active">
+                  <div class="bread-crumbs__circle">1</div>
+                </li>
+                <li class="bread-crumbs__item">
+                  <div class="bread-crumbs__circle">2</div>
+                </li>
+                <li class="bread-crumbs__item">
+                  <div class="bread-crumbs__circle">3</div>
+                </li>
+              </ul>
+        </div>
+      </header>
+      <main class="registration-page__form">
+            <section class="registration-form">
+              <form class="registration-form__form" id="registration-form1" action="register.php" method="post">
+                <div class="registration-form__first-stage">
+                  <div class="registration-form__name">
+                    <div class="registration-form__input">
+                          <input class="input-field" type="text" name="name" placeholder="Your Name" arealabel="Name" required>
+                    </div>
+                    <div class="registration-form__bubble"></div>
+                  </div>
+                  <div class="registration-form__email">
+                    <div class="registration-form__input">
+                          <input class="input-field" type="email" id="email" name="email" placeholder="Your Email" arealabel="Email" required>
+                    </div>
+                    <div class="registration-form__bubble"></div>
+                  </div>
+                  <div class="registration-form__subscribe">
+                    <div class="registration-form__subscribe-text">Subscribe to Web Talks newsletters</div>
+                    <div class="registration-form__checkbox">
+                          <label class="toggle-switch">
+                            <input class="toggle-switch__checkbox" type="checkbox" checked><span class="toggle-switch__slider"></span>
+                            <div class="toggle-switch__text"></div>
+                          </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="registration-form__pass-selector">
+                      <section class="pass-selector">
+                        <h2 class="pass-selector__header section-title">Find the conference pass for you</h2>
+                        <div class="pass-selector__options">
+                          <div class="pass-selector__column"></div>
+                          <div class="pass-selector__column"></div>
+                          <div class="pass-selector__column"></div>
+                          <div class="pass-selector__row">
+                            <h3 class="pass-selector__pass-name">Premium<br>Pass</h3>
+                            <h3 class="pass-selector__pass-name">1 Track<br>Pass</h3>
+                            <h3 class="pass-selector__pass-name">Daily<br>Pass</h3>
+                          </div>
+                          <div class="pass-selector__row">
+                            <p class="pass-selector__price">$995</p>
+                            <p class="pass-selector__price">$575</p>
+                            <p class="pass-selector__price">$235</p>
+                          </div>
+                          <div class="pass-selector__row">
+                            <p class="pass-selector__text">Visit any events without limitation</p>
+                            <p class="pass-selector__text">Visit all events in a track</p>
+                            <p class="pass-selector__text">Attend 1 event per day on a conference week</p>
+                          </div>
+                          <div class="pass-selector__row">
+                            <div class="pass-selector__tickbox">
+                                  <div class="tick-box tick-box_color_warm">
+                                    <input type="checkbox" value="1" name="tickbox" id="tickbox1" checked>
+                                    <label class="tick-box__label" for="tickbox1"></label>
+                                  </div>
+                            </div>
+                            <div class="pass-selector__tickbox">
+                                  <div class="tick-box tick-box_color_warm">
+                                    <input type="checkbox" value="2" name="tickbox" id="tickbox2">
+                                    <label class="tick-box__label" for="tickbox2"></label>
+                                  </div>
+                            </div>
+                            <div class="pass-selector__tickbox">
+                                  <div class="tick-box tick-box_color_warm">
+                                    <input type="checkbox" value="3" name="tickbox" id="tickbox3">
+                                    <label class="tick-box__label" for="tickbox3"></label>
+                                  </div>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                </div>
+                <div class="registration-form__last-stage">
+                  <div class="registration-form__policy-checkbox">
+                        <div class="tick-box">
+                          <input type="checkbox" value="1" name="tickbox-policy" id="tickbox-policy">
+                          <label class="tick-box__label" for="tickbox-policy"></label>
+                        </div>
+                  </div>
+                  <div class="registration-form__policy-text">I agree with Web Talks Terms and Conditions and the Privacy Policy</div>
+                  <div class="registration-form__button"><a class="button ripple button_color_reverse" type="submit" value="Submit">Register</a>
+                  </div>
+                </div>
+              </form>
+            </section>
+      </main>
+    </div>
+    <footer class="footer-section"></footer>
+    <aside class="online-help">
+      <div class="online-help__messenger">
+        <div class="messenger messenger_fixed">
+          <div class="messenger__header">
+            <div class="messenger__name">Sarah Brown</div>
+            <div class="messenger__photo" style="background-image: url(././assets/img/sarah-brown.jpg)"></div>
+          </div>
+          <div class="messenger__icons"><a class="messenger__bubble-icon" href="#" title=""></a><a class="messenger__camera-icon" href="#" title="add photo"></a></div>
+          <div class="messenger__container">
+            <div class="messenger__message messenger__message_type_inbox">Hi! How can I help you?</div>
+            <textarea class="messenger__message messenger__message_type_outbox" name="outbox" placeholder="Type your message..."></textarea>
+            <div class="messenger__button"><a class="button ripple button_color_reverse button_size_responsive" type="submit" value="Submit">reply</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="online-help__button" aria-label="Chat Widget"></button>
+    </aside>
+  <script type="text/javascript" src="./main.js"></script></body>
+</html>
