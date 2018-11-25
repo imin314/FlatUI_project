@@ -2,13 +2,9 @@
 extends ../layout.pug
 
 block content
-	include ../common.blocks/calendar/calendar.pug
 	include ../common.blocks/talks-section/talks-section.pug
 	section.schedule-page
 		h1.schedule-page__header.page-title Schedule
-		.schedule-page__content
-			aside.schedule-page__calendar
-				+calendar("calendar1")
-			main.schedule-page__main
-				+talksSection()
+		main.schedule-page__main
+			+talksSection()
 			

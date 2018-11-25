@@ -308,7 +308,3 @@
 .calendar-wrapper[data-theme='green'] .calendar-date-holder .calendar-dates .date.selected a:hover { border-color: #1b5e20; }
 .calendar-wrapper[data-theme='green'] .calendar-date-holder .calendar-dates .date.selected.current a { color: #388e3c; }
 /* End color theme */
-
-body[datepicker-display='on'] {
-	overflow: hidden;
-}

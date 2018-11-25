@@ -1,4 +1,4 @@
-mixin newsCard(data, isEvent, isCompact)
+mixin newsCard(data, isEvent, isCompact, isColorReverted)
 	- var img = require("../assets/img/"+ data.img)
 	- var className = 'news-card';
 	- var date = new Date(data.date);
@@ -11,6 +11,9 @@ mixin newsCard(data, isEvent, isCompact)
 	- }
 	- if (isCompact === true) {
 	- 	className += ' news-card_size_compact';
+	- }
+	- if (isColorReverted === true){
+	-	className += ' news-card_color_reverted';
 	- }
 	div(class=className)
 		.news-card__image(style='background-image: url('+img+')')

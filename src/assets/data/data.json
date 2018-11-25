@@ -116,7 +116,7 @@
 		"time": "10:00 - 13:00",
 		"category": "management",
 		"text": "Done well program management enables teams to do their jobs well, better, by acting as the glue that ties everyone together.",
-		"img": "article-img.jpg"
+		"img": "management-img.png"
 	},
 	{
 		"title": "How Designers and Engineers Can Better Work Together",
@@ -125,16 +125,16 @@
 		"time": "14:00 - 17:00",
 		"category": "development",
 		"text": "Learn about things designers can do to make collaborating with engineers smoother.",
-		"img": "article-img.jpg"
+		"img": "development-img.png"
 	},
 	{
-		"title": "Defining and Measuring Value",
-		"speaker": "maria leonova",
+		"title": "Blending physical and digital design",
+		"speaker": "keith alexander",
 		"date": "05.13.2019",
 		"time": "18:00 - 21:00",
-		"category": "management",
-		"text": "Let's talk about setting the right goals, from a business and customer standpoint, and how we choose the right metrics to measure.",
-		"img": "article-img.jpg"
+		"category": "design",
+		"text": "The emphasis is shifting onto how best to use it as an invisible enabler of physical and sensory experiences, and how to create the conditions to enable and deliver new experiences to the end users.",
+		"img": "design-img.png"
 	},
 	{
 		"title": "Product Discovery Micro Sprint",
@@ -143,7 +143,7 @@
 		"time": "10:00 - 13:00",
 		"category": "management",
 		"text": "Learn how to identify and model the customer jobs as possible opportunities for innovation.",
-		"img": "article-img.jpg"
+		"img": "management-img.png"
 	},
 	{
 		"title": "Creating products and services people will buy",
@@ -152,16 +152,16 @@
 		"time": "14:00 - 17:00",
 		"category": "design",
 		"text": "In the workshop, you will learn hands-on how to find out what customers want and how they form their jobs to be done.",
-		"img": "article-img.jpg"
+		"img": "design-img.png"
 	},
 	{
-		"title": "Blending physical and digital design",
-		"speaker": "keith alexander",
+		"title": "Using CSS (and SVG) for the Good of UX",
+		"speaker": "jack zeman",
 		"date": "05.14.2019",
 		"time": "18:00 - 21:00",
-		"category": "design",
-		"text": "The emphasis is shifting onto how best to use it as an invisible enabler of physical and sensory experiences, and how to create the conditions to enable and deliver new experiences to the end users.",
-		"img": "article-img.jpg"
+		"category": "development",
+		"text": "Building the interface that users interact with impacts on how the user feels when they do, whether they *can* use it properly.",
+		"img": "development-img.png"
 	},
 	{
 		"title": "The Double-W Process: to Sprint a Sprinted Model",
@@ -170,7 +170,7 @@
 		"time": "10:00 - 13:00",
 		"category": "design",
 		"text": "Take part in a super sprinted version of the Double-W process, a remote lean branding service developed by With Company.",
-		"img": "article-img.jpg"
+		"img": "design-img.png"
 	},
 	{
 		"title": "The State of Authentication",
@@ -179,16 +179,16 @@
 		"time": "14:00 - 17:00",
 		"category": "development",
 		"text": "Let's look at the current state of authentication on the Web, and in particular Web Authentication, an effort to standardise web based authentication.",
-		"img": "article-img.jpg"
+		"img": "development-img.png"
 	},
 	{
-		"title": "Using CSS (and SVG) for the Good of UX",
-		"speaker": "jack zeman",
+		"title": "Defining and Measuring Value",
+		"speaker": "maria leonova",
 		"date": "05.15.2019",
 		"time": "18:00 - 21:00",
-		"category": "development",
-		"text": "Building the interface that users interact with impacts on how the user feels when they do, whether they *can* use it properly.",
-		"img": "article-img.jpg"
+		"category": "management",
+		"text": "Let's talk about setting the right goals, from a business and customer standpoint, and how we choose the right metrics to measure.",
+		"img": "management-img.png"
 	},
 	{
 		"title": "Return of the script tag",
@@ -197,7 +197,7 @@
 		"time": "10:00 - 13:00",
 		"category": "development",
 		"text": "With ES6 native modules support landing in major browsers, and tools like unpkg.com there's a growing interest in front-end development without the build systems and local compilation.",
-		"img": "article-img.jpg"
+		"img": "development-img.png"
 	},
 	{
 		"title": "Programming Generative Art",
@@ -206,7 +206,7 @@
 		"time": "14:00 - 17:00",
 		"category": "development",
 		"text": "This talk aims to lower that barrier for you to take home and practice creative coding.",
-		"img": "article-img.jpg"
+		"img": "development-img.png"
 	},
 	{
 		"title": "UI architecture in the age of design systems",
@@ -215,7 +215,7 @@
 		"time": "18:00 - 21:00",
 		"category": "development",
 		"text": "Should the app architecture be influenced by Atomic principles? How do we represent state changes in the design system?",
-		"img": "article-img.jpg"
+		"img": "development-img.png"
 	},
 	{
 		"title": "Scaling frontend development",
@@ -224,7 +224,7 @@
 		"time": "10:00 - 13:00",
 		"category": "management",
 		"text": "Find out what is Tangerine - a program to standardise principles that define a world class frontend application as it scales up.",
-		"img": "article-img.jpg"
+		"img": "management-img.png"
 	},
 	{
 		"title": "Functional HTML",
@@ -233,7 +233,7 @@
 		"time": "14:00 - 17:00",
 		"category": "development",
 		"text": "Let's talk HTML, semantics and why choosing the right html elements will help you write better, cleaner more efficient code",
-		"img": "article-img.jpg"
+		"img": "development-img.png"
 	},
 	{
 		"title": "Blockchain for Web Developers",
@@ -242,7 +242,7 @@
 		"time": "18:00 - 21:00",
 		"category": "development",
 		"text": "The speaker coming from a developer background himself, will bridge the gap the knowledge to fast-track the audience in DApps development.",
-		"img": "article-img.jpg"
+		"img": "development-img.png"
 	},
 	{
 		"title": "Your web page never listens to me",
@@ -251,7 +251,7 @@
 		"time": "10:00 - 13:00",
 		"category": "development",
 		"text": "How can we use the well supported Speech Synthesis API, and the still new SR API, to teach our pages to talk, and to listen?",
-		"img": "article-img.jpg"
+		"img": "development-img.png"
 	},
 	{
 		"title": "Functional CSS yesterday",
@@ -260,7 +260,7 @@
 		"time": "14:00 - 17:00",
 		"category": "development",
 		"text": "Your CSS can already be just* as functional as JavaScript. It is pure, can be immutable, and can be reasoned about.",
-		"img": "article-img.jpg"
+		"img": "development-img.png"
 	},
 	{
 		"title": "A new frontier for web design",
@@ -269,7 +269,7 @@
 		"time": "18:00 - 21:00",
 		"category": "development",
 		"text": "Modern CSS gives us a comprehensive set of tools that lets us embrace the fluidity of the web.",
-		"img": "article-img.jpg"
+		"img": "development-img.png"
 	}
 	]
 }
