@@ -1,3 +1,4 @@
+import './common.blocks/g-map/js/g-map.js'
 import './styl/style.styl';
 import './common.blocks/loader/js/loader.js';
 import './common.blocks/pin/js/pin.js'

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('.map-section__search').click(function(){
+	/*$('.map-section__search').click(function(){
 		var iframe = document.getElementById("map1");
 		iframe.src = iframe.src;
 
@@ -46,5 +46,6 @@ $(document).ready(function(){
 			$('.map-section__main-pin').removeClass('map-section__main-pin_type_waiting');
 		}
 		});
-	
+	*/
+		
 	});
