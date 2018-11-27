@@ -1,4 +1,15 @@
-$(document).ready(function(){
+google.maps.event.addDomListener(window, 'load', initialize("map"));
+
+$('.map-section__pin').click(function(){
+	backToCenter();
+});
+
+$('.map-section__search').click(function(){
+	locateUser();
+});
+
+//$(document).ready(function(){
+	
 	/*$('.map-section__search').click(function(){
 		var iframe = document.getElementById("map1");
 		iframe.src = iframe.src;
@@ -48,4 +59,4 @@ $(document).ready(function(){
 		});
 	*/
 		
-	});
+//	});
