@@ -12,4 +12,4 @@ mixin eventCard(data)
 			.event-card__title= data.title
 			.event-card__text= data.text
 			.event-section__button
-				+button('add to calendar')(class='button_size_small')
+				+button({title:"add to calendar", size:"small"})

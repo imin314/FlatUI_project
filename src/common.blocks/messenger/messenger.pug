@@ -17,6 +17,6 @@ mixin messenger(data, isFixed)
 			.messenger__message.messenger__message_type_inbox= data.inbox
 			textarea.messenger__message.messenger__message_type_outbox(name='outbox' placeholder='Type your message...' )= data.outbox
 			.messenger__button
-				+button('reply')(type='submit' value='Submit' class='button_color_reverse button_size_responsive')
+				+button({title:"reply", color:"reverse", size: "responsive"})
 
 		

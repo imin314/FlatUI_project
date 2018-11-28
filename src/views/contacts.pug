@@ -4,6 +4,7 @@ extends ../layout.pug
 block content
 	include ../common.blocks/email-form/email-form.pug
 	include ../common.blocks/map-section/map-section.pug
+	- var title = "Contacts"
 	main.contacts-page
 		h1.contacts-page__header.page-title Contact Us
 		section.contacts-page__email
@@ -11,6 +12,10 @@ block content
 			.contacts-page__form
 				+emailForm('email-form')
 		section.contacts-page__map
+			+mapSection()
+
+block scripts
+	script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0GpB2Y8XOyVrs-stxlE0I4yR_rAaEyjU")
 			
 
 

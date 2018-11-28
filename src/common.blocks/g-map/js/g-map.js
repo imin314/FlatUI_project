@@ -13,13 +13,13 @@ var map, infoWindow;
 
 var images = [
 	{
-		url: '../../../assets/img/pins.png',
+		url: './assets/img/pins.png',
 		size: new google.maps.Size(78,78),
 		origin: new google.maps.Point(0, 0),
 		anchor: new google.maps.Point(39, 78)
 	},
 	{
-		url: '../../../assets/img/pins.png',
+		url: './assets/img/pins.png',
 		size: new google.maps.Size(45,78),
 		origin: new google.maps.Point(78, 0),
 		anchor: new google.maps.Point(22.5, 78)
@@ -33,7 +33,7 @@ window.initialize = function(_id) {
 		//var mapCenter = {lat: 37.791095, lng: -122.415075};
 		var mapCenter = new google.maps.LatLng(parseFloat(mapContainer.attr("data-lat")), parseFloat(mapContainer.attr("data-lng")));
 		var pinCenter = new google.maps.LatLng(parseFloat(mapContainer.attr("data-plat")), parseFloat(mapContainer.attr("data-plng")));
-		map = new google.maps.Map(document.getElementById(_id), {center: mapCenter, zoom:15});
+		map = new google.maps.Map(document.getElementById(_id), {center: mapCenter, zoom:14});
 		centerMarker = addMarker(pinCenter, map, images[0], "Meet us here!");
 		infoWindow = new google.maps.InfoWindow;
 	  }

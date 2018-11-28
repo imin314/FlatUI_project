@@ -1,54 +1,54 @@
 //- uidemo.pug
-include ../common.blocks/button-section/button-section.pug
-include ../common.blocks/arrow-section/arrow-section.pug
-include ../common.blocks/chart-section/chart-section.pug
-include ../common.blocks/slider-section/slider-section.pug
-include ../common.blocks/stages-section/stages-section.pug
-include ../common.blocks/form-section/form-section.pug
-include ../common.blocks/search-section/search-section.pug
-include ../common.blocks/profile-section/profile-section.pug
-include ../common.blocks/news-section/news-section.pug
-include ../common.blocks/map-section/map-section.pug
-include ../common.blocks/calendar-section/calendar-section.pug
-include ../common.blocks/message-section/message-section.pug
-include ../common.blocks/video-section/video-section.pug
-include ../common.blocks/navigation-bar/navigation-bar.pug
-doctype html
-html
-	head
-		meta(charset = 'utf-8')
-		meta(name='viewport', content="inital-scale=1.0, width=device-width")
-		title UI Kit demo
-	body
-		+navigationBar()
-		main.page-container
-			section.page-container__button-section
-				+buttonSection()
-			section.page-container__arrow-section
-				+arrowSection()
-			section.page-container__chart-section
-				+chartSection()
-			section.page-container__slider-section
-				+sliderSection()
-			section.page-container__stages-section
-				+stagesSection()
-			section.page-container__form-section
-				+formSection()
-			section.page-container__search-section
-				+searchSection()
-			section.page-container__profile-section
-				+profileSection()
-			section.page-container__news-section
-				+newsSection()
-			section.page-container__map-section
-				+mapSection()
-			section.page-container__calendar-section
-				+calendarSection()
-			section.page-container__message-section
-				+messageSection()
-			section.page-container__video-section
-				+videoSection()
-		script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0GpB2Y8XOyVrs-stxlE0I4yR_rAaEyjU")
+extends ../layout.pug
+
+block content
+	include ../common.blocks/button-section/button-section.pug
+	include ../common.blocks/arrow-section/arrow-section.pug
+	include ../common.blocks/chart-section/chart-section.pug
+	include ../common.blocks/slider-section/slider-section.pug
+	include ../common.blocks/stages-section/stages-section.pug
+	include ../common.blocks/form-section/form-section.pug
+	include ../common.blocks/search-section/search-section.pug
+	include ../common.blocks/profile-section/profile-section.pug
+	include ../common.blocks/news-section/news-section.pug
+	include ../common.blocks/map-section/map-section.pug
+	include ../common.blocks/calendar-section/calendar-section.pug
+	include ../common.blocks/message-section/message-section.pug
+	include ../common.blocks/video-section/video-section.pug
+	- var title = "UI Demo Kit"
+	main.page-container
+		section.page-container__button-section
+			+buttonSection()
+		section.page-container__arrow-section
+			+arrowSection()
+		section.page-container__chart-section
+			+chartSection()
+		section.page-container__slider-section
+			+sliderSection()
+		section.page-container__stages-section
+			+stagesSection()
+		section.page-container__form-section
+			+formSection()
+		section.page-container__search-section
+			+searchSection()
+		section.page-container__profile-section
+			+profileSection()
+		section.page-container__news-section
+			+newsSection()
+		section.page-container__map-section
+			+mapSection()
+		section.page-container__calendar-section
+			+calendarSection()
+		section.page-container__message-section
+			+messageSection()
+		section.page-container__video-section
+			+videoSection()
+
+block footer
+	.page-container__footer
+
+block scripts
+	script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0GpB2Y8XOyVrs-stxlE0I4yR_rAaEyjU")
 		
 
 		

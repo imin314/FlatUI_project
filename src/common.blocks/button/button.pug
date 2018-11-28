@@ -1,2 +1,12 @@
-mixin button(_title, _link="#")
-	a.button.ripple(href=_link title=_title)&attributes(attributes)= _title
+mixin button(_settings)
+	- var settings = {
+	- size: _settings.size, // values: undefined, small, responsive
+	- color: _settings.color, // values: undefined, secondary, reverse
+	- title: _settings.title!=undefined?_settings.title:"button",
+	- link: _settings.link!=undefined?_settings.link:"#"
+	- }
+	- var className = "button";
+	- if (settings.size!=undefined) className+= " button_size_"+settings.size;
+	- if (settings.color!=undefined) className+= " button_color_"+settings.size;
+	
+	a.ripple(class=className href=settings.link title=settings.title)= settings.title
