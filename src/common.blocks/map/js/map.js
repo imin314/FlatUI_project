@@ -1,14 +1,3 @@
-/*
-function initMap() {
-  var map = new google.maps.Map(document.getElementByClassName('g-map'), {
-	center: {lat: 37.791795, lng: },
-    zoom: 6
-  });
-  // the other code, irrelevant
-}
-
-window.initMap = initMap;
-*/
 var map, infoWindow;
 
 var images = [
@@ -77,4 +66,12 @@ window.locateUser = function (){
 								  'Error: The Geolocation service failed.' :
 								  'Error: Your browser doesn\'t support geolocation.');
 			infoWindow.open(map);
-		  }     
+			}
+
+$('.map__pin').click(function(){
+	backToCenter();
+});
+	
+$('.map__search').click(function(){
+	locateUser();
+});

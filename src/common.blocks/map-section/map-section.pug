@@ -1,18 +1,8 @@
-include ../g-map/g-map.pug
-include ../pin/pin.pug
+include ../map/map.pug
 
 mixin mapSection()
     .map-section
         .map-section__header.section-title location
-        .map-section__container
-            .map-section__map
-                +gMap("map", 37.797548, -122.416987, 37.791095, -122.415075)
-            .map-section__footer
-                .map-section__title Meet us!
-                .map-section__address
-                    .map-section__street 1259 California st
-                    .map-section__city San francisco, Ca
-                .map-section__icons
-                    .map-section__search
-                    .map-section__pin
-                        +pin("white", "transparent")
+        .map-section__map
+            +map("map", 37.7947, -122.41627, 37.791095, -122.415075)
+            

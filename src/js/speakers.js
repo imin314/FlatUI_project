@@ -1,10 +1,28 @@
 $(document).ready(function() {
+	var isFullView = false;
     $(".speakers-page__right-button").click(function(){
 		$(".speakers-page__cards").mCustomScrollbar("scrollTo","-=500");
 	});
 
 	$(".speakers-page__left-button").click(function(){
 		$(".speakers-page__cards").mCustomScrollbar("scrollTo","+=500");
+	});
+
+	$(".speakers-page__link").click(function(){
+		
+		if (!isFullView) {
+			$(".speakers-page").addClass("speakers-page__view_full");
+			$(".speakers-page__link").text("Back to compact view");
+			isFullView = true;
+			$(".speakers-page__cards").mCustomScrollbar("disable", true);
+			$("#mCSB_1_container1").removeAttr("style");
+		}
+		else{
+			$(".speakers-page").removeClass("speakers-page__view_full");
+			$(".speakers-page__link").text("See full line up");
+			isFullView = false;
+			$(".speakers-page__cards").mCustomScrollbar("update");
+		}
 	});
 });
 

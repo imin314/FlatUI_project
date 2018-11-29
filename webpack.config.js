@@ -5,7 +5,7 @@ const webpack = require('webpack');
 module.exports = {
   entry: {
     main: './src/main.js',
-    map: './src/map.js'
+    map: ['./src/main.js', './src/map.js']
   },
   devServer: {
       contentBase: path.resolve(__dirname, 'docs'),
@@ -37,7 +37,7 @@ module.exports = {
 new HtmlWebpackPlugin({
     filename: 'contacts.html',
     template: './src/views/contacts.pug',
-    chunks:['main']
+    chunks:['map']
 }),
 new HtmlWebpackPlugin({
     filename: 'speakers.html',

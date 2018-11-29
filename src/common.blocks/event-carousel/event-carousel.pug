@@ -4,6 +4,7 @@ include ../calendar/calendar.pug
 
 mixin eventCarousel()
 	section.event-carousel
+		a.event-carousel__link(href="./schedule.html" title="schedule") See all events
 		.event-carousel__cards
 			each item in data.talks
 					.event-carousel__card
