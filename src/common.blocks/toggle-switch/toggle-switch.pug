@@ -1,6 +1,6 @@
-mixin toggleSwitch(value)
+mixin toggleSwitch(isChecked)
 	label.toggle-switch
-		- if (value)
+		- if (isChecked)
 			input.toggle-switch__checkbox(type="checkbox" checked)
 		- else
 			input.toggle-switch__checkbox(type="checkbox")

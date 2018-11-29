@@ -5,14 +5,14 @@ mixin arrowSection(content)
 		h1.arrow-section__header.section-title arrow buttons
 		.arrow-section__container
 			.arrow-section__button
-				+arrowButton('left')
+				+arrowButton({direction: "left"})
 			.arrow-section__button
-				+arrowButton('right')
+				+arrowButton({direction: "right"})
 			.arrow-section__button
-				+arrowButton('left', true)
+				+arrowButton({direction: "left", disabled: true})
 			.arrow-section__button
-				+arrowButton('right', true)
+				+arrowButton({direction: "right", disabled: true})
 			.arrow-section__button
-				+arrowButton('left')
+				+arrowButton({direction: "left"})
 			.arrow-section__button
-				+arrowButton('right')
+				+arrowButton({direction: "right"})

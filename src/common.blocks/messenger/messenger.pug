@@ -4,7 +4,7 @@ mixin messenger(data, isFixed)
 	- var image = require("../assets/img/"+ data.image)
 	- var className = 'messenger';
 	- if (isFixed === true) {
-	- className += ' messenger_fixed';
+	- className += ' messenger_position_fixed';
 	- }
 	div(class=className)
 		.messenger__header

@@ -18,6 +18,6 @@ mixin formSection()
 				.form-section__tickboxes
 					h1.form-section__header.section-title tick boxes
 					.form-section__tickbox
-						+tickBox('1', 'tickbox', 'tickbox1', true)
+						+tickBox({value:"1", name:"tickbox", id:"tickbox1", checked: true})
 					.form-section__tickbox
-						+tickBox('2', 'tickbox', 'tickbox2', false)
+						+tickBox({value:"2", name:"tickbox", id:"tickbox2"})

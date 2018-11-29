@@ -14,8 +14,8 @@ $(document).ready(function() {
 			$(".speakers-page").addClass("speakers-page__view_full");
 			$(".speakers-page__link").text("Back to compact view");
 			isFullView = true;
+			$("#mCSB_1_container").removeAttr("style");
 			$(".speakers-page__cards").mCustomScrollbar("disable", true);
-			$("#mCSB_1_container1").removeAttr("style");
 		}
 		else{
 			$(".speakers-page").removeClass("speakers-page__view_full");

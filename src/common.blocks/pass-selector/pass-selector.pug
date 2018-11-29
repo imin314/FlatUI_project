@@ -27,8 +27,8 @@ mixin passSelector()
 				p.pass-selector__text Attend 1 event per day on a conference week
 			.pass-selector__row
 				.pass-selector__tickbox
-					+tickBox('1', 'tickbox', 'tickbox1', true, true)
+					+tickBox({value:"1", name:"tickbox", id:"tickbox1", checked: true, color: "warm"})
 				.pass-selector__tickbox
-					+tickBox('2', 'tickbox', 'tickbox2', false, true)
+					+tickBox({value:"2", name:"tickbox", id:"tickbox2", color: "warm"})
 				.pass-selector__tickbox
-					+tickBox('3', 'tickbox', 'tickbox3', false, true)
+					+tickBox({value:"3", name:"tickbox", id:"tickbox3", color: "warm"})

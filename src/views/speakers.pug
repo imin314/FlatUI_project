@@ -15,10 +15,10 @@ block content
 		a.speakers-page__link See full line up
 		section.speakers-page__card-carousel
 			.speakers-page__left-button
-				+arrowButton('left', true)
+				+arrowButton({direction:"left", disabled:true})
 			.speakers-page__cards
 				each item in data.speakers
 					.speakers-page__card
 						+speakerCard(item)
 			.speakers-page__right-button
-				+arrowButton('right')
+				+arrowButton({direction:"right"})

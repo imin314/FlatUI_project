@@ -1,11 +1,18 @@
-mixin tickBox(_value, _name, _id, _isChecked, _colorWarm)
+mixin tickBox(_settings) 
+	- var settings = {
+	- value: _settings.value,
+	- name: _settings.name,
+	- id: _settings.id,
+	- checked: _settings.checked === true? true:false,
+	- color: _settings.color === "warm"?"warm":undefined
+	- }
 	- var className = "tick-box";
-	- if (_colorWarm) {
+	- if (settings.color==="warm") {
 	- className += " tick-box_color_warm";
 	- }
 	div(class=className)
-		- if (_isChecked)
-			input(type="checkbox" value=_value name=_name id=_id checked)
+		- if (settings.checked)
+			input(type="checkbox" value=settings.value name=settings.name id=settings.id checked)
 		- else
-			input(type="checkbox" value=_value name=_name id=_id)
-		label.tick-box__label(for=_id)
+			input(type="checkbox" value=settings.value name=settings.name id=settings.id)
+		label.tick-box__label(for=settings.id)

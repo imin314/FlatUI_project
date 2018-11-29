@@ -1,2 +1,11 @@
-mixin inputField()
-	input.input-field&attributes(attributes)
+mixin inputField(_settings)
+	- var settings = {
+	- id: _settings.id,
+	- type: _settings.type!=undefined?_settings.type:"text",
+	- name: _settings.name!=undefined?_settings.name:"",
+	- placeholder: _settings.placeholder!=undefined?_settings.placeholder:"",
+	- arealabel: _settings.arealabel!=undefined?_settings.arealabel:"",
+	- required: _settings.required===true?true:false
+	- }
+	- var req = required?"required":"";
+	input.input-field(id=settings.id type=settings.type name=settings.name placeholder=settings.placeholder arealabel=settings.arealabel req)

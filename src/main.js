@@ -8,7 +8,6 @@ import './common.blocks/social-icon/js/social-icon.js';
 import './common.blocks/speaker-card/js/speaker-card.js';
 import './common.blocks/news-card/js/news-card.js';
 import './common.blocks/button/js/button.js';
-import './common.blocks/percentage-chart/js/percentage-chart.js';
 import './common.blocks/donut-chart/js/donut-chart.js';
 import './common.blocks/chart-section/js/chart-section.js';
 import './common.blocks/slider/js/slider.js';

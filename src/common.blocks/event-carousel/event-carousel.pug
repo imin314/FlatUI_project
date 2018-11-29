@@ -8,4 +8,4 @@ mixin eventCarousel()
 		.event-carousel__cards
 			each item in data.talks
 					.event-carousel__card
-						+newsCard(item, true, true)
+						+newsCard(item, {type:"event", compact: true})

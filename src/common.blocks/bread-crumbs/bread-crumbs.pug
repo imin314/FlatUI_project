@@ -1,7 +1,11 @@
-mixin breadCrumbs(max, activeItem)
+mixin breadCrumbs(_settings)
+	- var settings = {
+	- "active": _settings.active!=undefined?_settings.active:1, //values: int (less than max value)
+	- "max": _settings.max!=undefined?_settings.max:5 //values: int
+	- }
 	ul.bread-crumbs
-		- for (var i = 1; i <= max; i++) {
-			- if (i === activeItem) {
+		- for (var i = 1; i <= settings.max; i++) {
+			- if (i === settings.active) {
 			li.bread-crumbs__item.bread-crumbs__item_active
 				.bread-crumbs__circle= i
 			- } else {

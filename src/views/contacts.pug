@@ -12,8 +12,7 @@ block content
 			.contacts-page__form
 				+emailForm('email-form')
 		section.contacts-page__map
-			+mapSection()
-
+			+map({id: "map", address: {street: "14 Karla Marksa st", city: "Tomsk, Russia"}, mapCenter: {lat: 56.490925, lng:84.946053}, pinCenter: {lat: 56.490025, lng: 84.946053}})
 block scripts
 	script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0GpB2Y8XOyVrs-stxlE0I4yR_rAaEyjU")
 			

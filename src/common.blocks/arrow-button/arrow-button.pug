@@ -1,7 +1,11 @@
-mixin arrowButton(direction, disabled)
-	- var className = "arrow-button_direction_"+direction
-	- if (disabled === true) {
+mixin arrowButton(_settings)
+	- var settings = {
+	- direction: _settings.direction==="right"?"right":"left", // values: left, right. default:left.
+	- disabled: _settings.disabled===true?true:false //values:true, false. default: false.
+	- }
+	- var className = "arrow-button arrow-button_direction_" + settings.direction;
+	- if (settings.disabled===true) {
 	- className += " arrow-button_disabled"
 	- }
-	a.arrow-button(class=className)
+	a(class=className)
 		.arrow-button__arrow

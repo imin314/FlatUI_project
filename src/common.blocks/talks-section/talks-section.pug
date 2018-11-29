@@ -23,5 +23,5 @@ mixin talksSection()
 					.talks-section__event
 						h3.talks-section__time= event.time
 						.talks-section__card
-							+newsCard(event, false, true, true)
+							+newsCard(event, {compact: true, color: "reverted"})
 

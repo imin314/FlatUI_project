@@ -1,18 +1,9 @@
-include ../percentage-chart/percentage-chart.pug
 include ../donut-chart/donut-chart.pug
 
 mixin chartSection()
 	.chart-section
 		h1.chart-section__header.section-title percentages / pie chart
 		.chart-section__container
-			//-.chart-section__chart
-				+percentageChart('percentage-chart1', 0)
-			//-.chart-section__chart
-				+percentageChart('percentage-chart2', 38)
-			//-.chart-section__chart
-				+percentageChart('percentage-chart3', 62)
-			//-.chart-section__chart
-				+percentageChart('percentage-chart4', 89)
 			.chart-section__chart
 				+donutChart('percentage-chart1', true)
 			.chart-section__chart

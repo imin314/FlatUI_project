@@ -4,5 +4,5 @@ mixin mapSection()
     .map-section
         .map-section__header.section-title location
         .map-section__map
-            +map("map", 37.7947, -122.41627, 37.791095, -122.415075)
+            +map({id: "map", address: {street: "1259 California st", city: "San francisco, Ca"}, mapCenter: {lat: 37.7947, lng:-122.41627}, pinCenter: {lat: 37.791095, lng: -122.415075}} )
             

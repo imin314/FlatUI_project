@@ -37,7 +37,7 @@ $.fn.addDonutChart = function (data, colors) {
 	var strokeWidth = parseFloat(el.find("circle").css("stroke-width"));
 	var viewBoxTop = 0 - (strokeWidth/2);
 	var viewBoxBottom = radius * 2 + strokeWidth;
-	var viewBoxValue = viewBoxTop + ' '+ viewBoxTop + ' ' + viewBoxBottom + ' ' + viewBoxBottom;
+	var viewBoxValue = viewBoxTop + ' ' + viewBoxTop + ' ' + viewBoxBottom + ' ' + viewBoxBottom;
 	//$svg.setAttribute("viewBox",);
 	$svg.attr({viewBox: viewBoxValue});
 	if (el.has(".donut-chart__label")){
