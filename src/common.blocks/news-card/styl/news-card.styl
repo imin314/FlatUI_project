@@ -1,12 +1,12 @@
 .news-card
-	font-size 0
+	font-size inherit
 	background-color color-warm
 	border-radius remify(5px)
 	overflow hidden
 	width 100%
 	height @width
 	text-align left
-
+	display flex
 	&__image
 		background-repeat no-repeat
 		background-position 0px 0px
@@ -18,16 +18,12 @@
 		background-color #e5e5e5
 
 	&__content
-		font-size 2vw
+		font-size 1em
 		padding 1.3em 1.6em
 		overflow hidden
 		display inline-block
 		width 67%
 		height 100%
-		@media screen and (min-width: 1100px)
-			font-size remify(22px)
-		@media screen and (max-width: 814px)
-			font-size remify(13px)
 
 	&__title
 		font-size 2em
@@ -50,7 +46,7 @@
 		color white
 		font-weight normal
 		letter-spacing 0.035em
-		max-height 150px
+		max-height 55%
 
 	&_type_event
 		background-color color-cold
@@ -106,10 +102,10 @@
 			&__title
 				font-size 0.8em
 				line-height 1.2em
-			&__text
-				max-height 130px
 			&__button
-				bottom 6%
+				bottom 4%
+			&__text
+				max-height 35%
 
 	&_color_reverted
 		background-color color-cold

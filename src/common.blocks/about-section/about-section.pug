@@ -3,37 +3,42 @@ include ../donut-chart/donut-chart.pug
 
 mixin aboutSection()
 	section.about-section
-		.about-section__text
-			h3.about-section__title.section-title About Web Talks 2019
-			p.about-section__intro
-				span Our field is constantly changing, where last year's cutting edge is this year's commonplace, and today's best practice is tomorrow's old hat. For well over a decade, we've tracked practices, patterns and technologies to keep our audience up to date.
-				span Web Talks brings together the whole team, with three curated tracks, one focused on development and engineering, one focused on design, and one focused on management. For this, we've brought together the finest minds at the intersection of technology, design, and management in an atmosphere unlike any other.
-				a(href="https://www.youtube.com/channel/UCELSb-IYi_d5rYFOxWeOz5g" title="Watch more") See what happened in 2018 &gt;
-			h3.about-section__title.section-title Who's it for?
-			h4.about-section__subtitle The Design Team
-			p.about-section__intro UX, IxD, visual, Web, Front End and CX experts, Art Directors, Creative Directors, Experience Leads, Design Leads and Design Researchers should all attend to hear these world leading experts.
-			h4.about-section__subtitle The Engineering Team
-			p.about-section__intro We've got the whole front end development team covered: front end engineers, JavaScript and Web developers, engineering leads, engineering managers, devops experts, CTOs.
-			h4.about-section__subtitle Leaders and Decision Makers
-			p.about-section__intro To round it out, our audience is full of smart decision makers, who know taking the pulse of what's now, and next, is vital in making the right strategic decisions. Two tracks, and a mixture of deep dive and high level sessions ensures there's something for you too. Meanwhile, outside the sessions, you'll find engaging showcases of technology and design to keep you thinking.
-		.about-section__right-col
-			.about-section__video
-				+video("https://www.youtube.com/embed/yNVLjsAvp3E")
-			ul.about-section__stats
-				li.about-section__stat-item
-					.about-section__comment
-						span Three tracks covering actual topics of 
-						span.about-section__topic.about-section__topic_color_blue Development
-						span , 
-						span.about-section__topic.about-section__topic_color_red Design
-						span , and 
-						span.about-section__topic.about-section__topic_gray Management 
-						span with total of 18 intense workshops and talks.
-					.about-section__chart
-						+donutChart('donut-chart1')
-				li.about-section__stat-item
-					.about-section__number 600+
-					.about-section__comment Passionate attendees
-				li.about-section__stat-item
-					.about-section__number 7
-					.about-section__comment Intense Days
+		.about-section__block
+			.about-section__text
+				h3.about-section__title.section-title About Web Talks 2019
+				p.about-section__intro
+					span Our field is constantly changing, where last year's cutting edge is this year's commonplace, and today's best practice is tomorrow's old hat. For well over a decade, we've tracked practices, patterns and technologies to keep our audience up to date.
+					span Web Talks brings together the whole team, with three curated tracks, one focused on development and engineering, one focused on design, and one focused on management. For this, we've brought together the finest minds at the intersection of technology, design, and management in an atmosphere unlike any other.
+					a(href="https://www.youtube.com/channel/UCELSb-IYi_d5rYFOxWeOz5g" title="Watch more") See what happened in 2018 &gt;
+			.about-section__right-col
+				.about-section__video
+					+video("https://www.youtube.com/embed/yNVLjsAvp3E")
+		.about-section__block
+			.about-section__text
+				h3.about-section__title.section-title Who's it for?
+				h4.about-section__subtitle The Design Team
+				p.about-section__intro UX, IxD, visual, Web, Front End and CX experts, Art Directors, Creative Directors, Experience Leads, Design Leads and Design Researchers should all attend to hear these world leading experts.
+				h4.about-section__subtitle The Engineering Team
+				p.about-section__intro We've got the whole front end development team covered: front end engineers, JavaScript and Web developers, engineering leads, engineering managers, devops experts, CTOs.
+				h4.about-section__subtitle Leaders and Decision Makers
+				p.about-section__intro To round it out, our audience is full of smart decision makers, who know taking the pulse of what's now, and next, is vital in making the right strategic decisions. Two tracks, and a mixture of deep dive and high level sessions ensures there's something for you too. Meanwhile, outside the sessions, you'll find engaging showcases of technology and design to keep you thinking.
+			.about-section__right-col
+				ul.about-section__stats
+					li.about-section__stat-item
+						.about-section__comment
+							span Three tracks covering actual topics of 
+							span.about-section__topic.about-section__topic_color_blue Development
+							span , 
+							span.about-section__topic.about-section__topic_color_red Design
+							span , and 
+							span.about-section__topic.about-section__topic_gray Management 
+							span with total of 18 intense workshops and talks.
+						.about-section__chart
+							+donutChart('donut-chart1')
+					li.about-section__stat-item
+						.about-section__number 600+
+						.about-section__comment Passionate attendees
+					li.about-section__stat-item
+						.about-section__number 7
+						.about-section__comment Intense Days	
+				

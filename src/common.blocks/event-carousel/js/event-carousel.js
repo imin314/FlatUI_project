@@ -4,6 +4,7 @@ $(window).on("load",function(){
 		theme:"dark-thin",
 		autoExpandScrollbar:true,
 		advanced:{autoExpandHorizontalScroll:true}
+
 	});
 
 	$('.event-carousel__card').find('.button').dcalendarpicker({

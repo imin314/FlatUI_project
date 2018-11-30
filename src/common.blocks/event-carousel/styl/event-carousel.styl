@@ -17,18 +17,20 @@
 		&:active
 			text-decoration underline
 	&__cards
-		flex-grow 1
-		flex-shrink 1
-		width 1000px
-		height 380px
+		width 100%
+		height 21em
 		padding 10px 10px 0 10px
+		font-size 1rem
+		@media screen and (max-width: 992px)
+			font-size 0.8rem
 	&__card
-		width 430px
+		width 20em
 		vertical-align top
-		height 350px
+		height 15em
 		display inline-block
 		overflow hidden
-		margin-right 0.8rem
+		margin-right 0.8em
+		font-size 1.2em
 		&:last-child
 			margin-right 0
 		&_visible
