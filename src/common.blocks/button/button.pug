@@ -1,15 +1,12 @@
 mixin button(_settings)
-	- var settings = {
-	- size: _settings.size, // values: undefined, small, responsive (supports multiple values separated with whitespace)
-	- color: _settings.color, // values: undefined, secondary, reverse
-	- title: _settings.title!=undefined?_settings.title:"button",
-	- link: _settings.link!=undefined?_settings.link:"#"
-	- }
+	//- parameters: size: small, responsive (or both separated by whitespace)
+	//- color: reverted, warm
+	//- link attribute might be empty
 	- var className = "button";
-	- if (settings.size!=undefined) {
-	- for (let value of settings.size.split(" ")) {
+	- if (_settings.size!=undefined) {
+	- for (let value of _settings.size.split(" ")) {
 	- className+= " button_size_"+value;
 	- }}
-	- if (settings.color!=undefined) className+= " button_color_"+settings.size;
-	
-	a.ripple(class=className href=settings.link title=settings.title)= settings.title
+	- if (_settings.color!=undefined) className+= " button_color_"+_settings.color;
+	- var linkAttr = _settings.link!=undefined?"href="+_settings.link:"";
+	a.ripple(class=className title=_settings.title!=undefined?_settings.title:"button" linkAttr)= _settings.title!=undefined?_settings.title:"button"

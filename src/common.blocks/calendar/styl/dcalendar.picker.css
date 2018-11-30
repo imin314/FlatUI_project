@@ -35,6 +35,14 @@
 		width: 330px;
 		font-size: 0.8rem;
 	}
+
+	@media screen and (max-width:375px) {
+		.calendar-wrapper.picker {
+			width: 220px;
+			font-size:0.7rem;
+		}
+	}
+
 		.calendar-wrapper.picker.load {
 			/*bottom: -32px;*/
 			opacity: 0;

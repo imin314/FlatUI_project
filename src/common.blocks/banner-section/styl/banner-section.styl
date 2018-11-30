@@ -1,12 +1,19 @@
 .banner-section
 	width 100%
 	background-color color-cold
-	padding 4rem
+	padding 7rem 2rem 4rem
 	color white
 	font-size 2rem
 	text-align center
+	background-image url('../assets/img/banner-bg3.jpg')
+	background-size cover
+	background-repeat no-repeat
+	@media screen and (max-width:768px)
+		font-size 1rem
+	@media screen and (max-width: 425px)
+		padding-top 4rem
 	&__location
-		font-size 0.5em
+		font-size 1rem
 		display block
 		font-weight lighter
 	&__title
@@ -17,12 +24,15 @@
 		font-weight 900
 		line-height 1em
 		display block
-		text-shadow 0.1em 0 0 rgba(0,0,0,0.3)
 	&__tagline
 		font-size 0.5em
+		margin-top 0.5em
 		display block
 		font-weight lighter
 	&__register-button
 		width 300px
 		margin 0 auto
 		font-size 1rem
+		@media screen and (max-width:425px)
+			width:220px
+			font-size 0.8rem

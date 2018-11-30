@@ -5,6 +5,9 @@
 	left 0
 	background-color white
 	z-index 200
+	@media screen and (max-width:425px)
+		background-color color-bg
+		position relative
 	&__menu
 		width 100%
 		display flex
@@ -13,11 +16,18 @@
 		justify-content space-around
 		margin 0
 		padding 1rem 1rem 0
+		transition all 1s cubic-bezier(.325, 1, .22, 1)
+		@media screen and (max-width:425px)
+			overflow hidden
+			flex-direction column
+			flex-wrap wrap
+			justify-content flex-start
+			display none
 	&__item
 		list-style none
-		margin 0 0 1rem
+		margin 0 0.5rem 1rem
 		padding 0
-		flex 150px 1 1
+		flex auto 1 1
 		text-align center
 		& a
 			font-size 1rem
@@ -29,3 +39,61 @@
 				text-decoration underline
 			&:active
 				text-decoration none
+	&__icon
+		display none
+		@media screen and (max-width:425px)
+			display block
+			position absolute
+			top 20px
+			left 13px
+			height 27px
+			width 27px
+			cursor pointer
+			text-indent -9999px //Hide the label
+			transition all 1s cubic-bezier(.19, 1, .22, 1)
+			//Remove blinking cursor
+			border none
+			color transparent
+			text-shadow 0 0 0 gray
+			text-align center
+			&:focus
+				outline none
+	&__icon-line
+		position absolute
+		display block
+		background color-cold
+		width 27px
+		height .2rem
+		border-radius .2rem
+		left 0
+		text-indent 0
+		transition all .6s cubic-bezier(.5, .1, 0, 1.2)
+		&:first-child
+			top 0
+		&:nth-child(2)
+			top 8px
+		&:nth-child(3)
+			top: 16px
+
+	& input[type="checkbox"]
+		display none
+		visibility hidden
+		&:checked
+			& ~ .navigation-bar__menu
+				display block
+				& .navigation-bar__item
+					height auto
+					max-height 30rem
+					transition all 2s cubic-bezier(.5, 1, .22, 1)
+			& ~ .navigation-bar__icon .navigation-bar__icon-line
+				&:first-child
+					top 0px
+					width 27px
+					transform translateX(-8px) rotate(-45deg) translateY(12px)
+				&:nth-child(2)
+					opacity 0
+				&:nth-child(3)
+					top 14px
+					width 27px
+					transform translateX(-5px) rotate(45deg) translateY(-8px)
+			
