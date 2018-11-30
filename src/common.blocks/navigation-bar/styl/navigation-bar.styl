@@ -22,7 +22,8 @@
 			flex-direction column
 			flex-wrap wrap
 			justify-content flex-start
-			display none
+			height 0px
+			padding 0
 	&__item
 		list-style none
 		margin 0 0.5rem 1rem
@@ -80,7 +81,8 @@
 		visibility hidden
 		&:checked
 			& ~ .navigation-bar__menu
-				display block
+				height auto
+				padding 1rem 1rem 0
 				& .navigation-bar__item
 					height auto
 					max-height 30rem
