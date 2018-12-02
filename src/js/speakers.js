@@ -1,50 +1,89 @@
+    $(window).on("load resize",function(){
+        if(window.matchMedia("(min-width: 479px)").matches){
+			$(".speakers-page__cards").mCustomScrollbar(
+				{
+					axis:"x",
+					theme:"dark-thin",
+					autoExpandScrollbar:true,
+					advanced:{autoExpandHorizontalScroll:true},
+					callbacks:{
+						onTotalScroll: function(){
+							$(".speakers-page__right-button").find(".arrow-button").addClass("arrow-button_disabled");
+						},
+						onTotalScrollBack: function(){
+							$(".speakers-page__left-button").find(".arrow-button").addClass("arrow-button_disabled");
+						},
+						onScrollStart: function(){
+							$(".speakers-page__left-button").find(".arrow-button").removeClass("arrow-button_disabled");
+							$(".speakers-page__right-button").find(".arrow-button").removeClass("arrow-button_disabled");
+						}
+					}
+				});
+        }else{
+			$(".speakers-page__cards").mCustomScrollbar("destroy");
+        }
+    });
+
 $(document).ready(function() {
+	var speakerPage = $(".speakers-page");
+	var cards = $(".speakers-page__cards");
 	var isFullView = false;
+	var isSmall = false;
+	if (matchMedia) {
+		const mq = window.matchMedia("(max-width: 478px)");
+		mq.addListener(WidthChange);
+		WidthChange(mq);
+	}
+	
+	// media query change
+	function WidthChange(mq) {
+		if (mq.matches) {
+				isSmall = true;
+				speakerPage.addClass('speakers-page__view_small');
+			} else {
+				isSmall = false;
+				speakerPage.removeClass('speakers-page__view_small');
+			}
+	}
     $(".speakers-page__right-button").click(function(){
-		$(".speakers-page__cards").mCustomScrollbar("scrollTo","-=500");
+		cards.mCustomScrollbar("scrollTo","-=500");
 	});
 
 	$(".speakers-page__left-button").click(function(){
-		$(".speakers-page__cards").mCustomScrollbar("scrollTo","+=500");
+		cards.mCustomScrollbar("scrollTo","+=500");
 	});
 
 	$(".speakers-page__link").click(function(){
-		
+	
 		if (!isFullView) {
-			$(".speakers-page").addClass("speakers-page__view_full");
+			speakerPage.addClass("speakers-page__view_full");
 			$(".speakers-page__link").text("Back to compact view");
 			isFullView = true;
+			if (!isSmall){
 			$("#mCSB_1_container").removeAttr("style");
-			$(".speakers-page__cards").mCustomScrollbar("disable", true);
-		}
-		else{
-			$(".speakers-page").removeClass("speakers-page__view_full");
-			$(".speakers-page__link").text("See full line up");
-			isFullView = false;
-			$(".speakers-page__cards").mCustomScrollbar("update");
-		}
-	});
-});
-
-$(window).on("load",function(){
-	$(".speakers-page__cards").mCustomScrollbar({
-		axis:"x",
-		theme:"dark-thin",
-		autoExpandScrollbar:true,
-		advanced:{autoExpandHorizontalScroll:true},
-		callbacks:{
-			onTotalScroll: function(){
-				$(".speakers-page__right-button").find(".arrow-button").addClass("arrow-button_disabled");
-			},
-			onTotalScrollBack: function(){
-				$(".speakers-page__left-button").find(".arrow-button").addClass("arrow-button_disabled");
-			},
-			onScrollStart: function(){
-				$(".speakers-page__left-button").find(".arrow-button").removeClass("arrow-button_disabled");
-				$(".speakers-page__right-button").find(".arrow-button").removeClass("arrow-button_disabled");
+			cards.mCustomScrollbar("disable", true);
 			}
 		}
+		else{
+			speakerPage.removeClass("speakers-page__view_full");
+			$(".speakers-page__link").text("See full line up");
+			isFullView = false;
+			if (!isSmall){
+			cards.mCustomScrollbar("update");
+		}
+		}
 	});
+/*
+	if(window.matchMedia('(max-width: 428px)').matches) {
+		speakerPage.addClass('speakers-page__view_full');
+		controls.addClass('speakers-page__controls_hidden');
+		alert("HI!");
+	}
+	else{
+		speakerPage.removeClass('speakers-page__view_full');
+		controls.removeClass('speakers-page__controls_hidden');
+	}*/
+	/* JavaScript Media Queries */
 });
 
 

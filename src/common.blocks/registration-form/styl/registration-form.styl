@@ -57,36 +57,40 @@
 		background-color #bfcac8
 		border-radius 10px
 		padding 2.5rem 1rem 1rem
-		width 70%
+		width 100%
 		margin 0 auto
+		max-width 800px
 	&__subscribe
 		margin 0 auto
-		width max-content
+		display flex
+		justify-content center
 	&__subscribe-text
-		display inline-block
-		vertical-align baseline
-		margin-right 1rem
-	&__checkbox
-		display inline-block
-		vertical-align middle
+		margin 0 0.5rem
+		text-align center
 	&__pass-selector
 		margin-top 3rem
+		overflow hidden
 	&__last-stage
 		margin 2rem auto
-		width 70%
-		min-width 600px
+		width 100%
+		max-width 800px
 		background-color #bfcac8
 		border-radius 10px
-		padding 1rem
+		padding 0.5rem 1rem
 		display flex
-		justify-content space-between
+		justify-content center
 		align-items center
+		flex-wrap wrap
+		font-size 1rem
+		@media screen and (max-width:375px)
+			font-size 0.8rem
 	&__policy-checkbox
 		flex auto 0 0
-		margin-right 1rem
 	&__policy-text
-		flex auto 0 1
-		margin-right 1rem
+		flex 200px 1 1
+		margin 0.5rem 1rem
+		font-size inherit
 	&__button
-		flex auto 1 2
+		flex auto 0 2
 		text-align right
+		font-size inherit

@@ -1,29 +1,24 @@
 mixin newsCard(data, _settings)   
-	- var settings = {
-	- type: _settings && _settings.type==="event"?"event":"news",
-	- compact: _settings && _settings.compact===true?true:false,
-	- color: _settings && _settings.color==="reverted"?"reverted":"normal"
-	- }
 	- var img = require("../assets/img/"+ data.img)
 	- var className = 'news-card';
 	- var date = new Date(data.date);
 	- var day = date.getDate();
 	- var month = date.toLocaleString("en-us", { month: "long" });
 	- var year = date.getFullYear()
-	- if (settings.type === "event") {
+	- if (_settings && _settings.type === "event") {
 	- 	className += ' news-card_type_event';
 	-	month = date.toLocaleString("en-us", { month: "short" });
 	- }
-	- if (settings.compact) {
+	- if (_settings && _settings.compact) {
 	- 	className += ' news-card_size_compact';
 	- }
-	- if (settings.color === "reverted"){
+	- if (_settings && _settings.color === "reverted"){
 	-	className += ' news-card_color_reverted';
 	- }
 	div(class=className)
 		.news-card__image(style='background-image: url('+img+')')
 		.news-card__content
-			- if (settings.type === "event") {
+			- if (_settings && _settings.type === "event") {
 				.news-card__date
 					span.news-card__day= day
 					span.news-card__month= month

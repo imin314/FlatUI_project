@@ -12,7 +12,9 @@
 		display table-column
 		width 33.33333333333333%
 		border-right 20px solid white
-		&:last-of-type
+		@media screen and (max-width:375px)
+			border-right 10px solid white
+		&:nth-child(3)
 			border-right none
 		&:hover
 			background-color color-bg
@@ -21,21 +23,31 @@
 		color color-warm
 		font-weight bold
 		font-size 2.5rem
-		padding 1rem
 		display table-cell
-		border-bottom 3px solid
+		border-bottom 2px solid
+		padding 1rem 0
+		@media screen and (max-width:768px)
+			font-size 1.5rem
+		@media screen and (max-width:375px)
+			font-size 1.1rem
 	&__price
 		font-weight lighter
 		font-size 2rem
-		padding 1rem
+		padding 1rem 0
 		color color-text
 		display table-cell
+		@media screen and (max-width:768px)
+			font-size 1.3rem
+		@media screen and (max-width:375px)
+			font-size 1rem
 	&__text
 		font-weight lighter
 		font-size 1rem
-		padding 1rem
+		padding 1rem 0
 		color color-text
 		display table-cell
+		@media screen and (max-width:375px)
+			font-size 0.8rem
 	&__tickbox
 		display table-cell
 		padding 1rem

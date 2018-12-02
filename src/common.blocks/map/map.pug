@@ -1,19 +1,16 @@
 include ../pin/pin.pug
 
 mixin map(_settings)
-    - var settings = {
-    - id: _settings.id!=undefined?_settings.id:"map",
-    - address: _settings.address!=undefined?_settings.address:{street: "", city: ""},
-    - mapCenter: _settings.mapCenter!=undefined?_settings.mapCenter:{lat: 26.893505, lng: 80.967422},
-    - pinCenter: _settings.pinCenter!=undefined?_settings.pinCenter:{lat: 26.893505, lng: 80.967422},
-    -}
+    - if (_settings.address==undefined) _settings.address = {street: "", city: ""};
+    - if (_settings.mapCenter==undefined) _settings.mapCenter = {lat: 26.893505, lng: 80.967422};
+    - if (_settings.pinCenter==undefined) _settings.pinCenter = _settings.mapCenter;
     section.map
-        .map__container(id=settings.id, data-lat= settings.mapCenter.lat, data-lng= settings.mapCenter.lng, data-plat= settings.pinCenter.lat, data-plng= settings.pinCenter.lng)
+        .map__container(id=_settings.id, data-lat=_settings.mapCenter.lat, data-lng=_settings.mapCenter.lng, data-plat=_settings.pinCenter.lat, data-plng=_settings.pinCenter.lng)
         .map__footer
             .map__title Meet us!
             .map__address
-                .map__street=settings.address.street
-                .map__city=settings.address.city
+                .map__street=_settings.address.street
+                .map__city=_settings.address.city
             .map__icons
                 .map__search
                 .map__pin

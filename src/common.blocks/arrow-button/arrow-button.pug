@@ -1,10 +1,7 @@
 mixin arrowButton(_settings)
-	- var settings = {
-	- direction: _settings.direction==="right"?"right":"left", // values: left, right. default:left.
-	- disabled: _settings.disabled===true?true:false //values:true, false. default: false.
-	- }
-	- var className = "arrow-button arrow-button_direction_" + settings.direction;
-	- if (settings.disabled===true) {
+	- var className = "arrow-button arrow-button_direction_";
+	- className += _settings.direction==="right"?"right":"left";
+	- if (_settings.disabled===true) {
 	- className += " arrow-button_disabled"
 	- }
 	a(class=className)

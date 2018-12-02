@@ -6,8 +6,7 @@
 	background-color white
 	z-index 200
 	@media screen and (max-width:425px)
-		background-color color-bg
-		position relative
+		height 60px
 	&__menu
 		width 100%
 		display flex
@@ -83,6 +82,7 @@
 			& ~ .navigation-bar__menu
 				height auto
 				padding 1rem 1rem 0
+				background-color color-bg
 				& .navigation-bar__item
 					height auto
 					max-height 30rem

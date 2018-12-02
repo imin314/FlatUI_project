@@ -1,15 +1,20 @@
 .contacts-page
 	width 90%
 	margin 100px auto 2rem
+	@media screen and (max-width:425px)
+		margin-top 60px
 	&__email
 		margin 3rem auto 0
+		@media screen and (max-width:425px)
+			margin-top 1rem
 	&__text
 		font-size 1rem
 		font-weight lighter
 		text-align center
 	&__form
 		margin 2rem auto 0
-		width 60%
+		width 100%
+		max-width 750px
 	&__map
 		margin 3rem auto 0
 	&__footer

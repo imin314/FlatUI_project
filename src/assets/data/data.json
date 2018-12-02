@@ -32,9 +32,9 @@
 	},
 	{
 		"name": "keith alexander",
-		"position": "",
+		"position": "WEB DESIGNER, MYR Info",
 		"img": "keith-alexander.jpg",
-		"text": "Keith is a designer with a background in Service &amp; Interaction Design. During his career, Keith has served in a broad range of roles, designing digital products and services in several sectors, including healthcare, web development, and the automotive and travel &amp; leisure industries."
+		"text": "Keith is a designer with a background in Service &amp; Interaction Desiis a designer with a background in Service &amp; Interaction Design. During his career, Keith has served in a broad range of roles, designing digital products and services in several sectors, including healthcare, web development, and the automotive and travel &amp; leisure industries."
 	},
 	{
 		"name": "haruki yamada",
@@ -80,14 +80,14 @@
 	},
 	{
 		"name": "mandy michael",
-		"position": "Front End Development Manager, Seven West Media",
+		"position": "Development Manager, Seven West",
 		"img": "mandy-michael.jpg",
-		"text": "Mandy is a community organiser, speaker, and developer working as the Front End Development Manager at Seven West Media in Western Australia. She is a co-organiser and Director of Mixin Conf, and the founder and co-organiser of Fenders."
+		"text": "Mandy is a community organiser, speaker, and developer working as the Front End Development Manager at Seven West in Western Australia. She is a co-organiser and Director of Mixin Conf, and the founder and co-organiser of Fenders."
 	},
 	{
-		"name": "michael john pena",
+		"name": "michael pena",
 		"position": "Technical Consultant, Readify",
-		"img": "michael-john-pena.jpg",
+		"img": "michael-pena.jpg",
 		"text": "Michael is an experienced Technical Consultant currently working with Readify in Sydney, Australia, a Microsoft MVP and a certified professional with more than 5 years of working experience ranging from Mobile, Cloud, Web, DevOps and Blockchain."
 	},
 	{
@@ -237,7 +237,7 @@
 	},
 	{
 		"title": "Blockchain for Web Developers",
-		"speaker": "michael john pena",
+		"speaker": "michael pena",
 		"date": "05.17.2019",
 		"time": "18:00 - 21:00",
 		"category": "development",

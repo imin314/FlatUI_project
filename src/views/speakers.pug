@@ -12,13 +12,16 @@ block content
 		p.speakers-page__intro We've combed the country and the world for extraordinary spakers, covering the most relevant topics for today's front end developers, designers, and managers.
 		section.speakers-page__search
 			+searchBox()
-		a.speakers-page__link See full line up
 		section.speakers-page__card-carousel
-			.speakers-page__left-button
-				+arrowButton({direction:"left", disabled:true})
 			.speakers-page__cards
-				each item in data.speakers
-					.speakers-page__card
-						+speakerCard(item)
-			.speakers-page__right-button
-				+arrowButton({direction:"right"})
+				.speakers-page__card-wrapper
+					each item in data.speakers
+						.speakers-page__card
+							+speakerCard(item)
+			.speakers-page__controls
+				.speakers-page__left-button
+					+arrowButton({direction:"left", disabled:true})
+				a.speakers-page__link View full line up
+				.speakers-page__right-button
+					+arrowButton({direction:"right"})
+			
