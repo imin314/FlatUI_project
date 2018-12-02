@@ -15,6 +15,8 @@
       <div class="loader_inner"></div>
     </div>
     <nav class="navigation-bar">
+      <input class="navigation-bar__toggle" id="toggle" type="checkbox">
+      <label class="navigation-bar__icon" for="toggle"><span class="navigation-bar__icon-line"></span><span class="navigation-bar__icon-line"></span><span class="navigation-bar__icon-line"></span></label>
       <ul class="navigation-bar__menu">
         <li class="navigation-bar__item"><a href="index.html" title="Home">Home</a></li>
         <li class="navigation-bar__item"><a href="registration.html" title="Registration">Registration</a></li>
@@ -30,31 +32,31 @@
               <h1 class="section-title button-section__header">standard buttons</h1>
               <div class="button-section__container">
                 <div class="button-section__column">
-                  <div class="button-section__button button-section__button_size_small"><a class="ripple button button_size_small" href="#" title="button">button</a>
+                  <div class="button-section__button button-section__button_size_small"><a class="ripple button button_size_small" title="button" linkAttr>button</a>
                   </div>
-                  <div class="button-section__button button-section__button_size_small"><a class="ripple button button_size_small" href="#" title="button">button</a>
+                  <div class="button-section__button button-section__button_size_small"><a class="ripple button button_size_small" title="button" linkAttr>button</a>
                   </div>
-                  <div class="button-section__button button-section__button_size_small"><a class="ripple button button_size_small" href="#" title="button">button</a>
+                  <div class="button-section__button button-section__button_size_small"><a class="ripple button button_size_small" title="button" linkAttr>button</a>
                   </div>
-                  <div class="button-section__button"><a class="ripple button" href="#" title="button">button</a>
+                  <div class="button-section__button"><a class="ripple button" title="button" linkAttr>button</a>
                   </div>
-                  <div class="button-section__button"><a class="ripple button" href="#" title="button">button</a>
+                  <div class="button-section__button"><a class="ripple button" title="button" linkAttr>button</a>
                   </div>
-                  <div class="button-section__button"><a class="ripple button" href="#" title="button">button</a>
+                  <div class="button-section__button"><a class="ripple button" title="button" linkAttr>button</a>
                   </div>
                 </div>
                 <div class="button-section__column">
-                  <div class="button-section__button"><a class="ripple button button_color_undefined" href="#" title="button">button</a>
+                  <div class="button-section__button"><a class="ripple button button_color_secondary" title="button" linkAttr>button</a>
                   </div>
-                  <div class="button-section__button"><a class="ripple button button_color_undefined" href="#" title="button">button</a>
+                  <div class="button-section__button"><a class="ripple button button_color_secondary" title="button" linkAttr>button</a>
                   </div>
-                  <div class="button-section__button"><a class="ripple button button_color_undefined" href="#" title="button">button</a>
+                  <div class="button-section__button"><a class="ripple button button_color_secondary" title="button" linkAttr>button</a>
                   </div>
-                  <div class="button-section__button button-section__button_size_small"><a class="ripple button button_size_small button_color_small" href="#" title="button">button</a>
+                  <div class="button-section__button button-section__button_size_small"><a class="ripple button button_size_small button_color_secondary" title="button" linkAttr>button</a>
                   </div>
-                  <div class="button-section__button button-section__button_size_small"><a class="ripple button button_size_small button_color_small" href="#" title="button">button</a>
+                  <div class="button-section__button button-section__button_size_small"><a class="ripple button button_size_small button_color_secondary" title="button" linkAttr>button</a>
                   </div>
-                  <div class="button-section__button button-section__button_size_small"><a class="ripple button button_size_small button_color_small" href="#" title="button">button</a>
+                  <div class="button-section__button button-section__button_size_small"><a class="ripple button button_size_small button_color_secondary" title="button" linkAttr>button</a>
                   </div>
                 </div>
               </div>
@@ -168,18 +170,18 @@
                       <form class="email-form" id="email-form" action="send_email.php" method="post">
                         <div class="email-form__name">
                           <div class="email-form__input">
-                                <input class="input-field" type="text" name="name" placeholder="Your Name" arealabel="Name" req>
+                                <input class="input-field" type="text" name="name" placeholder="Your Name" realabel="Name" req>
                           </div>
                           <div class="email-form__bubble"></div>
                         </div>
                         <div class="email-form__email">
                           <div class="email-form__input">
-                                <input class="input-field" id="email" type="email" name="email" placeholder="Your Email" arealabel="Email" req>
+                                <input class="input-field" id="email" type="email" name="email" placeholder="Your Email" realabel="Email" req>
                           </div>
                           <div class="email-form__bubble"></div>
                         </div>
                         <textarea class="input-field email-form__message" name="message" placeholder="Your Message" arealabel="Message"></textarea>
-                        <div class="email-form__button"><a class="ripple button button_color_undefined" href="#" title="submit">submit</a>
+                        <div class="email-form__button"><a class="ripple button button_color_reverse" title="submit" linkAttr>submit</a>
                         </div>
                       </form>
                 </div>
@@ -323,7 +325,7 @@
                           <div class="news-card__date"><span class="news-card__day">24</span><span class="news-card__month">Aug</span></div>
                           <div class="news-card__title">This is the title</div>
                           <div class="news-card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                          <div class="news-card__button"><a class="ripple button button_size_small button_size_responsive" href="#" title="add to calendar">add to calendar</a>
+                          <div class="news-card__button"><a class="ripple button button_size_small button_size_responsive" title="add to calendar" linkAttr>add to calendar</a>
                           </div>
                         </div>
                       </div>
@@ -378,7 +380,7 @@
                       <div class="messenger__container">
                         <div class="messenger__message messenger__message_type_inbox">Hey! So are we cool to meet at the art gallery? Say 8pm</div>
                         <textarea class="messenger__message messenger__message_type_outbox" name="outbox" placeholder="Type your message...">Yeah that sounds great. See you then.</textarea>
-                        <div class="messenger__button"><a class="ripple button button_size_responsive button_color_responsive" href="#" title="reply">reply</a>
+                        <div class="messenger__button"><a class="ripple button button_size_responsive button_color_reverse" title="reply" linkAttr>reply</a>
                         </div>
                       </div>
                     </div>

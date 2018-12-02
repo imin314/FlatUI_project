@@ -7,39 +7,54 @@
 		font-weight lighter
 		display block
 		margin 0.5rem 0 0 1rem
+		@media screen and (max-width: 992px)
+			font-size 1.5rem
 	&__date
 		font-size 3rem
 		font-weight bold
 		margin 0 0 0.5rem 1rem
 		display block
+		@media screen and (max-width: 992px)
+			font-size 2rem
 	&__card
-		height 29.8vw
 		max-width 445.61px
-		max-height 327.8px
 		min-width 260.11px
-		min-height 193.69px
-		margin-bottom 1rem
-		font-size 2vw
-		@media screen and (min-width: 1100px)
-			font-size remify(22px)
-		@media screen and (max-width: 814px)
-			font-size remify(13px)
+		font-size 1rem
+		height 100%
 	&__events
 		display flex
 		flex-direction row
 		flex-wrap nowrap
 		justify-content space-around
-		align-items center
+		align-items stretch
 		background-color color-bg
 		border-radius 10px
+		margin 0 auto
+		@media screen and (max-width: 992px)
+			flex-wrap wrap
+			max-width 600px
+			
 	&__event
 		text-align center
 		margin 1rem
+		padding-top 2rem
+		position relative
+		&:last-child
+			@media screen and (max-width: 992px)
+				margin-bottom 1rem
+		@media screen and (max-width: 992px)
+			margin-bottom 0
 	&__time
 		color color-text
 		font-size 1.3rem
-		margin-bottom 2rem
 		font-weight lighter
+		position absolute
+		top 0
+		left 50%
+		transform translateX(-50%)
+		white-space nowrap
+		@media screen and (max-width: 992px)
+			font-size 1.1rem
 	
 
 

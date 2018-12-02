@@ -1,5 +1,7 @@
-    $(window).on("load resize",function(){
-        if(window.matchMedia("(min-width: 479px)").matches){
+var isFullView = false;
+
+$(window).on("load resize",function(){
+        if(window.matchMedia("(min-width: 479px)").matches && !isFullView){
 			$(".speakers-page__cards").mCustomScrollbar(
 				{
 					axis:"x",
@@ -20,14 +22,16 @@
 					}
 				});
         }else{
+			var elem = $(".speakers-page__cards");
+			if (elem.length > 0){
 			$(".speakers-page__cards").mCustomScrollbar("destroy");
+		}
         }
     });
 
 $(document).ready(function() {
 	var speakerPage = $(".speakers-page");
 	var cards = $(".speakers-page__cards");
-	var isFullView = false;
 	var isSmall = false;
 	if (matchMedia) {
 		const mq = window.matchMedia("(max-width: 478px)");

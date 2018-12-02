@@ -15,6 +15,8 @@
       <div class="loader_inner"></div>
     </div>
     <nav class="navigation-bar">
+      <input class="navigation-bar__toggle" id="toggle" type="checkbox">
+      <label class="navigation-bar__icon" for="toggle"><span class="navigation-bar__icon-line"></span><span class="navigation-bar__icon-line"></span><span class="navigation-bar__icon-line"></span></label>
       <ul class="navigation-bar__menu">
         <li class="navigation-bar__item"><a href="index.html" title="Home">Home</a></li>
         <li class="navigation-bar__item"><a href="registration.html" title="Registration">Registration</a></li>
@@ -32,18 +34,18 @@
               <form class="email-form" id="email-form" action="send_email.php" method="post">
                 <div class="email-form__name">
                   <div class="email-form__input">
-                        <input class="input-field" type="text" name="name" placeholder="Your Name" arealabel="Name" req>
+                        <input class="input-field" type="text" name="name" placeholder="Your Name" realabel="Name" req>
                   </div>
                   <div class="email-form__bubble"></div>
                 </div>
                 <div class="email-form__email">
                   <div class="email-form__input">
-                        <input class="input-field" id="email" type="email" name="email" placeholder="Your Email" arealabel="Email" req>
+                        <input class="input-field" id="email" type="email" name="email" placeholder="Your Email" realabel="Email" req>
                   </div>
                   <div class="email-form__bubble"></div>
                 </div>
                 <textarea class="input-field email-form__message" name="message" placeholder="Your Message" arealabel="Message"></textarea>
-                <div class="email-form__button"><a class="ripple button button_color_undefined" href="#" title="submit">submit</a>
+                <div class="email-form__button"><a class="ripple button button_color_reverse" title="submit" linkAttr>submit</a>
                 </div>
               </form>
         </div>
@@ -74,7 +76,7 @@
       <section class="footer-section__contacts">
         <h3 class="footer-section__header">Contact US</h3>
         <ul class="footer-section__list">
-          <li class="footer-section__list-item">E-mail:<a href="mailto:info@nonexistingwebtalks.org">info@nonexistingwebtalks.org</a></li>
+          <li class="footer-section__list-item">E-mail:<a href="mailto:info@nonexistingwt.org">info@nonexistingwt.org</a></li>
           <li class="footer-section__list-item">Twitter:<a href="./sorry_this_link_is_dead" title="twitter">@nonexistingwebtalks</a></li>
           <li class="footer-section__list-item">Phone: +7 3822 000 000</li>
         </ul>
@@ -101,7 +103,7 @@
           <div class="messenger__container">
             <div class="messenger__message messenger__message_type_inbox">Hi! How can I help you?</div>
             <textarea class="messenger__message messenger__message_type_outbox" name="outbox" placeholder="Type your message..."></textarea>
-            <div class="messenger__button"><a class="ripple button button_size_responsive button_color_responsive" href="#" title="reply">reply</a>
+            <div class="messenger__button"><a class="ripple button button_size_responsive button_color_reverse" title="reply" linkAttr>reply</a>
             </div>
           </div>
         </div>
