@@ -26,5 +26,18 @@ $(document).ready(function(){
 	$(".registration-form__last-stage input[type=submit]").click(function(){
 		stages.updateBreadCrumbs(2);
 	});
+
+	var header = $(".registration-page__header");
+	var passHeader = $(".pass-selector__header");
+	var passName = $(".pass-selector__pass-name");
+	$(window).scroll(function(){
+		console.log(header[0].getBoundingClientRect().bottom + " " + passHeader[0].getBoundingClientRect().bottom);
+		if (header[0].getBoundingClientRect().bottom > passHeader[0].getBoundingClientRect().bottom){
+			header.css({"position" : "absolute", "top" : passName.offset().top - header.height() - 20});
+		}
+		else{
+			header.removeAttr("style");
+		}
+	});
 });
 

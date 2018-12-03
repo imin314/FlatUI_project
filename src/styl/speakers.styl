@@ -1,6 +1,8 @@
 .speakers-page
 	width 100%
 	margin 100px auto 0
+	@media screen and (max-width: 425px)
+		margin-top 100px
 	&__intro
 		font-size 1rem
 		font-weight lighter
@@ -28,6 +30,8 @@
 	&__card-carousel
 		border-left 10px solid white
 		border-right 10px solid white
+		@media screen and (max-width: 425px)
+			border none
 	&__controls
 		font-size 1rem
 		display flex
@@ -77,7 +81,7 @@
 			max-height 850px
 			overflow hidden
 		& .speakers-page__card
-			margin 0 0.8rem 1rem 0.8rem
+			margin 0 0 1rem
 		&.speakers-page__view_full  .speakers-page__card-wrapper
 			max-height none
 			

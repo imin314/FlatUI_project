@@ -42,7 +42,8 @@ if (typeof jQuery === 'undefined') { throw new Error('DCalendar.Picker: This plu
 			$('.calendar-selected-day').text(that.selected.getDate());
 			this.calendar.find('.calendar-footer .calendar-date-wrapper').click(function () {
 				that.selected = new Date(that.today.getFullYear(), that.today.getMonth(), that.today.getDate());
-
+				that.calendar.find('.calendar-curr-month').removeClass('year');
+				that.calendar.find('.calendar-head-card').removeClass('hidden');
 				//Trigger select event
 				that.selectDate();
 				$('.calendar-selected-day').text(that.selected.getDate());
