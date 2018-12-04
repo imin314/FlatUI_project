@@ -13,10 +13,10 @@
 		"text": "Nick is a NYC-based software engineer at Spotify working on developing data privacy infrastructure. In the past, he's worked worked at Facebook, Snapchat and Google, and has lived in Germany and South Africa."
 	},
 	{
-		"name": "piter wonderbilt",
+		"name": "peter vanderbilt",
 		"position": "program management lead, intercom",
-		"img": "piter-wonderbilt.jpg",
-		"text": "Piter is passionate about program management and bringing cross functional teams together to really deliver on company strategy. He introduced the discipline to Intercom, seizing the opportunity to enable the company to deliver product at scale, without slowing down."
+		"img": "peter-vanderbilt.jpg",
+		"text": "Peter is passionate about program management and bringing cross functional teams together to really deliver on company strategy. He introduced the discipline to Intercom, seizing the opportunity to enable the company to deliver product at scale, without slowing down."
 	},
 	{
 		"name": "anna smith",
@@ -111,7 +111,7 @@
 	"talks": [
 	{
 		"title": "Shipping Product at Scale",
-		"speaker": "piter wonderbilt",
+		"speaker": "peter vanderbilt",
 		"date": "05.13.2019",
 		"time": "10:00 - 13:00",
 		"category": "management",
