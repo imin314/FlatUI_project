@@ -1,3 +1,7 @@
 mixin loader()
     .loader
-        .loader_inner
+        - var i = 0
+        div.lds-grid
+            while i < 9
+                div
+                - i++

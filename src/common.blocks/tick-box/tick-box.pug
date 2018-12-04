@@ -5,4 +5,4 @@ mixin tickBox(_settings)
 	- }
 	div(class=className)
 		input(type="checkbox" value=_settings.value name=_settings.name id=_settings.id checked=_settings.checked === true?true:false)
-		label.tick-box__label(for=_settings.id)
+		label.noselect.tick-box__label(for=_settings.id)

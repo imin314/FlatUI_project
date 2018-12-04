@@ -4,5 +4,5 @@ mixin arrowButton(_settings)
 	- if (_settings.disabled===true) {
 	- className += " arrow-button_disabled"
 	- }
-	a(class=className)
+	a.noselect(class=className)
 		.arrow-button__arrow

@@ -1,8 +1,8 @@
 mixin toggleSwitch(isChecked)
-	label.toggle-switch
+	label.toggle-switch.noselect
 		- if (isChecked)
 			input.toggle-switch__checkbox(type="checkbox" checked)
 		- else
 			input.toggle-switch__checkbox(type="checkbox")
-		span.toggle-switch__slider
+		span.toggle-switch__slider.noselect
 		.toggle-switch__text

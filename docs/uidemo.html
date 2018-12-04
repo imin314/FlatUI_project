@@ -12,7 +12,17 @@
   </head>
   <body>
     <div class="loader">
-      <div class="loader_inner"></div>
+      <div class="lds-grid">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
     <nav class="navigation-bar">
       <input class="navigation-bar__toggle" id="toggle" type="checkbox">
@@ -66,22 +76,22 @@
             <div class="arrow-section">
               <h1 class="arrow-section__header section-title">arrow buttons</h1>
               <div class="arrow-section__container">
-                <div class="arrow-section__button"><a class="arrow-button arrow-button_direction_left">
+                <div class="arrow-section__button"><a class="noselect arrow-button arrow-button_direction_left">
                         <div class="arrow-button__arrow"></div></a>
                 </div>
-                <div class="arrow-section__button"><a class="arrow-button arrow-button_direction_right">
+                <div class="arrow-section__button"><a class="noselect arrow-button arrow-button_direction_right">
                         <div class="arrow-button__arrow"></div></a>
                 </div>
-                <div class="arrow-section__button"><a class="arrow-button arrow-button_direction_left arrow-button_disabled">
+                <div class="arrow-section__button"><a class="noselect arrow-button arrow-button_direction_left arrow-button_disabled">
                         <div class="arrow-button__arrow"></div></a>
                 </div>
-                <div class="arrow-section__button"><a class="arrow-button arrow-button_direction_right arrow-button_disabled">
+                <div class="arrow-section__button"><a class="noselect arrow-button arrow-button_direction_right arrow-button_disabled">
                         <div class="arrow-button__arrow"></div></a>
                 </div>
-                <div class="arrow-section__button"><a class="arrow-button arrow-button_direction_left">
+                <div class="arrow-section__button"><a class="noselect arrow-button arrow-button_direction_left">
                         <div class="arrow-button__arrow"></div></a>
                 </div>
-                <div class="arrow-section__button"><a class="arrow-button arrow-button_direction_right">
+                <div class="arrow-section__button"><a class="noselect arrow-button arrow-button_direction_right">
                         <div class="arrow-button__arrow"></div></a>
                 </div>
               </div>
@@ -189,14 +199,14 @@
                   <div class="form-section__toggles">
                     <h1 class="form-section__header section-title">toggles</h1>
                     <div class="form-section__toggle">
-                          <label class="toggle-switch">
-                            <input class="toggle-switch__checkbox" type="checkbox"><span class="toggle-switch__slider"></span>
+                          <label class="toggle-switch noselect">
+                            <input class="toggle-switch__checkbox" type="checkbox"><span class="toggle-switch__slider noselect"></span>
                             <div class="toggle-switch__text"></div>
                           </label>
                     </div>
                     <div class="form-section__toggle">
-                          <label class="toggle-switch">
-                            <input class="toggle-switch__checkbox" type="checkbox" checked><span class="toggle-switch__slider"></span>
+                          <label class="toggle-switch noselect">
+                            <input class="toggle-switch__checkbox" type="checkbox" checked><span class="toggle-switch__slider noselect"></span>
                             <div class="toggle-switch__text"></div>
                           </label>
                     </div>
@@ -206,13 +216,13 @@
                     <div class="form-section__tickbox">
                           <div class="tick-box">
                             <input type="checkbox" value="1" name="tickbox" id="tickbox1" checked>
-                            <label class="tick-box__label" for="tickbox1"></label>
+                            <label class="noselect tick-box__label" for="tickbox1"></label>
                           </div>
                     </div>
                     <div class="form-section__tickbox">
                           <div class="tick-box">
                             <input type="checkbox" value="2" name="tickbox" id="tickbox2">
-                            <label class="tick-box__label" for="tickbox2"></label>
+                            <label class="noselect tick-box__label" for="tickbox2"></label>
                           </div>
                     </div>
                   </div>

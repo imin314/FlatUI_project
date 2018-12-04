@@ -12,7 +12,17 @@
   </head>
   <body>
     <div class="loader">
-      <div class="loader_inner"></div>
+      <div class="lds-grid">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
     <nav class="navigation-bar">
       <input class="navigation-bar__toggle" id="toggle" type="checkbox">
@@ -62,8 +72,8 @@
                   <div class="registration-form__subscribe">
                     <div class="registration-form__subscribe-text">Subscribe to Web Talks newsletters</div>
                     <div class="registration-form__checkbox">
-                          <label class="toggle-switch">
-                            <input class="toggle-switch__checkbox" type="checkbox" checked><span class="toggle-switch__slider"></span>
+                          <label class="toggle-switch noselect">
+                            <input class="toggle-switch__checkbox" type="checkbox" checked><span class="toggle-switch__slider noselect"></span>
                             <div class="toggle-switch__text"></div>
                           </label>
                     </div>
@@ -95,19 +105,19 @@
                             <div class="pass-selector__tickbox">
                                   <div class="tick-box tick-box_color_warm">
                                     <input type="checkbox" value="1" name="tickbox" id="tickbox1" checked>
-                                    <label class="tick-box__label" for="tickbox1"></label>
+                                    <label class="noselect tick-box__label" for="tickbox1"></label>
                                   </div>
                             </div>
                             <div class="pass-selector__tickbox">
                                   <div class="tick-box tick-box_color_warm">
                                     <input type="checkbox" value="2" name="tickbox" id="tickbox2">
-                                    <label class="tick-box__label" for="tickbox2"></label>
+                                    <label class="noselect tick-box__label" for="tickbox2"></label>
                                   </div>
                             </div>
                             <div class="pass-selector__tickbox">
                                   <div class="tick-box tick-box_color_warm">
                                     <input type="checkbox" value="3" name="tickbox" id="tickbox3">
-                                    <label class="tick-box__label" for="tickbox3"></label>
+                                    <label class="noselect tick-box__label" for="tickbox3"></label>
                                   </div>
                             </div>
                           </div>
@@ -118,7 +128,7 @@
                   <div class="registration-form__policy-checkbox">
                         <div class="tick-box">
                           <input type="checkbox" value="1" name="tickbox-policy" id="tickbox-policy">
-                          <label class="tick-box__label" for="tickbox-policy"></label>
+                          <label class="noselect tick-box__label" for="tickbox-policy"></label>
                         </div>
                   </div>
                   <div class="registration-form__policy-text">I agree with Web Talks Terms and Conditions and the Privacy Policy</div>
@@ -131,7 +141,7 @@
     </div>
     <footer class="footer-section">
       <section class="footer-section__contacts">
-        <h3 class="footer-section__header">Contact US</h3>
+        <h3 class="footer-section__header">Contact Us</h3>
         <ul class="footer-section__list">
           <li class="footer-section__list-item">E-mail:<a href="mailto:info@nonexistingwt.org">info@nonexistingwt.org</a></li>
           <li class="footer-section__list-item">Twitter:<a href="./sorry_this_link_is_dead" title="twitter">@nonexistingwebtalks</a></li>
