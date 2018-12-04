@@ -29,17 +29,15 @@ $(document).ready(function(){
 
 	var header = $(".registration-page__header");
 	var passHeader = $(".pass-selector__header");
-	var unFixed = false;
+
 	$(window).scroll(function(){
 		var headerHeight = header.outerHeight();
 		var passHeaderOffset = passHeader.offset().top
-		if ($(this).scrollTop()+headerHeight > passHeaderOffset && !unFixed){
-			unFixed = true;
+		if ($(this).scrollTop()+headerHeight > passHeaderOffset){
 			header.css({"position" : "absolute", "top" : passHeaderOffset - headerHeight});
 		}
-		else if (unFixed)
+		else
 		{
-			unFixed == false;
 			header.removeAttr("style");
 		}
 	});
