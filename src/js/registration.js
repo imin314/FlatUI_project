@@ -29,13 +29,17 @@ $(document).ready(function(){
 
 	var header = $(".registration-page__header");
 	var passHeader = $(".pass-selector__header");
-	var passName = $(".pass-selector__pass-name");
+	var unFixed = false;
 	$(window).scroll(function(){
-		console.log(header[0].getBoundingClientRect().bottom + " " + passHeader[0].getBoundingClientRect().bottom);
-		if (header[0].getBoundingClientRect().bottom > passHeader[0].getBoundingClientRect().bottom){
-			header.css({"position" : "absolute", "top" : passName.offset().top - header.height() - 20});
+		var headerHeight = header.outerHeight();
+		var passHeaderOffset = passHeader.offset().top
+		if ($(this).scrollTop()+headerHeight > passHeaderOffset && !unFixed){
+			unFixed = true;
+			header.css({"position" : "absolute", "top" : passHeaderOffset - headerHeight});
 		}
-		else{
+		else if (unFixed)
+		{
+			unFixed == false;
 			header.removeAttr("style");
 		}
 	});
