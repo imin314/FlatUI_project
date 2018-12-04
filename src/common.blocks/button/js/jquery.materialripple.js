@@ -9,10 +9,13 @@ $.fn.materialripple = function(options) {
 
 	$('body').on('animationend webkitAnimationEnd oAnimationEnd', '.' + defaults.rippleClass, function () {
 	$('.button').removeAttr('style');
-    removeRippleElement(this);
+	removeRippleElement(this);
+	$('.button').removeClass("button_active");
 });
 
 	var addRippleElement = function(element, e) {
+		$(element).addClass("button_active");
+		var currentColors = $(element).css(["background-color", "color"]);
 		$(element).append('<span class="added '+defaults.rippleClass+'"></span>');
 		newRippleElement = $(element).find('.added');
 		newRippleElement.removeClass('added');

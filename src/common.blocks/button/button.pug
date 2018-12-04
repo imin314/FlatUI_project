@@ -9,4 +9,4 @@ mixin button(_settings)
 	- }}
 	- if (_settings.color!=undefined) className+= " button_color_"+_settings.color;
 	- var linkAttr = _settings.link!=undefined?"href="+_settings.link:"";
-	a.ripple(class=className title=_settings.title!=undefined?_settings.title:"button" linkAttr)= _settings.title!=undefined?_settings.title:"button"
+	a.noselect.ripple(class=className title=_settings.title!=undefined?_settings.title:"button" linkAttr)= _settings.title!=undefined?_settings.title:"button"
