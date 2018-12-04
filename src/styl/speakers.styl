@@ -78,10 +78,10 @@
 			background-color white
 		& .speakers-page__card-wrapper
 			flex-wrap wrap
-			max-height 850px
-			overflow hidden
 		& .speakers-page__card
 			margin 0 0 1rem
+			&:nth-child(n+4)
+				display none
 		&.speakers-page__view_full  .speakers-page__card-wrapper
 			max-height none
 			
@@ -99,4 +99,5 @@
 			margin 0 0.8rem 1rem 0.8rem
 		&.speakers-page__view_small .speakers-page__card
 			margin 0 0 1rem
+			display block
 
