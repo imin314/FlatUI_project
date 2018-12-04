@@ -23,10 +23,14 @@
 		line-height 1rem
 		margin 0 1rem 0.3rem
 		&:hover
-			text-decoration none 
+			@media (hover:hover)
+				text-decoration none 
 		&:active
 		&:visited
-			text-decoration underline
+			@media (hover:hover)
+				text-decoration underline
+			@media (hover:none)
+				text-decoration none 
 	&__card-carousel
 		border-left 10px solid white
 		border-right 10px solid white

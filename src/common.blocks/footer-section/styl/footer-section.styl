@@ -28,9 +28,13 @@
 			display block
 			color inherit
 			&:hover
-				text-decoration none 
+				@media (hover:hover)
+					text-decoration none 
 			&:active
-				text-decoration underline
+				@media (hover:hover)
+					text-decoration underline
+				@media (hover:none)
+					text-decoration none 
 	&__header
 		color color-cold
 		font-size 1.2em

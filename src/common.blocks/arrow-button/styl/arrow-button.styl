@@ -9,10 +9,20 @@
 	background-color white
 	position relative
 	&:hover
-		background-color color-cold
-		& .arrow-button__arrow
+		@media (hover: hover)
 			background-color color-cold
-			border-color white
+		& .arrow-button__arrow
+			@media (hover: hover)
+				background-color color-cold
+				border-color white
+	&:active
+		@media (hover:none)
+			background-color color-cold
+		& .arrow-button__arrow
+			@media (hover:none)
+				background-color color-cold
+				border-color white
+
 	&_disabled
 		pointer-events none
 		background-color color-bg

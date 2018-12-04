@@ -43,9 +43,14 @@
 			top 50%
 			transform translate(-55%, -55%) rotate(-45deg)
 		&:hover
-			background-color darken(color-cold, 5)
+			@media (hover:hover)
+				background-color darken(color-cold, 5)
+		&:active
+			@media (hover:none)
+				background-color darken(color-cold, 5)
 		&:active::before
-			transform translate(-55%, -55%) rotate(-45deg) scale(0.9)
+			@media (hover:hover)
+				transform translate(-55%, -55%) rotate(-45deg) scale(0.9)
 
 	&__list
 		margin 0
@@ -71,6 +76,8 @@
 			border-bottom-left-radius 3px
 			border-bottom-right-radius 3px
 		&:hover
+			@media (hover:hover)
+				background-color #28a290
 		&:active
 			background-color #28a290
 

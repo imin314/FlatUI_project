@@ -55,10 +55,16 @@
 			left 50%
 			transform rotate(45deg)
 		&:hover
-			background-color darken(color-warm, 5)
+			@media (hover:hover)
+				background-color darken(color-warm, 5)
+		&:active
+			@media (hover:none)
+				background-color darken(color-warm, 5)
 		&:active::before
-			transform translate(-65%, -60%) rotate(45deg) scale(0.9)
+			@media (hover:hover)
+				transform translate(-65%, -60%) rotate(45deg) scale(0.9)
 		&:active::after
-			transform rotate(45deg) scale(0.9)
+			@media (hover:hover)
+				transform rotate(45deg) scale(0.9)
 
 		

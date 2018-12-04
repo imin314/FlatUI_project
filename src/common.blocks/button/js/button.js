@@ -1,7 +1,7 @@
 import './jquery.materialripple.js';
 	$(function(){
 		$('.button').click(function(){
-			var currentColors = $(this).css(["background-color", "color"]);
+			var currentColors = $('.button:active').css(["background-color", "color"]);
 			if (!$(this).hasClass("button_color_reverse")){
 			$(this).css({
 				"background-color": currentColors["background-color"],
@@ -10,5 +10,6 @@ import './jquery.materialripple.js';
 			});
 		}
 		});
+		
 		$('.ripple').materialripple();
 	});

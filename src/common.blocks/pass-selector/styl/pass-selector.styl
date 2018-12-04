@@ -17,7 +17,11 @@
 		&:nth-child(3)
 			border-right none
 		&:hover
-			background-color color-bg
+			@media (hover:hover)
+				background-color color-bg
+		&:active
+			@media (hover:none)
+				background-color color-bg
 	&__pass-name
 		text-transform capitalize
 		color color-warm

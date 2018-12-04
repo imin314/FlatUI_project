@@ -1,17 +1,26 @@
 .social-icon
 	cursor pointer
 	&:hover path
-		fill color-warm
+		@media (hover:hover)
+			fill color-warm
 	& path
 		fill #757575	
 	&:active
-		transform scale(0.9)
+		@media (hover:hover)
+			transform scale(0.9)
+		& path 
+			@media (hover:none)
+				fill color-warm			
 	
 	&_color_white
 		& path
 			fill #ffffff
 		&:hover path
-			fill #ffffff
-			opacity 0.5
-	
+			@media (hover:hover)
+				fill #ffffff
+				opacity 0.5
+		&:active path
+			@media (hover:none)
+				fill #ffffff
+				opacity 0.5
 	

@@ -37,9 +37,13 @@
 			color color-text
 			text-transform uppercase
 			&:hover
-				text-decoration underline
+				@media (hover:hover)
+					text-decoration underline
 			&:active
-				text-decoration none
+				@media (hover:hover)
+					text-decoration none
+				@media (hover:none)
+					text-decoration underline
 	&__icon
 		display none
 		@media screen and (max-width:425px)

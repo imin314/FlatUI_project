@@ -19,6 +19,11 @@
 	box-shadow inset 0 0 0 1px color-cold-darker, 0 4px 0 0 color-cold-darker
 	&:hover
 	&:focus
+		@media (hover:hover)
+			color white
+			background-color color-cold
+			box-shadow 0 4px 0 0 color-cold
+	&:active
 		color white
 		background-color color-cold
 		box-shadow 0 4px 0 0 color-cold
@@ -38,6 +43,11 @@
 		border-color color-warm-darker
 		box-shadow inset 0 0 0 1px color-warm-darker, 0 4px 0 0 color-warm-darker
 		&:hover
+			@media (hover:hover)
+				color white
+				background-color color-warm
+				box-shadow 0 4px 0 0 color-warm
+		&:active
 			color white
 			background-color color-warm
 			box-shadow 0 4px 0 0 color-warm
@@ -48,6 +58,11 @@
 		box-shadow 0 4px 0 0 color-cold
 		&:hover
 		&:focus
+			@media (hover:hover)
+				color color-cold
+				background-color white
+				box-shadow inset 0 0 0 1px color-cold, 0 4px 0 0 color-cold
+		&:active
 			color color-cold
 			background-color white
 			box-shadow inset 0 0 0 1px color-cold, 0 4px 0 0 color-cold

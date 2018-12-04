@@ -17,6 +17,6 @@ mixin userCard(user, colored)
 			h3.user-card__position!= user.position
 			.user-card__icons
 				each item in icons
-					a.user-card__icon(href="#" title!=item.name)
+					a.noselect.user-card__icon(href="#" title!=item.name)
 						+socialIcon(item)
 				

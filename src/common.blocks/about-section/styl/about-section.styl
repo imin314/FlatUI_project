@@ -47,10 +47,14 @@
 			text-decoration underline
 			padding-top 0.9rem
 			&:hover
-				text-decoration none
+				@media (hover:hover)
+					text-decoration none
 			&:active
-				text-decoration underline
-				color color-text
+				@media (hover:hover)
+					text-decoration underline
+					color color-text
+				@media (hover:none)
+					text-decoration none
 	&__subtitle
 		color color-cold
 		font-weight bold

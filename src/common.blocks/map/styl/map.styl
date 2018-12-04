@@ -93,17 +93,29 @@
 			left 50%
 			transform translate(-50%,-18%)
 		&:hover
-			transform scale(1.1)
+			@media (hover:hover)
+				transform scale(1.1)
 		&:hover::before
-			transform translate(-18%,-50%) scale(1.1)
+			@media (hover:hover)
+				transform translate(-18%,-50%) scale(1.1)
 		&:hover::after
-			transform translate(-50%,-18%) scale(1.1)
+			@media (hover:hover)
+				transform translate(-50%,-18%) scale(1.1)
 		&:active
-			transform scale(0.9)
+			@media (hover:hover)
+				transform scale(0.9)
+			@media (hover:none)
+				transform scale(1.1)
 		&:active::before
-			transform translate(-18%,-50%) scale(0.9)
+			@media (hover:hover)
+				transform translate(-18%,-50%) scale(0.9)
+			@media (hover:none)
+				transform translate(-18%,-50%) scale(1.1)
 		&:active::after
-			transform translate(-50%,-18%) scale(0.9)
+			@media (hover:hover)
+				transform translate(-50%,-18%) scale(0.9)
+			@media (hover:none)
+				transform translate(-50%,-18%) scale(1.1)
 		@media screen and (max-width:425px)
 			margin-right 15px
 
@@ -114,6 +126,10 @@
 		cursor pointer
 		height 3em
 		&:hover
-			transform scale(1.1)
+			@media (hover:hover)
+				transform scale(1.1)
 		&:active
-			transform scale(0.9)
+			@media (hover:hover)
+				transform scale(0.9)
+			@media (hover:none)
+				transform scale(1.1)

@@ -13,9 +13,13 @@
 		text-decoration underline
 		padding 0.5rem 1rem 0rem
 		&:hover
-			text-decoration none
+			@media (hover:hover)
+				text-decoration none
 		&:active
-			text-decoration underline
+			@media (hover:hover)
+				text-decoration underline
+			@media (hover:none)
+				text-decoration none
 	&__cards
 		width 100%
 		padding 10px 10px 0 10px
