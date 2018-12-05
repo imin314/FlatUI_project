@@ -1,15 +1,12 @@
 //- layout.pug
-
-include common.blocks/loader/loader.pug
-include common.blocks/navigation-bar/navigation-bar.pug
-include common.blocks/footer-section/footer-section.pug
-include common.blocks/online-help/online-help.pug
+include ./includes.pug
 doctype html
 html
 	head
 		meta(charset = 'utf-8')
 		meta(name='viewport', content="initial-scale=1.0, width=device-width")
-		title #{title}
+		block title
+			title Web Talks 2019
 		script.
 			document.documentElement.style.visibility = 'hidden';
 			document.addEventListener('DOMContentLoaded', function() {

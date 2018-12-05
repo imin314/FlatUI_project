@@ -1,10 +1,10 @@
 //- contacts.pug
-extends ../layout.pug
+extends ../../pug/layout.pug
+
+block title
+	title Contact Us
 
 block content
-	include ../common.blocks/email-form/email-form.pug
-	include ../common.blocks/map-section/map-section.pug
-	- var title = "Contacts"
 	main.contacts-page
 		h1.contacts-page__header.page-title Contact Us
 		section.contacts-page__email
@@ -15,7 +15,3 @@ block content
 			+map({id: "map", address: {street: "14 Karla Marksa st", city: "Tomsk, Russia"}, mapCenter: {lat: 56.490925, lng:84.946053}, pinCenter: {lat: 56.490025, lng: 84.946053}})
 block scripts
 	script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0GpB2Y8XOyVrs-stxlE0I4yR_rAaEyjU")
-			
-
-
-		

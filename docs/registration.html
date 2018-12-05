@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
-    <title></title>
+    <title>Register</title>
     <script>
       document.documentElement.style.visibility = 'hidden';
       document.addEventListener('DOMContentLoaded', function() {
@@ -40,103 +40,103 @@
       <header class="registration-page__header">
         <h1 class="page-title">Join us at Web Talks 2019</h1>
         <div class="registration-page__stages">
-              <ul class="bread-crumbs">
-                <li class="bread-crumbs__item bread-crumbs__item_active">
-                  <div class="bread-crumbs__circle">1</div>
-                </li>
-                <li class="bread-crumbs__item">
-                  <div class="bread-crumbs__circle">2</div>
-                </li>
-                <li class="bread-crumbs__item">
-                  <div class="bread-crumbs__circle">3</div>
-                </li>
-              </ul>
+          <ul class="bread-crumbs">
+            <li class="bread-crumbs__item bread-crumbs__item_active">
+              <div class="bread-crumbs__circle">1</div>
+            </li>
+            <li class="bread-crumbs__item">
+              <div class="bread-crumbs__circle">2</div>
+            </li>
+            <li class="bread-crumbs__item">
+              <div class="bread-crumbs__circle">3</div>
+            </li>
+          </ul>
         </div>
       </header>
       <main class="registration-page__form">
-            <section class="registration-form">
-              <form class="registration-form__form" id="registration-form1" action="register.php" method="post">
-                <div class="registration-form__first-stage">
-                  <div class="registration-form__name">
-                    <div class="registration-form__input">
-                          <input class="input-field" type="text" name="name" placeholder="Your Name" realabel="Name" req>
-                    </div>
-                    <div class="registration-form__bubble"></div>
+        <section class="registration-form">
+          <form class="registration-form__form" id="registration-form1" action="register.php" method="post">
+            <div class="registration-form__first-stage">
+              <div class="registration-form__name">
+                <div class="registration-form__input">
+                  <input class="input-field" type="text" name="name" placeholder="Your Name" realabel="Name" req>
+                </div>
+                <div class="registration-form__bubble"></div>
+              </div>
+              <div class="registration-form__email">
+                <div class="registration-form__input">
+                  <input class="input-field" id="email" type="email" name="email" placeholder="Your Email" realabel="Email" req>
+                </div>
+                <div class="registration-form__bubble"></div>
+              </div>
+              <div class="registration-form__subscribe">
+                <div class="registration-form__subscribe-text">Subscribe to Web Talks newsletters</div>
+                <div class="registration-form__checkbox">
+                  <label class="toggle-switch noselect">
+                    <input class="toggle-switch__checkbox" type="checkbox" checked><span class="toggle-switch__slider noselect"></span>
+                    <div class="toggle-switch__text"></div>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="registration-form__pass-selector">
+              <section class="pass-selector">
+                <h2 class="pass-selector__header section-title">Find the conference pass for you</h2>
+                <div class="pass-selector__options">
+                  <div class="pass-selector__column"></div>
+                  <div class="pass-selector__column"></div>
+                  <div class="pass-selector__column"></div>
+                  <div class="pass-selector__row">
+                    <h3 class="pass-selector__pass-name">Premium<br>Pass</h3>
+                    <h3 class="pass-selector__pass-name">Track<br>Pass</h3>
+                    <h3 class="pass-selector__pass-name">Daily<br>Pass</h3>
                   </div>
-                  <div class="registration-form__email">
-                    <div class="registration-form__input">
-                          <input class="input-field" id="email" type="email" name="email" placeholder="Your Email" realabel="Email" req>
-                    </div>
-                    <div class="registration-form__bubble"></div>
+                  <div class="pass-selector__row">
+                    <p class="pass-selector__price">$995</p>
+                    <p class="pass-selector__price">$575</p>
+                    <p class="pass-selector__price">$235</p>
                   </div>
-                  <div class="registration-form__subscribe">
-                    <div class="registration-form__subscribe-text">Subscribe to Web Talks newsletters</div>
-                    <div class="registration-form__checkbox">
-                          <label class="toggle-switch noselect">
-                            <input class="toggle-switch__checkbox" type="checkbox" checked><span class="toggle-switch__slider noselect"></span>
-                            <div class="toggle-switch__text"></div>
-                          </label>
+                  <div class="pass-selector__row">
+                    <p class="pass-selector__text">Visit any events without limitation</p>
+                    <p class="pass-selector__text">Visit all events in a track</p>
+                    <p class="pass-selector__text">Attend 1 event per day on a conference week</p>
+                  </div>
+                  <div class="pass-selector__row">
+                    <div class="pass-selector__tickbox">
+                      <div class="tick-box tick-box_color_warm">
+                        <input type="checkbox" value="1" name="tickbox" id="tickbox1" checked>
+                        <label class="noselect tick-box__label" for="tickbox1"></label>
+                      </div>
+                    </div>
+                    <div class="pass-selector__tickbox">
+                      <div class="tick-box tick-box_color_warm">
+                        <input type="checkbox" value="2" name="tickbox" id="tickbox2">
+                        <label class="noselect tick-box__label" for="tickbox2"></label>
+                      </div>
+                    </div>
+                    <div class="pass-selector__tickbox">
+                      <div class="tick-box tick-box_color_warm">
+                        <input type="checkbox" value="3" name="tickbox" id="tickbox3">
+                        <label class="noselect tick-box__label" for="tickbox3"></label>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="registration-form__pass-selector">
-                      <section class="pass-selector">
-                        <h2 class="pass-selector__header section-title">Find the conference pass for you</h2>
-                        <div class="pass-selector__options">
-                          <div class="pass-selector__column"></div>
-                          <div class="pass-selector__column"></div>
-                          <div class="pass-selector__column"></div>
-                          <div class="pass-selector__row">
-                            <h3 class="pass-selector__pass-name">Premium<br>Pass</h3>
-                            <h3 class="pass-selector__pass-name">Track<br>Pass</h3>
-                            <h3 class="pass-selector__pass-name">Daily<br>Pass</h3>
-                          </div>
-                          <div class="pass-selector__row">
-                            <p class="pass-selector__price">$995</p>
-                            <p class="pass-selector__price">$575</p>
-                            <p class="pass-selector__price">$235</p>
-                          </div>
-                          <div class="pass-selector__row">
-                            <p class="pass-selector__text">Visit any events without limitation</p>
-                            <p class="pass-selector__text">Visit all events in a track</p>
-                            <p class="pass-selector__text">Attend 1 event per day on a conference week</p>
-                          </div>
-                          <div class="pass-selector__row">
-                            <div class="pass-selector__tickbox">
-                                  <div class="tick-box tick-box_color_warm">
-                                    <input type="checkbox" value="1" name="tickbox" id="tickbox1" checked>
-                                    <label class="noselect tick-box__label" for="tickbox1"></label>
-                                  </div>
-                            </div>
-                            <div class="pass-selector__tickbox">
-                                  <div class="tick-box tick-box_color_warm">
-                                    <input type="checkbox" value="2" name="tickbox" id="tickbox2">
-                                    <label class="noselect tick-box__label" for="tickbox2"></label>
-                                  </div>
-                            </div>
-                            <div class="pass-selector__tickbox">
-                                  <div class="tick-box tick-box_color_warm">
-                                    <input type="checkbox" value="3" name="tickbox" id="tickbox3">
-                                    <label class="noselect tick-box__label" for="tickbox3"></label>
-                                  </div>
-                            </div>
-                          </div>
-                        </div>
-                      </section>
+              </section>
+            </div>
+            <div class="registration-form__last-stage">
+              <div class="registration-form__policy-checkbox">
+                <div class="tick-box">
+                  <input type="checkbox" value="1" name="tickbox-policy" id="tickbox-policy">
+                  <label class="noselect tick-box__label" for="tickbox-policy"></label>
                 </div>
-                <div class="registration-form__last-stage">
-                  <div class="registration-form__policy-checkbox">
-                        <div class="tick-box">
-                          <input type="checkbox" value="1" name="tickbox-policy" id="tickbox-policy">
-                          <label class="noselect tick-box__label" for="tickbox-policy"></label>
-                        </div>
-                  </div>
-                  <div class="registration-form__policy-text">I agree with Web Talks Terms and Conditions and the Privacy Policy</div>
-                  <div class="registration-form__button"><a class="noselect ripple button button_size_responsive button_color_reverse" title="register" linkAttr>register</a>
-                  </div>
-                </div>
-              </form>
-            </section>
+              </div>
+              <div class="registration-form__policy-text">I agree with Web Talks Terms and Conditions and the Privacy Policy</div>
+              <div class="registration-form__button"><a class="noselect ripple button button_size_responsive button_color_reverse" title="register" linkAttr>register</a>
+              </div>
+            </div>
+          </form>
+        </section>
       </main>
     </div>
     <footer class="footer-section">

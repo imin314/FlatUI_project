@@ -1,8 +1,4 @@
-- var data = require('../assets/data/data.json')
-include ../news-card/news-card.pug
-include ../calendar/calendar.pug
-
-mixin eventCarousel()
+mixin eventCarousel(data)
 	section.event-carousel
 		a.event-carousel__link(href="./schedule.html" title="schedule") See all events
 		.event-carousel__cards

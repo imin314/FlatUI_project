@@ -1,12 +1,11 @@
 //- speakers.pug
-extends ../layout.pug
+extends ../../pug/layout.pug
+
+block title
+	title Speakers
 
 block content
-	include ../common.blocks/speaker-card/speaker-card.pug
-	include ../common.blocks/search-box/search-box.pug
-	include ../common.blocks/arrow-button/arrow-button.pug
-	- var title = "Speakers"
-	- var data = require('../assets/data/data.json')
+	- var data = require('../../assets/data/data.json');
 	main.speakers-page
 		h1.speakers-page__header.page-title Speakers
 		p.speakers-page__intro We've combed the country and the world for extraordinary spakers, covering the most relevant topics for today's front end developers, designers, and managers.

@@ -18,35 +18,38 @@ module.exports = {
     path: path.resolve(__dirname, 'docs'),
     publicPath: './'
   },
+  optimization:{
+    minimize: false
+  },
   plugins: [
     new HtmlWebpackPlugin({
         filename: 'index.html',
-        template: './src/views/index.pug',
+        template: './src/pages/index/index.pug',
         chunks:['main']
     }),
     new HtmlWebpackPlugin({
       filename: 'uidemo.html',
-      template: './src/views/uidemo.pug',
+      template: './src/pages/uidemo/uidemo.pug',
       chunks:['map']
   }),
   new HtmlWebpackPlugin({
     filename: 'registration.html',
-    template: './src/views/registration.pug',
+    template: './src/pages/registration/registration.pug',
     chunks:['main']
 }),
 new HtmlWebpackPlugin({
     filename: 'contacts.html',
-    template: './src/views/contacts.pug',
+    template: './src/pages/contacts/contacts.pug',
     chunks:['map']
 }),
 new HtmlWebpackPlugin({
     filename: 'speakers.html',
-    template: './src/views/speakers.pug',
+    template: './src/pages/speakers/speakers.pug',
     chunks:['main']
 }),
 new HtmlWebpackPlugin({
     filename: 'schedule.html',
-    template: './src/views/schedule.pug',
+    template: './src/pages/schedule/schedule.pug',
     chunks:['main']
 }),
     new webpack.ProvidePlugin({
@@ -111,7 +114,7 @@ new HtmlWebpackPlugin({
         loader: 'file-loader',
         options: {
         name: '/assets/img/[name].[ext]',
-        outputPath: '.',
+        outputPath: './',
         publicPath: '././'
                  },
          }

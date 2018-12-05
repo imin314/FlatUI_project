@@ -1,7 +1,5 @@
-include ../button/button.pug
-
 mixin messenger(data, isFixed)
-	- var image = require("../assets/img/"+ data.image)
+	- var image = require("../../assets/img/"+ data.image)
 	- var className = 'messenger';
 	- if (isFixed === true) {
 	- className += ' messenger_position_fixed';

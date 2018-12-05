@@ -1,0 +1,12 @@
+//- index.pug
+extends ../../pug/layout.pug
+
+block content
+	- var data = require('../../assets/data/data.json');
+	main.main-page-wrapper
+		.main-page-wrapper__banner
+			+bannerSection()
+		.main-page-wrapper__about
+			+aboutSection()
+		.main-page-wrapper__events
+			+eventCarousel(data)

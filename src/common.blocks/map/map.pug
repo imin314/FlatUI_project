@@ -1,5 +1,3 @@
-include ../pin/pin.pug
-
 mixin map(_settings)
     - if (_settings.address==undefined) _settings.address = {street: "", city: ""};
     - if (_settings.mapCenter==undefined) _settings.mapCenter = {lat: 26.893505, lng: 80.967422};

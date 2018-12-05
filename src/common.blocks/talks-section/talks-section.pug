@@ -1,15 +1,12 @@
-include ../news-card/news-card.pug
-- var data = require('../assets/data/data.json');
-- var _ = require("lodash");
-- function groupBy(dataToGroupOn, fieldNameToGroupOn, fieldNameForGroupName, fieldNameForChildren) {
-	-  var result = _.chain(dataToGroupOn).groupBy(fieldNameToGroupOn).toPairs().map(function (currentItem) {
-	-    return _.zipObject([fieldNameForGroupName, fieldNameForChildren], currentItem);
-	-  }).value();
-	-  return result;
-	-}
-- var result = groupBy(data.talks, 'date', 'dateId', 'events');
-
-mixin talksSection()
+mixin talksSection(data)
+	- var _ = require("lodash");
+	- function groupBy(dataToGroupOn, fieldNameToGroupOn, fieldNameForGroupName, fieldNameForChildren) {
+		-  var result = _.chain(dataToGroupOn).groupBy(fieldNameToGroupOn).toPairs().map(function (currentItem) {
+		-    return _.zipObject([fieldNameForGroupName, fieldNameForChildren], currentItem);
+		-  }).value();
+		-  return result;
+		-}
+	- var result = groupBy(data.talks, 'date', 'dateId', 'events');
 	.talks-section
 		each item in result
 			- var date = new Date(item.dateId);

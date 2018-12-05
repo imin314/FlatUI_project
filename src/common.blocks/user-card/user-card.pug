@@ -1,7 +1,5 @@
-include ../social-icon/social-icon.pug
-
 mixin userCard(user, colored)
-	- var image = require("../assets/img/"+ user.img)
+	- var image = require("../../assets/img/"+ user.img)
 	- var icons = [{name: 'facebook'}, {name: 'twitter'}, {name: 'dribbble'}];
 	- var className = "user-card";
 	- if (colored === true) {

@@ -16,6 +16,6 @@ $(document).ready(function() {
       grid: 5
     }
   },
-		step: 1
+		step: 0.1
 	});
 });
