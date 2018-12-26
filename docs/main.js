@@ -14076,9 +14076,23 @@ $.fn.materialripple = function(options) {
 /* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _jquery_materialripple_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(19);
 /* harmony import */ var _jquery_materialripple_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_jquery_materialripple_js__WEBPACK_IMPORTED_MODULE_0__);
 
-	$(function(){
-		$('.ripple').materialripple();
-	});
+
+class Button {
+	constructor(domElement){
+		this.domElement = domElement;
+		this.initialize();
+	}
+
+	initialize() {
+		$(document).ready(() => {
+			$(this.domElement).materialripple();
+		});
+	}
+}
+
+$('.ripple').each(function() {
+	new Button(this);
+});
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(0)))
 
 /***/ }),

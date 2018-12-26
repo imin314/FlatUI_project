@@ -1,3 +1,14 @@
+class DonutChart{
+	constructor(domElement, values, colors){
+		this.domElement = domElement;
+		this.values = values;
+		this.colors = colors;
+		this.initialize();
+	}
+
+	
+}
+
 // Creates svg element, returned as jQuery object
 function $s(elem) {
   return $(document.createElementNS('http://www.w3.org/2000/svg', elem));

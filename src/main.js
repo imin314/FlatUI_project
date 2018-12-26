@@ -17,7 +17,6 @@ import './common.blocks/form-section/js/form-section.js';
 import './common.blocks/search-box/js/search-box.js';
 import './common.blocks/drop-down/js/drop-down.js';
 import './common.blocks/calendar/js/calendar.js';
-import './common.blocks/calendar-section/js/calendar-section.js';
 import './common.blocks/online-help/js/online-help.js';
 import './common.blocks/about-section/js/about-section.js';
 import './common.blocks/pass-selector/js/pass-selector.js';
