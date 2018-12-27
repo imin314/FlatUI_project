@@ -44,6 +44,7 @@ class DonutChart{
 		
 		var offset = 0;
 		var dashoffset0 = 25;
+		debugger;
 		for (var i=0; i< data.length; i++){
 			var $segment = DonutChart.$s("circle").attr({cx: radius, cy: radius, r: radius, fill: 'transparent', stroke: colors[i]});
 			//$segment.attr("stroke-width",4);
@@ -56,7 +57,7 @@ class DonutChart{
 			$segment.attr("stroke-dashoffset", dashoffset);
 		}
 			$svg.append($segment);
-			offset += data[i];
+			offset += +data[i];
 		}
 		el.append($svg);
 		var strokeWidth = parseFloat(el.find("circle").css("stroke-width"));
