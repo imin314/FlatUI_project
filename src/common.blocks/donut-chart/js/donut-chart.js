@@ -44,7 +44,6 @@ class DonutChart{
 		
 		var offset = 0;
 		var dashoffset0 = 25;
-		debugger;
 		for (var i=0; i< data.length; i++){
 			var $segment = DonutChart.$s("circle").attr({cx: radius, cy: radius, r: radius, fill: 'transparent', stroke: colors[i]});
 			//$segment.attr("stroke-width",4);
