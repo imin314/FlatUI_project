@@ -3,10 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
-  entry: {
-    main: './src/main.js',
-    map: ['./src/main.js', './src/map.js']
-  },
+  entry: './src/main.js',
   devServer: {
       contentBase: path.resolve(__dirname, 'docs'),
       publicPath: '/',
@@ -14,7 +11,7 @@ module.exports = {
       port: 8080
   },
   output: {
-    filename: '[name].js',
+    filename: 'main.js',
     path: path.resolve(__dirname, 'docs'),
     publicPath: './'
   },
@@ -25,32 +22,26 @@ module.exports = {
     new HtmlWebpackPlugin({
         filename: 'index.html',
         template: './src/pages/index/index.pug',
-        chunks:['main']
     }),
     new HtmlWebpackPlugin({
       filename: 'uidemo.html',
       template: './src/pages/uidemo/uidemo.pug',
-      chunks:['map']
   }),
   new HtmlWebpackPlugin({
     filename: 'registration.html',
     template: './src/pages/registration/registration.pug',
-    chunks:['main']
 }),
 new HtmlWebpackPlugin({
     filename: 'contacts.html',
     template: './src/pages/contacts/contacts.pug',
-    chunks:['map']
 }),
 new HtmlWebpackPlugin({
     filename: 'speakers.html',
     template: './src/pages/speakers/speakers.pug',
-    chunks:['main']
 }),
 new HtmlWebpackPlugin({
     filename: 'schedule.html',
     template: './src/pages/schedule/schedule.pug',
-    chunks:['main']
 }),
     new webpack.ProvidePlugin({
     $: 'jquery',

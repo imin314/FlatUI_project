@@ -1,77 +1,111 @@
-var map, infoWindow;
-
-var images = [
-	{
-		url: './assets/img/pins.png',
-		size: new google.maps.Size(78,78),
-		origin: new google.maps.Point(0, 0),
-		anchor: new google.maps.Point(39, 78)
-	},
-	{
-		url: './assets/img/pins.png',
-		size: new google.maps.Size(45,78),
-		origin: new google.maps.Point(78, 0),
-		anchor: new google.maps.Point(22.5, 78)
+class Map {
+	constructor(domElement) {
+		this.domElement = $(domElement);
+		this.namespace = this.domElement[0].className;
+		this.mapContainer = this.getMapContainer();
+		this.mapCenter = this.getInitialMapCenter();
+		this.initialize();
 	}
-]
 
-var centerMarker;
+	static get images(){
+		return [
+				{
+					url: './assets/img/pins.png',
+					size: new google.maps.Size(78,78),
+					origin: new google.maps.Point(0, 0),
+					anchor: new google.maps.Point(39, 78)
+				},
+				{
+					url: './assets/img/pins.png',
+					size: new google.maps.Size(45,78),
+					origin: new google.maps.Point(78, 0),
+					anchor: new google.maps.Point(22.5, 78)
+				}
+			];
+	}
 
-window.initialize = function(_id) {
-		var mapContainer = $('#'+_id);
-		//var mapCenter = {lat: 37.791095, lng: -122.415075};
-		var mapCenter = new google.maps.LatLng(parseFloat(mapContainer.attr("data-lat")), parseFloat(mapContainer.attr("data-lng")));
-		var pinCenter = new google.maps.LatLng(parseFloat(mapContainer.attr("data-plat")), parseFloat(mapContainer.attr("data-plng")));
-		map = new google.maps.Map(document.getElementById(_id), {center: mapCenter, zoom:14});
-		centerMarker = addMarker(pinCenter, map, images[0], "Meet us here!");
-		infoWindow = new google.maps.InfoWindow;
-	  }
-
-      // Adds a marker to the map.
-      function addMarker(_location, _map, _image, _title) {
-        var marker = new google.maps.Marker({
-          position: _location,
-		  map: _map,
-		  icon: _image,
-		  title: _title
+	addMarker(location, image, title) {
+		var marker = new google.maps.Marker({
+			position: location,
+			map: this.map,
+			icon: image,
+			title: title
 		});
 		return marker;
-      }
+	}
 
-window.backToCenter = function (){
-	map.panTo(centerMarker.getPosition());
+	getMapContainer(){
+		return this.domElement.find(`.${this.namespace}__container`);
+	}
+
+	getInitialMapCenter() {
+		return new google.maps.LatLng(parseFloat(this.mapContainer.attr("data-lat")), parseFloat(this.mapContainer.attr("data-lng")));
+	}
+
+	getMainPinCenter() {
+		return new google.maps.LatLng(parseFloat(this.mapContainer.attr("data-plat")), parseFloat(this.mapContainer.attr("data-plng")));
+	}
+
+	backToCenter() {
+		this.map.panTo(this.mapCenter);
+		if (this.infoWindow) this.infoWindow.close();
+	}
+
+	showUserLocation() {
+		if (this.userMarker) this.map.panTo(this.userMarker.getPosition());
+		this.infoWindow.open(this.map);
+	}
+
+	locateUser() {
+		var that = this;
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(function(position) {
+				var pos = {
+					lat: position.coords.latitude,
+					lng: position.coords.longitude
+				};
+				that.userMarker = that.addMarker(pos, Map.images[1], "You are here");
+				}, function() {
+					that.handleLocationError(true);
+				}
+			);
+			} else {
+				// Browser doesn't support Geolocation
+				that.handleLocationError(false);
+			}
+	}
+	
+	handleLocationError(browserHasGeolocation) {
+		this.infoWindow.setPosition(this.map.getCenter());
+		this.infoWindow.setContent(browserHasGeolocation ?
+			'Error: The Geolocation service failed.' :
+			'Error: Your browser doesn\'t support geolocation.');
+	}
+
+	initMap() {
+		var that = this;
+		var initOptions = { center: this.mapCenter, zoom: 14 };
+		this.map = new google.maps.Map(this.mapContainer[0], initOptions);
+		this.addMarker(this.getMainPinCenter(), Map.images[0], "Meet us here!");
+		this.infoWindow = new google.maps.InfoWindow;
+		this.locateUser();
+
+		this.domElement.find(`.${this.namespace}__pin`).click(function(){
+			that.backToCenter();
+		});
+
+		this.domElement.find(`.${this.namespace}__search`).click(function(){
+			that.showUserLocation();	
+		});
+	}
+
+	initialize() {
+		$(window).on('load', () => {
+      this.initMap();
+    });
+	}
 }
 
-window.locateUser = function (){
-	if (navigator.geolocation) {
-		navigator.geolocation.getCurrentPosition(function(position) {
-			var pos = {
-				lat: position.coords.latitude,
-				lng: position.coords.longitude
-			  };
-			addMarker(pos, map, images[1], "You are here");
-			map.setCenter(pos);
-			}, function() {
-				handleLocationError(true, infoWindow, map.getCenter());
-			  });
-			} else {
-			  // Browser doesn't support Geolocation
-			  handleLocationError(false, infoWindow, map.getCenter());
-			}
-		  }
-
-	function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-			infoWindow.setPosition(pos);
-			infoWindow.setContent(browserHasGeolocation ?
-								  'Error: The Geolocation service failed.' :
-								  'Error: Your browser doesn\'t support geolocation.');
-			infoWindow.open(map);
-			}
-
-$('.map__pin').click(function(){
-	backToCenter();
-});
-	
-$('.map__search').click(function(){
-	locateUser();
+$('.map').each(function() {
+	new Map(this);
 });

@@ -12,6 +12,7 @@ import './common.blocks/donut-chart/js/donut-chart.js';
 import './common.blocks/slider/js/slider.js';
 import './common.blocks/registration-form/js/registration-form.js';
 import './common.blocks/email-form/js/email-form.js';
+import './common.blocks/map/js/map.js';
 import './common.blocks/search-box/js/search-box.js';
 import './common.blocks/drop-down/js/drop-down.js';
 import './common.blocks/calendar/js/calendar.js';
