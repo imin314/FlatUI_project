@@ -1,5 +1,5 @@
-mixin emailForm(id)
-	form.email-form(id=id action='send_email.php' method='post')
+mixin emailForm()
+	form.email-form(action='send_email.php' method='post')
 		.email-form__name
 			.email-form__input
 				+inputField({type:"text", name:"name", placeholder:"Your Name", arealabel:"Name", required:true})

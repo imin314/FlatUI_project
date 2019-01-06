@@ -28,19 +28,20 @@ class DropDown {
 	}
 
 	initialize() {
-		
-		var list = this.findChild("list");
-		var activeClass = this.namespace + "__list_active";
-		var label = this.findChild("label");
+		$(document).ready(() => {
+			var list = this.findChild("list");
+			var activeClass = this.namespace + "__list_active";
+			var label = this.findChild("label");
 
-		this.findChild("button label").click(function(){
-			list.toggleClass(activeClass);
-		});
+			this.findChild("button label").click(function(){
+				list.toggleClass(activeClass);
+			});
 
-		this.findChild("item").click(function(){
-			var option = $(this).text();
-			list.removeClass(activeClass);
-			label.text(option);
+			this.findChild("item").click(function(){
+				var option = $(this).text();
+				list.removeClass(activeClass);
+				label.text(option);
+			});
 		});
 	}
 }

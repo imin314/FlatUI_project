@@ -1,5 +1,8 @@
-import 'jquery-validation';
+$('.registration-form').each(function() {
+	new EmailForm(this);
+});
 
+/*
 $.fn.addRegistrationForm = function () {
 	var form = $(this);
 	var inputs = form.find('input[type=text],input[type=email]');

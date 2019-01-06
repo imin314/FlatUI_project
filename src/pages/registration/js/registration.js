@@ -6,7 +6,6 @@ $.fn.updateBreadCrumbs = function (itemNumber) {
 }
 
 $(document).ready(function(){
-	$("#registration-form1").addRegistrationForm();
 	var stages = $(".bread-crumbs__item");
 	
 	$(".registration-form__first-stage").focusin(function(){
