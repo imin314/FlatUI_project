@@ -1,15 +1,36 @@
-$(document).ready(function(){
-	var inputFilled = $(".search-box__input-field_filled");
-	inputFilled.val('I\'ve not found what I\'m looking for...');
+class SearchBox {
+	constructor(domElement) {
+		this.domElement = $(domElement);
+		this.namespace = this.domElement[0].className;
+		this.initialize();
+	}
 
-	$(".search-box__input-field").click(function(){
-		$(this).val('');
-		$(this).removeClass('search-box__input-field_filled');
-	});
+	findChild(name) {
+		return this.domElement.find(`.${this.namespace}__${name}`);
+	}
 
-	$(".search-box__button").click(function(){
-		var input = $(this).parent().find(".search-box__input-field");
-		input.val('I\'ve not found what I\'m looking for...');
-		input.addClass("search-box__input-field_filled");
-	});
+	initialize() {
+		$(document).ready(() => {
+			var that = this;
+			var inputFilledClass = `${that.namespace}__input-field_filled`;
+			var notFoundMessage = "I've not found what I'm looking for...";
+
+			that.findChild("input-field_filled").val(notFoundMessage);
+		
+			that.findChild("input-field").click(function(){
+				$(this).val("");
+				$(this).removeClass(inputFilledClass);
+			});
+		
+			that.findChild("button").click(function(){
+				var input = that.findChild("input-field");
+				input.val(notFoundMessage);
+				input.addClass(inputFilledClass);
+			});
+		});
+	}
+}
+
+$(".search-box").each(function() {
+	new SearchBox(this);
 });

@@ -1,44 +1,55 @@
-$.fn.updateBreadCrumbs = function (itemNumber) {
-	if (!this.eq(itemNumber).hasClass("bread-crumbs__item_active")) {
-		this.removeClass("bread-crumbs__item_active");
-		this.eq(itemNumber).addClass("bread-crumbs__item_active");
+class RegistrationPage {
+	constructor(domElement) {
+		this.domElement = $(domElement);
+		this.stages = this.domElement.find(".bread-crumbs__item");
+		this.activeClass = "bread-crumbs__item_active";
+		this.initialize();
+	}
+
+	updateBreadCrumbs(itemNumber) {
+		if (!this.stages.eq(itemNumber).hasClass(this.activeClass)) {
+			this.stages.removeClass(this.activeClass);
+			this.stages.eq(itemNumber).addClass(this.activeClass);
+		}
+	}
+
+	initialize(){
+		var that = this;
+		$(document).ready(() => {
+			that.domElement.find(".registration-form__first-stage").focusin(function(){
+				that.updateBreadCrumbs(0);
+			});
+			that.domElement.find(".registration-form__first-stage input[type=checkbox]").change(function(){
+				that.updateBreadCrumbs(0);
+			});
+			that.domElement.find(".registration-form__pass-selector input[type=checkbox]").change(function(){
+				that.updateBreadCrumbs(1);
+			});
+			that.domElement.find(".registration-form__last-stage input[type=checkbox]").change(function(){
+				that.updateBreadCrumbs(2);
+			});
+			that.domElement.find(".registration-form__last-stage input[type=submit]").change(function(){
+				that.updateBreadCrumbs(2);
+			});
+
+			var header = that.domElement.find(".registration-page__header");
+			var passHeader = that.domElement.find(".pass-selector__header");
+		
+			$(window).scroll(function(){
+				var headerHeight = header.outerHeight();
+				var passHeaderOffset = passHeader.offset().top;
+				if ($(this).scrollTop() + headerHeight > passHeaderOffset){
+					header.css({"position" : "absolute", "top" : passHeaderOffset - headerHeight});
+				}
+				else
+				{
+					header.removeAttr("style");
+				}
+			});
+		});
 	}
 }
 
-$(document).ready(function(){
-	var stages = $(".bread-crumbs__item");
-	
-	$(".registration-form__first-stage").focusin(function(){
-		stages.updateBreadCrumbs(0);
-	});
-	$(".registration-form__first-stage input[type=checkbox]").change(function(){
-		stages.updateBreadCrumbs(0);
-	});
-
-	$(".registration-form__pass-selector input[type=checkbox]").change(function(){
-		stages.updateBreadCrumbs(1);
-	});
-
-	$(".registration-form__last-stage input[type=checkbox]").change(function(){
-		stages.updateBreadCrumbs(2);
-	});
-	$(".registration-form__last-stage input[type=submit]").click(function(){
-		stages.updateBreadCrumbs(2);
-	});
-
-	var header = $(".registration-page__header");
-	var passHeader = $(".pass-selector__header");
-
-	$(window).scroll(function(){
-		var headerHeight = header.outerHeight();
-		var passHeaderOffset = passHeader.offset().top
-		if ($(this).scrollTop()+headerHeight > passHeaderOffset){
-			header.css({"position" : "absolute", "top" : passHeaderOffset - headerHeight});
-		}
-		else
-		{
-			header.removeAttr("style");
-		}
-	});
+$(".registration-page").each(function() {
+	new RegistrationPage(this);
 });
-

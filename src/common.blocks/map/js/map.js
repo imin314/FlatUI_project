@@ -101,8 +101,8 @@ class Map {
 
 	initialize() {
 		$(window).on('load', () => {
-      this.initMap();
-    });
+    		this.initMap();
+    	});
 	}
 }
 
