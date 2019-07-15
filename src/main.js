@@ -1,4 +1,5 @@
 import './styl/style.styl';
+import './assets/favicons/favicons';
 import './common.blocks/loader/js/loader.js';
 import './common.blocks/pin/js/pin.js';
 import './common.blocks/scrollbar/js/scrollbar.js';
