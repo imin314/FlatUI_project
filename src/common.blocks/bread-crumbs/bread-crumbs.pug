@@ -1,13 +1,13 @@
 mixin breadCrumbs(_settings)
-	- var active = _settings.active!=undefined?_settings.active:1;
-	- var max = _settings.max!=undefined?_settings.max:5;
-	ul.bread-crumbs
-		- for (var i = 1; i <= max; i++) {
-			- if (i === active) {
-			li.bread-crumbs__item.bread-crumbs__item_active
-				.bread-crumbs__circle= i
-			- } else {
-			li.bread-crumbs__item
-				.bread-crumbs__circle= i
-		- }
-		- }
+ - var active = _settings.active!=undefined?_settings.active:1;
+ - var max = _settings.max!=undefined?_settings.max:5;
+ ul.bread-crumbs
+  - for (var i = 1; i <= max; i++) {
+   - if (i === active) {
+   li.bread-crumbs__item.bread-crumbs__item_active
+    .bread-crumbs__circle= i
+   - } else {
+   li.bread-crumbs__item
+    .bread-crumbs__circle= i
+  - }
+  - }

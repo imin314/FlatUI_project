@@ -1,11 +1,11 @@
 mixin slider(tooltip)
-	- var className = 'slider_type_tooltip';
-	- if (!tooltip){
-		- className = 'slider_type_scale';
-	- }
-	.slider(class= className)
-	- if (!tooltip)
-		ul.slider__scale
-			- for (var i = 0; i <= 100; i+=25){
-				li.slider__scale-item= i
-			- }
+ - var className = 'slider_type_tooltip';
+ - if (!tooltip){
+  - className = 'slider_type_scale';
+ - }
+ .slider(class= className)
+ - if (!tooltip)
+  ul.slider__scale
+   - for (var i = 0; i <= 100; i+=25){
+    li.slider__scale-item= i
+   - }

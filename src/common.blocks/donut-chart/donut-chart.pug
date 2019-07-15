@@ -1,6 +1,6 @@
 ﻿mixin donutChart(settings)
-	- var className = ""
-	- if (settings.isPercentage) { className += "donut-chart_size_narrow"; }
-	.donut-chart(class=className data-values=settings.values data-colors=settings.colors)
-		- if (settings.isPercentage)
-			.donut-chart__label
+ - var className = ""
+ - if (settings.isPercentage) { className += "donut-chart_size_narrow"; }
+ .donut-chart(class=className data-values=settings.values data-colors=settings.colors)
+  - if (settings.isPercentage)
+   .donut-chart__label

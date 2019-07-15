@@ -1,24 +1,24 @@
 mixin talksSection(data)
-	- var _ = require("lodash");
-	- function groupBy(dataToGroupOn, fieldNameToGroupOn, fieldNameForGroupName, fieldNameForChildren) {
-		-  var result = _.chain(dataToGroupOn).groupBy(fieldNameToGroupOn).toPairs().map(function (currentItem) {
-		-    return _.zipObject([fieldNameForGroupName, fieldNameForChildren], currentItem);
-		-  }).value();
-		-  return result;
-		-}
-	- var result = groupBy(data.talks, 'date', 'dateId', 'events');
-	.talks-section
-		each item in result
-			- var date = new Date(item.dateId);
-			- var fullDate = date.getDate()+" "+date.toLocaleString("en-us", { month: "long" });
-			- var day = date.toLocaleString('en-us', {  weekday: 'long' });
-			h2.talks-section__header
-				span.talks-section__day= day
-				span.talks-section__date= fullDate
-			.talks-section__events
-				each event in item.events
-					.talks-section__event
-						h3.talks-section__time= event.time
-						.talks-section__card
-							+newsCard(event, {compact: true, color: "reverted"})
+ - var _ = require("lodash");
+ - function groupBy(dataToGroupOn, fieldNameToGroupOn, fieldNameForGroupName, fieldNameForChildren) {
+  -  var result = _.chain(dataToGroupOn).groupBy(fieldNameToGroupOn).toPairs().map(function (currentItem) {
+  -    return _.zipObject([fieldNameForGroupName, fieldNameForChildren], currentItem);
+  -  }).value();
+  -  return result;
+  -}
+ - var result = groupBy(data.talks, 'date', 'dateId', 'events');
+ .talks-section
+  each item in result
+   - var date = new Date(item.dateId);
+   - var fullDate = date.getDate()+" "+date.toLocaleString("en-us", { month: "long" });
+   - var day = date.toLocaleString('en-us', {  weekday: 'long' });
+   h2.talks-section__header
+    span.talks-section__day= day
+    span.talks-section__date= fullDate
+   .talks-section__events
+    each event in item.events
+     .talks-section__event
+      h3.talks-section__time= event.time
+      .talks-section__card
+       +newsCard(event, {compact: true, color: "reverted"})
 

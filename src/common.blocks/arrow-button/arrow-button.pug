@@ -1,8 +1,8 @@
 mixin arrowButton(_settings)
-	- var className = "arrow-button arrow-button_direction_";
-	- className += _settings.direction==="right"?"right":"left";
-	- if (_settings.disabled===true) {
-	- className += " arrow-button_disabled"
-	- }
-	a.noselect(class=className)
-		.arrow-button__arrow
+ - var className = "arrow-button arrow-button_direction_";
+ - className += _settings.direction==="right"?"right":"left";
+ - if (_settings.disabled===true) {
+ - className += " arrow-button_disabled"
+ - }
+ a.noselect(class=className)
+  .arrow-button__arrow

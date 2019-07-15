@@ -1,8 +1,8 @@
 mixin eventCarousel(data)
-	section.event-carousel
-		a.event-carousel__link(href="./schedule.html" title="schedule") See all events
-		.event-carousel__cards
-			.event-carousel__card-wrapper
-				each item in data.talks
-						.event-carousel__card
-							+newsCard(item, {type:"event", compact: true})
+ section.event-carousel
+  a.event-carousel__link(href="./schedule.html" title="schedule") See all events
+  .event-carousel__cards
+   .event-carousel__card-wrapper
+    each item in data.talks
+      .event-carousel__card
+       +newsCard(item, {type:"event", compact: true})

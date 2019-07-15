@@ -2,20 +2,20 @@
 include ./includes.pug
 doctype html
 html
-	head
-		meta(charset = 'utf-8')
-		meta(name='viewport', content="initial-scale=1.0, width=device-width")
-		block title
-			title Web Talks 2019
-		script.
-			document.documentElement.style.visibility = 'hidden';
-			document.addEventListener('DOMContentLoaded', function() {
-				document.documentElement.style.visibility = '';});
-	body
-		+loader()
-		+navigationBar()
-		block content
-		block footer
-			+footerSection()
-			+onlineHelp()
-		block scripts
+ head
+  meta(charset = 'utf-8')
+  meta(name='viewport', content="initial-scale=1.0, width=device-width")
+  block title
+   title Web Talks 2019
+  script.
+   document.documentElement.style.visibility = 'hidden';
+   document.addEventListener('DOMContentLoaded', function() {
+    document.documentElement.style.visibility = '';});
+ body
+  +loader()
+  +navigationBar()
+  block content
+  block footer
+   +footerSection()
+   +onlineHelp()
+  block scripts

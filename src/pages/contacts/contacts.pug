@@ -2,16 +2,16 @@
 extends ../../pug/layout.pug
 
 block title
-	title Contact Us
+ title Contact Us
 
 block content
-	main.contacts-page
-		h1.contacts-page__header.page-title Contact Us
-		section.contacts-page__email
-			p.contacts-page__text Got a question? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
-			.contacts-page__form
-				+emailForm('email-form')
-		section.contacts-page__map
-			+map({id: "map", address: {street: "14 Karla Marksa st", city: "Tomsk, Russia"}, mapCenter: {lat: 56.490925, lng:84.946053}, pinCenter: {lat: 56.490025, lng: 84.946053}})
+ main.contacts-page
+  h1.contacts-page__header.page-title Contact Us
+  section.contacts-page__email
+   p.contacts-page__text Got a question? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+   .contacts-page__form
+    +emailForm('email-form')
+  section.contacts-page__map
+   +map({id: "map", address: {street: "14 Karla Marksa st", city: "Tomsk, Russia"}, mapCenter: {lat: 56.490925, lng:84.946053}, pinCenter: {lat: 56.490025, lng: 84.946053}})
 block scripts
-	script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0GpB2Y8XOyVrs-stxlE0I4yR_rAaEyjU")
+ script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0GpB2Y8XOyVrs-stxlE0I4yR_rAaEyjU")
