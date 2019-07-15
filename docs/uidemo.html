@@ -3,11 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicons/favicon-16x16.png">
+    <link rel="mask-icon" href="./assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#ffffff">
     <title>UI Demo Kit</title>
     <script>
       document.documentElement.style.visibility = 'hidden';
       document.addEventListener('DOMContentLoaded', function() {
-      	document.documentElement.style.visibility = '';});
+       document.documentElement.style.visibility = '';});
     </script>
   </head>
   <body>
@@ -102,27 +108,27 @@
           <h1 class="chart-section__header section-title">percentages / pie chart</h1>
           <div class="chart-section__container">
             <div class="chart-section__chart">
-              <div class="donut-chart donut-chart_size_narrow" id="percentage-chart1">
+              <div class="donut-chart donut-chart_size_narrow" data-values="0" data-colors="#e75735">
                 <div class="donut-chart__label"></div>
               </div>
             </div>
             <div class="chart-section__chart">
-              <div class="donut-chart donut-chart_size_narrow" id="percentage-chart2">
+              <div class="donut-chart donut-chart_size_narrow" data-values="38" data-colors="#e75735">
                 <div class="donut-chart__label"></div>
               </div>
             </div>
             <div class="chart-section__chart">
-              <div class="donut-chart donut-chart_size_narrow" id="percentage-chart3">
+              <div class="donut-chart donut-chart_size_narrow" data-values="62" data-colors="#e75735">
                 <div class="donut-chart__label"></div>
               </div>
             </div>
             <div class="chart-section__chart">
-              <div class="donut-chart donut-chart_size_narrow" id="percentage-chart4">
+              <div class="donut-chart donut-chart_size_narrow" data-values="89" data-colors="#e75735">
                 <div class="donut-chart__label"></div>
               </div>
             </div>
             <div class="chart-section__chart">
-              <div class="donut-chart" id="donut-chart">
+              <div class="donut-chart" data-values="12.5,25,30" data-colors="#747474,#e75735,#4eb7a8">
               </div>
             </div>
           </div>
@@ -177,7 +183,7 @@
           <h1 class="form-section__header section-title">form elements</h1>
           <div class="form-section__container">
             <div class="form-section__form">
-              <form class="email-form" id="email-form" action="send_email.php" method="post">
+              <form class="email-form" action="send_email.php" method="post">
                 <div class="email-form__name">
                   <div class="email-form__input">
                     <input class="input-field" type="text" name="name" placeholder="Your Name" realabel="Name" req>
@@ -410,5 +416,5 @@
     </main>
     <div class="uidemo__footer"></div>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0GpB2Y8XOyVrs-stxlE0I4yR_rAaEyjU"></script>
-  <script type="text/javascript" src="./map.js"></script></body>
+  <script type="text/javascript" src="./main.js"></script></body>
 </html>

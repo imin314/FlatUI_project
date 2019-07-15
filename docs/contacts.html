@@ -3,11 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicons/favicon-16x16.png">
+    <link rel="mask-icon" href="./assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#ffffff">
     <title>Contact Us</title>
     <script>
       document.documentElement.style.visibility = 'hidden';
       document.addEventListener('DOMContentLoaded', function() {
-      	document.documentElement.style.visibility = '';});
+       document.documentElement.style.visibility = '';});
     </script>
   </head>
   <body>
@@ -41,7 +47,7 @@
       <section class="contacts-page__email">
         <p class="contacts-page__text">Got a question? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
         <div class="contacts-page__form">
-          <form class="email-form" id="email-form" action="send_email.php" method="post">
+          <form class="email-form" action="send_email.php" method="post">
             <div class="email-form__name">
               <div class="email-form__input">
                 <input class="input-field" type="text" name="name" placeholder="Your Name" realabel="Name" req>
@@ -121,5 +127,5 @@
       <button class="online-help__button" aria-label="Chat Widget"></button>
     </aside>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0GpB2Y8XOyVrs-stxlE0I4yR_rAaEyjU"></script>
-  <script type="text/javascript" src="./map.js"></script></body>
+  <script type="text/javascript" src="./main.js"></script></body>
 </html>
