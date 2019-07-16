@@ -1,70 +1,70 @@
 .search-box
-	display flex
-	flex-direction row
-	flex-wrap nowrap
-	background-color color-bg
-	&__input
-		flex-grow 1
+  display flex
+  flex-direction row
+  flex-wrap nowrap
+  background-color color-bg
+  &__input
+    flex-grow 1
 
-	&__input-field
-		background inherit
-		font-size 1rem
-		font-family ui-font-family
-		letter-spacing remify(0.2px)
-		padding remify(6px) remify(17px) remify(7px)
-		color darken(color-bg, 40.5)
-		border none
-		border-top-left-radius 3px
-		border-bottom-left-radius 3px
-		width 100%
-		-webkit-appearance none
-		&_filled
-			background-color color-warm
-			color white
+  &__input-field
+    background inherit
+    font-size 1rem
+    font-family ui-font-family
+    letter-spacing remify(0.2px)
+    padding remify(6px) remify(17px) remify(7px)
+    color darken(color-bg, 40.5)
+    border none
+    border-top-left-radius 3px
+    border-bottom-left-radius 3px
+    width 100%
+    -webkit-appearance none
+    &_filled
+      background-color color-warm
+      color white
 
-	&__button
-		border none
-		background-color color-warm
-		border-top-right-radius 3px
-		border-bottom-right-radius 3px
-		cursor pointer
-		-webkit-appearance none
-		flex 43px 0 0
-		position relative
-		outline none
-		&::before
-			content ""
-			display block
-			border remify(2px) white solid
-			border-radius 50%
-			width 0.75rem
-			height @width
-			position absolute
-			top 50%
-			left 50%
-			transform translate(-65%, -60%)
-		&::after
-			content ""
-			display block
-			background-color white
-			height remify(3px)
-			width 0.55rem
-			border-radius 2px
-			position absolute
-			top 62%
-			left 50%
-			transform rotate(45deg)
-		&:hover
-			@media (hover:hover)
-				background-color darken(color-warm, 5)
-		&:active
-			@media (hover:none)
-				background-color darken(color-warm, 5)
-		&:active::before
-			@media (hover:hover)
-				transform translate(-65%, -60%) rotate(45deg) scale(0.9)
-		&:active::after
-			@media (hover:hover)
-				transform rotate(45deg) scale(0.9)
+  &__button
+    border none
+    background-color color-warm
+    border-top-right-radius 3px
+    border-bottom-right-radius 3px
+    cursor pointer
+    -webkit-appearance none
+    flex 43px 0 0
+    position relative
+    outline none
+    &::before
+      content ''
+      display block
+      border remify(2px) white solid
+      border-radius 50%
+      width 0.75rem
+      height @width
+      position absolute
+      top 50%
+      left 50%
+      transform translate(-65%, -60%)
+    &::after
+      content ''
+      display block
+      background-color white
+      height remify(3px)
+      width 0.55rem
+      border-radius 2px
+      position absolute
+      top 62%
+      left 50%
+      transform rotate(45deg)
+    &:hover
+      @media (hover:hover)
+        background-color darken(color-warm, 5)
+    &:active
+      @media (hover:none)
+        background-color darken(color-warm, 5)
+    &:active::before
+      @media (hover:hover)
+        transform translate(-65%, -60%) rotate(45deg) scale(0.9)
+    &:active::after
+      @media (hover:hover)
+        transform rotate(45deg) scale(0.9)
 
-		
+    

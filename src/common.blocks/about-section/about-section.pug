@@ -2,17 +2,17 @@ mixin aboutSection()
  section.about-section
   .about-section__block
    .about-section__text
-    h3.about-section__title.section-title About Web Talks 2019
+    h3.about-section__title About Web Talks 2019
     p.about-section__intro
      span Our field is constantly changing, where last year's cutting edge is this year's commonplace, and today's best practice is tomorrow's old hat. For well over a decade, we've tracked practices, patterns and technologies to keep our audience up to date.
      span Web Talks brings together the whole team, with three curated tracks, one focused on development and engineering, one focused on design, and one focused on management. For this, we've brought together the finest minds at the intersection of technology, design, and management in an atmosphere unlike any other.
-     a(href="https://www.youtube.com/channel/UCELSb-IYi_d5rYFOxWeOz5g" title="Watch more") See what happened in 2018 &gt;
+     a(href="https://www.youtube.com/channel/UCELSb-IYi_d5rYFOxWeOz5g" title="Watch more" target="_blank" rel="noopener noreferrer") See what happened in 2018 &gt;
    .about-section__right-col
     .about-section__video
      +video("https://www.youtube.com/embed/yNVLjsAvp3E")
   .about-section__block
    .about-section__text
-    h3.about-section__title.section-title Who's it for?
+    h3.about-section__title Who's it for?
     h4.about-section__subtitle The Design Team
     p.about-section__intro UX, IxD, visual, Web, Front End and CX experts, Art Directors, Creative Directors, Experience Leads, Design Leads and Design Researchers should all attend to hear these world leading experts.
     h4.about-section__subtitle The Engineering Team
@@ -28,7 +28,7 @@ mixin aboutSection()
        span , 
        span.about-section__topic.about-section__topic_color_red Design
        span , and 
-       span.about-section__topic.about-section__topic_gray Management 
+       span.about-section__topic.about-section__topic_color_gray Management 
        span with total of 18 intense workshops and talks.
       .about-section__chart
        +donutChart({ values: "61,22,17", colors: "#4eb7a8,#e75735,#747474" })

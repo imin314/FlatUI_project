@@ -1,126 +1,126 @@
 .news-card
-	font-size inherit
-	background-color color-warm
-	border-radius remify(5px)
-	overflow hidden
-	width 100%
-	height 100%
-	text-align left
-	display flex
-	align-items stretch
-	&__image
-		background-repeat no-repeat
-		background-position 0px 0px
-		background-clip border-box
-		background-size cover
-		flex 123px 0 2
-		background-color inherit
+  font-size inherit
+  background-color color-warm
+  border-radius remify(5px)
+  overflow hidden
+  width 100%
+  height 100%
+  text-align left
+  display flex
+  align-items stretch
+  &__image
+    background-repeat no-repeat
+    background-position 0px 0px
+    background-clip border-box
+    background-size cover
+    flex 123px 0 2
+    background-color inherit
 
-	&__content
-		font-size 1em
-		padding 1.3em 1.6em 1.8em
-		overflow hidden
-		flex 250px 2 1
-		display flex
-		flex-direction column
-		flex-wrap nowrap
-		justify-content flex-start
+  &__content
+    font-size 1em
+    padding 1.3em 1.6em 1.8em
+    overflow hidden
+    flex 250px 2 1
+    display flex
+    flex-direction column
+    flex-wrap nowrap
+    justify-content flex-start
 
-	&__title
-		font-size 2em
-		line-height 1em
-		margin-bottom 0.35em
-		color white
-		font-weight lighter
-		letter-spacing -0.01em
-		flex auto 0 0
+  &__title
+    font-size 2em
+    line-height 1em
+    margin-bottom 0.35em
+    color white
+    font-weight lighter
+    letter-spacing -0.01em
+    flex auto 0 0
 
-	&__date
-		font-size 0.785714285714286rem
-		letter-spacing 0.08em
-		color white
-		margin-bottom 1.15em
-		font-weight bold
-		text-transform uppercase
-		flex auto 0 0
-		@media screen and (min-width: 800px)
-			font-size 0.785714285714286em
+  &__date
+    font-size 0.785714285714286rem
+    letter-spacing 0.08em
+    color white
+    margin-bottom 1.15em
+    font-weight bold
+    text-transform uppercase
+    flex auto 0 0
+    @media screen and (min-width: 800px)
+      font-size 0.785714285714286em
 
-	&__text
-		font-size 0.785714285714286rem
-		color white
-		font-weight normal
-		letter-spacing 0.035em
-		flex auto 1 0
-		margin-bottom 0.8em
-		@media screen and (min-width: 800px)
-			font-size 0.785714285714286em
+  &__text
+    font-size 0.785714285714286rem
+    color white
+    font-weight normal
+    letter-spacing 0.035em
+    flex auto 1 0
+    margin-bottom 0.8em
+    @media screen and (min-width: 800px)
+      font-size 0.785714285714286em
 
-	&_type_event
-		background-color color-cold
-		& .news-card__content
-			padding 1.4em 1.5em 1.8em
-			position relative
-		& .news-card__title
-			font-size 0.892857142857143em
-			color white
-			font-weight bold
-			text-transform uppercase
-			letter-spacing 0.03em
-		& .news-card__date
-			font-size 0.8rem
-			letter-spacing unset
-			line-height 1em
-			margin-bottom 1.6em
-			@media screen and (min-width: 900px)
-				font-size 1em
-		& .news-card__day
-			font-size 5.214285714285714em
-			letter-spacing -0.05em
-			line-height 0.8em
-			color white
-			font-weight lighter
-		& .news-card__month
-			font-size 2.142857142857143em
-			color white
-			text-transform capitalize
-			font-weight lighter
-			margin-left 0.45em
-		& .news-card__text
-			color white
-			font-weight normal
-			min-height 3.1em
-		& .news-card__button
-			width 87%
-			font-size 0.714285714285714rem
-			flex auto 0 0
-			margin 0 auto
-			@media screen and (min-width: 900px)
-				font-size 0.714285714285714em
+  &_type_event
+    background-color color-cold
+    & .news-card__content
+      padding 1.4em 1.5em 1.8em
+      position relative
+    & .news-card__title
+      font-size 0.892857142857143em
+      color white
+      font-weight bold
+      text-transform uppercase
+      letter-spacing 0.03em
+    & .news-card__date
+      font-size 0.8rem
+      letter-spacing unset
+      line-height 1em
+      margin-bottom 1.6em
+      @media screen and (min-width: 900px)
+        font-size 1em
+    & .news-card__day
+      font-size 5.214285714285714em
+      letter-spacing -0.05em
+      line-height 0.8em
+      color white
+      font-weight lighter
+    & .news-card__month
+      font-size 2.142857142857143em
+      color white
+      text-transform capitalize
+      font-weight lighter
+      margin-left 0.45em
+    & .news-card__text
+      color white
+      font-weight normal
+      min-height 3.1em
+    & .news-card__button
+      width 87%
+      font-size 0.714285714285714rem
+      flex auto 0 0
+      margin 0 auto
+      @media screen and (min-width: 900px)
+        font-size 0.714285714285714em
 
-	&_size_compact
-		& .news-card__content
-			padding 1.3em 1.3em
-		& .news-card__title
-			font-size 1.2em
-		& .news-card__text
-			margin-bottom 0
-	
-	&_size_compact.news-card_type_event
-		& .news-card
-			&__content
-				padding 1.2em 1.3em 0.7em
-			&__date
-				margin-bottom 1em
-			&__day
-				font-size 3em
-			&__title
-				font-size 0.8rem
-				line-height 1.2em
-			&__text
-				margin-bottom 0.8em
+  &_size_compact
+    & .news-card__content
+      padding 1.3em 1.3em
+    & .news-card__title
+      font-size 1.2em
+    & .news-card__text
+      margin-bottom 0
+  
+  &_size_compact.news-card_type_event
+    & .news-card
+      &__content
+        padding 1.2em 1.3em 0.7em
+      &__date
+        margin-bottom 1em
+      &__day
+        font-size 3em
+      &__title
+        font-size 0.8rem
+        line-height 1.2em
+      &__text
+        margin-bottom 0.8em
 
-	&_color_reverted
-		background-color color-cold
-		&.news-card_type_event
-			background-color color-warm
+  &_color_reverted
+    background-color color-cold
+    &.news-card_type_event
+      background-color color-warm

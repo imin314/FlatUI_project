@@ -1,72 +1,72 @@
 .user-card
-	font-size inherit
-	display flex
-	justify-content center
-	align-items center
+  font-size inherit
+  display flex
+  justify-content center
+  align-items center
 
 .user-card__box
-	background-color color-bg
-	width 23vw
-	min-width 11.64835164835165em
-	max-width 12.7em
-	border-radius 0.5494505494505495em
-	text-align center
-	position relative
-	padding 0.7142857142857143em
-	&::before
-		background-color inherit
-		content ''
-		position absolute
-		top 50%
-		left 0
-		width 1.098901098901099em
-		height @width
-		border-radius 0.2747252747252747em
-		transform scaleY(0.8) translate(-30%,-50%) rotate(45deg)
+  background-color color-bg
+  width 23vw
+  min-width 11.64835164835165em
+  max-width 12.7em
+  border-radius 0.5494505494505495em
+  text-align center
+  position relative
+  padding 0.7142857142857143em
+  &::before
+    background-color inherit
+    content ''
+    position absolute
+    top 50%
+    left 0
+    width 1.098901098901099em
+    height @width
+    border-radius 0.2747252747252747em
+    transform scaleY(0.8) translate(-30%,-50%) rotate(45deg)
 
 .user-card__photo
-	display inline-block
-	margin-right 0.9340659340659341em
-	border-radius 50%
-	border 0.3846153846153846em solid color-bg
-	min-width 6.648351648351648em
-	min-height @min-width
-	background-size cover
-	background-repeat no-repeat
-	background-color color-bg
+  display inline-block
+  margin-right 0.9340659340659341em
+  border-radius 50%
+  border 0.3846153846153846em solid color-bg
+  min-width 6.648351648351648em
+  min-height @min-width
+  background-size cover
+  background-repeat no-repeat
+  background-color color-bg
 
 
 .user-card__name
-	font-size 1.285714285714286em
-	color color-warm
-	text-transform capitalize
-	font-weight normal
-	margin-bottom 0.1098901098901099em
+  font-size 1.285714285714286em
+  color color-warm
+  text-transform capitalize
+  font-weight normal
+  margin-bottom 0.1098901098901099em
 
 .user-card__position
-	font-size 0.7857142857142857em
-	color #4f4f4f
-	font-weight bold
-	margin-bottom 13px
-	letter-spacing 0.0494505494505495em
-	text-transform uppercase
+  font-size 0.7857142857142857em
+  color #4f4f4f
+  font-weight bold
+  margin-bottom 13px
+  letter-spacing 0.0494505494505495em
+  text-transform uppercase
 
 .user-card__icon
-	font-size inherit
-	display inline-block
-	width 2.362637362637363em
-	height 1.648351648351648em
-	margin-right 0.5494505494505495em
-	&:last-child
-		margin-right 0
+  font-size inherit
+  display inline-block
+  width 2.362637362637363em
+  height 1.648351648351648em
+  margin-right 0.5494505494505495em
+  &:last-child
+    margin-right 0
 
 .user-card_colored
-	& .user-card__box
-		background-color color-cold
-		&::before
-			background-color color-cold
-		& *
-			color white
+  & .user-card__box
+    background-color color-cold
+    &::before
+      background-color color-cold
+    & *
+      color white
 
 
-	
+  

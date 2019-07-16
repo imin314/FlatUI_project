@@ -1,86 +1,86 @@
 .drop-down
-	text-align left
+  text-align left
 
-	&__textarea
-		display flex
-		flex-direction row
-		flex-wrap nowrap
-		background-color color-bg
-		align-items stretch
-	&__label
-		background inherit
-		font-size 1rem
-		padding remify(6px) remify(17px) remify(7px)
-		color darken(color-bg, 40.5)
-		font-family ui-font-family
-		letter-spacing remify(0.2px)
-		border none
-		border-top-left-radius 3px
-		border-bottom-left-radius 3px
-		width 100%
-		-webkit-appearance none
-		cursor pointer
+  &__textarea
+    display flex
+    flex-direction row
+    flex-wrap nowrap
+    background-color color-bg
+    align-items stretch
+  &__label
+    background inherit
+    font-size 1rem
+    padding remify(6px) remify(17px) remify(7px)
+    color darken(color-bg, 40.5)
+    font-family ui-font-family
+    letter-spacing remify(0.2px)
+    border none
+    border-top-left-radius 3px
+    border-bottom-left-radius 3px
+    width 100%
+    -webkit-appearance none
+    cursor pointer
 
-	&__button
-		border none
-		background-color color-cold
-		border-top-right-radius 3px
-		border-bottom-right-radius 3px
-		cursor pointer
-		-webkit-appearance none
-		position relative
-		flex 43px 0 0
-		outline none
-		&::before
-			border 3px solid white
-			border-top none
-			border-right none
-			content ""
-			height remify(13px)
-			width @height
-			position absolute
-			left 50%
-			top 50%
-			transform translate(-55%, -55%) rotate(-45deg)
-		&:hover
-			@media (hover:hover)
-				background-color darken(color-cold, 5)
-		&:active
-			@media (hover:none)
-				background-color darken(color-cold, 5)
-		&:active::before
-			@media (hover:hover)
-				transform translate(-55%, -55%) rotate(-45deg) scale(0.9)
+  &__button
+    border none
+    background-color color-cold
+    border-top-right-radius 3px
+    border-bottom-right-radius 3px
+    cursor pointer
+    -webkit-appearance none
+    position relative
+    flex 43px 0 0
+    outline none
+    &::before
+      border 3px solid white
+      border-top none
+      border-right none
+      content ''
+      height remify(13px)
+      width @height
+      position absolute
+      left 50%
+      top 50%
+      transform translate(-55%, -55%) rotate(-45deg)
+    &:hover
+      @media (hover:hover)
+        background-color darken(color-cold, 5)
+    &:active
+      @media (hover:none)
+        background-color darken(color-cold, 5)
+    &:active::before
+      @media (hover:hover)
+        transform translate(-55%, -55%) rotate(-45deg) scale(0.9)
 
-	&__list
-		margin 0
-		padding 0
-		display none
-		background-color color-cold
-		padding remify(8px) 0
-		position relative
-		top -3px
-		border-radius 4px
+  &__list
+    margin 0
+    padding 0
+    display none
+    background-color color-cold
+    padding remify(8px) 0
+    position relative
+    top -3px
+    border-radius 4px
 
-	&__item
-		background-color inherit
-		color white
-		font-size 1rem
-		font-family ui-font-family
-		letter-spacing remify(0.2px)
-		padding remify(6px) remify(18px)
-		margin-bottom remify(4px)
-		list-style none
-		cursor pointer
-		&:last-of-type
-			border-bottom-left-radius 3px
-			border-bottom-right-radius 3px
-		&:hover
-			@media (hover:hover)
-				background-color #28a290
-		&:active
-			background-color #28a290
+  &__item
+    background-color inherit
+    color white
+    font-size 1rem
+    font-family ui-font-family
+    letter-spacing remify(0.2px)
+    padding remify(6px) remify(18px)
+    margin-bottom remify(4px)
+    list-style none
+    cursor pointer
+    &:last-of-type
+      border-bottom-left-radius 3px
+      border-bottom-right-radius 3px
+    &:hover
+      @media (hover:hover)
+        background-color #28a290
+    &:active
+      background-color #28a290
 
-	&__list_active
-		display block
-			
+  &__list_active
+    display block
+      

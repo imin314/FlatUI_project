@@ -1,59 +1,59 @@
 .bread-crumbs
-	display flex
-	justify-content space-between
-	flex-wrap nowrap
-	flex-direction row
-	width 100%
-	padding 0
-	align-items center
+  display flex
+  justify-content space-between
+  flex-wrap nowrap
+  flex-direction row
+  width 100%
+  padding 0
+  align-items center
 
-	&__item
-		font-size 1rem
-		flex 179px 1 1
-		list-style-type none
-		position relative
-		transition all 0.2s ease
-		z-index 0
-		&:nth-child(1)
-			flex-basis 170px
-		&:nth-child(2)
-			flex-basis 185px
-		&:last-child
-			flex auto 0 0
-			&::after
-				display none
-		&::after
-			font-size inherit
-			content ""
-			display block
-			height 0.3296703296703297em
-			width 100%
-			position absolute
-			background color-warm
-			top 50%
-			transform translateY(-50%)
-			z-index -1
-			transition all 0.2s ease
-		&_active 
-			&::after
-			& ~ .bread-crumbs__item .bread-crumbs__circle
-			& ~ .bread-crumbs__item::after
-				background-color color-bg
-				transition all 0.2s ease
-		@media screen and (max-width: 550px)
-			font-size 0.85rem
-		
+  &__item
+    font-size 1rem
+    flex 179px 1 1
+    list-style-type none
+    position relative
+    transition all 0.2s ease
+    z-index 0
+    &:nth-child(1)
+      flex-basis 170px
+    &:nth-child(2)
+      flex-basis 185px
+    &:last-child
+      flex auto 0 0
+      &::after
+        display none
+    &::after
+      font-size inherit
+      content ''
+      display block
+      height 0.3296703296703297em
+      width 100%
+      position absolute
+      background color-warm
+      top 50%
+      transform translateY(-50%)
+      z-index -1
+      transition all 0.2s ease
+    &_active 
+      &::after
+      & ~ .bread-crumbs__item .bread-crumbs__circle
+      & ~ .bread-crumbs__item::after
+        background-color color-bg
+        transition all 0.2s ease
+    @media screen and (max-width: 550px)
+      font-size 0.85rem
+    
 
-	&__circle
-		font-size inherit
-		font-weight bold
-		width 2.032967032967033em
-		height @width
-		padding-top 0.32967032967033em
-		text-align center
-		border-radius 50%
-		background color-warm
-		color white
-		font-weight bold
-		transition all 0.2s ease
+  &__circle
+    font-size inherit
+    font-weight bold
+    width 2.032967032967033em
+    height @width
+    padding-top 0.32967032967033em
+    text-align center
+    border-radius 50%
+    background color-warm
+    color white
+    font-weight bold
+    transition all 0.2s ease
 

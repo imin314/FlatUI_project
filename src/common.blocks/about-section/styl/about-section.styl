@@ -1,104 +1,105 @@
 .about-section
-	background-color color-bg
-	width 100%
-	&__block
-		width 100%
-		display flex
-		&:first-child
-			@media screen and (max-width: 992px)
-				flex-wrap wrap
-		@media screen and (max-width: 768px)
-			flex-wrap wrap
-	&__text
-		flex 600px 2 2
-		padding 2rem
-	&__right-col
-		flex 400px 1 1
-		background-color white
-		padding 1rem
-		text-align center
-	&__video
-		width 100%
-		position relative
-		top 50%
-		transform translateY(-50%)
-		max-width 600px
-		margin 0 auto
-	&__stats
-		width 100%
-		padding 0
-		display table
-	&__title
-		margin 2rem 0 1rem
-		&:first-of-type
-			margin-top 0
-	&__intro
-		font-size 1rem
-		color color-text
-		text-align justify
-		&:first-of-type
-			clearfix()
-		& span 
-			display block
-			padding-top 0.9rem
-		& a
-			float right
-			color color-warm
-			text-decoration underline
-			padding-top 0.9rem
-			&:hover
-				@media (hover:hover)
-					text-decoration none
-			&:active
-				@media (hover:hover)
-					text-decoration underline
-					color color-text
-				@media (hover:none)
-					text-decoration none
-	&__subtitle
-		color color-cold
-		font-weight bold
-		font-size 1rem
-		margin-bottom 0.5rem
-	&__stat-item
-		list-style none
-		margin 0
-		padding 0
-		display table-row
-	&__comment
-		display table-cell
-		color color-text
-		font-size 1rem
-		font-weight lighter
-		vertical-align middle
-		border-left 1.3rem solid transparent
-		&:first-child
-			border-left none
-			border-right 0.8rem solid transparent
-	&__number
-		display table-cell
-		vertical-align middle
-		color color-cold-darker
-		font-weight bold
-		font-size 3rem
-		text-align right
-	&__chart
-		display table-cell
-		vertical-align middle
-		width 120px
-		font-size 0.8rem
-	&__topic
-		font-size 1.2rem
-		font-weight bold
-		&_color
-			&_blue
-				color #4eb7a8
-			&_red
-				color #e75735
-			&_gray
-				color #747474
+  width 100%
+  background-color color-bg
+  &__block
+    display flex
+    width 100%
+    &:first-child
+      @media screen and (max-width: 992px)
+        flex-wrap wrap
+    @media screen and (max-width: 768px)
+      flex-wrap wrap
+  &__title
+    margin 2rem 0 1rem
+    &:first-of-type
+      margin-top 0
+    sectionTitle()
+  &__subtitle
+    margin-bottom 0.5rem
+    font-weight bold
+    font-size 1rem
+    color color-cold
+  &__text
+    flex 600px 2 2
+    padding 2rem
+  &__intro
+    font-size 1rem
+    text-align justify
+    color color-text
+    &:first-of-type
+      clearfix()
+    & span 
+      display block
+      padding-top 0.9rem
+    & a
+      float right
+      padding-top 0.9rem
+      color color-warm
+      text-decoration underline
+      &:hover
+        @media (hover:hover)
+          text-decoration none
+      &:active
+        @media (hover:hover)
+          text-decoration underline
+          color color-text
+        @media (hover:none)
+          text-decoration none
+  &__right-col
+    flex 400px 1 1
+    padding 1rem
+    text-align center
+    background-color white
+  &__video
+    position relative
+    top 50%
+    width 100%
+    max-width 600px
+    margin 0 auto
+    transform translateY(-50%)
+  &__stats
+    display table
+    width 100%
+    padding 0
+  &__stat-item
+    display table-row
+    margin 0
+    padding 0
+    list-style none
+  &__comment
+    display table-cell
+    vertical-align middle
+    font-size 1rem
+    font-weight lighter
+    color color-text
+    border-left 1.3rem solid transparent
+    &:first-child
+      border-left none
+      border-right 0.8rem solid transparent
+  &__topic
+    font-size 1.2rem
+    font-weight bold
+    &_color
+      &_blue
+        color color-cold
+      &_red
+        color color-warm
+      &_gray
+        color color-text-darker
+  &__chart
+    display table-cell
+    width 120px
+    vertical-align middle
+    font-size 0.8rem
+  &__number
+    display table-cell
+    vertical-align middle
+    font-weight bold
+    font-size 3rem
+    text-align right
+    color color-cold-darker
 
 
 
-	
-		
+  
+    

@@ -1,135 +1,135 @@
 .map
-	width 100%
-	border-radius remify(5px)
-	overflow hidden
-	font-size inherit
-	&__container
-			width 100%
-			height 28.5vw
-			min-height 264px
-	&__footer
-		padding 0.1em 4.5% 0.5em 4.3%
-		background-color color-warm
-		display flex
-		flex-direction row
-		flex-wrap nowrap
-		justify-content space-between
-		align-items center
-		font-size 1rem
-		@media screen and (max-width:670px)
-			font-size 0.8rem
-		@media screen and (max-width:515px)
-			font-size 0.6rem
+  width 100%
+  border-radius remify(5px)
+  overflow hidden
+  font-size inherit
+  &__container
+      width 100%
+      height 28.5vw
+      min-height 264px
+  &__footer
+    padding 0.1em 4.5% 0.5em 4.3%
+    background-color color-warm
+    display flex
+    flex-direction row
+    flex-wrap nowrap
+    justify-content space-between
+    align-items center
+    font-size 1rem
+    @media screen and (max-width:670px)
+      font-size 0.8rem
+    @media screen and (max-width:515px)
+      font-size 0.6rem
 
-	&__title
-		color white
-		font-size 2.142857142857143em
-		word-spacing -0.1em
-		flex-grow 0
-		font-weight lighter
-		margin-right 5%
-		line-height 2em
-		@media screen and (max-width:425px)
-			font-size 1rem
-			margin-right 10px
+  &__title
+    color white
+    font-size 2.142857142857143em
+    word-spacing -0.1em
+    flex-grow 0
+    font-weight lighter
+    margin-right 5%
+    line-height 2em
+    @media screen and (max-width:425px)
+      font-size 1rem
+      margin-right 10px
 
-	&__address
-		flex-grow 0
-		padding-top 0.2em
-		text-align left
-		& div
-			color white
-			text-transform uppercase
-			font-size 0.8928571428571429em
-			font-weight bold
-			&:first-child
-				letter-spacing 0.05em
-				word-spacing 0.17em
-			&:last-child
-				word-spacing 0.35em
-				letter-spacing 0.01em
+  &__address
+    flex-grow 0
+    padding-top 0.2em
+    text-align left
+    & div
+      color white
+      text-transform uppercase
+      font-size 0.8928571428571429em
+      font-weight bold
+      &:first-child
+        letter-spacing 0.05em
+        word-spacing 0.17em
+      &:last-child
+        word-spacing 0.35em
+        letter-spacing 0.01em
 
-	&__icons
-		font-size 1em
-		flex-grow 1
-		padding-top 0.2em
-		display flex
-		flex-direction row
-		flex-wrap nowrap
-		justify-content flex-end
-		align-items center
+  &__icons
+    font-size 1em
+    flex-grow 1
+    padding-top 0.2em
+    display flex
+    flex-direction row
+    flex-wrap nowrap
+    justify-content flex-end
+    align-items center
 
-	&__search
-		flex-shrink 0
-		flex-grow 0
-		width 1.098901098901099em
-		height @width 
-		border-radius 50%
-		border 0.1098901098901099em solid white
-		position relative
-		margin-right 1.9em
-		box-sizing content-box
-		cursor pointer
-		&::before
-			content ''
-			box-sizing content-box
-			height 0.1098901098901099em
-			width 0.6593406593406593em
-			position absolute
-			border-left 0.5494505494505495em solid white
-			border-right 0.5494505494505495em solid white
-			top 50%
-			left 0
-			transform translate(-18%,-50%)
-		&::after
-			content ''
-			box-sizing content-box
-			height 0.6593406593406593em
-			width 0.1098901098901099em
-			position absolute
-			border-top 0.5494505494505495em solid white
-			border-bottom 0.5494505494505495em solid white
-			top 0
-			left 50%
-			transform translate(-50%,-18%)
-		&:hover
-			@media (hover:hover)
-				transform scale(1.1)
-		&:hover::before
-			@media (hover:hover)
-				transform translate(-18%,-50%) scale(1.1)
-		&:hover::after
-			@media (hover:hover)
-				transform translate(-50%,-18%) scale(1.1)
-		&:active
-			@media (hover:hover)
-				transform scale(0.9)
-			@media (hover:none)
-				transform scale(1.1)
-		&:active::before
-			@media (hover:hover)
-				transform translate(-18%,-50%) scale(0.9)
-			@media (hover:none)
-				transform translate(-18%,-50%) scale(1.1)
-		&:active::after
-			@media (hover:hover)
-				transform translate(-50%,-18%) scale(0.9)
-			@media (hover:none)
-				transform translate(-50%,-18%) scale(1.1)
-		@media screen and (max-width:425px)
-			margin-right 15px
+  &__search
+    flex-shrink 0
+    flex-grow 0
+    width 1.098901098901099em
+    height @width 
+    border-radius 50%
+    border 0.1098901098901099em solid white
+    position relative
+    margin-right 1.9em
+    box-sizing content-box
+    cursor pointer
+    &::before
+      content ''
+      box-sizing content-box
+      height 0.1098901098901099em
+      width 0.6593406593406593em
+      position absolute
+      border-left 0.5494505494505495em solid white
+      border-right 0.5494505494505495em solid white
+      top 50%
+      left 0
+      transform translate(-18%,-50%)
+    &::after
+      content ''
+      box-sizing content-box
+      height 0.6593406593406593em
+      width 0.1098901098901099em
+      position absolute
+      border-top 0.5494505494505495em solid white
+      border-bottom 0.5494505494505495em solid white
+      top 0
+      left 50%
+      transform translate(-50%,-18%)
+    &:hover
+      @media (hover:hover)
+        transform scale(1.1)
+    &:hover::before
+      @media (hover:hover)
+        transform translate(-18%,-50%) scale(1.1)
+    &:hover::after
+      @media (hover:hover)
+        transform translate(-50%,-18%) scale(1.1)
+    &:active
+      @media (hover:hover)
+        transform scale(0.9)
+      @media (hover:none)
+        transform scale(1.1)
+    &:active::before
+      @media (hover:hover)
+        transform translate(-18%,-50%) scale(0.9)
+      @media (hover:none)
+        transform translate(-18%,-50%) scale(1.1)
+    &:active::after
+      @media (hover:hover)
+        transform translate(-50%,-18%) scale(0.9)
+      @media (hover:none)
+        transform translate(-50%,-18%) scale(1.1)
+    @media screen and (max-width:425px)
+      margin-right 15px
 
-	&__pin
-		flex-shrink 0
-		flex-grow 0
-		width 1.208791208791209em
-		cursor pointer
-		height 3em
-		&:hover
-			@media (hover:hover)
-				transform scale(1.1)
-		&:active
-			@media (hover:hover)
-				transform scale(0.9)
-			@media (hover:none)
-				transform scale(1.1)
+  &__pin
+    flex-shrink 0
+    flex-grow 0
+    width 1.208791208791209em
+    cursor pointer
+    height 3em
+    &:hover
+      @media (hover:hover)
+        transform scale(1.1)
+    &:active
+      @media (hover:hover)
+        transform scale(0.9)
+      @media (hover:none)
+        transform scale(1.1)

@@ -7,12 +7,20 @@ clearfix()
     clear: both
   zoom: 1 if support-for-ie
 
+sectionTitle()
+  text-transform uppercase
+  font-size header-size
+  font-weight bold
+  text-align center
+  color inherit
+  letter-spacing 0.095rem
+
 remify(value) {
-    u = unit(value);
-    template-font-size = 18.2px
-    if (u is 'px') {
-        return unit(value/template-font-size, 'rem');
-    } else {
-        return unit(value, u);
-    }
+  u = unit(value);
+  template-font-size = 18.2px
+  if (u is 'px') {
+    return unit(value/template-font-size, 'rem');
+  } else {
+    return unit(value, u);
+  }
 }

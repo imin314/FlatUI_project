@@ -1,117 +1,117 @@
 .messenger
-	width 100%
-	border-radius 0.3rem
-	overflow hidden
-	font-size inherit
-	margin 0 auto
+  width 100%
+  border-radius 0.3rem
+  overflow hidden
+  font-size inherit
+  margin 0 auto
 
-	&__header
-		background-color color-cold
-		width 100%
-		box-shadow inset 0 -2.5em 0 #46ab9d
-		position relative
-		text-align center
-		padding 1.2em 1.1em 4.2em
-	&__name
-		color white
-		font-size 2.428571428571429em
-		font-weight lighter
-		text-transform capitalize
-		word-spacing -0.1em
-		letter-spacing -0.045em
-	&__photo
-		width 6.5em
-		height @width 
-		border 5px solid #e5e5e5
-		border-radius 50%
-		position absolute
-		left 50%
-		top 100%
-		transform translateX(-54%) translateY(-50%)
-		background-size cover
-		background-repeat no-repeat
-	&__icons
-		position relative
-	&__bubble-icon
-		background-image url('../assets/img/bubble-icon.svg')
-		background-repeat no-repeat
-		position absolute
-		top 1.6em
-		left 1.923076923076923em
-		width 1.55em
-		height @width
-		&:hover
-			@media (hover:hover)
-				transform scale(1.1)
-		&:active
-			@media (hover:hover)
-				transform scale(0.9)
-			@media (hover:none)
-				transform scale(1.1)
+  &__header
+    background-color color-cold
+    width 100%
+    box-shadow inset 0 -2.5em 0 #46ab9d
+    position relative
+    text-align center
+    padding 1.2em 1.1em 4.2em
+  &__name
+    color white
+    font-size 2.428571428571429em
+    font-weight lighter
+    text-transform capitalize
+    word-spacing -0.1em
+    letter-spacing -0.045em
+  &__photo
+    width 6.5em
+    height @width 
+    border 5px solid #e5e5e5
+    border-radius 50%
+    position absolute
+    left 50%
+    top 100%
+    transform translateX(-54%) translateY(-50%)
+    background-size cover
+    background-repeat no-repeat
+  &__icons
+    position relative
+  &__bubble-icon
+    background-image url('../assets/img/bubble-icon.svg')
+    background-repeat no-repeat
+    position absolute
+    top 1.6em
+    left 1.923076923076923em
+    width 1.55em
+    height @width
+    &:hover
+      @media (hover:hover)
+        transform scale(1.1)
+    &:active
+      @media (hover:hover)
+        transform scale(0.9)
+      @media (hover:none)
+        transform scale(1.1)
 
-	&__camera-icon
-		background-image url('../assets/img/camera-icon.svg')
-		background-repeat no-repeat
-		position absolute
-		top 1.55em
-		right 1.923076923076923em
-		width 1.8em
-		height 1.41em
-		&:hover
-			@media (hover:hover)
-				transform scale(1.1)
-		&:active
-			@media (hover:hover)
-				transform scale(0.9)
-			@media (hover:none)
-				transform scale(1.1)
-	&__container
-		background-color #f2f2f2
-		height 22.1978021978022em
-		padding 4.4em 1.6em 1.78em
-		display flex
-		flex-direction column
-		flex-wrap nowrap
-		justify-content space-between
-	&__message
-		color #8e8d8d
-		font-size 0.8928571428571429em
-		font-weight bold
-		text-align left
-		letter-spacing 0.04em
-		&_type_inbox
-			background-color white
-			position relative
-			padding 1.35em 1.5em 1.8em
-			width 100%
-			border-radius 10px
-			&::before
-				content ''
-				width 0.81em
-				height @width
-				display block
-				position absolute
-				background-color white
-				top 0
-				left 50%
-				transform translate(-90%, -40%) rotate(45deg)
-				border-radius 4px
-		&_type_outbox
-			background-color color-bg
-			resize none
-			outline none
-			box-shadow 0 0 0 4px white
-			border none 
-			border-radius 5px
-			margin 0 auto
-			width 98%
-			padding 1.2em 1.3em
-			height 6.5em
+  &__camera-icon
+    background-image url('../assets/img/camera-icon.svg')
+    background-repeat no-repeat
+    position absolute
+    top 1.55em
+    right 1.923076923076923em
+    width 1.8em
+    height 1.41em
+    &:hover
+      @media (hover:hover)
+        transform scale(1.1)
+    &:active
+      @media (hover:hover)
+        transform scale(0.9)
+      @media (hover:none)
+        transform scale(1.1)
+  &__container
+    background-color #f2f2f2
+    height 22.1978021978022em
+    padding 4.4em 1.6em 1.78em
+    display flex
+    flex-direction column
+    flex-wrap nowrap
+    justify-content space-between
+  &__message
+    color #8e8d8d
+    font-size 0.8928571428571429em
+    font-weight bold
+    text-align left
+    letter-spacing 0.04em
+    &_type_inbox
+      background-color white
+      position relative
+      padding 1.35em 1.5em 1.8em
+      width 100%
+      border-radius 10px
+      &::before
+        content ''
+        width 0.81em
+        height @width
+        display block
+        position absolute
+        background-color white
+        top 0
+        left 50%
+        transform translate(-90%, -40%) rotate(45deg)
+        border-radius 4px
+    &_type_outbox
+      background-color color-bg
+      resize none
+      outline none
+      box-shadow 0 0 0 4px white
+      border none 
+      border-radius 5px
+      margin 0 auto
+      width 98%
+      padding 1.2em 1.3em
+      height 6.5em
 
-	&__button
-		width 100%
-		font-size 0.85em
-	&_position_fixed messenger__container
-		height 300px
+  &__button
+    width 100%
+    font-size 0.85em
+  &_position_fixed messenger__container
+    height 300px
 
 

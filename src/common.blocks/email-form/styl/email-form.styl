@@ -1,67 +1,67 @@
 .email-form
-	clearfix()
-	
-	&__name
-		margin-bottom 0.72rem
-		display flex
+  clearfix()
+  
+  &__name
+    margin-bottom 0.72rem
+    display flex
 
-	&__input
-		flex 271px 1 1
+  &__input
+    flex 271px 1 1
 
-	&__email
-		margin-bottom 0.8rem
-		display flex
+  &__email
+    margin-bottom 0.8rem
+    display flex
 
-	&__message
-		margin-bottom 0.5rem
-		padding 0.7rem 1rem
-		width 100%
-		resize none
-		height 12.6vw
-		min-height 6.318681318681319rem
+  &__message
+    margin-bottom 0.5rem
+    padding 0.7rem 1rem
+    width 100%
+    resize none
+    height 12.6vw
+    min-height 6.318681318681319rem
 
-	&__button
-		float right
+  &__button
+    float right
 
-	&__bubble
-		visibility hidden
-		width 5.21978021978022rem
-		min-width 4.5rem
-		padding 0.55rem
-		border-radius 5px
-		position relative
-		font-size 0.7rem
-		text-transform uppercase
-		text-align center
-		font-weight bold
-		color white
-		margin-left 0.6593406593406593rem
-		letter-spacing 0.06rem
-		transition 0.3s
-		transform translateX(-50px)
-		&::before
-			visibility hidden
-			content ''
-			position absolute
-			top 50%
-			left 0
-			width 0.3296703296703297rem
-			height @width
-			border-radius 1px
-			transform translate(-50%, -50%) rotate(45deg)
+  &__bubble
+    visibility hidden
+    width 5.21978021978022rem
+    min-width 4.5rem
+    padding 0.55rem
+    border-radius 5px
+    position relative
+    font-size 0.7rem
+    text-transform uppercase
+    text-align center
+    font-weight bold
+    color white
+    margin-left 0.6593406593406593rem
+    letter-spacing 0.06rem
+    transition 0.3s
+    transform translateX(-50px)
+    &::before
+      visibility hidden
+      content ''
+      position absolute
+      top 50%
+      left 0
+      width 0.3296703296703297rem
+      height @width
+      border-radius 1px
+      transform translate(-50%, -50%) rotate(45deg)
 
-	&__bubble_type_error
-		background-color color-warm
-		visibility visible
-		transform translateX(0)
-		&::before
-			background-color color-warm
-			visibility visible
+  &__bubble_type_error
+    background-color color-warm
+    visibility visible
+    transform translateX(0)
+    &::before
+      background-color color-warm
+      visibility visible
 
-	&__bubble_type_good
-		background-color color-cold
-		visibility visible
-		transform translateX(0)
-		&::before
-			background-color color-cold
-			visibility visible	
+  &__bubble_type_good
+    background-color color-cold
+    visibility visible
+    transform translateX(0)
+    &::before
+      background-color color-cold
+      visibility visible  
