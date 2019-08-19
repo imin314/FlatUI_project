@@ -9,7 +9,8 @@
   border 0.21978021978022em color-cold solid
   border-radius 50%
   cursor pointer
-  &:hover
+  outline none
+  &:hover, &:focus       
     @media (hover: hover)
       background-color color-cold
     & .arrow-button__arrow
@@ -30,6 +31,11 @@
     & .arrow-button__arrow
       background-color color-bg
       border-color white
+  &_active
+    &.arrow-button_direction_right
+      transform translateX(1px)
+    &.arrow-button_direction_left
+      transform translateX(-1px)
   &_direction_right
     &:active
       transform translateX(1px)

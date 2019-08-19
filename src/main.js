@@ -7,6 +7,7 @@ import './pages/speakers/js/speakers.js';
 import './pages/registration/js/registration.js';
 import './common.blocks/social-icon/js/social-icon.js';
 import './common.blocks/speaker-card/js/speaker-card.js';
+import './common.blocks/arrow-button/js/arrow-button.js';
 import './common.blocks/button/js/button.js';
 import './common.blocks/donut-chart/js/donut-chart.js';
 import './common.blocks/slider/js/slider.js';

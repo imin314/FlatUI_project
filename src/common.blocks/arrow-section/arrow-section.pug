@@ -1,16 +1,16 @@
 mixin arrowSection()
- .arrow-section
-  h1.arrow-section__header.section-title arrow buttons
-  .arrow-section__container
-   .arrow-section__button
-    +arrowButton({direction: "left"})
-   .arrow-section__button
-    +arrowButton({direction: "right"})
-   .arrow-section__button
-    +arrowButton({direction: "left", disabled: true})
-   .arrow-section__button
-    +arrowButton({direction: "right", disabled: true})
-   .arrow-section__button
-    +arrowButton({direction: "left"})
-   .arrow-section__button
-    +arrowButton({direction: "right"})
+  .arrow-section
+    h2.arrow-section__title arrow buttons
+    .arrow-section__container
+      .arrow-section__button
+        +arrowButton({direction: "left"})
+      .arrow-section__button
+        +arrowButton({direction: "right"})
+      .arrow-section__button
+        +arrowButton({direction: "left", disabled: true})
+      .arrow-section__button
+        +arrowButton({direction: "right", disabled: true})
+      .arrow-section__button
+        +arrowButton({direction: "left"})
+      .arrow-section__button
+        +arrowButton({direction: "right"})

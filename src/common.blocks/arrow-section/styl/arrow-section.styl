@@ -1,8 +1,9 @@
 .arrow-section
-  &__header
+  &__title
     margin-bottom 2.5rem
     letter-spacing 0.06rem
     word-spacing 0.3rem
+    sectionTitle()
 
   &__container
     display flex
@@ -12,8 +13,8 @@
     margin 0 auto
       
   &__button
-    font-size 1rem
     margin-bottom 1.3rem
+    font-size 1rem
     &:nth-child(2n+2)
       @media screen and (max-width: 689px)
-        order: 2
+        order 2
