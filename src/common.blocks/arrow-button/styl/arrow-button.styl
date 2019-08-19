@@ -10,6 +10,13 @@
   border-radius 50%
   cursor pointer
   outline none
+  &_disabled
+    pointer-events none
+    background-color color-bg
+    border-color color-bg
+    & .arrow-button__arrow
+      background-color color-bg
+      border-color white
   &:hover, &:focus       
     @media (hover: hover)
       background-color color-cold
@@ -24,13 +31,6 @@
       @media (hover:none)
         background-color color-cold
         border-color white
-  &_disabled
-    pointer-events none
-    background-color color-bg
-    border-color color-bg
-    & .arrow-button__arrow
-      background-color color-bg
-      border-color white
   &_active
     &.arrow-button_direction_right
       transform translateX(1px)

@@ -1,10 +1,10 @@
 mixin arrowButton(settings)
-  - let className = 'arrow-button arrow-button_direction_';
+  - let className = 'arrow-button js-arrow-button arrow-button_direction_';
   - let tabValue = '0';
   - className += settings.direction === 'right' ? 'right' : 'left';
   - if (settings.disabled) {
-  - className += ' arrow-button_disabled';
-  - tabValue = '-1';
+  -   className += ' arrow-button_disabled';
+  -   tabValue = '-1';
   - }
   a(class = className tabindex = tabValue)
     .arrow-button__arrow
