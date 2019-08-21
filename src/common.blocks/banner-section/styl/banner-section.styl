@@ -1,39 +1,37 @@
 .banner-section
   width 100%
-  background-color color-cold
   padding 7rem 2rem 4rem
-  color white
-  font-size 2rem
   text-align center
+  color white
+  background-color color-cold
   background-image url('../assets/img/banner-bg.jpg')
   background-size cover
   background-repeat no-repeat
-  @media screen and (max-width:768px)
-    font-size 1rem
   @media screen and (max-width: 425px)
     padding-top 4rem
   &__location
-    font-size 0.8em
-    display block
-    font-weight lighter
-    border 2px solid #80d8cb
     width max-content
     margin 0 auto
-    padding 0.2em 0.5em
-  &__title
-    margin 1em auto
-  &__name
-    font-size 1.5em
-    letter-spacing 0.05em
-    font-weight 900
-    line-height 1em
-    display block
-  &__tagline
-    font-size 0.5em
-    margin 0.5em auto 0
-    display block
+    padding 0.3rem 0.8rem
+    font-size 1.6rem
     font-weight lighter
+    border 2px solid #80d8cb
+    @media screen and (max-width:768px)
+      font-size 1rem
+      padding 0.2rem 0.4rem
+  &__title
+    margin 3rem auto 0
+    font-size 6rem
+    font-weight 900
+    letter-spacing 0.15rem
+    @media screen and (max-width:768px)
+      font-size 3rem
+      padding 0.2rem 0.4rem
+  &__tagline
     max-width 950px
+    margin 0.8rem auto 2.5rem
+    font-size 1rem
+    font-weight lighter
   &__register-button
     width 300px
     margin 0 auto
