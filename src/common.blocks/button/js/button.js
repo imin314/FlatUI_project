@@ -1,18 +1,27 @@
-import './jquery.materialripple.js';
+import $ from 'jquery';
+import './jquery.materialripple';
 
 class Button {
-	constructor(domElement){
-		this.domElement = domElement;
-		this.initialize();
-	}
+  constructor(domElement) {
+    this.domElement = domElement;
+    this._initialize();
+  }
 
-	initialize() {
-		$(document).ready(() => {
-			$(this.domElement).materialripple();
-		});
-	}
+  _initialize() {
+    $(document).ready(() => {
+      const $button = $(this.domElement);
+      $button.addClass('ripple').materialripple();
+
+      $button.on('keypress.ripple', e => this._handleEnterPress(e));
+    });
+    return this;
+  }
+
+  _handleEnterPress(event) {
+    if (event.which === 13) {
+      $(this.domElement).click();
+    }
+  }
 }
 
-$('.ripple').each(function() {
-	new Button(this);
-});
+$('.js-button').each((i, element) => new Button(element));

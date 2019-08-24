@@ -1,83 +1,80 @@
-class DonutChart{
-	constructor(domElement){
-		this.domElement = domElement;
-		this.values = this.getValues();
-		this.colors = this.getColors();
-		this.initialize();
-	}
-	
-	initialize(){
-		$(document).ready(() => {
-			this.drawDonut();
-		});
-	}
+import $ from 'jquery';
 
-	// Creates svg element, returned as jQuery object
-	static $s(elem){
-		return $(document.createElementNS('http://www.w3.org/2000/svg', elem));
-	}
+class DonutChart {
+  constructor(domElement) {
+    this.domElement = domElement;
+    this.values = this._getValues();
+    this.colors = this._getColors();
+    this._initialize();
+  }
 
-	getValues(){
-		var values = $(this.domElement).data("values");
-		if (typeof values == 'number') return [values];
+  _getValues() {
+    const values = $(this.domElement).data('values');
+    if (typeof values === 'number') return [values];
+    return values.split(',');
+  }
 
-		return values.split(",");
-	}
+  _getColors() {
+    return $(this.domElement).data('colors').split(',');
+  }
 
-	getColors(){
-		return $(this.domElement).data("colors").split(",");
-	}
+  _initialize() {
+    $(document).ready(() => this._drawDonut());
+  }
 
-	drawDonut(){
-		var el = $(this.domElement);
-		var radius = 15.91549430918954;
-		var backgroundColor = '#e5e5e5';
-		var data = this.values;
-		var colors = this.colors;
-		if (data[0] === 0 && data.length === 1) {
-			backgroundColor = 'transparent';
-		}
-		var $svg = DonutChart.$s("svg").attr({width: '100%', height: '100%'});
-		var $circle = DonutChart.$s("circle").attr({cx: radius, cy: radius, r: radius, fill: 'transparent', stroke: backgroundColor});
-		//$circle.attr("stroke-width",4);
-		$svg.append($circle);
-		
-		var offset = 0;
-		var dashoffset0 = 25;
-		for (var i=0; i< data.length; i++){
-			var $segment = DonutChart.$s("circle").attr({cx: radius, cy: radius, r: radius, fill: 'transparent', stroke: colors[i]});
-			//$segment.attr("stroke-width",4);
-			var dashoffset = 100 - offset + dashoffset0;
-			$segment.attr("stroke-dasharray", data[i]+' '+(100-data[i]));
-			if (i === 0){
-			$segment.attr("stroke-dashoffset", dashoffset0);
-		}
-		else{
-			$segment.attr("stroke-dashoffset", dashoffset);
-		}
-			$svg.append($segment);
-			offset += +data[i];
-		}
-		el.append($svg);
-		var strokeWidth = parseFloat(el.find("circle").css("stroke-width"));
-		var viewBoxTop = 0 - (strokeWidth/2);
-		var viewBoxBottom = radius * 2 + strokeWidth;
-		var viewBoxValue = viewBoxTop + ' ' + viewBoxTop + ' ' + viewBoxBottom + ' ' + viewBoxBottom;
-		//$svg.setAttribute("viewBox",);
-		$svg.attr({viewBox: viewBoxValue});
-		if (el.has(".donut-chart__label")){
-			el.find(".donut-chart__label").text(data[0]);
-		}
-	}
+  _drawDonut() {
+    const $donut = $(this.domElement);
+    const radius = 15.91549430918954;
+    const data = this.values;
+    const colors = this.colors;
+    let backgroundColor = '#e5e5e5';
+    if (data[0] === 0 && data.length === 1) {
+      backgroundColor = 'transparent';
+    }
+
+    const $svg = DonutChart.$s('svg').attr({ width: '100%', height: '100%' });
+    const $circle = DonutChart.$s('circle').attr({
+      cx: radius, cy: radius, r: radius, fill: 'transparent', stroke: backgroundColor,
+    });
+    $svg.append($circle);
+
+    let offset = 0;
+    const dashoffset0 = 25;
+
+    data.forEach((item, i) => {
+      const $segment = DonutChart.$s('circle').attr({
+        cx: radius, cy: radius, r: radius, fill: 'transparent', stroke: colors[i],
+      });
+      const dashoffset = 100 - offset + dashoffset0;
+
+      $segment.attr('stroke-dasharray', `${item} ${100 - item}`);
+      if (i === 0) {
+        $segment.attr('stroke-dashoffset', dashoffset0);
+      } else {
+        $segment.attr('stroke-dashoffset', dashoffset);
+      }
+      $svg.append($segment);
+      offset += +item;
+    });
+
+    $donut.append($svg);
+
+    const strokeWidth = parseFloat($donut.find('circle').css('stroke-width'));
+    const viewBoxTop = 0 - (strokeWidth / 2);
+    const viewBoxBottom = radius * 2 + strokeWidth;
+    const viewBoxValue = `${viewBoxTop} ${viewBoxTop} ${viewBoxBottom} ${viewBoxBottom}`;
+    $svg.attr({ viewBox: viewBoxValue });
+
+    const $label = $donut.find('.donut-chart__label');
+    if ($label) {
+      $donut.find('.donut-chart__label').text(data[0]);
+    }
+  }
+
+  // Creates svg element, returned as jQuery object
+  static $s(elem) {
+    return $(document.createElementNS('http://www.w3.org/2000/svg', elem));
+  }
 }
 
-$('.donut-chart').each(function() {
-	new DonutChart(this);
-});
-/*
-// var data = [12.5,25,30]
-// var colors = ['#747474','#e75735','#4eb7a8']
-$.fn.addDonutChart = function (data, colors) {
-	
-	
-};*/
+$('.donut-chart').each((i, element) => new DonutChart(element));

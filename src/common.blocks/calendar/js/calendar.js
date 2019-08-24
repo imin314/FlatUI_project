@@ -1,18 +1,17 @@
-import './dcalendar.picker.js';
+import $ from 'jquery';
+import './dcalendar.picker';
 
 class Calendar {
-	constructor(domElement) {
-		this.domElement = domElement;
-		this.initialize();
-	}
+  constructor(domElement) {
+    this.domElement = domElement;
+    this._initialize();
+  }
 
-	initialize(){
-		$(document).ready(() => {
-			$(this.domElement).dcalendar();
-		});
-	}
+  _initialize() {
+    $(document).ready(() => {
+      $(this.domElement).dcalendar();
+    });
+  }
 }
 
-$('.calendar').each(function(){
-	new Calendar(this);
-});
+$('.calendar').each((i, element) => new Calendar(element));

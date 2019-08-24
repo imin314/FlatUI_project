@@ -1,22 +1,22 @@
 @import '../common.blocks/button/styl/jquery.materialripple.css'
 
 .button
-  text-decoration none
-  cursor pointer
   display inline-block
-  text-transform uppercase
-  transition all .3s, visibility 0s
-  overflow hidden
-  text-align center
+  width 8.406593406593407rem
   padding 0.659340659340659rem
+  overflow hidden
   font-size 0.857142857142857rem
-  letter-spacing 0.035rem
   font-weight bold
+  text-align center
+  text-decoration none
+  text-transform uppercase
+  letter-spacing 0.035rem
   color color-cold-darker
+  cursor pointer
   background-color white
-  width remify(153px)
   border-radius 5px
   box-shadow inset 0 0 0 1px color-cold-darker, 0 4px 0 0 color-cold-darker
+  transition all .3s, visibility 0s
   &:hover
   &:focus
     @media (hover:hover)
@@ -34,9 +34,9 @@
     box-shadow 0 4px 0 0 color-cold
 
   &_size_small
-    font-size 0.714285714285714rem
     width remify(102px)
     padding 0.32967032967033rem
+    font-size 0.714285714285714rem
 
   &_size_responsive
     width 100%
@@ -48,6 +48,7 @@
     border-color color-warm-darker
     box-shadow inset 0 0 0 1px color-warm-darker, 0 4px 0 0 color-warm-darker
     &:hover
+    &:focus
       @media (hover:hover)
         color white
         background-color color-warm

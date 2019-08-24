@@ -1,14 +1,14 @@
 mixin chartSection()
- .chart-section
-  h1.chart-section__header.section-title percentages / pie chart
-  .chart-section__container
-   .chart-section__chart
-    +donutChart({ values: "0", colors: "#e75735", isPercentage: true})
-   .chart-section__chart
-    +donutChart({ values: "38", colors: "#e75735", isPercentage: true})
-   .chart-section__chart
-    +donutChart({ values: "62", colors: "#e75735", isPercentage: true})
-   .chart-section__chart
-    +donutChart({ values: "89", colors: "#e75735", isPercentage: true})
-   .chart-section__chart
-    +donutChart({ values: "12.5,25,30", colors: "#747474,#e75735,#4eb7a8"})
+  section.chart-section
+    h2.chart-section__title percentages / pie chart
+    .chart-section__container
+      .chart-section__chart
+        +donutChart({values: "0", colors: "#e75735", isPercentage: true})
+      .chart-section__chart
+        +donutChart({values: "38", colors: "#e75735", isPercentage: true})
+      .chart-section__chart
+        +donutChart({values: "62", colors: "#e75735", isPercentage: true})
+      .chart-section__chart
+        +donutChart({values: "89", colors: "#e75735", isPercentage: true})
+      .chart-section__chart
+        +donutChart({values: "12.5,25,30", colors: "#747474,#e75735,#4eb7a8"})

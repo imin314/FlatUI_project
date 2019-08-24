@@ -1,12 +1,20 @@
-mixin button(_settings)
- //- parameters: size: small, responsive (or both separated by whitespace)
- //- color: reverted, warm
- //- link attribute might be empty
- - var className = "button";
- - if (_settings.size!=undefined) {
- - for (let value of _settings.size.split(" ")) {
- - className+= " button_size_"+value;
- - }}
- - if (_settings.color!=undefined) className+= " button_color_"+_settings.color;
- - var linkAttr = _settings.link!=undefined?"href="+_settings.link:"";
- a.noselect.ripple(class=className title=_settings.title!=undefined?_settings.title:"button" linkAttr)= _settings.title!=undefined?_settings.title:"button"
+mixin button(settings)
+  //- parameters: 
+  //- size: small, responsive (or both separated by whitespace)
+  //- color: reverted, warm
+  //- link attribute might be empty
+  //- isExternal: if true, adds target="_blank" and rel="noopener noreferrer"
+  - let className = 'button js-button';
+  - if (settings.size) {
+  -   settings.size.split(' ').forEach((value) => {
+  -     className += ` button_size_${value}`;
+  -   });
+  - }
+  - if (settings.color) {
+  -   className += ` button_color_${settings.color}`;
+  - }
+  - const titleAttr = settings.title ? settings.title : 'button';
+  - const hrefAttr = settings.link ? settings.link : false;
+  - const targetAttr = settings.isExternal ? '_blank' : false;
+  - const relAttr = settings.isExternal ? 'noopener noreferrer' : false;
+  a(class=className title=titleAttr tabindex="0" href=hrefAttr target=targetAttr rel=relAttr)= titleAttr
