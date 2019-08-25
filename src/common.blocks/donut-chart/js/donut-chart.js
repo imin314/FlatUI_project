@@ -23,12 +23,13 @@ class DonutChart {
   }
 
   _drawDonut() {
-    const $donut = $(this.domElement);
     const radius = 15.91549430918954;
-    const data = this.values;
+    const $donut = $(this.domElement);
+    const values = this.values;
     const colors = this.colors;
+
     let backgroundColor = '#e5e5e5';
-    if (data[0] === 0 && data.length === 1) {
+    if (values[0] === 0 && values.length === 1) {
       backgroundColor = 'transparent';
     }
 
@@ -41,20 +42,20 @@ class DonutChart {
     let offset = 0;
     const dashoffset0 = 25;
 
-    data.forEach((item, i) => {
+    values.forEach((value, i) => {
       const $segment = DonutChart.$s('circle').attr({
         cx: radius, cy: radius, r: radius, fill: 'transparent', stroke: colors[i],
       });
       const dashoffset = 100 - offset + dashoffset0;
 
-      $segment.attr('stroke-dasharray', `${item} ${100 - item}`);
+      $segment.attr('stroke-dasharray', `${value} ${100 - value}`);
       if (i === 0) {
         $segment.attr('stroke-dashoffset', dashoffset0);
       } else {
         $segment.attr('stroke-dashoffset', dashoffset);
       }
       $svg.append($segment);
-      offset += +item;
+      offset += Number(value);
     });
 
     $donut.append($svg);
@@ -66,12 +67,12 @@ class DonutChart {
     $svg.attr({ viewBox: viewBoxValue });
 
     const $label = $donut.find('.donut-chart__label');
-    if ($label) {
-      $donut.find('.donut-chart__label').text(data[0]);
+    if ($label.length > 0) {
+      $label.text(values[0]);
     }
   }
 
-  // Creates svg element, returned as jQuery object
+  // creates svg element, returned as jQuery object
   static $s(elem) {
     return $(document.createElementNS('http://www.w3.org/2000/svg', elem));
   }

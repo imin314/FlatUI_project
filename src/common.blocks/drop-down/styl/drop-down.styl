@@ -5,44 +5,46 @@
     display flex
     flex-direction row
     flex-wrap nowrap
-    background-color color-bg
     align-items stretch
+    background-color color-bg
+
   &__label
-    background inherit
-    font-size 1rem
+    width 100%
     padding remify(6px) remify(17px) remify(7px)
-    color darken(color-bg, 40.5)
+    font-size 1rem
     font-family ui-font-family
     letter-spacing remify(0.2px)
+    color darken(color-bg, 40.5)
+    background inherit
     border none
     border-top-left-radius 3px
     border-bottom-left-radius 3px
-    width 100%
     -webkit-appearance none
     cursor pointer
 
   &__button
+    position relative
+    flex 43px 0 0
     border none
     background-color color-cold
     border-top-right-radius 3px
     border-bottom-right-radius 3px
     cursor pointer
     -webkit-appearance none
-    position relative
-    flex 43px 0 0
     outline none
     &::before
-      border 3px solid white
-      border-top none
-      border-right none
       content ''
-      height remify(13px)
-      width @height
       position absolute
       left 50%
       top 50%
+      height remify(13px)
+      width @height
+      border 3px solid white
+      border-top none
+      border-right none
       transform translate(-55%, -55%) rotate(-45deg)
     &:hover
+    &:focus
       @media (hover:hover)
         background-color darken(color-cold, 5)
     &:active
@@ -53,23 +55,24 @@
         transform translate(-55%, -55%) rotate(-45deg) scale(0.9)
 
   &__list
-    margin 0
-    padding 0
     display none
-    background-color color-cold
-    padding remify(8px) 0
     position relative
     top -3px
+    margin 0
+    padding remify(8px) 0
+    background-color color-cold
     border-radius 4px
+    &_active
+      display block
 
   &__item
-    background-color inherit
-    color white
+    padding remify(6px) remify(18px)
+    margin-bottom remify(4px)
     font-size 1rem
     font-family ui-font-family
     letter-spacing remify(0.2px)
-    padding remify(6px) remify(18px)
-    margin-bottom remify(4px)
+    color white
+    background-color inherit
     list-style none
     cursor pointer
     &:last-of-type
@@ -80,7 +83,4 @@
         background-color #28a290
     &:active
       background-color #28a290
-
-  &__list_active
-    display block
       
