@@ -1,6 +1,13 @@
-mixin inputField(_settings)
- - var req = required?"required":"";
- input.input-field(id=_settings.id type=_settings.type!=undefined?_settings.type:"text" 
-  name=_settings.name!=undefined?_settings.name:"" 
-  placeholder=_settings.placeholder!=undefined?_settings.placeholder:"" 
-  realabel=_settings.arealabel!=undefined?_settings.arealabel:"" req)
+mixin inputField(settings)
+  - const typeAttr = settings.type || 'text' ;
+  - const nameAttr = settings.name || '';
+  - const placeholderAttr = settings.placeholder || '';
+  - const arealabelAttr = settings.arealabel || '';
+  - const requiredAttr = settings.isRequired || false;
+  input.input-field(
+    type = typeAttr
+    name = nameAttr
+    placeholder = placeholderAttr
+    arealabel = arealabelAttr
+    required = requiredAttr
+  )

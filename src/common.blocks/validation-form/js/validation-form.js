@@ -1,35 +1,34 @@
 import 'jquery-validation';
 
 export default class ValidationForm {
+  constructor(domElement) {
+    this.domElement = domElement;
+    this.namespace = this.domElement.className;
+  }
 
-	constructor(domElement) {
-		this.domElement = domElement;
-		this.namespace = this.domElement.className;
-	}
+  initialize() {
+    $(document).ready(() => {
+      let inputs = $(this.domElement).find('input[type=text],input[type=email]');
+      let bubbleErrorClass = `${this.namespace}__bubble_type_error`;
+      let bubbleGoodClass = `${this.namespace}__bubble_type_good`;
 
-	initialize() {
-		$(document).ready(() => {
-			var inputs = $(this.domElement).find('input[type=text],input[type=email]');
-			var bubbleErrorClass = `${this.namespace}__bubble_type_error`;
-			var bubbleGoodClass = `${this.namespace}__bubble_type_good`;
-			
-			$(this.domElement).validate({
-				errorPlacement: function (){},	
-			});
-			
-			inputs.rules( "add", {
-				required: true,
-				minlength: 2,
-				messages: {
-					required: "",
-					minlength: "",
-					email: ""
-				}
-			});
+      $(this.domElement).validate({
+        errorPlacement (){},
+      });
 
-			inputs.each(function () {
-				var input = $(this);
-				input.blur(function() {
+      inputs.rules('add', {
+        required: true,
+        minlength: 2,
+        messages: {
+          required: '',
+          minlength: '',
+          email: '',
+        },
+      });
+
+      inputs.each(function () {
+        let input = $(this);
+        input.blur(() => {
 					var bubble = input.parent().next();
 					if(!input.valid()) {
 						bubble.removeClass(bubbleGoodClass).addClass(bubbleErrorClass);
@@ -40,13 +39,13 @@ export default class ValidationForm {
 						bubble.text("Thanks!");
 					}
 				});
-		
-				input.focus(function(){
+
+        input.focus(() => {
 					var bubble = input.parent().next();
 					bubble.removeClass(bubbleGoodClass);
 					bubble.removeClass(bubbleErrorClass);
 				});
-			});
-		});
-	}
+      });
+    });
+  }
 }

@@ -1,38 +1,30 @@
+import $ from 'jquery';
+
 class DropDown {
   constructor(domElement) {
     this.domElement = domElement;
-    this.namespace = this.domElement.className;
-    this.initialize();
+    this._initialize();
   }
 
-  findChild(name) {
-    let names = name.split(' ');
-    let searchPattern = '.' + this.namespace + '__' + names[0];
-    for (let i = 1; i < names.length; i++) {
-      searchPattern += ', .' + this.namespace + '__' + names[i];
-    }
-    return $(this.domElement).find(searchPattern);
-  }
-
-  initialize() {
+  _initialize() {
     $(document).ready(() => {
-      let list = this.findChild('list');
-      let activeClass = `${this.namespace  }__list_active`;
-      let label = this.findChild('label');
-
-      this.findChild('button label').click(() => {
-				list.toggleClass(activeClass);
-			});
-
-      this.findChild('item').click(function () {
-        let option = $(this).text();
-        list.removeClass(activeClass);
-        label.text(option);
-      });
+      const $dropdown = $(this.domElement);
+      $dropdown.on('click.drop-down', e => this._handleDropDownClick(e));
     });
+  }
+
+  _handleDropDownClick(event) {
+    const $dropdown = $(this.domElement);
+    const $targetElement = $(event.target);
+    const isItemChosen = $targetElement.hasClass('js-drop-down__item');
+
+    $dropdown.toggleClass('drop-down_active');
+
+    if (isItemChosen) {
+      const chosenOption = $targetElement.text();
+      $dropdown.find('.js-drop-down__label').text(chosenOption);
+    }
   }
 }
 
-$('.drop-down').each(function () {
-  new DropDown(this);
-});
+$('.js-drop-down').each((i, element) => new DropDown(element));
