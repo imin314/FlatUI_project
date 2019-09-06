@@ -1,11 +1,10 @@
 mixin searchSection()
- .search-section
-  h1.search-section__header.section-title search / drop down
-  .search-section__container
-   .search-section__search-box
-    +searchBox()
-   .search-section__search-box
-    +searchBox()(class="search-box__input-field_filled")
-   .search-section__drop-down
-    +dropDown(['This is option 1','This is option 2','This is option 3','This is option 4'])
-   
+  section.search-section
+    h2.search-section__title search / drop down
+    form.search-section__form
+      .search-section__search-box
+        +searchBox()
+      .search-section__search-box
+        +searchBox(true)
+      .search-section__drop-down
+        +dropDown(['This is option 1','This is option 2','This is option 3','This is option 4'])

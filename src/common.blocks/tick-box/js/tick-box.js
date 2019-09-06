@@ -10,7 +10,9 @@ class TickBox {
     $(document).ready(() => {
       const $tickbox = $(this.domElement);
 
-      $tickbox.on('keypress.tickbox', e => this._handleEnterPress(e));
+      $tickbox
+        .on('keypress.tickbox', e => this._handleEnterPress(e))
+        .on('click.tickbox', () => this._removeFocus());
     });
   }
 
@@ -19,6 +21,10 @@ class TickBox {
       const checkbox = $(this.domElement).find('input[type=checkbox]')[0];
       checkbox.checked = !checkbox.checked;
     }
+  }
+
+  _removeFocus() {
+    $(this.domElement).find('.js-tick-box__checkmark').blur();
   }
 }
 

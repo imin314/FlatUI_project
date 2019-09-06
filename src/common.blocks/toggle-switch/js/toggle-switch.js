@@ -10,7 +10,9 @@ class ToggleSwitch {
     $(document).ready(() => {
       const $toggle = $(this.domElement);
 
-      $toggle.on('keypress.toggle', e => this._handleEnterPress(e));
+      $toggle
+        .on('keypress.toggle', e => this._handleEnterPress(e))
+        .on('click.toggle', () => this._removeFocus());
     });
   }
 
@@ -19,6 +21,10 @@ class ToggleSwitch {
       const checkbox = $(this.domElement).find('input[type=checkbox]')[0];
       checkbox.checked = !checkbox.checked;
     }
+  }
+
+  _removeFocus() {
+    $(this.domElement).find('.js-toggle-switch__slider').blur();
   }
 }
 

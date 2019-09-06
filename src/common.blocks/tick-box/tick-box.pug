@@ -7,4 +7,4 @@ mixin tickBox(settings)
   div(class=className)
     label.tick-box__label
       input.tickbox__input(type="checkbox" value=settings.value name=settings.name checked=isChecked)
-      .tick-box__checkmark(tabindex="0")
+      .tick-box__checkmark.js-tick-box__checkmark(tabindex="0")

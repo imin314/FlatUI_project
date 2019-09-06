@@ -1,5 +1,7 @@
-mixin searchBox()
- .search-box
-  .search-box__input
-   input.search-box__input-field&attributes(attributes)(type='text' placeholder='Search')
-  button.search-box__button(type='submit')
+mixin searchBox(isEmptyResult)
+  - let className = 'search-box js-search-box';
+  - if (isEmptyResult) className = `${className} search-box_filled`;
+  div(class = className)
+    label.search-box__label
+      input.search-box__input(type="text" placeholder="Search")
+    button.search-box__button(type="button")

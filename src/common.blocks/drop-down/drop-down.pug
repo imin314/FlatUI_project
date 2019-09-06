@@ -2,7 +2,7 @@ mixin dropDown(items)
   .drop-down.js-drop-down
     .drop-down__textarea
       .drop-down__label.js-drop-down__label Choose An Option
-      button.drop-down__button
+      button.drop-down__button.js-drop-down__button(type="button")
     ul.drop-down__list
       each val in items
         li.drop-down__item.js-drop-down__item= val

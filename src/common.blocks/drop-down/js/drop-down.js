@@ -17,13 +17,17 @@ class DropDown {
     const $dropdown = $(this.domElement);
     const $targetElement = $(event.target);
     const isItemChosen = $targetElement.hasClass('js-drop-down__item');
-
     $dropdown.toggleClass('drop-down_active');
 
     if (isItemChosen) {
       const chosenOption = $targetElement.text();
       $dropdown.find('.js-drop-down__label').text(chosenOption);
     }
+  }
+
+  _handleDropDownFocusOut() {
+    const $dropdown = $(this.domElement);
+    $dropdown.removeClass('drop-down_active');
   }
 }
 
