@@ -1,51 +1,52 @@
+import $ from 'jquery';
 import 'jquery-validation';
 
 export default class ValidationForm {
   constructor(domElement) {
     this.domElement = domElement;
-    this.namespace = this.domElement.className;
   }
 
   initialize() {
     $(document).ready(() => {
-      let inputs = $(this.domElement).find('input[type=text],input[type=email]');
-      let bubbleErrorClass = `${this.namespace}__bubble_type_error`;
-      let bubbleGoodClass = `${this.namespace}__bubble_type_good`;
+      const $domElement = $(this.domElement);
+      const namespace = this.domElement.classList[0];
+      this.bubbleErrorClass = `${namespace}__bubble_type_error`;
+      this.bubbleGoodClass = `${namespace}__bubble_type_good`;
+      const $inputs = $domElement.find('input[type=text], input[type=email]');
 
-      $(this.domElement).validate({
-        errorPlacement (){},
-      });
+      $domElement.validate({ errorPlacement() {} });
 
-      inputs.rules('add', {
-        required: true,
-        minlength: 2,
-        messages: {
-          required: '',
-          minlength: '',
-          email: '',
-        },
-      });
+      $inputs
+        .rules('add', {
+          required: true,
+          minlength: 2,
+          messages: {
+            required: '',
+            minlength: '',
+            email: '',
+          },
+        });
 
-      inputs.each(function () {
-        let input = $(this);
-        input.blur(() => {
-					var bubble = input.parent().next();
-					if(!input.valid()) {
-						bubble.removeClass(bubbleGoodClass).addClass(bubbleErrorClass);
-						bubble.text("Error");
-					}
-					else{
-						bubble.removeClass(bubbleErrorClass).addClass(bubbleGoodClass);
-						bubble.text("Thanks!");
-					}
-				});
-
-        input.focus(() => {
-					var bubble = input.parent().next();
-					bubble.removeClass(bubbleGoodClass);
-					bubble.removeClass(bubbleErrorClass);
-				});
-      });
+      $inputs
+        .on('blur.validation', e => this._handleInputBlur(e))
+        .on('focus.validation', e => this._handleInputFocus(e));
     });
+  }
+
+  _handleInputBlur(event) {
+    const $input = $(event.target);
+    const $bubble = $input.next();
+    if ($input.valid()) {
+      $bubble.removeClass(this.bubbleErrorClass).addClass(this.bubbleGoodClass);
+      $bubble.text('Thanks!');
+    } else {
+      $bubble.removeClass(this.bubbleGoodClass).addClass(this.bubbleErrorClass);
+      $bubble.text('Error');
+    }
+  }
+
+  _handleInputFocus(event) {
+    const $bubble = $(event.target).next();
+    $bubble.removeClass(this.bubbleGoodClass).removeClass(this.bubbleErrorClass);
   }
 }

@@ -4,8 +4,18 @@ import ValidationForm from '../../validation-form/js/validation-form';
 class EmailForm extends ValidationForm {
   constructor(domElement) {
     super(domElement);
-    this.initialize();
+    this._initialize();
+  }
+
+  _initialize() {
+    super.initialize();
+
+    $(document).ready(() => {
+      const $form = $(this.domElement);
+      const $button = $form.find('.js-email-form__button');
+      $button.on('click.email-form', () => $form.submit());
+    });
   }
 }
 
-$('.email-form').each((i, element) => new EmailForm(element));
+$('.js-email-form').each((i, element) => new EmailForm(element));

@@ -1,8 +1,6 @@
 mixin toggleSwitch(isChecked)
- label.toggle-switch.noselect
-  - if (isChecked)
-   input.toggle-switch__checkbox(type="checkbox" checked)
-  - else
-   input.toggle-switch__checkbox(type="checkbox")
-  span.toggle-switch__slider.noselect
-  .toggle-switch__text
+  - const isCheckedAttr = !!isChecked
+  .toggle-switch.js-toggle-switch
+    label.toggle-switch__label
+      input.toggle-switch__checkbox(type="checkbox" checked=isCheckedAttr)
+      .toggle-switch__slider(tabindex="0")

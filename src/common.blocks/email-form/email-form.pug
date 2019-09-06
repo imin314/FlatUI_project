@@ -1,11 +1,11 @@
 mixin emailForm()
-  form.email-form(action="send_email.php" method="post")
+  form.email-form.js-email-form
     label.email-form__name
       input.email-form__input(type = "text" name = "name" placeholder = "Your Name" arealabel = "name" required)
-      .email-form__bubble
+      .email-form__bubble.js-email-form__bubble
     label.email-form__email
       input.email-form__input(type = "email" name = "email" placeholder = "Your Email" arealabel = "email" required)
-      .email-form__bubble
+      .email-form__bubble.js-email-form__bubble
     textarea.email-form__message(name="message" placeholder="Your Message" arealabel="Message")
-    .email-form__button
+    .email-form__button.js-email-form__button
       +button({ title: "submit", color: "reverse" })
