@@ -1,27 +1,21 @@
 .news-section
-  &__header
+  &__title
     margin-bottom 2.4rem
-
+    sectionTitle()
+  
   &__container
-    width 100%
     display flex
     flex-direction row
-    flex-wrap wrap
-    justify-content center
-
+    justify-content space-around
+    width 100%
+    @media screen and (max-width:760px)
+      flex-wrap wrap
+  
   &__news-card
-    width 48.44%
-    max-width 445.61px
-    min-width 260.11px
-    flex-shrink 1
-    font-size 2vw
+    flex 0 1 371.484px
     &:first-child
       margin-right 3%
-      @media screen and (max-width: 650px)
-        margin 2%
-    @media screen and (min-width: 1100px)
-      font-size remify(22px)
-    @media screen and (max-width: 814px)
-      font-size remify(13px)
+      @media screen and (max-width:760px)
+        margin 0 0 1rem 0
       
     
