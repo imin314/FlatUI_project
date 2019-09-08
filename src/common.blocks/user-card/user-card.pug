@@ -1,20 +1,20 @@
 mixin userCard(user, colored)
- - var image = require("../../assets/img/"+ user.img)
- - var icons = [{name: 'facebook'}, {name: 'twitter'}, {name: 'dribbble'}];
- - var className = "user-card";
- - if (colored === true) {
- - className += " user-card_colored";
- -  icons.forEach(function(item) {
- -   item.isWhite = true;
- - });
- - }
- div(class = className)
-  .user-card__photo(style='background-image: url('+image+')')
-  .user-card__box
-   h2.user-card__name!= user.name
-   h3.user-card__position!= user.position
-   .user-card__icons
-    each item in icons
-     a.noselect.user-card__icon(href="#" title!=item.name)
-      +socialIcon(item)
+  - const image = require('../../assets/img/'+ user.img);
+  - const icons = [{ name: 'facebook' }, { name: 'twitter' }, { name: 'dribbble' }];
+  - let className = 'user-card';
+  - if (colored) {
+  -   className += ' user-card_colored';
+  -   icons.forEach((item) => {
+  -     item.isWhite = true;
+  -   });
+  - }
+  div(class = className)
+    .user-card__photo(style="background-image: url("+image+")")
+    .user-card__box
+      h3.user-card__name!= user.name
+      h4.user-card__position!= user.position
+      .user-card__icons
+        each item in icons
+          a.user-card__icon(href=user[item.name] title!=item.name target="blank" rel="noopener noreferrer")
+            +socialIcon(item)
     

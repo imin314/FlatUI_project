@@ -1,8 +1,22 @@
 mixin profileSection()
- .profile-section
-  .profile-section__header.section-title user profile
-  .profile-section__container
-   .profile-section__card
-    +userCard({name: 'John Smith', position: 'ux designer', img: 'john-smith.jpg'})
-   .profile-section__card
-    +userCard({name: 'Sarah Brown', position: 'developer', img: 'sarah-brown.jpg'}, true)
+  section.profile-section
+    h2.profile-section__title user profile
+    .profile-section__container
+      .profile-section__card
+        +userCard({ 
+          name: 'John Smith', 
+          position: 'ux designer', 
+          img: 'john-smith.jpg',
+          facebook: 'https://www.facebook.com/',
+          twitter: 'https://twitter.com/',
+          dribbble: 'https://dribbble.com/'
+        })
+      .profile-section__card
+        +userCard({
+          name: 'Sarah Brown',
+          position: 'developer',
+          img: 'sarah-brown.jpg',
+          facebook: 'https://www.facebook.com/',
+          twitter: 'https://twitter.com/',
+          dribbble: 'https://dribbble.com/'
+        }, true)
