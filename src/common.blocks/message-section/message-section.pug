@@ -1,5 +1,10 @@
 mixin messageSection()
- .message-section
-  .message-section__header.section-title messaging
-  .message-section__chat
-   +messenger({name: "Sarah Brown", image: "sarah-brown.jpg", inbox: "Hey! So are we cool to meet at the art gallery? Say 8pm", outbox: "Yeah that sounds great. See you then."})
+  section.message-section
+    h2.message-section__title messaging
+    .message-section__container
+      +messenger({ 
+        name: 'Sarah Brown',
+        image: 'sarah-brown.jpg',
+        inbox: 'Hey! So are we cool to meet at the art gallery? Say 8pm',
+        outbox: 'Yeah that sounds great. See you then.'
+      })

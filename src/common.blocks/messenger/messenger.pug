@@ -1,20 +1,16 @@
-mixin messenger(data, isFixed)
- - var image = require("../../assets/img/"+ data.image)
- - var className = 'messenger';
- - if (isFixed === true) {
- - className += ' messenger_position_fixed';
- - }
- div(class=className)
-  .messenger__header
-   .messenger__name= data.name
-   .messenger__photo(style='background-image: url('+image+')')
-  .messenger__icons
-   a.messenger__bubble-icon(href="#" title="")
-   a.messenger__camera-icon(href="#" title="add photo")
-  .messenger__container
-   .messenger__message.messenger__message_type_inbox= data.inbox
-   textarea.messenger__message.messenger__message_type_outbox(name='outbox' placeholder='Type your message...' )= data.outbox
-   .messenger__button
-    +button({title:"reply", color:"reverse", size: "responsive"})
+mixin messenger(msgData)
+ - const image = require(`../../assets/img/${msgData.image}`);
+  .messenger
+    header.messenger__header
+      .messenger__name= msgData.name
+      .messenger__photo(style='background-image: url(' + image + ')')
+    .messenger__container
+      .messenger__icons
+        a.messenger__bubble-icon(href="" title="")
+        a.messenger__camera-icon(href="" title="add photo")
+      .messenger__message.messenger__message_type_inbox= msgData.inbox
+      textarea.messenger__message.messenger__message_type_outbox(name="outbox" placeholder="Type your message..." )= msgData.outbox
+      .messenger__button
+        +button({ title: 'reply', color: 'reverse', size: 'responsive' })
 
   
