@@ -211,7 +211,7 @@
 			text-decoration: none;
 			display: block;
 			color: inherit;
-			padding: 0.25em;
+			padding: 0.27em;
 			outline: none;
 			border: 2px solid transparent;
 			transition: all .3s;
@@ -239,7 +239,7 @@
 		background-color: #e5e5e5;
 	}
 .calendar-footer span{
-	font-size: 1.1em;
+	font-size: 1em;
 	line-height: 1em;
 	font-weight: bold;
 	color: #868686;

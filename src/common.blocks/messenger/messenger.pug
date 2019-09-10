@@ -8,8 +8,12 @@ mixin messenger(msgData)
       .messenger__icons
         a.messenger__bubble-icon(href="" title="")
         a.messenger__camera-icon(href="" title="add photo")
-      .messenger__message.messenger__message_type_inbox= msgData.inbox
-      textarea.messenger__message.messenger__message_type_outbox(name="outbox" placeholder="Type your message..." )= msgData.outbox
+      .messenger__message.messenger__message_type_inbox
+        .messenger__text= msgData.inbox
+      textarea.messenger__message.messenger__message_type_outbox(
+        name="outbox"
+        placeholder="Type your message..."
+        rows="3")= msgData.outbox
       .messenger__button
         +button({ title: 'reply', color: 'reverse', size: 'responsive' })
 
