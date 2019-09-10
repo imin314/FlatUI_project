@@ -16,7 +16,7 @@ class SearchBox {
       $input.on('focus.searchbox', () => this._emptyInput());
 
       if ($searchbox.hasClass('search-box_filled')) {
-        this._handleButtonClick();
+        this._handleButtonClick($button);
       }
     });
   }
