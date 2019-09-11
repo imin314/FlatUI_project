@@ -1,35 +1,31 @@
-// Find all YouTube videos
-var $allVideos = $("iframe[src^='//player.vimeo.com'], iframe[src^='//www.youtube.com']"),
+class Video {
+  constructor(domElement) {
+    this.domElement = domElement;
+    this._initialize();
+  }
 
-    // The element that is fluid width
-    $fluidEl = $("body");
+  _initialize() {
+     $(document).ready(() => {
+        this.$video = $(domElement).find('.js-video__frame');
 
-// Figure out and save aspect ratio for each video
-$allVideos.each(function() {
+        const video = this.$video[0];
+        this.aspectRatio = video.height / video.width;
+        video.dataset.aspectRatio = this.aspectRatio;
+        video.removeAttribute('height');
+        video.removeAttribute('width');
 
-  $(this)
-    .data('aspectRatio', this.height / this.width)
+        this._resize();
+     });
 
-    // and remove the hard coded width/height
-    .removeAttr('height')
-    .removeAttr('width');
+     $(window).on('resize.video', () => this._resize());
+  }
 
-});
-
-// When the window is resized
-$(window).resize(function() {
-
-  var newWidth = $fluidEl.width();
-
-  // Resize all videos according to their own aspect ratio
-  $allVideos.each(function() {
-
-    var $el = $(this);
-    $el
+  _resize() {
+    const newWidth = document.width;
+    this.$video
       .width(newWidth)
-      .height(newWidth * $el.data('aspectRatio'));
+      .height(newWidth * this.aspectRatio);
+  }
+}
 
-  });
-
-// Kick off one resize to fix all videos on page load
-}).resize();
+$('.js-video').each((i, element) => new Video(element));

@@ -1,3 +1,9 @@
 mixin video(source)
- .video
-  iframe&attributes(attributes)(src=source frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+  .video.js-video
+    iframe.video__frame.js-video__frame(
+      src=source
+      frameborder="0"
+      webkitallowfullscreen
+      mozallowfullscreen
+      allowfullscreen
+    )
