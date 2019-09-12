@@ -1,5 +1,5 @@
-mixin speakerCard(data)
- article.speaker-card
-  .speaker-card__user-card
-   +userCard(data)
-  p.speaker-card__text!= data.text
+mixin speakerCard(speakerData)
+  article.speaker-card.js-speaker-card
+    .speaker-card__user-card
+      +userCard(speakerData)
+    p.speaker-card__text.js-speaker-card__text!= speakerData.text

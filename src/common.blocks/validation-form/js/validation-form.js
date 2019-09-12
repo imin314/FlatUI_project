@@ -2,16 +2,16 @@ import $ from 'jquery';
 import 'jquery-validation';
 
 export default class ValidationForm {
-  constructor(domElement) {
+  constructor(domElement, namespace) {
     this.domElement = domElement;
+    this.namespace = namespace;
   }
 
   initialize() {
     $(document).ready(() => {
       const $domElement = $(this.domElement);
-      const namespace = this.domElement.classList[0];
-      this.bubbleErrorClass = `${namespace}__bubble_type_error`;
-      this.bubbleGoodClass = `${namespace}__bubble_type_good`;
+      this.bubbleErrorClass = `${this.namespace}__bubble_type_error`;
+      this.bubbleGoodClass = `${this.namespace}__bubble_type_good`;
       const $inputs = $domElement.find('input[type=text], input[type=email]');
 
       $domElement.validate({ errorPlacement() {} });

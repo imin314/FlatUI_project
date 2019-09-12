@@ -1,19 +1,23 @@
-class OnlineHelp {
-	constructor(domElement) {
-		this.domElement = $(domElement);
-		this.namespace = this.domElement[0].className;
-		this.initialize();
-	}
+import $ from 'jquery';
 
-	initialize() {
-		$(document).ready(() => {
-			$(`.${this.namespace}__button`).click (() => {
-				$(`.${this.namespace}__messenger`).toggleClass(`${this.namespace}__messenger_visible`);
-			});
-		});
-	}
+class OnlineHelp {
+  constructor(domElement) {
+    this.$domElement = $(domElement);
+    this._initialize();
+  }
+
+  _initialize() {
+    $(document).ready(() => {
+      const $container = this.$domElement;
+      const $button = $container.find('.js-online-help__button');
+      this.$messenger = $container.find('.js-online-help__messenger');
+      $button.click(() => this._handleButtonClick());
+    });
+  }
+
+  _handleButtonClick() {
+    this.$messenger.toggleClass('online-help__messenger_visible');
+  }
 }
 
-$(".online-help").each(function() {
-	new OnlineHelp(this);
-});
+$('.js-online-help').each((i, element) => new OnlineHelp(element));

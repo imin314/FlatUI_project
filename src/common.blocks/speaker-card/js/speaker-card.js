@@ -1,26 +1,18 @@
+import $ from 'jquery';
+
 class SpeakerCard {
-	constructor(domElement) {
-		this.domElement = $(domElement);
-		this.namespace = this.domElement[0].className;
-		this.initialize();
-	}
+  constructor(domElement) {
+    this.domElement = $(domElement);
+    this._initialize();
+  }
 
-	findChild(name) {
-		return this.domElement.find(`.${this.namespace}__${name}`);
-	}
+  _initialize() {
+    $(window).on('load', () => this._addScrollBar());
+  }
 
-	addScrollBar(){
-		this.findChild("text").mCustomScrollbar();
-	}
-
-	initialize() {
-		var that = this;
-		$(window).on("load", function(){
-			that.addScrollBar();
-		});
-	}
+  _addScrollBar() {
+    this.domElement.find('.js-speaker-card__text').mCustomScrollbar();
+  }
 }
 
-$(".speaker-card").each(function() {
-	new SpeakerCard(this);
-});
+$('.js-speaker-card').each((i, element) => new SpeakerCard(element));

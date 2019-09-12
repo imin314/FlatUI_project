@@ -3,7 +3,7 @@ import ValidationForm from '../../validation-form/js/validation-form';
 
 class EmailForm extends ValidationForm {
   constructor(domElement) {
-    super(domElement);
+    super(domElement, 'email-form');
     this._initialize();
   }
 

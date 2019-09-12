@@ -1,13 +1,21 @@
-import ValidationForm from '../../validation-form/js/validation-form.js';
+import $ from 'jquery';
+import ValidationForm from '../../validation-form/js/validation-form';
 
 class RegistrationForm extends ValidationForm {
-	constructor(domElement) {
-		super(domElement);
-		this.namespace = this.domElement.className.split("__")[0];
-		this.initialize();
-	}
+  constructor(domElement) {
+    super(domElement, 'registration-form');
+    this._initialize();
+  }
+
+  _initialize() {
+    super.initialize();
+
+    $(document).ready(() => {
+      const $form = $(this.domElement);
+      const $button = $form.find('.js-registration-form__button');
+      $button.on('click.registration-form', () => $form.submit());
+    });
+  }
 }
 
-$('.registration-form__form').each(function() {
-	new RegistrationForm(this);
-});
+$('.js-registration-form__form').each((i, element) => new RegistrationForm(element));

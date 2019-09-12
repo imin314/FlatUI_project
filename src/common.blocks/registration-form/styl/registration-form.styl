@@ -1,11 +1,19 @@
 .registration-form
-  
+  &__first-stage
+    width 100%
+    max-width 800px
+    padding 2.5rem 1rem 1rem
+    margin 0 auto
+    background-color #bfcac8
+    border-radius 10px
+
   &__name
     display flex
     margin 0 auto 1rem
 
   &__input
     flex 271px 1 1
+    inputField()
 
   &__email
     margin-bottom 0.8rem
@@ -13,18 +21,18 @@
     margin 0 auto 2rem
 
   &__bubble
-    visibility hidden
+    position relative
     width 5.21978021978022rem
     min-width 4.5rem
     padding 0.55rem
-    border-radius 5px
-    position relative
+    margin-left 0.6593406593406593rem
+    visibility hidden
     font-size 0.7rem
     text-transform uppercase
     text-align center
     font-weight bold
     color white
-    margin-left 0.6593406593406593rem
+    border-radius 5px
     letter-spacing 0.06rem
     transition 0.3s
     transform translateX(-50px)
@@ -54,43 +62,44 @@
     &::before
       background-color color-cold
       visibility visible
-  &__first-stage
-    background-color #bfcac8
-    border-radius 10px
-    padding 2.5rem 1rem 1rem
-    width 100%
-    margin 0 auto
-    max-width 800px
+
   &__subscribe
     margin 0 auto
     display flex
     justify-content center
+    align-items center
+
   &__subscribe-text
     margin 0 0.5rem
     text-align center
+
   &__pass-selector
     margin-top 3rem
     overflow hidden
+
   &__last-stage
-    margin 2rem auto
-    width 100%
-    max-width 800px
-    background-color #bfcac8
-    border-radius 10px
-    padding 0.5rem 1rem
     display flex
     justify-content center
     align-items center
     flex-wrap wrap
+    padding 0.5rem 1rem
+    margin 2rem auto
+    width 100%
+    max-width 800px
     font-size 1rem
+    background-color #bfcac8
+    border-radius 10px
     @media screen and (max-width:375px)
       font-size 0.8rem
+
   &__policy-checkbox
     flex auto 0 0
+
   &__policy-text
     flex 200px 1 1
     margin 0.5rem 1rem
     font-size inherit
+
   &__button
     flex auto 0 2
     text-align right

@@ -8,35 +8,32 @@
     position absolute
     bottom 60px
     right 0
-    width 300px
+    width 320px
+    font-size 0.8rem
     border-radius 8px
     box-shadow 0 0 20px 0 rgba(0,0,0,0.3)
-    font-size 0.8rem
     &_visible
       visibility visible
     @media screen and (max-width:375px)
       width 220px
       font-size 0.6rem
   &__button
-    width 50px
-    height @width
-    background-image url('../assets/img/bubble-icon_white.svg')
-    background-repeat no-repeat
-    background-size 25px
-    background-color color-warm
-    background-position center
     position absolute
     bottom 0
     right 0
+    width 50px
+    height @width
+    background color-warm url('../assets/img/bubble-icon_white.svg') center no-repeat
+    background-size 25px
+    border none
     border-radius 7px
     box-shadow 0 0 10px 0 rgba(0,0,0,0.4)
-    border none
     z-index 10
     outline none
     cursor pointer
     &:hover
       @media (hover:hover)
-        background-color darker(color-bg,50%)
+        background-color darker(color-bg, 50%)
     &:active
       @media (hover:none)
-        background-color darker(color-bg,50%)
+        background-color darker(color-bg, 50%)
