@@ -1,11 +1,10 @@
-mixin slider(tooltip)
- - var className = 'slider_type_tooltip';
- - if (!tooltip){
-  - className = 'slider_type_scale';
- - }
- .slider(class= className)
- - if (!tooltip)
-  ul.slider__scale
-   - for (var i = 0; i <= 100; i+=25){
-    li.slider__scale-item= i
-   - }
+mixin slider(settings)
+  - let className = 'slider js-slider';
+  - if (settings.withTooltip) className += ' slider_type_tooltip js-slider_type_tooltip';
+  - if (settings.withScale) className += ' slider_type_scale';
+  div(class= className)
+  - if (settings.withScale)
+    ul.slider__scale
+      - for (let i = 0; i <= 100; i += 25){
+        li.slider__scale-item= i
+      - }
