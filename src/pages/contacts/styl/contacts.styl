@@ -1,8 +1,13 @@
 .contacts-page
-  width 90%
-  margin 100px auto 2rem
-  @media screen and (max-width:425px)
-    margin-top 60px
+  display flex
+  flex-direction column
+  min-height 100%
+  &__main
+    flex 1 0 auto
+    width 90%
+    margin 100px auto 2rem
+    @media screen and (max-width:425px)
+      margin-top 60px
   &__email
     margin 3rem auto 0
     @media screen and (max-width:425px)
@@ -18,4 +23,4 @@
   &__map
     margin 3rem auto 0
   &__footer
-    margin-top 3rem
+    flex 0 0 auto
