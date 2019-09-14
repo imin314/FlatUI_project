@@ -9,7 +9,7 @@ mixin newsCard(userData, settings)
  -   className += ' news-card_type_event';
  -   month = date.toLocaleString('en-us', { month: 'short' });
  - }
- - if (settings && settings.compact) {
+ - if (settings && settings.isCompact) {
  -   className += ' news-card_size_compact';
  - }
  - if (settings &&settings.color === 'reverted') {

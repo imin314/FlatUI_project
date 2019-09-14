@@ -1,16 +1,21 @@
 .footer-section
-  background-color color-text
-  width 100%
-  padding 2rem 3rem
   display flex
   flex-direction row
   flex-wrap wrap
   justify-content space-between
+  width 100%
+  padding 2rem 3rem
   color white
   font-size 0.8rem
+  background-color color-text
   @media screen and (max-width:425px)
-    font-size 0.6rem
     padding 2rem 1.5rem
+    font-size 0.6rem
+  &__header
+    margin-bottom 1rem
+    color color-cold
+    font-size 1.2em
+    font-weight bold
   &__contacts
     width 50%
     flex-shrink 0
@@ -24,28 +29,22 @@
     list-style none
     font-size 1em
     line-height 1.5em
-    & a
-      display block
-      color inherit
-      &:hover
-        @media (hover:hover)
-          text-decoration none 
-      &:active
-        @media (hover:hover)
-          text-decoration underline
-        @media (hover:none)
-          text-decoration none 
-  &__header
-    color color-cold
-    font-size 1.2em
-    font-weight bold
-    margin-bottom 1rem
-  &__links
+  &__link
+    color inherit
+    &:hover
+      @media (hover:hover)
+        text-decoration none 
+    &:active
+      @media (hover:hover)
+        text-decoration underline
+      @media (hover:none)
+        text-decoration none 
+  &__docs
     width 50%
     flex-shrink 0
     text-align right
   &__copyright
     width 100%
+    margin-top 2rem
     text-align center
     font-size 1em
-    margin-top 2rem

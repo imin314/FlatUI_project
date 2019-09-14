@@ -1,32 +1,32 @@
 mixin passSelector()
- section.pass-selector
-  h2.pass-selector__header.section-title Find the conference pass for you
-  .pass-selector__options
-   .pass-selector__column
-   .pass-selector__column
-   .pass-selector__column
-   .pass-selector__row
-    h3.pass-selector__pass-name Premium
-     br
-     | Pass
-    h3.pass-selector__pass-name Track
-     br
-     | Pass
-    h3.pass-selector__pass-name Daily
-     br
-     | Pass
-   .pass-selector__row
-    p.pass-selector__price $995
-    p.pass-selector__price $575
-    p.pass-selector__price $235
-   .pass-selector__row
-    p.pass-selector__text Visit any events without limitation
-    p.pass-selector__text Visit all events in a track
-    p.pass-selector__text Attend 1 event per day on a conference week
-   .pass-selector__row
-    .pass-selector__tickbox
-     +tickBox({value:"1", name:"tickbox", id:"tickbox1", checked: true, color: "warm"})
-    .pass-selector__tickbox
-     +tickBox({value:"2", name:"tickbox", id:"tickbox2", color: "warm"})
-    .pass-selector__tickbox
-     +tickBox({value:"3", name:"tickbox", id:"tickbox3", color: "warm"})
+  section.pass-selector.js-pass-selector
+    h2.pass-selector__title Find the conference pass for you
+    .pass-selector__options
+      .pass-selector__column
+      .pass-selector__column
+      .pass-selector__column
+      .pass-selector__row
+        h3.pass-selector__pass-name Premium
+          br
+          | Pass
+        h3.pass-selector__pass-name Track
+          br
+          | Pass
+        h3.pass-selector__pass-name Daily
+          br
+          | Pass
+      .pass-selector__row
+        p.pass-selector__price $995
+        p.pass-selector__price $575
+        p.pass-selector__price $235
+      .pass-selector__row
+        p.pass-selector__text Visit any events without limitation
+        p.pass-selector__text Visit all events in a track
+        p.pass-selector__text Attend 1 event per day on a conference week
+      .pass-selector__row
+        .pass-selector__tickbox.js-pass-selector__tickbox
+          +tickBox({ value:'1', name:'tickbox', checked: true, color: 'warm' })
+        .pass-selector__tickbox.js-pass-selector__tickbox
+          +tickBox({ value:'2', name:'tickbox', color: 'warm' })
+        .pass-selector__tickbox.js-pass-selector__tickbox
+          +tickBox({ value:'3', name:'tickbox', color: 'warm' })

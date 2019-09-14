@@ -13,7 +13,7 @@ html.js
   z-index: 9999;
 }
 
-.lds-grid {
+.loader__grid {
   display: inline-block;
   position: absolute;
   width: 64px;
@@ -21,60 +21,61 @@ html.js
   top: calc(50% - 32px);
   left: calc(50% - 32px);
 }
-.lds-grid div {
+.loader__cell {
   position: absolute;
   width: 13px;
   height: 13px;
   border-radius: 50%;
   background: #e75735;
-  animation: lds-grid 1.2s linear infinite;
+  animation: loader__cell 1.2s linear infinite;
 }
-.lds-grid div:nth-child(1) {
+
+.loader__cell:nth-child(1) {
   top: 6px;
   left: 6px;
   animation-delay: 0s;
 }
-.lds-grid div:nth-child(2) {
+.loader__cell:nth-child(2) {
   top: 6px;
   left: 26px;
   animation-delay: -0.4s;
 }
-.lds-grid div:nth-child(3) {
+.loader__cell:nth-child(3) {
   top: 6px;
   left: 45px;
   animation-delay: -0.8s;
 }
-.lds-grid div:nth-child(4) {
+.loader__cell:nth-child(4) {
   top: 26px;
   left: 6px;
   animation-delay: -0.4s;
 }
-.lds-grid div:nth-child(5) {
+.loader__cell:nth-child(5) {
   top: 26px;
   left: 26px;
   animation-delay: -0.8s;
 }
-.lds-grid div:nth-child(6) {
+.loader__cell:nth-child(6) {
   top: 26px;
   left: 45px;
   animation-delay: -1.2s;
 }
-.lds-grid div:nth-child(7) {
+.loader__cell:nth-child(7) {
   top: 45px;
   left: 6px;
   animation-delay: -0.8s;
 }
-.lds-grid div:nth-child(8) {
+.loader__cell:nth-child(8) {
   top: 45px;
   left: 26px;
   animation-delay: -1.2s;
 }
-.lds-grid div:nth-child(9) {
+.loader__cell:nth-child(9) {
   top: 45px;
   left: 45px;
   animation-delay: -1.6s;
 }
-@keyframes lds-grid {
+@keyframes loader__cell {
   0%, 100% {
     opacity: 1;
   }

@@ -1,6 +1,7 @@
 .pass-selector
-  &__header
+  &__title
     margin-bottom 1rem
+    sectionTitle()
   &__options
     display table
     width 100%
@@ -23,33 +24,33 @@
       @media (hover:none)
         background-color color-bg
   &__pass-name
+    display table-cell
+    padding 1rem 0
     text-transform capitalize
     color color-warm
     font-weight bold
     font-size 2.5rem
-    display table-cell
     border-bottom 2px solid
-    padding 1rem 0
     @media screen and (max-width:768px)
       font-size 1.5rem
     @media screen and (max-width:375px)
       font-size 1.1rem
   &__price
+    display table-cell
+    padding 1rem 0
     font-weight lighter
     font-size 2rem
-    padding 1rem 0
     color color-text
-    display table-cell
     @media screen and (max-width:768px)
       font-size 1.3rem
     @media screen and (max-width:375px)
       font-size 1rem
   &__text
+    display table-cell
+    padding 1rem 0
     font-weight lighter
     font-size 1rem
-    padding 1rem 0
     color color-text
-    display table-cell
     @media screen and (max-width:375px)
       font-size 0.8rem
   &__tickbox
