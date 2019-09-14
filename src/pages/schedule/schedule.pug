@@ -2,12 +2,16 @@
 extends ../../pug/layout.pug
 
 block title
- title Schedule
+  title Schedule
 
 block content
- - var data = require('../../assets/data/data.json');
- section.schedule-page
-  h1.schedule-page__header.page-title Schedule
-  main.schedule-page__main
-   +talksSection(data.talks)
+  - const data = require('../../assets/data/data.json');
+  .schedule-page
+    main.schedule-page__main
+      h1.schedule-page__title Schedule
+      main.schedule-page__content
+        +talksSection(data.talks)
+    footer.schedule-page__footer
+      +footerSection()
+
    

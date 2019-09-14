@@ -4,8 +4,8 @@
   align-items center
   &__photo
     display inline-block
-    width 6.648351648351648rem
-    height @width
+    flex 0 0 6.648351648351648rem
+    height 6.648351648351648rem
     margin-right 0.9340659340659341rem
     border-radius 50%
     border 0.3846153846153846rem solid color-bg
@@ -13,18 +13,19 @@
     background-repeat no-repeat
     background-color color-bg
     @media screen and (max-width: 425px)
-      width 5.5rem
-      height @width
+      flex-basis 5.5rem
+      height @flex-basis
       border 0.2rem solid color-bg
   &__box
     position relative
-    width 11.64835164835165rem
+    flex 1 1 11.64835164835165rem
     padding 0.7142857142857143rem
     border-radius 0.5494505494505495rem
     text-align center
     background-color color-bg
+    z-index 1
     @media screen and (max-width: 425px)
-      width 9rem
+      flex-basis 9rem
       padding 0.5rem
     &::before
       content ''
@@ -36,6 +37,7 @@
       background-color inherit
       border-radius 0.2747252747252747rem
       transform scaleY(0.8) translate(-30%,-50%) rotate(45deg)
+      z-index -1
   &__name
     margin-bottom 0.1098901098901099rem
     font-size 1.285714285714286rem

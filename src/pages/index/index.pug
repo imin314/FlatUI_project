@@ -2,11 +2,14 @@
 extends ../../pug/layout.pug
 
 block content
- - var data = require('../../assets/data/data.json');
- main.main-page-wrapper
-  .main-page-wrapper__banner
-   +bannerSection()
-  .main-page-wrapper__about
-   +aboutSection()
-  .main-page-wrapper__events
-   +eventCarousel(data.talks)
+  - const data = require('../../assets/data/data.json');
+  .main-page
+    main.main-page__main
+      .main-page__banner
+        +bannerSection()
+      .main-page__about
+        +aboutSection()
+      .main-page__events
+        +eventCarousel(data.talks)
+    footer.main-page__footer
+      +footerSection()

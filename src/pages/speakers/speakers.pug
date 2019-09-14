@@ -5,22 +5,24 @@ block title
  title Speakers
 
 block content
- - var data = require('../../assets/data/data.json');
- main.speakers-page
-  h1.speakers-page__header.page-title Speakers
-  p.speakers-page__intro We've combed the country and the world for extraordinary spakers, covering the most relevant topics for today's front end developers, designers, and managers.
-  section.speakers-page__search
-   +searchBox()
-  section.speakers-page__card-carousel
-   .speakers-page__cards
-    .speakers-page__card-wrapper
-     each item in data.speakers
-      .speakers-page__card
-       +speakerCard(item)
-   .speakers-page__controls
-    .speakers-page__left-button
-     +arrowButton({direction:"left", disabled:true})
-    a.speakers-page__link View all speakers
-    .speakers-page__right-button
-     +arrowButton({direction:"right"})
-   
+  - const data = require('../../assets/data/data.json');
+  .speakers-page.js-speakers-page
+    main.speakers-page__main
+      h1.speakers-page__header.page-title Speakers
+      p.speakers-page__intro We've combined the country and the world for extraordinary speakers, covering the most relevant topics for today's front end developers, designers, and managers.
+      section.speakers-page__search
+        +searchBox()
+      section.speakers-page__card-carousel
+        .speakers-page__cards.js-speakers-page__cards
+          .speakers-page__card-wrapper
+            each item in data.speakers
+              .speakers-page__card
+                +speakerCard(item)
+        .speakers-page__controls
+          .speakers-page__left-button.js-speakers-page__left-button
+            +arrowButton({ direction:'left', disabled: true })
+          a.speakers-page__link.js-speakers-page__link View all speakers
+          .speakers-page__right-button.js-speakers-page__right-button
+            +arrowButton({ direction:'right' })
+    footer.speakers-page__footer
+      +footerSection()
