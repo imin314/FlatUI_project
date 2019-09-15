@@ -8,11 +8,14 @@ class PassSelector {
 
   _initialize() {
     $(document).ready(() => {
-      const $tickboxes = this.$domElement.find('.js-pass-selector__tickbox input[type=checkbox]');
-      $tickboxes.on('change', () => {
-        $tickboxes.not(this).prop('checked', false);
-      });
+      this.$tickboxes = this.$domElement.find('.js-pass-selector__tickbox input[type=checkbox]');
+      this.$tickboxes.on('change', e => this._handleTickboxChange(e));
     });
+  }
+
+  _handleTickboxChange(event) {
+    const $currentTickbox = $(event.target);
+    this.$tickboxes.not($currentTickbox).prop('checked', false);
   }
 }
 

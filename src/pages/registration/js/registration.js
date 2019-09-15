@@ -1,55 +1,56 @@
-class RegistrationPage {
-	constructor(domElement) {
-		this.domElement = $(domElement);
-		this.stages = this.domElement.find(".bread-crumbs__item");
-		this.activeClass = "bread-crumbs__item_active";
-		this.initialize();
-	}
+import $ from 'jquery';
 
-	updateBreadCrumbs(itemNumber) {
-		if (!this.stages.eq(itemNumber).hasClass(this.activeClass)) {
-			this.stages.removeClass(this.activeClass);
-			this.stages.eq(itemNumber).addClass(this.activeClass);
-		}
-	}
+class Registration {
+  constructor(domElement) {
+    this._findElements(domElement);
+    this._initialize();
+  }
 
-	initialize(){
-		var that = this;
-		$(document).ready(() => {
-			that.domElement.find(".registration-form__first-stage").focusin(function(){
-				that.updateBreadCrumbs(0);
-			});
-			that.domElement.find(".registration-form__first-stage input[type=checkbox]").change(function(){
-				that.updateBreadCrumbs(0);
-			});
-			that.domElement.find(".registration-form__pass-selector input[type=checkbox]").change(function(){
-				that.updateBreadCrumbs(1);
-			});
-			that.domElement.find(".registration-form__last-stage input[type=checkbox]").change(function(){
-				that.updateBreadCrumbs(2);
-			});
-			that.domElement.find(".registration-form__last-stage input[type=submit]").change(function(){
-				that.updateBreadCrumbs(2);
-			});
+  _updateBreadCrumbs(itemNumber) {
+    const activeClass = 'bread-crumbs__item_active';
+    if (!this.$breadCrumbsItems.eq(itemNumber).hasClass(activeClass)) {
+      this.$breadCrumbsItems.removeClass(activeClass);
+      this.$breadCrumbsItems.eq(itemNumber).addClass(activeClass);
+    }
+  }
 
-			var header = that.domElement.find(".registration-page__header");
-			var passHeader = that.domElement.find(".pass-selector__header");
-		
-			$(window).scroll(function(){
-				var headerHeight = header.outerHeight();
-				var passHeaderOffset = passHeader.offset().top;
-				if ($(this).scrollTop() + headerHeight > passHeaderOffset){
-					header.css({"position" : "absolute", "top" : passHeaderOffset - headerHeight});
-				}
-				else
-				{
-					header.removeAttr("style");
-				}
-			});
-		});
-	}
+  _findElements(domElement) {
+    const $domElement = $(domElement);
+    this.$inputs = $domElement.find('input');
+    this.$breadCrumbsItems = $domElement.find('.bread-crumbs__item');
+    this.$formStages = $domElement.find('.registration-form__stage');
+    this.$header = $domElement.find('.registration-page__header');
+    this.$passHeader = $domElement.find('.pass-selector__title');
+  }
+
+  _initialize() {
+    $(document).ready(() => {
+      this.$inputs.on('change.registration', e => this._handleInputChange(e));
+      $(window).on('scroll.registration', e => this._handleWindowScroll(e));
+    });
+  }
+
+  _handleInputChange(event) {
+    const $target = $(event.target);
+    const $currentStage = $target.parents('.registration-form__stage');
+    let stageNumber = 0;
+    this.$formStages.each((i, element) => {
+      if ($(element).is($currentStage)) {
+        stageNumber = i;
+      }
+    });
+    this._updateBreadCrumbs(stageNumber);
+  }
+
+  _handleWindowScroll(event) {
+    const headerHeight = this.$header.outerHeight();
+    const passHeaderOffset = this.$passHeader.offset().top;
+    if ($(event.target).scrollTop() + headerHeight > passHeaderOffset) {
+      this.$header.css({ position: 'absolute', top: passHeaderOffset - headerHeight });
+    } else {
+      this.$header.removeAttr('style');
+    }
+  }
 }
 
-$(".registration-page").each(function() {
-	new RegistrationPage(this);
-});
+$('.js-registration-page').each((i, element) => new Registration(element));

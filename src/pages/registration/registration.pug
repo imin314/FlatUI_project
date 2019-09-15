@@ -2,14 +2,17 @@
 extends ../../pug/layout.pug
 
 block title
- title Register
+  title Register
 
 block content
- .registration-page
-  header.registration-page__header
-   h1.page-title Join us at Web Talks 2019
-   .registration-page__stages
-    +breadCrumbs({active: 1, max: 3})
-  main.registration-page__form
-   +registrationForm()
+  .registration-page.js-registration-page
+    main.registration-page__main
+      header.registration-page__header
+        h1.registration-page__title Join us at Web Talks 2019
+        .registration-page__bread-crumbs
+          +breadCrumbs({ active: 1, max: 3 })
+      .registration-page__form
+        +registrationForm()
+    footer.registration-page__footer
+      +footerSection()
   
