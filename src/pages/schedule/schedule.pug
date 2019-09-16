@@ -6,12 +6,12 @@ block title
 
 block content
   - const data = require('../../assets/data/data.json');
-  .schedule-page
-    main.schedule-page__main
-      h1.schedule-page__title Schedule
-      main.schedule-page__content
+  .schedule
+    main.schedule__main
+      h1.schedule__title Schedule
+      main.schedule__content
         +talksSection(data.talks)
-    footer.schedule-page__footer
+    footer.schedule__footer
       +footerSection()
 
    

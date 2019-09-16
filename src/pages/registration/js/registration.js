@@ -19,7 +19,7 @@ class Registration {
     this.$inputs = $domElement.find('input');
     this.$breadCrumbsItems = $domElement.find('.bread-crumbs__item');
     this.$formStages = $domElement.find('.registration-form__stage');
-    this.$header = $domElement.find('.registration-page__header');
+    this.$header = $domElement.find('.registration__header');
     this.$passHeader = $domElement.find('.pass-selector__title');
   }
 
@@ -53,4 +53,4 @@ class Registration {
   }
 }
 
-$('.js-registration-page').each((i, element) => new Registration(element));
+$('.js-registration').each((i, element) => new Registration(element));

@@ -10,10 +10,10 @@ class Speakers {
   _findElements(domElement) {
     const $domElement = $(domElement);
     this.$page = $domElement;
-    this.$cards = $domElement.find('.js-speakers-page__cards');
-    this.$rightButton = $domElement.find('.js-speakers-page__right-button .js-arrow-button');
-    this.$leftButton = $domElement.find('.js-speakers-page__left-button .js-arrow-button');
-    this.$viewAllLink = $domElement.find('.js-speakers-page__link');
+    this.$cards = $domElement.find('.js-speakers__cards');
+    this.$rightButton = $domElement.find('.js-speakers__right-button .js-arrow-button');
+    this.$leftButton = $domElement.find('.js-speakers__left-button .js-arrow-button');
+    this.$viewAllLink = $domElement.find('.js-speakers__link');
   }
 
   _initialize() {
@@ -69,11 +69,11 @@ class Speakers {
   _updatePageView(mediaQuery) {
     if (mediaQuery.matches) {
       this.windowIsSmall = true;
-      this.$page.addClass('speakers-page_view_small');
+      this.$page.addClass('speakers_view_small');
       this._hideCustomScrollBar();
     } else {
       this.windowIsSmall = false;
-      this.$page.removeClass('speakers-page_view_small');
+      this.$page.removeClass('speakers_view_small');
       if (!this.cardsAreCollapsed) {
         this._updateCustomScrollBar();
       }
@@ -81,9 +81,9 @@ class Speakers {
   }
 
   _addEventListeners() {
-    this.$rightButton.on('click.speakers-page', () => this._handleRightButtonClick());
-    this.$leftButton.on('click.speakers-page', () => this._handleLeftButtonClick());
-    this.$viewAllLink.on('click.speakers-page', () => this._handleViewAllClick());
+    this.$rightButton.on('click.speakers', () => this._handleRightButtonClick());
+    this.$leftButton.on('click.speakers', () => this._handleLeftButtonClick());
+    this.$viewAllLink.on('click.speakers', () => this._handleViewAllClick());
   }
 
   _handleRightButtonClick() {
@@ -96,14 +96,14 @@ class Speakers {
 
   _handleViewAllClick() {
     if (this.cardsAreCollapsed) {
-      this.$page.removeClass('speakers-page_view_full');
+      this.$page.removeClass('speakers_view_full');
       this.$viewAllLink.text('View all speakers');
       this.cardsAreCollapsed = false;
       if (!this.windowIsSmall) {
         this._updateCustomScrollBar();
       }
     } else {
-      this.$page.addClass('speakers-page_view_full');
+      this.$page.addClass('speakers_view_full');
       this.$viewAllLink.text('Back to compact view');
       this.cardsAreCollapsed = true;
       if (!this.windowIsSmall) {
@@ -123,4 +123,4 @@ class Speakers {
   }
 }
 
-$('.js-speakers-page').each((i, element) => new Speakers(element));
+$('.js-speakers').each((i, element) => new Speakers(element));

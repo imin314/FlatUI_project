@@ -1,9 +1,9 @@
 .form-section
   &__title
+    sectionTitle()
     margin-bottom 3.8rem
     line-height 1rem
     letter-spacing 0.08rem
-    sectionTitle()
 
   &__container
     display flex
@@ -31,9 +31,9 @@
 
   &__toggles
     flex 100% 0 0
-    margin-bottom 2.7rem
+    margin-bottom 2.9rem
     text-align center
-    & .form-section__header
+    & .form-section__title
       margin-bottom 2.5rem
     @media screen and (max-width: 700px)
       flex 200px 1 1
@@ -46,7 +46,7 @@
   &__tickboxes
     flex 100% 0 0
     text-align center
-    & .form-section__header
+    & .form-section__title
       margin-bottom 2.5rem
       word-spacing 0.2rem
     @media screen and (max-width: 700px)

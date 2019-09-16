@@ -6,23 +6,23 @@ block title
 
 block content
   - const data = require('../../assets/data/data.json');
-  .speakers-page.js-speakers-page
-    main.speakers-page__main
-      h1.speakers-page__title Speakers
-      p.speakers-page__intro We've combined the country and the world for extraordinary speakers, covering the most relevant topics for today's front end developers, designers, and managers.
-      section.speakers-page__search
+  .speakers.js-speakers
+    main.speakers__main
+      h1.speakers__title Speakers
+      p.speakers__intro We've combined the country and the world for extraordinary speakers, covering the most relevant topics for today's front end developers, designers, and managers.
+      section.speakers__search
         +searchBox()
-      section.speakers-page__card-carousel
-        .speakers-page__cards.js-speakers-page__cards
-          .speakers-page__card-wrapper
+      section.speakers__card-carousel
+        .speakers__cards.js-speakers__cards
+          .speakers__card-wrapper
             each item in data.speakers
-              .speakers-page__card
+              .speakers__card
                 +speakerCard(item)
-        .speakers-page__controls
-          .speakers-page__left-button.js-speakers-page__left-button
+        .speakers__controls
+          .speakers__left-button.js-speakers__left-button
             +arrowButton({ direction:'left', disabled: true })
-          a.speakers-page__link.js-speakers-page__link View all speakers
-          .speakers-page__right-button.js-speakers-page__right-button
+          a.speakers__link.js-speakers__link View all speakers
+          .speakers__right-button.js-speakers__right-button
             +arrowButton({ direction:'right' })
-    footer.speakers-page__footer
+    footer.speakers__footer
       +footerSection()

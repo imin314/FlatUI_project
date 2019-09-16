@@ -1,4 +1,4 @@
-.speakers-page
+.speakers
   display flex
   flex-direction column
   min-height 100%
@@ -83,33 +83,33 @@
     @media screen and (max-width: 425px)
       width 90%
   &_view_small
-    & .speakers-page__left-button
-    & .speakers-page__right-button
+    & .speakers__left-button
+    & .speakers__right-button
       display none
-    & .speakers-page__cards
+    & .speakers__cards
       text-align center
       background-color white
-    & .speakers-page__card-wrapper
+    & .speakers__card-wrapper
       flex-wrap wrap
-    & .speakers-page__card
+    & .speakers__card
       margin 0 0 1rem
       &:nth-child(n+4)
         display none
-    &.speakers-page_view_full .speakers-page__card-wrapper
+    &.speakers_view_full .speakers__card-wrapper
       max-height none
       
   &_view_full
-    & .speakers-page__left-button
-    & .speakers-page__right-button
+    & .speakers__left-button
+    & .speakers__right-button
       display none
-    & .speakers-page__cards
+    & .speakers__cards
       text-align center
       background-color white
-    & .speakers-page__card-wrapper
+    & .speakers__card-wrapper
       flex-wrap wrap
-    & .speakers-page__card
+    & .speakers__card
       margin 0 0.8rem 1rem 0.8rem
-    &.speakers-page_view_small .speakers-page__card
+    &.speakers_view_small .speakers__card
       margin 0 0 1rem
       display block
 

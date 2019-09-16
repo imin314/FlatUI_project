@@ -5,14 +5,14 @@ block title
   title Contact Us
 
 block content
-  .contacts-page
-    main.contacts-page__main
-      h1.contacts-page__title Contact Us
-      section.contacts-page__email
-        p.contacts-page__text Got a question? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
-        .contacts-page__form
+  .contacts
+    main.contacts__main
+      h1.contacts__title Contact Us
+      section.contacts__email
+        p.contacts__text Got a question? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+        .contacts__form
           +emailForm()
-      section.contacts-page__map
+      section.contacts__map
         +map({
           address: {
             street: '14 Karla Marksa st',
@@ -27,9 +27,9 @@ block content
             lng: 84.946053
           }
         })
-      aside.contacts-page__online-help
+      aside.contacts__online-help
         +onlineHelp()
-    footer.contacts-page__footer
+    footer.contacts__footer
       +footerSection()
 
 block scripts
