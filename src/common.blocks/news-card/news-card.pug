@@ -1,20 +1,20 @@
 mixin newsCard(userData, settings)   
- - const img = require(`../../assets/img/${userData.img}`);
- - const date = new Date(userData.date);
- - const day = date.getDate();
- - const year = date.getFullYear();
- - let month = date.toLocaleString('en-us', { month: 'long' });
- - let className = 'news-card';
- - if (settings && settings.type === 'event') {
- -   className += ' news-card_type_event';
- -   month = date.toLocaleString('en-us', { month: 'short' });
- - }
- - if (settings && settings.isCompact) {
- -   className += ' news-card_size_compact';
- - }
- - if (settings &&settings.color === 'reverted') {
- -   className += ' news-card_color_reverted';
- - }
+  - const img = require(`../../assets/img/${userData.img}`);
+  - const date = new Date(userData.date);
+  - const day = date.getDate();
+  - const year = date.getFullYear();
+  - let month = date.toLocaleString('en-us', { month: 'long' });
+  - let className = 'news-card';
+  - if (settings && settings.type === 'event') {
+  -   className += ' news-card_type_event';
+  -   month = date.toLocaleString('en-us', { month: 'short' });
+  - }
+  - if (settings && settings.isCompact) {
+  -   className += ' news-card_size_compact';
+  - }
+  - if (settings &&settings.color === 'reverted') {
+  -   className += ' news-card_color_reverted';
+  - }
   div(class=className)
     .news-card__image(style="background-image: url("+img+")")
     .news-card__content
