@@ -3,5 +3,5 @@ mixin searchBox(isEmptyResult)
   - if (isEmptyResult) className = `${className} search-box_filled`;
   div(class = className)
     label.search-box__label
-      input.search-box__input(type="text" placeholder="Search")
-    button.search-box__button(type="button")
+      input.search-box__input.js-search-box__input(type="text" placeholder="Search")
+    button.search-box__button.js-search-box__button(type="button")

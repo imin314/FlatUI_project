@@ -9,7 +9,7 @@ class Map {
   }
 
   _initialize() {
-    $(window).on('load', () => this._initMap());
+    $(window).on('load.map', () => this._initMap());
   }
 
   _initMap() {

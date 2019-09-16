@@ -7,7 +7,7 @@ class SpeakerCard {
   }
 
   _initialize() {
-    $(window).on('load', () => this._addScrollBar());
+    $(window).on('load.speakercard', () => this._addScrollBar());
   }
 
   _addScrollBar() {

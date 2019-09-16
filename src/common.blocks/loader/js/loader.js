@@ -7,7 +7,7 @@ class Loader {
   }
 
   _initialize() {
-    $(window).on('load', () => {
+    $(window).on('load.loader', () => {
       this.$domElement.fadeOut('slow');
     });
   }

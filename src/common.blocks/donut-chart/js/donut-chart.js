@@ -66,7 +66,7 @@ class DonutChart {
     const viewBoxValue = `${viewBoxTop} ${viewBoxTop} ${viewBoxBottom} ${viewBoxBottom}`;
     $svg.attr({ viewBox: viewBoxValue });
 
-    const $label = $donut.find('.donut-chart__label');
+    const $label = $donut.find('.js-donut-chart__label');
     if ($label.length > 0) {
       $label.text(values[0]);
     }

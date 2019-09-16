@@ -9,8 +9,8 @@ class SearchBox {
   _initialize() {
     $(document).ready(() => {
       const $searchbox = $(this.domElement);
-      const $button = $searchbox.find('.search-box__button');
-      const $input = $searchbox.find('.search-box__input');
+      const $button = $searchbox.find('.js-search-box__button');
+      const $input = $searchbox.find('.js-search-box__input');
       $searchbox.on('click.searchbox', e => this._handleSearchBoxClick(e));
       $button.on('keypress.searchbox', e => this._handleButtonKeypress(e));
       $input.on('focus.searchbox', () => this._emptyInput());
@@ -33,7 +33,7 @@ class SearchBox {
   _handleButtonClick($button) {
     const notFoundMessage = "I've not found what I'm looking for...";
     const $searchBox = $(this.domElement);
-    $searchBox.find('.search-box__input').val(notFoundMessage);
+    $searchBox.find('.js-search-box__input').val(notFoundMessage);
     $searchBox.addClass('search-box_filled');
     $button.blur();
   }
@@ -46,7 +46,7 @@ class SearchBox {
 
   _emptyInput() {
     const $searchBox = $(this.domElement);
-    $searchBox.find('.search-box__input').val('');
+    $searchBox.find('.js-search-box__input').val('');
     $searchBox.removeClass('search-box_filled');
   }
 

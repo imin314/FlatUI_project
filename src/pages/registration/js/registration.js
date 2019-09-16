@@ -17,10 +17,10 @@ class Registration {
   _findElements(domElement) {
     const $domElement = $(domElement);
     this.$inputs = $domElement.find('input');
-    this.$breadCrumbsItems = $domElement.find('.bread-crumbs__item');
-    this.$formStages = $domElement.find('.registration-form__stage');
-    this.$header = $domElement.find('.registration__header');
-    this.$passHeader = $domElement.find('.pass-selector__title');
+    this.$breadCrumbsItems = $domElement.find('.js-bread-crumbs__item');
+    this.$formStages = $domElement.find('.js-registration-form__stage');
+    this.$header = $domElement.find('.js-registration__header');
+    this.$passHeader = $domElement.find('.js-pass-selector__title');
   }
 
   _initialize() {
@@ -32,7 +32,7 @@ class Registration {
 
   _handleInputChange(event) {
     const $target = $(event.target);
-    const $currentStage = $target.parents('.registration-form__stage');
+    const $currentStage = $target.parents('.js-registration-form__stage');
     let stageNumber = 0;
     this.$formStages.each((i, element) => {
       if ($(element).is($currentStage)) {

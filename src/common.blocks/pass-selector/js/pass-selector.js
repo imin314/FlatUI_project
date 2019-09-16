@@ -9,7 +9,7 @@ class PassSelector {
   _initialize() {
     $(document).ready(() => {
       this.$tickboxes = this.$domElement.find('.js-pass-selector__tickbox input[type=checkbox]');
-      this.$tickboxes.on('change', e => this._handleTickboxChange(e));
+      this.$tickboxes.on('change.pass-selector', e => this._handleTickboxChange(e));
     });
   }
 
