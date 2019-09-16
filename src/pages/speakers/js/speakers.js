@@ -2,7 +2,7 @@ import $ from 'jquery';
 
 class Speakers {
   constructor(domElement) {
-    this.cardsAreCollapsed = false;
+    this.cardsAreExpanded = false;
     this._findElements(domElement);
     this._initialize();
   }
@@ -74,7 +74,7 @@ class Speakers {
     } else {
       this.windowIsSmall = false;
       this.$page.removeClass('speakers_view_small');
-      if (!this.cardsAreCollapsed) {
+      if (!this.cardsAreExpanded) {
         this._updateCustomScrollBar();
       }
     }
@@ -95,17 +95,17 @@ class Speakers {
   }
 
   _handleViewAllClick() {
-    if (this.cardsAreCollapsed) {
+    if (this.cardsAreExpanded) {
       this.$page.removeClass('speakers_view_full');
       this.$viewAllLink.text('View all speakers');
-      this.cardsAreCollapsed = false;
+      this.cardsAreExpanded = false;
       if (!this.windowIsSmall) {
         this._updateCustomScrollBar();
       }
     } else {
       this.$page.addClass('speakers_view_full');
       this.$viewAllLink.text('Back to compact view');
-      this.cardsAreCollapsed = true;
+      this.cardsAreExpanded = true;
       if (!this.windowIsSmall) {
         this._hideCustomScrollBar();
       }
