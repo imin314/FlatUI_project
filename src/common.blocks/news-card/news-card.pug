@@ -4,7 +4,7 @@ mixin newsCard(userData, settings)
   - const day = date.getDate();
   - const year = date.getFullYear();
   - let month = date.toLocaleString('en-us', { month: 'long' });
-  - let className = 'news-card';
+  - let className = 'news-card js-news-card';
   - if (settings && settings.type === 'event') {
   -   className += ' news-card_type_event';
   -   month = date.toLocaleString('en-us', { month: 'short' });
@@ -12,8 +12,11 @@ mixin newsCard(userData, settings)
   - if (settings && settings.isCompact) {
   -   className += ' news-card_size_compact';
   - }
-  - if (settings &&settings.color === 'reverted') {
+  - if (settings && settings.color === 'reverted') {
   -   className += ' news-card_color_reverted';
+  - }
+  - if (settings && settings.withScrollbar) {
+  -   className += ' news-card_with_scrollbar';
   - }
   div(class=className)
     .news-card__image(style="background-image: url("+img+")")
@@ -23,11 +26,11 @@ mixin newsCard(userData, settings)
           span.news-card__day= day
           span.news-card__month= month
         .news-card__title= userData.title
-        .news-card__text= userData.text
+        .news-card__text.js-news-card__text= userData.text
         .news-card__button
           +button({ title:'add to calendar', size:'small responsive' })
       - } else {
         .news-card__title= userData.title
         .news-card__date= day + ' ' + month + ' ' + year
-        .news-card__text= userData.text
+        .news-card__text.js-news-card__text= userData.text
       - }

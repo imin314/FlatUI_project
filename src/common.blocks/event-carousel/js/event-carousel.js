@@ -1,18 +1,22 @@
+import $ from 'jquery';
+
 class EventCarousel {
   constructor(domElement) {
-    this.$cards = $(domElement).find('.js-event-carousel__cards');
-    this.$calendarOverlay = $(domElement).find('.js-event-carousel__calendar-overlay');
-    this._initialize();
+    this._initialize(domElement);
   }
 
-  _initialize() {
+  _initialize(domElement) {
+    const $domElement = $(domElement);
+    this.$cards = $domElement.find('.js-event-carousel__cards');
+    this.$calendarOverlay = $domElement.find('.js-event-carousel__calendar-overlay');
+
     this.$cards
-      .on('click.event-carousel', (event) => this._handleButtonClick(event))
+      .on('click.event-carousel', event => this._handleButtonClick(event))
       .mCustomScrollbar({
         axis: 'x',
         theme: 'dark-thin',
         autoExpandScrollbar: true,
-        advanced: { 
+        advanced: {
           autoExpandHorizontalScroll: true,
           autoScrollOnFocus: false,
         },
@@ -23,7 +27,7 @@ class EventCarousel {
     const $target = $(event.target);
     if ($target.hasClass('js-button')) {
       this.$calendarOverlay.addClass('event-carousel__calendar-overlay_visible');
-      $(document).on('click.event-carousel', (event) => this._handleDocumentClick(event));
+      $(document).on('click.event-carousel', event => this._handleDocumentClick(event));
       return false;
     }
   }

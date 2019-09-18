@@ -2,29 +2,35 @@ import $ from 'jquery';
 
 class ArrowButton {
   constructor(domElement) {
-    this.domElement = domElement;
-    this._initialize();
+    this._initialize(domElement);
   }
 
-  _initialize() {
+  _initialize(domElement) {
     $(document).ready(() => {
-      const $button = $(this.domElement);
+      this.$button = $(domElement);
 
-      $button.on('mousedown.arrowbutton', e => e.preventDefault())
+      this.$button.on('click.arrowbutton', () => this._handleButtonClick())
         .on('keydown.arrowbutton', e => this._handleEnterDown(e))
         .on('keyup.arrowbutton', e => this._handleEnterUp(e));
     });
   }
 
+  _handleButtonClick() {
+    this.$button.blur();
+  }
+
   _handleEnterDown(event) {
     if (event.which === 13) {
-      $(this.domElement).addClass('arrow-button_active');
+      this.$button.addClass('arrow-button_active');
     }
   }
 
   _handleEnterUp(event) {
     if (event.which === 13) {
-      $(this.domElement).removeClass('arrow-button_active').blur();
+      this.$button
+        .removeClass('arrow-button_active')
+        .blur()
+        .trigger('click');
     }
   }
 }

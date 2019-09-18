@@ -18,6 +18,6 @@ mixin map(options)
         .map__street=settings.address.street
         .map__city=settings.address.city
       .map__icons
-        .map__search.js-map__search
-        .map__pin.js-map__pin
+        .map__search.js-map__search(tabindex="0")
+        .map__pin.js-map__pin(tabindex="0")
           +pin({ mainColor: 'white', backColor: 'transparent' })

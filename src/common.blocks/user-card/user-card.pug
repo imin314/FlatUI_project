@@ -15,6 +15,6 @@ mixin userCard(user, colored)
       h4.user-card__position!= user.position
       .user-card__icons
         each item in icons
-          a.user-card__icon(href=user[item.name] title!=item.name target="blank" rel="noopener noreferrer")
+          a.user-card__icon(href=user[item.name] title!=item.name target="blank" rel="noopener noreferrer" tabindex="-1")
             +socialIcon(item)
     

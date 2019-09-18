@@ -22,9 +22,12 @@ class Map {
     this._addMarker(this._getMainPinCenter(), Map.images[0], 'Meet us here!');
     this._locateUser();
 
-    $pin.click(() => this._backToCenter());
-
-    $search.click(() => this._showUserLocation());
+    $pin
+      .on('click.map', e => this._handlePinClick(e))
+      .on('keypress.map', e => this._handleEnterPress(e));
+    $search
+      .on('click.map', e => this._handleSearchClick(e))
+      .on('keypress.map', e => this._handleEnterPress(e));
   }
 
   _addMarker(location, image, title) {
@@ -86,6 +89,29 @@ class Map {
     }
   }
 
+  _handleLocationError(browserHasGeolocation) {
+    this.infoWindow.setPosition(this.map.getCenter());
+    this.infoWindow.setContent(browserHasGeolocation
+      ? 'Error: The Geolocation service failed.'
+      : 'Error: Your browser doesn\'t support geolocation.');
+  }
+
+  _handlePinClick(event) {
+    this._backToCenter();
+    $(event.target).blur();
+  }
+
+  _handleSearchClick(event) {
+    this._showUserLocation();
+    $(event.target).blur();
+  }
+
+  _handleEnterPress(event) {
+    if (event.which === 13) {
+      $(event.target).trigger('click');
+    }
+  }
+
   _backToCenter() {
     this.map.panTo(this.mapCenter);
     if (this.infoWindow) this.infoWindow.close();
@@ -94,13 +120,6 @@ class Map {
   _showUserLocation() {
     if (this.userMarker) this.map.panTo(this.userMarker.getPosition());
     this.infoWindow.open(this.map);
-  }
-
-  _handleLocationError(browserHasGeolocation) {
-    this.infoWindow.setPosition(this.map.getCenter());
-    this.infoWindow.setContent(browserHasGeolocation
-      ? 'Error: The Geolocation service failed.'
-      : 'Error: Your browser doesn\'t support geolocation.');
   }
 }
 

@@ -18,8 +18,9 @@ class TickBox {
 
   _handleEnterPress(event) {
     if (event.which === 13) {
-      const checkbox = $(this.domElement).find('input[type=checkbox]')[0];
-      checkbox.checked = !checkbox.checked;
+      const $checkbox = $(this.domElement).find('input[type=checkbox]');
+      $checkbox[0].checked = !$checkbox[0].checked;
+      $checkbox.trigger('change');
     }
   }
 

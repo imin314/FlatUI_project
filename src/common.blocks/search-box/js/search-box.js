@@ -2,57 +2,57 @@ import $ from 'jquery';
 
 class SearchBox {
   constructor(domElement) {
-    this.domElement = domElement;
+    this._findElements(domElement);
     this._initialize();
+  }
+
+  _findElements(domElement) {
+    const $searchbox = $(domElement);
+    this.$searchbox = $searchbox;
+    this.$button = $searchbox.find('.js-search-box__button');
+    this.$input = $searchbox.find('.js-search-box__input');
   }
 
   _initialize() {
     $(document).ready(() => {
-      const $searchbox = $(this.domElement);
-      const $button = $searchbox.find('.js-search-box__button');
-      const $input = $searchbox.find('.js-search-box__input');
-      $searchbox.on('click.searchbox', e => this._handleSearchBoxClick(e));
-      $button.on('keypress.searchbox', e => this._handleButtonKeypress(e));
-      $input.on('focus.searchbox', () => this._emptyInput());
+      this.$searchbox
+        .on('click.searchbox', e => this._handleSearchBoxClick(e))
+        .on('keypress.searchbox', e => this._handleSearchBoxKeypress(e));
+      this.$input.on('focus.searchbox', () => this._handleInputFocus());
 
-      if ($searchbox.hasClass('search-box_filled')) {
-        this._handleButtonClick($button);
+      if (this.$searchbox.hasClass('search-box_filled')) {
+        this._handleButtonClick();
       }
     });
   }
 
   _handleSearchBoxClick(event) {
     const $element = $(event.target);
-    if ($element.hasClass('search-box__button')) {
-      this._handleButtonClick($element);
-    } else {
-      this._emptyInput();
+    if ($element.hasClass('js-search-box__button')) {
+      this._handleButtonClick();
     }
   }
 
-  _handleButtonClick($button) {
+  _handleButtonClick() {
     const notFoundMessage = "I've not found what I'm looking for...";
-    const $searchBox = $(this.domElement);
-    $searchBox.find('.js-search-box__input').val(notFoundMessage);
-    $searchBox.addClass('search-box_filled');
-    $button.blur();
+    this.$input.val(notFoundMessage);
+    this.$searchbox.addClass('search-box_filled');
+    this.$button.blur();
   }
 
-  _handleButtonKeypress(event) {
+  _handleSearchBoxKeypress(event) {
     if (event.which === 13) {
       this._handleButtonClick();
     }
   }
 
   _emptyInput() {
-    const $searchBox = $(this.domElement);
-    $searchBox.find('.js-search-box__input').val('');
-    $searchBox.removeClass('search-box_filled');
+    this.$input.val('');
+    this.$searchbox.removeClass('search-box_filled');
   }
 
   _handleInputFocus() {
-    const $searchBox = $(this.domElement);
-    if ($searchBox.hasClass('search-box_filled')) {
+    if (this.$searchbox.hasClass('search-box_filled')) {
       this._emptyInput();
     }
   }

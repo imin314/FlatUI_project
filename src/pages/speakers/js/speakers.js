@@ -3,8 +3,7 @@ import $ from 'jquery';
 class Speakers {
   constructor(domElement) {
     this.cardsAreExpanded = false;
-    this._findElements(domElement);
-    this._initialize();
+    this._initialize(domElement);
   }
 
   _findElements(domElement) {
@@ -16,8 +15,9 @@ class Speakers {
     this.$viewAllLink = $domElement.find('.js-speakers__link');
   }
 
-  _initialize() {
+  _initialize(domElement) {
     $(document).ready(() => {
+      this._findElements(domElement);
       this._addCustomScrollBar();
       this.$scrollBarContainer = this.$cards.find('.mCSB_container');
       this.windowIsSmall = false;
@@ -54,16 +54,24 @@ class Speakers {
   }
 
   _handleTotalScroll() {
-    this.$rightButton.addClass('arrow-button_disabled');
+    this.$rightButton
+      .addClass('arrow-button_disabled')
+      .attr('tabindex', '-1');
   }
 
   _handleTotalScrollBack() {
-    this.$leftButton.addClass('arrow-button_disabled');
+    this.$leftButton
+      .addClass('arrow-button_disabled')
+      .attr('tabindex', '-1');
   }
 
   _handleScrollStart() {
-    this.$leftButton.removeClass('arrow-button_disabled');
-    this.$rightButton.removeClass('arrow-button_disabled');
+    this.$leftButton
+      .removeClass('arrow-button_disabled')
+      .attr('tabindex', '0');
+    this.$rightButton
+      .removeClass('arrow-button_disabled')
+      .attr('tabindex', '0');
   }
 
   _updatePageView(mediaQuery) {

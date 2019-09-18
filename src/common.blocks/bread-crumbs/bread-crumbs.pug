@@ -1,13 +1,16 @@
 mixin breadCrumbs(settings)
   - const active = settings.active !== undefined ? settings.active : 1;
   - const max = settings.max !== undefined ? settings.max : 5;
+  - const classNameBase = 'bread-crumbs__item js-bread-crumbs__item';
+  - let activeClass = 'bread-crumbs__item_active';
+  - let className = classNameBase;
   ul.bread-crumbs
     - for (let i = 1; i <= max; i++) {
       - if (i === active) {
-      li.bread-crumbs__item.bread-crumbs__item_active
-        .bread-crumbs__circle= i
+      -   className = `${classNameBase} ${activeClass}`;
       - } else {
-      li.bread-crumbs__item.js-bread-crumbs__item
-        .bread-crumbs__circle= i
+      -   className = classNameBase;
       - }
+      li(class = className)
+        .bread-crumbs__circle= i
     - }

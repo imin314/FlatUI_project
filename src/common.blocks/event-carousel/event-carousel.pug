@@ -1,11 +1,12 @@
 mixin eventCarousel(talksData)
   section.event-carousel.js-event-carousel
-    a.event-carousel__link(href="./schedule.html" title="schedule") See all events
+    p.event-carousel__top
+      a.event-carousel__link(href="./schedule.html" title="schedule") See all events
     .event-carousel__cards.js-event-carousel__cards
       .event-carousel__card-wrapper.js-event-carousel__card-wrapper
         each talk in talksData
           .event-carousel__card.js-event-carousel__card
-            +newsCard(talk, { type:'event', isCompact: true })
+            +newsCard(talk, { type:'event', isCompact: true, withScrollbar: true })
     .event-carousel__calendar-overlay.js-event-carousel__calendar-overlay
       .event-carousel__calendar.js-event-carousel__calendar
         +calendar()
