@@ -1,4 +1,16 @@
-# FlatUI_project
-UI kit with pug, stylus, jquery and webpack
+# FlatUI project
+Набор элементов UI и демонстрационный сайт.
 
+## Установка и запуск
+Для установки и запуска проекта требуется Node.js.  
+Из корневой папки скачанного проекта запустите следующую команду:
+```
+npm install
+```
+Запуск осуществляется с помощью команды:
+```
+npm start
+```
+
+## GitHub Pages
 https://imin314.github.io/FlatUI_project/
