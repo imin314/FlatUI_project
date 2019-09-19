@@ -9,14 +9,14 @@ class ArrowButton {
     $(document).ready(() => {
       this.$button = $(domElement);
 
-      this.$button.on('click.arrowbutton', () => this._handleButtonClick())
+      this.$button.on('mouseup.arrowbutton', () => this._handleButtonMouseUp())
         .on('keydown.arrowbutton', e => this._handleEnterDown(e))
         .on('keyup.arrowbutton', e => this._handleEnterUp(e));
     });
   }
 
-  _handleButtonClick() {
-    // this.$button.blur();
+  _handleButtonMouseUp() {
+    this.$button.blur();
   }
 
   _handleEnterDown(event) {
