@@ -17,13 +17,18 @@
     & .arrow-button__arrow
       background-color color-bg
       border-color white
-  &:hover, &:focus       
+  &:hover       
     @media (hover: hover)
       background-color color-cold
     & .arrow-button__arrow
       @media (hover: hover)
         background-color color-cold
         border-color white
+  &:focus
+    background-color color-cold
+    & .arrow-button__arrow
+      background-color color-cold
+      border-color white      
   &:active
     @media (hover:none)
       background-color color-cold
