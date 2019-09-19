@@ -16,7 +16,7 @@ class ArrowButton {
   }
 
   _handleButtonClick() {
-    this.$button.blur();
+    // this.$button.blur();
   }
 
   _handleEnterDown(event) {
