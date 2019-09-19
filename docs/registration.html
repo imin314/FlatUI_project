@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <meta name="description" content="Flat UI demo page with Pug, Stylus, JS, jQuery, BEM and Webpack">
+    <meta name="keywords" content="HTML, CSS, Pug, Stylus, BEM, Webpack, flatUI, ui kit, web conference">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicons/favicon-16x16.png">
+    <link rel="mask-icon" href="./assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#ffffff">
+    <title>Register</title>
+    <script>
+      document.documentElement.style.visibility = 'hidden';
+      document.addEventListener('DOMContentLoaded', function() {
+      document.documentElement.style.visibility = '';});
+    </script>
+  </head>
+  <body>
+    <div class="loader js-loader">
+      <div class="loader__grid">
+        <div class="loader__cell">
+        </div>
+        <div class="loader__cell">
+        </div>
+        <div class="loader__cell">
+        </div>
+        <div class="loader__cell">
+        </div>
+        <div class="loader__cell">
+        </div>
+        <div class="loader__cell">
+        </div>
+        <div class="loader__cell">
+        </div>
+        <div class="loader__cell">
+        </div>
+        <div class="loader__cell">
+        </div>
+      </div>
+    </div>
+    <nav class="navigation-bar">
+      <input class="navigation-bar__toggle" id="toggle" type="checkbox">
+      <label class="navigation-bar__icon" for="toggle"><span class="navigation-bar__icon-line"></span><span class="navigation-bar__icon-line"></span><span class="navigation-bar__icon-line"></span></label>
+      <ul class="navigation-bar__menu">
+        <li class="navigation-bar__item"><a href="index.html" title="Home">Home</a></li>
+        <li class="navigation-bar__item"><a href="registration.html" title="Registration">Registration</a></li>
+        <li class="navigation-bar__item"><a href="schedule.html" title="Schedule">Schedule</a></li>
+        <li class="navigation-bar__item"><a href="speakers.html" title="Speakers">Speakers</a></li>
+        <li class="navigation-bar__item"><a href="contacts.html" title="Contacts">Contacts</a></li>
+        <li class="navigation-bar__item"><a href="uidemo.html" title="UI Kit Demo">UI Kit Demo</a></li>
+      </ul>
+    </nav>
+    <div class="registration js-registration">
+      <main class="registration__main">
+        <header class="registration__header js-registration__header">
+          <h1 class="registration__title">Join us at Web Talks 2019</h1>
+          <div class="registration__bread-crumbs">
+            <ul class="bread-crumbs">
+              <li class="bread-crumbs__item js-bread-crumbs__item bread-crumbs__item_active">
+                <div class="bread-crumbs__circle">1</div>
+              </li>
+              <li class="bread-crumbs__item js-bread-crumbs__item">
+                <div class="bread-crumbs__circle">2</div>
+              </li>
+              <li class="bread-crumbs__item js-bread-crumbs__item">
+                <div class="bread-crumbs__circle">3</div>
+              </li>
+            </ul>
+          </div>
+        </header>
+        <div class="registration__form">
+          <section class="registration-form">
+            <form class="registration-form__form js-registration-form__form" action="register.php" method="post">
+              <section class="registration-form__stage js-registration-form__stage registration-form__stage_first">
+                <label class="registration-form__name">
+                  <input class="registration-form__input" type="text" name="name" placeholder="Your Name" area-label="Name" required>
+                  <div class="registration-form__bubble"></div>
+                </label>
+                <label class="registration-form__email">
+                  <input class="registration-form__input" type="email" name="email" placeholder="Your Email" area-label="Email" required>
+                  <div class="registration-form__bubble"></div>
+                </label>
+                <div class="registration-form__subscribe">
+                  <div class="registration-form__subscribe-text">Subscribe to Web Talks newsletters</div>
+                  <div class="registration-form__checkbox">
+                    <div class="toggle-switch js-toggle-switch">
+                      <label class="toggle-switch__label">
+                        <input class="toggle-switch__checkbox" type="checkbox" checked>
+                        <div class="toggle-switch__slider js-toggle-switch__slider" tabindex="0"></div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="registration-form__stage js-registration-form__stage registration-form__stage_second">
+                <section class="pass-selector js-pass-selector">
+                  <h2 class="pass-selector__title js-pass-selector__title">Find the conference pass for you</h2>
+                  <div class="pass-selector__options">
+                    <div class="pass-selector__column"></div>
+                    <div class="pass-selector__column"></div>
+                    <div class="pass-selector__column"></div>
+                    <div class="pass-selector__row">
+                      <h3 class="pass-selector__pass-name">Premium<br>Pass</h3>
+                      <h3 class="pass-selector__pass-name">Track<br>Pass</h3>
+                      <h3 class="pass-selector__pass-name">Daily<br>Pass</h3>
+                    </div>
+                    <div class="pass-selector__row">
+                      <p class="pass-selector__price">$995</p>
+                      <p class="pass-selector__price">$575</p>
+                      <p class="pass-selector__price">$235</p>
+                    </div>
+                    <div class="pass-selector__row">
+                      <p class="pass-selector__text">Visit any events without limitation</p>
+                      <p class="pass-selector__text">Visit all events in a track</p>
+                      <p class="pass-selector__text">Attend 1 event per day on a conference week</p>
+                    </div>
+                    <div class="pass-selector__row">
+                      <div class="pass-selector__tickbox js-pass-selector__tickbox">
+                        <div class="tick-box js-tick-box tick-box_color_warm">
+                          <label class="tick-box__label">
+                            <input class="tickbox__input" type="checkbox" value="1" name="tickbox" checked>
+                            <div class="tick-box__checkmark js-tick-box__checkmark" tabindex="0"></div>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="pass-selector__tickbox js-pass-selector__tickbox">
+                        <div class="tick-box js-tick-box tick-box_color_warm">
+                          <label class="tick-box__label">
+                            <input class="tickbox__input" type="checkbox" value="2" name="tickbox">
+                            <div class="tick-box__checkmark js-tick-box__checkmark" tabindex="0"></div>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="pass-selector__tickbox js-pass-selector__tickbox">
+                        <div class="tick-box js-tick-box tick-box_color_warm">
+                          <label class="tick-box__label">
+                            <input class="tickbox__input" type="checkbox" value="3" name="tickbox">
+                            <div class="tick-box__checkmark js-tick-box__checkmark" tabindex="0"></div>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </section>
+              <section class="registration-form__stage js-registration-form__stage registration-form__stage_third">
+                <div class="registration-form__policy-checkbox">
+                  <div class="tick-box js-tick-box">
+                    <label class="tick-box__label">
+                      <input class="tickbox__input" type="checkbox" value="1" name="tickbox-policy">
+                      <div class="tick-box__checkmark js-tick-box__checkmark" tabindex="0"></div>
+                    </label>
+                  </div>
+                </div>
+                <div class="registration-form__policy-text">I agree with Web Talks Terms and Conditions and the Privacy Policy</div>
+                <div class="registration-form__button js-registration-form__button"><a class="button js-button button_size_responsive button_color_reverse" title="register" tabindex="0">register</a>
+                </div>
+              </section>
+            </form>
+          </section>
+        </div>
+      </main>
+      <footer class="registration__footer">
+        <div class="footer-section">
+          <section class="footer-section__contacts">
+            <h3 class="footer-section__header">Contact Us</h3>
+            <ul class="footer-section__list">
+              <li class="footer-section__list-item">
+                <p>E-mail:</p>
+                <p><a class="footer-section__link" href="mailto:info@nonexistingwt.org">info@nonexistingwt.org</a></p>
+              </li>
+              <li class="footer-section__list-item">
+                <p>Twitter:</p>
+                <p><a class="footer-section__link" href="./sorry_this_link_is_dead" title="twitter" target="_blank" rel="noopener noreferrer">@nonexistingwebtalks</a></p>
+              </li>
+              <li class="footer-section__list-item">
+                <p>Phone:</p>
+                <p> <a class="footer-section__link" href="tel:+73822000000">+7 3822 000 000</a></p>
+              </li>
+            </ul>
+          </section>
+          <section class="footer-section__docs">
+            <h3 class="footer-section__header">More from Web Talks</h3>
+            <ul class="footer-section__list">
+              <li class="footer-section__list-item"><a class="footer-section__link" href="./sorry_this_link_is_dead" title="news and articles" target="_blank" rel="noopener noreferrer">News and articles</a></li>
+              <li class="footer-section__list-item"><a class="footer-section__link" href="./sorry_this_link_is_dead" title="newsleter" target="_blank" rel="noopener noreferrer">Newsletter</a></li>
+              <li class="footer-section__list-item"><a class="footer-section__link" href="./sorry_this_link_is_dead" title="terms and conditions" target="_blank" rel="noopener noreferrer">Terms and conditions</a></li>
+              <li class="footer-section__list-item"><a class="footer-section__link" href="./sorry_this_link_is_dead" title="privacy policy" target="_blank" rel="noopener noreferrer">Privacy policy</a></li>
+            </ul>
+          </section>
+          <p class="footer-section__copyright">© 2018-2019 Web Talks. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+  <script type="text/javascript" src="./main.js"></script></body>
+</html>
