@@ -2,15 +2,16 @@ import $ from 'jquery';
 
 class TickBox {
   constructor(domElement) {
-    this.domElement = domElement;
-    this._initialize();
+    this._initialize(domElement);
   }
 
-  _initialize() {
+  _initialize(domElement) {
     $(document).ready(() => {
-      const $tickbox = $(this.domElement);
-
-      $tickbox
+      const $domElement = $(domElement);
+      this.$tickbox = $domElement;
+      this.$input = $domElement.find('.js-tickbox__input');
+      this.$checkmark = $domElement.find('.js-tick-box__checkmark');
+      this.$tickbox
         .on('keypress.tickbox', e => this._handleEnterPress(e))
         .on('click.tickbox', () => this._removeFocus());
     });
@@ -18,14 +19,13 @@ class TickBox {
 
   _handleEnterPress(event) {
     if (event.which === 13) {
-      const $checkbox = $(this.domElement).find('input[type=checkbox]');
-      $checkbox[0].checked = !$checkbox[0].checked;
-      $checkbox.trigger('change');
+      this.$input[0].checked = !this.$input[0].checked;
+      this.$input.trigger('change');
     }
   }
 
   _removeFocus() {
-    $(this.domElement).find('.js-tick-box__checkmark').blur();
+    this.$checkmark.blur();
   }
 }
 

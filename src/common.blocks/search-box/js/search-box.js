@@ -29,20 +29,20 @@ class SearchBox {
   _handleSearchBoxClick(event) {
     const $element = $(event.target);
     if ($element.hasClass('js-search-box__button')) {
-      this._handleButtonClick();
+      this._handleButtonClick(event);
     }
   }
 
-  _handleButtonClick() {
+  _handleButtonClick(event) {
     const notFoundMessage = "I've not found what I'm looking for...";
     this.$input.val(notFoundMessage);
     this.$searchbox.addClass('search-box_filled');
-    this.$button.blur();
+    $(event.target).blur();
   }
 
   _handleSearchBoxKeypress(event) {
     if (event.which === 13) {
-      this._handleButtonClick();
+      this._handleButtonClick(event);
     }
   }
 

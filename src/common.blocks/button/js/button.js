@@ -3,23 +3,23 @@ import './jquery.materialripple';
 
 class Button {
   constructor(domElement) {
-    this.domElement = domElement;
-    this._initialize();
+    this._initialize(domElement);
   }
 
-  _initialize() {
+  _initialize(domElement) {
     $(document).ready(() => {
-      const $button = $(this.domElement);
-      $button.addClass('ripple').materialripple();
-
-      $button.on('keypress.ripple', e => this._handleEnterPress(e));
+      this.$button = $(domElement);
+      this.$button
+        .on('keypress.ripple', e => this._handleEnterPress(e))
+        .addClass('ripple')
+        .materialripple();
     });
     return this;
   }
 
   _handleEnterPress(event) {
     if (event.which === 13) {
-      $(this.domElement).click();
+      this.$button.click();
     }
   }
 }

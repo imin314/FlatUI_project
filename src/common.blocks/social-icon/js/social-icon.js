@@ -1,3 +1,3 @@
-$(document).ready(function() {
-    $(".social-icon").removeAttr("style");
+$(document).ready(() => {
+    $('.social-icon').removeAttr('style');
 });

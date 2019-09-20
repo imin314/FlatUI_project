@@ -2,15 +2,16 @@ import $ from 'jquery';
 
 class ToggleSwitch {
   constructor(domElement) {
-    this.domElement = domElement;
-    this._initialize();
+    this._initialize(domElement);
   }
 
-  _initialize() {
+  _initialize(domElement) {
     $(document).ready(() => {
-      const $toggle = $(this.domElement);
-
-      $toggle
+      const $domElement = $(domElement);
+      this.$toggle = $domElement;
+      this.$input = $domElement.find('.js-toggle-switch__checkbox');
+      this.$slider = $domElement.find('.js-toggle-switch__slider');
+      this.$toggle
         .on('keypress.toggle', e => this._handleEnterPress(e))
         .on('click.toggle', () => this._removeFocus());
     });
@@ -18,14 +19,13 @@ class ToggleSwitch {
 
   _handleEnterPress(event) {
     if (event.which === 13) {
-      const $checkbox = $(this.domElement).find('input[type=checkbox]');
-      $checkbox[0].checked = !$checkbox[0].checked;
-      $checkbox.trigger('change');
+      this.$input[0].checked = !this.$input[0].checked;
+      this.$input.trigger('change');
     }
   }
 
   _removeFocus() {
-    $(this.domElement).find('.js-toggle-switch__slider').blur();
+    this.$slider.blur();
   }
 }
 

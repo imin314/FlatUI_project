@@ -2,16 +2,16 @@ import $ from 'jquery';
 
 class SpeakerCard {
   constructor(domElement) {
-    this.domElement = $(domElement);
-    this._initialize();
+    this._initialize(domElement);
   }
 
-  _initialize() {
+  _initialize(domElement) {
+    this.$text = $(domElement).find('.js-speaker-card__text');
     $(window).on('load.speakercard', () => this._addScrollBar());
   }
 
   _addScrollBar() {
-    this.domElement.find('.js-speaker-card__text').mCustomScrollbar();
+    this.$text.mCustomScrollbar();
   }
 }
 

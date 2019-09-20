@@ -14,4 +14,4 @@ class Calendar {
   }
 }
 
-$('.calendar').each((i, element) => new Calendar(element));
+$('.js-calendar').each((i, element) => new Calendar(element));

@@ -1,3 +1,3 @@
-$(document).ready(function() {
-    $(".pin").removeAttr("style");
+$(document).ready(() => {
+    $('.pin').removeAttr('style');
 });

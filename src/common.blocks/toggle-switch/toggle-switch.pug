@@ -2,5 +2,5 @@ mixin toggleSwitch(isChecked)
   - const isCheckedAttr = !!isChecked
   .toggle-switch.js-toggle-switch
     label.toggle-switch__label
-      input.toggle-switch__checkbox(type="checkbox" checked=isCheckedAttr)
+      input.toggle-switch__checkbox.js-toggle-switch__checkbox(type="checkbox" checked=isCheckedAttr)
       .toggle-switch__slider.js-toggle-switch__slider(tabindex="0")

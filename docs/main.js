@@ -11021,16 +11021,16 @@ var social_icon = __webpack_require__(8);
 
 class speaker_card_SpeakerCard {
   constructor(domElement) {
-    this.domElement = jquery_default()(domElement);
-    this._initialize();
+    this._initialize(domElement);
   }
 
-  _initialize() {
+  _initialize(domElement) {
+    this.$text = jquery_default()(domElement).find('.js-speaker-card__text');
     jquery_default()(window).on('load.speakercard', () => this._addScrollBar());
   }
 
   _addScrollBar() {
-    this.domElement.find('.js-speaker-card__text').mCustomScrollbar();
+    this.$text.mCustomScrollbar();
   }
 }
 
@@ -11067,13 +11067,14 @@ class arrow_button_ArrowButton {
     jquery_default()(document).ready(() => {
       this.$button = jquery_default()(domElement);
 
-      this.$button.on('mouseup.arrowbutton', () => this._handleButtonMouseUp())
+      this.$button
+        .on('click.arrowbutton', () => this._handleButtonClick())
         .on('keydown.arrowbutton', e => this._handleEnterDown(e))
         .on('keyup.arrowbutton', e => this._handleEnterUp(e));
     });
   }
 
-  _handleButtonMouseUp() {
+  _handleButtonClick() {
     this.$button.blur();
   }
 
@@ -11104,23 +11105,23 @@ var jquery_materialripple = __webpack_require__(7);
 
 class button_Button {
   constructor(domElement) {
-    this.domElement = domElement;
-    this._initialize();
+    this._initialize(domElement);
   }
 
-  _initialize() {
+  _initialize(domElement) {
     jquery_default()(document).ready(() => {
-      const $button = jquery_default()(this.domElement);
-      $button.addClass('ripple').materialripple();
-
-      $button.on('keypress.ripple', e => this._handleEnterPress(e));
+      this.$button = jquery_default()(domElement);
+      this.$button
+        .on('keypress.ripple', e => this._handleEnterPress(e))
+        .addClass('ripple')
+        .materialripple();
     });
     return this;
   }
 
   _handleEnterPress(event) {
     if (event.which === 13) {
-      jquery_default()(this.domElement).click();
+      this.$button.click();
     }
   }
 }
@@ -11349,15 +11350,16 @@ jquery_default()('.js-email-form').each((i, element) => new email_form_EmailForm
 
 class toggle_switch_ToggleSwitch {
   constructor(domElement) {
-    this.domElement = domElement;
-    this._initialize();
+    this._initialize(domElement);
   }
 
-  _initialize() {
+  _initialize(domElement) {
     jquery_default()(document).ready(() => {
-      const $toggle = jquery_default()(this.domElement);
-
-      $toggle
+      const $domElement = jquery_default()(domElement);
+      this.$toggle = $domElement;
+      this.$input = $domElement.find('.js-toggle-switch__checkbox');
+      this.$slider = $domElement.find('.js-toggle-switch__slider');
+      this.$toggle
         .on('keypress.toggle', e => this._handleEnterPress(e))
         .on('click.toggle', () => this._removeFocus());
     });
@@ -11365,14 +11367,13 @@ class toggle_switch_ToggleSwitch {
 
   _handleEnterPress(event) {
     if (event.which === 13) {
-      const $checkbox = jquery_default()(this.domElement).find('input[type=checkbox]');
-      $checkbox[0].checked = !$checkbox[0].checked;
-      $checkbox.trigger('change');
+      this.$input[0].checked = !this.$input[0].checked;
+      this.$input.trigger('change');
     }
   }
 
   _removeFocus() {
-    jquery_default()(this.domElement).find('.js-toggle-switch__slider').blur();
+    this.$slider.blur();
   }
 }
 
@@ -11511,15 +11512,16 @@ jquery_default()('.js-map').each((i, element) => new map_Map(element));
 
 class tick_box_TickBox {
   constructor(domElement) {
-    this.domElement = domElement;
-    this._initialize();
+    this._initialize(domElement);
   }
 
-  _initialize() {
+  _initialize(domElement) {
     jquery_default()(document).ready(() => {
-      const $tickbox = jquery_default()(this.domElement);
-
-      $tickbox
+      const $domElement = jquery_default()(domElement);
+      this.$tickbox = $domElement;
+      this.$input = $domElement.find('.js-tickbox__input');
+      this.$checkmark = $domElement.find('.js-tick-box__checkmark');
+      this.$tickbox
         .on('keypress.tickbox', e => this._handleEnterPress(e))
         .on('click.tickbox', () => this._removeFocus());
     });
@@ -11527,14 +11529,13 @@ class tick_box_TickBox {
 
   _handleEnterPress(event) {
     if (event.which === 13) {
-      const $checkbox = jquery_default()(this.domElement).find('input[type=checkbox]');
-      $checkbox[0].checked = !$checkbox[0].checked;
-      $checkbox.trigger('change');
+      this.$input[0].checked = !this.$input[0].checked;
+      this.$input.trigger('change');
     }
   }
 
   _removeFocus() {
-    jquery_default()(this.domElement).find('.js-tick-box__checkmark').blur();
+    this.$checkmark.blur();
   }
 }
 
@@ -11572,20 +11573,20 @@ class search_box_SearchBox {
   _handleSearchBoxClick(event) {
     const $element = jquery_default()(event.target);
     if ($element.hasClass('js-search-box__button')) {
-      this._handleButtonClick();
+      this._handleButtonClick(event);
     }
   }
 
-  _handleButtonClick() {
+  _handleButtonClick(event) {
     const notFoundMessage = "I've not found what I'm looking for...";
     this.$input.val(notFoundMessage);
     this.$searchbox.addClass('search-box_filled');
-    this.$button.blur();
+    jquery_default()(event.target).blur();
   }
 
   _handleSearchBoxKeypress(event) {
     if (event.which === 13) {
-      this._handleButtonClick();
+      this._handleButtonClick(event);
     }
   }
 
@@ -11608,32 +11609,31 @@ jquery_default()('.js-search-box').each((i, element) => new search_box_SearchBox
 
 class drop_down_DropDown {
   constructor(domElement) {
-    this.domElement = domElement;
-    this._initialize();
+    this._initialize(domElement);
   }
 
-  _initialize() {
+  _initialize(domElement) {
     jquery_default()(document).ready(() => {
-      const $dropdown = jquery_default()(this.domElement);
-      $dropdown.on('click.drop-down', e => this._handleDropDownClick(e));
+      const $domElement = jquery_default()(domElement);
+      this.$dropdown = $domElement;
+      this.$label = $domElement.find('.js-drop-down__label');
+      this.$dropdown.on('click.drop-down', e => this._handleDropDownClick(e));
     });
   }
 
   _handleDropDownClick(event) {
-    const $dropdown = jquery_default()(this.domElement);
     const $targetElement = jquery_default()(event.target);
     const isItemChosen = $targetElement.hasClass('js-drop-down__item');
-    $dropdown.toggleClass('drop-down_active');
+    this.$dropdown.toggleClass('drop-down_active');
 
     if (isItemChosen) {
       const chosenOption = $targetElement.text();
-      $dropdown.find('.js-drop-down__label').text(chosenOption);
+      this.$label.text(chosenOption);
     }
   }
 
   _handleDropDownFocusOut() {
-    const $dropdown = jquery_default()(this.domElement);
-    $dropdown.removeClass('drop-down_active');
+    this.$dropdown.removeClass('drop-down_active');
   }
 }
 
@@ -11659,7 +11659,7 @@ class calendar_Calendar {
   }
 }
 
-jquery_default()('.calendar').each((i, element) => new calendar_Calendar(element));
+jquery_default()('.js-calendar').each((i, element) => new calendar_Calendar(element));
 
 // CONCATENATED MODULE: ./src/common.blocks/online-help/js/online-help.js
 
@@ -11740,7 +11740,7 @@ class event_carousel_EventCarousel {
     const $target = jquery_default()(event.target);
     if ($target.hasClass('js-button')) {
       this.$calendarOverlay.addClass('event-carousel__calendar-overlay_visible');
-      jquery_default()(document).on('click.event-carousel', event => this._handleDocumentClick(event));
+      jquery_default()(document).on('click.event-carousel', e => this._handleDocumentClick(e));
       return false;
     }
   }
@@ -14983,9 +14983,10 @@ $.fn.materialripple = function (options) {
 /* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function($) {$(document).ready(function() {
-    $(".social-icon").removeAttr("style");
+/* WEBPACK VAR INJECTION */(function($) {$(document).ready(() => {
+    $('.social-icon').removeAttr('style');
 });
+
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(0)))
 
 /***/ }),
@@ -15244,9 +15245,10 @@ return t.apply(e,arguments)}}function a(){this.onload=null,e(t).addClass(d[2]),r
 /* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function($) {$(document).ready(function() {
-    $(".pin").removeAttr("style");
+/* WEBPACK VAR INJECTION */(function($) {$(document).ready(() => {
+    $('.pin').removeAttr('style');
 });
+
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(0)))
 
 /***/ }),

@@ -27,7 +27,7 @@ class EventCarousel {
     const $target = $(event.target);
     if ($target.hasClass('js-button')) {
       this.$calendarOverlay.addClass('event-carousel__calendar-overlay_visible');
-      $(document).on('click.event-carousel', event => this._handleDocumentClick(event));
+      $(document).on('click.event-carousel', e => this._handleDocumentClick(e));
       return false;
     }
   }
