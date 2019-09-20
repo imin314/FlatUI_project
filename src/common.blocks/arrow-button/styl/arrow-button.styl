@@ -17,7 +17,19 @@
     & .arrow-button__arrow
       background-color color-bg
       border-color white
-  &:hover, &:focus, &:active  
+  &:hover
+    @media (hover:hover)
+      background-color color-cold
+      & .arrow-button__arrow
+        background-color color-cold
+        border-color white
+  &:active
+    @media (hover:none)
+      background-color color-cold
+      & .arrow-button__arrow
+        background-color color-cold
+        border-color white
+  &:focus, &_active
     background-color color-cold
     & .arrow-button__arrow
       background-color color-cold
@@ -28,18 +40,12 @@
       transform translate(30%, -50%) rotate(-45deg)
     &:active, &.arrow-button_active
       transform translateX(1px)
-    &:hover
-      @media (hover:none)
-        transform translateX(1px)
   &_direction_left
     & .arrow-button__arrow
       left 50%
       transform translate(-30%, -50%) rotate(135deg)
     &:active, &.arrow-button_active
       transform translateX(-1px)
-    &:hover
-      @media (hover:none)
-        transform translateX(-1px)      
   &__arrow
     position absolute
     top 50%
