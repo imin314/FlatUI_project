@@ -1,4 +1,4 @@
-import $ from 'jquery';
+import '../../scrollbar/js/scrollbar';
 
 class NewsCard {
   constructor(domElement) {

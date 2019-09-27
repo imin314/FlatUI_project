@@ -47,6 +47,17 @@ module.exports = {
       $: 'jquery',
       jQuery: 'jquery',
     }),
+    new webpack.LoaderOptionsPlugin({
+      options: {
+        stylus: {
+          import: [
+            path.resolve(__dirname, './src/styl/variables.styl'),
+            path.resolve(__dirname, './src/styl/mixins.styl'),
+          ],
+          preferPathResolver: 'webpack',
+        },
+      },
+    }),
   ],
   module: {
     rules: [
@@ -72,7 +83,7 @@ module.exports = {
               ],
             },
           },
-          'stylus-loader',
+          'stylus-loader?resolve url',
         ],
       },
       {

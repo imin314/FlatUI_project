@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <meta name="description" content="Flat UI demo page with Pug, Stylus, JS, jQuery, BEM and Webpack">
+    <meta name="keywords" content="HTML, CSS, Pug, Stylus, BEM, Webpack, flatUI, ui kit, web conference">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicons/favicon-16x16.png">
+    <link rel="mask-icon" href="./assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#ffffff">
+    <title>Web Talks 2019</title>
+    <script>
+      document.documentElement.style.visibility = 'hidden';
+      document.addEventListener('DOMContentLoaded', function() {
+      document.documentElement.style.visibility = '';});
+    </script>
+  </head>
+  <body>
+    <div class="loader js-loader">
+      <div class="loader__grid">
+        <div class="loader__cell">
+        </div>
+        <div class="loader__cell">
+        </div>
+        <div class="loader__cell">
+        </div>
+        <div class="loader__cell">
+        </div>
+        <div class="loader__cell">
+        </div>
+        <div class="loader__cell">
+        </div>
+        <div class="loader__cell">
+        </div>
+        <div class="loader__cell">
+        </div>
+        <div class="loader__cell">
+        </div>
+      </div>
+    </div>
+    <nav class="navigation-bar">
+      <input class="navigation-bar__toggle" id="toggle" type="checkbox">
+      <label class="navigation-bar__icon" for="toggle"><span class="navigation-bar__icon-line"></span><span class="navigation-bar__icon-line"></span><span class="navigation-bar__icon-line"></span></label>
+      <ul class="navigation-bar__menu">
+        <li class="navigation-bar__item"><a class="navigation-bar__link" href="index.html" title="Home">Home</a></li>
+        <li class="navigation-bar__item"><a class="navigation-bar__link" href="registration.html" title="Registration">Registration</a></li>
+        <li class="navigation-bar__item"><a class="navigation-bar__link" href="schedule.html" title="Schedule">Schedule</a></li>
+        <li class="navigation-bar__item"><a class="navigation-bar__link" href="speakers.html" title="Speakers">Speakers</a></li>
+        <li class="navigation-bar__item"><a class="navigation-bar__link" href="contacts.html" title="Contacts">Contacts</a></li>
+        <li class="navigation-bar__item"><a class="navigation-bar__link" href="uidemo.html" title="UI Kit Demo">UI Kit Demo</a></li>
+      </ul>
+    </nav>
+    <div class="index">
+      <main class="index__main">
+        <div class="index__banner">
+          <header class="banner-section">
+            <p class="banner-section__location">Tomsk / December 2019</p>
+            <h1 class="banner-section__title">Web Talks</h1>
+            <p class="banner-section__tagline">Three big tracks–Product, Design, and Developer focused, plus stellar keynotes and much more</p>
+            <div class="banner-section__register-button"><a class="button js-button button_size_responsive" title="pre-register for 2019" tabindex="0" href="registration.html">pre-register for 2019</a>
+            </div>
+          </header>
+        </div>
+        <div class="index__about">
+          <section class="about-section">
+            <div class="about-section__block">
+              <div class="about-section__text">
+                <h3 class="about-section__title">About Web Talks 2019</h3>
+                <p class="about-section__intro"><span>Our field is constantly changing, where last year's cutting edge is this year's commonplace, and today's best practice is tomorrow's old hat. For well over a decade, we've tracked practices, patterns and technologies to keep our audience up to date.</span><span>Web Talks brings together the whole team, with three curated tracks, one focused on development and engineering, one focused on design, and one focused on management. For this, we've brought together the finest minds at the intersection of technology, design, and management in an atmosphere unlike any other.</span><a href="https://www.youtube.com/channel/UCELSb-IYi_d5rYFOxWeOz5g" title="Watch more" target="_blank" rel="noopener noreferrer">See what happened in 2018 &gt;</a></p>
+              </div>
+              <div class="about-section__right-col">
+                <div class="about-section__video">
+                  <div class="video js-video">
+                    <iframe class="video__frame js-video__frame" src="https://www.youtube.com/embed/yNVLjsAvp3E" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="about-section__block">
+              <div class="about-section__text">
+                <h3 class="about-section__title">Who's it for?</h3>
+                <h4 class="about-section__subtitle">The Design Team</h4>
+                <p class="about-section__intro">UX, IxD, visual, Web, Front End and CX experts, Art Directors, Creative Directors, Experience Leads, Design Leads and Design Researchers should all attend to hear these world leading experts.</p>
+                <h4 class="about-section__subtitle">The Engineering Team</h4>
+                <p class="about-section__intro">We've got the whole front end development team covered: front end engineers, JavaScript and Web developers, engineering leads, engineering managers, devops experts, CTOs.</p>
+                <h4 class="about-section__subtitle">Leaders and Decision Makers</h4>
+                <p class="about-section__intro">To round it out, our audience is full of smart decision makers, who know taking the pulse of what's now, and next, is vital in making the right strategic decisions. Two tracks, and a mixture of deep dive and high level sessions ensures there's something for you too. Meanwhile, outside the sessions, you'll find engaging showcases of technology and design to keep you thinking.</p>
+              </div>
+              <div class="about-section__right-col">
+                <ul class="about-section__stats">
+                  <li class="about-section__stat-item">
+                    <div class="about-section__comment"><span>Three tracks covering actual topics of </span><span class="about-section__topic about-section__topic_color_blue">Development</span><span>, </span><span class="about-section__topic about-section__topic_color_red">Design</span><span>, and </span><span class="about-section__topic about-section__topic_color_gray">Management </span><span>with total of 18 intense workshops and talks.</span></div>
+                    <div class="about-section__chart">
+                      <div class="donut-chart" data-values="61,22,17" data-colors="#4eb7a8,#e75735,#747474">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="about-section__stat-item">
+                    <div class="about-section__number">600+</div>
+                    <div class="about-section__comment">Passionate attendees</div>
+                  </li>
+                  <li class="about-section__stat-item">
+                    <div class="about-section__number">7</div>
+                    <div class="about-section__comment">Intense Days </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="index__events">
+          <section class="event-carousel js-event-carousel">
+            <p class="event-carousel__top"><a class="event-carousel__link" href="./schedule.html" title="schedule">See all events</a></p>
+            <div class="event-carousel__cards js-event-carousel__cards">
+              <div class="event-carousel__card-wrapper js-event-carousel__card-wrapper">
+                <div class="event-carousel__card js-event-carousel__card">
+                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_with_scrollbar">
+                    <div class="news-card__image" style="background-image: url(././/assets/img/management-img.jpg)"></div>
+                    <div class="news-card__content">
+                      <div class="news-card__date"><span class="news-card__day">13</span><span class="news-card__month">Dec</span></div>
+                      <div class="news-card__title">Shipping Product at Scale</div>
+                      <div class="news-card__text js-news-card__text">Done well program management enables teams to do their jobs well, better, by acting as the glue that ties everyone together.</div>
+                      <div class="news-card__button"><a class="button js-button button_size_small button_size_responsive" title="add to calendar" tabindex="0">add to calendar</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="event-carousel__card js-event-carousel__card">
+                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_with_scrollbar">
+                    <div class="news-card__image" style="background-image: url(././/assets/img/development-img.jpg)"></div>
+                    <div class="news-card__content">
+                      <div class="news-card__date"><span class="news-card__day">13</span><span class="news-card__month">Dec</span></div>
+                      <div class="news-card__title">How Designers and Engineers Can Better Work Together</div>
+                      <div class="news-card__text js-news-card__text">Learn about things designers can do to make collaborating with engineers smoother.</div>
+                      <div class="news-card__button"><a class="button js-button button_size_small button_size_responsive" title="add to calendar" tabindex="0">add to calendar</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="event-carousel__card js-event-carousel__card">
+                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_with_scrollbar">
+                    <div class="news-card__image" style="background-image: url(././/assets/img/design-img.jpg)"></div>
+                    <div class="news-card__content">
+                      <div class="news-card__date"><span class="news-card__day">13</span><span class="news-card__month">Dec</span></div>
+                      <div class="news-card__title">Blending physical and digital design</div>
+                      <div class="news-card__text js-news-card__text">The emphasis is shifting onto how best to use it as an invisible enabler of physical and sensory experiences, and how to create the conditions to enable and deliver new experiences to the end users.</div>
+                      <div class="news-card__button"><a class="button js-button button_size_small button_size_responsive" title="add to calendar" tabindex="0">add to calendar</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="event-carousel__card js-event-carousel__card">
+                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_with_scrollbar">
+                    <div class="news-card__image" style="background-image: url(././/assets/img/management-img.jpg)"></div>
+                    <div class="news-card__content">
+                      <div class="news-card__date"><span class="news-card__day">14</span><span class="news-card__month">Dec</span></div>
+                      <div class="news-card__title">Product Discovery Micro Sprint</div>
+                      <div class="news-card__text js-news-card__text">Learn how to identify and model the customer jobs as possible opportunities for innovation.</div>
+                      <div class="news-card__button"><a class="button js-button button_size_small button_size_responsive" title="add to calendar" tabindex="0">add to calendar</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="event-carousel__card js-event-carousel__card">
+                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_with_scrollbar">
+                    <div class="news-card__image" style="background-image: url(././/assets/img/design-img.jpg)"></div>
+                    <div class="news-card__content">
+                      <div class="news-card__date"><span class="news-card__day">14</span><span class="news-card__month">Dec</span></div>
+                      <div class="news-card__title">Creating products and services people will buy</div>
+                      <div class="news-card__text js-news-card__text">In the workshop, you will learn hands-on how to find out what customers want and how they form their jobs to be done.</div>
+                      <div class="news-card__button"><a class="button js-button button_size_small button_size_responsive" title="add to calendar" tabindex="0">add to calendar</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="event-carousel__card js-event-carousel__card">
+                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_with_scrollbar">
+                    <div class="news-card__image" style="background-image: url(././/assets/img/development-img.jpg)"></div>
+                    <div class="news-card__content">
+                      <div class="news-card__date"><span class="news-card__day">14</span><span class="news-card__month">Dec</span></div>
+                      <div class="news-card__title">Using CSS (and SVG) for the Good of UX</div>
+                      <div class="news-card__text js-news-card__text">Building the interface that users interact with impacts on how the user feels when they do, whether they *can* use it properly.</div>
+                      <div class="news-card__button"><a class="button js-button button_size_small button_size_responsive" title="add to calendar" tabindex="0">add to calendar</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="event-carousel__card js-event-carousel__card">
+                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_with_scrollbar">
+                    <div class="news-card__image" style="background-image: url(././/assets/img/design-img.jpg)"></div>
+                    <div class="news-card__content">
+                      <div class="news-card__date"><span class="news-card__day">15</span><span class="news-card__month">Dec</span></div>
+                      <div class="news-card__title">The Double-W Process: to Sprint a Sprinted Model</div>
+                      <div class="news-card__text js-news-card__text">Take part in a super sprinted version of the Double-W process, a remote lean branding service developed by With Company.</div>
+                      <div class="news-card__button"><a class="button js-button button_size_small button_size_responsive" title="add to calendar" tabindex="0">add to calendar</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="event-carousel__card js-event-carousel__card">
+                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_with_scrollbar">
+                    <div class="news-card__image" style="background-image: url(././/assets/img/development-img.jpg)"></div>
+                    <div class="news-card__content">
+                      <div class="news-card__date"><span class="news-card__day">15</span><span class="news-card__month">Dec</span></div>
+                      <div class="news-card__title">The State of Authentication</div>
+                      <div class="news-card__text js-news-card__text">Let's look at the current state of authentication on the Web, and in particular Web Authentication, an effort to standardise web based authentication.</div>
+                      <div class="news-card__button"><a class="button js-button button_size_small button_size_responsive" title="add to calendar" tabindex="0">add to calendar</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="event-carousel__card js-event-carousel__card">
+                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_with_scrollbar">
+                    <div class="news-card__image" style="background-image: url(././/assets/img/management-img.jpg)"></div>
+                    <div class="news-card__content">
+                      <div class="news-card__date"><span class="news-card__day">15</span><span class="news-card__month">Dec</span></div>
+                      <div class="news-card__title">Defining and Measuring Value</div>
+                      <div class="news-card__text js-news-card__text">Let's talk about setting the right goals, from a business and customer standpoint, and how we choose the right metrics to measure.</div>
+                      <div class="news-card__button"><a class="button js-button button_size_small button_size_responsive" title="add to calendar" tabindex="0">add to calendar</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="event-carousel__card js-event-carousel__card">
+                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_with_scrollbar">
+                    <div class="news-card__image" style="background-image: url(././/assets/img/development-img.jpg)"></div>
+                    <div class="news-card__content">
+                      <div class="news-card__date"><span class="news-card__day">16</span><span class="news-card__month">Dec</span></div>
+                      <div class="news-card__title">Return of the script tag</div>
+                      <div class="news-card__text js-news-card__text">With ES6 native modules support landing in major browsers, and tools like unpkg.com there's a growing interest in front-end development without the build systems and local compilation.</div>
+                      <div class="news-card__button"><a class="button js-button button_size_small button_size_responsive" title="add to calendar" tabindex="0">add to calendar</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="event-carousel__card js-event-carousel__card">
+                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_with_scrollbar">
+                    <div class="news-card__image" style="background-image: url(././/assets/img/development-img.jpg)"></div>
+                    <div class="news-card__content">
+                      <div class="news-card__date"><span class="news-card__day">16</span><span class="news-card__month">Dec</span></div>
+                      <div class="news-card__title">Programming Generative Art</div>
+                      <div class="news-card__text js-news-card__text">This talk aims to lower that barrier for you to take home and practice creative coding.</div>
+                      <div class="news-card__button"><a class="button js-button button_size_small button_size_responsive" title="add to calendar" tabindex="0">add to calendar</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="event-carousel__card js-event-carousel__card">
+                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_with_scrollbar">
+                    <div class="news-card__image" style="background-image: url(././/assets/img/development-img.jpg)"></div>
+                    <div class="news-card__content">
+                      <div class="news-card__date"><span class="news-card__day">16</span><span class="news-card__month">Dec</span></div>
+                      <div class="news-card__title">UI architecture in the age of design systems</div>
+                      <div class="news-card__text js-news-card__text">Should the app architecture be influenced by Atomic principles? How do we represent state changes in the design system?</div>
+                      <div class="news-card__button"><a class="button js-button button_size_small button_size_responsive" title="add to calendar" tabindex="0">add to calendar</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="event-carousel__card js-event-carousel__card">
+                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_with_scrollbar">
+                    <div class="news-card__image" style="background-image: url(././/assets/img/management-img.jpg)"></div>
+                    <div class="news-card__content">
+                      <div class="news-card__date"><span class="news-card__day">17</span><span class="news-card__month">Dec</span></div>
+                      <div class="news-card__title">Scaling frontend development</div>
+                      <div class="news-card__text js-news-card__text">Find out what is Tangerine - a program to standardise principles that define a world class frontend application as it scales up.</div>
+                      <div class="news-card__button"><a class="button js-button button_size_small button_size_responsive" title="add to calendar" tabindex="0">add to calendar</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="event-carousel__card js-event-carousel__card">
+                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_with_scrollbar">
+                    <div class="news-card__image" style="background-image: url(././/assets/img/development-img.jpg)"></div>
+                    <div class="news-card__content">
+                      <div class="news-card__date"><span class="news-card__day">17</span><span class="news-card__month">Dec</span></div>
+                      <div class="news-card__title">Functional HTML</div>
+                      <div class="news-card__text js-news-card__text">Let's talk HTML, semantics and why choosing the right html elements will help you write better, cleaner more efficient code</div>
+                      <div class="news-card__button"><a class="button js-button button_size_small button_size_responsive" title="add to calendar" tabindex="0">add to calendar</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="event-carousel__card js-event-carousel__card">
+                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_with_scrollbar">
+                    <div class="news-card__image" style="background-image: url(././/assets/img/development-img.jpg)"></div>
+                    <div class="news-card__content">
+                      <div class="news-card__date"><span class="news-card__day">17</span><span class="news-card__month">Dec</span></div>
+                      <div class="news-card__title">Blockchain for Web Developers</div>
+                      <div class="news-card__text js-news-card__text">The speaker coming from a developer background himself, will bridge the gap the knowledge to fast-track the audience in DApps development.</div>
+                      <div class="news-card__button"><a class="button js-button button_size_small button_size_responsive" title="add to calendar" tabindex="0">add to calendar</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="event-carousel__card js-event-carousel__card">
+                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_with_scrollbar">
+                    <div class="news-card__image" style="background-image: url(././/assets/img/development-img.jpg)"></div>
+                    <div class="news-card__content">
+                      <div class="news-card__date"><span class="news-card__day">18</span><span class="news-card__month">Dec</span></div>
+                      <div class="news-card__title">Your web page never listens to me</div>
+                      <div class="news-card__text js-news-card__text">How can we use the well supported Speech Synthesis API, and the still new SR API, to teach our pages to talk, and to listen?</div>
+                      <div class="news-card__button"><a class="button js-button button_size_small button_size_responsive" title="add to calendar" tabindex="0">add to calendar</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="event-carousel__card js-event-carousel__card">
+                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_with_scrollbar">
+                    <div class="news-card__image" style="background-image: url(././/assets/img/development-img.jpg)"></div>
+                    <div class="news-card__content">
+                      <div class="news-card__date"><span class="news-card__day">18</span><span class="news-card__month">Dec</span></div>
+                      <div class="news-card__title">Functional CSS yesterday</div>
+                      <div class="news-card__text js-news-card__text">Your CSS can already be just* as functional as JavaScript. It is pure, can be immutable, and can be reasoned about.</div>
+                      <div class="news-card__button"><a class="button js-button button_size_small button_size_responsive" title="add to calendar" tabindex="0">add to calendar</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="event-carousel__card js-event-carousel__card">
+                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_with_scrollbar">
+                    <div class="news-card__image" style="background-image: url(././/assets/img/development-img.jpg)"></div>
+                    <div class="news-card__content">
+                      <div class="news-card__date"><span class="news-card__day">18</span><span class="news-card__month">Dec</span></div>
+                      <div class="news-card__title">A new frontier for web design</div>
+                      <div class="news-card__text js-news-card__text">Modern CSS gives us a comprehensive set of tools that lets us embrace the fluidity of the web.</div>
+                      <div class="news-card__button"><a class="button js-button button_size_small button_size_responsive" title="add to calendar" tabindex="0">add to calendar</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="event-carousel__calendar-overlay js-event-carousel__calendar-overlay">
+              <div class="event-carousel__calendar js-event-carousel__calendar">
+                <div class="calendar js-calendar"></div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <footer class="index__footer">
+        <div class="footer-section">
+          <section class="footer-section__contacts">
+            <h3 class="footer-section__header">Contact Us</h3>
+            <ul class="footer-section__list">
+              <li class="footer-section__list-item">
+                <p>E-mail:</p>
+                <p><a class="footer-section__link" href="mailto:info@nonexistingwt.org">info@nonexistingwt.org</a></p>
+              </li>
+              <li class="footer-section__list-item">
+                <p>Twitter:</p>
+                <p><a class="footer-section__link" href="./sorry_this_link_is_dead" title="twitter" target="_blank" rel="noopener noreferrer">@nonexistingwebtalks</a></p>
+              </li>
+              <li class="footer-section__list-item">
+                <p>Phone:</p>
+                <p> <a class="footer-section__link" href="tel:+73822000000">+7 3822 000 000</a></p>
+              </li>
+            </ul>
+          </section>
+          <section class="footer-section__docs">
+            <h3 class="footer-section__header">More from Web Talks</h3>
+            <ul class="footer-section__list">
+              <li class="footer-section__list-item"><a class="footer-section__link" href="./sorry_this_link_is_dead" title="news and articles" target="_blank" rel="noopener noreferrer">News and articles</a></li>
+              <li class="footer-section__list-item"><a class="footer-section__link" href="./sorry_this_link_is_dead" title="newsleter" target="_blank" rel="noopener noreferrer">Newsletter</a></li>
+              <li class="footer-section__list-item"><a class="footer-section__link" href="./sorry_this_link_is_dead" title="terms and conditions" target="_blank" rel="noopener noreferrer">Terms and conditions</a></li>
+              <li class="footer-section__list-item"><a class="footer-section__link" href="./sorry_this_link_is_dead" title="privacy policy" target="_blank" rel="noopener noreferrer">Privacy policy</a></li>
+            </ul>
+          </section>
+          <p class="footer-section__copyright">© 2018-2019 Web Talks. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+  <script type="text/javascript" src="./main.js"></script></body>
+</html>
