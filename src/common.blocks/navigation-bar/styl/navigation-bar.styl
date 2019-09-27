@@ -5,9 +5,11 @@
   left 0
   background-color white
   z-index 200
+
   @media screen and (max-width:425px)
     height 60px
     background-color transparent
+
   &__menu
     display flex
     flex-direction row
@@ -17,6 +19,7 @@
     margin 0
     padding 1rem 1rem 0
     transition all 1s cubic-bezier(.325, 1, .22, 1)
+
     @media screen and (max-width:425px)
       overflow hidden
       flex-direction column
@@ -24,28 +27,35 @@
       justify-content flex-start
       height 0px
       padding 0
+
   &__item
     margin 0 0.5rem 1rem
     padding 0
     flex auto 1 1
     text-align center
     list-style none
-    & a
-      font-size 1rem
-      text-decoration none
-      font-weight lighter
-      color color-text
-      text-transform uppercase
-      &:hover
-        @media (hover:hover)
-          text-decoration underline
-      &:active
-        @media (hover:hover)
-          text-decoration none
-        @media (hover:none)
-          text-decoration underline
+
+  &__link
+    font-size 1rem
+    text-decoration none
+    font-weight lighter
+    color color-text
+    text-transform uppercase
+
+    &:hover
+      @media (hover:hover)
+        text-decoration underline
+
+    &:active
+      @media (hover:hover)
+        text-decoration none
+
+      @media (hover:none)
+        text-decoration underline
+
   &__icon
     display none
+
     @media screen and (max-width:425px)
       display block
       position absolute
@@ -63,6 +73,7 @@
       text-align center
       &:focus
         outline none
+
   &__icon-line
     position absolute
     display block
@@ -73,32 +84,40 @@
     left 0
     text-indent 0
     transition all .6s cubic-bezier(.5, .1, 0, 1.2)
+
     &:first-child
       top 0
+
     &:nth-child(2)
       top 8px
+
     &:nth-child(3)
       top: 16px
 
-  & input[type='checkbox']
+  &__toggle
     display none
     visibility hidden
+
     &:checked
-      & ~ .navigation-bar__menu
+      & ~ ^[0]__menu
         height auto
         padding 1rem 1rem 0
         background-color color-bg
-        & .navigation-bar__item
+
+        & ^[0]__item
           height auto
           max-height 30rem
           transition all 2s cubic-bezier(.5, 1, .22, 1)
-      & ~ .navigation-bar__icon .navigation-bar__icon-line
+
+      & ~ ^[0]__icon ^[0]__icon-line
         &:first-child
           top 0px
           width 27px
           transform translateX(-8px) rotate(-45deg) translateY(12px)
+
         &:nth-child(2)
           opacity 0
+          
         &:nth-child(3)
           top 14px
           width 27px

@@ -9,7 +9,7 @@ class TickBox {
     $(document).ready(() => {
       const $domElement = $(domElement);
       this.$tickbox = $domElement;
-      this.$input = $domElement.find('.js-tickbox__input');
+      this.$input = $domElement.find('.js-tick-box__input');
       this.$checkmark = $domElement.find('.js-tick-box__checkmark');
       this.$tickbox
         .on('keypress.tickbox', e => this._handleEnterPress(e))

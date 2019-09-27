@@ -4,13 +4,17 @@
   width 31px
   height @width
   noselect()
-  & input[type='checkbox']
+
+  &__input
     display none
-  & input[type='checkbox']:checked + .tick-box__checkmark
-    background-color color-cold
-    border-color color-cold
-  & input[type='checkbox']:checked + .tick-box__checkmark::after
-    border-color white
+
+    &:checked + ^[0]__checkmark
+      background-color color-cold
+      border-color color-cold
+
+      &::after
+        border-color white
+
   &__checkmark
     width 31px
     height @width
@@ -20,6 +24,7 @@
     cursor pointer
     transition 0.3s
     outline none
+
     &::after
       content ''
       position absolute
@@ -31,10 +36,11 @@
       border-top none
       border-right none
       transform rotate(-45deg)
+
     &:focus
       box-shadow 0 0 7px color-outline
   
   &_color_warm
-    & input[type='checkbox']:checked + .tick-box__checkmark
+    & ^[0]__input:checked + ^[0]__checkmark
       background-color color-warm
       border-color color-warm

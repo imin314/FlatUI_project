@@ -36,6 +36,7 @@
     letter-spacing 0.06rem
     transition 0.3s
     transform translateX(-50px)
+
     &::before
       visibility hidden
       content ''
@@ -47,21 +48,23 @@
       border-radius 1px
       transform translate(-50%, -50%) rotate(45deg)
 
-  &__bubble_type_error
-    background-color color-warm
-    visibility visible
-    transform translateX(0)
-    &::before
+    &_type_error
       background-color color-warm
       visibility visible
+      transform translateX(0)
 
-  &__bubble_type_good
-    background-color color-cold
-    visibility visible
-    transform translateX(0)
-    &::before
+      &::before
+        background-color color-warm
+        visibility visible
+
+    &_type_good
       background-color color-cold
       visibility visible
+      transform translateX(0)
+
+      &::before
+        background-color color-cold
+        visibility visible
 
   &__subscribe
     margin 0 auto
@@ -89,6 +92,7 @@
     font-size 1rem
     background-color #bfcac8
     border-radius 10px
+    
     @media screen and (max-width:375px)
       font-size 0.8rem
 

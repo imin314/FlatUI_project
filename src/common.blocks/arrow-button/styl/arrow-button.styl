@@ -10,42 +10,55 @@
   border-radius 50%
   cursor pointer
   outline none
+
   &_disabled
     pointer-events none
     background-color color-bg
     border-color color-bg
-    & .arrow-button__arrow
+
+    & ^[0]__arrow
       background-color color-bg
       border-color white
+
   &:hover
     @media (hover:hover)
       background-color color-cold
-      & .arrow-button__arrow
+
+      & ^[0]__arrow
         background-color color-cold
         border-color white
+
   &:active
     @media (hover:none)
       background-color color-cold
-      & .arrow-button__arrow
+
+      & ^[0]__arrow
         background-color color-cold
         border-color white
+
   &:focus, &_active
     background-color color-cold
-    & .arrow-button__arrow
+
+    & ^[0]__arrow
       background-color color-cold
       border-color white
+
   &_direction_right
-    & .arrow-button__arrow
+    & ^[0]__arrow
       right 50%
       transform translate(30%, -50%) rotate(-45deg)
-    &:active, &.arrow-button_active
+
+    &:active, &^[0]_active
       transform translateX(1px)
+
   &_direction_left
-    & .arrow-button__arrow
+    & ^[0]__arrow
       left 50%
       transform translate(-30%, -50%) rotate(135deg)
-    &:active, &.arrow-button_active
+
+    &:active, &^[0]_active
       transform translateX(-1px)
+      
   &__arrow
     position absolute
     top 50%

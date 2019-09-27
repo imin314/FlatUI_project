@@ -2,12 +2,14 @@
   display flex
   flex-direction column
   min-height 100%
+
   &__main
     flex 1 0 auto
     width 70%
     margin 0 auto 2rem
     @media screen and (max-width:768px)
       width 90%
+
   &__header
     width 80%
     background linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 87%,rgba(255,255,255,0) 87%,rgba(255,255,255,0) 100%)
@@ -17,16 +19,22 @@
     left 50%
     transform translateX(-50%)
     padding 6rem 0 0
+
     @media screen and (max-width:768px)
       width 95%
+
     @media screen and (max-width: 425px)
       padding-top 4rem
+
   &__title
     pageTitle()
+
   &__bread-crumbs
     width 100%
     margin 1rem 0
+
   &__form
     margin-top 240px
+    
   &__footer
     flex 0 0 auto

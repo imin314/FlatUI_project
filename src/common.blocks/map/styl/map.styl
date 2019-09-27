@@ -2,10 +2,12 @@
   width 100%
   border-radius remify(5px)
   overflow hidden
+
   &__container
     width 100%
     height 28.5vw
     min-height 264px
+
   &__footer
     display flex
     flex-direction row
@@ -15,8 +17,10 @@
     padding 0.1em 4.5% 0.5em 4.3%
     background-color color-warm
     font-size 1rem
+
     @media screen and (max-width:670px)
       font-size 0.8rem
+
     @media screen and (max-width:515px)
       font-size 0.6rem
 
@@ -28,6 +32,7 @@
     font-weight lighter
     margin-right 5%
     line-height 2em
+
     @media screen and (max-width:425px)
       font-size 1rem
       margin-right 10px
@@ -36,17 +41,20 @@
     flex-grow 0
     padding-top 0.2em
     text-align left
-    & div
-      color white
-      text-transform uppercase
-      font-size 0.8928571428571429em
-      font-weight bold
-      &:first-child
-        letter-spacing 0.05em
-        word-spacing 0.17em
-      &:last-child
-        word-spacing 0.35em
-        letter-spacing 0.01em
+
+  &__address-item
+    color white
+    text-transform uppercase
+    font-size 0.8928571428571429em
+    font-weight bold
+
+    &_type_street
+      letter-spacing 0.05em
+      word-spacing 0.17em
+
+    &_type_city
+      word-spacing 0.35em
+      letter-spacing 0.01em
 
   &__icons
     font-size 1em
@@ -70,6 +78,7 @@
     box-sizing content-box
     cursor pointer
     outline none
+
     &::before
       content ''
       box-sizing content-box
@@ -81,6 +90,7 @@
       top 50%
       left 0
       transform translate(-18%,-50%)
+
     &::after
       content ''
       box-sizing content-box
@@ -92,36 +102,49 @@
       top 0
       left 50%
       transform translate(-50%,-18%)
+
     &:focus
       transform scale(1.1)
+
     &:focus::before
       transform translate(-18%,-50%) scale(1.1)
+
     &:focus::after
       transform translate(-50%,-18%) scale(1.1)
+
     &:hover
       @media (hover:hover)
         transform scale(1.1)
+
     &:hover::before
       @media (hover:hover)
         transform translate(-18%,-50%) scale(1.1)
+
     &:hover::after
       @media (hover:hover)
         transform translate(-50%,-18%) scale(1.1)
+
     &:active
       @media (hover:hover)
         transform scale(0.9)
+
       @media (hover:none)
         transform scale(1.1)
+
     &:active::before
       @media (hover:hover)
         transform translate(-18%,-50%) scale(0.9)
+
       @media (hover:none)
         transform translate(-18%,-50%) scale(1.1)
+
     &:active::after
       @media (hover:hover)
         transform translate(-50%,-18%) scale(0.9)
+
       @media (hover:none)
         transform translate(-50%,-18%) scale(1.1)
+
     @media screen and (max-width:425px)
       margin-right 15px
 
@@ -132,13 +155,17 @@
     cursor pointer
     height 3em
     outline none
+
     &:hover
       @media (hover:hover)
         transform scale(1.1)
+
     &:active
       @media (hover:hover)
         transform scale(0.9)
+
       @media (hover:none)
         transform scale(1.1)
+        
     &:focus
       transform scale(1.1)

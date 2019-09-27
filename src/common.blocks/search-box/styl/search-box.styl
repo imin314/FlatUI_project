@@ -5,12 +5,16 @@
   background-color color-bg
   border-radius 3px
   overflow hidden
+
   &_filled
     background-color color-warm
-    & .search-box__input
+
+    & ^[0]__input
       color white
+
   &__label
     flex-grow 1
+
   &__input
     width 100%
     padding remify(6px) remify(17px) remify(7px)
@@ -21,6 +25,7 @@
     background inherit
     border none
     -webkit-appearance none
+
   &__button
     flex 43px 0 0
     position relative
@@ -29,8 +34,10 @@
     cursor pointer
     -webkit-appearance none
     outline none
+
     &:focus
       background-color darken(color-warm, 10)
+
     &::before
       content ''
       display block
@@ -42,6 +49,7 @@
       border remify(2px) white solid
       border-radius 50%
       transform translate(-65%, -60%)
+
     &::after
       content ''
       position absolute
@@ -53,15 +61,19 @@
       background-color white
       border-radius 2px
       transform rotate(45deg)
+
     &:hover
       @media (hover:hover)
         background-color darken(color-warm, 10)
+
     &:active
       @media (hover:none)
         background-color darken(color-warm, 10)
+
     &:active::before
       @media (hover:hover)
         transform translate(-65%, -60%) rotate(45deg) scale(0.9)
+        
     &:active::after
       @media (hover:hover)
         transform rotate(45deg) scale(0.9)

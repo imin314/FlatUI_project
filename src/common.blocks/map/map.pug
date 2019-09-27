@@ -15,8 +15,8 @@ mixin map(options)
     .map__footer
       .map__title Meet us!
       .map__address
-        .map__street=settings.address.street
-        .map__city=settings.address.city
+        .map__address-item.map__address-item_type_street=settings.address.street
+        .map__address-item.map__address-item_type_city=settings.address.city
       .map__icons
         .map__search.js-map__search(tabindex="0")
         .map__pin.js-map__pin(tabindex="0")

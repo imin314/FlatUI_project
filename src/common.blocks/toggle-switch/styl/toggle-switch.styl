@@ -9,13 +9,14 @@
 
   &__checkbox
     display none
-    &:checked + .toggle-switch__slider
+
+    &:checked + ^[0]__slider
       background-color color-cold
-    &:checked + .toggle-switch__slider::before
-      transform translateX(45px)
-    &:checked ~ .toggle-switch__slider::after
-      content 'ON'
-      transform translateX(-27px)
+      &::before
+        transform translateX(45px)
+      &::after
+        content 'ON'
+        transform translateX(-27px)
 
   &__slider
     position absolute
@@ -28,6 +29,7 @@
     transition .4s
     border-radius 50px
     outline none
+
     &::before
       position absolute
       content ''
@@ -38,6 +40,7 @@
       background-color white
       transition .4s
       border-radius 50%
+
     &::after
       content 'OFF'
       position absolute
@@ -47,5 +50,6 @@
       font-weight bold
       font-size 0.85rem
       transition .4s
+      
     &:focus
       box-shadow 0 0 7px color-outline

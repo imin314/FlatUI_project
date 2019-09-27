@@ -3,6 +3,7 @@
   bottom 20px
   right 20px
   z-index 5000
+
   &__messenger
     visibility hidden
     position absolute
@@ -12,11 +13,14 @@
     font-size 0.8rem
     border-radius 8px
     box-shadow 0 0 20px 0 rgba(0,0,0,0.3)
+
     &_visible
       visibility visible
+
     @media screen and (max-width:375px)
       width 220px
       font-size 0.6rem
+
   &__button
     position absolute
     bottom 0
@@ -31,9 +35,11 @@
     z-index 10
     outline none
     cursor pointer
+
     &:hover
       @media (hover:hover)
         background-color darker(color-bg, 50%)
+        
     &:active
       @media (hover:none)
         background-color darker(color-bg, 50%)

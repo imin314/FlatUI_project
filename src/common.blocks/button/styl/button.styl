@@ -17,17 +17,20 @@
   border-radius 5px
   box-shadow inset 0 0 0 1px color-cold-darker, 0 4px 0 0 color-cold-darker
   transition all .3s, visibility 0s
+
   &:hover
   &:focus
     @media (hover:hover)
       color white
       background-color color-cold
       box-shadow 0 4px 0 0 color-cold
+
   &:active
     @media (hover:none)
       color white
       background-color color-cold
       box-shadow 0 4px 0 0 color-cold
+
   &_active
     color white
     background-color color-cold
@@ -47,18 +50,21 @@
     background-color white
     border-color color-warm-darker
     box-shadow inset 0 0 0 1px color-warm-darker, 0 4px 0 0 color-warm-darker
+
     &:hover
     &:focus
       @media (hover:hover)
         color white
         background-color color-warm
         box-shadow 0 4px 0 0 color-warm
+
     &:active
       @media (hover:none)
         color white
         background-color color-warm
         box-shadow 0 4px 0 0 color-warm
-    &.button_active
+
+    &^[0]_active
       color white
       background-color color-warm
       box-shadow 0 4px 0 0 color-warm
@@ -67,18 +73,21 @@
     color white
     background-color color-cold
     box-shadow 0 4px 0 0 color-cold
+
     &:hover
     &:focus
       @media (hover:hover)
         color color-cold
         background-color white
         box-shadow inset 0 0 0 1px color-cold, 0 4px 0 0 color-cold
+
     &:active
       @media (hover:none)
         color color-cold
         background-color white
         box-shadow inset 0 0 0 1px color-cold, 0 4px 0 0 color-cold
-    &.button_active
+
+    &.^[0]_active
       color color-cold
       background-color white
       box-shadow inset 0 0 0 1px color-cold, 0 4px 0 0 color-cold

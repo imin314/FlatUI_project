@@ -6,6 +6,7 @@
   flex-direction row
   width 100%
   padding 0
+
   &__item
     flex 179px 1 1
     position relative
@@ -13,16 +14,22 @@
     font-size 1rem
     list-style-type none
     transition all 0.2s ease 
+
     @media screen and (max-width: 550px)
       font-size 0.85rem
+
     &:nth-child(1)
       flex-basis 170px
+
     &:nth-child(2)
       flex-basis 185px
+
     &:last-child
       flex auto 0 0
+
       &::after
         display none
+
     &::after
       content ''
       display block
@@ -35,12 +42,14 @@
       background color-warm
       transform translateY(-50%)
       transition all 0.2s ease
+
     &_active 
       &::after
-      & ~ .bread-crumbs__item .bread-crumbs__circle
-      & ~ .bread-crumbs__item::after
+      & ~ ^[1] ^[0]__circle
+      & ~ ^[1]::after
         background-color color-bg
         transition all 0.2s ease
+
   &__circle
     width 2.032967032967033em
     height @width
