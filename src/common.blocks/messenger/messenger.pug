@@ -1,19 +1,21 @@
 mixin messenger(msgData)
-  - const image = require(`../../assets/img/${msgData.image}`);
+  - const { image, name, inbox, outbox } = msgData;
+  - const bgImage = require(`../../assets/img/${image}`);
   .messenger
     header.messenger__header
-      .messenger__name= msgData.name
-      .messenger__photo(style='background-image: url(' + image + ')')
+      .messenger__name= name
+      .messenger__photo(style=`background-image: url(${bgImage})`)
     .messenger__container
       .messenger__icons
         a.messenger__bubble-icon(href="" title="")
         a.messenger__camera-icon(href="" title="add photo")
       .messenger__message.messenger__message_type_inbox
-        .messenger__text= msgData.inbox
+        .messenger__text= inbox
       textarea.messenger__message.messenger__message_type_outbox(
         name="outbox"
         placeholder="Type your message..."
-        rows="3")= msgData.outbox
+        rows="3"
+      )= outbox
       .messenger__button
         +button({ title: 'reply', color: 'reverse', size: 'responsive' })
 

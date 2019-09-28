@@ -1,20 +1,34 @@
 mixin button(settings)
-  //- parameters: 
-  //- size: small, responsive (or both separated by whitespace)
-  //- color: reverted, warm
-  //- link attribute might be empty
-  //- isExternal: if true, adds target="_blank" and rel="noopener noreferrer"
+  - const {
+  -   color,
+  -   size = '',
+  -   title: titleAttr = 'button',
+  -   link: hrefAttr = false,
+  -   isExternal = false
+  -  } = settings;
+  - const targetAttr = !!isExternal ? '_blank' : false;
+  - const relAttr = !!isExternal ? 'noopener noreferrer' : false;
+  - const sizeModifiers = {
+  -   small: 'button_size_small',
+  -   responsive: 'button_size_responsive',
+  - };
+  - const colorModifiers = {
+  -   reverted: 'button_color_reverted',
+  -   secondary: 'button_color_secondary',
+  - };
   - let className = 'button js-button';
-  - if (settings.size) {
-  -   settings.size.split(' ').forEach((value) => {
-  -     className += ` button_size_${value}`;
-  -   });
+  - if (color in colorModifiers) {
+  -   className += ` ${colorModifiers[color]}`;
   - }
-  - if (settings.color) {
-  -   className += ` button_color_${settings.color}`;
-  - }
-  - const titleAttr = settings.title ? settings.title : 'button';
-  - const hrefAttr = settings.link ? settings.link : false;
-  - const targetAttr = settings.isExternal ? '_blank' : false;
-  - const relAttr = settings.isExternal ? 'noopener noreferrer' : false;
-  a(class=className title=titleAttr tabindex="0" href=hrefAttr target=targetAttr rel=relAttr)= titleAttr
+  - size.split(' ').forEach((key) => {
+  -   if (key in sizeModifiers) {
+  -     className += ` ${sizeModifiers[key]}`; 
+  -   }
+  - });
+  a(
+    class=className
+    title=titleAttr
+    tabindex="0"
+    href=hrefAttr
+    target=targetAttr
+    rel=relAttr)= titleAttr

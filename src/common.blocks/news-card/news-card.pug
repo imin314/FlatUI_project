@@ -1,36 +1,35 @@
-mixin newsCard(userData, settings)   
-  - const img = require(`../../assets/img/${userData.img}`);
-  - const date = new Date(userData.date);
+mixin newsCard(cardData, settings)
+  - const options = settings || {};
+  - const { img: cardImg, date: cardDate, title: cardTitle, text: cardText } = cardData;
+  - const { type: cardType, isCompact, color, withScrollbar } = options;
+  - const typeModifiers = { event: 'news-card_type_event' };
+  - const sizeModifiers = { compact: 'news-card_size_compact' };
+  - const colorModifiers = { reverted: 'news-card_color_reverted' };
+  - const scrollbarModifiers = { withScrollbar: 'news-card_with_scrollbar' };
+  - const img = require(`../../assets/img/${cardImg}`);
+  - const date = new Date(cardDate);
   - const day = date.getDate();
   - const year = date.getFullYear();
   - let month = date.toLocaleString('en-us', { month: 'long' });
   - let className = 'news-card js-news-card';
-  - if (settings && settings.type === 'event') {
-  -   className += ' news-card_type_event';
-  -   month = date.toLocaleString('en-us', { month: 'short' });
-  - }
-  - if (settings && settings.isCompact) {
-  -   className += ' news-card_size_compact';
-  - }
-  - if (settings && settings.color === 'reverted') {
-  -   className += ' news-card_color_reverted';
-  - }
-  - if (settings && settings.withScrollbar) {
-  -   className += ' news-card_with_scrollbar';
-  - }
+  - if (cardType in typeModifiers) className += ` ${typeModifiers[cardType]}`;
+  - if (isCompact) className += ` ${sizeModifiers.compact}`;
+  - if (color in colorModifiers) className += ` ${colorModifiers[color]}`;
+  - if (withScrollbar) className += ` ${scrollbarModifiers.withScrollbar}`;
   div(class=className)
-    .news-card__image(style="background-image: url("+img+")")
+    .news-card__image(style=`background-image: url(${img})`)
     .news-card__content
-      - if (settings && settings.type === 'event') {
+      - if (cardType === 'event') {
+      -  month = date.toLocaleString('en-us', { month: 'short' });
         .news-card__date
           span.news-card__day= day
           span.news-card__month= month
-        .news-card__title= userData.title
-        .news-card__text.js-news-card__text= userData.text
+        .news-card__title= cardTitle
+        .news-card__text.js-news-card__text= cardText
         .news-card__button
           +button({ title:'add to calendar', size:'small responsive' })
       - } else {
-        .news-card__title= userData.title
+        .news-card__title= cardTitle
         .news-card__date= day + ' ' + month + ' ' + year
-        .news-card__text.js-news-card__text= userData.text
+        .news-card__text.js-news-card__text= cardText
       - }
