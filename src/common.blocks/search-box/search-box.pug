@@ -1,6 +1,7 @@
-mixin searchBox(isEmptyResult)
+mixin searchBox(isFilled)
+  - const filledModifiers = { filled: 'search-box_filled' };
   - let className = 'search-box js-search-box';
-  - if (isEmptyResult) className = `${className} search-box_filled`;
+  - if (isEmptyResult) className += ` ${filledModifiers.filled}`;
   div(class = className)
     label.search-box__label
       input.search-box__input.js-search-box__input(type="text" placeholder="Search")

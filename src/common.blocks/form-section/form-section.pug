@@ -8,9 +8,9 @@ mixin formSection()
         form.form-section__toggles
           h2.form-section__title toggles
           .form-section__toggle
-            +toggleSwitch(false)
+            +toggleSwitch()
           .form-section__toggle
-            +toggleSwitch(true)
+            +toggleSwitch({ checked: true }})
         form.form-section__tickboxes
           h2.form-section__title tick boxes
           .form-section__tickbox

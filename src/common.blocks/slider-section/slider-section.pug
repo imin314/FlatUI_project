@@ -3,6 +3,6 @@ mixin sliderSection()
     h2.slider-section__title sliders
     .slider-section__container
       .slider-section__slider
-        +slider({ withTooltip: true })
+        +slider({ type: 'tooltip' })
       .slider-section__slider
-        +slider({ withScale: true })
+        +slider({ type: 'scale' })

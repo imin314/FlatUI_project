@@ -7,16 +7,20 @@ mixin profileSection()
           name: 'John Smith', 
           position: 'ux designer', 
           img: 'john-smith.jpg',
-          facebook: 'https://www.facebook.com/',
-          twitter: 'https://twitter.com/',
-          dribbble: 'https://dribbble.com/'
+          links: {
+            facebook: 'https://www.facebook.com/',
+            twitter: 'https://twitter.com/',
+            dribbble: 'https://dribbble.com/',
+          }
         })
       .profile-section__card
         +userCard({
           name: 'Sarah Brown',
           position: 'developer',
           img: 'sarah-brown.jpg',
-          facebook: 'https://www.facebook.com/',
-          twitter: 'https://twitter.com/',
-          dribbble: 'https://dribbble.com/'
+          links: {
+            facebook: 'https://www.facebook.com/',
+            twitter: 'https://twitter.com/',
+            dribbble: 'https://dribbble.com/'
+          }
         }, true)

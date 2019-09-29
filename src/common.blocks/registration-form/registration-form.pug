@@ -1,12 +1,27 @@
 mixin registrationForm()
   section.registration-form
-    form.registration-form__form.js-registration-form__form(action='register.php' method='post')
+    form.registration-form__form.js-registration-form__form(
+      action="register.php"
+      method="post"
+    )
       section.registration-form__stage.js-registration-form__stage.registration-form__stage_first
         label.registration-form__name
-          input.registration-form__input(type="text" name="name" placeholder="Your Name" area-label="Name" required)
+          input.registration-form__input(
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            area-label="Name"
+            required
+          )
           .registration-form__bubble
         label.registration-form__email
-          input.registration-form__input(type="email" name="email" placeholder="Your Email" area-label="Email" required)
+          input.registration-form__input(
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            area-label="Email"
+            required
+          )
           .registration-form__bubble
         .registration-form__subscribe
           .registration-form__subscribe-text Subscribe to Web Talks newsletters

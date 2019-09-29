@@ -1,10 +1,15 @@
 mixin tickBox(settings) 
-  - const isChecked = !!settings.checked;
+  - const options = settings || {};
+  - const { color, value: valueAttr, name: nameAttr, checked: checkedAttr = false } = options;
+  - const colorModifiers = { warm: 'tick-box_color_warm' };
   - let className = "tick-box js-tick-box";
-  - if (settings.color === "warm") {
-  - className += " tick-box_color_warm";
-  - }
+  - if (color in colorModifiers) className += ` ${colorModifiers[color]}`;
   div(class=className)
     label.tick-box__label
-      input.tick-box__input.js-tick-box__input(type="checkbox" value=settings.value name=settings.name checked=isChecked)
+      input.tick-box__input.js-tick-box__input(
+        type="checkbox"
+        value=valueAttr
+        name=nameAttr
+        checked=!!checkedAttr
+      )
       .tick-box__checkmark.js-tick-box__checkmark(tabindex="0")

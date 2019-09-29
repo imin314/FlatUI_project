@@ -1,5 +1,6 @@
 mixin speakerCard(speakerData)
+  - const { text = '' } = speakerData;
   article.speaker-card.js-speaker-card
     .speaker-card__user-card
       +userCard(speakerData)
-    p.speaker-card__text.js-speaker-card__text!= speakerData.text
+    p.speaker-card__text.js-speaker-card__text!= text

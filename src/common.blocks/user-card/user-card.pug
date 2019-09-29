@@ -1,20 +1,30 @@
-mixin userCard(user, colored)
-  - const image = require('../../assets/img/'+ user.img);
-  - const icons = [{ name: 'facebook' }, { name: 'twitter' }, { name: 'dribbble' }];
+mixin userCard(user, settings)
+  - const {
+      img: userImg,
+      name: userName,
+      position: userPosition,
+      links = {} 
+    } = user;
+  - const image = require(`../../assets/img/${userImg}`);
+  - const colorModifiers = { cold: 'user-card_color_cold' };
+  - const isColdColor = (color.search(/\bcold\b/) !== -1);
   - let className = 'user-card';
-  - if (colored) {
-  -   className += ' user-card_colored';
-  -   icons.forEach((item) => {
-  -     item.isWhite = true;
-  -   });
-  - }
+  - if (color in colorModifiers) className += ` ${colorModifiers[color]}`;
   div(class = className)
-    .user-card__photo(style="background-image: url("+image+")")
+    .user-card__photo(style=`background-image: url(${image})`)
     .user-card__box
-      h3.user-card__name!= user.name
-      h4.user-card__position!= user.position
+      h3.user-card__name!= userName
+      h4.user-card__position!= userPosition
       .user-card__icons
-        each item in icons
-          a.user-card__icon(href=user[item.name] title!=item.name target="blank" rel="noopener noreferrer" tabindex="-1")
-            +socialIcon(item)
+        each link in links
+          - const { name: iconName } = link;
+          - const iconColor = isColorCold ? 'white' : '';
+          a.user-card__icon(
+            href=iconName
+            title!=iconName
+            target="blank"
+            rel="noopener noreferrer"
+            tabindex="-1"
+          )
+            +socialIcon({ name: iconName, color: iconColor })
     

@@ -13,18 +13,20 @@ mixin talksSection(talksData)
   - const groupedData = groupBy(talksData, 'date', 'dateId', 'events');
   section.talks-section
     each item in groupedData
-      - const date = new Date(item.dateId);
+      - const { dateId, events } = item;
+      - const date = new Date(dateId);
       - const day = date.getDate();
-      - const month = date.toLocaleString("en-us", { month: "long" });
+      - const month = date.toLocaleString('en-us', { month: 'long' });
       - const dayOfWeek = date.toLocaleString('en-us', {  weekday: 'long' });
       - const fullDate = `${day} ${month}`;
       header.talks-section__header
         .talks-section__day= dayOfWeek
         .talks-section__date= fullDate
       .talks-section__events
-        each event in item.events
+        each event in events
+          - const { time: eventTime } = event;
           .talks-section__event
-            h3.talks-section__time= event.time
+            h3.talks-section__time= eventTime
             .talks-section__card
               +newsCard(event, { isCompact: true, color: 'reverted' })
 
