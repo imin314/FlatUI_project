@@ -6,7 +6,7 @@ module.exports = {
   entry: './src/main.js',
   devServer: {
     contentBase: path.resolve(__dirname, 'docs'),
-    publicPath: '/',
+    publicPath: './',
     host: 'localhost',
     port: 8080,
   },
