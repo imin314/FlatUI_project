@@ -7,7 +7,7 @@
   overflow hidden
 
   &_filled
-    background-color color-warm
+    background-color color-orange
 
     & ^[0]__input
       color white
@@ -30,13 +30,13 @@
     flex 43px 0 0
     position relative
     border none
-    background-color color-warm
+    background-color color-orange
     cursor pointer
     -webkit-appearance none
     outline none
 
     &:focus
-      background-color darken(color-warm, 10)
+      background-color darken(color-orange, 10)
 
     &::before
       content ''
@@ -64,11 +64,11 @@
 
     &:hover
       @media (hover:hover)
-        background-color darken(color-warm, 10)
+        background-color darken(color-orange, 10)
 
     &:active
       @media (hover:none)
-        background-color darken(color-warm, 10)
+        background-color darken(color-orange, 10)
 
     &:active::before
       @media (hover:hover)

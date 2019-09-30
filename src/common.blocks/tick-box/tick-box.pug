@@ -1,7 +1,7 @@
 mixin tickBox(settings) 
   - const options = settings || {};
   - const { color, value: valueAttr, name: nameAttr, checked: checkedAttr = false } = options;
-  - const colorModifiers = { warm: 'tick-box_color_warm' };
+  - const colorModifiers = { orange: 'tick-box_color_orange' };
   - let className = "tick-box js-tick-box";
   - if (color in colorModifiers) className += ` ${colorModifiers[color]}`;
   div(class=className)
