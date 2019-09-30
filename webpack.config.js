@@ -105,20 +105,31 @@ module.exports = {
       },
       {
         test: /\.(ttf|svg|eot|woff)$/,
-        exclude: [/img/],
+        exclude: [/img/, /favicons/],
         use: {
           loader: 'file-loader',
           options: {
-            name: './assets/fonts/[name].[ext]',
+            name: '/assets/fonts/[name].[ext]',
+            outputPath: './',
+            publicPath: '././',
           },
         },
       },
       {
         test: /\.(jpg|png|svg)$/,
-        exclude: [/fonts/],
+        exclude: [/fonts/, /favicons/],
         loader: 'file-loader',
         options: {
           name: '/assets/img/[name].[ext]',
+          outputPath: './',
+          publicPath: '././',
+        },
+      },
+      {
+        test: /\.(svg|png|ico|xml)$/,
+        loader: 'file-loader',
+        options: {
+          name: '/assets/favicons/[name].[ext]',
           outputPath: './',
           publicPath: '././',
         },
