@@ -1,3 +1,6 @@
+include ../search-box/search-box.pug
+include ../drop-down/drop-down.pug
+
 mixin searchSection()
   section.search-section
     h2.search-section__title search / drop down
@@ -5,7 +8,7 @@ mixin searchSection()
       .search-section__search-box
         +searchBox()
       .search-section__search-box
-        +searchBox(true)
+        +searchBox({ filled: true })
       .search-section__drop-down
         +dropDown({ 
           items: [

@@ -1,6 +1,11 @@
 //- index.pug
 extends ../../pug/layout.pug
 
+include ../../common.blocks/banner-section/banner-section.pug
+include ../../common.blocks/about-section/about-section.pug
+include ../../common.blocks/event-carousel/event-carousel.pug
+include ../../common.blocks/footer-section/footer-section.pug
+
 block content
   - const data = require('../../assets/data/data.json');
   - const { talks } = data;

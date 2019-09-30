@@ -6,14 +6,13 @@ module.exports = {
   entry: './src/main.js',
   devServer: {
     contentBase: path.resolve(__dirname, 'docs'),
-    publicPath: './',
+    publicPath: 'http://localhost:8080/',
     host: 'localhost',
     port: 8080,
   },
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'docs'),
-    publicPath: './',
   },
   optimization: {
     minimize: false,
