@@ -50,8 +50,8 @@ module.exports = {
       options: {
         stylus: {
           import: [
-            path.resolve(__dirname, './src/styl/variables.styl'),
-            path.resolve(__dirname, './src/styl/mixins.styl'),
+            path.resolve(__dirname, './src/styles/variables.styl'),
+            path.resolve(__dirname, './src/styles/mixins.styl'),
           ],
           preferPathResolver: 'webpack',
         },
