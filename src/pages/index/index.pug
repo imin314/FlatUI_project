@@ -3,6 +3,7 @@ extends ../../pug/layout.pug
 
 block content
   - const data = require('../../assets/data/data.json');
+  - const { talks } = data;
   .index
     main.index__main
       .index__banner
@@ -10,6 +11,6 @@ block content
       .index__about
         +aboutSection()
       .index__events
-        +eventCarousel(data.talks)
+        +eventCarousel(talks)
     footer.index__footer
       +footerSection()

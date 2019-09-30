@@ -6,6 +6,7 @@ block title
 
 block content
   - const data = require('../../assets/data/data.json');
+  - const { speakers } = data;
   .speakers.js-speakers
     main.speakers__main
       h1.speakers__title Speakers
@@ -15,7 +16,7 @@ block content
       section.speakers__card-carousel
         .speakers__cards.js-speakers__cards
           .speakers__card-wrapper
-            each item in data.speakers
+            each item in speakers
               .speakers__card
                 +speakerCard(item)
         .speakers__controls

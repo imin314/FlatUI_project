@@ -5,12 +5,13 @@ mixin slider(settings)
   -   tooltip: 'slider_type_tooltip js-slider_type_tooltip',
   -   scale: 'slider_type_scale',
   - };
+  - const withScale = (type.search(/\bscale\b/) !== -1);
   - let className = 'slider js-slider';
   - type.split(' ').forEach((key) => {
   -   if (key in typeModifiers) className += ` ${typeModifiers[key]}`; 
   - });
   div(class= className)
-  - if (type.search(/\bscale\b/) !== -1)
+  - if (withScale)
     ul.slider__scale
       - for (let i = 0; i <= 100; i += 25)
-          li.slider__scale-item= i
+        li.slider__scale-item= i

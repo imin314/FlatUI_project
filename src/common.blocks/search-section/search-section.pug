@@ -7,9 +7,11 @@ mixin searchSection()
       .search-section__search-box
         +searchBox(true)
       .search-section__drop-down
-        +dropDown([
-          'This is option 1',
-          'This is option 2',
-          'This is option 3',
-          'This is option 4'
-        ])
+        +dropDown({ 
+          items: [
+            'This is option 1',
+            'This is option 2',
+            'This is option 3',
+            'This is option 4'
+          ]
+        })

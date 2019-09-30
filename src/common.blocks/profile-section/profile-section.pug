@@ -3,7 +3,7 @@ mixin profileSection()
     h2.profile-section__title user profile
     .profile-section__container
       .profile-section__card
-        +userCard({ 
+        +profileCard({ 
           name: 'John Smith', 
           position: 'ux designer', 
           img: 'john-smith.jpg',
@@ -14,7 +14,7 @@ mixin profileSection()
           }
         })
       .profile-section__card
-        +userCard({
+        +profileCard({
           name: 'Sarah Brown',
           position: 'developer',
           img: 'sarah-brown.jpg',
@@ -23,4 +23,6 @@ mixin profileSection()
             twitter: 'https://twitter.com/',
             dribbble: 'https://dribbble.com/'
           }
-        }, true)
+        }, {
+          color: 'cold'
+        })
