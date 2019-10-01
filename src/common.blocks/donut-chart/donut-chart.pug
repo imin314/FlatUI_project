@@ -1,8 +1,0 @@
-﻿mixin donutChart(settings)
-  - const { isPercentage, values, colors } = settings;
-  - const sizeModifiers = { narrow: 'donut-chart_size_narrow' };
-  - let className = 'donut-chart';
-  - if (isPercentage) className += ` ${sizeModifiers.narrow}`;
-  div(class=className data-values=values data-colors=colors)
-    - if (isPercentage)
-      .donut-chart__label.js-donut-chart__label
