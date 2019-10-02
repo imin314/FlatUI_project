@@ -33,6 +33,10 @@
     background-color color-cyan
     border-color color-cyan
 
+  &:active
+    box-shadow none
+    transform translateY(4px)
+
   &_size_small
     width 5.604395604395605rem
     padding 0.32967032967033rem
@@ -55,7 +59,6 @@
         border-color color-orange
 
     &:focus
-    &:active
       color white
       background-color color-orange
       border-color color-orange
@@ -68,12 +71,10 @@
 
     &:hover
       @media (hover:hover)
-        color color-cyan
-        background-color white
-        border 1px solid color-cyan-darker
+        box-shadow none
+        transform translateY(4px)
     
-    &:focus
     &:active
-      color color-cyan
-      background-color white
-      border 1px solid color-cyan-darker
+    &:focus
+      box-shadow none
+      transform translateY(4px)

@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import './dcalendar.picker';
 
 class Calendar {
   constructor(domElement) {
@@ -9,7 +8,7 @@ class Calendar {
 
   _initialize() {
     $(document).ready(() => {
-      $(this.domElement).dcalendar();
+      //$(this.domElement).dcalendar();
     });
   }
 }
