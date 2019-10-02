@@ -1,7 +1,70 @@
-@import './dcalendar.picker.css'
+@import '../../../styles/variables.styl'
 
 .calendar
+  font-family font-family
+  background-color #f2f2f2
+  border-radius 2px
   overflow hidden
-  margin 0 auto
-  border-radius 0.3rem
-  font-size inherit
+
+  & .ui-datepicker-header
+    display flex
+    justify-content space-between
+    background-color #d54c2c
+    color white
+  
+  & .ui-datepicker-prev
+    order 1
+    flex 0 0 0.5rem
+    height 0.5rem
+    border 3px white solid
+    border-right-color transparent
+    border-bottom-color transparent
+    transform rotate(-45deg)
+    cursor pointer
+  
+  & .ui-datepicker-next
+    order 3
+    flex 0 0 0.5rem
+    height 0.5rem
+    border 3px white solid
+    border-right-color transparent
+    border-bottom-color transparent
+    transform rotate(135deg)
+    cursor pointer
+
+  & .ui-datepicker-title
+    order 2
+    font-weight lighter
+  
+  & .ui-datepicker-year
+    display none
+  
+  & .ui-datepicker-calendar
+    width calc(100% + 1px)
+    border-spacing 0
+
+    & thead
+      background-color color-orange
+      color white
+      font-weight normal
+      text-transform uppercase
+
+    & td
+      width 14.28571428571429%
+      border-right 1px solid white
+      border-bottom 1px solid white
+
+      &:last-child
+        border-right none
+    
+    & .ui-state-default
+      font-family ui-font-family
+      color #868686
+      text-decoration none
+
+    & .ui-state-disabled
+      & .ui-state-default
+        color white
+
+  & .ui-datepicker-buttonpane
+    background-color color-bg

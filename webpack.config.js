@@ -93,32 +93,42 @@ module.exports = {
       },
       {
         test: /\.(ttf|svg|eot|woff)$/,
-        use: {
-          loader: 'file-loader',
-          options: {
-            name: '[name].[ext]',
-            folder: './assets/fonts',
-            outputPath: './assets/fonts',
+        exclude: [/img/, /favicons/],
+        use: [
+          { 
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: './assets/fonts',
+            },
           },
-        },
+        ],
       },
       {
         test: /\.(jpg|png|svg)$/,
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]',
-          folder: './assets/img',
-          outputPath: './assets/img',
-        },
+        exclude: [/fonts/, /favicons/],
+        use: [
+          { 
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: './assets/img',
+            },
+          },
+        ],
       },
       {
         test: /\.(svg|png|ico|xml)$/,
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]',
-          folder: './assets/favicons',
-          outputPath: './assets/favicons',
-        },
+        exclude: [/img/, /fonts/],
+        use: [
+          { 
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: './assets/favicons',
+            },
+          },
+        ],
       },
     ],
   },
