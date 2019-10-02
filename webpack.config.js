@@ -46,17 +46,6 @@ module.exports = {
       $: 'jquery',
       jQuery: 'jquery',
     }),
-    new webpack.LoaderOptionsPlugin({
-      options: {
-        stylus: {
-          import: [
-            path.resolve(__dirname, './src/styles/variables.styl'),
-            path.resolve(__dirname, './src/styles/mixins.styl'),
-          ],
-          preferPathResolver: 'webpack',
-        },
-      },
-    }),
   ],
   module: {
     rules: [
