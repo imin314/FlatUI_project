@@ -1,22 +1,74 @@
 @import '../../../styles/variables.styl'
 @import '../../../styles/mixins.styl'
-@import './asRange.css'
 
 .slider
-  width 98%
-  margin-left remify(2px)
+  &__tip
+    display none
+    position absolute
+    width 2.472527472527473rem
+    height 1.758241758241758rem
+    padding-top 0.2747252747252747rem
+    z-index 2
+    font-size 0.92rem
+    font-weight bold
+    letter-spacing 0.08rem
+    text-align center
+    color white
+    background-color color-orange
+    border-radius 7px
+    transform translate(-50%, -160%)
 
-  &_type_scale .asRange-pointer
+    &::before
+      content ''
+      display block
+      position absolute
+      left 50%
+      bottom 0
+      width 0.5494505494505495rem
+      height @width
+      background-color inherit
+      border-radius 30%
+      transform translate(-50%, 20%) scaleY(1.3) rotate(-45deg)
+    
+    &_visible
+      display block
+
+  &__container
+    position relative
+    width 98%
+    height 0.3846153846153846rem
+    background-color color-bg
+    border-radius 10px
+
+  &__handle
+    position absolute
+    width 1.4rem
+    height @width
+    z-index 2
+    background-color color-orange
+    border-radius 50%
+    outline none
+    transform translate(-50%, -40%)
+    cursor pointer
+
+  &__range
+    position absolute
+    height inherit
+    z-index 1
     background-color color-cyan
 
+  &_type_scale
+    & ^[0]__handle
+      background-color color-cyan
+
   &__scale
-    padding 0
-    margin 0.7rem 0 0 0
-    display flex
-    justify-content space-between
+    position relative
 
   &__scale-item
     display inline-block
+    position absolute
+    top 1rem
+    transform translateX(-50%)
     color darken(color-bg, 8.5)
     font-size 0.785714285714286rem
     font-weight bold

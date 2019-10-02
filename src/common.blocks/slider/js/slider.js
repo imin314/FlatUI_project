@@ -1,25 +1,59 @@
-import $ from 'jquery';
-import './asRange';
+import 'jquery-ui/ui/widgets/slider'; 
 
 class Slider {
   constructor(domElement) {
-    this.$domElement = $(domElement);
-    this._initialize();
+    this._initialize(domElement);
   }
 
-  _initialize() {
+  _initialize(domElement) {
     $(document).ready(() => {
-      const $slider = this.$domElement;
-      const settings = {
-        tip: false,
-        step: 0.1,
-      };
-      if ($slider.hasClass('js-slider_type_tooltip')) {
-        settings.tip = { active: 'onMove' };
-      }
-
-      $slider.asRange(settings);
+      this._findElements(domElement);
+      const settings = this._generateSliderSettings();
+      this.$sliderContainer.slider(settings);
     });
+  }
+
+  _findElements(domElement) {
+    this.$slider = $(domElement);
+    this.$sliderContainer = this.$slider.find('.js-slider__container');
+    this.$tip = this.$slider.find('.js-slider__tip');
+  }
+
+  _generateSliderSettings() {
+    let typeSettings = {};
+    let settings = {
+      min: 0,
+      max: 100,
+      classes: {
+        'ui-slider': 'slider__container',
+        'ui-slider-handle': 'slider__handle',
+        'ui-slider-range': 'slider__range',
+      },
+    };
+    if (this.$slider.hasClass('js-slider_type_tip')) {
+      typeSettings = {
+        value: 40,
+        create: () => { this._updateTip(40); },
+        slide: (event, ui) => { this._updateTip(ui.value); },
+        start: () => { this.$tip.addClass('slider__tip_visible'); },
+        stop: () => { this.$tip.removeClass('slider__tip_visible'); },
+      };
+      }
+    else if (this.$slider.hasClass('js-slider_type_scale')) {
+      typeSettings = {
+        value: 75,
+        step: 25,
+        range: 'min',
+      };
+    }
+
+    return { ...settings, ...typeSettings };
+  }
+
+  _updateTip(value) {
+    this.$tip
+      .text(value)
+      .css('left', `${value}%`);  
   }
 }
 

@@ -37,7 +37,9 @@ class SearchBox {
     const notFoundMessage = "I've not found what I'm looking for...";
     this.$input.val(notFoundMessage);
     this.$searchbox.addClass('search-box_filled');
-    $(event.target).blur();
+    if (event !== undefined) {
+      $(event.target).blur();
+    }
   }
 
   _handleSearchBoxKeypress(event) {
