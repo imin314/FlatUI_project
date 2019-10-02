@@ -37,6 +37,9 @@
     border-bottom-color transparent
     transform rotate(-45deg)
     cursor pointer
+
+    &:active
+      translate transformX(-0.5rem)
   
   & .ui-datepicker-next
     order 3
@@ -47,6 +50,9 @@
     border-bottom-color transparent
     transform rotate(135deg)
     cursor pointer
+
+    &:active
+      translate transformX(0.5rem)
 
   & .ui-datepicker-title
     order 2
@@ -123,3 +129,8 @@
     background none
     border none
     cursor pointer
+    outline none
+
+    &:focus
+    &:active
+      color color-orange
