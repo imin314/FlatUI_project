@@ -1,53 +1,47 @@
 /* jQuery MaterialRipple Plugin */
 /* 2014 Dominik Biedebach */
 
-$.fn.materialripple = function (options) {
-  const defaults = {
-    rippleClass: 'ripple-wrapper',
-  };
-  $.extend(defaults, options);
+$.fn.materialripple = function(options) {
+	var defaults = {
+		rippleClass: 'ripple-wrapper'
+	}
+	$.extend(defaults, options);
 
-  $('body').on('animationend webkitAnimationEnd oAnimationEnd', `.${defaults.rippleClass}`, function () {
+	$('body').on('animationend webkitAnimationEnd oAnimationEnd', '.' + defaults.rippleClass, function () {
     removeRippleElement(this);
-  });
+});
 
-  const addRippleElement = function (element, e) {
-    const $element = $(element);
-    const $window = $(window);
-    $element.addClass('button_active');
-    $element.append(`<span class="added ${defaults.rippleClass}"></span>`);
-    newRippleElement = $element.find('.added');
-    newRippleElement.removeClass('added');
+	var addRippleElement = function(element, e) {
+		$(element).append('<span class="added '+defaults.rippleClass+'"></span>');
+		newRippleElement = $(element).find('.added');
+		newRippleElement.removeClass('added');
 
-    // get Mouse Position
-    const mouseX = e.pageX;
-    const mouseY = e.pageY;
+		// get Mouse Position
+		var mouseX = e.pageX;
+		var mouseY = e.pageY;
 
-    // for each ripple element, set sizes
-    elementWidth = $element.outerWidth();
-    elementHeight = $element.outerHeight();
-    d = Math.max(elementWidth, elementHeight);
-    newRippleElement.css({ width: d, height: d });
+		// for each ripple element, set sizes
+		elementWidth = $(element).outerWidth();
+		elementHeight = $(element).outerHeight();
+		d = Math.max(elementWidth, elementHeight);
+		newRippleElement.css({'width': d, 'height': d});
 
-    const rippleX = e.clientX - $element.offset().left - d / 2 + $window.scrollLeft();
-    const rippleY = e.clientY - $element.offset().top - d / 2 + $window.scrollTop();
+		var rippleX = e.clientX - $(element).offset().left - d/2 + $(window).scrollLeft();
+		var rippleY = e.clientY - $(element).offset().top - d/2 + $(window).scrollTop();
 
-    // Position the Ripple Element
-    newRippleElement.css('top', `${rippleY}px`).css('left', `${rippleX}px`).addClass('animated');
-  };
+		// Position the Ripple Element
+		newRippleElement.css('top', rippleY+'px').css('left', rippleX+'px').addClass('animated');
+	}
 
-  var removeRippleElement = function (element) {
-    const $element = $(element);
-    const $button = $element.parent();
-    $element.remove();
-    $button.removeAttr('style').removeClass('button_active').blur();
-  };
+	var removeRippleElement = function($element) {
+		$element.remove();
+	}
 
-  // add Ripple-Wrapper to all Elements
-  $(this).addClass('has-ripple');
+	// add Ripple-Wrapper to all Elements
+	$(this).addClass('has-ripple');
 
-  // Let it ripple on click
-  $(this).on('click', function (e) {
-    addRippleElement(this, e);
-  });
-};
+	// Let it ripple on click
+	$(this).bind('click', function(e){
+		addRippleElement(this, e);
+	});
+}

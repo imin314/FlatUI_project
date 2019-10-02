@@ -10,16 +10,20 @@ class Button {
     $(document).ready(() => {
       this.$button = $(domElement);
       this.$button
-        .on('keypress.ripple', e => this._handleEnterPress(e))
-        .addClass('ripple')
+        .on('animationend webkitAnimationEnd oAnimationEnd', () => this._handleButtonAnimationEnd())
+        .on('keypress.button', e => this._handleEnterPress(e))
         .materialripple();
     });
     return this;
   }
 
+  _handleButtonAnimationEnd() {
+    this.$button.blur();
+  }
+
   _handleEnterPress(event) {
     if (event.which === 13) {
-      this.$button.click();
+      this.$button.click()
     }
   }
 }
