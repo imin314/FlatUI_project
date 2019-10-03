@@ -8,8 +8,8 @@
   background-color white
   z-index 200
 
-  @media screen and (max-width:425px)
-    height 60px
+  @media screen and (max-width: 425px)
+    height 3.296703297rem
     background-color transparent
 
   &__menu
@@ -22,7 +22,7 @@
     padding 1rem 1rem 0
     transition all 1s cubic-bezier(.325, 1, .22, 1)
 
-    @media screen and (max-width:425px)
+    @media screen and (max-width: 425px)
       overflow hidden
       flex-direction column
       flex-wrap wrap
@@ -58,17 +58,17 @@
   &__icon
     display none
 
-    @media screen and (max-width:425px)
+    @media screen and (max-width: 425px)
       display block
       position absolute
-      top 20px
-      left 13px
-      height 27px
-      width 27px
+      top 1.098901099rem
+      left 0.714285714rem
+      height 1.483516484rem
+      width 1.483516484rem
       cursor pointer
-      text-indent -9999px //Hide the label
+      text-indent -9999px // Hide the label
       transition all 1s cubic-bezier(.19, 1, .22, 1)
-      //Remove blinking cursor
+      // Remove blinking cursor
       border none
       color transparent
       text-shadow 0 0 0 gray
@@ -80,7 +80,7 @@
     position absolute
     display block
     background color-cyan-darker
-    width 27px
+    width 1.483516484rem
     height .2rem
     border-radius .2rem
     left 0
@@ -91,10 +91,10 @@
       top 0
 
     &:nth-child(2)
-      top 8px
+      top 0.43956044rem
 
     &:nth-child(3)
-      top: 16px
+      top 0.879120879rem
 
   &__toggle
     display none
@@ -113,15 +113,15 @@
 
       & ~ ^[0]__icon ^[0]__icon-line
         &:first-child
-          top 0px
-          width 27px
-          transform translateX(-8px) rotate(-45deg) translateY(12px)
+          top 0
+          width 1.483516484rem
+          transform translateX(-0.43956044rem) rotate(-45deg) translateY(0.659340659rem)
 
         &:nth-child(2)
           opacity 0
           
         &:nth-child(3)
-          top 14px
-          width 27px
-          transform translateX(-5px) rotate(45deg) translateY(-8px)
+          top 0.769230769rem
+          width 1.483516484rem
+          transform translateX(-0.274725275rem) rotate(45deg) translateY(-0.43956044rem)
       

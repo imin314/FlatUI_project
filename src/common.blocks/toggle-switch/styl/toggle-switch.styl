@@ -5,8 +5,8 @@
   position relative
   display inline-block
   vertical-align middle
-  width 77px
-  height 31px
+  width 4.230769231rem
+  height 1.703296703rem
   cursor pointer
   noselect()
 
@@ -16,10 +16,10 @@
     &:checked + ^[0]__slider
       background-color color-cyan
       &::before
-        transform translateX(45px)
+        transform translateX(2.472527473rem)
       &::after
         content 'ON'
-        transform translateX(-27px)
+        transform translateX(-1.483516484rem)
 
   &__slider
     position absolute
@@ -30,16 +30,16 @@
     bottom 0
     background-color #ccc
     transition .4s
-    border-radius 50px
+    border-radius 2.747252747rem
     outline none
 
     &::before
       position absolute
       content ''
-      height 25px
-      width 25px
-      left 4px
-      top 3px
+      height 1.373626374rem
+      width 1.373626374rem
+      left 0.21978022rem
+      top 0.164835165rem
       background-color white
       transition .4s
       border-radius 50%
@@ -47,12 +47,12 @@
     &::after
       content 'OFF'
       position absolute
-      top 6px
-      right 12px
+      top 0.32967033rem
+      right 0.659340659rem
       color white
       font-weight bold
       font-size 0.85rem
       transition .4s
       
     &:focus
-      box-shadow 0 0 7px color-outline
+      box-shadow 0 0 0.384615385rem color-outline

@@ -24,26 +24,22 @@
     flex-wrap nowrap
     justify-content space-between
     flex 250px 2 1
-    padding 1.4rem 1.3rem 1.8rem 1.6rem
+    padding 1.4rem 1.3rem 2.5rem 1.6rem
     overflow hidden
-
-    @media screen and (max-width: 375px)
-      padding 1.2rem 1rem 1.2rem 1.5rem
 
   &__title
     flex auto 0 0
-    margin-bottom 0.35rem
+    margin-bottom 0.7rem
     font-size 2rem
     line-height 1em
     color white
     font-weight lighter
 
-    @media screen and (max-width:920px)
-      font-size 1.7rem
-
   &__date
     flex auto 0 0
     margin-bottom 1rem
+    font-size 0.8rem
+    letter-spacing 0.05rem
     color white
     font-weight bold
     text-transform uppercase
@@ -60,10 +56,7 @@
 
     & ^[0]__content
       position relative
-      padding 1.4rem 1.5rem 1.8rem
-
-      @media screen and (max-width: 375px)
-        padding 1rem 1rem 1rem 1.4rem
+      padding 1.4rem 1.5rem 1.6rem
 
     & ^[0]__date
       margin-bottom 1.4rem
@@ -75,10 +68,6 @@
       color white
       font-weight lighter
 
-      @media screen and (max-width:920px)
-        font-size 3.2rem
-        line-height 1em
-
     & ^[0]__month
       font-size 2.1rem
       color white
@@ -87,6 +76,7 @@
       margin-left 0.95rem
 
     & ^[0]__title
+      margin-bottom 0.35rem
       font-size 0.9rem
       color white
       font-weight bold

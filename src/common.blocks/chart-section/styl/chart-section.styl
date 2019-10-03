@@ -2,48 +2,17 @@
 
 .chart-section
   &__title
+    sectionTitle()
     margin-bottom 1.7rem
     letter-spacing 0.06rem
-    sectionTitle()
 
   &__container
     display flex
     justify-content space-between
     flex-direction row
 
-    @media screen and (max-width: 915px)
-      justify-content space-around
-      flex-wrap wrap
-
   &__chart
     flex 125px 0 0
     max-width 300px
     margin 0 1rem 1.5rem
     font-size 1rem
-
-    @media screen and (min-width: 915px)
-      margin-left 0
-
-    @media screen and (min-width: 1000px)
-      flex-grow 1
-
-    &:nth-child(1)
-      @media screen and (min-width: 915px)
-        margin-right 2.278481012658228%
-
-    &:nth-child(2)
-      @media screen and (min-width: 915px)
-        margin-right 6.20253164556962%
-
-    &:nth-child(3)
-      @media screen and (min-width: 915px)
-        margin-right 5.569620253164556%
-
-    &:nth-child(4)
-      @media screen and (min-width: 915px)
-        margin-right 5%
-        
-    &:nth-child(5)
-      @media screen and (min-width: 915px)
-        margin-right 2%
-  

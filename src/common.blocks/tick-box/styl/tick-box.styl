@@ -4,7 +4,7 @@
 .tick-box
   position relative
   display inline-block
-  width 31px
+  width 1.703296703rem
   height @width
   noselect()
 
@@ -19,7 +19,7 @@
         border-color white
 
   &__checkmark
-    width 31px
+    width 1.703296703rem
     height @width
     background-color color-bg
     border 1px solid color-bg
@@ -31,17 +31,17 @@
     &::after
       content ''
       position absolute
-      left 8px
-      top 9px
-      width 14px
-      height 8px
+      left 0.43956044rem
+      top 0.494505495rem
+      width 0.769230769rem
+      height 0.43956044rem
       border 2px solid #c0c0c0
       border-top none
       border-right none
       transform rotate(-45deg)
 
     &:focus
-      box-shadow 0 0 7px color-outline
+      box-shadow 0 0 0.384615385rem color-outline
   
   &_color_orange
     & ^[0]__input:checked + ^[0]__checkmark
