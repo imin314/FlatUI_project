@@ -1,14 +1,16 @@
 mixin arrowButton(settings)
-  - const { direction, disabled } = settings;
+  - const { direction, size, disabled } = settings;
   - const directionModifiers = {
   -   left: 'arrow-button_direction_left',
   -   right: 'arrow-button_direction_right',
-  - }
+  - };
+  - const sizeModifiers = {
+  -   small: 'arrow-button_size_small',
+  - };
   - const disabledModifier = 'arrow-button_disabled';
   - let className = 'arrow-button js-arrow-button';
-  - if (direction in directionModifiers) {
-  -   className += ` ${directionModifiers[direction]}`; 
-  - }
+  - if (direction in directionModifiers) className += ` ${directionModifiers[direction]}`; 
+  - if (size in sizeModifiers) className += ` ${sizeModifiers[size]}`;
   - let tabValue = '0';
   - if (disabled) {
   -   className += ` ${disabledModifier}`;

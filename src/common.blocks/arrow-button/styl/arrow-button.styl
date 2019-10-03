@@ -5,11 +5,11 @@
   noselect()
   position relative
   display inline-block
-  width 3.626373626373626em
+  width 3.626373626373626rem
   height @width
   font-size inherit
   background-color white
-  border 0.21978021978022em color-cyan solid
+  border 0.21978021978022rem color-cyan solid
   border-radius 50%
   cursor pointer
   outline none
@@ -65,7 +65,17 @@
   &__arrow
     position absolute
     top 50%
-    width 1.263736263736264em
+    width 1.263736263736264rem
     height @width
     border solid color-cyan
-    border-width 0 0.274725274725275em 0.274725274725275em 0
+    border-width 0 0.274725274725275rem 0.274725274725275rem 0
+  
+  &_size_small
+    width 1.8rem
+    height @width
+    border-width 0.15rem
+
+    & ^[0]__arrow
+      width 0.65rem
+      height @width
+      border-width 0 0.15rem 0.15rem 0
