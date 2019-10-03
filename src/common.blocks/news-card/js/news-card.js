@@ -7,7 +7,7 @@ class NewsCard {
 
   _initialize(domElement) {
     const $newsCard = $(domElement);
-    if ($newsCard.hasClass('news-card_with_scrollbar')) {
+    if ($newsCard.hasClass('news-card_with-scrollbar')) {
       const $text = $newsCard.find('.js-news-card__text');
       $text.mCustomScrollbar();
     }
