@@ -89,6 +89,13 @@
       &:last-child
         border-right none
       
+      &:not(.ui-datepicker-unselectable):hover
+        @media (hover: hover)
+          background-color color-orange
+
+          & .ui-state-default
+            color white
+      
     & .ui-datepicker-current-day
       background-color color-orange
               
