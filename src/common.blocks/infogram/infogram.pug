@@ -1,0 +1,22 @@
+include ../donut-chart/donut-chart.pug
+
+mixin infogram()
+  ul.infogram
+    li.infogram__stat-item
+      .infogram__comment
+        span 
+          | Three tracks covering actual topics of 
+          span.infogram__topic.infogram__topic_color_blue Development
+          | , 
+          span.infogram__topic.infogram__topic_color_red Design
+          | , and 
+          span.infogram__topic.infogram__topic_color_gray Management 
+          | with total of 18 intense workshops and talks.
+      .infogram__chart
+        +donutChart({ values: '61,22,17', colors: '#4eb7a8,#e75735,#747474' })
+    li.infogram__stat-item
+      .infogram__number 600+
+      .infogram__comment Passionate attendees
+    li.infogram__stat-item
+      .infogram__number 7
+      .infogram__comment Intense Days 

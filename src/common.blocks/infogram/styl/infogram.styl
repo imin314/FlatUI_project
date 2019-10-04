@@ -1,0 +1,52 @@
+@import '../../../styles/variables.styl'
+
+.infogram
+  display table
+  width 100%
+  padding 0
+
+  &__stat-item
+    display table-row
+    margin 0
+    padding 0
+    list-style none
+
+  &__comment
+    display table-cell
+    vertical-align middle
+    font-size 1rem
+    font-weight lighter
+    color color-text
+    border-left 1.3rem solid transparent
+
+    &:first-child
+      border-left none
+      border-right 0.8rem solid transparent
+
+  &__topic
+    font-size 1.2rem
+    font-weight bold
+
+    &_color
+      &_blue
+        color color-cyan
+
+      &_red
+        color color-orange
+
+      &_gray
+        color color-text-darker
+
+  &__chart
+    display table-cell
+    width 6.593406593rem
+    vertical-align middle
+    font-size 0.8rem
+    
+  &__number
+    display table-cell
+    vertical-align middle
+    font-weight bold
+    font-size 3rem
+    text-align right
+    color color-cyan-darker

@@ -1,5 +1,5 @@
 include ../video/video.pug
-include ../donut-chart/donut-chart.pug
+include ../infogram/infogram.pug
 
 mixin aboutSection()
   section.about-section
@@ -28,22 +28,6 @@ mixin aboutSection()
         h4.about-section__subtitle Leaders and Decision Makers
         p.about-section__intro To round it out, our audience is full of smart decision makers, who know taking the pulse of what's now, and next, is vital in making the right strategic decisions. Two tracks, and a mixture of deep dive and high level sessions ensures there's something for you too. Meanwhile, outside the sessions, you'll find engaging showcases of technology and design to keep you thinking.
       .about-section__right-col
-        ul.about-section__stats
-          li.about-section__stat-item
-            .about-section__comment
-              span Three tracks covering actual topics of 
-              span.about-section__topic.about-section__topic_color_blue Development
-              span , 
-              span.about-section__topic.about-section__topic_color_red Design
-              span , and 
-              span.about-section__topic.about-section__topic_color_gray Management 
-              span with total of 18 intense workshops and talks.
-            .about-section__chart
-              +donutChart({ values: "61,22,17", colors: "#4eb7a8,#e75735,#747474" })
-          li.about-section__stat-item
-            .about-section__number 600+
-            .about-section__comment Passionate attendees
-          li.about-section__stat-item
-            .about-section__number 7
-            .about-section__comment Intense Days 
+        +infogram()
+        
     
