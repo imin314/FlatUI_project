@@ -1,34 +1,28 @@
-include ../tick-box/tick-box.pug
+include ../pass-info/pass-info.pug
 
 mixin passSelector()
   section.pass-selector.js-pass-selector
     h2.pass-selector__title.js-pass-selector__title Find the conference pass for you
     .pass-selector__options
-      .pass-selector__column
-      .pass-selector__column
-      .pass-selector__column
-      .pass-selector__row
-        h3.pass-selector__pass-name Premium
-          br
-          | Pass
-        h3.pass-selector__pass-name Track
-          br
-          | Pass
-        h3.pass-selector__pass-name Daily
-          br
-          | Pass
-      .pass-selector__row
-        p.pass-selector__price $995
-        p.pass-selector__price $575
-        p.pass-selector__price $235
-      .pass-selector__row
-        p.pass-selector__text Visit any events without limitation
-        p.pass-selector__text Visit all events in a track
-        p.pass-selector__text Attend 1 event per day on a conference week
-      .pass-selector__row
-        .pass-selector__tickbox.js-pass-selector__tickbox
-          +tickBox({ value:'1', name:'tickbox', checked: true, color: 'orange' })
-        .pass-selector__tickbox.js-pass-selector__tickbox
-          +tickBox({ value:'2', name:'tickbox', color: 'orange' })
-        .pass-selector__tickbox.js-pass-selector__tickbox
-          +tickBox({ value:'3', name:'tickbox', color: 'orange' })
+      .pass-selector__pass-info
+        +passInfo({
+          name: 'Premium',
+          price: '$995',
+          description: 'Visit any events without limitation',
+          tickboxValue: '1',
+          checked: true,
+        })
+      .pass-selector__pass-info
+        +passInfo({
+          name: 'Track',
+          price: '$575',
+          description: 'Visit all events in a track',
+          tickboxValue: '2',
+        })
+      .pass-selector__pass-info
+        +passInfo({
+          name: 'Daily',
+          price: '$235',
+          description: 'Attend 1 event per day on a conference week',
+          tickboxValue: '3',
+        })

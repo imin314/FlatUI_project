@@ -1,0 +1,11 @@
+include ../validation-input/validation-input.pug
+include ../subscribe-toggle/subscribe-toggle.pug
+
+mixin subscribeForm()
+  section.subscribe-form
+    .subscribe-form__input
+      +validationInput({ type: 'text', name: 'name', placeholder: 'Your Name' })
+    .subscribe-form__input
+      +validationInput({ type: 'email', name: 'email', placeholder: 'Your Email' })
+    .subscribe-form__toggle
+      +subscribeToggle()

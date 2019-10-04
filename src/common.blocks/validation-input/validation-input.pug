@@ -1,0 +1,14 @@
+mixin validationInput(settings)
+  - const {
+  -  type: typeAttr = 'text',
+  -  name: nameAttr = '',
+  -  placeholder: placeholderAttr = '',
+  - } = settings;
+  label.validation-input
+    input.validation-input__input(
+      type=typeAttr
+      name=nameAttr
+      placeholder=placeholderAttr
+      required
+    )
+    .validation-input__bubble

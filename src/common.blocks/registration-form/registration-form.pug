@@ -1,6 +1,8 @@
-include ../toggle-switch/toggle-switch.pug
+include ../bread-crumbs/bread-crumbs.pug
+include ../subscribe-form/subscribe-form.pug
 include ../tick-box/tick-box.pug
 include ../pass-selector/pass-selector.pug
+include ../policy-tickbox/policy-tickbox.pug
 include ../button/button.pug
 
 mixin registrationForm()
@@ -9,34 +11,16 @@ mixin registrationForm()
       action="register.php"
       method="post"
     )
+      header.registration-form__header.js-registration-form__header
+        h1.registration-form__title Join us at Web Talks 2019
+        .registration-form__bread-crumbs
+          +breadCrumbs({ active: 1, max: 3 })
       section.registration-form__stage.js-registration-form__stage.registration-form__stage_first
-        label.registration-form__name
-          input.registration-form__input(
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            area-label="Name"
-            required
-          )
-          .registration-form__bubble
-        label.registration-form__email
-          input.registration-form__input(
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            area-label="Email"
-            required
-          )
-          .registration-form__bubble
-        .registration-form__subscribe
-          .registration-form__subscribe-text Subscribe to Web Talks newsletters
-          .registration-form__checkbox
-            +toggleSwitch(true)
+        +subscribeForm()
       section.registration-form__stage.js-registration-form__stage.registration-form__stage_second
         +passSelector()
       section.registration-form__stage.js-registration-form__stage.registration-form__stage_third
-        .registration-form__policy-checkbox
-          +tickBox({ value: '1', name: 'tickbox-policy' })
-        .registration-form__policy-text I agree with Web Talks Terms and Conditions and the Privacy Policy
+        .registration-form__policy-tickbox
+          +policyTickbox()
         .registration-form__button.js-registration-form__button
           +button({ title: 'register', color: 'reverse', size: 'responsive' })

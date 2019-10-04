@@ -1,0 +1,7 @@
+include ../toggle-switch/toggle-switch.pug
+
+mixin subscribeToggle()
+  .subscribe-toggle
+    p.subscribe-toggle__text Subscribe to Web Talks newsletters
+    .subscribe-toggle__checkbox
+      +toggleSwitch(true)

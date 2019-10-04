@@ -1,0 +1,57 @@
+@import '../../../styles/variables.styl'
+@import '../../../styles/mixins.styl'
+
+.validation-input
+  width 100%
+  display flex
+  justify-content space-between
+  align-items center
+
+  &__input
+    inputField()
+    flex 1 1
+  
+  &__bubble
+    display none
+    position relative
+    width 5.21978021978022rem
+    min-width 4.5rem
+    padding 0.55rem
+    margin-left 0.6593406593406593rem
+    font-size 0.7rem
+    text-transform uppercase
+    text-align center
+    font-weight bold
+    color white
+    border-radius 0.274725275rem
+    letter-spacing 0.06rem
+    transition 0.3s
+    transform translateX(-50px)
+
+    &::before
+      display none
+      content ''
+      position absolute
+      top 50%
+      left 0
+      width 0.3296703296703297rem
+      height @width
+      border-radius 1px
+      transform translate(-50%, -50%) rotate(45deg)
+
+    &_visible
+      display block
+
+    &_type_error
+      background-color color-orange
+      transform translateX(0)
+
+      &::before
+        background-color color-orange
+
+    &_type_good
+      background-color color-cyan
+      transform translateX(0)
+
+      &::before
+        background-color color-cyan

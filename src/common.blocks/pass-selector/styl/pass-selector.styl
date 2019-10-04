@@ -1,59 +1,14 @@
-@import '../../../styles/variables.styl'
 @import '../../../styles/mixins.styl'
 
 .pass-selector
   &__title
     sectionTitle()
     margin-bottom 1rem
-
+  
   &__options
-    display table
-    width 100%
-    text-align center
-    border-collapse collapse
+    display flex
+    align-items stretch
+    font-size 0
 
-  &__row
-    display table-row
-
-  &__column
-    display table-column
-    width 33.33333333333333%
-    border-right 1.098901099rem solid white
-
-    &:nth-child(3)
-      border-right none
-
-    &:hover
-      @media (hover:hover)
-        background-color color-bg
-
-    &:active
-      @media (hover:none)
-        background-color color-bg
-
-  &__pass-name
-    display table-cell
-    padding 1rem 0
-    text-transform capitalize
-    color color-orange
-    font-weight bold
-    font-size 2.5rem
-    border-bottom 0.10989011rem solid
-
-  &__price
-    display table-cell
-    padding 1rem 0
-    font-weight lighter
-    font-size 2rem
-    color color-text
-
-  &__text
-    display table-cell
-    padding 1rem 0
-    font-weight lighter
-    font-size 1rem
-    color color-text
-      
-  &__tickbox
-    display table-cell
-    padding 1rem
+  &__pass-info
+    width 33.33333%

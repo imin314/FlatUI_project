@@ -1,0 +1,17 @@
+mixin passInfo(passData)
+  - const {
+  -  name = '',
+  -  price ='',
+  -  description = '',
+  -  tickboxValue = '',
+  -  checked = false
+  - } = passData
+  section.pass-info
+    header.pass-info__header
+      h3.pass-info__name= name
+        br
+        | Pass
+    p.pass-info__price= price
+    p.pass-info__text= description
+    .pass-info__tickbox
+      +tickBox({ checked, name: 'tickbox', color: 'orange', value: tickboxValue })
