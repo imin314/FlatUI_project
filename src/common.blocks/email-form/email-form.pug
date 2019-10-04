@@ -1,25 +1,20 @@
 include ../button/button.pug
+include ../validation-input/validation-input.pug
 
 mixin emailForm()
   form.email-form.js-email-form
-    label.email-form__name
-      input.email-form__input(
-        type="text"
-        name="name"
-        placeholder="Your Name"
-        area-label="name"
-        required
-      )
-      .email-form__bubble.js-email-form__bubble
-    label.email-form__email
-      input.email-form__input(
-        type="email"
-        name="email"
-        placeholder="Your Email"
-        area-label="email"
-        required
-      )
-      .email-form__bubble.js-email-form__bubble
+    .email-form__input.email-form__input_type_name
+      +validationInput({
+        type: 'text',
+        name: 'name',
+        placeholder: 'Your Name',
+      })
+    .email-input.email-form__input_type_email
+      +validationInput({
+        type: 'email',
+        name: 'email',
+        placeholder: 'Your Email',
+      })
     textarea.email-form__message(
       name="message"
       placeholder="Your Message"

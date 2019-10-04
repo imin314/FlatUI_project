@@ -1,20 +1,12 @@
-@import '../../../styles/variables.styl'
 @import '../../../styles/mixins.styl'
 
 .email-form
-  clearfix()
-  
-  &__name
-    margin-bottom 0.72rem
-    display flex
-
   &__input
-    inputField()
-    width 100%
-
-  &__email
-    margin-bottom 0.8rem
-    display flex
+    &_type_name
+      margin-bottom 0.72rem
+    
+    &_type_email
+      margin-bottom 0.8rem
 
   &__message
     inputField()
@@ -26,50 +18,4 @@
     min-height 6.318681318681319rem
 
   &__button
-    float right
-
-  &__bubble
-    position relative
-    visibility hidden
-    width 6.5rem
-    min-width 4.5rem
-    margin-left 0.6rem
-    padding 0.55rem
-    font-size 0.7rem
-    text-transform uppercase
-    text-align center
-    font-weight bold
-    color white
-    letter-spacing 0.06rem
-    border-radius 0.3rem
-    transition 0.3s
-    transform translateX(-2.747252747rem)
-
-    &::before
-      visibility hidden
-      content ''
-      position absolute
-      top 50%
-      left 0
-      width 0.3296703296703297rem
-      height @width
-      border-radius 1px
-      transform translate(-50%, -50%) rotate(45deg)
-
-  &__bubble_type_error
-    background-color color-orange
-    visibility visible
-    transform translateX(0)
-
-    &::before
-      background-color color-orange
-      visibility visible
-
-  &__bubble_type_good
-    background-color color-cyan
-    visibility visible
-    transform translateX(0)
-    
-    &::before
-      background-color color-cyan
-      visibility visible  
+    text-align right
