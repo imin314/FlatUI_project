@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 class ArrowButton {
   constructor(domElement) {
     this._initialize(domElement);

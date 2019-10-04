@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 class DonutChart {
   constructor(domElement) {
     this.domElement = domElement;

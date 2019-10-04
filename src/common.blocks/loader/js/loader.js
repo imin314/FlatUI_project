@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 class Loader {
   constructor(domElement) {
     this.$domElement = $(domElement);

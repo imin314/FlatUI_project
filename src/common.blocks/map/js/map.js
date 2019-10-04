@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 class Map {
   constructor(domElement) {
     this.$domElement = $(domElement);

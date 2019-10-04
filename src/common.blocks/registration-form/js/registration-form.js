@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import ValidationForm from '../../validation-form/js/validation-form';
 
 class RegistrationForm extends ValidationForm {

@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 class Speakers {
   constructor(domElement) {
     this.cardsAreExpanded = false;

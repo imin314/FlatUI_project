@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 class DropDown {
   constructor(domElement) {
     this._initialize(domElement);

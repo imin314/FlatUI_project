@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import 'jquery-validation';
 
 export default class ValidationForm {

@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 class PassSelector {
   constructor(domElement) {
     this.$domElement = $(domElement);

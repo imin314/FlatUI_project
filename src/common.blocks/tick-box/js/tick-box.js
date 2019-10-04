@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 class TickBox {
   constructor(domElement) {
     this._initialize(domElement);

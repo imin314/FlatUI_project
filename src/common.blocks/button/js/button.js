@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import './jquery.materialripple';
 
 class Button {

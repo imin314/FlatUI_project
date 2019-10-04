@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 class OnlineHelp {
   constructor(domElement) {
     this.$domElement = $(domElement);

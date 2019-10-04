@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 class SearchBox {
   constructor(domElement) {
     this._findElements(domElement);

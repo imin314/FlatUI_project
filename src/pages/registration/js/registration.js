@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 class Registration {
   constructor(domElement) {
     this._findElements(domElement);
