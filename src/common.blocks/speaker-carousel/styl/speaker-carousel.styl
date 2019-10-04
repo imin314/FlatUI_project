@@ -1,0 +1,100 @@
+@import '../../../styles/variables.styl'
+
+.speaker-carousel
+  border-left 10px solid white
+  border-right 10px solid white
+
+  &__cards
+    font-size 1rem
+    border-radius 10px
+    background-color #c6c6c6
+    width 100%
+    padding 10px 10px 0 10px
+    margin-top 3rem
+    margin-bottom 1rem
+
+  &__card-wrapper
+    display flex
+    flex-direction row
+    overflow-x auto
+    align-items stretch
+    justify-content center
+
+  &__card
+    width 21rem
+    flex-shrink 0
+    overflow hidden
+    margin-right 0.8rem
+
+    &:last-child
+      margin-right 0
+  
+  &__controls
+    font-size 1rem
+    display flex
+    justify-content center
+    align-items center
+    margin-bottom 3rem
+
+    &_hidden
+      display none
+
+  &__arrow-button
+    flex auto 0 0
+
+  &__link
+    margin 0 1rem 0.3rem
+    color color-cyan
+    text-decoration underline
+    cursor pointer
+    line-height 1rem
+
+    &:hover
+      @media (hover:hover)
+        text-decoration none 
+
+    &:active
+    &:visited
+      @media (hover:hover)
+        text-decoration underline
+
+      @media (hover:none)
+        text-decoration none
+  
+  &_view_small
+    & ^[0]__button
+      display none
+
+    & ^[0]__cards
+      text-align center
+      background-color white
+
+    & ^[0]__card-wrapper
+      flex-wrap wrap
+
+    & ^[0]__card
+      margin 0 0 1rem
+
+      &:nth-child(n+4)
+        display none
+
+    &^[0]_view_full ^[0]__card-wrapper
+      max-height none
+      
+  &_view_full
+    & ^[0]__button
+      display none
+
+    & ^[0]__cards
+      text-align center
+      background-color white
+
+    & ^[0]__card-wrapper
+      flex-wrap wrap
+
+    & ^[0]__card
+      margin 0 0.8rem 1rem 0.8rem
+
+    &^[0]_view_small ^[0]__card
+      margin 0 0 1rem
+      display block
