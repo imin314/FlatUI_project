@@ -9,6 +9,7 @@ class EventCarousel {
     const $domElement = $(domElement);
     this.$cards = $domElement.find('.js-event-carousel__cards');
     this.$calendarOverlay = $domElement.find('.js-event-carousel__calendar-overlay');
+    this.$calendar = $domElement.find('.js-event-carousel__calendar');
 
     this.$cards
       .on('click.event-carousel', event => this._handleButtonClick(event))
@@ -33,7 +34,7 @@ class EventCarousel {
   }
 
   _handleDocumentClick(event) {
-    if ($(event.target).closest('.js-event-carousel__calendar').length === 0) {
+    if (event.target === this.$calendarOverlay[0]) {
       this.$calendarOverlay.removeClass('event-carousel__calendar-overlay_visible');
       $(document).off('click.event-carousel');
       return false;
