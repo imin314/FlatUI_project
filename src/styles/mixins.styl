@@ -36,9 +36,8 @@ inputField()
 
 remify(value) {
   u = unit(value);
-  template-font-size = 18.2px
   if (u is 'px') {
-    return unit(value/template-font-size, 'rem');
+    return unit(value/18.2, 'rem');
   } else {
     return unit(value, u);
   }
