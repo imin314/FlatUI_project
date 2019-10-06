@@ -4,11 +4,11 @@ mixin validationInput(settings)
   -  name: nameAttr = '',
   -  placeholder: placeholderAttr = '',
   - } = settings;
-  label.validation-input
-    input.validation-input__input(
+  label.validation-input.js-validation-input
+    input.validation-input__input.js-validation-input__input(
       type=typeAttr
       name=nameAttr
       placeholder=placeholderAttr
       required
     )
-    .validation-input__bubble
+    .validation-input__bubble.js-validation-input__bubble.validation-input__bubble_hidden

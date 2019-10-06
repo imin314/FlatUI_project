@@ -1,16 +1,23 @@
-import ValidationForm from '../../validation-form/js/validation-form';
+import 'jquery-validation';
 
-class EmailForm extends ValidationForm {
+class EmailForm {
   constructor(domElement) {
-    super(domElement, 'email-form');
-    this._initialize();
+    this._initialize(domElement);
   }
 
-  _initialize() {
-    super.initialize();
-
+  _initialize(domElement) {
     $(document).ready(() => {
-      const $form = $(this.domElement);
+      const $form = $(domElement);
+      $form.validate({
+        rules: {
+          name: 'required',
+          email: {
+            required: true,
+            email: true,
+          },
+        },
+        errorPlacement() {},
+      });
       const $button = $form.find('.js-email-form__button');
       $button.on('click.email-form', () => $form.submit());
     });
