@@ -6,8 +6,9 @@ html
   head
     meta(charset = "utf-8")
     meta(name="viewport" content="initial-scale=1.0, width=device-width")
-    meta(name="description" content="Flat UI demo page with Pug, Stylus, JS, jQuery, BEM and Webpack")
-    meta(name="keywords" content="HTML, CSS, Pug, Stylus, BEM, Webpack, flatUI, ui kit, web conference")
+    block description
+      meta(name="description" content="Flat UI demo page with Pug, Stylus, JS, jQuery, BEM and Webpack")
+      meta(name="keywords" content="HTML, CSS, Pug, Stylus, BEM, Webpack, flatUI, ui kit, web conference")
     link(rel="apple-touch-icon" sizes="180x180" href="./assets/favicons/apple-touch-icon.png")
     link(rel="icon" type="image/png" sizes="32x32" href="./assets/favicons/favicon-32x32.png")
     link(rel="icon" type="image/png" sizes="16x16" href="./assets/favicons/favicon-16x16.png")
@@ -18,8 +19,14 @@ html
       title Web Talks 2019
     script.
       document.documentElement.style.visibility = 'hidden';
-      document.addEventListener('DOMContentLoaded', function() {
-      document.documentElement.style.visibility = '';});
+      window.addEventListener('load', () => {
+        const loaderDOM = document.getElementsByClassName('js-loader')[0];
+        loaderDOM.classList.add('loader_hidden');
+      });
+      document.addEventListener('DOMContentLoaded', () => 
+      {
+        document.documentElement.style.visibility = '';
+      });
   body
     +loader()
     +navigationBar()
