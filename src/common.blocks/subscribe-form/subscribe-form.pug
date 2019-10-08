@@ -2,7 +2,7 @@ include ../validation-input/validation-input.pug
 include ../subscribe-toggle/subscribe-toggle.pug
 
 mixin subscribeForm()
-  section.subscribe-form
+  section.subscribe-form.js-subscribe-form
     .subscribe-form__input
       +validationInput({ type: 'text', name: 'name', placeholder: 'Your Name' })
     .subscribe-form__input

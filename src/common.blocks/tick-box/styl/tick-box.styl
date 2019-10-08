@@ -9,7 +9,9 @@
   noselect()
 
   &__input
-    display none
+    visibility hidden
+    width 0
+    position absolute
 
     &:checked + ^[0]__checkmark
       background-color color-cyan
@@ -17,6 +19,9 @@
 
       &::after
         border-color white
+    
+    &:focus + ^[0]__checkmark
+      box-shadow 0 0 0.384615385rem color-outline
 
   &__checkmark
     width 1.703296703rem

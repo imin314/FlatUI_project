@@ -1,20 +1,76 @@
-import ValidationForm from '../../validation-form/js/validation-form';
+import 'jquery-validation';
 
-class RegistrationForm extends ValidationForm {
+class RegistrationForm {
   constructor(domElement) {
-    super(domElement, 'registration-form');
-    this._initialize();
+    this._initialize(domElement);
   }
 
-  _initialize() {
-    super.initialize();
-
+  _initialize(domElement) {
     $(document).ready(() => {
-      const $form = $(this.domElement);
-      const $button = $form.find('.js-registration-form__button');
-      $button.on('click.registration-form', () => $form.submit());
+      this._findElements(domElement);
+      this._addFormValidation();
+
+      this.$inputs.on('change.registration-form', e => this._handleInputChange(e));
+      $(window).on('scroll.registration-form', e => this._handleWindowScroll(e));
+      this.$button.on('click.registration-form', () => this.$form.submit());
     });
+  }
+
+  _findElements(domElement) {
+    const $domElement = $(domElement);
+    this.$inputs = $domElement.find('input');
+    this.$form = $domElement.find('.js-registration-form__form');
+    this.$breadCrumbsItems = $domElement.find('.js-bread-crumbs__item');
+    this.$formStages = $domElement.find('.js-registration-form__stage');
+    this.$header = $domElement.find('.js-registration-form__header');
+    this.$passHeader = $domElement.find('.js-pass-selector__title');
+    this.$button = $domElement.find('.js-registration-form__button');
+  }
+
+  _addFormValidation() {
+    this.$form.validate({
+      rules: {
+        name: 'required',
+        email: {
+          required: true,
+          email: true,
+        },
+        policy: 'required',
+      },
+      focusInvalid: true,
+      errorPlacement() {},
+    });
+  }
+
+  _updateBreadCrumbs(itemNumber) {
+    const activeClass = 'bread-crumbs__item_active';
+    if (!this.$breadCrumbsItems.eq(itemNumber).hasClass(activeClass)) {
+      this.$breadCrumbsItems.removeClass(activeClass);
+      this.$breadCrumbsItems.eq(itemNumber).addClass(activeClass);
+    }
+  }
+
+  _handleInputChange(event) {
+    const $target = $(event.target);
+    const $currentStage = $target.parents('.js-registration-form__stage');
+    let stageNumber = 0;
+    this.$formStages.each((i, element) => {
+      if ($(element).is($currentStage)) {
+        stageNumber = i;
+      }
+    });
+    this._updateBreadCrumbs(stageNumber);
+  }
+
+  _handleWindowScroll(event) {
+    const headerHeight = this.$header.outerHeight();
+    const passHeaderOffset = this.$passHeader.offset().top;
+    if ($(event.target).scrollTop() + headerHeight > passHeaderOffset) {
+      this.$header.css({ position: 'absolute', top: passHeaderOffset - headerHeight });
+    } else {
+      this.$header.removeAttr('style');
+    }
   }
 }
 
-$('.js-registration-form__form').each((i, element) => new RegistrationForm(element));
+$('.js-registration-form').each((i, element) => new RegistrationForm(element));

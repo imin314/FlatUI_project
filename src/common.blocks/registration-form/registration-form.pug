@@ -6,11 +6,8 @@ include ../policy-tickbox/policy-tickbox.pug
 include ../button/button.pug
 
 mixin registrationForm()
-  section.registration-form
-    form.registration-form__form.js-registration-form__form(
-      action="register.php"
-      method="post"
-    )
+  section.registration-form.js-registration-form
+    form.registration-form__form.js-registration-form__form
       header.registration-form__header.js-registration-form__header
         h1.registration-form__title Join us at Web Talks 2019
         .registration-form__bread-crumbs

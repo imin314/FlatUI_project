@@ -11,7 +11,9 @@
   noselect()
 
   &__checkbox
-    display none
+    visibility hidden
+    width 0
+    position absolute
 
     &:checked + ^[0]__slider
       background-color color-cyan
