@@ -1,4 +1,4 @@
-class Speakers {
+class SpeakerCarousel {
   constructor(domElement) {
     this.cardsAreExpanded = false;
     this._initialize(domElement);
@@ -7,10 +7,10 @@ class Speakers {
   _findElements(domElement) {
     const $domElement = $(domElement);
     this.$page = $domElement;
-    this.$cards = $domElement.find('.js-speakers__cards');
-    this.$rightButton = $domElement.find('.js-speakers__right-button .js-arrow-button');
-    this.$leftButton = $domElement.find('.js-speakers__left-button .js-arrow-button');
-    this.$viewAllLink = $domElement.find('.js-speakers__link');
+    this.$cards = $domElement.find('.js-speaker-carousel__cards');
+    this.$rightButton = $domElement.find('.js-speaker-carousel__arrow-button .js-arrow-button_direction_right');
+    this.$leftButton = $domElement.find('.js-speaker-carousel__arrow-button .js-arrow-button_direction_left');
+    this.$viewAllLink = $domElement.find('.js-speaker-carousel__link');
   }
 
   _initialize(domElement) {
@@ -75,11 +75,11 @@ class Speakers {
   _updatePageView(mediaQuery) {
     if (mediaQuery.matches) {
       this.windowIsSmall = true;
-      this.$page.addClass('speakers_view_small');
+      this.$page.addClass('speaker-carousel_view_small');
       this._hideCustomScrollBar();
     } else {
       this.windowIsSmall = false;
-      this.$page.removeClass('speakers_view_small');
+      this.$page.removeClass('speaker-carousel_view_small');
       if (!this.cardsAreExpanded) {
         this._updateCustomScrollBar();
       }
@@ -102,14 +102,14 @@ class Speakers {
 
   _handleViewAllClick() {
     if (this.cardsAreExpanded) {
-      this.$page.removeClass('speakers_view_full');
+      this.$page.removeClass('speaker-carousel_view_full');
       this.$viewAllLink.text('View all speakers');
       this.cardsAreExpanded = false;
       if (!this.windowIsSmall) {
         this._updateCustomScrollBar();
       }
     } else {
-      this.$page.addClass('speakers_view_full');
+      this.$page.addClass('speaker-carousel_view_full');
       this.$viewAllLink.text('Back to compact view');
       this.cardsAreExpanded = true;
       if (!this.windowIsSmall) {
@@ -129,4 +129,4 @@ class Speakers {
   }
 }
 
-$('.js-speakers').each((i, element) => new Speakers(element));
+$('.js-speaker-carousel').each((i, element) => new SpeakerCarousel(element));
