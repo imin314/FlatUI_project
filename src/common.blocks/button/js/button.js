@@ -8,10 +8,10 @@ class Button {
   _initialize(domElement) {
     $(document).ready(() => {
       this.$button = $(domElement);
-      this.$button.on('keypress.button', e => this._handleEnterPress(e));
-      this.$button.ripple({
-        dragging: false,
-      });
+      this.$button
+        .on('keypress.button', e => this._handleEnterPress(e))
+        .on('transitionend webkitTransitionEnd oTransitionEnd', () => this._handleButtonAnimationEnd())
+        .ripple({ dragging: false });
     });
     return this;
   }
