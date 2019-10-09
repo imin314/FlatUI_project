@@ -9,7 +9,9 @@ class Button {
     $(document).ready(() => {
       this.$button = $(domElement);
       this.$button.on('keypress.button', e => this._handleEnterPress(e));
-      this.$button.ripple();
+      this.$button.ripple({
+        dragging: false,
+      });
     });
     return this;
   }
