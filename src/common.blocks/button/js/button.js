@@ -1,4 +1,4 @@
-import './jquery.materialripple';
+import 'legit-ripple/dist/ripple.min';
 
 class Button {
   constructor(domElement) {
@@ -8,10 +8,8 @@ class Button {
   _initialize(domElement) {
     $(document).ready(() => {
       this.$button = $(domElement);
-      this.$button
-        .on('animationend webkitAnimationEnd oAnimationEnd', () => this._handleButtonAnimationEnd())
-        .on('keypress.button', e => this._handleEnterPress(e))
-        .materialripple();
+      this.$button.on('keypress.button', e => this._handleEnterPress(e));
+      this.$button.ripple();
     });
     return this;
   }
