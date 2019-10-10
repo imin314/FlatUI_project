@@ -21,6 +21,7 @@
   box-shadow 0 0.21978022rem 0 0 color-cyan-darker
   transition all .3s, visibility 0s
   outline none
+  noselect()
 
   &:hover
     @media (hover:hover)
@@ -60,6 +61,7 @@
         border-color color-orange
 
     &:focus
+    &:active
       color white
       background-color color-orange
       border-color color-orange
