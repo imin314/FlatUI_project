@@ -12,10 +12,19 @@
     justify-content space-between
     flex-direction row
 
+    @media screen and (max-width: 700px)
+      flex-wrap wrap
+
   &__form
     min-width 350px
     flex 372px 2 1
     margin 0 1.8rem 2.5rem 0
+
+    @media screen and (max-width: 700px)
+      margin-right 0
+
+    @media screen and (max-width: 420px)
+      min-width unset
 
   &__checkboxes
     flex 365px 1 2
@@ -30,6 +39,9 @@
     margin-bottom 2.9rem
     text-align center
 
+    @media screen and (max-width: 700px)
+      flex 200px 1 1
+
     & ^[0]__title
       margin-bottom 2.5rem
   
@@ -42,6 +54,9 @@
   &__tickboxes
     flex 100% 0 0
     text-align center
+
+    @media screen and (max-width: 700px)
+      flex 200px 1 1
 
     & ^[0]__title
       margin-bottom 2.5rem

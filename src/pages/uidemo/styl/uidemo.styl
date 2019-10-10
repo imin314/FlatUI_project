@@ -2,21 +2,38 @@
 
 .uidemo
   width 87%
+  max-width 1000px
   margin 5.769230769230769rem auto 7.802197802197802rem
   text-align center
 
   &__button-section
-    width 76%
+    width 78%
+    max-width 720px
     margin 0 auto
+    
+    @media screen and (max-width: 900px)
+      width 100%
+    
+    @media screen and (max-width: 672px)
+      max-width 400px
 
   &__arrow-section
     width 69.34532455885511%
     margin 2rem auto 0
-    max-width 610px
+    max-width 550px
+
+    @media screen and (max-width: 900px)
+      width 100%
+
+    @media screen and (max-width: 672px)
+      max-width 260px
 
   &__chart-section
     width 100%
     margin 1.65rem auto 0
+
+    @media screen and (max-width: 900px)
+      max-width 640px
 
   &__slider-section
     width 97.38660334221728%
@@ -38,17 +55,29 @@
     max-width 600px
     vertical-align top
 
+    @media screen and (max-width: 900px)
+      width 100%
+      margin-right auto
+
   &__profile-section
     display inline-block
     width 43.956599174%
     margin-top 2.032967033rem
     vertical-align top
-    max-width 634px
+
+    @media screen and (max-width: 900px)
+      width 100%
+      margin-right auto
+      margin-left auto
 
   &__news-section
     width 97.512915409%
     margin 4.7rem auto 0
     max-width 950px
+
+    @media screen and (max-width: 900px)
+      margin 2rem auto 0
+      max-width 500px
 
   &__map-section
     width 98.1%
@@ -58,7 +87,11 @@
     display inline-block
     width 45.851280173%
     margin 3.6rem 4.4% 0 auto
-    vertical-align top 
+    vertical-align top
+
+    @media screen and (max-width: 900px)
+      width 100%
+      margin-right auto
 
   &__message-section
     display inline-block
@@ -66,7 +99,9 @@
     margin-top 3.6rem
     vertical-align top
 
+    @media screen and (max-width: 900px)
+      width 100%
+
   &__video-section
     width 97.7%
     margin 3.7rem auto 0
-    max-width 1000px
