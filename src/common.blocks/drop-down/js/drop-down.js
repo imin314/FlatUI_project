@@ -8,7 +8,9 @@ class DropDown {
       const $domElement = $(domElement);
       this.$dropdown = $domElement;
       this.$label = $domElement.find('.js-drop-down__label');
-      this.$dropdown.on('click.drop-down', e => this._handleDropDownClick(e));
+      this.$dropdown
+        .on('click.drop-down', e => this._handleDropDownClick(e))
+        .on('keypress.drop-down', e => this._handleDropDownKeypress(e));
     });
   }
 
@@ -25,6 +27,13 @@ class DropDown {
 
   _handleDropDownFocusOut() {
     this.$dropdown.removeClass('drop-down_active');
+  }
+
+  _handleDropDownKeypress(event) {
+    if (event.which === 13) {
+      $(event.target).click();
+      return false;
+    }
   }
 }
 

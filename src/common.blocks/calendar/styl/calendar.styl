@@ -41,8 +41,13 @@
     transform rotate(-45deg)
     cursor pointer
 
+    &:hover
+      @media (hover:hover)
+        transform rotate(-45deg) translateX(-0.5rem)
+
     &:active
-      translate transformX(-0.5rem)
+      @media (hover:none)
+        transform rotate(-45deg) translateX(-0.5rem)
   
   & .ui-datepicker-next
     order 3
@@ -54,8 +59,13 @@
     transform rotate(135deg)
     cursor pointer
 
+    &:hover
+      @media (hover:hover)
+        transform rotate(135deg) translateX(0.5rem)
+
     &:active
-      translate transformX(0.5rem)
+      @media (hover:none)
+        transform rotate(135deg) translateX(0.5rem)
 
   & .ui-datepicker-title
     order 2

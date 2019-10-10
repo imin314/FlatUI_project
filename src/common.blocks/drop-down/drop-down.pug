@@ -6,4 +6,4 @@ mixin dropDown(settings)
       button.drop-down__button.js-drop-down__button(type="button")
     ul.drop-down__list
       each val in items
-        li.drop-down__item.js-drop-down__item= val
+        li.drop-down__item.js-drop-down__item(tabindex=0)= val

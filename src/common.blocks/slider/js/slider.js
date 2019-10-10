@@ -1,4 +1,6 @@
-import 'jquery-ui/ui/widgets/slider'; 
+import 'jquery-ui/ui/widgets/slider';
+ 
+require('jquery-ui-touch-punch');
 
 class Slider {
   constructor(domElement) {

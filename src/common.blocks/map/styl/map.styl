@@ -81,9 +81,11 @@
     border 0.1098901098901099rem solid white
     cursor pointer
     outline none
+    noselect()
 
     @media screen and (max-width: 450px)
       font-size 0.85rem
+      margin-right 1rem
 
     &::before
       content ''
@@ -154,6 +156,7 @@
     align-self stretch
     cursor pointer
     outline none
+    noselect()
 
     @media screen and (max-width: 450px)
       flex-basis 1rem
