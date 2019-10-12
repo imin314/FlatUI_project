@@ -14,8 +14,14 @@
     <title>Schedule</title>
     <script>
       document.documentElement.style.visibility = 'hidden';
-      document.addEventListener('DOMContentLoaded', function() {
-      document.documentElement.style.visibility = '';});
+      window.addEventListener('load', () => {
+        const loaderDOM = document.getElementsByClassName('js-loader')[0];
+        loaderDOM.classList.add('loader_hidden');
+      });
+      document.addEventListener('DOMContentLoaded', () => 
+      {
+        document.documentElement.style.visibility = '';
+      });
     </script>
   </head>
   <body>
@@ -337,16 +343,16 @@
             <h3 class="footer-section__header">Contact Us</h3>
             <ul class="footer-section__list">
               <li class="footer-section__list-item">
-                <p>E-mail:</p>
-                <p><a class="footer-section__link" href="mailto:info@nonexistingwt.org">info@nonexistingwt.org</a></p>
+                <p class="footer-section__paragraph">E-mail:</p>
+                <p class="footer-section__paragraph"><a class="footer-section__link" href="mailto:info@nonexistingwt.org">info@nonexistingwt.org</a></p>
               </li>
               <li class="footer-section__list-item">
-                <p>Twitter:</p>
-                <p><a class="footer-section__link" href="./sorry_this_link_is_dead" title="twitter" target="_blank" rel="noopener noreferrer">@nonexistingwebtalks</a></p>
+                <p class="footer-section__paragraph">Twitter:</p>
+                <p class="footer-section__paragraph"><a class="footer-section__link" href="./sorry_this_link_is_dead" title="twitter" target="_blank" rel="noopener noreferrer">@nonexistingwebtalks</a></p>
               </li>
               <li class="footer-section__list-item">
-                <p>Phone:</p>
-                <p> <a class="footer-section__link" href="tel:+73822000000">+7 3822 000 000</a></p>
+                <p class="footer-section__paragraph">Phone:</p>
+                <p class="footer-section__paragraph"> <a class="footer-section__link" href="tel:+73822000000">+7 3822 000 000</a></p>
               </li>
             </ul>
           </section>

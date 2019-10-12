@@ -1,1 +1,1 @@
-module.exports = __webpack_public_path__ + "assets/favicons/bubble-icon.svg";
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 42"><title>Монтажная область 1</title><g id="Chat_Icon" data-name="Chat Icon" style="isolation:isolate"><g id="Chat_Icon-2" data-name="Chat Icon"><path d="M28.85.54H9.71A9.57,9.57,0,0,0,.15,10.11v12a9.57,9.57,0,0,0,9.57,9.57h8.4C19,33.17,23,39.41,27.83,41.2a39.14,39.14,0,0,1,.73-9.57h.29a9.57,9.57,0,0,0,9.57-9.57v-12A9.57,9.57,0,0,0,28.85.54Z" style="fill:#8e8d8d;fill-rule:evenodd"/></g></g></svg>

@@ -14,8 +14,14 @@
     <title>Contact Us</title>
     <script>
       document.documentElement.style.visibility = 'hidden';
-      document.addEventListener('DOMContentLoaded', function() {
-      document.documentElement.style.visibility = '';});
+      window.addEventListener('load', () => {
+        const loaderDOM = document.getElementsByClassName('js-loader')[0];
+        loaderDOM.classList.add('loader_hidden');
+      });
+      document.addEventListener('DOMContentLoaded', () => 
+      {
+        document.documentElement.style.visibility = '';
+      });
     </script>
   </head>
   <body>
@@ -60,16 +66,20 @@
           <p class="contacts__text">Got a question? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
           <div class="contacts__form">
             <form class="email-form js-email-form">
-              <label class="email-form__name">
-                <input class="email-form__input" type="text" name="name" placeholder="Your Name" area-label="name" required>
-                <div class="email-form__bubble js-email-form__bubble"></div>
-              </label>
-              <label class="email-form__email">
-                <input class="email-form__input" type="email" name="email" placeholder="Your Email" area-label="email" required>
-                <div class="email-form__bubble js-email-form__bubble"></div>
-              </label>
+              <div class="email-form__input email-form__input_type_name">
+                <label class="validation-input js-validation-input">
+                  <input class="validation-input__input js-validation-input__input" type="text" name="name" placeholder="Your Name" required>
+                  <div class="validation-input__bubble js-validation-input__bubble validation-input__bubble_hidden"></div>
+                </label>
+              </div>
+              <div class="email-input email-form__input_type_email">
+                <label class="validation-input js-validation-input">
+                  <input class="validation-input__input js-validation-input__input" type="email" name="email" placeholder="Your Email" required>
+                  <div class="validation-input__bubble js-validation-input__bubble validation-input__bubble_hidden"></div>
+                </label>
+              </div>
               <textarea class="email-form__message" name="message" placeholder="Your Message" arealabel="Message"></textarea>
-              <div class="email-form__button js-email-form__button"><a class="button js-button" title="submit" tabindex="0">submit</a>
+              <div class="email-form__button js-email-form__button"><a class="button js-button button_color_reverse" title="submit" tabindex="0">submit</a>
               </div>
             </form>
           </div>
@@ -86,7 +96,7 @@
               <div class="map__icons">
                 <div class="map__search js-map__search" tabindex="0"></div>
                 <div class="map__pin js-map__pin" tabindex="0">
-                  <svg class="pin" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 77.01 105.79" width="100%" height="100%" style="width:0px;height:0px;fill:transparent;">
+                  <svg class="pin" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 77.01 105.79" width="100%" height="100%" style="width: 1.3rem; fill: transparent;">
                     <circle cx="38.47" cy="38.47" r="27.5" fill="transparent" stroke="white" stroke-width="22"></circle>
                     <path d="M38.42,59.09-.06,40.26a84.56,84.56,0,0,0,2,12.7,90.1,90.1,0,0,0,24,42.41,90.65,90.65,0,0,0,12.52,10.42A90.65,90.65,0,0,0,50.95,95.38,90.1,90.1,0,0,0,74.9,53a84.56,84.56,0,0,0,2-12.7Z" transform="translate(0.06)" fill="white"></path>
                   </svg>
@@ -109,7 +119,7 @@
                     <div class="messenger__text">Hi! How can I help you?</div>
                   </div>
                   <textarea class="messenger__message messenger__message_type_outbox" name="outbox" placeholder="Type your message..." rows="3"></textarea>
-                  <div class="messenger__button"><a class="button js-button button_size_responsive" title="reply" tabindex="0">reply</a>
+                  <div class="messenger__button"><a class="button js-button button_color_reverse button_size_responsive" title="reply" tabindex="0">reply</a>
                   </div>
                 </div>
               </div>
@@ -124,16 +134,16 @@
             <h3 class="footer-section__header">Contact Us</h3>
             <ul class="footer-section__list">
               <li class="footer-section__list-item">
-                <p>E-mail:</p>
-                <p><a class="footer-section__link" href="mailto:info@nonexistingwt.org">info@nonexistingwt.org</a></p>
+                <p class="footer-section__paragraph">E-mail:</p>
+                <p class="footer-section__paragraph"><a class="footer-section__link" href="mailto:info@nonexistingwt.org">info@nonexistingwt.org</a></p>
               </li>
               <li class="footer-section__list-item">
-                <p>Twitter:</p>
-                <p><a class="footer-section__link" href="./sorry_this_link_is_dead" title="twitter" target="_blank" rel="noopener noreferrer">@nonexistingwebtalks</a></p>
+                <p class="footer-section__paragraph">Twitter:</p>
+                <p class="footer-section__paragraph"><a class="footer-section__link" href="./sorry_this_link_is_dead" title="twitter" target="_blank" rel="noopener noreferrer">@nonexistingwebtalks</a></p>
               </li>
               <li class="footer-section__list-item">
-                <p>Phone:</p>
-                <p> <a class="footer-section__link" href="tel:+73822000000">+7 3822 000 000</a></p>
+                <p class="footer-section__paragraph">Phone:</p>
+                <p class="footer-section__paragraph"> <a class="footer-section__link" href="tel:+73822000000">+7 3822 000 000</a></p>
               </li>
             </ul>
           </section>
