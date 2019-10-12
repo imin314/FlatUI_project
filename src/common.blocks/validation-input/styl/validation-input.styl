@@ -9,7 +9,8 @@
 
   &__input
     inputField()
-    width 100%
+    flex 100% 2 2
+    min-width 2.7rem
   
   &__bubble
     position relative
@@ -45,8 +46,10 @@
       background-color color-cyan
     
     &_hidden
+      flex-basis 0rem
+      font-size 0rem
       opacity 0
-      flex 0 0 0
-      min-width 0
-      padding 0
       margin 0
+      padding 0
+      min-width 0rem
+

@@ -17,10 +17,6 @@
     background-repeat no-repeat
     background-color color-bg
 
-    @media screen and (max-width: 375px)
-      flex-basis 5.5rem
-      height 5.5rem
-
   &__box
     position relative
     flex 1 1 11.64835164835165rem
@@ -49,9 +45,6 @@
     color color-orange
     text-transform capitalize
 
-    @media screen and (max-width: 425px)
-      font-size 1.1rem
-
   &__position
     margin 0 0 0.714285714285714rem 0
     font-size 0.7857142857142857rem
@@ -60,20 +53,15 @@
     letter-spacing 0.0494505494505495rem
     text-transform uppercase
 
-    @media screen and (max-width: 425px)
-      font-size 0.7rem
-
   &__icons
     display flex
-    max-width 160px
+    justify-content space-around
+    max-width 8.791208791rem
     margin 0 auto
 
   &__icon
     height 1.648351648351648rem
     noselect()
-
-    @media screen and (max-width: 425px)
-      height 1.3rem
 
   &_color_cyan
     & ^[0]__box

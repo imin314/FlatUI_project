@@ -7,10 +7,17 @@
   padding 0.5rem
   text-align center
 
+  @media screen and (max-width: 425px)
+    padding 0.25rem
+
   &__header
     margin-bottom 1rem
-    padding 1rem
+    padding-bottom 1rem
     border-bottom 0.10989011rem solid color-orange
+
+    @media screen and (max-width: 425px)
+      margin-bottom 0.8rem
+      padding-bottom 0.8rem
 
   &__name
     text-transform capitalize
@@ -18,11 +25,30 @@
     font-weight bold
     font-size 2.5rem
 
+    @media screen and (max-width: 768px)
+      font-size 1.8rem
+
+    @media screen and (max-width: 600px)
+      font-size 1.5rem
+
+    @media screen and (max-width: 425px)
+      font-size 1rem
+
   &__price
     margin-bottom 1rem
     font-weight lighter
     font-size 2rem
     color color-text
+
+    @media screen and (max-width: 768px)
+      font-size 1.7rem
+
+    @media screen and (max-width: 600px)
+      font-size 1.3rem
+
+    @media screen and (max-width: 425px)
+      font-size 1rem
+      margin-bottom 0.8rem
 
   &__text
     flex-grow 1
