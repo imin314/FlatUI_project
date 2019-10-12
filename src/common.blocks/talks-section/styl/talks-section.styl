@@ -11,14 +11,15 @@
     font-size 2rem
     font-weight lighter
 
+    @media screen and (max-width: 990px)
+      font-size 1.5rem
+
   &__date
     font-size 3rem
     font-weight bold
 
-  &__card
-    max-width 445.61px
-    min-width 260.11px
-    height 100%
+    @media screen and (max-width: 990px)
+      font-size 2rem
 
   &__events
     display flex
@@ -30,11 +31,19 @@
     border-radius 0.549450549rem
     margin 0 auto
 
+    @media screen and (max-width: 990px)
+      flex-wrap wrap
+      max-width 600px
+
   &__event
     text-align center
     margin 1rem
     padding-top 2rem
     position relative
+
+    &:not(:last-child)
+      @media screen and (max-width: 990px)
+        margin-bottom 0
 
   &__time
     color color-text
@@ -45,6 +54,13 @@
     left 50%
     transform translateX(-50%)
     white-space nowrap
+
+    @media screen and (max-width: 990px)
+      font-size 1.1rem
+  
+  &__card
+    max-width 445.61px
+    min-width 260.11px
 
 
     
