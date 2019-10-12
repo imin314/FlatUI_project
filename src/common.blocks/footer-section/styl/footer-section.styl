@@ -8,14 +8,25 @@
   width 100%
   padding 2rem 3rem
   color white
-  font-size 0.8rem
   background-color color-text
+
+  @media screen and (max-width: 600px)
+    padding 1.5rem 2rem
+
+  @media screen and (max-width: 425px)
+    padding 1.4rem
 
   &__header
     margin-bottom 1rem
     color color-cyan
     font-size 1.2rem
     font-weight bold
+
+    @media screen and (max-width: 600px)
+      font-size 1rem
+
+    @media screen and (max-width: 425px)
+      font-size 0.9rem
 
   &__contacts
     width 50%
@@ -32,6 +43,15 @@
     list-style none
     font-size 1rem
     line-height 1.5rem
+
+    @media screen and (max-width: 600px)
+      font-size 0.8rem
+      line-height 1.3rem
+    
+    @media screen and (max-width: 425px)
+      font-size 0.7rem
+      line-height 1.1rem
+
 
   &__link
     color inherit
@@ -56,3 +76,12 @@
     margin-top 2rem
     text-align center
     font-size 1rem
+
+    @media screen and (max-width: 600px)
+      font-size 0.8rem
+    
+    @media screen and (max-width: 425px)
+      font-size 0.7rem
+      margin 1.5rem auto 0
+      max-width 150px
+
