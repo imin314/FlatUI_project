@@ -1,5 +1,5 @@
 {
-	"speakers": [
+  "speakers": [
     {
       "name": "maria leonova",
       "position": "founder &amp; lead instructor, Jack&amp;Bo",
@@ -109,7 +109,7 @@
       "text": "Helga is a self-taught designer and developer with an inordinate love for CSS. Reducing lines of code in her web projects makes her extremely happy. She used to play basketball full-time and launched her web career during downtime between training sessions."
     }
   ],
-	"talks": [
+  "talks": [
     {
       "title": "Shipping Product at Scale",
       "speaker": "peter vanderbilt",
@@ -272,5 +272,5 @@
       "text": "Modern CSS gives us a comprehensive set of tools that lets us embrace the fluidity of the web.",
       "img": "development-img.jpg"
     }
-	]
+  ]
 }

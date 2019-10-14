@@ -19,9 +19,9 @@ class EventCarousel {
         autoExpandScrollbar: true,
         advanced: {
           autoExpandHorizontalScroll: true,
-          autoScrollOnFocus: false,
+          autoScrollOnFocuss: false,
         },
-	    });
+      });
   }
 
   _handleButtonClick(event) {
