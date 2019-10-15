@@ -13,16 +13,13 @@
   &__image
     flex 6.758241758rem 0 2
     min-width 4.395604396rem
-    background-repeat no-repeat
-    background-position 0rem 0rem
+    background color-orange no-repeat 0rem 0rem
     background-clip border-box
     background-size cover
-    background-color inherit
 
   &__content
     display flex
-    flex-direction column
-    flex-wrap nowrap
+    flex-flow column nowrap
     justify-content space-between
     flex 13.73626374rem 2 1
     padding 1.4rem 1.3rem 2.5rem 1.6rem
@@ -31,29 +28,28 @@
   &__title
     flex auto 0 0
     margin-bottom 0.7rem
-    font-size 2rem
-    line-height 1em
+    font lighter 2rem/1 font-family
     color white
-    font-weight lighter
 
   &__date
     flex auto 0 0
     margin-bottom 1rem
-    font-size 0.8rem
+    font bold 0.8rem font-family
     letter-spacing 0.05rem
     color white
-    font-weight bold
     text-transform uppercase
 
   &__text
     flex auto 1 0
-    font-size 0.8rem
+    font normal 0.8rem font-family
     color white
-    font-weight normal
     letter-spacing 0.036rem
 
   ~/_type_event
     background-color color-cyan
+
+    & ^[0]__image
+      background-color color-cyan
 
     & ^[0]__content
       position relative
@@ -63,24 +59,20 @@
       margin-bottom 1.4rem
 
     & ^[0]__day
-      font-size 5.1rem
+      font lighter 5.1rem/4.1rem font-family
       letter-spacing -0.2rem
-      line-height 4.1rem
       color white
-      font-weight lighter
 
     & ^[0]__month
-      font-size 2.1rem
+      font lighter 2.1rem font-family
       color white
       text-transform capitalize
-      font-weight lighter
       margin-left 0.95rem
 
     & ^[0]__title
       margin-bottom 0.35rem
-      font-size 0.9rem
+      font bold 0.9rem font-family
       color white
-      font-weight bold
       text-transform uppercase
       letter-spacing 0.03rem
 
@@ -110,7 +102,7 @@
           margin-bottom 1rem
       & ^[0]__title
           font-size 0.8rem
-          line-height 0.96rem
+          line-height 1.2
       & ^[0]__text
           margin-bottom 0.7rem
 

@@ -8,23 +8,20 @@
     margin 1rem 0
 
   &__day
-    font-size 2rem
-    font-weight lighter
+    font lighter 2rem font-family
 
     @media screen and (max-width: 990px)
       font-size 1.5rem
 
   &__date
-    font-size 3rem
-    font-weight bold
+    font bold 3rem font-family
 
     @media screen and (max-width: 990px)
       font-size 2rem
 
   &__events
     display flex
-    flex-direction row
-    flex-wrap nowrap
+    flex-flow row nowrap
     justify-content space-around
     align-items stretch
     background-color color-bg
@@ -47,8 +44,7 @@
 
   &__time
     color color-text
-    font-size 1.3rem
-    font-weight lighter
+    font lighter 1.3rem font-family
     position absolute
     top 0
     left 50%

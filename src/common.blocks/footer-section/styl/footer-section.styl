@@ -2,8 +2,7 @@
 
 .footer-section
   display flex
-  flex-direction row
-  flex-wrap wrap
+  flex-flow row wrap
   justify-content space-between
   width 100%
   padding 2rem 3rem
@@ -16,8 +15,7 @@
   &__header
     margin-bottom 1rem
     color color-cyan
-    font-size 1.2rem
-    font-weight bold
+    font bold 1.2rem font-family 
 
     @media screen and (max-width: 600px)
       font-size 1rem
@@ -35,12 +33,10 @@
     margin 0 
     padding 0
     list-style none
-    font-size 1rem
-    line-height 1.5rem
+    font normal 1rem/1.5 font-family
 
     @media screen and (max-width: 600px)
-      font-size 0.8rem
-      line-height 1.3rem
+      font normal 0.8rem/1.625 font-family
 
   &__link
     color inherit

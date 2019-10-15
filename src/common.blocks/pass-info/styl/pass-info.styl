@@ -2,7 +2,7 @@
 
 .pass-info
   display flex
-  flex-direction column
+  flex-flow column nowrap
   height 100%
   padding 0.5rem
   text-align center
@@ -22,8 +22,7 @@
   &__name
     text-transform capitalize
     color color-orange
-    font-weight bold
-    font-size 2.5rem
+    font bold 2.5rem font-family
 
     @media screen and (max-width: 768px)
       font-size 1.8rem
@@ -36,8 +35,7 @@
 
   &__price
     margin-bottom 1rem
-    font-weight lighter
-    font-size 2rem
+    font lighter 2rem font-family
     color color-text
 
     @media screen and (max-width: 768px)
@@ -53,6 +51,5 @@
   &__text
     flex-grow 1
     margin-bottom 1rem
-    font-weight lighter
-    font-size 1rem
+    font lighter 1rem font-family
     color color-text

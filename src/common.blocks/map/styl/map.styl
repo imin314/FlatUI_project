@@ -14,8 +14,7 @@
 
   &__footer
     display flex
-    flex-direction row
-    flex-wrap nowrap
+    flex-flow row nowrap
     justify-content space-between
     align-items center
     padding 1rem 4.3% 1.3rem
@@ -27,9 +26,8 @@
 
   &__title
     color white
-    font-size 2.142857142857143rem
     flex auto 0 0
-    font-weight lighter
+    font lighter 2.142857142857143rem font-family
     margin-right 4.7%
 
   &__address
@@ -44,8 +42,7 @@
   &__address-item
     color white
     text-transform uppercase
-    font-size 0.8928571428571429rem
-    font-weight bold
+    font bold 0.8928571428571429rem font-family
 
     &_type_street
       letter-spacing 0.045rem
@@ -56,8 +53,7 @@
   &__icons
     flex-grow 1
     display flex
-    flex-direction row
-    flex-wrap nowrap
+    flex-flow row nowrap
     justify-content flex-end
     align-items center
     padding-top 0.3rem

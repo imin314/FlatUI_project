@@ -6,8 +6,7 @@
 
   &__textarea
     display flex
-    flex-direction row
-    flex-wrap nowrap
+    flex-flow row nowrap
     align-items stretch
     background-color color-bg
     border-radius 0.1648351648351648rem
@@ -16,8 +15,7 @@
   &__label
     width 100%
     padding 0.32967033rem 0.934065934rem 0.384615385rem
-    font-size 1rem
-    font-family ui-font-family
+    font normal 1rem ui-font-family
     letter-spacing 0.010989011rem
     color darken(color-bg, 40.5)
     background inherit
@@ -64,8 +62,7 @@
     margin 0
     padding 0.3rem 0
     background-color color-cyan
-    border-bottom-left-radius 0.2197802197802198rem
-    border-bottom-right-radius 0.2197802197802198rem
+    border-radius 0 0 0.2197802197802198rem 0.2197802197802198rem
 
   &_active ^[0]__list
     display block
@@ -73,8 +70,7 @@
   &__item
     padding 0.32967033rem 0.989010989rem
     margin-bottom 0.21978022rem
-    font-size 1rem
-    font-family ui-font-family
+    font normal 1rem ui-font-family
     letter-spacing 0.010989011rem
     color white
     background-color inherit

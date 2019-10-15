@@ -4,13 +4,12 @@
   &__title
     sectionTitle()
     margin-bottom 3.8rem
-    line-height 1rem
     letter-spacing 0.08rem
 
   &__container
     display flex
     justify-content space-between
-    flex-direction row
+    flex-flow row nowrap
 
     @media screen and (max-width: 700px)
       flex-wrap wrap
@@ -27,8 +26,7 @@
   &__checkboxes
     flex 20.05494505rem 1 2
     display flex
-    flex-wrap wrap
-    flex-direction row
+    flex-flow row wrap
     justify-content space-around
     align-content flex-start
 
