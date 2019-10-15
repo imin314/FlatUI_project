@@ -1,4 +1,3 @@
-include ../common.blocks/loader/loader.pug
 include ../common.blocks/navigation-bar/navigation-bar.pug
 
 doctype html
@@ -17,17 +16,6 @@ html
     meta(name="theme-color" content="#ffffff")
     block title
       title Web Talks 2019
-    script.
-      document.documentElement.style.visibility = 'hidden';
-      window.addEventListener('load', () => {
-        const loaderDOM = document.getElementsByClassName('js-loader')[0];
-        loaderDOM.classList.add('loader_hidden');
-      });
-      document.addEventListener('DOMContentLoaded', () => 
-      {
-        document.documentElement.style.visibility = '';
-      });
   body
-    +loader()
     +navigationBar()
     block content

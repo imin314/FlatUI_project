@@ -1,9 +1,13 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackInjector = require('html-webpack-injector');
 
 module.exports = {
-  entry: './src/main.js',
+  entry: {
+    main: './src/main.js',
+    main_head: './src/templates/js/layout.js',
+  },
   devServer: {
     contentBase: path.resolve(__dirname, 'docs'),
     publicPath: 'http://localhost:8080/',
@@ -11,7 +15,7 @@ module.exports = {
     port: 8080,
   },
   output: {
-    filename: 'main.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'docs'),
   },
   optimization: {
@@ -21,31 +25,38 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './src/pages/index/index.pug',
+      chunks: ["main", "main_head"],
     }),
     new HtmlWebpackPlugin({
       filename: 'uidemo.html',
       template: './src/pages/uidemo/uidemo.pug',
+      chunks: ["main", "main_head"],
     }),
     new HtmlWebpackPlugin({
       filename: 'registration.html',
       template: './src/pages/registration/registration.pug',
+      chunks: ["main", "main_head"],
     }),
     new HtmlWebpackPlugin({
       filename: 'contacts.html',
       template: './src/pages/contacts/contacts.pug',
+      chunks: ["main", "main_head"],
     }),
     new HtmlWebpackPlugin({
       filename: 'speakers.html',
       template: './src/pages/speakers/speakers.pug',
+      chunks: ["main", "main_head"],
     }),
     new HtmlWebpackPlugin({
       filename: 'schedule.html',
       template: './src/pages/schedule/schedule.pug',
+      chunks: ["main", "main_head"],
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
     }),
+    new HtmlWebpackInjector(),
   ],
   module: {
     rules: [
