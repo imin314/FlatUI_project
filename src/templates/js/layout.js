@@ -1,6 +1,6 @@
 document.documentElement.style.visibility = 'hidden';
 
-document.addEventListener('DOMContentLoaded', () => 
+window.addEventListener('load', () => 
   {
     document.documentElement.style.visibility = '';
   }
