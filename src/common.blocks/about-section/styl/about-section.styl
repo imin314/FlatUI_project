@@ -38,27 +38,26 @@
     &:first-of-type
       clearfix()
 
-    & span 
-      display block
-      padding-top 0.9rem
+  &__common-paragraph
+    padding-top 0.9rem
 
-    & a
-      float right
-      margin-top 0.9rem
-      color color-orange
-      text-decoration underline
+  &__video-link
+    float right
+    margin-top 0.9rem
+    color color-orange
+    text-decoration underline
 
-      &:hover
-        @media (hover:hover)
-          text-decoration none
+    &:hover
+      @media (hover:hover)
+        text-decoration none
 
-      &:active
-        @media (hover:hover)
-          text-decoration underline
-          color color-text
+    &:active
+      @media (hover:hover)
+        text-decoration underline
+        color color-text
 
-        @media (hover:none)
-          text-decoration none
+      @media (hover:none)
+        text-decoration none
 
   &__right-col
     flex 21.97802198rem 1 1
