@@ -11,9 +11,17 @@ git clone https://github.com/imin314/FlatUI_project.git
 ```
 npm install
 ```
-Запуск осуществляется с помощью команды:
+Сборка осуществляется с помощью команды:
 ```
-npm start
+npm run build
+```
+Запуск webpack-dev-server:
+```
+npm run start
+```
+Развертывание на GitHub Pages:
+```
+npm run deploy
 ```
 
 ## GitHub Pages
