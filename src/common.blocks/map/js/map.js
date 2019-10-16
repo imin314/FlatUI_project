@@ -1,4 +1,5 @@
 const loadGoogleMapsApi = require('load-google-maps-api');
+const pinImg = require('../img/pins.png');
 
 class Map {
   constructor(domElement, googleMaps) {
