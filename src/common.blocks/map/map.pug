@@ -1,5 +1,3 @@
-include ../pin/pin.pug
-
 mixin map(settings)
   - const {
   -   address: { street = '', city = ''},
@@ -20,5 +18,5 @@ mixin map(settings)
         .map__address-item.map__address-item_type_city= city
       .map__icons
         .map__search.js-map__search(tabindex="0")
-        .map__pin.js-map__pin(tabindex="0")
-          +pin({ mainColor: 'white', backColor: 'transparent' })
+        .map__pin.js-map__pin
+          .map__pin-circle

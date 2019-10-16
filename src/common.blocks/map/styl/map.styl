@@ -35,7 +35,7 @@
     padding-top 0.3rem
     text-align left
 
-    @media screen and (max-width: 450px)
+    @media screen and (max-width: 600px)
       order 2
       flex-basis 100%
 
@@ -51,14 +51,14 @@
       letter-spacing 0.03rem
 
   &__icons
+    padding-top 0.3rem
     flex-grow 1
     display flex
     flex-flow row nowrap
     justify-content flex-end
     align-items center
-    padding-top 0.3rem
 
-    @media screen and (max-width: 450px)
+    @media screen and (max-width: 600px)
       order 1
       flex 4.395604396rem 1 1
 
@@ -74,7 +74,7 @@
     outline none
     noselect()
 
-    @media screen and (max-width: 450px)
+    @media screen and (max-width: 600px)
       margin-right 1rem
 
     &::before
@@ -142,11 +142,35 @@
         transform translate(-50%,-18%) scale(1.1)
 
   &__pin
-    flex 0 0 1.208791208791209rem
-    align-self stretch
+    position relative
+    align-self flex-start
+    flex 0 0 1.099rem
+    height 1.649rem
     cursor pointer
     outline none
     noselect()
+
+    &::before
+      content ''
+      display block
+      position absolute
+      top 0.55rem
+      left 0
+      width 0.55rem
+      height 1.099rem
+      background radial-gradient(2.198rem 2.418rem at 1.099rem 0, white 50%, transparent 50%)
+      z-index 1
+    
+    &::after
+      content ''
+      display block
+      position absolute
+      top 0.55rem
+      right 0
+      width 0.55rem
+      height 1.099rem
+      background radial-gradient(2.198rem 2.418rem at -0.55rem 0, white 50%, transparent 50%)
+      z-index 1
 
     &:hover
       @media (hover:hover)
@@ -161,3 +185,12 @@
         
     &:focus
       transform scale(1.1)
+    
+  &__pin-circle
+    position relative
+    width 1.099rem
+    height @width
+    border 0.33rem solid white
+    border-radius 50%
+    background color-orange
+    z-index 2
