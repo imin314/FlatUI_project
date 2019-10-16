@@ -1,5 +1,3 @@
-include ../social-icon/social-icon.pug
-
 mixin profileCard(profile, settings)
   - const {
   -   img: profileImg,
@@ -11,8 +9,6 @@ mixin profileCard(profile, settings)
   - const { color='' } = options;
   - const image = require(`../../assets/img/${profileImg}`);
   - const colorModifiers = { cyan: 'profile-card_color_cyan' };
-  - const isColorCyan = (color.search(/\bcyan\b/) !== -1);
-  - const iconColor = isColorCyan ? 'white' : '';
   - let className = 'profile-card';
   - if (color in colorModifiers) className += ` ${colorModifiers[color]}`;
   div(class = className)
@@ -23,11 +19,11 @@ mixin profileCard(profile, settings)
       .profile-card__icons
         - for (let key in links)
           a.profile-card__icon(
+            class = `profile-card__icon_for-${key}`
             href=links[key]
             title!=key
             target="blank"
             rel="noopener noreferrer"
             tabindex="-1"
           )
-            +socialIcon({ name: key, color: iconColor })
     

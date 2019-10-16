@@ -104,7 +104,7 @@ module.exports = {
       },
       {
         test: /\.(ttf|svg|eot|woff)$/,
-        exclude: [/img/, /favicons/],
+        exclude: [/common.blocks/, /img/, /favicons/],
         use: [
           { 
             loader: 'file-loader',
@@ -130,7 +130,7 @@ module.exports = {
       },
       {
         test: /\.(svg|png|ico|xml)$/,
-        exclude: [/img/, /fonts/],
+        exclude: [/common.blocks/, /img/, /fonts/],
         use: [
           { 
             loader: 'file-loader',

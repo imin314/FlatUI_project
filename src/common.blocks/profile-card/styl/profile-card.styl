@@ -53,12 +53,37 @@
   &__icons
     display flex
     justify-content space-around
+    align-items center
     max-width 8.791208791rem
     margin 0 auto
 
   &__icon
-    height 1.648351648351648rem
+    flex 1.6rem 0 0
+    height 1.9rem
+    background color-text-darker
     noselect()
+
+    &:hover
+      @media (hover: hover)
+        background color-orange
+    
+    &:active
+    &:focus
+      background color-orange
+  
+  &__icon_for-facebook
+    height 1.6rem
+    mask url('../img/facebook.svg') center no-repeat
+    mask-size contain
+
+  &__icon_for-twitter
+    mask url('../img/twitter.svg') center no-repeat
+    mask-size contain
+    flex-basis 1.9rem
+
+  &__icon_for-dribbble
+    mask url('../img/dribbble.svg') center no-repeat
+    mask-size contain
 
   &_color_cyan
     & ^[0]__box
@@ -67,8 +92,22 @@
       &::before
         background-color color-cyan
         
-      & *
-        color white
+    & ^[0]__name
+      color white
+
+    & ^[0]__position
+      color white
+
+    & ^[0]__icon
+      background-color white
+
+      &:hover
+        @media (hover: hover)
+          opacity 0.8
+      
+      &:active
+      &:focus
+        opacity 0.8
 
 
   
