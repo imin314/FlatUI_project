@@ -1,11 +1,12 @@
 mixin passInfo(passData)
-  - const {
-  -  name = '',
-  -  price ='',
-  -  description = '',
-  -  tickboxValue = '',
-  -  checked = false
-  - } = passData
+  -
+    const {
+     name = '',
+     price ='',
+     description = '',
+     tickboxValue = '',
+     checked = false
+    } = passData
   section.pass-info
     header.pass-info__header
       h3.pass-info__name= name

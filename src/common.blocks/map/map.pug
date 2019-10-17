@@ -1,9 +1,10 @@
 mixin map(settings)
-  - const {
-  -   address: { street = '', city = ''},
-  -   mapCenter: { lat: mapLat = 26.893505, lng: mapLng = 80.967422 },
-  -   pinCenter: { lat: pinLat = 26.893505, lng: pinLng = 80.967422 }
-  - } = settings;
+  -
+    const {
+      address: { street = '', city = ''},
+      mapCenter: { lat: mapLat = 26.893505, lng: mapLng = 80.967422 },
+      pinCenter: { lat: pinLat = 26.893505, lng: pinLng = 80.967422 }
+    } = settings;
   section.map.js-map
     .map__container.js-map__container(
       data-lat= mapLat

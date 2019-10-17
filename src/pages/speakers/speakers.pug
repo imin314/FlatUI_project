@@ -1,4 +1,3 @@
-//- speakers.pug
 extends ../../templates/layout.pug
 
 include ../../common.blocks/search-box/search-box.pug
@@ -9,8 +8,9 @@ block title
   title Speakers
 
 block content
-  - const data = require('../../assets/data/data.json');
-  - const { speakers } = data;
+  -
+    const data = require('../../assets/data/data.json');
+    const { speakers } = data;
   .speakers.js-speakers
     main.speakers__main
       header.speakers__header

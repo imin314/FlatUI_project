@@ -1,9 +1,10 @@
 mixin validationInput(settings)
-  - const {
-  -  type: typeAttr = 'text',
-  -  name: nameAttr = '',
-  -  placeholder: placeholderAttr = '',
-  - } = settings;
+  -
+    const {
+     type: typeAttr = 'text',
+     name: nameAttr = '',
+     placeholder: placeholderAttr = '',
+    } = settings;
   label.validation-input.js-validation-input
     input.validation-input__input.js-validation-input__input(
       type=typeAttr

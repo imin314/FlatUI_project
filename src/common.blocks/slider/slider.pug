@@ -1,12 +1,13 @@
 mixin slider(settings)
-  - const options = settings || {};
-  - const { type: sliderType = '' } = options; 
-  - const typeModifiers = {
-  -   tip: 'slider_type_tip js-slider_type_tip',
-  -   scale: 'slider_type_scale js-slider_type_scale',
-  - };
-  - let className = 'slider js-slider';
-  - if (sliderType in typeModifiers) className += ` ${typeModifiers[sliderType]}`; 
+  -
+    const options = settings || {};
+    const { type: sliderType = '' } = options; 
+    const typeModifiers = {
+      tip: 'slider_type_tip js-slider_type_tip',
+      scale: 'slider_type_scale js-slider_type_scale',
+    };
+    let className = 'slider js-slider';
+    if (sliderType in typeModifiers) className += ` ${typeModifiers[sliderType]}`; 
   div(class= className)
     .slider__container.js-slider__container
       - if (sliderType === 'tip')

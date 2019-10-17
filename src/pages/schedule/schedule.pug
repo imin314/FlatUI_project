@@ -1,4 +1,3 @@
-//- schedule.pug
 extends ../../templates/layout.pug
 
 include ../../common.blocks/talks-section/talks-section.pug
@@ -8,8 +7,9 @@ block title
   title Schedule
 
 block content
-  - const data = require('../../assets/data/data.json');
-  - const { talks } = data;
+  -
+    const data = require('../../assets/data/data.json');
+    const { talks } = data;
   .schedule
     main.schedule__main
       h1.schedule__title Schedule

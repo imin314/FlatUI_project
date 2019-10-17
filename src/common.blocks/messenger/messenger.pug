@@ -1,8 +1,9 @@
 include ../button/button.pug
 
 mixin messenger(msgData)
-  - const { image, name, inbox, outbox } = msgData;
-  - const bgImage = require(`../../assets/img/${image}`);
+  -
+    const { image, name, inbox, outbox } = msgData;
+    const bgImage = require(`../../assets/img/${image}`);
   .messenger
     header.messenger__header
       .messenger__name= name
