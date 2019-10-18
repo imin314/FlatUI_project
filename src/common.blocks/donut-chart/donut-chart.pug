@@ -1,9 +1,20 @@
 ﻿mixin donutChart(settings)
   -
     const { type: chartType, values, colors } = settings;
-    const typeModifiers = { percentage: 'donut-chart_type_percentage' };
+    const typeModifiers = { 
+      percentage: 'donut-chart_type_percentage',
+      pie: 'donut-chart_type_pie',
+    };
+    const colorModifiers = {
+      transparent: 'donut-chart_color_transparent',
+    }
     let className = 'donut-chart js-donut-chart';
-    if (chartType in typeModifiers) className += ` ${typeModifiers[chartType]}`;
-  div(class=className data-values=values data-colors=colors)
+    if (chartType in typeModifiers) {
+      className += ` ${typeModifiers[chartType]}`;
+    }
+    if (values === '0') {
+      className += ` ${colorModifiers.transparent}`;
+    }
+  div(class=className data-values=values)
     - if (chartType === 'percentage')
-      .donut-chart__label.js-donut-chart__label
+      .donut-chart__label.js-donut-chart__label= values[0]

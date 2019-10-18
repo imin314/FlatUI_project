@@ -1,77 +1,81 @@
 class DonutChart {
   constructor(domElement) {
-    this.domElement = domElement;
-    this.values = this._getValues();
-    this.colors = this._getColors();
+    this.$domElement = $(domElement);
     this._initialize();
   }
 
-  _getValues() {
-    const values = $(this.domElement).data('values');
-    if (typeof values === 'number') return [values];
-    return values.split(',');
-  }
-
-  _getColors() {
-    return $(this.domElement).data('colors').split(',');
-  }
-
   _initialize() {
-    this._drawDonut();
+    this.values = this._getValues();
+
+    this._initDonutCircle();
+    this._drawSegments();
+
+    this.$domElement.append(this.$svg);
+    this._setViewBox();
   }
 
-  _drawDonut() {
-    const radius = 15.91549430918954;
-    const $donut = $(this.domElement);
-    const { values, colors } = this;
+  _getValues() {
+    const values = this.$domElement.data('values');
+    if (typeof values === 'number') return [values];
+    return values.split(/,\s*/);
+  }
 
-    let backgroundColor = '#e5e5e5';
-    if (values[0] === 0 && values.length === 1) {
-      backgroundColor = 'transparent';
-    }
+  _initDonutCircle() {
+    this.$svg = DonutChart.$s('svg').attr({ class: 'donut-chart__chart-container' });
+    this.$ring = DonutChart.$createSVGCircle({ class: 'donut-chart__ring' });
+    this.$svg.append(this.$ring);
+  }
 
-    const $svg = DonutChart.$s('svg').attr({ width: '100%', height: '100%' });
-    const $circle = DonutChart.$s('circle').attr({
-      cx: radius, cy: radius, r: radius, fill: 'transparent', stroke: backgroundColor,
-    });
-    $svg.append($circle);
-
+  _drawSegments() {
     let offset = 0;
-    const dashoffset0 = 25;
-
-    values.forEach((value, i) => {
-      const $segment = DonutChart.$s('circle').attr({
-        cx: radius, cy: radius, r: radius, fill: 'transparent', stroke: colors[i],
-      });
-      const dashoffset = 100 - offset + dashoffset0;
-
-      $segment.attr('stroke-dasharray', `${value} ${100 - value}`);
-      if (i === 0) {
-        $segment.attr('stroke-dashoffset', dashoffset0);
-      } else {
-        $segment.attr('stroke-dashoffset', dashoffset);
-      }
-      $svg.append($segment);
+    this.values.forEach((value, i) => {
+      const $segment = DonutChart.$createSVGSegment({ value, i, offset });
+      this.$svg.append($segment);
       offset += Number(value);
     });
+  }
 
-    $donut.append($svg);
-
-    const strokeWidth = parseFloat($donut.find('circle').css('stroke-width'));
+  _setViewBox() {
+    const strokeWidth = parseFloat(this.$ring.css('stroke-width'));
     const viewBoxTop = 0 - (strokeWidth / 2);
-    const viewBoxBottom = radius * 2 + strokeWidth;
+    const viewBoxBottom = DonutChart.radius * 2 + strokeWidth;
     const viewBoxValue = `${viewBoxTop} ${viewBoxTop} ${viewBoxBottom} ${viewBoxBottom}`;
-    $svg.attr({ viewBox: viewBoxValue });
-
-    const $label = $donut.find('.js-donut-chart__label');
-    if ($label.length > 0) {
-      $label.text(values[0]);
-    }
+    this.$svg.attr({ viewBox: viewBoxValue });
   }
 
   // creates svg element, returned as jQuery object
   static $s(elem) {
     return $(document.createElementNS('http://www.w3.org/2000/svg', elem));
+  }
+
+  static get radius() {
+    // radius = C/(2*pi), where C is circle length assumed to equal 100
+    return 15.91549430918954;
+  }
+
+  static $createSVGCircle(attributes) {
+    const defaultAttributes = {
+      cx: DonutChart.radius,
+      cy: DonutChart.radius,
+      r: DonutChart.radius,
+    };
+    return DonutChart.$s('circle').attr({ ...defaultAttributes, ...attributes });
+  }
+
+  static $createSVGSegment(data) {
+    /**
+     * dashoffsetInitial rotates offset 25% counter clockwise,
+     * because stroke-dasharray starts not at top (12:00), but at right (3:00)
+     */
+    const { value, i, offset } = data;
+    const dashoffsetInitial = 25;
+    const dashoffset = i === 0 ? dashoffsetInitial : (100 - offset + dashoffsetInitial);
+    const $segment = DonutChart.$createSVGCircle({ class: 'donut-chart__segment' });
+
+    $segment.attr('stroke-dasharray', `${value} ${100 - value}`);
+    $segment.attr('stroke-dashoffset', dashoffset);
+
+    return $segment;
   }
 }
 
