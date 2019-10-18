@@ -24,4 +24,4 @@ class EmailForm {
   }
 }
 
-$('.js-email-form').each((i, element) => new EmailForm(element));
+export default EmailForm;

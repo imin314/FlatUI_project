@@ -22,9 +22,9 @@ class Button {
 
   _handleEnterPress(event) {
     if (event.which === 13) {
-      this.$button.click()
+      this.$button.click();
     }
   }
 }
 
-$('.js-button').each((i, element) => new Button(element));
+export default Button;

@@ -14,4 +14,4 @@ class NewsCard {
   }
 }
 
-$('.js-news-card').each((i, element) => new NewsCard(element));
+export default NewsCard;

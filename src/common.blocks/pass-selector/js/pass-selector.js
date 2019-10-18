@@ -20,4 +20,4 @@ class PassSelector {
   }
 }
 
-$('.js-pass-selector').each((i, element) => new PassSelector(element));
+export default PassSelector;

@@ -129,4 +129,4 @@ class SpeakerCarousel {
   }
 }
 
-$('.js-speaker-carousel').each((i, element) => new SpeakerCarousel(element));
+export default SpeakerCarousel;

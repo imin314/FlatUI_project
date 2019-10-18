@@ -15,4 +15,4 @@ class SpeakerCard {
   }
 }
 
-$('.js-speaker-card').each((i, element) => new SpeakerCard(element));
+export default SpeakerCard;

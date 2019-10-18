@@ -27,4 +27,4 @@ class TickBox {
   }
 }
 
-$('.js-tick-box').each((i, element) => new TickBox(element));
+export default TickBox;

@@ -42,4 +42,4 @@ class EventCarousel {
   }
 }
 
-$('.js-event-carousel').each((i, element) => new EventCarousel(element));
+export default EventCarousel;

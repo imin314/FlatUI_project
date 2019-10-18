@@ -58,4 +58,4 @@ class SearchBox {
   }
 }
 
-$('.js-search-box').each((i, element) => new SearchBox(element));
+export default SearchBox;

@@ -1,0 +1,19 @@
+{
+  "extends": ["airbnb"],
+  "globals": {
+    "window": true,
+    "document": true
+  },
+  "env": {
+    "commonjs": true,
+    "node": true,
+	  "jquery": true
+  },
+  "rules": {
+    "no-underscore-dangle": [1, { "allowAfterThis": true }],
+    "no-undef": "warn",
+    "no-unused-vars": "warn",
+    "arrow-parens": "warn",
+    "class-methods-use-this": "warn"
+  }
+}

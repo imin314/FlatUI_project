@@ -23,8 +23,7 @@ class DonutChart {
   _drawDonut() {
     const radius = 15.91549430918954;
     const $donut = $(this.domElement);
-    const values = this.values;
-    const colors = this.colors;
+    const { values, colors } = this;
 
     let backgroundColor = '#e5e5e5';
     if (values[0] === 0 && values.length === 1) {
@@ -76,4 +75,4 @@ class DonutChart {
   }
 }
 
-$('.donut-chart').each((i, element) => new DonutChart(element));
+export default DonutChart;

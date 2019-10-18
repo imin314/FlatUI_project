@@ -1,4 +1,5 @@
 import 'jquery-validation';
+import { regExpLiteral } from 'babel-types';
 
 class RegistrationForm {
   constructor(domElement) {
@@ -73,4 +74,4 @@ class RegistrationForm {
   }
 }
 
-$('.js-registration-form').each((i, element) => new RegistrationForm(element));
+export default RegistrationForm;

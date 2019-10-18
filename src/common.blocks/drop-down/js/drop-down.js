@@ -34,7 +34,8 @@ class DropDown {
       $(event.target).click();
       return false;
     }
+    return true;
   }
 }
 
-$('.js-drop-down').each((i, element) => new DropDown(element));
+export default DropDown;

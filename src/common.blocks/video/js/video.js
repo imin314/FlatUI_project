@@ -27,4 +27,4 @@ class Video {
   }
 }
 
-$('.js-video').each((i, element) => new Video(element));
+export default Video;

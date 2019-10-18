@@ -1,5 +1,5 @@
 import 'jquery-ui/ui/widgets/slider';
- 
+
 require('jquery-ui-touch-punch');
 
 class Slider {
@@ -23,7 +23,7 @@ class Slider {
 
   _generateSliderSettings() {
     let typeSettings = {};
-    let settings = {
+    const settings = {
       min: 0,
       max: 100,
       classes: {
@@ -40,8 +40,7 @@ class Slider {
         start: () => { this.$tip.addClass('slider__tip_visible'); },
         stop: () => { this.$tip.removeClass('slider__tip_visible'); },
       };
-      }
-    else if (this.$slider.hasClass('js-slider_type_scale')) {
+    } else if (this.$slider.hasClass('js-slider_type_scale')) {
       typeSettings = {
         value: 75,
         step: 25,
@@ -55,8 +54,8 @@ class Slider {
   _updateTip(value) {
     this.$tip
       .text(value)
-      .css('left', `${value}%`);  
+      .css('left', `${value}%`);
   }
 }
 
-$('.js-slider').each((i, element) => new Slider(element));
+export default Slider;

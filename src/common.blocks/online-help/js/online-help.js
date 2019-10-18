@@ -18,4 +18,4 @@ class OnlineHelp {
   }
 }
 
-$('.js-online-help').each((i, element) => new OnlineHelp(element));
+export default OnlineHelp;

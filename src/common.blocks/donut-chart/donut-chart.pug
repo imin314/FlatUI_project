@@ -2,7 +2,7 @@
   -
     const { type: chartType, values, colors } = settings;
     const typeModifiers = { percentage: 'donut-chart_type_percentage' };
-    let className = 'donut-chart';
+    let className = 'donut-chart js-donut-chart';
     if (chartType in typeModifiers) className += ` ${typeModifiers[chartType]}`;
   div(class=className data-values=values data-colors=colors)
     - if (chartType === 'percentage')

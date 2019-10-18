@@ -27,4 +27,4 @@ class ToggleSwitch {
   }
 }
 
-$('.js-toggle-switch').each((i, element) => new ToggleSwitch(element));
+export default ToggleSwitch;

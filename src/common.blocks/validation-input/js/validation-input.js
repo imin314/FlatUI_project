@@ -43,4 +43,4 @@ class ValidationInput {
   }
 }
 
-$('.js-validation-input').each((i, element) => new ValidationInput(element));
+export default ValidationInput;

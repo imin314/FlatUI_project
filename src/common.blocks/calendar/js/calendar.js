@@ -8,10 +8,10 @@ class Calendar {
   _initialize(domElement) {
     $(document).ready(() => {
       this.$calendar = $(domElement);
- 
+
       const settings = this._generateCalendarSettings();
       this.$calendar.datepicker(settings);
-      
+
       this
         ._prependDayContainer()
         ._appendButtonPane()
@@ -25,7 +25,7 @@ class Calendar {
       prevText: '',
       nextText: '',
       showOtherMonths: true,
-      dayNamesMin: [ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" ],
+      dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
       onChangeMonthYear: (y, m, inst) => this._handleMonthChange(y, m, inst),
       onSelect: (date) => this._updateDayText(date),
     };
@@ -41,7 +41,7 @@ class Calendar {
       disabled: 'disabled',
     });
     $dayContainer.prepend(this.$dayText);
-    
+
     this.$calendar.prepend($dayContainer);
 
     return this;
@@ -91,4 +91,4 @@ class Calendar {
   }
 }
 
-$('.js-calendar').each((i, element) => new Calendar(element));
+export default Calendar;

@@ -43,4 +43,4 @@ class ArrowButton {
   }
 }
 
-$('.js-arrow-button').each((i, element) => new ArrowButton(element));
+export default ArrowButton;
