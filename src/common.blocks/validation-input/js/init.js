@@ -1,3 +1,7 @@
 import ValidationInput from './ValidationInput';
 
-$('.js-validation-input').each((i, element) => new ValidationInput(element));
+const initValidationInputs = function createInstances() {
+  $('.js-validation-input').each((i, element) => new ValidationInput(element));
+};
+
+$(document).ready(initValidationInputs);

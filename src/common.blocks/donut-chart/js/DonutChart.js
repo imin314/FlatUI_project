@@ -3,7 +3,7 @@ class DonutChart {
     this.domElement = domElement;
     this.values = this._getValues();
     this.colors = this._getColors();
-    $(document).ready(this._initialize.bind(this));
+    this._initialize();
   }
 
   _getValues() {

@@ -13,7 +13,7 @@ class EventCarousel {
     this.$calendar = $domElement.find('.js-event-carousel__calendar');
 
     this.$cards
-      .on('click.event-carousel', event => this._handleButtonClick(event))
+      .on('click.event-carousel', this._handleButtonClick.bind(this))
       .mCustomScrollbar({
         axis: 'x',
         theme: 'dark-thin',
@@ -29,7 +29,7 @@ class EventCarousel {
     const $target = $(event.target);
     if ($target.hasClass('js-button')) {
       this.$calendarOverlay.addClass('event-carousel__calendar-overlay_visible');
-      $(document).on('click.event-carousel', e => this._handleDocumentClick(e));
+      $(document).on('click.event-carousel', this._handleDocumentClick.bind(this));
       return false;
     }
   }

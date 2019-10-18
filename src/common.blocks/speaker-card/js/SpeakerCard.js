@@ -8,7 +8,7 @@ class SpeakerCard {
 
   _initialize(domElement) {
     this.$text = $(domElement).find('.js-speaker-card__text');
-    $(window).on('load.speakercard', () => this._addScrollBar());
+    this._addScrollBar();
   }
 
   _addScrollBar() {

@@ -1,3 +1,7 @@
 import PassSelector from './PassSelector';
 
-$('.js-pass-selector').each((i, element) => new PassSelector(element));
+const initPassSelectors = function createInstances() {
+  $('.js-pass-selector').each((i, element) => new PassSelector(element));
+};
+
+$(document).ready(initPassSelectors);

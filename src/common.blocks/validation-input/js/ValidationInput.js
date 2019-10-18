@@ -16,8 +16,8 @@ class ValidationInput {
     };
 
     this.$input
-      .on('blur.validation', () => this._handleInputBlur())
-      .on('focus.validation', () => this._handleInputFocus());
+      .on('blur.validation', this._handleInputBlur.bind(this))
+      .on('focus.validation', this._handleInputFocus.bind(this));
   }
 
   _handleInputBlur() {

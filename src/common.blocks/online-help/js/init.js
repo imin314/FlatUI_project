@@ -1,3 +1,7 @@
 import OnlineHelp from './OnlineHelp';
 
-$('.js-online-help').each((i, element) => new OnlineHelp(element));
+const initOnlineHelp = function createInstances() {
+  $('.js-online-help').each((i, element) => new OnlineHelp(element));
+};
+
+$(document).ready(initOnlineHelp);

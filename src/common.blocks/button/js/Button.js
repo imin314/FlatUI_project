@@ -2,7 +2,7 @@ import 'legit-ripple/dist/ripple.min';
 
 class Button {
   constructor(domElement) {
-    $(document).ready(this._initialize.bind(this, domElement));
+    this._initialize(domElement);
   }
 
   _initialize(domElement) {

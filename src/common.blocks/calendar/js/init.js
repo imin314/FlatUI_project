@@ -1,3 +1,7 @@
 import Calendar from './Calendar';
 
-$('.js-calendar').each((i, element) => new Calendar(element));
+const initCalendars = function createInstances() {
+  $('.js-calendar').each((i, element) => new Calendar(element));
+};
+
+$(document).ready(initCalendars);

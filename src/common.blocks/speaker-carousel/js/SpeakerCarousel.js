@@ -17,19 +17,17 @@ class SpeakerCarousel {
   }
 
   _initialize(domElement) {
-    $(document).ready(() => {
-      this._findElements(domElement);
-      this._addCustomScrollBar();
-      this.$scrollBarContainer = this.$cards.find('.mCSB_container');
-      this.windowIsSmall = false;
+    this._findElements(domElement);
+    this._addCustomScrollBar();
+    this.$scrollBarContainer = this.$cards.find('.mCSB_container');
+    this.windowIsSmall = false;
 
-      const mediaQuery = window.matchMedia('(max-width: 500px)');
-      const handleWidthChange = this._updatePageView.bind(this);
-      mediaQuery.addListener(handleWidthChange);
+    const mediaQuery = window.matchMedia('(max-width: 500px)');
+    const handleWidthChange = this._updatePageView.bind(this);
+    mediaQuery.addListener(handleWidthChange);
 
-      this._updatePageView(mediaQuery);
-      this._addEventListeners();
-    });
+    this._updatePageView(mediaQuery);
+    this._addEventListeners();
   }
 
   _addCustomScrollBar() {
@@ -90,9 +88,9 @@ class SpeakerCarousel {
   }
 
   _addEventListeners() {
-    this.$rightButton.on('click.speakers', () => this._handleRightButtonClick());
-    this.$leftButton.on('click.speakers', () => this._handleLeftButtonClick());
-    this.$viewAllLink.on('click.speakers', () => this._handleViewAllClick());
+    this.$rightButton.on('click.speakers', this._handleRightButtonClick.bind(this));
+    this.$leftButton.on('click.speakers', this._handleLeftButtonClick.bind(this));
+    this.$viewAllLink.on('click.speakers', this._handleViewAllClick.bind(this));
   }
 
   _handleRightButtonClick() {

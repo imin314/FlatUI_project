@@ -2,7 +2,7 @@ import 'jquery-ui/ui/widgets/datepicker';
 
 class Calendar {
   constructor(domElement) {
-    $(document).ready(this._initialize.bind(this, domElement));
+    this._initialize(domElement);
   }
 
   _initialize(domElement) {

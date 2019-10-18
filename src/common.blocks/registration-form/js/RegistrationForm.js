@@ -1,5 +1,4 @@
 import 'jquery-validation';
-import { regExpLiteral } from 'babel-types';
 
 class RegistrationForm {
   constructor(domElement) {
@@ -7,14 +6,12 @@ class RegistrationForm {
   }
 
   _initialize(domElement) {
-    $(document).ready(() => {
-      this._findElements(domElement);
-      this._addFormValidation();
+    this._findElements(domElement);
+    this._addFormValidation();
 
-      this.$inputs.on('change.registration-form', e => this._handleInputChange(e));
-      $(window).on('scroll.registration-form', e => this._handleWindowScroll(e));
-      this.$button.on('click.registration-form', () => this.$form.submit());
-    });
+    this.$inputs.on('change.registration-form', this._handleInputChange.bind(this));
+    $(window).on('scroll.registration-form', this._handleWindowScroll.bind(this));
+    this.$button.on('click.registration-form', this._handleRegisterButtonClick.bind(this));
   }
 
   _findElements(domElement) {
@@ -71,6 +68,10 @@ class RegistrationForm {
     } else {
       this.$header.removeAttr('style');
     }
+  }
+
+  _handleRegisterButtonClick() {
+    this.$form.submit();
   }
 }
 

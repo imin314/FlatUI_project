@@ -6,21 +6,19 @@ class EmailForm {
   }
 
   _initialize(domElement) {
-    $(document).ready(() => {
-      const $form = $(domElement);
-      $form.validate({
-        rules: {
-          name: 'required',
-          email: {
-            required: true,
-            email: true,
-          },
+    const $form = $(domElement);
+    $form.validate({
+      rules: {
+        name: 'required',
+        email: {
+          required: true,
+          email: true,
         },
-        errorPlacement() {},
-      });
-      const $button = $form.find('.js-email-form__button');
-      $button.on('click.email-form', () => $form.submit());
+      },
+      errorPlacement() {},
     });
+    const $button = $form.find('.js-email-form__button');
+    $button.on('click.email-form', $form.submit());
   }
 }
 

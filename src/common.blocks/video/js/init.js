@@ -1,3 +1,7 @@
 import Video from './Video';
 
-$('.js-video').each((i, element) => new Video(element));
+const initVideos = function createInstances() {
+  $('.js-video').each((i, element) => new Video(element));
+};
+
+$(document).ready(initVideos);

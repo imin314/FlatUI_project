@@ -12,16 +12,14 @@ class SearchBox {
   }
 
   _initialize() {
-    $(document).ready(() => {
-      this.$searchbox
-        .on('click.searchbox', e => this._handleSearchBoxClick(e))
-        .on('keypress.searchbox', e => this._handleSearchBoxKeypress(e));
-      this.$input.on('focus.searchbox', () => this._handleInputFocus());
+    this.$searchbox
+      .on('click.searchbox', this._handleSearchBoxClick.bind(this))
+      .on('keypress.searchbox', this._handleSearchBoxKeypress.bind(this));
+    this.$input.on('focus.searchbox', this._handleInputFocus.bind(this));
 
-      if (this.$searchbox.hasClass('search-box_filled')) {
-        this._handleButtonClick();
-      }
-    });
+    if (this.$searchbox.hasClass('search-box_filled')) {
+      this._handleButtonClick();
+    }
   }
 
   _handleSearchBoxClick(event) {

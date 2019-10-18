@@ -1,3 +1,7 @@
 import Slider from './Slider';
 
-$('.js-slider').each((i, element) => new Slider(element));
+const initSliders = function createInstances() {
+  $('.js-slider').each((i, element) => new Slider(element));
+};
+
+$(document).ready(initSliders);

@@ -8,11 +8,9 @@ class Slider {
   }
 
   _initialize(domElement) {
-    $(document).ready(() => {
-      this._findElements(domElement);
-      const settings = this._generateSliderSettings();
-      this.$sliderContainer.slider(settings);
-    });
+    this._findElements(domElement);
+    const settings = this._generateSliderSettings();
+    this.$sliderContainer.slider(settings);
   }
 
   _findElements(domElement) {

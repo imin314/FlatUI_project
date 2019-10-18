@@ -4,15 +4,13 @@ class TickBox {
   }
 
   _initialize(domElement) {
-    $(document).ready(() => {
-      const $domElement = $(domElement);
-      this.$tickbox = $domElement;
-      this.$input = $domElement.find('.js-tick-box__input');
-      this.$checkmark = $domElement.find('.js-tick-box__checkmark');
-      this.$tickbox
-        .on('keypress.tickbox', e => this._handleEnterPress(e))
-        .on('click.tickbox', () => this._removeFocus());
-    });
+    const $domElement = $(domElement);
+    this.$tickbox = $domElement;
+    this.$input = $domElement.find('.js-tick-box__input');
+    this.$checkmark = $domElement.find('.js-tick-box__checkmark');
+    this.$tickbox
+      .on('keypress.tickbox', this._handleEnterPress.bind(this))
+      .on('click.tickbox', this._removeFocus.bind(this));
   }
 
   _handleEnterPress(event) {

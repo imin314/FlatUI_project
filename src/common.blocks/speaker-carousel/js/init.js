@@ -1,3 +1,7 @@
 import SpeakerCarousel from './SpeakerCarousel';
 
-$('.js-speaker-carousel').each((i, element) => new SpeakerCarousel(element));
+const initSpeakerCarousels = function createInstances() {
+  $('.js-speaker-carousel').each((i, element) => new SpeakerCarousel(element));
+};
+
+$(document).ready(initSpeakerCarousels);

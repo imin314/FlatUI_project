@@ -1,3 +1,7 @@
 import SpeakerCard from './SpeakerCard';
 
-$('.js-speaker-card').each((i, element) => new SpeakerCard(element));
+const initSpeakerCards = function createInstances() {
+  $('.js-speaker-card').each((i, element) => new SpeakerCard(element));
+};
+
+$(document).ready(initSpeakerCards);

@@ -4,15 +4,13 @@ class ToggleSwitch {
   }
 
   _initialize(domElement) {
-    $(document).ready(() => {
-      const $domElement = $(domElement);
-      this.$toggle = $domElement;
-      this.$input = $domElement.find('.js-toggle-switch__checkbox');
-      this.$slider = $domElement.find('.js-toggle-switch__slider');
-      this.$toggle
-        .on('keypress.toggle', e => this._handleEnterPress(e))
-        .on('click.toggle', () => this._removeFocus());
-    });
+    const $domElement = $(domElement);
+    this.$toggle = $domElement;
+    this.$input = $domElement.find('.js-toggle-switch__checkbox');
+    this.$slider = $domElement.find('.js-toggle-switch__slider');
+    this.$toggle
+      .on('keypress.toggle', this._handleEnterPress.bind(this))
+      .on('click.toggle', this._removeFocus.bind(this));
   }
 
   _handleEnterPress(event) {

@@ -1,3 +1,7 @@
 import DonutChart from './DonutChart';
 
-$('.js-donut-chart').each((i, element) => new DonutChart(element));
+const initDonutCharts = function createInstances() {
+  $('.js-donut-chart').each((i, element) => new DonutChart(element));
+};
+
+$(document).ready(initDonutCharts);

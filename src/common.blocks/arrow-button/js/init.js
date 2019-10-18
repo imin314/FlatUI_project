@@ -1,3 +1,7 @@
 import ArrowButton from './ArrowButton';
 
-$('.js-arrow-button').each((i, element) => new ArrowButton(element));
+const initArrowButtons = function createInstances() {
+  $('.js-arrow-button').each((i, element) => new ArrowButton(element));
+};
+
+$(document).ready(initArrowButtons);

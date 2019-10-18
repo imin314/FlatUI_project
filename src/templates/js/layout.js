@@ -1,7 +1,7 @@
 document.documentElement.style.visibility = 'hidden';
 
-window.addEventListener('load', () => 
-  {
-    document.documentElement.style.visibility = '';
-  }
-);
+const showDocument = function unhideHTMLContent() {
+  document.documentElement.style.visibility = '';
+};
+
+window.addEventListener('load', showDocument);

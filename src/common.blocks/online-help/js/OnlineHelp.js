@@ -5,12 +5,10 @@ class OnlineHelp {
   }
 
   _initialize() {
-    $(document).ready(() => {
-      const $container = this.$domElement;
-      const $button = $container.find('.js-online-help__button');
-      this.$messenger = $container.find('.js-online-help__messenger');
-      $button.click(() => this._handleButtonClick());
-    });
+    const $container = this.$domElement;
+    const $button = $container.find('.js-online-help__button');
+    this.$messenger = $container.find('.js-online-help__messenger');
+    $button.on('click.messenger', this._handleButtonClick.bind(this));
   }
 
   _handleButtonClick() {

@@ -1,3 +1,7 @@
 import RegistrationForm from './RegistrationForm';
 
-$('.js-registration-form').each((i, element) => new RegistrationForm(element));
+const initRegistrationForms = function createInstances() {
+  $('.js-registration-form').each((i, element) => new RegistrationForm(element));
+};
+
+$(document).ready(initRegistrationForms);

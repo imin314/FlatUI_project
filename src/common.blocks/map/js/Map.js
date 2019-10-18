@@ -17,10 +17,8 @@ class Map {
   }
 
   _initialize() {
-    $(window).on('load.map', () => {
-      this._loadImages();
-      this._initMap();
-    });
+    this._loadImages();
+    this._initMap();
   }
 
   _loadImages() {
@@ -50,11 +48,11 @@ class Map {
     this._locateUser();
 
     $pin
-      .on('click.map', e => this._handlePinClick(e))
-      .on('keypress.map', e => this._handleEnterPress(e));
+      .on('click.map', this._handlePinClick.bind(this))
+      .on('keypress.map', this._handleEnterPress.bind(this));
     $search
-      .on('click.map', e => this._handleSearchClick(e))
-      .on('keypress.map', e => this._handleEnterPress(e));
+      .on('click.map', this._handleSearchClick.bind(this))
+      .on('keypress.map', this._handleEnterPress.bind(this));
   }
 
   _addMarker(location, image, title) {
@@ -84,19 +82,21 @@ class Map {
   _locateUser() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
-        (position) => {
-          const pos = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude,
-          };
-          this.userMarker = this._addMarker(pos, this.images[1], 'You are here');
-        },
-        () => this._handleLocationError(true),
+        this._handleLocationSuccess.bind(this),
+        this._handleLocationError.bind(this, true)
       );
     } else {
       // Browser doesn't support Geolocation
       this._handleLocationError(false);
     }
+  }
+
+  _handleLocationSuccess(position) {
+    const pos = {
+      lat: position.coords.latitude,
+      lng: position.coords.longitude,
+    };
+    this.userMarker = this._addMarker(pos, this.images[1], 'You are here');
   }
 
   _handleLocationError(browserHasGeolocation) {
