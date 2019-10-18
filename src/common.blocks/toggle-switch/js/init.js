@@ -1,3 +1,3 @@
-import ToggleSwitch from './toggle-switch';
+import ToggleSwitch from './ToggleSwitch';
 
 $('.js-toggle-switch').each((i, element) => new ToggleSwitch(element));

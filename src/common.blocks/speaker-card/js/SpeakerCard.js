@@ -1,4 +1,5 @@
-import '../../scrollbar/js/scrollbar';
+import 'jquery-mousewheel';
+import 'malihu-custom-scrollbar-plugin';
 
 class SpeakerCard {
   constructor(domElement) {

@@ -1,3 +1,3 @@
-import EventCarousel from './event-carousel';
+import EventCarousel from './EventCarousel';
 
 $('.js-event-carousel').each((i, element) => new EventCarousel(element));

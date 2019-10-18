@@ -1,3 +1,6 @@
+import 'jquery-mousewheel';
+import 'malihu-custom-scrollbar-plugin';
+
 class SpeakerCarousel {
   constructor(domElement) {
     this.cardsAreExpanded = false;
