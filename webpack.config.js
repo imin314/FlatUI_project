@@ -25,32 +25,32 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './src/pages/index/index.pug',
-      chunks: ["main", "main_head"],
+      chunks: ['main', 'main_head'],
     }),
     new HtmlWebpackPlugin({
       filename: 'uidemo.html',
       template: './src/pages/uidemo/uidemo.pug',
-      chunks: ["main", "main_head"],
+      chunks: ['main', 'main_head'],
     }),
     new HtmlWebpackPlugin({
       filename: 'registration.html',
       template: './src/pages/registration/registration.pug',
-      chunks: ["main", "main_head"],
+      chunks: ['main', 'main_head'],
     }),
     new HtmlWebpackPlugin({
       filename: 'contacts.html',
       template: './src/pages/contacts/contacts.pug',
-      chunks: ["main", "main_head"],
+      chunks: ['main', 'main_head'],
     }),
     new HtmlWebpackPlugin({
       filename: 'speakers.html',
       template: './src/pages/speakers/speakers.pug',
-      chunks: ["main", "main_head"],
+      chunks: ['main', 'main_head'],
     }),
     new HtmlWebpackPlugin({
       filename: 'schedule.html',
       template: './src/pages/schedule/schedule.pug',
-      chunks: ["main", "main_head"],
+      chunks: ['main', 'main_head'],
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',

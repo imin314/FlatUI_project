@@ -1,4 +1,5 @@
 @import '../../../styles/variables.styl'
+@import '../../../../node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css'
 
 .event-carousel
   display -webkit-box
@@ -75,3 +76,12 @@
     transition transform .25s ease, opacity .25s ease
     z-index 100001
   
+  & .mCS-dark-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar
+    background-color rgba(0,0,0,0.3)
+
+	& .mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar
+    background-color rgba(0,0,0,0.5)
+
+	& .mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar
+  & .mCS-dark-thin.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar
+    background-color: rgba(0,0,0,0.7)

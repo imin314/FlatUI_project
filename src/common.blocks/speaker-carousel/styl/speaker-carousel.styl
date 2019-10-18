@@ -1,4 +1,5 @@
 @import '../../../styles/variables.styl'
+@import '../../../../node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css'
 
 .speaker-carousel
   border-left 0.5494505494505495rem solid white
@@ -101,3 +102,13 @@
     &^[0]_view_small ^[0]__card
       margin 0 0 1rem
       display block
+
+  & .mCS-dark-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar
+    background-color rgba(0,0,0,0.3)
+
+	& .mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar
+    background-color rgba(0,0,0,0.5)
+
+	& .mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar
+  & .mCS-dark-thin.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar
+    background-color: rgba(0,0,0,0.7)
