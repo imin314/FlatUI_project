@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 9);
+/******/ 	return __webpack_require__(__webpack_require__.s = 31);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -11129,23 +11129,2847 @@ return $.ui.version = "1.12.1";
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* == jquery mousewheel plugin == Version: 3.1.13, License: MIT License (MIT) */
-!function(a){ true?!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(2)], __WEBPACK_AMD_DEFINE_FACTORY__ = (a),
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+ * jQuery Mousewheel 3.1.13
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license
+ * http://jquery.org/license
+ */
+
+(function (factory) {
+    if ( true ) {
+        // AMD. Register as an anonymous module.
+        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(2)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)):undefined}(function(a){function b(b){var g=b||window.event,h=i.call(arguments,1),j=0,l=0,m=0,n=0,o=0,p=0;if(b=a.event.fix(g),b.type="mousewheel","detail"in g&&(m=-1*g.detail),"wheelDelta"in g&&(m=g.wheelDelta),"wheelDeltaY"in g&&(m=g.wheelDeltaY),"wheelDeltaX"in g&&(l=-1*g.wheelDeltaX),"axis"in g&&g.axis===g.HORIZONTAL_AXIS&&(l=-1*m,m=0),j=0===m?l:m,"deltaY"in g&&(m=-1*g.deltaY,j=m),"deltaX"in g&&(l=g.deltaX,0===m&&(j=-1*l)),0!==m||0!==l){if(1===g.deltaMode){var q=a.data(this,"mousewheel-line-height");j*=q,m*=q,l*=q}else if(2===g.deltaMode){var r=a.data(this,"mousewheel-page-height");j*=r,m*=r,l*=r}if(n=Math.max(Math.abs(m),Math.abs(l)),(!f||f>n)&&(f=n,d(g,n)&&(f/=40)),d(g,n)&&(j/=40,l/=40,m/=40),j=Math[j>=1?"floor":"ceil"](j/f),l=Math[l>=1?"floor":"ceil"](l/f),m=Math[m>=1?"floor":"ceil"](m/f),k.settings.normalizeOffset&&this.getBoundingClientRect){var s=this.getBoundingClientRect();o=b.clientX-s.left,p=b.clientY-s.top}return b.deltaX=l,b.deltaY=m,b.deltaFactor=f,b.offsetX=o,b.offsetY=p,b.deltaMode=0,h.unshift(b,j,l,m),e&&clearTimeout(e),e=setTimeout(c,200),(a.event.dispatch||a.event.handle).apply(this,h)}}function c(){f=null}function d(a,b){return k.settings.adjustOldDeltas&&"mousewheel"===a.type&&b%120===0}var e,f,g=["wheel","mousewheel","DOMMouseScroll","MozMousePixelScroll"],h="onwheel"in document||document.documentMode>=9?["wheel"]:["mousewheel","DomMouseScroll","MozMousePixelScroll"],i=Array.prototype.slice;if(a.event.fixHooks)for(var j=g.length;j;)a.event.fixHooks[g[--j]]=a.event.mouseHooks;var k=a.event.special.mousewheel={version:"3.1.12",setup:function(){if(this.addEventListener)for(var c=h.length;c;)this.addEventListener(h[--c],b,!1);else this.onmousewheel=b;a.data(this,"mousewheel-line-height",k.getLineHeight(this)),a.data(this,"mousewheel-page-height",k.getPageHeight(this))},teardown:function(){if(this.removeEventListener)for(var c=h.length;c;)this.removeEventListener(h[--c],b,!1);else this.onmousewheel=null;a.removeData(this,"mousewheel-line-height"),a.removeData(this,"mousewheel-page-height")},getLineHeight:function(b){var c=a(b),d=c["offsetParent"in a.fn?"offsetParent":"parent"]();return d.length||(d=a("body")),parseInt(d.css("fontSize"),10)||parseInt(c.css("fontSize"),10)||16},getPageHeight:function(b){return a(b).height()},settings:{adjustOldDeltas:!0,normalizeOffset:!0}};a.fn.extend({mousewheel:function(a){return a?this.bind("mousewheel",a):this.trigger("mousewheel")},unmousewheel:function(a){return this.unbind("mousewheel",a)}})});!function(a){ true?!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(2)], __WEBPACK_AMD_DEFINE_FACTORY__ = (a),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)):undefined}(function(a){function b(b){var g=b||window.event,h=i.call(arguments,1),j=0,l=0,m=0,n=0,o=0,p=0;if(b=a.event.fix(g),b.type="mousewheel","detail"in g&&(m=-1*g.detail),"wheelDelta"in g&&(m=g.wheelDelta),"wheelDeltaY"in g&&(m=g.wheelDeltaY),"wheelDeltaX"in g&&(l=-1*g.wheelDeltaX),"axis"in g&&g.axis===g.HORIZONTAL_AXIS&&(l=-1*m,m=0),j=0===m?l:m,"deltaY"in g&&(m=-1*g.deltaY,j=m),"deltaX"in g&&(l=g.deltaX,0===m&&(j=-1*l)),0!==m||0!==l){if(1===g.deltaMode){var q=a.data(this,"mousewheel-line-height");j*=q,m*=q,l*=q}else if(2===g.deltaMode){var r=a.data(this,"mousewheel-page-height");j*=r,m*=r,l*=r}if(n=Math.max(Math.abs(m),Math.abs(l)),(!f||f>n)&&(f=n,d(g,n)&&(f/=40)),d(g,n)&&(j/=40,l/=40,m/=40),j=Math[j>=1?"floor":"ceil"](j/f),l=Math[l>=1?"floor":"ceil"](l/f),m=Math[m>=1?"floor":"ceil"](m/f),k.settings.normalizeOffset&&this.getBoundingClientRect){var s=this.getBoundingClientRect();o=b.clientX-s.left,p=b.clientY-s.top}return b.deltaX=l,b.deltaY=m,b.deltaFactor=f,b.offsetX=o,b.offsetY=p,b.deltaMode=0,h.unshift(b,j,l,m),e&&clearTimeout(e),e=setTimeout(c,200),(a.event.dispatch||a.event.handle).apply(this,h)}}function c(){f=null}function d(a,b){return k.settings.adjustOldDeltas&&"mousewheel"===a.type&&b%120===0}var e,f,g=["wheel","mousewheel","DOMMouseScroll","MozMousePixelScroll"],h="onwheel"in document||document.documentMode>=9?["wheel"]:["mousewheel","DomMouseScroll","MozMousePixelScroll"],i=Array.prototype.slice;if(a.event.fixHooks)for(var j=g.length;j;)a.event.fixHooks[g[--j]]=a.event.mouseHooks;var k=a.event.special.mousewheel={version:"3.1.12",setup:function(){if(this.addEventListener)for(var c=h.length;c;)this.addEventListener(h[--c],b,!1);else this.onmousewheel=b;a.data(this,"mousewheel-line-height",k.getLineHeight(this)),a.data(this,"mousewheel-page-height",k.getPageHeight(this))},teardown:function(){if(this.removeEventListener)for(var c=h.length;c;)this.removeEventListener(h[--c],b,!1);else this.onmousewheel=null;a.removeData(this,"mousewheel-line-height"),a.removeData(this,"mousewheel-page-height")},getLineHeight:function(b){var c=a(b),d=c["offsetParent"in a.fn?"offsetParent":"parent"]();return d.length||(d=a("body")),parseInt(d.css("fontSize"),10)||parseInt(c.css("fontSize"),10)||16},getPageHeight:function(b){return a(b).height()},settings:{adjustOldDeltas:!0,normalizeOffset:!0}};a.fn.extend({mousewheel:function(a){return a?this.bind("mousewheel",a):this.trigger("mousewheel")},unmousewheel:function(a){return this.unbind("mousewheel",a)}})});
-/* == malihu jquery custom scrollbar plugin == Version: 3.1.5, License: MIT License (MIT) */
-!function(e){ true?!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(2)], __WEBPACK_AMD_DEFINE_FACTORY__ = (e),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)):undefined}(function(e){!function(t){var o= true&&__webpack_require__(171),a= true&&module.exports,n="https:"==document.location.protocol?"https:":"http:",i="cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js";o||(a?__webpack_require__(172)(e):e.event.special.mousewheel||e("head").append(decodeURI("%3Cscript src="+n+"//"+i+"%3E%3C/script%3E"))),t()}(function(){var t,o="mCustomScrollbar",a="mCS",n=".mCustomScrollbar",i={setTop:0,setLeft:0,axis:"y",scrollbarPosition:"inside",scrollInertia:950,autoDraggerLength:!0,alwaysShowScrollbar:0,snapOffset:0,mouseWheel:{enable:!0,scrollAmount:"auto",axis:"y",deltaFactor:"auto",disableOver:["select","option","keygen","datalist","textarea"]},scrollButtons:{scrollType:"stepless",scrollAmount:"auto"},keyboard:{enable:!0,scrollType:"stepless",scrollAmount:"auto"},contentTouchScroll:25,documentTouchScroll:!0,advanced:{autoScrollOnFocus:"input,textarea,select,button,datalist,keygen,a[tabindex],area,object,[contenteditable='true']",updateOnContentResize:!0,updateOnImageLoad:"auto",autoUpdateTimeout:60},theme:"light",callbacks:{onTotalScrollOffset:0,onTotalScrollBackOffset:0,alwaysTriggerOffsets:!0}},r=0,l={},s=window.attachEvent&&!window.addEventListener?1:0,c=!1,d=["mCSB_dragger_onDrag","mCSB_scrollTools_onDrag","mCS_img_loaded","mCS_disabled","mCS_destroyed","mCS_no_scrollbar","mCS-autoHide","mCS-dir-rtl","mCS_no_scrollbar_y","mCS_no_scrollbar_x","mCS_y_hidden","mCS_x_hidden","mCSB_draggerContainer","mCSB_buttonUp","mCSB_buttonDown","mCSB_buttonLeft","mCSB_buttonRight"],u={init:function(t){var t=e.extend(!0,{},i,t),o=f.call(this);if(t.live){var s=t.liveSelector||this.selector||n,c=e(s);if("off"===t.live)return void m(s);l[s]=setTimeout(function(){c.mCustomScrollbar(t),"once"===t.live&&c.length&&m(s)},500)}else m(s);return t.setWidth=t.set_width?t.set_width:t.setWidth,t.setHeight=t.set_height?t.set_height:t.setHeight,t.axis=t.horizontalScroll?"x":p(t.axis),t.scrollInertia=t.scrollInertia>0&&t.scrollInertia<17?17:t.scrollInertia,"object"!=typeof t.mouseWheel&&1==t.mouseWheel&&(t.mouseWheel={enable:!0,scrollAmount:"auto",axis:"y",preventDefault:!1,deltaFactor:"auto",normalizeDelta:!1,invert:!1}),t.mouseWheel.scrollAmount=t.mouseWheelPixels?t.mouseWheelPixels:t.mouseWheel.scrollAmount,t.mouseWheel.normalizeDelta=t.advanced.normalizeMouseWheelDelta?t.advanced.normalizeMouseWheelDelta:t.mouseWheel.normalizeDelta,t.scrollButtons.scrollType=g(t.scrollButtons.scrollType),h(t),e(o).each(function(){var o=e(this);if(!o.data(a)){o.data(a,{idx:++r,opt:t,scrollRatio:{y:null,x:null},overflowed:null,contentReset:{y:null,x:null},bindEvents:!1,tweenRunning:!1,sequential:{},langDir:o.css("direction"),cbOffsets:null,trigger:null,poll:{size:{o:0,n:0},img:{o:0,n:0},change:{o:0,n:0}}});var n=o.data(a),i=n.opt,l=o.data("mcs-axis"),s=o.data("mcs-scrollbar-position"),c=o.data("mcs-theme");l&&(i.axis=l),s&&(i.scrollbarPosition=s),c&&(i.theme=c,h(i)),v.call(this),n&&i.callbacks.onCreate&&"function"==typeof i.callbacks.onCreate&&i.callbacks.onCreate.call(this),e("#mCSB_"+n.idx+"_container img:not(."+d[2]+")").addClass(d[2]),u.update.call(null,o)}})},update:function(t,o){var n=t||f.call(this);return e(n).each(function(){var t=e(this);if(t.data(a)){var n=t.data(a),i=n.opt,r=e("#mCSB_"+n.idx+"_container"),l=e("#mCSB_"+n.idx),s=[e("#mCSB_"+n.idx+"_dragger_vertical"),e("#mCSB_"+n.idx+"_dragger_horizontal")];if(!r.length)return;n.tweenRunning&&Q(t),o&&n&&i.callbacks.onBeforeUpdate&&"function"==typeof i.callbacks.onBeforeUpdate&&i.callbacks.onBeforeUpdate.call(this),t.hasClass(d[3])&&t.removeClass(d[3]),t.hasClass(d[4])&&t.removeClass(d[4]),l.css("max-height","none"),l.height()!==t.height()&&l.css("max-height",t.height()),_.call(this),"y"===i.axis||i.advanced.autoExpandHorizontalScroll||r.css("width",x(r)),n.overflowed=y.call(this),M.call(this),i.autoDraggerLength&&S.call(this),b.call(this),T.call(this);var c=[Math.abs(r[0].offsetTop),Math.abs(r[0].offsetLeft)];"x"!==i.axis&&(n.overflowed[0]?s[0].height()>s[0].parent().height()?B.call(this):(G(t,c[0].toString(),{dir:"y",dur:0,overwrite:"none"}),n.contentReset.y=null):(B.call(this),"y"===i.axis?k.call(this):"yx"===i.axis&&n.overflowed[1]&&G(t,c[1].toString(),{dir:"x",dur:0,overwrite:"none"}))),"y"!==i.axis&&(n.overflowed[1]?s[1].width()>s[1].parent().width()?B.call(this):(G(t,c[1].toString(),{dir:"x",dur:0,overwrite:"none"}),n.contentReset.x=null):(B.call(this),"x"===i.axis?k.call(this):"yx"===i.axis&&n.overflowed[0]&&G(t,c[0].toString(),{dir:"y",dur:0,overwrite:"none"}))),o&&n&&(2===o&&i.callbacks.onImageLoad&&"function"==typeof i.callbacks.onImageLoad?i.callbacks.onImageLoad.call(this):3===o&&i.callbacks.onSelectorChange&&"function"==typeof i.callbacks.onSelectorChange?i.callbacks.onSelectorChange.call(this):i.callbacks.onUpdate&&"function"==typeof i.callbacks.onUpdate&&i.callbacks.onUpdate.call(this)),N.call(this)}})},scrollTo:function(t,o){if("undefined"!=typeof t&&null!=t){var n=f.call(this);return e(n).each(function(){var n=e(this);if(n.data(a)){var i=n.data(a),r=i.opt,l={trigger:"external",scrollInertia:r.scrollInertia,scrollEasing:"mcsEaseInOut",moveDragger:!1,timeout:60,callbacks:!0,onStart:!0,onUpdate:!0,onComplete:!0},s=e.extend(!0,{},l,o),c=Y.call(this,t),d=s.scrollInertia>0&&s.scrollInertia<17?17:s.scrollInertia;c[0]=X.call(this,c[0],"y"),c[1]=X.call(this,c[1],"x"),s.moveDragger&&(c[0]*=i.scrollRatio.y,c[1]*=i.scrollRatio.x),s.dur=ne()?0:d,setTimeout(function(){null!==c[0]&&"undefined"!=typeof c[0]&&"x"!==r.axis&&i.overflowed[0]&&(s.dir="y",s.overwrite="all",G(n,c[0].toString(),s)),null!==c[1]&&"undefined"!=typeof c[1]&&"y"!==r.axis&&i.overflowed[1]&&(s.dir="x",s.overwrite="none",G(n,c[1].toString(),s))},s.timeout)}})}},stop:function(){var t=f.call(this);return e(t).each(function(){var t=e(this);t.data(a)&&Q(t)})},disable:function(t){var o=f.call(this);return e(o).each(function(){var o=e(this);if(o.data(a)){o.data(a);N.call(this,"remove"),k.call(this),t&&B.call(this),M.call(this,!0),o.addClass(d[3])}})},destroy:function(){var t=f.call(this);return e(t).each(function(){var n=e(this);if(n.data(a)){var i=n.data(a),r=i.opt,l=e("#mCSB_"+i.idx),s=e("#mCSB_"+i.idx+"_container"),c=e(".mCSB_"+i.idx+"_scrollbar");r.live&&m(r.liveSelector||e(t).selector),N.call(this,"remove"),k.call(this),B.call(this),n.removeData(a),$(this,"mcs"),c.remove(),s.find("img."+d[2]).removeClass(d[2]),l.replaceWith(s.contents()),n.removeClass(o+" _"+a+"_"+i.idx+" "+d[6]+" "+d[7]+" "+d[5]+" "+d[3]).addClass(d[4])}})}},f=function(){return"object"!=typeof e(this)||e(this).length<1?n:this},h=function(t){var o=["rounded","rounded-dark","rounded-dots","rounded-dots-dark"],a=["rounded-dots","rounded-dots-dark","3d","3d-dark","3d-thick","3d-thick-dark","inset","inset-dark","inset-2","inset-2-dark","inset-3","inset-3-dark"],n=["minimal","minimal-dark"],i=["minimal","minimal-dark"],r=["minimal","minimal-dark"];t.autoDraggerLength=e.inArray(t.theme,o)>-1?!1:t.autoDraggerLength,t.autoExpandScrollbar=e.inArray(t.theme,a)>-1?!1:t.autoExpandScrollbar,t.scrollButtons.enable=e.inArray(t.theme,n)>-1?!1:t.scrollButtons.enable,t.autoHideScrollbar=e.inArray(t.theme,i)>-1?!0:t.autoHideScrollbar,t.scrollbarPosition=e.inArray(t.theme,r)>-1?"outside":t.scrollbarPosition},m=function(e){l[e]&&(clearTimeout(l[e]),$(l,e))},p=function(e){return"yx"===e||"xy"===e||"auto"===e?"yx":"x"===e||"horizontal"===e?"x":"y"},g=function(e){return"stepped"===e||"pixels"===e||"step"===e||"click"===e?"stepped":"stepless"},v=function(){var t=e(this),n=t.data(a),i=n.opt,r=i.autoExpandScrollbar?" "+d[1]+"_expand":"",l=["<div id='mCSB_"+n.idx+"_scrollbar_vertical' class='mCSB_scrollTools mCSB_"+n.idx+"_scrollbar mCS-"+i.theme+" mCSB_scrollTools_vertical"+r+"'><div class='"+d[12]+"'><div id='mCSB_"+n.idx+"_dragger_vertical' class='mCSB_dragger' style='position:absolute;'><div class='mCSB_dragger_bar' /></div><div class='mCSB_draggerRail' /></div></div>","<div id='mCSB_"+n.idx+"_scrollbar_horizontal' class='mCSB_scrollTools mCSB_"+n.idx+"_scrollbar mCS-"+i.theme+" mCSB_scrollTools_horizontal"+r+"'><div class='"+d[12]+"'><div id='mCSB_"+n.idx+"_dragger_horizontal' class='mCSB_dragger' style='position:absolute;'><div class='mCSB_dragger_bar' /></div><div class='mCSB_draggerRail' /></div></div>"],s="yx"===i.axis?"mCSB_vertical_horizontal":"x"===i.axis?"mCSB_horizontal":"mCSB_vertical",c="yx"===i.axis?l[0]+l[1]:"x"===i.axis?l[1]:l[0],u="yx"===i.axis?"<div id='mCSB_"+n.idx+"_container_wrapper' class='mCSB_container_wrapper' />":"",f=i.autoHideScrollbar?" "+d[6]:"",h="x"!==i.axis&&"rtl"===n.langDir?" "+d[7]:"";i.setWidth&&t.css("width",i.setWidth),i.setHeight&&t.css("height",i.setHeight),i.setLeft="y"!==i.axis&&"rtl"===n.langDir?"989999px":i.setLeft,t.addClass(o+" _"+a+"_"+n.idx+f+h).wrapInner("<div id='mCSB_"+n.idx+"' class='mCustomScrollBox mCS-"+i.theme+" "+s+"'><div id='mCSB_"+n.idx+"_container' class='mCSB_container' style='position:relative; top:"+i.setTop+"; left:"+i.setLeft+";' dir='"+n.langDir+"' /></div>");var m=e("#mCSB_"+n.idx),p=e("#mCSB_"+n.idx+"_container");"y"===i.axis||i.advanced.autoExpandHorizontalScroll||p.css("width",x(p)),"outside"===i.scrollbarPosition?("static"===t.css("position")&&t.css("position","relative"),t.css("overflow","visible"),m.addClass("mCSB_outside").after(c)):(m.addClass("mCSB_inside").append(c),p.wrap(u)),w.call(this);var g=[e("#mCSB_"+n.idx+"_dragger_vertical"),e("#mCSB_"+n.idx+"_dragger_horizontal")];g[0].css("min-height",g[0].height()),g[1].css("min-width",g[1].width())},x=function(t){var o=[t[0].scrollWidth,Math.max.apply(Math,t.children().map(function(){return e(this).outerWidth(!0)}).get())],a=t.parent().width();return o[0]>a?o[0]:o[1]>a?o[1]:"100%"},_=function(){var t=e(this),o=t.data(a),n=o.opt,i=e("#mCSB_"+o.idx+"_container");if(n.advanced.autoExpandHorizontalScroll&&"y"!==n.axis){i.css({width:"auto","min-width":0,"overflow-x":"scroll"});var r=Math.ceil(i[0].scrollWidth);3===n.advanced.autoExpandHorizontalScroll||2!==n.advanced.autoExpandHorizontalScroll&&r>i.parent().width()?i.css({width:r,"min-width":"100%","overflow-x":"inherit"}):i.css({"overflow-x":"inherit",position:"absolute"}).wrap("<div class='mCSB_h_wrapper' style='position:relative; left:0; width:999999px;' />").css({width:Math.ceil(i[0].getBoundingClientRect().right+.4)-Math.floor(i[0].getBoundingClientRect().left),"min-width":"100%",position:"relative"}).unwrap()}},w=function(){var t=e(this),o=t.data(a),n=o.opt,i=e(".mCSB_"+o.idx+"_scrollbar:first"),r=oe(n.scrollButtons.tabindex)?"tabindex='"+n.scrollButtons.tabindex+"'":"",l=["<a href='#' class='"+d[13]+"' "+r+" />","<a href='#' class='"+d[14]+"' "+r+" />","<a href='#' class='"+d[15]+"' "+r+" />","<a href='#' class='"+d[16]+"' "+r+" />"],s=["x"===n.axis?l[2]:l[0],"x"===n.axis?l[3]:l[1],l[2],l[3]];n.scrollButtons.enable&&i.prepend(s[0]).append(s[1]).next(".mCSB_scrollTools").prepend(s[2]).append(s[3])},S=function(){var t=e(this),o=t.data(a),n=e("#mCSB_"+o.idx),i=e("#mCSB_"+o.idx+"_container"),r=[e("#mCSB_"+o.idx+"_dragger_vertical"),e("#mCSB_"+o.idx+"_dragger_horizontal")],l=[n.height()/i.outerHeight(!1),n.width()/i.outerWidth(!1)],c=[parseInt(r[0].css("min-height")),Math.round(l[0]*r[0].parent().height()),parseInt(r[1].css("min-width")),Math.round(l[1]*r[1].parent().width())],d=s&&c[1]<c[0]?c[0]:c[1],u=s&&c[3]<c[2]?c[2]:c[3];r[0].css({height:d,"max-height":r[0].parent().height()-10}).find(".mCSB_dragger_bar").css({"line-height":c[0]+"px"}),r[1].css({width:u,"max-width":r[1].parent().width()-10})},b=function(){var t=e(this),o=t.data(a),n=e("#mCSB_"+o.idx),i=e("#mCSB_"+o.idx+"_container"),r=[e("#mCSB_"+o.idx+"_dragger_vertical"),e("#mCSB_"+o.idx+"_dragger_horizontal")],l=[i.outerHeight(!1)-n.height(),i.outerWidth(!1)-n.width()],s=[l[0]/(r[0].parent().height()-r[0].height()),l[1]/(r[1].parent().width()-r[1].width())];o.scrollRatio={y:s[0],x:s[1]}},C=function(e,t,o){var a=o?d[0]+"_expanded":"",n=e.closest(".mCSB_scrollTools");"active"===t?(e.toggleClass(d[0]+" "+a),n.toggleClass(d[1]),e[0]._draggable=e[0]._draggable?0:1):e[0]._draggable||("hide"===t?(e.removeClass(d[0]),n.removeClass(d[1])):(e.addClass(d[0]),n.addClass(d[1])))},y=function(){var t=e(this),o=t.data(a),n=e("#mCSB_"+o.idx),i=e("#mCSB_"+o.idx+"_container"),r=null==o.overflowed?i.height():i.outerHeight(!1),l=null==o.overflowed?i.width():i.outerWidth(!1),s=i[0].scrollHeight,c=i[0].scrollWidth;return s>r&&(r=s),c>l&&(l=c),[r>n.height(),l>n.width()]},B=function(){var t=e(this),o=t.data(a),n=o.opt,i=e("#mCSB_"+o.idx),r=e("#mCSB_"+o.idx+"_container"),l=[e("#mCSB_"+o.idx+"_dragger_vertical"),e("#mCSB_"+o.idx+"_dragger_horizontal")];if(Q(t),("x"!==n.axis&&!o.overflowed[0]||"y"===n.axis&&o.overflowed[0])&&(l[0].add(r).css("top",0),G(t,"_resetY")),"y"!==n.axis&&!o.overflowed[1]||"x"===n.axis&&o.overflowed[1]){var s=dx=0;"rtl"===o.langDir&&(s=i.width()-r.outerWidth(!1),dx=Math.abs(s/o.scrollRatio.x)),r.css("left",s),l[1].css("left",dx),G(t,"_resetX")}},T=function(){function t(){r=setTimeout(function(){e.event.special.mousewheel?(clearTimeout(r),W.call(o[0])):t()},100)}var o=e(this),n=o.data(a),i=n.opt;if(!n.bindEvents){if(I.call(this),i.contentTouchScroll&&D.call(this),E.call(this),i.mouseWheel.enable){var r;t()}P.call(this),U.call(this),i.advanced.autoScrollOnFocus&&H.call(this),i.scrollButtons.enable&&F.call(this),i.keyboard.enable&&q.call(this),n.bindEvents=!0}},k=function(){var t=e(this),o=t.data(a),n=o.opt,i=a+"_"+o.idx,r=".mCSB_"+o.idx+"_scrollbar",l=e("#mCSB_"+o.idx+",#mCSB_"+o.idx+"_container,#mCSB_"+o.idx+"_container_wrapper,"+r+" ."+d[12]+",#mCSB_"+o.idx+"_dragger_vertical,#mCSB_"+o.idx+"_dragger_horizontal,"+r+">a"),s=e("#mCSB_"+o.idx+"_container");n.advanced.releaseDraggableSelectors&&l.add(e(n.advanced.releaseDraggableSelectors)),n.advanced.extraDraggableSelectors&&l.add(e(n.advanced.extraDraggableSelectors)),o.bindEvents&&(e(document).add(e(!A()||top.document)).unbind("."+i),l.each(function(){e(this).unbind("."+i)}),clearTimeout(t[0]._focusTimeout),$(t[0],"_focusTimeout"),clearTimeout(o.sequential.step),$(o.sequential,"step"),clearTimeout(s[0].onCompleteTimeout),$(s[0],"onCompleteTimeout"),o.bindEvents=!1)},M=function(t){var o=e(this),n=o.data(a),i=n.opt,r=e("#mCSB_"+n.idx+"_container_wrapper"),l=r.length?r:e("#mCSB_"+n.idx+"_container"),s=[e("#mCSB_"+n.idx+"_scrollbar_vertical"),e("#mCSB_"+n.idx+"_scrollbar_horizontal")],c=[s[0].find(".mCSB_dragger"),s[1].find(".mCSB_dragger")];"x"!==i.axis&&(n.overflowed[0]&&!t?(s[0].add(c[0]).add(s[0].children("a")).css("display","block"),l.removeClass(d[8]+" "+d[10])):(i.alwaysShowScrollbar?(2!==i.alwaysShowScrollbar&&c[0].css("display","none"),l.removeClass(d[10])):(s[0].css("display","none"),l.addClass(d[10])),l.addClass(d[8]))),"y"!==i.axis&&(n.overflowed[1]&&!t?(s[1].add(c[1]).add(s[1].children("a")).css("display","block"),l.removeClass(d[9]+" "+d[11])):(i.alwaysShowScrollbar?(2!==i.alwaysShowScrollbar&&c[1].css("display","none"),l.removeClass(d[11])):(s[1].css("display","none"),l.addClass(d[11])),l.addClass(d[9]))),n.overflowed[0]||n.overflowed[1]?o.removeClass(d[5]):o.addClass(d[5])},O=function(t){var o=t.type,a=t.target.ownerDocument!==document&&null!==frameElement?[e(frameElement).offset().top,e(frameElement).offset().left]:null,n=A()&&t.target.ownerDocument!==top.document&&null!==frameElement?[e(t.view.frameElement).offset().top,e(t.view.frameElement).offset().left]:[0,0];switch(o){case"pointerdown":case"MSPointerDown":case"pointermove":case"MSPointerMove":case"pointerup":case"MSPointerUp":return a?[t.originalEvent.pageY-a[0]+n[0],t.originalEvent.pageX-a[1]+n[1],!1]:[t.originalEvent.pageY,t.originalEvent.pageX,!1];case"touchstart":case"touchmove":case"touchend":var i=t.originalEvent.touches[0]||t.originalEvent.changedTouches[0],r=t.originalEvent.touches.length||t.originalEvent.changedTouches.length;return t.target.ownerDocument!==document?[i.screenY,i.screenX,r>1]:[i.pageY,i.pageX,r>1];default:return a?[t.pageY-a[0]+n[0],t.pageX-a[1]+n[1],!1]:[t.pageY,t.pageX,!1]}},I=function(){function t(e,t,a,n){if(h[0].idleTimer=d.scrollInertia<233?250:0,o.attr("id")===f[1])var i="x",s=(o[0].offsetLeft-t+n)*l.scrollRatio.x;else var i="y",s=(o[0].offsetTop-e+a)*l.scrollRatio.y;G(r,s.toString(),{dir:i,drag:!0})}var o,n,i,r=e(this),l=r.data(a),d=l.opt,u=a+"_"+l.idx,f=["mCSB_"+l.idx+"_dragger_vertical","mCSB_"+l.idx+"_dragger_horizontal"],h=e("#mCSB_"+l.idx+"_container"),m=e("#"+f[0]+",#"+f[1]),p=d.advanced.releaseDraggableSelectors?m.add(e(d.advanced.releaseDraggableSelectors)):m,g=d.advanced.extraDraggableSelectors?e(!A()||top.document).add(e(d.advanced.extraDraggableSelectors)):e(!A()||top.document);m.bind("contextmenu."+u,function(e){e.preventDefault()}).bind("mousedown."+u+" touchstart."+u+" pointerdown."+u+" MSPointerDown."+u,function(t){if(t.stopImmediatePropagation(),t.preventDefault(),ee(t)){c=!0,s&&(document.onselectstart=function(){return!1}),L.call(h,!1),Q(r),o=e(this);var a=o.offset(),l=O(t)[0]-a.top,u=O(t)[1]-a.left,f=o.height()+a.top,m=o.width()+a.left;f>l&&l>0&&m>u&&u>0&&(n=l,i=u),C(o,"active",d.autoExpandScrollbar)}}).bind("touchmove."+u,function(e){e.stopImmediatePropagation(),e.preventDefault();var a=o.offset(),r=O(e)[0]-a.top,l=O(e)[1]-a.left;t(n,i,r,l)}),e(document).add(g).bind("mousemove."+u+" pointermove."+u+" MSPointerMove."+u,function(e){if(o){var a=o.offset(),r=O(e)[0]-a.top,l=O(e)[1]-a.left;if(n===r&&i===l)return;t(n,i,r,l)}}).add(p).bind("mouseup."+u+" touchend."+u+" pointerup."+u+" MSPointerUp."+u,function(){o&&(C(o,"active",d.autoExpandScrollbar),o=null),c=!1,s&&(document.onselectstart=null),L.call(h,!0)})},D=function(){function o(e){if(!te(e)||c||O(e)[2])return void(t=0);t=1,b=0,C=0,d=1,y.removeClass("mCS_touch_action");var o=I.offset();u=O(e)[0]-o.top,f=O(e)[1]-o.left,z=[O(e)[0],O(e)[1]]}function n(e){if(te(e)&&!c&&!O(e)[2]&&(T.documentTouchScroll||e.preventDefault(),e.stopImmediatePropagation(),(!C||b)&&d)){g=K();var t=M.offset(),o=O(e)[0]-t.top,a=O(e)[1]-t.left,n="mcsLinearOut";if(E.push(o),W.push(a),z[2]=Math.abs(O(e)[0]-z[0]),z[3]=Math.abs(O(e)[1]-z[1]),B.overflowed[0])var i=D[0].parent().height()-D[0].height(),r=u-o>0&&o-u>-(i*B.scrollRatio.y)&&(2*z[3]<z[2]||"yx"===T.axis);if(B.overflowed[1])var l=D[1].parent().width()-D[1].width(),h=f-a>0&&a-f>-(l*B.scrollRatio.x)&&(2*z[2]<z[3]||"yx"===T.axis);r||h?(U||e.preventDefault(),b=1):(C=1,y.addClass("mCS_touch_action")),U&&e.preventDefault(),w="yx"===T.axis?[u-o,f-a]:"x"===T.axis?[null,f-a]:[u-o,null],I[0].idleTimer=250,B.overflowed[0]&&s(w[0],R,n,"y","all",!0),B.overflowed[1]&&s(w[1],R,n,"x",L,!0)}}function i(e){if(!te(e)||c||O(e)[2])return void(t=0);t=1,e.stopImmediatePropagation(),Q(y),p=K();var o=M.offset();h=O(e)[0]-o.top,m=O(e)[1]-o.left,E=[],W=[]}function r(e){if(te(e)&&!c&&!O(e)[2]){d=0,e.stopImmediatePropagation(),b=0,C=0,v=K();var t=M.offset(),o=O(e)[0]-t.top,a=O(e)[1]-t.left;if(!(v-g>30)){_=1e3/(v-p);var n="mcsEaseOut",i=2.5>_,r=i?[E[E.length-2],W[W.length-2]]:[0,0];x=i?[o-r[0],a-r[1]]:[o-h,a-m];var u=[Math.abs(x[0]),Math.abs(x[1])];_=i?[Math.abs(x[0]/4),Math.abs(x[1]/4)]:[_,_];var f=[Math.abs(I[0].offsetTop)-x[0]*l(u[0]/_[0],_[0]),Math.abs(I[0].offsetLeft)-x[1]*l(u[1]/_[1],_[1])];w="yx"===T.axis?[f[0],f[1]]:"x"===T.axis?[null,f[1]]:[f[0],null],S=[4*u[0]+T.scrollInertia,4*u[1]+T.scrollInertia];var y=parseInt(T.contentTouchScroll)||0;w[0]=u[0]>y?w[0]:0,w[1]=u[1]>y?w[1]:0,B.overflowed[0]&&s(w[0],S[0],n,"y",L,!1),B.overflowed[1]&&s(w[1],S[1],n,"x",L,!1)}}}function l(e,t){var o=[1.5*t,2*t,t/1.5,t/2];return e>90?t>4?o[0]:o[3]:e>60?t>3?o[3]:o[2]:e>30?t>8?o[1]:t>6?o[0]:t>4?t:o[2]:t>8?t:o[3]}function s(e,t,o,a,n,i){e&&G(y,e.toString(),{dur:t,scrollEasing:o,dir:a,overwrite:n,drag:i})}var d,u,f,h,m,p,g,v,x,_,w,S,b,C,y=e(this),B=y.data(a),T=B.opt,k=a+"_"+B.idx,M=e("#mCSB_"+B.idx),I=e("#mCSB_"+B.idx+"_container"),D=[e("#mCSB_"+B.idx+"_dragger_vertical"),e("#mCSB_"+B.idx+"_dragger_horizontal")],E=[],W=[],R=0,L="yx"===T.axis?"none":"all",z=[],P=I.find("iframe"),H=["touchstart."+k+" pointerdown."+k+" MSPointerDown."+k,"touchmove."+k+" pointermove."+k+" MSPointerMove."+k,"touchend."+k+" pointerup."+k+" MSPointerUp."+k],U=void 0!==document.body.style.touchAction&&""!==document.body.style.touchAction;I.bind(H[0],function(e){o(e)}).bind(H[1],function(e){n(e)}),M.bind(H[0],function(e){i(e)}).bind(H[2],function(e){r(e)}),P.length&&P.each(function(){e(this).bind("load",function(){A(this)&&e(this.contentDocument||this.contentWindow.document).bind(H[0],function(e){o(e),i(e)}).bind(H[1],function(e){n(e)}).bind(H[2],function(e){r(e)})})})},E=function(){function o(){return window.getSelection?window.getSelection().toString():document.selection&&"Control"!=document.selection.type?document.selection.createRange().text:0}function n(e,t,o){d.type=o&&i?"stepped":"stepless",d.scrollAmount=10,j(r,e,t,"mcsLinearOut",o?60:null)}var i,r=e(this),l=r.data(a),s=l.opt,d=l.sequential,u=a+"_"+l.idx,f=e("#mCSB_"+l.idx+"_container"),h=f.parent();f.bind("mousedown."+u,function(){t||i||(i=1,c=!0)}).add(document).bind("mousemove."+u,function(e){if(!t&&i&&o()){var a=f.offset(),r=O(e)[0]-a.top+f[0].offsetTop,c=O(e)[1]-a.left+f[0].offsetLeft;r>0&&r<h.height()&&c>0&&c<h.width()?d.step&&n("off",null,"stepped"):("x"!==s.axis&&l.overflowed[0]&&(0>r?n("on",38):r>h.height()&&n("on",40)),"y"!==s.axis&&l.overflowed[1]&&(0>c?n("on",37):c>h.width()&&n("on",39)))}}).bind("mouseup."+u+" dragend."+u,function(){t||(i&&(i=0,n("off",null)),c=!1)})},W=function(){function t(t,a){if(Q(o),!z(o,t.target)){var r="auto"!==i.mouseWheel.deltaFactor?parseInt(i.mouseWheel.deltaFactor):s&&t.deltaFactor<100?100:t.deltaFactor||100,d=i.scrollInertia;if("x"===i.axis||"x"===i.mouseWheel.axis)var u="x",f=[Math.round(r*n.scrollRatio.x),parseInt(i.mouseWheel.scrollAmount)],h="auto"!==i.mouseWheel.scrollAmount?f[1]:f[0]>=l.width()?.9*l.width():f[0],m=Math.abs(e("#mCSB_"+n.idx+"_container")[0].offsetLeft),p=c[1][0].offsetLeft,g=c[1].parent().width()-c[1].width(),v="y"===i.mouseWheel.axis?t.deltaY||a:t.deltaX;else var u="y",f=[Math.round(r*n.scrollRatio.y),parseInt(i.mouseWheel.scrollAmount)],h="auto"!==i.mouseWheel.scrollAmount?f[1]:f[0]>=l.height()?.9*l.height():f[0],m=Math.abs(e("#mCSB_"+n.idx+"_container")[0].offsetTop),p=c[0][0].offsetTop,g=c[0].parent().height()-c[0].height(),v=t.deltaY||a;"y"===u&&!n.overflowed[0]||"x"===u&&!n.overflowed[1]||((i.mouseWheel.invert||t.webkitDirectionInvertedFromDevice)&&(v=-v),i.mouseWheel.normalizeDelta&&(v=0>v?-1:1),(v>0&&0!==p||0>v&&p!==g||i.mouseWheel.preventDefault)&&(t.stopImmediatePropagation(),t.preventDefault()),t.deltaFactor<5&&!i.mouseWheel.normalizeDelta&&(h=t.deltaFactor,d=17),G(o,(m-v*h).toString(),{dir:u,dur:d}))}}if(e(this).data(a)){var o=e(this),n=o.data(a),i=n.opt,r=a+"_"+n.idx,l=e("#mCSB_"+n.idx),c=[e("#mCSB_"+n.idx+"_dragger_vertical"),e("#mCSB_"+n.idx+"_dragger_horizontal")],d=e("#mCSB_"+n.idx+"_container").find("iframe");d.length&&d.each(function(){e(this).bind("load",function(){A(this)&&e(this.contentDocument||this.contentWindow.document).bind("mousewheel."+r,function(e,o){t(e,o)})})}),l.bind("mousewheel."+r,function(e,o){t(e,o)})}},R=new Object,A=function(t){var o=!1,a=!1,n=null;if(void 0===t?a="#empty":void 0!==e(t).attr("id")&&(a=e(t).attr("id")),a!==!1&&void 0!==R[a])return R[a];if(t){try{var i=t.contentDocument||t.contentWindow.document;n=i.body.innerHTML}catch(r){}o=null!==n}else{try{var i=top.document;n=i.body.innerHTML}catch(r){}o=null!==n}return a!==!1&&(R[a]=o),o},L=function(e){var t=this.find("iframe");if(t.length){var o=e?"auto":"none";t.css("pointer-events",o)}},z=function(t,o){var n=o.nodeName.toLowerCase(),i=t.data(a).opt.mouseWheel.disableOver,r=["select","textarea"];return e.inArray(n,i)>-1&&!(e.inArray(n,r)>-1&&!e(o).is(":focus"))},P=function(){var t,o=e(this),n=o.data(a),i=a+"_"+n.idx,r=e("#mCSB_"+n.idx+"_container"),l=r.parent(),s=e(".mCSB_"+n.idx+"_scrollbar ."+d[12]);s.bind("mousedown."+i+" touchstart."+i+" pointerdown."+i+" MSPointerDown."+i,function(o){c=!0,e(o.target).hasClass("mCSB_dragger")||(t=1)}).bind("touchend."+i+" pointerup."+i+" MSPointerUp."+i,function(){c=!1}).bind("click."+i,function(a){if(t&&(t=0,e(a.target).hasClass(d[12])||e(a.target).hasClass("mCSB_draggerRail"))){Q(o);var i=e(this),s=i.find(".mCSB_dragger");if(i.parent(".mCSB_scrollTools_horizontal").length>0){if(!n.overflowed[1])return;var c="x",u=a.pageX>s.offset().left?-1:1,f=Math.abs(r[0].offsetLeft)-u*(.9*l.width())}else{if(!n.overflowed[0])return;var c="y",u=a.pageY>s.offset().top?-1:1,f=Math.abs(r[0].offsetTop)-u*(.9*l.height())}G(o,f.toString(),{dir:c,scrollEasing:"mcsEaseInOut"})}})},H=function(){var t=e(this),o=t.data(a),n=o.opt,i=a+"_"+o.idx,r=e("#mCSB_"+o.idx+"_container"),l=r.parent();r.bind("focusin."+i,function(){var o=e(document.activeElement),a=r.find(".mCustomScrollBox").length,i=0;o.is(n.advanced.autoScrollOnFocus)&&(Q(t),clearTimeout(t[0]._focusTimeout),t[0]._focusTimer=a?(i+17)*a:0,t[0]._focusTimeout=setTimeout(function(){var e=[ae(o)[0],ae(o)[1]],a=[r[0].offsetTop,r[0].offsetLeft],s=[a[0]+e[0]>=0&&a[0]+e[0]<l.height()-o.outerHeight(!1),a[1]+e[1]>=0&&a[0]+e[1]<l.width()-o.outerWidth(!1)],c="yx"!==n.axis||s[0]||s[1]?"all":"none";"x"===n.axis||s[0]||G(t,e[0].toString(),{dir:"y",scrollEasing:"mcsEaseInOut",overwrite:c,dur:i}),"y"===n.axis||s[1]||G(t,e[1].toString(),{dir:"x",scrollEasing:"mcsEaseInOut",overwrite:c,dur:i})},t[0]._focusTimer))})},U=function(){var t=e(this),o=t.data(a),n=a+"_"+o.idx,i=e("#mCSB_"+o.idx+"_container").parent();i.bind("scroll."+n,function(){0===i.scrollTop()&&0===i.scrollLeft()||e(".mCSB_"+o.idx+"_scrollbar").css("visibility","hidden")})},F=function(){var t=e(this),o=t.data(a),n=o.opt,i=o.sequential,r=a+"_"+o.idx,l=".mCSB_"+o.idx+"_scrollbar",s=e(l+">a");s.bind("contextmenu."+r,function(e){e.preventDefault()}).bind("mousedown."+r+" touchstart."+r+" pointerdown."+r+" MSPointerDown."+r+" mouseup."+r+" touchend."+r+" pointerup."+r+" MSPointerUp."+r+" mouseout."+r+" pointerout."+r+" MSPointerOut."+r+" click."+r,function(a){function r(e,o){i.scrollAmount=n.scrollButtons.scrollAmount,j(t,e,o)}if(a.preventDefault(),ee(a)){var l=e(this).attr("class");switch(i.type=n.scrollButtons.scrollType,a.type){case"mousedown":case"touchstart":case"pointerdown":case"MSPointerDown":if("stepped"===i.type)return;c=!0,o.tweenRunning=!1,r("on",l);break;case"mouseup":case"touchend":case"pointerup":case"MSPointerUp":case"mouseout":case"pointerout":case"MSPointerOut":if("stepped"===i.type)return;c=!1,i.dir&&r("off",l);break;case"click":if("stepped"!==i.type||o.tweenRunning)return;r("on",l)}}})},q=function(){function t(t){function a(e,t){r.type=i.keyboard.scrollType,r.scrollAmount=i.keyboard.scrollAmount,"stepped"===r.type&&n.tweenRunning||j(o,e,t)}switch(t.type){case"blur":n.tweenRunning&&r.dir&&a("off",null);break;case"keydown":case"keyup":var l=t.keyCode?t.keyCode:t.which,s="on";if("x"!==i.axis&&(38===l||40===l)||"y"!==i.axis&&(37===l||39===l)){if((38===l||40===l)&&!n.overflowed[0]||(37===l||39===l)&&!n.overflowed[1])return;"keyup"===t.type&&(s="off"),e(document.activeElement).is(u)||(t.preventDefault(),t.stopImmediatePropagation(),a(s,l))}else if(33===l||34===l){if((n.overflowed[0]||n.overflowed[1])&&(t.preventDefault(),t.stopImmediatePropagation()),"keyup"===t.type){Q(o);var f=34===l?-1:1;if("x"===i.axis||"yx"===i.axis&&n.overflowed[1]&&!n.overflowed[0])var h="x",m=Math.abs(c[0].offsetLeft)-f*(.9*d.width());else var h="y",m=Math.abs(c[0].offsetTop)-f*(.9*d.height());G(o,m.toString(),{dir:h,scrollEasing:"mcsEaseInOut"})}}else if((35===l||36===l)&&!e(document.activeElement).is(u)&&((n.overflowed[0]||n.overflowed[1])&&(t.preventDefault(),t.stopImmediatePropagation()),"keyup"===t.type)){if("x"===i.axis||"yx"===i.axis&&n.overflowed[1]&&!n.overflowed[0])var h="x",m=35===l?Math.abs(d.width()-c.outerWidth(!1)):0;else var h="y",m=35===l?Math.abs(d.height()-c.outerHeight(!1)):0;G(o,m.toString(),{dir:h,scrollEasing:"mcsEaseInOut"})}}}var o=e(this),n=o.data(a),i=n.opt,r=n.sequential,l=a+"_"+n.idx,s=e("#mCSB_"+n.idx),c=e("#mCSB_"+n.idx+"_container"),d=c.parent(),u="input,textarea,select,datalist,keygen,[contenteditable='true']",f=c.find("iframe"),h=["blur."+l+" keydown."+l+" keyup."+l];f.length&&f.each(function(){e(this).bind("load",function(){A(this)&&e(this.contentDocument||this.contentWindow.document).bind(h[0],function(e){t(e)})})}),s.attr("tabindex","0").bind(h[0],function(e){t(e)})},j=function(t,o,n,i,r){function l(e){u.snapAmount&&(f.scrollAmount=u.snapAmount instanceof Array?"x"===f.dir[0]?u.snapAmount[1]:u.snapAmount[0]:u.snapAmount);var o="stepped"!==f.type,a=r?r:e?o?p/1.5:g:1e3/60,n=e?o?7.5:40:2.5,s=[Math.abs(h[0].offsetTop),Math.abs(h[0].offsetLeft)],d=[c.scrollRatio.y>10?10:c.scrollRatio.y,c.scrollRatio.x>10?10:c.scrollRatio.x],m="x"===f.dir[0]?s[1]+f.dir[1]*(d[1]*n):s[0]+f.dir[1]*(d[0]*n),v="x"===f.dir[0]?s[1]+f.dir[1]*parseInt(f.scrollAmount):s[0]+f.dir[1]*parseInt(f.scrollAmount),x="auto"!==f.scrollAmount?v:m,_=i?i:e?o?"mcsLinearOut":"mcsEaseInOut":"mcsLinear",w=!!e;return e&&17>a&&(x="x"===f.dir[0]?s[1]:s[0]),G(t,x.toString(),{dir:f.dir[0],scrollEasing:_,dur:a,onComplete:w}),e?void(f.dir=!1):(clearTimeout(f.step),void(f.step=setTimeout(function(){l()},a)))}function s(){clearTimeout(f.step),$(f,"step"),Q(t)}var c=t.data(a),u=c.opt,f=c.sequential,h=e("#mCSB_"+c.idx+"_container"),m="stepped"===f.type,p=u.scrollInertia<26?26:u.scrollInertia,g=u.scrollInertia<1?17:u.scrollInertia;switch(o){case"on":if(f.dir=[n===d[16]||n===d[15]||39===n||37===n?"x":"y",n===d[13]||n===d[15]||38===n||37===n?-1:1],Q(t),oe(n)&&"stepped"===f.type)return;l(m);break;case"off":s(),(m||c.tweenRunning&&f.dir)&&l(!0)}},Y=function(t){var o=e(this).data(a).opt,n=[];return"function"==typeof t&&(t=t()),t instanceof Array?n=t.length>1?[t[0],t[1]]:"x"===o.axis?[null,t[0]]:[t[0],null]:(n[0]=t.y?t.y:t.x||"x"===o.axis?null:t,n[1]=t.x?t.x:t.y||"y"===o.axis?null:t),"function"==typeof n[0]&&(n[0]=n[0]()),"function"==typeof n[1]&&(n[1]=n[1]()),n},X=function(t,o){if(null!=t&&"undefined"!=typeof t){var n=e(this),i=n.data(a),r=i.opt,l=e("#mCSB_"+i.idx+"_container"),s=l.parent(),c=typeof t;o||(o="x"===r.axis?"x":"y");var d="x"===o?l.outerWidth(!1)-s.width():l.outerHeight(!1)-s.height(),f="x"===o?l[0].offsetLeft:l[0].offsetTop,h="x"===o?"left":"top";switch(c){case"function":return t();case"object":var m=t.jquery?t:e(t);if(!m.length)return;return"x"===o?ae(m)[1]:ae(m)[0];case"string":case"number":if(oe(t))return Math.abs(t);if(-1!==t.indexOf("%"))return Math.abs(d*parseInt(t)/100);if(-1!==t.indexOf("-="))return Math.abs(f-parseInt(t.split("-=")[1]));if(-1!==t.indexOf("+=")){var p=f+parseInt(t.split("+=")[1]);return p>=0?0:Math.abs(p)}if(-1!==t.indexOf("px")&&oe(t.split("px")[0]))return Math.abs(t.split("px")[0]);if("top"===t||"left"===t)return 0;if("bottom"===t)return Math.abs(s.height()-l.outerHeight(!1));if("right"===t)return Math.abs(s.width()-l.outerWidth(!1));if("first"===t||"last"===t){var m=l.find(":"+t);return"x"===o?ae(m)[1]:ae(m)[0]}return e(t).length?"x"===o?ae(e(t))[1]:ae(e(t))[0]:(l.css(h,t),void u.update.call(null,n[0]))}}},N=function(t){function o(){return clearTimeout(f[0].autoUpdate),0===l.parents("html").length?void(l=null):void(f[0].autoUpdate=setTimeout(function(){return c.advanced.updateOnSelectorChange&&(s.poll.change.n=i(),s.poll.change.n!==s.poll.change.o)?(s.poll.change.o=s.poll.change.n,void r(3)):c.advanced.updateOnContentResize&&(s.poll.size.n=l[0].scrollHeight+l[0].scrollWidth+f[0].offsetHeight+l[0].offsetHeight+l[0].offsetWidth,s.poll.size.n!==s.poll.size.o)?(s.poll.size.o=s.poll.size.n,void r(1)):!c.advanced.updateOnImageLoad||"auto"===c.advanced.updateOnImageLoad&&"y"===c.axis||(s.poll.img.n=f.find("img").length,s.poll.img.n===s.poll.img.o)?void((c.advanced.updateOnSelectorChange||c.advanced.updateOnContentResize||c.advanced.updateOnImageLoad)&&o()):(s.poll.img.o=s.poll.img.n,void f.find("img").each(function(){n(this)}))},c.advanced.autoUpdateTimeout))}function n(t){function o(e,t){return function(){
-return t.apply(e,arguments)}}function a(){this.onload=null,e(t).addClass(d[2]),r(2)}if(e(t).hasClass(d[2]))return void r();var n=new Image;n.onload=o(n,a),n.src=t.src}function i(){c.advanced.updateOnSelectorChange===!0&&(c.advanced.updateOnSelectorChange="*");var e=0,t=f.find(c.advanced.updateOnSelectorChange);return c.advanced.updateOnSelectorChange&&t.length>0&&t.each(function(){e+=this.offsetHeight+this.offsetWidth}),e}function r(e){clearTimeout(f[0].autoUpdate),u.update.call(null,l[0],e)}var l=e(this),s=l.data(a),c=s.opt,f=e("#mCSB_"+s.idx+"_container");return t?(clearTimeout(f[0].autoUpdate),void $(f[0],"autoUpdate")):void o()},V=function(e,t,o){return Math.round(e/t)*t-o},Q=function(t){var o=t.data(a),n=e("#mCSB_"+o.idx+"_container,#mCSB_"+o.idx+"_container_wrapper,#mCSB_"+o.idx+"_dragger_vertical,#mCSB_"+o.idx+"_dragger_horizontal");n.each(function(){Z.call(this)})},G=function(t,o,n){function i(e){return s&&c.callbacks[e]&&"function"==typeof c.callbacks[e]}function r(){return[c.callbacks.alwaysTriggerOffsets||w>=S[0]+y,c.callbacks.alwaysTriggerOffsets||-B>=w]}function l(){var e=[h[0].offsetTop,h[0].offsetLeft],o=[x[0].offsetTop,x[0].offsetLeft],a=[h.outerHeight(!1),h.outerWidth(!1)],i=[f.height(),f.width()];t[0].mcs={content:h,top:e[0],left:e[1],draggerTop:o[0],draggerLeft:o[1],topPct:Math.round(100*Math.abs(e[0])/(Math.abs(a[0])-i[0])),leftPct:Math.round(100*Math.abs(e[1])/(Math.abs(a[1])-i[1])),direction:n.dir}}var s=t.data(a),c=s.opt,d={trigger:"internal",dir:"y",scrollEasing:"mcsEaseOut",drag:!1,dur:c.scrollInertia,overwrite:"all",callbacks:!0,onStart:!0,onUpdate:!0,onComplete:!0},n=e.extend(d,n),u=[n.dur,n.drag?0:n.dur],f=e("#mCSB_"+s.idx),h=e("#mCSB_"+s.idx+"_container"),m=h.parent(),p=c.callbacks.onTotalScrollOffset?Y.call(t,c.callbacks.onTotalScrollOffset):[0,0],g=c.callbacks.onTotalScrollBackOffset?Y.call(t,c.callbacks.onTotalScrollBackOffset):[0,0];if(s.trigger=n.trigger,0===m.scrollTop()&&0===m.scrollLeft()||(e(".mCSB_"+s.idx+"_scrollbar").css("visibility","visible"),m.scrollTop(0).scrollLeft(0)),"_resetY"!==o||s.contentReset.y||(i("onOverflowYNone")&&c.callbacks.onOverflowYNone.call(t[0]),s.contentReset.y=1),"_resetX"!==o||s.contentReset.x||(i("onOverflowXNone")&&c.callbacks.onOverflowXNone.call(t[0]),s.contentReset.x=1),"_resetY"!==o&&"_resetX"!==o){if(!s.contentReset.y&&t[0].mcs||!s.overflowed[0]||(i("onOverflowY")&&c.callbacks.onOverflowY.call(t[0]),s.contentReset.x=null),!s.contentReset.x&&t[0].mcs||!s.overflowed[1]||(i("onOverflowX")&&c.callbacks.onOverflowX.call(t[0]),s.contentReset.x=null),c.snapAmount){var v=c.snapAmount instanceof Array?"x"===n.dir?c.snapAmount[1]:c.snapAmount[0]:c.snapAmount;o=V(o,v,c.snapOffset)}switch(n.dir){case"x":var x=e("#mCSB_"+s.idx+"_dragger_horizontal"),_="left",w=h[0].offsetLeft,S=[f.width()-h.outerWidth(!1),x.parent().width()-x.width()],b=[o,0===o?0:o/s.scrollRatio.x],y=p[1],B=g[1],T=y>0?y/s.scrollRatio.x:0,k=B>0?B/s.scrollRatio.x:0;break;case"y":var x=e("#mCSB_"+s.idx+"_dragger_vertical"),_="top",w=h[0].offsetTop,S=[f.height()-h.outerHeight(!1),x.parent().height()-x.height()],b=[o,0===o?0:o/s.scrollRatio.y],y=p[0],B=g[0],T=y>0?y/s.scrollRatio.y:0,k=B>0?B/s.scrollRatio.y:0}b[1]<0||0===b[0]&&0===b[1]?b=[0,0]:b[1]>=S[1]?b=[S[0],S[1]]:b[0]=-b[0],t[0].mcs||(l(),i("onInit")&&c.callbacks.onInit.call(t[0])),clearTimeout(h[0].onCompleteTimeout),J(x[0],_,Math.round(b[1]),u[1],n.scrollEasing),!s.tweenRunning&&(0===w&&b[0]>=0||w===S[0]&&b[0]<=S[0])||J(h[0],_,Math.round(b[0]),u[0],n.scrollEasing,n.overwrite,{onStart:function(){n.callbacks&&n.onStart&&!s.tweenRunning&&(i("onScrollStart")&&(l(),c.callbacks.onScrollStart.call(t[0])),s.tweenRunning=!0,C(x),s.cbOffsets=r())},onUpdate:function(){n.callbacks&&n.onUpdate&&i("whileScrolling")&&(l(),c.callbacks.whileScrolling.call(t[0]))},onComplete:function(){if(n.callbacks&&n.onComplete){"yx"===c.axis&&clearTimeout(h[0].onCompleteTimeout);var e=h[0].idleTimer||0;h[0].onCompleteTimeout=setTimeout(function(){i("onScroll")&&(l(),c.callbacks.onScroll.call(t[0])),i("onTotalScroll")&&b[1]>=S[1]-T&&s.cbOffsets[0]&&(l(),c.callbacks.onTotalScroll.call(t[0])),i("onTotalScrollBack")&&b[1]<=k&&s.cbOffsets[1]&&(l(),c.callbacks.onTotalScrollBack.call(t[0])),s.tweenRunning=!1,h[0].idleTimer=0,C(x,"hide")},e)}}})}},J=function(e,t,o,a,n,i,r){function l(){S.stop||(x||m.call(),x=K()-v,s(),x>=S.time&&(S.time=x>S.time?x+f-(x-S.time):x+f-1,S.time<x+1&&(S.time=x+1)),S.time<a?S.id=h(l):g.call())}function s(){a>0?(S.currVal=u(S.time,_,b,a,n),w[t]=Math.round(S.currVal)+"px"):w[t]=o+"px",p.call()}function c(){f=1e3/60,S.time=x+f,h=window.requestAnimationFrame?window.requestAnimationFrame:function(e){return s(),setTimeout(e,.01)},S.id=h(l)}function d(){null!=S.id&&(window.requestAnimationFrame?window.cancelAnimationFrame(S.id):clearTimeout(S.id),S.id=null)}function u(e,t,o,a,n){switch(n){case"linear":case"mcsLinear":return o*e/a+t;case"mcsLinearOut":return e/=a,e--,o*Math.sqrt(1-e*e)+t;case"easeInOutSmooth":return e/=a/2,1>e?o/2*e*e+t:(e--,-o/2*(e*(e-2)-1)+t);case"easeInOutStrong":return e/=a/2,1>e?o/2*Math.pow(2,10*(e-1))+t:(e--,o/2*(-Math.pow(2,-10*e)+2)+t);case"easeInOut":case"mcsEaseInOut":return e/=a/2,1>e?o/2*e*e*e+t:(e-=2,o/2*(e*e*e+2)+t);case"easeOutSmooth":return e/=a,e--,-o*(e*e*e*e-1)+t;case"easeOutStrong":return o*(-Math.pow(2,-10*e/a)+1)+t;case"easeOut":case"mcsEaseOut":default:var i=(e/=a)*e,r=i*e;return t+o*(.499999999999997*r*i+-2.5*i*i+5.5*r+-6.5*i+4*e)}}e._mTween||(e._mTween={top:{},left:{}});var f,h,r=r||{},m=r.onStart||function(){},p=r.onUpdate||function(){},g=r.onComplete||function(){},v=K(),x=0,_=e.offsetTop,w=e.style,S=e._mTween[t];"left"===t&&(_=e.offsetLeft);var b=o-_;S.stop=0,"none"!==i&&d(),c()},K=function(){return window.performance&&window.performance.now?window.performance.now():window.performance&&window.performance.webkitNow?window.performance.webkitNow():Date.now?Date.now():(new Date).getTime()},Z=function(){var e=this;e._mTween||(e._mTween={top:{},left:{}});for(var t=["top","left"],o=0;o<t.length;o++){var a=t[o];e._mTween[a].id&&(window.requestAnimationFrame?window.cancelAnimationFrame(e._mTween[a].id):clearTimeout(e._mTween[a].id),e._mTween[a].id=null,e._mTween[a].stop=1)}},$=function(e,t){try{delete e[t]}catch(o){e[t]=null}},ee=function(e){return!(e.which&&1!==e.which)},te=function(e){var t=e.originalEvent.pointerType;return!(t&&"touch"!==t&&2!==t)},oe=function(e){return!isNaN(parseFloat(e))&&isFinite(e)},ae=function(e){var t=e.parents(".mCSB_container");return[e.offset().top-t.offset().top,e.offset().left-t.offset().left]},ne=function(){function e(){var e=["webkit","moz","ms","o"];if("hidden"in document)return"hidden";for(var t=0;t<e.length;t++)if(e[t]+"Hidden"in document)return e[t]+"Hidden";return null}var t=e();return t?document[t]:!1};e.fn[o]=function(t){return u[t]?u[t].apply(this,Array.prototype.slice.call(arguments,1)):"object"!=typeof t&&t?void e.error("Method "+t+" does not exist"):u.init.apply(this,arguments)},e[o]=function(t){return u[t]?u[t].apply(this,Array.prototype.slice.call(arguments,1)):"object"!=typeof t&&t?void e.error("Method "+t+" does not exist"):u.init.apply(this,arguments)},e[o].defaults=i,window[o]=!0,e(window).bind("load",function(){e(n)[o](),e.extend(e.expr[":"],{mcsInView:e.expr[":"].mcsInView||function(t){var o,a,n=e(t),i=n.parents(".mCSB_container");if(i.length)return o=i.parent(),a=[i[0].offsetTop,i[0].offsetLeft],a[0]+ae(n)[0]>=0&&a[0]+ae(n)[0]<o.height()-n.outerHeight(!1)&&a[1]+ae(n)[1]>=0&&a[1]+ae(n)[1]<o.width()-n.outerWidth(!1)},mcsInSight:e.expr[":"].mcsInSight||function(t,o,a){var n,i,r,l,s=e(t),c=s.parents(".mCSB_container"),d="exact"===a[3]?[[1,0],[1,0]]:[[.9,.1],[.6,.4]];if(c.length)return n=[s.outerHeight(!1),s.outerWidth(!1)],r=[c[0].offsetTop+ae(s)[0],c[0].offsetLeft+ae(s)[1]],i=[c.parent()[0].offsetHeight,c.parent()[0].offsetWidth],l=[n[0]<i[0]?d[0]:d[1],n[1]<i[1]?d[0]:d[1]],r[0]-i[0]*l[0][0]<0&&r[0]+n[0]-i[0]*l[0][1]>=0&&r[1]-i[1]*l[1][0]<0&&r[1]+n[1]-i[1]*l[1][1]>=0},mcsOverflow:e.expr[":"].mcsOverflow||function(t){var o=e(t).data(a);if(o)return o.overflowed[0]||o.overflowed[1]}})})})});
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+    } else {}
+}(function ($) {
+
+    var toFix  = ['wheel', 'mousewheel', 'DOMMouseScroll', 'MozMousePixelScroll'],
+        toBind = ( 'onwheel' in document || document.documentMode >= 9 ) ?
+                    ['wheel'] : ['mousewheel', 'DomMouseScroll', 'MozMousePixelScroll'],
+        slice  = Array.prototype.slice,
+        nullLowestDeltaTimeout, lowestDelta;
+
+    if ( $.event.fixHooks ) {
+        for ( var i = toFix.length; i; ) {
+            $.event.fixHooks[ toFix[--i] ] = $.event.mouseHooks;
+        }
+    }
+
+    var special = $.event.special.mousewheel = {
+        version: '3.1.12',
+
+        setup: function() {
+            if ( this.addEventListener ) {
+                for ( var i = toBind.length; i; ) {
+                    this.addEventListener( toBind[--i], handler, false );
+                }
+            } else {
+                this.onmousewheel = handler;
+            }
+            // Store the line height and page height for this particular element
+            $.data(this, 'mousewheel-line-height', special.getLineHeight(this));
+            $.data(this, 'mousewheel-page-height', special.getPageHeight(this));
+        },
+
+        teardown: function() {
+            if ( this.removeEventListener ) {
+                for ( var i = toBind.length; i; ) {
+                    this.removeEventListener( toBind[--i], handler, false );
+                }
+            } else {
+                this.onmousewheel = null;
+            }
+            // Clean up the data we added to the element
+            $.removeData(this, 'mousewheel-line-height');
+            $.removeData(this, 'mousewheel-page-height');
+        },
+
+        getLineHeight: function(elem) {
+            var $elem = $(elem),
+                $parent = $elem['offsetParent' in $.fn ? 'offsetParent' : 'parent']();
+            if (!$parent.length) {
+                $parent = $('body');
+            }
+            return parseInt($parent.css('fontSize'), 10) || parseInt($elem.css('fontSize'), 10) || 16;
+        },
+
+        getPageHeight: function(elem) {
+            return $(elem).height();
+        },
+
+        settings: {
+            adjustOldDeltas: true, // see shouldAdjustOldDeltas() below
+            normalizeOffset: true  // calls getBoundingClientRect for each event
+        }
+    };
+
+    $.fn.extend({
+        mousewheel: function(fn) {
+            return fn ? this.bind('mousewheel', fn) : this.trigger('mousewheel');
+        },
+
+        unmousewheel: function(fn) {
+            return this.unbind('mousewheel', fn);
+        }
+    });
+
+
+    function handler(event) {
+        var orgEvent   = event || window.event,
+            args       = slice.call(arguments, 1),
+            delta      = 0,
+            deltaX     = 0,
+            deltaY     = 0,
+            absDelta   = 0,
+            offsetX    = 0,
+            offsetY    = 0;
+        event = $.event.fix(orgEvent);
+        event.type = 'mousewheel';
+
+        // Old school scrollwheel delta
+        if ( 'detail'      in orgEvent ) { deltaY = orgEvent.detail * -1;      }
+        if ( 'wheelDelta'  in orgEvent ) { deltaY = orgEvent.wheelDelta;       }
+        if ( 'wheelDeltaY' in orgEvent ) { deltaY = orgEvent.wheelDeltaY;      }
+        if ( 'wheelDeltaX' in orgEvent ) { deltaX = orgEvent.wheelDeltaX * -1; }
+
+        // Firefox < 17 horizontal scrolling related to DOMMouseScroll event
+        if ( 'axis' in orgEvent && orgEvent.axis === orgEvent.HORIZONTAL_AXIS ) {
+            deltaX = deltaY * -1;
+            deltaY = 0;
+        }
+
+        // Set delta to be deltaY or deltaX if deltaY is 0 for backwards compatabilitiy
+        delta = deltaY === 0 ? deltaX : deltaY;
+
+        // New school wheel delta (wheel event)
+        if ( 'deltaY' in orgEvent ) {
+            deltaY = orgEvent.deltaY * -1;
+            delta  = deltaY;
+        }
+        if ( 'deltaX' in orgEvent ) {
+            deltaX = orgEvent.deltaX;
+            if ( deltaY === 0 ) { delta  = deltaX * -1; }
+        }
+
+        // No change actually happened, no reason to go any further
+        if ( deltaY === 0 && deltaX === 0 ) { return; }
+
+        // Need to convert lines and pages to pixels if we aren't already in pixels
+        // There are three delta modes:
+        //   * deltaMode 0 is by pixels, nothing to do
+        //   * deltaMode 1 is by lines
+        //   * deltaMode 2 is by pages
+        if ( orgEvent.deltaMode === 1 ) {
+            var lineHeight = $.data(this, 'mousewheel-line-height');
+            delta  *= lineHeight;
+            deltaY *= lineHeight;
+            deltaX *= lineHeight;
+        } else if ( orgEvent.deltaMode === 2 ) {
+            var pageHeight = $.data(this, 'mousewheel-page-height');
+            delta  *= pageHeight;
+            deltaY *= pageHeight;
+            deltaX *= pageHeight;
+        }
+
+        // Store lowest absolute delta to normalize the delta values
+        absDelta = Math.max( Math.abs(deltaY), Math.abs(deltaX) );
+
+        if ( !lowestDelta || absDelta < lowestDelta ) {
+            lowestDelta = absDelta;
+
+            // Adjust older deltas if necessary
+            if ( shouldAdjustOldDeltas(orgEvent, absDelta) ) {
+                lowestDelta /= 40;
+            }
+        }
+
+        // Adjust older deltas if necessary
+        if ( shouldAdjustOldDeltas(orgEvent, absDelta) ) {
+            // Divide all the things by 40!
+            delta  /= 40;
+            deltaX /= 40;
+            deltaY /= 40;
+        }
+
+        // Get a whole, normalized value for the deltas
+        delta  = Math[ delta  >= 1 ? 'floor' : 'ceil' ](delta  / lowestDelta);
+        deltaX = Math[ deltaX >= 1 ? 'floor' : 'ceil' ](deltaX / lowestDelta);
+        deltaY = Math[ deltaY >= 1 ? 'floor' : 'ceil' ](deltaY / lowestDelta);
+
+        // Normalise offsetX and offsetY properties
+        if ( special.settings.normalizeOffset && this.getBoundingClientRect ) {
+            var boundingRect = this.getBoundingClientRect();
+            offsetX = event.clientX - boundingRect.left;
+            offsetY = event.clientY - boundingRect.top;
+        }
+
+        // Add information to the event object
+        event.deltaX = deltaX;
+        event.deltaY = deltaY;
+        event.deltaFactor = lowestDelta;
+        event.offsetX = offsetX;
+        event.offsetY = offsetY;
+        // Go ahead and set deltaMode to 0 since we converted to pixels
+        // Although this is a little odd since we overwrite the deltaX/Y
+        // properties with normalized deltas.
+        event.deltaMode = 0;
+
+        // Add event and delta to the front of the arguments
+        args.unshift(event, delta, deltaX, deltaY);
+
+        // Clearout lowestDelta after sometime to better
+        // handle multiple device types that give different
+        // a different lowestDelta
+        // Ex: trackpad = 3 and mouse wheel = 120
+        if (nullLowestDeltaTimeout) { clearTimeout(nullLowestDeltaTimeout); }
+        nullLowestDeltaTimeout = setTimeout(nullLowestDelta, 200);
+
+        return ($.event.dispatch || $.event.handle).apply(this, args);
+    }
+
+    function nullLowestDelta() {
+        lowestDelta = null;
+    }
+
+    function shouldAdjustOldDeltas(orgEvent, absDelta) {
+        // If this is an older event and the delta is divisable by 120,
+        // then we are assuming that the browser is treating this as an
+        // older mouse wheel event and that we should divide the deltas
+        // by 40 to try and get a more usable deltaFactor.
+        // Side note, this actually impacts the reported scroll distance
+        // in older browsers and can cause scrolling to be slower than native.
+        // Turn this off by setting $.event.special.mousewheel.settings.adjustOldDeltas to false.
+        return special.settings.adjustOldDeltas && orgEvent.type === 'mousewheel' && absDelta % 120 === 0;
+    }
+
+}));
+
 
 /***/ }),
 /* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// Imports
+var getUrl = __webpack_require__(3);
+var ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(65));
+// Module
+exports.push([module.i, "/*\r\n== malihu jquery custom scrollbar plugin ==\r\nPlugin URI: http://manos.malihu.gr/jquery-custom-content-scroller\r\n*/\r\n\r\n\r\n\r\n/*\r\nCONTENTS: \r\n\t1. BASIC STYLE - Plugin's basic/essential CSS properties (normally, should not be edited). \r\n\t2. VERTICAL SCROLLBAR - Positioning and dimensions of vertical scrollbar. \r\n\t3. HORIZONTAL SCROLLBAR - Positioning and dimensions of horizontal scrollbar.\r\n\t4. VERTICAL AND HORIZONTAL SCROLLBARS - Positioning and dimensions of 2-axis scrollbars. \r\n\t5. TRANSITIONS - CSS3 transitions for hover events, auto-expanded and auto-hidden scrollbars. \r\n\t6. SCROLLBAR COLORS, OPACITY AND BACKGROUNDS \r\n\t\t6.1 THEMES - Scrollbar colors, opacity, dimensions, backgrounds etc. via ready-to-use themes.\r\n*/\r\n\r\n\r\n\r\n/* \r\n------------------------------------------------------------------------------------------------------------------------\r\n1. BASIC STYLE  \r\n------------------------------------------------------------------------------------------------------------------------\r\n*/\r\n\r\n\t.mCustomScrollbar{ touch-action: pinch-zoom; /* direct pointer events to js */ }\r\n\t.mCustomScrollbar.mCS_no_scrollbar, .mCustomScrollbar.mCS_touch_action{ touch-action: auto; }\r\n\t\r\n\t.mCustomScrollBox{ /* contains plugin's markup */\r\n\t\tposition: relative;\r\n\t\toverflow: hidden;\r\n\t\theight: 100%;\r\n\t\tmax-width: 100%;\r\n\t\toutline: none;\r\n\t\tdirection: ltr;\r\n\t}\r\n\r\n\t.mCSB_container{ /* contains the original content */\r\n\t\toverflow: hidden;\r\n\t\twidth: auto;\r\n\t\theight: auto;\r\n\t}\r\n\r\n\r\n\r\n/* \r\n------------------------------------------------------------------------------------------------------------------------\r\n2. VERTICAL SCROLLBAR \r\ny-axis\r\n------------------------------------------------------------------------------------------------------------------------\r\n*/\r\n\r\n\t.mCSB_inside > .mCSB_container{ margin-right: 30px; }\r\n\r\n\t.mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden{ margin-right: 0; } /* non-visible scrollbar */\r\n\t\r\n\t.mCS-dir-rtl > .mCSB_inside > .mCSB_container{ /* RTL direction/left-side scrollbar */\r\n\t\tmargin-right: 0;\r\n\t\tmargin-left: 30px;\r\n\t}\r\n\t\r\n\t.mCS-dir-rtl > .mCSB_inside > .mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden{ margin-left: 0; } /* RTL direction/left-side scrollbar */\r\n\r\n\t.mCSB_scrollTools{ /* contains scrollbar markup (draggable element, dragger rail, buttons etc.) */\r\n\t\tposition: absolute;\r\n\t\twidth: 16px;\r\n\t\theight: auto;\r\n\t\tleft: auto;\r\n\t\ttop: 0;\r\n\t\tright: 0;\r\n\t\tbottom: 0;\r\n\t}\r\n\r\n\t.mCSB_outside + .mCSB_scrollTools{ right: -26px; } /* scrollbar position: outside */\r\n\t\r\n\t.mCS-dir-rtl > .mCSB_inside > .mCSB_scrollTools, \r\n\t.mCS-dir-rtl > .mCSB_outside + .mCSB_scrollTools{ /* RTL direction/left-side scrollbar */\r\n\t\tright: auto;\r\n\t\tleft: 0;\r\n\t}\r\n\t\r\n\t.mCS-dir-rtl > .mCSB_outside + .mCSB_scrollTools{ left: -26px; } /* RTL direction/left-side scrollbar (scrollbar position: outside) */\r\n\r\n\t.mCSB_scrollTools .mCSB_draggerContainer{ /* contains the draggable element and dragger rail markup */\r\n\t\tposition: absolute;\r\n\t\ttop: 0;\r\n\t\tleft: 0;\r\n\t\tbottom: 0;\r\n\t\tright: 0; \r\n\t\theight: auto;\r\n\t}\r\n\r\n\t.mCSB_scrollTools a + .mCSB_draggerContainer{ margin: 20px 0; }\r\n\r\n\t.mCSB_scrollTools .mCSB_draggerRail{\r\n\t\twidth: 2px;\r\n\t\theight: 100%;\r\n\t\tmargin: 0 auto; border-radius: 16px;\r\n\t}\r\n\r\n\t.mCSB_scrollTools .mCSB_dragger{ /* the draggable element */\r\n\t\tcursor: pointer;\r\n\t\twidth: 100%;\r\n\t\theight: 30px; /* minimum dragger height */\r\n\t\tz-index: 1;\r\n\t}\r\n\r\n\t.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ /* the dragger element */\r\n\t\tposition: relative;\r\n\t\twidth: 4px;\r\n\t\theight: 100%;\r\n\t\tmargin: 0 auto; border-radius: 16px;\r\n\t\ttext-align: center;\r\n\t}\r\n\t\r\n\t.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, \r\n\t.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{ width: 12px; /* auto-expanded scrollbar */ }\r\n\t\r\n\t.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, \r\n\t.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{ width: 8px; /* auto-expanded scrollbar */ }\r\n\r\n\t.mCSB_scrollTools .mCSB_buttonUp,\r\n\t.mCSB_scrollTools .mCSB_buttonDown{\r\n\t\tdisplay: block;\r\n\t\tposition: absolute;\r\n\t\theight: 20px;\r\n\t\twidth: 100%;\r\n\t\toverflow: hidden;\r\n\t\tmargin: 0 auto;\r\n\t\tcursor: pointer;\r\n\t}\r\n\r\n\t.mCSB_scrollTools .mCSB_buttonDown{ bottom: 0; }\r\n\r\n\r\n\r\n/* \r\n------------------------------------------------------------------------------------------------------------------------\r\n3. HORIZONTAL SCROLLBAR \r\nx-axis\r\n------------------------------------------------------------------------------------------------------------------------\r\n*/\r\n\r\n\t.mCSB_horizontal.mCSB_inside > .mCSB_container{\r\n\t\tmargin-right: 0;\r\n\t\tmargin-bottom: 30px;\r\n\t}\r\n\t\r\n\t.mCSB_horizontal.mCSB_outside > .mCSB_container{ min-height: 100%; }\r\n\r\n\t.mCSB_horizontal > .mCSB_container.mCS_no_scrollbar_x.mCS_x_hidden{ margin-bottom: 0; } /* non-visible scrollbar */\r\n\r\n\t.mCSB_scrollTools.mCSB_scrollTools_horizontal{\r\n\t\twidth: auto;\r\n\t\theight: 16px;\r\n\t\ttop: auto;\r\n\t\tright: 0;\r\n\t\tbottom: 0;\r\n\t\tleft: 0;\r\n\t}\r\n\r\n\t.mCustomScrollBox + .mCSB_scrollTools.mCSB_scrollTools_horizontal,\r\n\t.mCustomScrollBox + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal{ bottom: -26px; } /* scrollbar position: outside */\r\n\r\n\t.mCSB_scrollTools.mCSB_scrollTools_horizontal a + .mCSB_draggerContainer{ margin: 0 20px; }\r\n\r\n\t.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_draggerRail{\r\n\t\twidth: 100%;\r\n\t\theight: 2px;\r\n\t\tmargin: 7px 0;\r\n\t}\r\n\r\n\t.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger{\r\n\t\twidth: 30px; /* minimum dragger width */\r\n\t\theight: 100%;\r\n\t\tleft: 0;\r\n\t}\r\n\r\n\t.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{\r\n\t\twidth: 100%;\r\n\t\theight: 4px;\r\n\t\tmargin: 6px auto;\r\n\t}\r\n\t\r\n\t.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, \r\n\t.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{\r\n\t\theight: 12px; /* auto-expanded scrollbar */\r\n\t\tmargin: 2px auto;\r\n\t}\r\n\t\r\n\t.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, \r\n\t.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{\r\n\t\theight: 8px; /* auto-expanded scrollbar */\r\n\t\tmargin: 4px 0;\r\n\t}\r\n\r\n\t.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft,\r\n\t.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight{\r\n\t\tdisplay: block;\r\n\t\tposition: absolute;\r\n\t\twidth: 20px;\r\n\t\theight: 100%;\r\n\t\toverflow: hidden;\r\n\t\tmargin: 0 auto;\r\n\t\tcursor: pointer;\r\n\t}\r\n\t\r\n\t.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft{ left: 0; }\r\n\r\n\t.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight{ right: 0; }\r\n\r\n\r\n\r\n/* \r\n------------------------------------------------------------------------------------------------------------------------\r\n4. VERTICAL AND HORIZONTAL SCROLLBARS \r\nyx-axis \r\n------------------------------------------------------------------------------------------------------------------------\r\n*/\r\n\r\n\t.mCSB_container_wrapper{\r\n\t\tposition: absolute;\r\n\t\theight: auto;\r\n\t\twidth: auto;\r\n\t\toverflow: hidden;\r\n\t\ttop: 0;\r\n\t\tleft: 0;\r\n\t\tright: 0;\r\n\t\tbottom: 0;\r\n\t\tmargin-right: 30px;\r\n\t\tmargin-bottom: 30px;\r\n\t}\r\n\t\r\n\t.mCSB_container_wrapper > .mCSB_container{\r\n\t\tpadding-right: 30px;\r\n\t\tpadding-bottom: 30px; box-sizing: border-box;\r\n\t}\r\n\t\r\n\t.mCSB_vertical_horizontal > .mCSB_scrollTools.mCSB_scrollTools_vertical{ bottom: 20px; }\r\n\t\r\n\t.mCSB_vertical_horizontal > .mCSB_scrollTools.mCSB_scrollTools_horizontal{ right: 20px; }\r\n\t\r\n\t/* non-visible horizontal scrollbar */\r\n\t.mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden + .mCSB_scrollTools.mCSB_scrollTools_vertical{ bottom: 0; }\r\n\t\r\n\t/* non-visible vertical scrollbar/RTL direction/left-side scrollbar */\r\n\t.mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden + .mCSB_scrollTools ~ .mCSB_scrollTools.mCSB_scrollTools_horizontal, \r\n\t.mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_scrollTools.mCSB_scrollTools_horizontal{ right: 0; }\r\n\t\r\n\t/* RTL direction/left-side scrollbar */\r\n\t.mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_scrollTools.mCSB_scrollTools_horizontal{ left: 20px; }\r\n\t\r\n\t/* non-visible scrollbar/RTL direction/left-side scrollbar */\r\n\t.mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden + .mCSB_scrollTools ~ .mCSB_scrollTools.mCSB_scrollTools_horizontal{ left: 0; }\r\n\t\r\n\t.mCS-dir-rtl > .mCSB_inside > .mCSB_container_wrapper{ /* RTL direction/left-side scrollbar */\r\n\t\tmargin-right: 0;\r\n\t\tmargin-left: 30px;\r\n\t}\r\n\t\r\n\t.mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden > .mCSB_container{ padding-right: 0; }\r\n\t\r\n\t.mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden > .mCSB_container{ padding-bottom: 0; }\r\n\t\r\n\t.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden{\r\n\t\tmargin-right: 0; /* non-visible scrollbar */\r\n\t\tmargin-left: 0;\r\n\t}\r\n\t\r\n\t/* non-visible horizontal scrollbar */\r\n\t.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden{ margin-bottom: 0; }\r\n\r\n\r\n\r\n/* \r\n------------------------------------------------------------------------------------------------------------------------\r\n5. TRANSITIONS  \r\n------------------------------------------------------------------------------------------------------------------------\r\n*/\r\n\r\n\t.mCSB_scrollTools, \r\n\t.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCSB_scrollTools .mCSB_buttonUp,\r\n\t.mCSB_scrollTools .mCSB_buttonDown,\r\n\t.mCSB_scrollTools .mCSB_buttonLeft,\r\n\t.mCSB_scrollTools .mCSB_buttonRight{\r\n\t\ttransition: opacity .2s ease-in-out, background-color .2s ease-in-out;\r\n\t}\r\n\t\r\n\t.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger_bar, /* auto-expanded scrollbar */\r\n\t.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail, \r\n\t.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger_bar, \r\n\t.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail{ \r\n\t\ttransition: width .2s ease-out .2s, height .2s ease-out .2s, \r\n\t\t\t\t\tmargin-left .2s ease-out .2s, margin-right .2s ease-out .2s, \r\n\t\t\t\t\tmargin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s,\r\n\t\t\t\t\topacity .2s ease-in-out, background-color .2s ease-in-out; \r\n\t}\r\n\r\n\r\n\r\n/* \r\n------------------------------------------------------------------------------------------------------------------------\r\n6. SCROLLBAR COLORS, OPACITY AND BACKGROUNDS  \r\n------------------------------------------------------------------------------------------------------------------------\r\n*/\r\n\r\n\t/* \r\n\t----------------------------------------\r\n\t6.1 THEMES \r\n\t----------------------------------------\r\n\t*/\r\n\t\r\n\t/* default theme (\"light\") */\r\n\r\n\t.mCSB_scrollTools{ opacity: 0.75; filter: \"alpha(opacity=75)\"; -ms-filter: \"alpha(opacity=75)\"; }\r\n\t\r\n\t.mCS-autoHide > .mCustomScrollBox > .mCSB_scrollTools,\r\n\t.mCS-autoHide > .mCustomScrollBox ~ .mCSB_scrollTools{ opacity: 0; filter: \"alpha(opacity=0)\"; -ms-filter: \"alpha(opacity=0)\"; }\r\n\t\r\n\t.mCustomScrollbar > .mCustomScrollBox > .mCSB_scrollTools.mCSB_scrollTools_onDrag,\r\n\t.mCustomScrollbar > .mCustomScrollBox ~ .mCSB_scrollTools.mCSB_scrollTools_onDrag,\r\n\t.mCustomScrollBox:hover > .mCSB_scrollTools,\r\n\t.mCustomScrollBox:hover ~ .mCSB_scrollTools,\r\n\t.mCS-autoHide:hover > .mCustomScrollBox > .mCSB_scrollTools,\r\n\t.mCS-autoHide:hover > .mCustomScrollBox ~ .mCSB_scrollTools{ opacity: 1; filter: \"alpha(opacity=100)\"; -ms-filter: \"alpha(opacity=100)\"; }\r\n\r\n\t.mCSB_scrollTools .mCSB_draggerRail{\r\n\t\tbackground-color: #000; background-color: rgba(0,0,0,0.4);\r\n\t\tfilter: \"alpha(opacity=40)\"; -ms-filter: \"alpha(opacity=40)\"; \r\n\t}\r\n\r\n\t.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{\r\n\t\tbackground-color: #fff; background-color: rgba(255,255,255,0.75);\r\n\t\tfilter: \"alpha(opacity=75)\"; -ms-filter: \"alpha(opacity=75)\"; \r\n\t}\r\n\r\n\t.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{\r\n\t\tbackground-color: #fff; background-color: rgba(255,255,255,0.85);\r\n\t\tfilter: \"alpha(opacity=85)\"; -ms-filter: \"alpha(opacity=85)\"; \r\n\t}\r\n\t.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{\r\n\t\tbackground-color: #fff; background-color: rgba(255,255,255,0.9);\r\n\t\tfilter: \"alpha(opacity=90)\"; -ms-filter: \"alpha(opacity=90)\"; \r\n\t}\r\n\r\n\t.mCSB_scrollTools .mCSB_buttonUp,\r\n\t.mCSB_scrollTools .mCSB_buttonDown,\r\n\t.mCSB_scrollTools .mCSB_buttonLeft,\r\n\t.mCSB_scrollTools .mCSB_buttonRight{\r\n\t\tbackground-image: url(" + ___CSS_LOADER_URL___0___ + "); /* css sprites */\r\n\t\tbackground-repeat: no-repeat;\r\n\t\topacity: 0.4; filter: \"alpha(opacity=40)\"; -ms-filter: \"alpha(opacity=40)\"; \r\n\t}\r\n\r\n\t.mCSB_scrollTools .mCSB_buttonUp{\r\n\t\tbackground-position: 0 0;\r\n\t\t/* \r\n\t\tsprites locations \r\n\t\tlight: 0 0, -16px 0, -32px 0, -48px 0, 0 -72px, -16px -72px, -32px -72px\r\n\t\tdark: -80px 0, -96px 0, -112px 0, -128px 0, -80px -72px, -96px -72px, -112px -72px\r\n\t\t*/\r\n\t}\r\n\r\n\t.mCSB_scrollTools .mCSB_buttonDown{\r\n\t\tbackground-position: 0 -20px;\r\n\t\t/* \r\n\t\tsprites locations\r\n\t\tlight: 0 -20px, -16px -20px, -32px -20px, -48px -20px, 0 -92px, -16px -92px, -32px -92px\r\n\t\tdark: -80px -20px, -96px -20px, -112px -20px, -128px -20px, -80px -92px, -96px -92px, -112 -92px\r\n\t\t*/\r\n\t}\r\n\r\n\t.mCSB_scrollTools .mCSB_buttonLeft{\r\n\t\tbackground-position: 0 -40px;\r\n\t\t/* \r\n\t\tsprites locations \r\n\t\tlight: 0 -40px, -20px -40px, -40px -40px, -60px -40px, 0 -112px, -20px -112px, -40px -112px\r\n\t\tdark: -80px -40px, -100px -40px, -120px -40px, -140px -40px, -80px -112px, -100px -112px, -120px -112px\r\n\t\t*/\r\n\t}\r\n\r\n\t.mCSB_scrollTools .mCSB_buttonRight{\r\n\t\tbackground-position: 0 -56px;\r\n\t\t/* \r\n\t\tsprites locations \r\n\t\tlight: 0 -56px, -20px -56px, -40px -56px, -60px -56px, 0 -128px, -20px -128px, -40px -128px\r\n\t\tdark: -80px -56px, -100px -56px, -120px -56px, -140px -56px, -80px -128px, -100px -128px, -120px -128px\r\n\t\t*/\r\n\t}\r\n\r\n\t.mCSB_scrollTools .mCSB_buttonUp:hover,\r\n\t.mCSB_scrollTools .mCSB_buttonDown:hover,\r\n\t.mCSB_scrollTools .mCSB_buttonLeft:hover,\r\n\t.mCSB_scrollTools .mCSB_buttonRight:hover{ opacity: 0.75; filter: \"alpha(opacity=75)\"; -ms-filter: \"alpha(opacity=75)\"; }\r\n\r\n\t.mCSB_scrollTools .mCSB_buttonUp:active,\r\n\t.mCSB_scrollTools .mCSB_buttonDown:active,\r\n\t.mCSB_scrollTools .mCSB_buttonLeft:active,\r\n\t.mCSB_scrollTools .mCSB_buttonRight:active{ opacity: 0.9; filter: \"alpha(opacity=90)\"; -ms-filter: \"alpha(opacity=90)\"; }\r\n\t\r\n\r\n\t/* theme: \"dark\" */\r\n\r\n\t.mCS-dark.mCSB_scrollTools .mCSB_draggerRail{ background-color: #000; background-color: rgba(0,0,0,0.15); }\r\n\r\n\t.mCS-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.75); }\r\n\r\n\t.mCS-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: rgba(0,0,0,0.85); }\r\n\r\n\t.mCS-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: rgba(0,0,0,0.9); }\r\n\r\n\t.mCS-dark.mCSB_scrollTools .mCSB_buttonUp{ background-position: -80px 0; }\r\n\r\n\t.mCS-dark.mCSB_scrollTools .mCSB_buttonDown{ background-position: -80px -20px; }\r\n\r\n\t.mCS-dark.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -80px -40px; }\r\n\r\n\t.mCS-dark.mCSB_scrollTools .mCSB_buttonRight{ background-position: -80px -56px; }\r\n\t\r\n\t/* ---------------------------------------- */\r\n\t\r\n\r\n\r\n\t/* theme: \"light-2\", \"dark-2\" */\r\n\r\n\t.mCS-light-2.mCSB_scrollTools .mCSB_draggerRail, \r\n\t.mCS-dark-2.mCSB_scrollTools .mCSB_draggerRail{\r\n\t\twidth: 4px;\r\n\t\tbackground-color: #fff; background-color: rgba(255,255,255,0.1); border-radius: 1px;\r\n\t}\r\n\r\n\t.mCS-light-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-dark-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{\r\n\t\twidth: 4px;\r\n\t\tbackground-color: #fff; background-color: rgba(255,255,255,0.75); border-radius: 1px;\r\n\t}\r\n\r\n\t.mCS-light-2.mCSB_scrollTools_horizontal .mCSB_draggerRail, \r\n\t.mCS-dark-2.mCSB_scrollTools_horizontal .mCSB_draggerRail, \r\n\t.mCS-light-2.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-dark-2.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{\r\n\t\twidth: 100%;\r\n\t\theight: 4px;\r\n\t\tmargin: 6px auto;\r\n\t}\r\n\r\n\t.mCS-light-2.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #fff; background-color: rgba(255,255,255,0.85); }\r\n\r\n\t.mCS-light-2.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-light-2.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #fff; background-color: rgba(255,255,255,0.9); }\r\n\r\n\t.mCS-light-2.mCSB_scrollTools .mCSB_buttonUp{ background-position: -32px 0; }\r\n\r\n\t.mCS-light-2.mCSB_scrollTools .mCSB_buttonDown{\tbackground-position: -32px -20px; }\r\n\r\n\t.mCS-light-2.mCSB_scrollTools .mCSB_buttonLeft{\tbackground-position: -40px -40px; }\r\n\r\n\t.mCS-light-2.mCSB_scrollTools .mCSB_buttonRight{ background-position: -40px -56px; }\r\n\t\r\n\t\r\n\t/* theme: \"dark-2\" */\r\n\r\n\t.mCS-dark-2.mCSB_scrollTools .mCSB_draggerRail{\r\n\t\tbackground-color: #000; background-color: rgba(0,0,0,0.1); border-radius: 1px;\r\n\t}\r\n\r\n\t.mCS-dark-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{\r\n\t\tbackground-color: #000; background-color: rgba(0,0,0,0.75); border-radius: 1px;\r\n\t}\r\n\r\n\t.mCS-dark-2.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.85); }\r\n\r\n\t.mCS-dark-2.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-dark-2.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.9); }\r\n\r\n\t.mCS-dark-2.mCSB_scrollTools .mCSB_buttonUp{ background-position: -112px 0; }\r\n\r\n\t.mCS-dark-2.mCSB_scrollTools .mCSB_buttonDown{ background-position: -112px -20px; }\r\n\r\n\t.mCS-dark-2.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -120px -40px; }\r\n\r\n\t.mCS-dark-2.mCSB_scrollTools .mCSB_buttonRight{\tbackground-position: -120px -56px; }\r\n\t\r\n\t/* ---------------------------------------- */\r\n\t\r\n\r\n\r\n\t/* theme: \"light-thick\", \"dark-thick\" */\r\n\r\n\t.mCS-light-thick.mCSB_scrollTools .mCSB_draggerRail, \r\n\t.mCS-dark-thick.mCSB_scrollTools .mCSB_draggerRail{\r\n\t\twidth: 4px;\r\n\t\tbackground-color: #fff; background-color: rgba(255,255,255,0.1); border-radius: 2px;\r\n\t}\r\n\r\n\t.mCS-light-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{\r\n\t\twidth: 6px;\r\n\t\tbackground-color: #fff; background-color: rgba(255,255,255,0.75); border-radius: 2px;\r\n\t}\r\n\r\n\t.mCS-light-thick.mCSB_scrollTools_horizontal .mCSB_draggerRail, \r\n\t.mCS-dark-thick.mCSB_scrollTools_horizontal .mCSB_draggerRail{\r\n\t\twidth: 100%;\r\n\t\theight: 4px;\r\n\t\tmargin: 6px 0;\r\n\t}\r\n\r\n\t.mCS-light-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-dark-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{\r\n\t\twidth: 100%;\r\n\t\theight: 6px;\r\n\t\tmargin: 5px auto;\r\n\t}\r\n\r\n\t.mCS-light-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #fff; background-color: rgba(255,255,255,0.85); }\r\n\r\n\t.mCS-light-thick.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-light-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #fff; background-color: rgba(255,255,255,0.9); }\r\n\r\n\t.mCS-light-thick.mCSB_scrollTools .mCSB_buttonUp{ background-position: -16px 0; }\r\n\r\n\t.mCS-light-thick.mCSB_scrollTools .mCSB_buttonDown{\tbackground-position: -16px -20px; }\r\n\r\n\t.mCS-light-thick.mCSB_scrollTools .mCSB_buttonLeft{\tbackground-position: -20px -40px; }\r\n\r\n\t.mCS-light-thick.mCSB_scrollTools .mCSB_buttonRight{ background-position: -20px -56px; }\r\n\r\n\r\n\t/* theme: \"dark-thick\" */\r\n\t\r\n\t.mCS-dark-thick.mCSB_scrollTools .mCSB_draggerRail{\r\n\t\tbackground-color: #000; background-color: rgba(0,0,0,0.1); border-radius: 2px;\r\n\t}\r\n\r\n\t.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{\r\n\t\tbackground-color: #000; background-color: rgba(0,0,0,0.75); border-radius: 2px;\r\n\t}\r\n\r\n\t.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.85); }\r\n\r\n\t.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.9); }\r\n\r\n\t.mCS-dark-thick.mCSB_scrollTools .mCSB_buttonUp{ background-position: -96px 0; }\r\n\r\n\t.mCS-dark-thick.mCSB_scrollTools .mCSB_buttonDown{ background-position: -96px -20px; }\r\n\r\n\t.mCS-dark-thick.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -100px -40px; }\r\n\r\n\t.mCS-dark-thick.mCSB_scrollTools .mCSB_buttonRight{\tbackground-position: -100px -56px; }\r\n\t\r\n\t/* ---------------------------------------- */\r\n\t\r\n\r\n\r\n\t/* theme: \"light-thin\", \"dark-thin\" */\r\n\t\r\n\t.mCS-light-thin.mCSB_scrollTools .mCSB_draggerRail{ background-color: #fff; background-color: rgba(255,255,255,0.1); }\r\n\r\n\t.mCS-light-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ width: 2px; }\r\n\r\n\t.mCS-light-thin.mCSB_scrollTools_horizontal .mCSB_draggerRail, \r\n\t.mCS-dark-thin.mCSB_scrollTools_horizontal .mCSB_draggerRail{ width: 100%; }\r\n\r\n\t.mCS-light-thin.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-dark-thin.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{\r\n\t\twidth: 100%;\r\n\t\theight: 2px;\r\n\t\tmargin: 7px auto;\r\n\t}\r\n\r\n\r\n\t/* theme \"dark-thin\" */\r\n\t\r\n\t.mCS-dark-thin.mCSB_scrollTools .mCSB_draggerRail{ background-color: #000; background-color: rgba(0,0,0,0.15); }\r\n\r\n\t.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.75); }\r\n\t\r\n\t.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.85); }\r\n\t\r\n\t.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.9); }\r\n\t\r\n\t.mCS-dark-thin.mCSB_scrollTools .mCSB_buttonUp{\tbackground-position: -80px 0; }\r\n\r\n\t.mCS-dark-thin.mCSB_scrollTools .mCSB_buttonDown{ background-position: -80px -20px; }\r\n\r\n\t.mCS-dark-thin.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -80px -40px; }\r\n\r\n\t.mCS-dark-thin.mCSB_scrollTools .mCSB_buttonRight{ background-position: -80px -56px; }\r\n\t\r\n\t/* ---------------------------------------- */\r\n\t\r\n\t\r\n\t\r\n\t/* theme \"rounded\", \"rounded-dark\", \"rounded-dots\", \"rounded-dots-dark\" */\r\n\t\r\n\t.mCS-rounded.mCSB_scrollTools .mCSB_draggerRail{ background-color: #fff; background-color: rgba(255,255,255,0.15); }\r\n\t\r\n\t.mCS-rounded.mCSB_scrollTools .mCSB_dragger, \r\n\t.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger, \r\n\t.mCS-rounded-dots.mCSB_scrollTools .mCSB_dragger, \r\n\t.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger{ height: 14px; }\r\n\t\r\n\t.mCS-rounded.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-rounded-dots.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{\r\n\t\twidth: 14px;\r\n\t\tmargin: 0 1px;\r\n\t}\r\n\t\r\n\t.mCS-rounded.mCSB_scrollTools_horizontal .mCSB_dragger, \r\n\t.mCS-rounded-dark.mCSB_scrollTools_horizontal .mCSB_dragger, \r\n\t.mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_dragger, \r\n\t.mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_dragger{ width: 14px; }\r\n\t\r\n\t.mCS-rounded.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-rounded-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{\r\n\t\theight: 14px;\r\n\t\tmargin: 1px 0;\r\n\t}\r\n\t\r\n\t.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, \r\n\t.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, \r\n\t.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{\r\n\t\twidth: 16px; /* auto-expanded scrollbar */\r\n\t\theight: 16px;\r\n\t\tmargin: -1px 0;\r\n\t}\r\n\t\r\n\t.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, \r\n\t.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail, \r\n\t.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, \r\n\t.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{ width: 4px; /* auto-expanded scrollbar */ }\r\n\t\r\n\t.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, \r\n\t.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, \r\n\t.mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{\r\n\t\theight: 16px; /* auto-expanded scrollbar */\r\n\t\twidth: 16px;\r\n\t\tmargin: 0 -1px;\r\n\t}\r\n\t\r\n\t.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, \r\n\t.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail, \r\n\t.mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, \r\n\t.mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{\r\n\t\theight: 4px; /* auto-expanded scrollbar */\r\n\t\tmargin: 6px 0;\r\n\t}\r\n\t\r\n\t.mCS-rounded.mCSB_scrollTools .mCSB_buttonUp{ background-position: 0 -72px; }\r\n\t\r\n\t.mCS-rounded.mCSB_scrollTools .mCSB_buttonDown{ background-position: 0 -92px; }\r\n\t\r\n\t.mCS-rounded.mCSB_scrollTools .mCSB_buttonLeft{ background-position: 0 -112px; }\r\n\t\r\n\t.mCS-rounded.mCSB_scrollTools .mCSB_buttonRight{ background-position: 0 -128px; }\r\n\t\r\n\t\r\n\t/* theme \"rounded-dark\", \"rounded-dots-dark\" */\r\n\t\r\n\t.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.75); }\r\n\t\r\n\t.mCS-rounded-dark.mCSB_scrollTools .mCSB_draggerRail{ background-color: #000; background-color: rgba(0,0,0,0.15); }\r\n\t\r\n\t.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, \r\n\t.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.85); }\r\n\t\r\n\t.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, \r\n\t.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.9); }\r\n\t\r\n\t.mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonUp{ background-position: -80px -72px; }\r\n\t\r\n\t.mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonDown{ background-position: -80px -92px; }\r\n\t\r\n\t.mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -80px -112px; }\r\n\t\r\n\t.mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonRight{ background-position: -80px -128px; }\r\n\t\r\n\t\r\n\t/* theme \"rounded-dots\", \"rounded-dots-dark\" */\r\n\t\r\n\t.mCS-rounded-dots.mCSB_scrollTools_vertical .mCSB_draggerRail, \r\n\t.mCS-rounded-dots-dark.mCSB_scrollTools_vertical .mCSB_draggerRail{ width: 4px; }\r\n\t\r\n\t.mCS-rounded-dots.mCSB_scrollTools .mCSB_draggerRail, \r\n\t.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_draggerRail, \r\n\t.mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_draggerRail, \r\n\t.mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail{\r\n\t\tbackground-color: transparent;\r\n\t\tbackground-position: center;\r\n\t}\r\n\t\r\n\t.mCS-rounded-dots.mCSB_scrollTools .mCSB_draggerRail, \r\n\t.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_draggerRail{\r\n\t\tbackground-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAANElEQVQYV2NkIAAYiVbw//9/Y6DiM1ANJoyMjGdBbLgJQAX/kU0DKgDLkaQAvxW4HEvQFwCRcxIJK1XznAAAAABJRU5ErkJggg==\");\r\n\t\tbackground-repeat: repeat-y;\r\n\t\topacity: 0.3;\r\n\t\tfilter: \"alpha(opacity=30)\"; -ms-filter: \"alpha(opacity=30)\"; \r\n\t}\r\n\t\r\n\t.mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_draggerRail, \r\n\t.mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail{\r\n\t\theight: 4px;\r\n\t\tmargin: 6px 0;\r\n\t\tbackground-repeat: repeat-x;\r\n\t}\r\n\t\r\n\t.mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonUp{ background-position: -16px -72px; }\r\n\t\r\n\t.mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonDown{ background-position: -16px -92px; }\r\n\t\r\n\t.mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -20px -112px; }\r\n\t\r\n\t.mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonRight{ background-position: -20px -128px; }\r\n\t\r\n\t\r\n\t/* theme \"rounded-dots-dark\" */\r\n\t\r\n\t.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_draggerRail{\r\n\t\tbackground-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAALElEQVQYV2NkIAAYSVFgDFR8BqrBBEifBbGRTfiPZhpYjiQFBK3A6l6CvgAAE9kGCd1mvgEAAAAASUVORK5CYII=\");\r\n\t}\r\n\t\r\n\t.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonUp{ background-position: -96px -72px; }\r\n\t\r\n\t.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonDown{ background-position: -96px -92px; }\r\n\t\r\n\t.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -100px -112px; }\r\n\t\r\n\t.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonRight{ background-position: -100px -128px; }\r\n\t\r\n\t/* ---------------------------------------- */\r\n\t\r\n\t\r\n\t\r\n\t/* theme \"3d\", \"3d-dark\", \"3d-thick\", \"3d-thick-dark\" */\r\n\t\r\n\t.mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{\r\n\t\tbackground-repeat: repeat-y;\r\n\t\tbackground-image: linear-gradient(to right, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 100%);\r\n\t}\r\n\t\r\n\t.mCS-3d.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-3d-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-3d-thick-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{\r\n\t\tbackground-repeat: repeat-x;\r\n\t\tbackground-image: linear-gradient(to bottom, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 100%);\r\n\t}\r\n\t\r\n\t\r\n\t/* theme \"3d\", \"3d-dark\" */\r\n\t\r\n\t.mCS-3d.mCSB_scrollTools_vertical .mCSB_dragger, \r\n\t.mCS-3d-dark.mCSB_scrollTools_vertical .mCSB_dragger{ height: 70px; }\r\n\t\r\n\t.mCS-3d.mCSB_scrollTools_horizontal .mCSB_dragger, \r\n\t.mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_dragger{ width: 70px; }\r\n\t\r\n\t.mCS-3d.mCSB_scrollTools, \r\n\t.mCS-3d-dark.mCSB_scrollTools{\r\n\t\topacity: 1;\r\n\t\tfilter: \"alpha(opacity=30)\"; -ms-filter: \"alpha(opacity=30)\"; \r\n\t}\r\n\t\r\n\t.mCS-3d.mCSB_scrollTools .mCSB_draggerRail, \r\n\t.mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-3d-dark.mCSB_scrollTools .mCSB_draggerRail, \r\n\t.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ border-radius: 16px; }\r\n\t\r\n\t.mCS-3d.mCSB_scrollTools .mCSB_draggerRail, \r\n\t.mCS-3d-dark.mCSB_scrollTools .mCSB_draggerRail{\r\n\t\twidth: 8px;\r\n\t\tbackground-color: #000; background-color: rgba(0,0,0,0.2);\r\n\t\tbox-shadow: inset 1px 0 1px rgba(0,0,0,0.5), inset -1px 0 1px rgba(255,255,255,0.2);\r\n\t}\r\n\t\r\n\t.mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \t \r\n\t.mCS-3d.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, \r\n\t.mCS-3d.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-3d.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, \r\n\t.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, \r\n\t.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #555; }\r\n\r\n\t.mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ width: 8px; }\r\n\r\n\t.mCS-3d.mCSB_scrollTools_horizontal .mCSB_draggerRail, \r\n\t.mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail{\r\n\t\twidth: 100%;\r\n\t\theight: 8px;\r\n\t\tmargin: 4px 0;\r\n\t\tbox-shadow: inset 0 1px 1px rgba(0,0,0,0.5), inset 0 -1px 1px rgba(255,255,255,0.2);\r\n\t}\r\n\r\n\t.mCS-3d.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{\r\n\t\twidth: 100%;\r\n\t\theight: 8px;\r\n\t\tmargin: 4px auto;\r\n\t}\r\n\t\r\n\t.mCS-3d.mCSB_scrollTools .mCSB_buttonUp{ background-position: -32px -72px; }\r\n\t\r\n\t.mCS-3d.mCSB_scrollTools .mCSB_buttonDown{ background-position: -32px -92px; }\r\n\t\r\n\t.mCS-3d.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -40px -112px; }\r\n\t\r\n\t.mCS-3d.mCSB_scrollTools .mCSB_buttonRight{ background-position: -40px -128px; }\r\n\t\r\n\t\r\n\t/* theme \"3d-dark\" */\r\n\t\r\n\t.mCS-3d-dark.mCSB_scrollTools .mCSB_draggerRail{\r\n\t\tbackground-color: #000; background-color: rgba(0,0,0,0.1);\r\n\t\tbox-shadow: inset 1px 0 1px rgba(0,0,0,0.1);\r\n\t}\r\n\t\r\n\t.mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail{ box-shadow: inset 0 1px 1px rgba(0,0,0,0.1); }\r\n\t\r\n\t.mCS-3d-dark.mCSB_scrollTools .mCSB_buttonUp{ background-position: -112px -72px; }\r\n\r\n\t.mCS-3d-dark.mCSB_scrollTools .mCSB_buttonDown{ background-position: -112px -92px; }\r\n\r\n\t.mCS-3d-dark.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -120px -112px; }\r\n\r\n\t.mCS-3d-dark.mCSB_scrollTools .mCSB_buttonRight{\tbackground-position: -120px -128px; }\r\n\t\r\n\t/* ---------------------------------------- */\r\n\t\r\n\t\r\n\t\r\n\t/* theme: \"3d-thick\", \"3d-thick-dark\" */\r\n\t\r\n\t.mCS-3d-thick.mCSB_scrollTools, \r\n\t.mCS-3d-thick-dark.mCSB_scrollTools{\r\n\t\topacity: 1;\r\n\t\tfilter: \"alpha(opacity=30)\"; -ms-filter: \"alpha(opacity=30)\"; \r\n\t}\r\n\t\r\n\t.mCS-3d-thick.mCSB_scrollTools, \r\n\t.mCS-3d-thick-dark.mCSB_scrollTools, \r\n\t.mCS-3d-thick.mCSB_scrollTools .mCSB_draggerContainer, \r\n\t.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_draggerContainer{ border-radius: 7px; }\r\n\t\r\n\t.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ border-radius: 5px; }\r\n\t\r\n\t.mCSB_inside + .mCS-3d-thick.mCSB_scrollTools_vertical, \r\n\t.mCSB_inside + .mCS-3d-thick-dark.mCSB_scrollTools_vertical{ right: 1px; }\r\n\t\r\n\t.mCS-3d-thick.mCSB_scrollTools_vertical, \r\n\t.mCS-3d-thick-dark.mCSB_scrollTools_vertical{ box-shadow: inset 1px 0 1px rgba(0,0,0,0.1), inset 0 0 14px rgba(0,0,0,0.5); }\r\n\t\r\n\t.mCS-3d-thick.mCSB_scrollTools_horizontal, \r\n\t.mCS-3d-thick-dark.mCSB_scrollTools_horizontal{\r\n\t\tbottom: 1px;\r\n\t\tbox-shadow: inset 0 1px 1px rgba(0,0,0,0.1), inset 0 0 14px rgba(0,0,0,0.5);\r\n\t}\r\n\t\r\n\t.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{\r\n\t\tbox-shadow: inset 1px 0 0 rgba(255,255,255,0.4);\r\n\t\twidth: 12px;\r\n\t\tmargin: 2px;\r\n\t\tposition: absolute;\r\n\t\theight: auto;\r\n\t\ttop: 0;\r\n\t\tbottom: 0;\r\n\t\tleft: 0;\r\n\t\tright: 0;\r\n\t}\r\n\t\r\n\t.mCS-3d-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-3d-thick-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{ box-shadow: inset 0 1px 0 rgba(255,255,255,0.4); }\r\n\t\r\n\t.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,  \r\n\t.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, \r\n\t.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #555; }\r\n\t\r\n\t.mCS-3d-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-3d-thick-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{\r\n\t\theight: 12px;\r\n\t\twidth: auto;\r\n\t}\r\n\t\r\n\t.mCS-3d-thick.mCSB_scrollTools .mCSB_draggerContainer{\r\n\t\tbackground-color: #000; background-color: rgba(0,0,0,0.05);\r\n\t\tbox-shadow: inset 1px 1px 16px rgba(0,0,0,0.1);\r\n\t}\r\n\t\r\n\t.mCS-3d-thick.mCSB_scrollTools .mCSB_draggerRail{ background-color: transparent; }\r\n\t\r\n\t.mCS-3d-thick.mCSB_scrollTools .mCSB_buttonUp{ background-position: -32px -72px; }\r\n\t\r\n\t.mCS-3d-thick.mCSB_scrollTools .mCSB_buttonDown{ background-position: -32px -92px; }\r\n\r\n\t.mCS-3d-thick.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -40px -112px; }\r\n\r\n\t.mCS-3d-thick.mCSB_scrollTools .mCSB_buttonRight{\tbackground-position: -40px -128px; }\r\n\t\r\n\t\r\n\t/* theme: \"3d-thick-dark\" */\r\n\t\r\n\t.mCS-3d-thick-dark.mCSB_scrollTools{ box-shadow: inset 0 0 14px rgba(0,0,0,0.2); }\r\n\t\r\n\t.mCS-3d-thick-dark.mCSB_scrollTools_horizontal{ box-shadow: inset 0 1px 1px rgba(0,0,0,0.1), inset 0 0 14px rgba(0,0,0,0.2); }\r\n\t\r\n\t.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ box-shadow: inset 1px 0 0 rgba(255,255,255,0.4), inset -1px 0 0 rgba(0,0,0,0.2); }\r\n\t \r\n\t.mCS-3d-thick-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{ box-shadow: inset 0 1px 0 rgba(255,255,255,0.4), inset 0 -1px 0 rgba(0,0,0,0.2); }\r\n\t\r\n\t.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,  \r\n\t.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, \r\n\t.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #777; }\r\n\t\r\n\t.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_draggerContainer{\r\n\t\tbackground-color: #fff; background-color: rgba(0,0,0,0.05);\r\n\t\tbox-shadow: inset 1px 1px 16px rgba(0,0,0,0.1);\r\n\t}\r\n\t\r\n\t.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_draggerRail{ background-color: transparent; }\r\n\t\r\n\t.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_buttonUp{ background-position: -112px -72px; }\r\n\t\r\n\t.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_buttonDown{ background-position: -112px -92px; }\r\n\r\n\t.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -120px -112px; }\r\n\r\n\t.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_buttonRight{\tbackground-position: -120px -128px; }\r\n\t\r\n\t/* ---------------------------------------- */\r\n\t\r\n\t\r\n\t\r\n\t/* theme: \"minimal\", \"minimal-dark\" */\r\n\t\r\n\t.mCSB_outside + .mCS-minimal.mCSB_scrollTools_vertical, \r\n\t.mCSB_outside + .mCS-minimal-dark.mCSB_scrollTools_vertical{\r\n\t\tright: 0; \r\n\t\tmargin: 12px 0; \r\n\t}\r\n\t\r\n\t.mCustomScrollBox.mCS-minimal + .mCSB_scrollTools.mCSB_scrollTools_horizontal, \r\n\t.mCustomScrollBox.mCS-minimal + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal, \r\n\t.mCustomScrollBox.mCS-minimal-dark + .mCSB_scrollTools.mCSB_scrollTools_horizontal, \r\n\t.mCustomScrollBox.mCS-minimal-dark + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal{\r\n\t\tbottom: 0; \r\n\t\tmargin: 0 12px; \r\n\t}\r\n\t\r\n\t/* RTL direction/left-side scrollbar */\r\n\t.mCS-dir-rtl > .mCSB_outside + .mCS-minimal.mCSB_scrollTools_vertical, \r\n\t.mCS-dir-rtl > .mCSB_outside + .mCS-minimal-dark.mCSB_scrollTools_vertical{\r\n\t\tleft: 0; \r\n\t\tright: auto;\r\n\t}\r\n\t\r\n\t.mCS-minimal.mCSB_scrollTools .mCSB_draggerRail, \r\n\t.mCS-minimal-dark.mCSB_scrollTools .mCSB_draggerRail{ background-color: transparent; }\r\n\t\r\n\t.mCS-minimal.mCSB_scrollTools_vertical .mCSB_dragger, \r\n\t.mCS-minimal-dark.mCSB_scrollTools_vertical .mCSB_dragger{ height: 50px; }\r\n\t\r\n\t.mCS-minimal.mCSB_scrollTools_horizontal .mCSB_dragger, \r\n\t.mCS-minimal-dark.mCSB_scrollTools_horizontal .mCSB_dragger{ width: 50px; }\r\n\t\r\n\t.mCS-minimal.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{\r\n\t\tbackground-color: #fff; background-color: rgba(255,255,255,0.2);\r\n\t\tfilter: \"alpha(opacity=20)\"; -ms-filter: \"alpha(opacity=20)\"; \r\n\t}\r\n\t\r\n\t.mCS-minimal.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-minimal.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{\r\n\t\tbackground-color: #fff; background-color: rgba(255,255,255,0.5);\r\n\t\tfilter: \"alpha(opacity=50)\"; -ms-filter: \"alpha(opacity=50)\"; \r\n\t}\r\n\t\r\n\t\r\n\t/* theme: \"minimal-dark\" */\r\n\t\r\n\t.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{\r\n\t\tbackground-color: #000; background-color: rgba(0,0,0,0.2);\r\n\t\tfilter: \"alpha(opacity=20)\"; -ms-filter: \"alpha(opacity=20)\"; \r\n\t}\r\n\t\r\n\t.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{\r\n\t\tbackground-color: #000; background-color: rgba(0,0,0,0.5);\r\n\t\tfilter: \"alpha(opacity=50)\"; -ms-filter: \"alpha(opacity=50)\"; \r\n\t}\r\n\t\r\n\t/* ---------------------------------------- */\r\n\t\r\n\t\r\n\t\r\n\t/* theme \"light-3\", \"dark-3\" */\r\n\t\r\n\t.mCS-light-3.mCSB_scrollTools .mCSB_draggerRail, \r\n\t.mCS-dark-3.mCSB_scrollTools .mCSB_draggerRail{\r\n\t\twidth: 6px;\r\n\t\tbackground-color: #000; background-color: rgba(0,0,0,0.2);\r\n\t}\r\n\r\n\t.mCS-light-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-dark-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ width: 6px; }\r\n\r\n\t.mCS-light-3.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-dark-3.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-light-3.mCSB_scrollTools_horizontal .mCSB_draggerRail, \r\n\t.mCS-dark-3.mCSB_scrollTools_horizontal .mCSB_draggerRail{\r\n\t\twidth: 100%;\r\n\t\theight: 6px;\r\n\t\tmargin: 5px 0;\r\n\t}\r\n\t\r\n\t.mCS-light-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, \r\n\t.mCS-light-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail, \r\n\t.mCS-dark-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, \r\n\t.mCS-dark-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{\r\n\t\twidth: 12px;\r\n\t}\r\n\t\r\n\t.mCS-light-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, \r\n\t.mCS-light-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail, \r\n\t.mCS-dark-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, \r\n\t.mCS-dark-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{\r\n\t\theight: 12px;\r\n\t\tmargin: 2px 0;\r\n\t}\r\n\t\r\n\t.mCS-light-3.mCSB_scrollTools .mCSB_buttonUp{ background-position: -32px -72px; }\r\n\t\r\n\t.mCS-light-3.mCSB_scrollTools .mCSB_buttonDown{ background-position: -32px -92px; }\r\n\t\r\n\t.mCS-light-3.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -40px -112px; }\r\n\t\r\n\t.mCS-light-3.mCSB_scrollTools .mCSB_buttonRight{ background-position: -40px -128px; }\r\n\t\r\n\t\r\n\t/* theme \"dark-3\" */\r\n\t\r\n\t.mCS-dark-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.75); }\r\n\r\n\t.mCS-dark-3.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.85); }\r\n\r\n\t.mCS-dark-3.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-dark-3.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.9); }\r\n\t\r\n\t.mCS-dark-3.mCSB_scrollTools .mCSB_draggerRail{ background-color: #000; background-color: rgba(0,0,0,0.1); }\r\n\t\r\n\t.mCS-dark-3.mCSB_scrollTools .mCSB_buttonUp{ background-position: -112px -72px; }\r\n\r\n\t.mCS-dark-3.mCSB_scrollTools .mCSB_buttonDown{ background-position: -112px -92px; }\r\n\r\n\t.mCS-dark-3.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -120px -112px; }\r\n\r\n\t.mCS-dark-3.mCSB_scrollTools .mCSB_buttonRight{\tbackground-position: -120px -128px; }\r\n\t\r\n\t/* ---------------------------------------- */\r\n\t\r\n\t\r\n\t\r\n\t/* theme \"inset\", \"inset-dark\", \"inset-2\", \"inset-2-dark\", \"inset-3\", \"inset-3-dark\" */\r\n\t\r\n\t.mCS-inset.mCSB_scrollTools .mCSB_draggerRail, \r\n\t.mCS-inset-dark.mCSB_scrollTools .mCSB_draggerRail, \r\n\t.mCS-inset-2.mCSB_scrollTools .mCSB_draggerRail, \r\n\t.mCS-inset-2-dark.mCSB_scrollTools .mCSB_draggerRail, \r\n\t.mCS-inset-3.mCSB_scrollTools .mCSB_draggerRail, \r\n\t.mCS-inset-3-dark.mCSB_scrollTools .mCSB_draggerRail{\r\n\t\twidth: 12px;\r\n\t\tbackground-color: #000; background-color: rgba(0,0,0,0.2);\r\n\t}\r\n\r\n\t.mCS-inset.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-inset-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-inset-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-inset-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ \r\n\t\twidth: 6px;\r\n\t\tmargin: 3px 5px;\r\n\t\tposition: absolute;\r\n\t\theight: auto;\r\n\t\ttop: 0;\r\n\t\tbottom: 0;\r\n\t\tleft: 0;\r\n\t\tright: 0;\r\n\t}\r\n\r\n\t.mCS-inset.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-inset-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-inset-2.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-inset-2-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-inset-3.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-inset-3-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{\r\n\t\theight: 6px;\r\n\t\tmargin: 5px 3px;\r\n\t\tposition: absolute;\r\n\t\twidth: auto;\r\n\t\ttop: 0;\r\n\t\tbottom: 0;\r\n\t\tleft: 0;\r\n\t\tright: 0;\r\n\t}\r\n\t\r\n\t.mCS-inset.mCSB_scrollTools_horizontal .mCSB_draggerRail, \r\n\t.mCS-inset-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail, \r\n\t.mCS-inset-2.mCSB_scrollTools_horizontal .mCSB_draggerRail, \r\n\t.mCS-inset-2-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail, \r\n\t.mCS-inset-3.mCSB_scrollTools_horizontal .mCSB_draggerRail, \r\n\t.mCS-inset-3-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail{\r\n\t\twidth: 100%;\r\n\t\theight: 12px;\r\n\t\tmargin: 2px 0;\r\n\t}\r\n\t\r\n\t.mCS-inset.mCSB_scrollTools .mCSB_buttonUp, \r\n\t.mCS-inset-2.mCSB_scrollTools .mCSB_buttonUp, \r\n\t.mCS-inset-3.mCSB_scrollTools .mCSB_buttonUp{ background-position: -32px -72px; }\r\n\t\r\n\t.mCS-inset.mCSB_scrollTools .mCSB_buttonDown, \r\n\t.mCS-inset-2.mCSB_scrollTools .mCSB_buttonDown, \r\n\t.mCS-inset-3.mCSB_scrollTools .mCSB_buttonDown{ background-position: -32px -92px; }\r\n\t\r\n\t.mCS-inset.mCSB_scrollTools .mCSB_buttonLeft, \r\n\t.mCS-inset-2.mCSB_scrollTools .mCSB_buttonLeft, \r\n\t.mCS-inset-3.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -40px -112px; }\r\n\t\r\n\t.mCS-inset.mCSB_scrollTools .mCSB_buttonRight, \r\n\t.mCS-inset-2.mCSB_scrollTools .mCSB_buttonRight, \r\n\t.mCS-inset-3.mCSB_scrollTools .mCSB_buttonRight{ background-position: -40px -128px; }\r\n\t\r\n\t\r\n\t/* theme \"inset-dark\", \"inset-2-dark\", \"inset-3-dark\" */\r\n\t\r\n\t.mCS-inset-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.75); }\r\n\r\n\t.mCS-inset-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, \r\n\t.mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, \r\n\t.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.85); }\r\n\r\n\t.mCS-inset-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-inset-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, \r\n\t.mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, \r\n\t.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.9); }\r\n\t\r\n\t.mCS-inset-dark.mCSB_scrollTools .mCSB_draggerRail, \r\n\t.mCS-inset-2-dark.mCSB_scrollTools .mCSB_draggerRail, \r\n\t.mCS-inset-3-dark.mCSB_scrollTools .mCSB_draggerRail{ background-color: #000; background-color: rgba(0,0,0,0.1); }\r\n\t\r\n\t.mCS-inset-dark.mCSB_scrollTools .mCSB_buttonUp, \r\n\t.mCS-inset-2-dark.mCSB_scrollTools .mCSB_buttonUp, \r\n\t.mCS-inset-3-dark.mCSB_scrollTools .mCSB_buttonUp{ background-position: -112px -72px; }\r\n\r\n\t.mCS-inset-dark.mCSB_scrollTools .mCSB_buttonDown, \r\n\t.mCS-inset-2-dark.mCSB_scrollTools .mCSB_buttonDown, \r\n\t.mCS-inset-3-dark.mCSB_scrollTools .mCSB_buttonDown{ background-position: -112px -92px; }\r\n\r\n\t.mCS-inset-dark.mCSB_scrollTools .mCSB_buttonLeft, \r\n\t.mCS-inset-2-dark.mCSB_scrollTools .mCSB_buttonLeft, \r\n\t.mCS-inset-3-dark.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -120px -112px; }\r\n\r\n\t.mCS-inset-dark.mCSB_scrollTools .mCSB_buttonRight, \r\n\t.mCS-inset-2-dark.mCSB_scrollTools .mCSB_buttonRight, \r\n\t.mCS-inset-3-dark.mCSB_scrollTools .mCSB_buttonRight{\tbackground-position: -120px -128px; }\r\n\t\r\n\t\r\n\t/* theme \"inset-2\", \"inset-2-dark\" */\r\n\t\r\n\t.mCS-inset-2.mCSB_scrollTools .mCSB_draggerRail, \r\n\t.mCS-inset-2-dark.mCSB_scrollTools .mCSB_draggerRail{\r\n\t\tbackground-color: transparent;\r\n\t\tborder-width: 1px;\r\n\t\tborder-style: solid;\r\n\t\tborder-color: #fff;\r\n\t\tborder-color: rgba(255,255,255,0.2); box-sizing: border-box;\r\n\t}\r\n\t\r\n\t.mCS-inset-2-dark.mCSB_scrollTools .mCSB_draggerRail{ border-color: #000; border-color: rgba(0,0,0,0.2); }\r\n\t\r\n\t\r\n\t/* theme \"inset-3\", \"inset-3-dark\" */\r\n\t\r\n\t.mCS-inset-3.mCSB_scrollTools .mCSB_draggerRail{ background-color: #fff; background-color: rgba(255,255,255,0.6); }\r\n\t\r\n\t.mCS-inset-3-dark.mCSB_scrollTools .mCSB_draggerRail{ background-color: #000; background-color: rgba(0,0,0,0.6); }\r\n\t\r\n\t.mCS-inset-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.75); }\r\n\t\r\n\t.mCS-inset-3.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.85); }\r\n\t\r\n\t.mCS-inset-3.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-inset-3.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.9); }\r\n\t\r\n\t.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background-color: #fff; background-color: rgba(255,255,255,0.75); }\r\n\t\r\n\t.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #fff; background-color: rgba(255,255,255,0.85); }\r\n\t\r\n\t.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #fff; background-color: rgba(255,255,255,0.9); }\r\n\t\r\n\t/* ---------------------------------------- */\r\n", ""]);
+
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
+== malihu jquery custom scrollbar plugin == 
+Version: 3.1.5 
+Plugin URI: http://manos.malihu.gr/jquery-custom-content-scroller 
+Author: malihu
+Author URI: http://manos.malihu.gr
+License: MIT License (MIT)
+*/
+
+/*
+Copyright Manos Malihutsakis (email: manos@malihu.gr)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+*/
+
+/*
+The code below is fairly long, fully commented and should be normally used in development. 
+For production, use either the minified jquery.mCustomScrollbar.min.js script or 
+the production-ready jquery.mCustomScrollbar.concat.min.js which contains the plugin 
+and dependencies (minified). 
+*/
+
+(function(factory){
+	if(true){
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(2)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	}else {}
+}(function($){
+(function(init){
+	var _rjs= true && __webpack_require__(191), /* RequireJS */
+		_njs= true && module.exports, /* NodeJS */
+		_dlp=("https:"==document.location.protocol) ? "https:" : "http:", /* location protocol */
+		_url="cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js";
+	if(!_rjs){
+		if(_njs){
+			__webpack_require__(5)($);
+		}else{
+			/* load jquery-mousewheel plugin (via CDN) if it's not present or not loaded via RequireJS 
+			(works when mCustomScrollbar fn is called on window load) */
+			$.event.special.mousewheel || $("head").append(decodeURI("%3Cscript src="+_dlp+"//"+_url+"%3E%3C/script%3E"));
+		}
+	}
+	init();
+}(function(){
+	
+	/* 
+	----------------------------------------
+	PLUGIN NAMESPACE, PREFIX, DEFAULT SELECTOR(S) 
+	----------------------------------------
+	*/
+	
+	var pluginNS="mCustomScrollbar",
+		pluginPfx="mCS",
+		defaultSelector=".mCustomScrollbar",
+	
+	
+		
+	
+	
+	/* 
+	----------------------------------------
+	DEFAULT OPTIONS 
+	----------------------------------------
+	*/
+	
+		defaults={
+			/*
+			set element/content width/height programmatically 
+			values: boolean, pixels, percentage 
+				option						default
+				-------------------------------------
+				setWidth					false
+				setHeight					false
+			*/
+			/*
+			set the initial css top property of content  
+			values: string (e.g. "-100px", "10%" etc.)
+			*/
+			setTop:0,
+			/*
+			set the initial css left property of content  
+			values: string (e.g. "-100px", "10%" etc.)
+			*/
+			setLeft:0,
+			/* 
+			scrollbar axis (vertical and/or horizontal scrollbars) 
+			values (string): "y", "x", "yx"
+			*/
+			axis:"y",
+			/*
+			position of scrollbar relative to content  
+			values (string): "inside", "outside" ("outside" requires elements with position:relative)
+			*/
+			scrollbarPosition:"inside",
+			/*
+			scrolling inertia
+			values: integer (milliseconds)
+			*/
+			scrollInertia:950,
+			/* 
+			auto-adjust scrollbar dragger length
+			values: boolean
+			*/
+			autoDraggerLength:true,
+			/*
+			auto-hide scrollbar when idle 
+			values: boolean
+				option						default
+				-------------------------------------
+				autoHideScrollbar			false
+			*/
+			/*
+			auto-expands scrollbar on mouse-over and dragging
+			values: boolean
+				option						default
+				-------------------------------------
+				autoExpandScrollbar			false
+			*/
+			/*
+			always show scrollbar, even when there's nothing to scroll 
+			values: integer (0=disable, 1=always show dragger rail and buttons, 2=always show dragger rail, dragger and buttons), boolean
+			*/
+			alwaysShowScrollbar:0,
+			/*
+			scrolling always snaps to a multiple of this number in pixels
+			values: integer, array ([y,x])
+				option						default
+				-------------------------------------
+				snapAmount					null
+			*/
+			/*
+			when snapping, snap with this number in pixels as an offset 
+			values: integer
+			*/
+			snapOffset:0,
+			/* 
+			mouse-wheel scrolling
+			*/
+			mouseWheel:{
+				/* 
+				enable mouse-wheel scrolling
+				values: boolean
+				*/
+				enable:true,
+				/* 
+				scrolling amount in pixels
+				values: "auto", integer 
+				*/
+				scrollAmount:"auto",
+				/* 
+				mouse-wheel scrolling axis 
+				the default scrolling direction when both vertical and horizontal scrollbars are present 
+				values (string): "y", "x" 
+				*/
+				axis:"y",
+				/* 
+				prevent the default behaviour which automatically scrolls the parent element(s) when end of scrolling is reached 
+				values: boolean
+					option						default
+					-------------------------------------
+					preventDefault				null
+				*/
+				/*
+				the reported mouse-wheel delta value. The number of lines (translated to pixels) one wheel notch scrolls.  
+				values: "auto", integer 
+				"auto" uses the default OS/browser value 
+				*/
+				deltaFactor:"auto",
+				/*
+				normalize mouse-wheel delta to -1 or 1 (disables mouse-wheel acceleration) 
+				values: boolean
+					option						default
+					-------------------------------------
+					normalizeDelta				null
+				*/
+				/*
+				invert mouse-wheel scrolling direction 
+				values: boolean
+					option						default
+					-------------------------------------
+					invert						null
+				*/
+				/*
+				the tags that disable mouse-wheel when cursor is over them
+				*/
+				disableOver:["select","option","keygen","datalist","textarea"]
+			},
+			/* 
+			scrollbar buttons
+			*/
+			scrollButtons:{ 
+				/*
+				enable scrollbar buttons
+				values: boolean
+					option						default
+					-------------------------------------
+					enable						null
+				*/
+				/*
+				scrollbar buttons scrolling type 
+				values (string): "stepless", "stepped"
+				*/
+				scrollType:"stepless",
+				/*
+				scrolling amount in pixels
+				values: "auto", integer 
+				*/
+				scrollAmount:"auto"
+				/*
+				tabindex of the scrollbar buttons
+				values: false, integer
+					option						default
+					-------------------------------------
+					tabindex					null
+				*/
+			},
+			/* 
+			keyboard scrolling
+			*/
+			keyboard:{ 
+				/*
+				enable scrolling via keyboard
+				values: boolean
+				*/
+				enable:true,
+				/*
+				keyboard scrolling type 
+				values (string): "stepless", "stepped"
+				*/
+				scrollType:"stepless",
+				/*
+				scrolling amount in pixels
+				values: "auto", integer 
+				*/
+				scrollAmount:"auto"
+			},
+			/*
+			enable content touch-swipe scrolling 
+			values: boolean, integer, string (number)
+			integer values define the axis-specific minimum amount required for scrolling momentum
+			*/
+			contentTouchScroll:25,
+			/*
+			enable/disable document (default) touch-swipe scrolling 
+			*/
+			documentTouchScroll:true,
+			/*
+			advanced option parameters
+			*/
+			advanced:{
+				/*
+				auto-expand content horizontally (for "x" or "yx" axis) 
+				values: boolean, integer (the value 2 forces the non scrollHeight/scrollWidth method, the value 3 forces the scrollHeight/scrollWidth method)
+					option						default
+					-------------------------------------
+					autoExpandHorizontalScroll	null
+				*/
+				/*
+				auto-scroll to elements with focus
+				*/
+				autoScrollOnFocus:"input,textarea,select,button,datalist,keygen,a[tabindex],area,object,[contenteditable='true']",
+				/*
+				auto-update scrollbars on content, element or viewport resize 
+				should be true for fluid layouts/elements, adding/removing content dynamically, hiding/showing elements, content with images etc. 
+				values: boolean
+				*/
+				updateOnContentResize:true,
+				/*
+				auto-update scrollbars each time each image inside the element is fully loaded 
+				values: "auto", boolean
+				*/
+				updateOnImageLoad:"auto",
+				/*
+				auto-update scrollbars based on the amount and size changes of specific selectors 
+				useful when you need to update the scrollbar(s) automatically, each time a type of element is added, removed or changes its size 
+				values: boolean, string (e.g. "ul li" will auto-update scrollbars each time list-items inside the element are changed) 
+				a value of true (boolean) will auto-update scrollbars each time any element is changed
+					option						default
+					-------------------------------------
+					updateOnSelectorChange		null
+				*/
+				/*
+				extra selectors that'll allow scrollbar dragging upon mousemove/up, pointermove/up, touchend etc. (e.g. "selector-1, selector-2")
+					option						default
+					-------------------------------------
+					extraDraggableSelectors		null
+				*/
+				/*
+				extra selectors that'll release scrollbar dragging upon mouseup, pointerup, touchend etc. (e.g. "selector-1, selector-2")
+					option						default
+					-------------------------------------
+					releaseDraggableSelectors	null
+				*/
+				/*
+				auto-update timeout 
+				values: integer (milliseconds)
+				*/
+				autoUpdateTimeout:60
+			},
+			/* 
+			scrollbar theme 
+			values: string (see CSS/plugin URI for a list of ready-to-use themes)
+			*/
+			theme:"light",
+			/*
+			user defined callback functions
+			*/
+			callbacks:{
+				/*
+				Available callbacks: 
+					callback					default
+					-------------------------------------
+					onCreate					null
+					onInit						null
+					onScrollStart				null
+					onScroll					null
+					onTotalScroll				null
+					onTotalScrollBack			null
+					whileScrolling				null
+					onOverflowY					null
+					onOverflowX					null
+					onOverflowYNone				null
+					onOverflowXNone				null
+					onImageLoad					null
+					onSelectorChange			null
+					onBeforeUpdate				null
+					onUpdate					null
+				*/
+				onTotalScrollOffset:0,
+				onTotalScrollBackOffset:0,
+				alwaysTriggerOffsets:true
+			}
+			/*
+			add scrollbar(s) on all elements matching the current selector, now and in the future 
+			values: boolean, string 
+			string values: "on" (enable), "once" (disable after first invocation), "off" (disable)
+			liveSelector values: string (selector)
+				option						default
+				-------------------------------------
+				live						false
+				liveSelector				null
+			*/
+		},
+	
+	
+	
+	
+	
+	/* 
+	----------------------------------------
+	VARS, CONSTANTS 
+	----------------------------------------
+	*/
+	
+		totalInstances=0, /* plugin instances amount */
+		liveTimers={}, /* live option timers */
+		oldIE=(window.attachEvent && !window.addEventListener) ? 1 : 0, /* detect IE < 9 */
+		touchActive=false,touchable, /* global touch vars (for touch and pointer events) */
+		/* general plugin classes */
+		classes=[
+			"mCSB_dragger_onDrag","mCSB_scrollTools_onDrag","mCS_img_loaded","mCS_disabled","mCS_destroyed","mCS_no_scrollbar",
+			"mCS-autoHide","mCS-dir-rtl","mCS_no_scrollbar_y","mCS_no_scrollbar_x","mCS_y_hidden","mCS_x_hidden","mCSB_draggerContainer",
+			"mCSB_buttonUp","mCSB_buttonDown","mCSB_buttonLeft","mCSB_buttonRight"
+		],
+		
+	
+	
+	
+	
+	/* 
+	----------------------------------------
+	METHODS 
+	----------------------------------------
+	*/
+	
+		methods={
+			
+			/* 
+			plugin initialization method 
+			creates the scrollbar(s), plugin data object and options
+			----------------------------------------
+			*/
+			
+			init:function(options){
+				
+				var options=$.extend(true,{},defaults,options),
+					selector=_selector.call(this); /* validate selector */
+				
+				/* 
+				if live option is enabled, monitor for elements matching the current selector and 
+				apply scrollbar(s) when found (now and in the future) 
+				*/
+				if(options.live){
+					var liveSelector=options.liveSelector || this.selector || defaultSelector, /* live selector(s) */
+						$liveSelector=$(liveSelector); /* live selector(s) as jquery object */
+					if(options.live==="off"){
+						/* 
+						disable live if requested 
+						usage: $(selector).mCustomScrollbar({live:"off"}); 
+						*/
+						removeLiveTimers(liveSelector);
+						return;
+					}
+					liveTimers[liveSelector]=setTimeout(function(){
+						/* call mCustomScrollbar fn on live selector(s) every half-second */
+						$liveSelector.mCustomScrollbar(options);
+						if(options.live==="once" && $liveSelector.length){
+							/* disable live after first invocation */
+							removeLiveTimers(liveSelector);
+						}
+					},500);
+				}else{
+					removeLiveTimers(liveSelector);
+				}
+				
+				/* options backward compatibility (for versions < 3.0.0) and normalization */
+				options.setWidth=(options.set_width) ? options.set_width : options.setWidth;
+				options.setHeight=(options.set_height) ? options.set_height : options.setHeight;
+				options.axis=(options.horizontalScroll) ? "x" : _findAxis(options.axis);
+				options.scrollInertia=options.scrollInertia>0 && options.scrollInertia<17 ? 17 : options.scrollInertia;
+				if(typeof options.mouseWheel!=="object" &&  options.mouseWheel==true){ /* old school mouseWheel option (non-object) */
+					options.mouseWheel={enable:true,scrollAmount:"auto",axis:"y",preventDefault:false,deltaFactor:"auto",normalizeDelta:false,invert:false}
+				}
+				options.mouseWheel.scrollAmount=!options.mouseWheelPixels ? options.mouseWheel.scrollAmount : options.mouseWheelPixels;
+				options.mouseWheel.normalizeDelta=!options.advanced.normalizeMouseWheelDelta ? options.mouseWheel.normalizeDelta : options.advanced.normalizeMouseWheelDelta;
+				options.scrollButtons.scrollType=_findScrollButtonsType(options.scrollButtons.scrollType); 
+				
+				_theme(options); /* theme-specific options */
+				
+				/* plugin constructor */
+				return $(selector).each(function(){
+					
+					var $this=$(this);
+					
+					if(!$this.data(pluginPfx)){ /* prevent multiple instantiations */
+					
+						/* store options and create objects in jquery data */
+						$this.data(pluginPfx,{
+							idx:++totalInstances, /* instance index */
+							opt:options, /* options */
+							scrollRatio:{y:null,x:null}, /* scrollbar to content ratio */
+							overflowed:null, /* overflowed axis */
+							contentReset:{y:null,x:null}, /* object to check when content resets */
+							bindEvents:false, /* object to check if events are bound */
+							tweenRunning:false, /* object to check if tween is running */
+							sequential:{}, /* sequential scrolling object */
+							langDir:$this.css("direction"), /* detect/store direction (ltr or rtl) */
+							cbOffsets:null, /* object to check whether callback offsets always trigger */
+							/* 
+							object to check how scrolling events where last triggered 
+							"internal" (default - triggered by this script), "external" (triggered by other scripts, e.g. via scrollTo method) 
+							usage: object.data("mCS").trigger
+							*/
+							trigger:null,
+							/* 
+							object to check for changes in elements in order to call the update method automatically 
+							*/
+							poll:{size:{o:0,n:0},img:{o:0,n:0},change:{o:0,n:0}}
+						});
+						
+						var d=$this.data(pluginPfx),o=d.opt,
+							/* HTML data attributes */
+							htmlDataAxis=$this.data("mcs-axis"),htmlDataSbPos=$this.data("mcs-scrollbar-position"),htmlDataTheme=$this.data("mcs-theme");
+						 
+						if(htmlDataAxis){o.axis=htmlDataAxis;} /* usage example: data-mcs-axis="y" */
+						if(htmlDataSbPos){o.scrollbarPosition=htmlDataSbPos;} /* usage example: data-mcs-scrollbar-position="outside" */
+						if(htmlDataTheme){ /* usage example: data-mcs-theme="minimal" */
+							o.theme=htmlDataTheme;
+							_theme(o); /* theme-specific options */
+						}
+						
+						_pluginMarkup.call(this); /* add plugin markup */
+						
+						if(d && o.callbacks.onCreate && typeof o.callbacks.onCreate==="function"){o.callbacks.onCreate.call(this);} /* callbacks: onCreate */
+						
+						$("#mCSB_"+d.idx+"_container img:not(."+classes[2]+")").addClass(classes[2]); /* flag loaded images */
+						
+						methods.update.call(null,$this); /* call the update method */
+					
+					}
+					
+				});
+				
+			},
+			/* ---------------------------------------- */
+			
+			
+			
+			/* 
+			plugin update method 
+			updates content and scrollbar(s) values, events and status 
+			----------------------------------------
+			usage: $(selector).mCustomScrollbar("update");
+			*/
+			
+			update:function(el,cb){
+				
+				var selector=el || _selector.call(this); /* validate selector */
+				
+				return $(selector).each(function(){
+					
+					var $this=$(this);
+					
+					if($this.data(pluginPfx)){ /* check if plugin has initialized */
+						
+						var d=$this.data(pluginPfx),o=d.opt,
+							mCSB_container=$("#mCSB_"+d.idx+"_container"),
+							mCustomScrollBox=$("#mCSB_"+d.idx),
+							mCSB_dragger=[$("#mCSB_"+d.idx+"_dragger_vertical"),$("#mCSB_"+d.idx+"_dragger_horizontal")];
+						
+						if(!mCSB_container.length){return;}
+						
+						if(d.tweenRunning){_stop($this);} /* stop any running tweens while updating */
+						
+						if(cb && d && o.callbacks.onBeforeUpdate && typeof o.callbacks.onBeforeUpdate==="function"){o.callbacks.onBeforeUpdate.call(this);} /* callbacks: onBeforeUpdate */
+						
+						/* if element was disabled or destroyed, remove class(es) */
+						if($this.hasClass(classes[3])){$this.removeClass(classes[3]);}
+						if($this.hasClass(classes[4])){$this.removeClass(classes[4]);}
+						
+						/* css flexbox fix, detect/set max-height */
+						mCustomScrollBox.css("max-height","none");
+						if(mCustomScrollBox.height()!==$this.height()){mCustomScrollBox.css("max-height",$this.height());}
+						
+						_expandContentHorizontally.call(this); /* expand content horizontally */
+						
+						if(o.axis!=="y" && !o.advanced.autoExpandHorizontalScroll){
+							mCSB_container.css("width",_contentWidth(mCSB_container));
+						}
+						
+						d.overflowed=_overflowed.call(this); /* determine if scrolling is required */
+						
+						_scrollbarVisibility.call(this); /* show/hide scrollbar(s) */
+						
+						/* auto-adjust scrollbar dragger length analogous to content */
+						if(o.autoDraggerLength){_setDraggerLength.call(this);}
+						
+						_scrollRatio.call(this); /* calculate and store scrollbar to content ratio */
+						
+						_bindEvents.call(this); /* bind scrollbar events */
+						
+						/* reset scrolling position and/or events */
+						var to=[Math.abs(mCSB_container[0].offsetTop),Math.abs(mCSB_container[0].offsetLeft)];
+						if(o.axis!=="x"){ /* y/yx axis */
+							if(!d.overflowed[0]){ /* y scrolling is not required */
+								_resetContentPosition.call(this); /* reset content position */
+								if(o.axis==="y"){
+									_unbindEvents.call(this);
+								}else if(o.axis==="yx" && d.overflowed[1]){
+									_scrollTo($this,to[1].toString(),{dir:"x",dur:0,overwrite:"none"});
+								}
+							}else if(mCSB_dragger[0].height()>mCSB_dragger[0].parent().height()){
+								_resetContentPosition.call(this); /* reset content position */
+							}else{ /* y scrolling is required */
+								_scrollTo($this,to[0].toString(),{dir:"y",dur:0,overwrite:"none"});
+								d.contentReset.y=null;
+							}
+						}
+						if(o.axis!=="y"){ /* x/yx axis */
+							if(!d.overflowed[1]){ /* x scrolling is not required */
+								_resetContentPosition.call(this); /* reset content position */
+								if(o.axis==="x"){
+									_unbindEvents.call(this);
+								}else if(o.axis==="yx" && d.overflowed[0]){
+									_scrollTo($this,to[0].toString(),{dir:"y",dur:0,overwrite:"none"});
+								}
+							}else if(mCSB_dragger[1].width()>mCSB_dragger[1].parent().width()){
+								_resetContentPosition.call(this); /* reset content position */
+							}else{ /* x scrolling is required */
+								_scrollTo($this,to[1].toString(),{dir:"x",dur:0,overwrite:"none"});
+								d.contentReset.x=null;
+							}
+						}
+						
+						/* callbacks: onImageLoad, onSelectorChange, onUpdate */
+						if(cb && d){
+							if(cb===2 && o.callbacks.onImageLoad && typeof o.callbacks.onImageLoad==="function"){
+								o.callbacks.onImageLoad.call(this);
+							}else if(cb===3 && o.callbacks.onSelectorChange && typeof o.callbacks.onSelectorChange==="function"){
+								o.callbacks.onSelectorChange.call(this);
+							}else if(o.callbacks.onUpdate && typeof o.callbacks.onUpdate==="function"){
+								o.callbacks.onUpdate.call(this);
+							}
+						}
+						
+						_autoUpdate.call(this); /* initialize automatic updating (for dynamic content, fluid layouts etc.) */
+						
+					}
+					
+				});
+				
+			},
+			/* ---------------------------------------- */
+			
+			
+			
+			/* 
+			plugin scrollTo method 
+			triggers a scrolling event to a specific value
+			----------------------------------------
+			usage: $(selector).mCustomScrollbar("scrollTo",value,options);
+			*/
+		
+			scrollTo:function(val,options){
+				
+				/* prevent silly things like $(selector).mCustomScrollbar("scrollTo",undefined); */
+				if(typeof val=="undefined" || val==null){return;}
+				
+				var selector=_selector.call(this); /* validate selector */
+				
+				return $(selector).each(function(){
+					
+					var $this=$(this);
+					
+					if($this.data(pluginPfx)){ /* check if plugin has initialized */
+					
+						var d=$this.data(pluginPfx),o=d.opt,
+							/* method default options */
+							methodDefaults={
+								trigger:"external", /* method is by default triggered externally (e.g. from other scripts) */
+								scrollInertia:o.scrollInertia, /* scrolling inertia (animation duration) */
+								scrollEasing:"mcsEaseInOut", /* animation easing */
+								moveDragger:false, /* move dragger instead of content */
+								timeout:60, /* scroll-to delay */
+								callbacks:true, /* enable/disable callbacks */
+								onStart:true,
+								onUpdate:true,
+								onComplete:true
+							},
+							methodOptions=$.extend(true,{},methodDefaults,options),
+							to=_arr.call(this,val),dur=methodOptions.scrollInertia>0 && methodOptions.scrollInertia<17 ? 17 : methodOptions.scrollInertia;
+						
+						/* translate yx values to actual scroll-to positions */
+						to[0]=_to.call(this,to[0],"y");
+						to[1]=_to.call(this,to[1],"x");
+						
+						/* 
+						check if scroll-to value moves the dragger instead of content. 
+						Only pixel values apply on dragger (e.g. 100, "100px", "-=100" etc.) 
+						*/
+						if(methodOptions.moveDragger){
+							to[0]*=d.scrollRatio.y;
+							to[1]*=d.scrollRatio.x;
+						}
+						
+						methodOptions.dur=_isTabHidden() ? 0 : dur; //skip animations if browser tab is hidden
+						
+						setTimeout(function(){ 
+							/* do the scrolling */
+							if(to[0]!==null && typeof to[0]!=="undefined" && o.axis!=="x" && d.overflowed[0]){ /* scroll y */
+								methodOptions.dir="y";
+								methodOptions.overwrite="all";
+								_scrollTo($this,to[0].toString(),methodOptions);
+							}
+							if(to[1]!==null && typeof to[1]!=="undefined" && o.axis!=="y" && d.overflowed[1]){ /* scroll x */
+								methodOptions.dir="x";
+								methodOptions.overwrite="none";
+								_scrollTo($this,to[1].toString(),methodOptions);
+							}
+						},methodOptions.timeout);
+						
+					}
+					
+				});
+				
+			},
+			/* ---------------------------------------- */
+			
+			
+			
+			/*
+			plugin stop method 
+			stops scrolling animation
+			----------------------------------------
+			usage: $(selector).mCustomScrollbar("stop");
+			*/
+			stop:function(){
+				
+				var selector=_selector.call(this); /* validate selector */
+				
+				return $(selector).each(function(){
+					
+					var $this=$(this);
+					
+					if($this.data(pluginPfx)){ /* check if plugin has initialized */
+										
+						_stop($this);
+					
+					}
+					
+				});
+				
+			},
+			/* ---------------------------------------- */
+			
+			
+			
+			/*
+			plugin disable method 
+			temporarily disables the scrollbar(s) 
+			----------------------------------------
+			usage: $(selector).mCustomScrollbar("disable",reset); 
+			reset (boolean): resets content position to 0 
+			*/
+			disable:function(r){
+				
+				var selector=_selector.call(this); /* validate selector */
+				
+				return $(selector).each(function(){
+					
+					var $this=$(this);
+					
+					if($this.data(pluginPfx)){ /* check if plugin has initialized */
+						
+						var d=$this.data(pluginPfx);
+						
+						_autoUpdate.call(this,"remove"); /* remove automatic updating */
+						
+						_unbindEvents.call(this); /* unbind events */
+						
+						if(r){_resetContentPosition.call(this);} /* reset content position */
+						
+						_scrollbarVisibility.call(this,true); /* show/hide scrollbar(s) */
+						
+						$this.addClass(classes[3]); /* add disable class */
+					
+					}
+					
+				});
+				
+			},
+			/* ---------------------------------------- */
+			
+			
+			
+			/*
+			plugin destroy method 
+			completely removes the scrollbar(s) and returns the element to its original state
+			----------------------------------------
+			usage: $(selector).mCustomScrollbar("destroy"); 
+			*/
+			destroy:function(){
+				
+				var selector=_selector.call(this); /* validate selector */
+				
+				return $(selector).each(function(){
+					
+					var $this=$(this);
+					
+					if($this.data(pluginPfx)){ /* check if plugin has initialized */
+					
+						var d=$this.data(pluginPfx),o=d.opt,
+							mCustomScrollBox=$("#mCSB_"+d.idx),
+							mCSB_container=$("#mCSB_"+d.idx+"_container"),
+							scrollbar=$(".mCSB_"+d.idx+"_scrollbar");
+					
+						if(o.live){removeLiveTimers(o.liveSelector || $(selector).selector);} /* remove live timers */
+						
+						_autoUpdate.call(this,"remove"); /* remove automatic updating */
+						
+						_unbindEvents.call(this); /* unbind events */
+						
+						_resetContentPosition.call(this); /* reset content position */
+						
+						$this.removeData(pluginPfx); /* remove plugin data object */
+						
+						_delete(this,"mcs"); /* delete callbacks object */
+						
+						/* remove plugin markup */
+						scrollbar.remove(); /* remove scrollbar(s) first (those can be either inside or outside plugin's inner wrapper) */
+						mCSB_container.find("img."+classes[2]).removeClass(classes[2]); /* remove loaded images flag */
+						mCustomScrollBox.replaceWith(mCSB_container.contents()); /* replace plugin's inner wrapper with the original content */
+						/* remove plugin classes from the element and add destroy class */
+						$this.removeClass(pluginNS+" _"+pluginPfx+"_"+d.idx+" "+classes[6]+" "+classes[7]+" "+classes[5]+" "+classes[3]).addClass(classes[4]);
+					
+					}
+					
+				});
+				
+			}
+			/* ---------------------------------------- */
+			
+		},
+	
+	
+	
+	
+		
+	/* 
+	----------------------------------------
+	FUNCTIONS
+	----------------------------------------
+	*/
+	
+		/* validates selector (if selector is invalid or undefined uses the default one) */
+		_selector=function(){
+			return (typeof $(this)!=="object" || $(this).length<1) ? defaultSelector : this;
+		},
+		/* -------------------- */
+		
+		
+		/* changes options according to theme */
+		_theme=function(obj){
+			var fixedSizeScrollbarThemes=["rounded","rounded-dark","rounded-dots","rounded-dots-dark"],
+				nonExpandedScrollbarThemes=["rounded-dots","rounded-dots-dark","3d","3d-dark","3d-thick","3d-thick-dark","inset","inset-dark","inset-2","inset-2-dark","inset-3","inset-3-dark"],
+				disabledScrollButtonsThemes=["minimal","minimal-dark"],
+				enabledAutoHideScrollbarThemes=["minimal","minimal-dark"],
+				scrollbarPositionOutsideThemes=["minimal","minimal-dark"];
+			obj.autoDraggerLength=$.inArray(obj.theme,fixedSizeScrollbarThemes) > -1 ? false : obj.autoDraggerLength;
+			obj.autoExpandScrollbar=$.inArray(obj.theme,nonExpandedScrollbarThemes) > -1 ? false : obj.autoExpandScrollbar;
+			obj.scrollButtons.enable=$.inArray(obj.theme,disabledScrollButtonsThemes) > -1 ? false : obj.scrollButtons.enable;
+			obj.autoHideScrollbar=$.inArray(obj.theme,enabledAutoHideScrollbarThemes) > -1 ? true : obj.autoHideScrollbar;
+			obj.scrollbarPosition=$.inArray(obj.theme,scrollbarPositionOutsideThemes) > -1 ? "outside" : obj.scrollbarPosition;
+		},
+		/* -------------------- */
+		
+		
+		/* live option timers removal */
+		removeLiveTimers=function(selector){
+			if(liveTimers[selector]){
+				clearTimeout(liveTimers[selector]);
+				_delete(liveTimers,selector);
+			}
+		},
+		/* -------------------- */
+		
+		
+		/* normalizes axis option to valid values: "y", "x", "yx" */
+		_findAxis=function(val){
+			return (val==="yx" || val==="xy" || val==="auto") ? "yx" : (val==="x" || val==="horizontal") ? "x" : "y";
+		},
+		/* -------------------- */
+		
+		
+		/* normalizes scrollButtons.scrollType option to valid values: "stepless", "stepped" */
+		_findScrollButtonsType=function(val){
+			return (val==="stepped" || val==="pixels" || val==="step" || val==="click") ? "stepped" : "stepless";
+		},
+		/* -------------------- */
+		
+		
+		/* generates plugin markup */
+		_pluginMarkup=function(){
+			var $this=$(this),d=$this.data(pluginPfx),o=d.opt,
+				expandClass=o.autoExpandScrollbar ? " "+classes[1]+"_expand" : "",
+				scrollbar=["<div id='mCSB_"+d.idx+"_scrollbar_vertical' class='mCSB_scrollTools mCSB_"+d.idx+"_scrollbar mCS-"+o.theme+" mCSB_scrollTools_vertical"+expandClass+"'><div class='"+classes[12]+"'><div id='mCSB_"+d.idx+"_dragger_vertical' class='mCSB_dragger' style='position:absolute;'><div class='mCSB_dragger_bar' /></div><div class='mCSB_draggerRail' /></div></div>","<div id='mCSB_"+d.idx+"_scrollbar_horizontal' class='mCSB_scrollTools mCSB_"+d.idx+"_scrollbar mCS-"+o.theme+" mCSB_scrollTools_horizontal"+expandClass+"'><div class='"+classes[12]+"'><div id='mCSB_"+d.idx+"_dragger_horizontal' class='mCSB_dragger' style='position:absolute;'><div class='mCSB_dragger_bar' /></div><div class='mCSB_draggerRail' /></div></div>"],
+				wrapperClass=o.axis==="yx" ? "mCSB_vertical_horizontal" : o.axis==="x" ? "mCSB_horizontal" : "mCSB_vertical",
+				scrollbars=o.axis==="yx" ? scrollbar[0]+scrollbar[1] : o.axis==="x" ? scrollbar[1] : scrollbar[0],
+				contentWrapper=o.axis==="yx" ? "<div id='mCSB_"+d.idx+"_container_wrapper' class='mCSB_container_wrapper' />" : "",
+				autoHideClass=o.autoHideScrollbar ? " "+classes[6] : "",
+				scrollbarDirClass=(o.axis!=="x" && d.langDir==="rtl") ? " "+classes[7] : "";
+			if(o.setWidth){$this.css("width",o.setWidth);} /* set element width */
+			if(o.setHeight){$this.css("height",o.setHeight);} /* set element height */
+			o.setLeft=(o.axis!=="y" && d.langDir==="rtl") ? "989999px" : o.setLeft; /* adjust left position for rtl direction */
+			$this.addClass(pluginNS+" _"+pluginPfx+"_"+d.idx+autoHideClass+scrollbarDirClass).wrapInner("<div id='mCSB_"+d.idx+"' class='mCustomScrollBox mCS-"+o.theme+" "+wrapperClass+"'><div id='mCSB_"+d.idx+"_container' class='mCSB_container' style='position:relative; top:"+o.setTop+"; left:"+o.setLeft+";' dir='"+d.langDir+"' /></div>");
+			var mCustomScrollBox=$("#mCSB_"+d.idx),
+				mCSB_container=$("#mCSB_"+d.idx+"_container");
+			if(o.axis!=="y" && !o.advanced.autoExpandHorizontalScroll){
+				mCSB_container.css("width",_contentWidth(mCSB_container));
+			}
+			if(o.scrollbarPosition==="outside"){
+				if($this.css("position")==="static"){ /* requires elements with non-static position */
+					$this.css("position","relative");
+				}
+				$this.css("overflow","visible");
+				mCustomScrollBox.addClass("mCSB_outside").after(scrollbars);
+			}else{
+				mCustomScrollBox.addClass("mCSB_inside").append(scrollbars);
+				mCSB_container.wrap(contentWrapper);
+			}
+			_scrollButtons.call(this); /* add scrollbar buttons */
+			/* minimum dragger length */
+			var mCSB_dragger=[$("#mCSB_"+d.idx+"_dragger_vertical"),$("#mCSB_"+d.idx+"_dragger_horizontal")];
+			mCSB_dragger[0].css("min-height",mCSB_dragger[0].height());
+			mCSB_dragger[1].css("min-width",mCSB_dragger[1].width());
+		},
+		/* -------------------- */
+		
+		
+		/* calculates content width */
+		_contentWidth=function(el){
+			var val=[el[0].scrollWidth,Math.max.apply(Math,el.children().map(function(){return $(this).outerWidth(true);}).get())],w=el.parent().width();
+			return val[0]>w ? val[0] : val[1]>w ? val[1] : "100%";
+		},
+		/* -------------------- */
+		
+		
+		/* expands content horizontally */
+		_expandContentHorizontally=function(){
+			var $this=$(this),d=$this.data(pluginPfx),o=d.opt,
+				mCSB_container=$("#mCSB_"+d.idx+"_container");
+			if(o.advanced.autoExpandHorizontalScroll && o.axis!=="y"){
+				/* calculate scrollWidth */
+				mCSB_container.css({"width":"auto","min-width":0,"overflow-x":"scroll"});
+				var w=Math.ceil(mCSB_container[0].scrollWidth);
+				if(o.advanced.autoExpandHorizontalScroll===3 || (o.advanced.autoExpandHorizontalScroll!==2 && w>mCSB_container.parent().width())){
+					mCSB_container.css({"width":w,"min-width":"100%","overflow-x":"inherit"});
+				}else{
+					/* 
+					wrap content with an infinite width div and set its position to absolute and width to auto. 
+					Setting width to auto before calculating the actual width is important! 
+					We must let the browser set the width as browser zoom values are impossible to calculate.
+					*/
+					mCSB_container.css({"overflow-x":"inherit","position":"absolute"})
+						.wrap("<div class='mCSB_h_wrapper' style='position:relative; left:0; width:999999px;' />")
+						.css({ /* set actual width, original position and un-wrap */
+							/* 
+							get the exact width (with decimals) and then round-up. 
+							Using jquery outerWidth() will round the width value which will mess up with inner elements that have non-integer width
+							*/
+							"width":(Math.ceil(mCSB_container[0].getBoundingClientRect().right+0.4)-Math.floor(mCSB_container[0].getBoundingClientRect().left)),
+							"min-width":"100%",
+							"position":"relative"
+						}).unwrap();
+				}
+			}
+		},
+		/* -------------------- */
+		
+		
+		/* adds scrollbar buttons */
+		_scrollButtons=function(){
+			var $this=$(this),d=$this.data(pluginPfx),o=d.opt,
+				mCSB_scrollTools=$(".mCSB_"+d.idx+"_scrollbar:first"),
+				tabindex=!_isNumeric(o.scrollButtons.tabindex) ? "" : "tabindex='"+o.scrollButtons.tabindex+"'",
+				btnHTML=[
+					"<a href='#' class='"+classes[13]+"' "+tabindex+" />",
+					"<a href='#' class='"+classes[14]+"' "+tabindex+" />",
+					"<a href='#' class='"+classes[15]+"' "+tabindex+" />",
+					"<a href='#' class='"+classes[16]+"' "+tabindex+" />"
+				],
+				btn=[(o.axis==="x" ? btnHTML[2] : btnHTML[0]),(o.axis==="x" ? btnHTML[3] : btnHTML[1]),btnHTML[2],btnHTML[3]];
+			if(o.scrollButtons.enable){
+				mCSB_scrollTools.prepend(btn[0]).append(btn[1]).next(".mCSB_scrollTools").prepend(btn[2]).append(btn[3]);
+			}
+		},
+		/* -------------------- */
+		
+		
+		/* auto-adjusts scrollbar dragger length */
+		_setDraggerLength=function(){
+			var $this=$(this),d=$this.data(pluginPfx),
+				mCustomScrollBox=$("#mCSB_"+d.idx),
+				mCSB_container=$("#mCSB_"+d.idx+"_container"),
+				mCSB_dragger=[$("#mCSB_"+d.idx+"_dragger_vertical"),$("#mCSB_"+d.idx+"_dragger_horizontal")],
+				ratio=[mCustomScrollBox.height()/mCSB_container.outerHeight(false),mCustomScrollBox.width()/mCSB_container.outerWidth(false)],
+				l=[
+					parseInt(mCSB_dragger[0].css("min-height")),Math.round(ratio[0]*mCSB_dragger[0].parent().height()),
+					parseInt(mCSB_dragger[1].css("min-width")),Math.round(ratio[1]*mCSB_dragger[1].parent().width())
+				],
+				h=oldIE && (l[1]<l[0]) ? l[0] : l[1],w=oldIE && (l[3]<l[2]) ? l[2] : l[3];
+			mCSB_dragger[0].css({
+				"height":h,"max-height":(mCSB_dragger[0].parent().height()-10)
+			}).find(".mCSB_dragger_bar").css({"line-height":l[0]+"px"});
+			mCSB_dragger[1].css({
+				"width":w,"max-width":(mCSB_dragger[1].parent().width()-10)
+			});
+		},
+		/* -------------------- */
+		
+		
+		/* calculates scrollbar to content ratio */
+		_scrollRatio=function(){
+			var $this=$(this),d=$this.data(pluginPfx),
+				mCustomScrollBox=$("#mCSB_"+d.idx),
+				mCSB_container=$("#mCSB_"+d.idx+"_container"),
+				mCSB_dragger=[$("#mCSB_"+d.idx+"_dragger_vertical"),$("#mCSB_"+d.idx+"_dragger_horizontal")],
+				scrollAmount=[mCSB_container.outerHeight(false)-mCustomScrollBox.height(),mCSB_container.outerWidth(false)-mCustomScrollBox.width()],
+				ratio=[
+					scrollAmount[0]/(mCSB_dragger[0].parent().height()-mCSB_dragger[0].height()),
+					scrollAmount[1]/(mCSB_dragger[1].parent().width()-mCSB_dragger[1].width())
+				];
+			d.scrollRatio={y:ratio[0],x:ratio[1]};
+		},
+		/* -------------------- */
+		
+		
+		/* toggles scrolling classes */
+		_onDragClasses=function(el,action,xpnd){
+			var expandClass=xpnd ? classes[0]+"_expanded" : "",
+				scrollbar=el.closest(".mCSB_scrollTools");
+			if(action==="active"){
+				el.toggleClass(classes[0]+" "+expandClass); scrollbar.toggleClass(classes[1]); 
+				el[0]._draggable=el[0]._draggable ? 0 : 1;
+			}else{
+				if(!el[0]._draggable){
+					if(action==="hide"){
+						el.removeClass(classes[0]); scrollbar.removeClass(classes[1]);
+					}else{
+						el.addClass(classes[0]); scrollbar.addClass(classes[1]);
+					}
+				}
+			}
+		},
+		/* -------------------- */
+		
+		
+		/* checks if content overflows its container to determine if scrolling is required */
+		_overflowed=function(){
+			var $this=$(this),d=$this.data(pluginPfx),
+				mCustomScrollBox=$("#mCSB_"+d.idx),
+				mCSB_container=$("#mCSB_"+d.idx+"_container"),
+				contentHeight=d.overflowed==null ? mCSB_container.height() : mCSB_container.outerHeight(false),
+				contentWidth=d.overflowed==null ? mCSB_container.width() : mCSB_container.outerWidth(false),
+				h=mCSB_container[0].scrollHeight,w=mCSB_container[0].scrollWidth;
+			if(h>contentHeight){contentHeight=h;}
+			if(w>contentWidth){contentWidth=w;}
+			return [contentHeight>mCustomScrollBox.height(),contentWidth>mCustomScrollBox.width()];
+		},
+		/* -------------------- */
+		
+		
+		/* resets content position to 0 */
+		_resetContentPosition=function(){
+			var $this=$(this),d=$this.data(pluginPfx),o=d.opt,
+				mCustomScrollBox=$("#mCSB_"+d.idx),
+				mCSB_container=$("#mCSB_"+d.idx+"_container"),
+				mCSB_dragger=[$("#mCSB_"+d.idx+"_dragger_vertical"),$("#mCSB_"+d.idx+"_dragger_horizontal")];
+			_stop($this); /* stop any current scrolling before resetting */
+			if((o.axis!=="x" && !d.overflowed[0]) || (o.axis==="y" && d.overflowed[0])){ /* reset y */
+				mCSB_dragger[0].add(mCSB_container).css("top",0);
+				_scrollTo($this,"_resetY");
+			}
+			if((o.axis!=="y" && !d.overflowed[1]) || (o.axis==="x" && d.overflowed[1])){ /* reset x */
+				var cx=dx=0;
+				if(d.langDir==="rtl"){ /* adjust left position for rtl direction */
+					cx=mCustomScrollBox.width()-mCSB_container.outerWidth(false);
+					dx=Math.abs(cx/d.scrollRatio.x);
+				}
+				mCSB_container.css("left",cx);
+				mCSB_dragger[1].css("left",dx);
+				_scrollTo($this,"_resetX");
+			}
+		},
+		/* -------------------- */
+		
+		
+		/* binds scrollbar events */
+		_bindEvents=function(){
+			var $this=$(this),d=$this.data(pluginPfx),o=d.opt;
+			if(!d.bindEvents){ /* check if events are already bound */
+				_draggable.call(this);
+				if(o.contentTouchScroll){_contentDraggable.call(this);}
+				_selectable.call(this);
+				if(o.mouseWheel.enable){ /* bind mousewheel fn when plugin is available */
+					function _mwt(){
+						mousewheelTimeout=setTimeout(function(){
+							if(!$.event.special.mousewheel){
+								_mwt();
+							}else{
+								clearTimeout(mousewheelTimeout);
+								_mousewheel.call($this[0]);
+							}
+						},100);
+					}
+					var mousewheelTimeout;
+					_mwt();
+				}
+				_draggerRail.call(this);
+				_wrapperScroll.call(this);
+				if(o.advanced.autoScrollOnFocus){_focus.call(this);}
+				if(o.scrollButtons.enable){_buttons.call(this);}
+				if(o.keyboard.enable){_keyboard.call(this);}
+				d.bindEvents=true;
+			}
+		},
+		/* -------------------- */
+		
+		
+		/* unbinds scrollbar events */
+		_unbindEvents=function(){
+			var $this=$(this),d=$this.data(pluginPfx),o=d.opt,
+				namespace=pluginPfx+"_"+d.idx,
+				sb=".mCSB_"+d.idx+"_scrollbar",
+				sel=$("#mCSB_"+d.idx+",#mCSB_"+d.idx+"_container,#mCSB_"+d.idx+"_container_wrapper,"+sb+" ."+classes[12]+",#mCSB_"+d.idx+"_dragger_vertical,#mCSB_"+d.idx+"_dragger_horizontal,"+sb+">a"),
+				mCSB_container=$("#mCSB_"+d.idx+"_container");
+			if(o.advanced.releaseDraggableSelectors){sel.add($(o.advanced.releaseDraggableSelectors));}
+			if(o.advanced.extraDraggableSelectors){sel.add($(o.advanced.extraDraggableSelectors));}
+			if(d.bindEvents){ /* check if events are bound */
+				/* unbind namespaced events from document/selectors */
+				$(document).add($(!_canAccessIFrame() || top.document)).unbind("."+namespace);
+				sel.each(function(){
+					$(this).unbind("."+namespace);
+				});
+				/* clear and delete timeouts/objects */
+				clearTimeout($this[0]._focusTimeout); _delete($this[0],"_focusTimeout");
+				clearTimeout(d.sequential.step); _delete(d.sequential,"step");
+				clearTimeout(mCSB_container[0].onCompleteTimeout); _delete(mCSB_container[0],"onCompleteTimeout");
+				d.bindEvents=false;
+			}
+		},
+		/* -------------------- */
+		
+		
+		/* toggles scrollbar visibility */
+		_scrollbarVisibility=function(disabled){
+			var $this=$(this),d=$this.data(pluginPfx),o=d.opt,
+				contentWrapper=$("#mCSB_"+d.idx+"_container_wrapper"),
+				content=contentWrapper.length ? contentWrapper : $("#mCSB_"+d.idx+"_container"),
+				scrollbar=[$("#mCSB_"+d.idx+"_scrollbar_vertical"),$("#mCSB_"+d.idx+"_scrollbar_horizontal")],
+				mCSB_dragger=[scrollbar[0].find(".mCSB_dragger"),scrollbar[1].find(".mCSB_dragger")];
+			if(o.axis!=="x"){
+				if(d.overflowed[0] && !disabled){
+					scrollbar[0].add(mCSB_dragger[0]).add(scrollbar[0].children("a")).css("display","block");
+					content.removeClass(classes[8]+" "+classes[10]);
+				}else{
+					if(o.alwaysShowScrollbar){
+						if(o.alwaysShowScrollbar!==2){mCSB_dragger[0].css("display","none");}
+						content.removeClass(classes[10]);
+					}else{
+						scrollbar[0].css("display","none");
+						content.addClass(classes[10]);
+					}
+					content.addClass(classes[8]);
+				}
+			}
+			if(o.axis!=="y"){
+				if(d.overflowed[1] && !disabled){
+					scrollbar[1].add(mCSB_dragger[1]).add(scrollbar[1].children("a")).css("display","block");
+					content.removeClass(classes[9]+" "+classes[11]);
+				}else{
+					if(o.alwaysShowScrollbar){
+						if(o.alwaysShowScrollbar!==2){mCSB_dragger[1].css("display","none");}
+						content.removeClass(classes[11]);
+					}else{
+						scrollbar[1].css("display","none");
+						content.addClass(classes[11]);
+					}
+					content.addClass(classes[9]);
+				}
+			}
+			if(!d.overflowed[0] && !d.overflowed[1]){
+				$this.addClass(classes[5]);
+			}else{
+				$this.removeClass(classes[5]);
+			}
+		},
+		/* -------------------- */
+		
+		
+		/* returns input coordinates of pointer, touch and mouse events (relative to document) */
+		_coordinates=function(e){
+			var t=e.type,o=e.target.ownerDocument!==document && frameElement!==null ? [$(frameElement).offset().top,$(frameElement).offset().left] : null,
+				io=_canAccessIFrame() && e.target.ownerDocument!==top.document && frameElement!==null ? [$(e.view.frameElement).offset().top,$(e.view.frameElement).offset().left] : [0,0];
+			switch(t){
+				case "pointerdown": case "MSPointerDown": case "pointermove": case "MSPointerMove": case "pointerup": case "MSPointerUp":
+					return o ? [e.originalEvent.pageY-o[0]+io[0],e.originalEvent.pageX-o[1]+io[1],false] : [e.originalEvent.pageY,e.originalEvent.pageX,false];
+					break;
+				case "touchstart": case "touchmove": case "touchend":
+					var touch=e.originalEvent.touches[0] || e.originalEvent.changedTouches[0],
+						touches=e.originalEvent.touches.length || e.originalEvent.changedTouches.length;
+					return e.target.ownerDocument!==document ? [touch.screenY,touch.screenX,touches>1] : [touch.pageY,touch.pageX,touches>1];
+					break;
+				default:
+					return o ? [e.pageY-o[0]+io[0],e.pageX-o[1]+io[1],false] : [e.pageY,e.pageX,false];
+			}
+		},
+		/* -------------------- */
+		
+		
+		/* 
+		SCROLLBAR DRAG EVENTS
+		scrolls content via scrollbar dragging 
+		*/
+		_draggable=function(){
+			var $this=$(this),d=$this.data(pluginPfx),o=d.opt,
+				namespace=pluginPfx+"_"+d.idx,
+				draggerId=["mCSB_"+d.idx+"_dragger_vertical","mCSB_"+d.idx+"_dragger_horizontal"],
+				mCSB_container=$("#mCSB_"+d.idx+"_container"),
+				mCSB_dragger=$("#"+draggerId[0]+",#"+draggerId[1]),
+				draggable,dragY,dragX,
+				rds=o.advanced.releaseDraggableSelectors ? mCSB_dragger.add($(o.advanced.releaseDraggableSelectors)) : mCSB_dragger,
+				eds=o.advanced.extraDraggableSelectors ? $(!_canAccessIFrame() || top.document).add($(o.advanced.extraDraggableSelectors)) : $(!_canAccessIFrame() || top.document);
+			mCSB_dragger.bind("contextmenu."+namespace,function(e){
+				e.preventDefault(); //prevent right click
+			}).bind("mousedown."+namespace+" touchstart."+namespace+" pointerdown."+namespace+" MSPointerDown."+namespace,function(e){
+				e.stopImmediatePropagation();
+				e.preventDefault();
+				if(!_mouseBtnLeft(e)){return;} /* left mouse button only */
+				touchActive=true;
+				if(oldIE){document.onselectstart=function(){return false;}} /* disable text selection for IE < 9 */
+				_iframe.call(mCSB_container,false); /* enable scrollbar dragging over iframes by disabling their events */
+				_stop($this);
+				draggable=$(this);
+				var offset=draggable.offset(),y=_coordinates(e)[0]-offset.top,x=_coordinates(e)[1]-offset.left,
+					h=draggable.height()+offset.top,w=draggable.width()+offset.left;
+				if(y<h && y>0 && x<w && x>0){
+					dragY=y; 
+					dragX=x;
+				}
+				_onDragClasses(draggable,"active",o.autoExpandScrollbar); 
+			}).bind("touchmove."+namespace,function(e){
+				e.stopImmediatePropagation();
+				e.preventDefault();
+				var offset=draggable.offset(),y=_coordinates(e)[0]-offset.top,x=_coordinates(e)[1]-offset.left;
+				_drag(dragY,dragX,y,x);
+			});
+			$(document).add(eds).bind("mousemove."+namespace+" pointermove."+namespace+" MSPointerMove."+namespace,function(e){
+				if(draggable){
+					var offset=draggable.offset(),y=_coordinates(e)[0]-offset.top,x=_coordinates(e)[1]-offset.left;
+					if(dragY===y && dragX===x){return;} /* has it really moved? */
+					_drag(dragY,dragX,y,x);
+				}
+			}).add(rds).bind("mouseup."+namespace+" touchend."+namespace+" pointerup."+namespace+" MSPointerUp."+namespace,function(e){
+				if(draggable){
+					_onDragClasses(draggable,"active",o.autoExpandScrollbar); 
+					draggable=null;
+				}
+				touchActive=false;
+				if(oldIE){document.onselectstart=null;} /* enable text selection for IE < 9 */
+				_iframe.call(mCSB_container,true); /* enable iframes events */
+			});
+			function _drag(dragY,dragX,y,x){
+				mCSB_container[0].idleTimer=o.scrollInertia<233 ? 250 : 0;
+				if(draggable.attr("id")===draggerId[1]){
+					var dir="x",to=((draggable[0].offsetLeft-dragX)+x)*d.scrollRatio.x;
+				}else{
+					var dir="y",to=((draggable[0].offsetTop-dragY)+y)*d.scrollRatio.y;
+				}
+				_scrollTo($this,to.toString(),{dir:dir,drag:true});
+			}
+		},
+		/* -------------------- */
+		
+		
+		/* 
+		TOUCH SWIPE EVENTS
+		scrolls content via touch swipe 
+		Emulates the native touch-swipe scrolling with momentum found in iOS, Android and WP devices 
+		*/
+		_contentDraggable=function(){
+			var $this=$(this),d=$this.data(pluginPfx),o=d.opt,
+				namespace=pluginPfx+"_"+d.idx,
+				mCustomScrollBox=$("#mCSB_"+d.idx),
+				mCSB_container=$("#mCSB_"+d.idx+"_container"),
+				mCSB_dragger=[$("#mCSB_"+d.idx+"_dragger_vertical"),$("#mCSB_"+d.idx+"_dragger_horizontal")],
+				draggable,dragY,dragX,touchStartY,touchStartX,touchMoveY=[],touchMoveX=[],startTime,runningTime,endTime,distance,speed,amount,
+				durA=0,durB,overwrite=o.axis==="yx" ? "none" : "all",touchIntent=[],touchDrag,docDrag,
+				iframe=mCSB_container.find("iframe"),
+				events=[
+					"touchstart."+namespace+" pointerdown."+namespace+" MSPointerDown."+namespace, //start
+					"touchmove."+namespace+" pointermove."+namespace+" MSPointerMove."+namespace, //move
+					"touchend."+namespace+" pointerup."+namespace+" MSPointerUp."+namespace //end
+				],
+				touchAction=document.body.style.touchAction!==undefined && document.body.style.touchAction!=="";
+			mCSB_container.bind(events[0],function(e){
+				_onTouchstart(e);
+			}).bind(events[1],function(e){
+				_onTouchmove(e);
+			});
+			mCustomScrollBox.bind(events[0],function(e){
+				_onTouchstart2(e);
+			}).bind(events[2],function(e){
+				_onTouchend(e);
+			});
+			if(iframe.length){
+				iframe.each(function(){
+					$(this).bind("load",function(){
+						/* bind events on accessible iframes */
+						if(_canAccessIFrame(this)){
+							$(this.contentDocument || this.contentWindow.document).bind(events[0],function(e){
+								_onTouchstart(e);
+								_onTouchstart2(e);
+							}).bind(events[1],function(e){
+								_onTouchmove(e);
+							}).bind(events[2],function(e){
+								_onTouchend(e);
+							});
+						}
+					});
+				});
+			}
+			function _onTouchstart(e){
+				if(!_pointerTouch(e) || touchActive || _coordinates(e)[2]){touchable=0; return;}
+				touchable=1; touchDrag=0; docDrag=0; draggable=1;
+				$this.removeClass("mCS_touch_action");
+				var offset=mCSB_container.offset();
+				dragY=_coordinates(e)[0]-offset.top;
+				dragX=_coordinates(e)[1]-offset.left;
+				touchIntent=[_coordinates(e)[0],_coordinates(e)[1]];
+			}
+			function _onTouchmove(e){
+				if(!_pointerTouch(e) || touchActive || _coordinates(e)[2]){return;}
+				if(!o.documentTouchScroll){e.preventDefault();} 
+				e.stopImmediatePropagation();
+				if(docDrag && !touchDrag){return;}
+				if(draggable){
+					runningTime=_getTime();
+					var offset=mCustomScrollBox.offset(),y=_coordinates(e)[0]-offset.top,x=_coordinates(e)[1]-offset.left,
+						easing="mcsLinearOut";
+					touchMoveY.push(y);
+					touchMoveX.push(x);
+					touchIntent[2]=Math.abs(_coordinates(e)[0]-touchIntent[0]); touchIntent[3]=Math.abs(_coordinates(e)[1]-touchIntent[1]);
+					if(d.overflowed[0]){
+						var limit=mCSB_dragger[0].parent().height()-mCSB_dragger[0].height(),
+							prevent=((dragY-y)>0 && (y-dragY)>-(limit*d.scrollRatio.y) && (touchIntent[3]*2<touchIntent[2] || o.axis==="yx"));
+					}
+					if(d.overflowed[1]){
+						var limitX=mCSB_dragger[1].parent().width()-mCSB_dragger[1].width(),
+							preventX=((dragX-x)>0 && (x-dragX)>-(limitX*d.scrollRatio.x) && (touchIntent[2]*2<touchIntent[3] || o.axis==="yx"));
+					}
+					if(prevent || preventX){ /* prevent native document scrolling */
+						if(!touchAction){e.preventDefault();} 
+						touchDrag=1;
+					}else{
+						docDrag=1;
+						$this.addClass("mCS_touch_action");
+					}
+					if(touchAction){e.preventDefault();} 
+					amount=o.axis==="yx" ? [(dragY-y),(dragX-x)] : o.axis==="x" ? [null,(dragX-x)] : [(dragY-y),null];
+					mCSB_container[0].idleTimer=250;
+					if(d.overflowed[0]){_drag(amount[0],durA,easing,"y","all",true);}
+					if(d.overflowed[1]){_drag(amount[1],durA,easing,"x",overwrite,true);}
+				}
+			}
+			function _onTouchstart2(e){
+				if(!_pointerTouch(e) || touchActive || _coordinates(e)[2]){touchable=0; return;}
+				touchable=1;
+				e.stopImmediatePropagation();
+				_stop($this);
+				startTime=_getTime();
+				var offset=mCustomScrollBox.offset();
+				touchStartY=_coordinates(e)[0]-offset.top;
+				touchStartX=_coordinates(e)[1]-offset.left;
+				touchMoveY=[]; touchMoveX=[];
+			}
+			function _onTouchend(e){
+				if(!_pointerTouch(e) || touchActive || _coordinates(e)[2]){return;}
+				draggable=0;
+				e.stopImmediatePropagation();
+				touchDrag=0; docDrag=0;
+				endTime=_getTime();
+				var offset=mCustomScrollBox.offset(),y=_coordinates(e)[0]-offset.top,x=_coordinates(e)[1]-offset.left;
+				if((endTime-runningTime)>30){return;}
+				speed=1000/(endTime-startTime);
+				var easing="mcsEaseOut",slow=speed<2.5,
+					diff=slow ? [touchMoveY[touchMoveY.length-2],touchMoveX[touchMoveX.length-2]] : [0,0];
+				distance=slow ? [(y-diff[0]),(x-diff[1])] : [y-touchStartY,x-touchStartX];
+				var absDistance=[Math.abs(distance[0]),Math.abs(distance[1])];
+				speed=slow ? [Math.abs(distance[0]/4),Math.abs(distance[1]/4)] : [speed,speed];
+				var a=[
+					Math.abs(mCSB_container[0].offsetTop)-(distance[0]*_m((absDistance[0]/speed[0]),speed[0])),
+					Math.abs(mCSB_container[0].offsetLeft)-(distance[1]*_m((absDistance[1]/speed[1]),speed[1]))
+				];
+				amount=o.axis==="yx" ? [a[0],a[1]] : o.axis==="x" ? [null,a[1]] : [a[0],null];
+				durB=[(absDistance[0]*4)+o.scrollInertia,(absDistance[1]*4)+o.scrollInertia];
+				var md=parseInt(o.contentTouchScroll) || 0; /* absolute minimum distance required */
+				amount[0]=absDistance[0]>md ? amount[0] : 0;
+				amount[1]=absDistance[1]>md ? amount[1] : 0;
+				if(d.overflowed[0]){_drag(amount[0],durB[0],easing,"y",overwrite,false);}
+				if(d.overflowed[1]){_drag(amount[1],durB[1],easing,"x",overwrite,false);}
+			}
+			function _m(ds,s){
+				var r=[s*1.5,s*2,s/1.5,s/2];
+				if(ds>90){
+					return s>4 ? r[0] : r[3];
+				}else if(ds>60){
+					return s>3 ? r[3] : r[2];
+				}else if(ds>30){
+					return s>8 ? r[1] : s>6 ? r[0] : s>4 ? s : r[2];
+				}else{
+					return s>8 ? s : r[3];
+				}
+			}
+			function _drag(amount,dur,easing,dir,overwrite,drag){
+				if(!amount){return;}
+				_scrollTo($this,amount.toString(),{dur:dur,scrollEasing:easing,dir:dir,overwrite:overwrite,drag:drag});
+			}
+		},
+		/* -------------------- */
+		
+		
+		/* 
+		SELECT TEXT EVENTS 
+		scrolls content when text is selected 
+		*/
+		_selectable=function(){
+			var $this=$(this),d=$this.data(pluginPfx),o=d.opt,seq=d.sequential,
+				namespace=pluginPfx+"_"+d.idx,
+				mCSB_container=$("#mCSB_"+d.idx+"_container"),
+				wrapper=mCSB_container.parent(),
+				action;
+			mCSB_container.bind("mousedown."+namespace,function(e){
+				if(touchable){return;}
+				if(!action){action=1; touchActive=true;}
+			}).add(document).bind("mousemove."+namespace,function(e){
+				if(!touchable && action && _sel()){
+					var offset=mCSB_container.offset(),
+						y=_coordinates(e)[0]-offset.top+mCSB_container[0].offsetTop,x=_coordinates(e)[1]-offset.left+mCSB_container[0].offsetLeft;
+					if(y>0 && y<wrapper.height() && x>0 && x<wrapper.width()){
+						if(seq.step){_seq("off",null,"stepped");}
+					}else{
+						if(o.axis!=="x" && d.overflowed[0]){
+							if(y<0){
+								_seq("on",38);
+							}else if(y>wrapper.height()){
+								_seq("on",40);
+							}
+						}
+						if(o.axis!=="y" && d.overflowed[1]){
+							if(x<0){
+								_seq("on",37);
+							}else if(x>wrapper.width()){
+								_seq("on",39);
+							}
+						}
+					}
+				}
+			}).bind("mouseup."+namespace+" dragend."+namespace,function(e){
+				if(touchable){return;}
+				if(action){action=0; _seq("off",null);}
+				touchActive=false;
+			});
+			function _sel(){
+				return 	window.getSelection ? window.getSelection().toString() : 
+						document.selection && document.selection.type!="Control" ? document.selection.createRange().text : 0;
+			}
+			function _seq(a,c,s){
+				seq.type=s && action ? "stepped" : "stepless";
+				seq.scrollAmount=10;
+				_sequentialScroll($this,a,c,"mcsLinearOut",s ? 60 : null);
+			}
+		},
+		/* -------------------- */
+		
+		
+		/* 
+		MOUSE WHEEL EVENT
+		scrolls content via mouse-wheel 
+		via mouse-wheel plugin (https://github.com/brandonaaron/jquery-mousewheel)
+		*/
+		_mousewheel=function(){
+			if(!$(this).data(pluginPfx)){return;} /* Check if the scrollbar is ready to use mousewheel events (issue: #185) */
+			var $this=$(this),d=$this.data(pluginPfx),o=d.opt,
+				namespace=pluginPfx+"_"+d.idx,
+				mCustomScrollBox=$("#mCSB_"+d.idx),
+				mCSB_dragger=[$("#mCSB_"+d.idx+"_dragger_vertical"),$("#mCSB_"+d.idx+"_dragger_horizontal")],
+				iframe=$("#mCSB_"+d.idx+"_container").find("iframe");
+			if(iframe.length){
+				iframe.each(function(){
+					$(this).bind("load",function(){
+						/* bind events on accessible iframes */
+						if(_canAccessIFrame(this)){
+							$(this.contentDocument || this.contentWindow.document).bind("mousewheel."+namespace,function(e,delta){
+								_onMousewheel(e,delta);
+							});
+						}
+					});
+				});
+			}
+			mCustomScrollBox.bind("mousewheel."+namespace,function(e,delta){
+				_onMousewheel(e,delta);
+			});
+			function _onMousewheel(e,delta){
+				_stop($this);
+				if(_disableMousewheel($this,e.target)){return;} /* disables mouse-wheel when hovering specific elements */
+				var deltaFactor=o.mouseWheel.deltaFactor!=="auto" ? parseInt(o.mouseWheel.deltaFactor) : (oldIE && e.deltaFactor<100) ? 100 : e.deltaFactor || 100,
+					dur=o.scrollInertia;
+				if(o.axis==="x" || o.mouseWheel.axis==="x"){
+					var dir="x",
+						px=[Math.round(deltaFactor*d.scrollRatio.x),parseInt(o.mouseWheel.scrollAmount)],
+						amount=o.mouseWheel.scrollAmount!=="auto" ? px[1] : px[0]>=mCustomScrollBox.width() ? mCustomScrollBox.width()*0.9 : px[0],
+						contentPos=Math.abs($("#mCSB_"+d.idx+"_container")[0].offsetLeft),
+						draggerPos=mCSB_dragger[1][0].offsetLeft,
+						limit=mCSB_dragger[1].parent().width()-mCSB_dragger[1].width(),
+						dlt=o.mouseWheel.axis==="y" ? (e.deltaY || delta) : e.deltaX;
+				}else{
+					var dir="y",
+						px=[Math.round(deltaFactor*d.scrollRatio.y),parseInt(o.mouseWheel.scrollAmount)],
+						amount=o.mouseWheel.scrollAmount!=="auto" ? px[1] : px[0]>=mCustomScrollBox.height() ? mCustomScrollBox.height()*0.9 : px[0],
+						contentPos=Math.abs($("#mCSB_"+d.idx+"_container")[0].offsetTop),
+						draggerPos=mCSB_dragger[0][0].offsetTop,
+						limit=mCSB_dragger[0].parent().height()-mCSB_dragger[0].height(),
+						dlt=e.deltaY || delta;
+				}
+				if((dir==="y" && !d.overflowed[0]) || (dir==="x" && !d.overflowed[1])){return;}
+				if(o.mouseWheel.invert || e.webkitDirectionInvertedFromDevice){dlt=-dlt;}
+				if(o.mouseWheel.normalizeDelta){dlt=dlt<0 ? -1 : 1;}
+				if((dlt>0 && draggerPos!==0) || (dlt<0 && draggerPos!==limit) || o.mouseWheel.preventDefault){
+					e.stopImmediatePropagation();
+					e.preventDefault();
+				}
+				if(e.deltaFactor<5 && !o.mouseWheel.normalizeDelta){
+					//very low deltaFactor values mean some kind of delta acceleration (e.g. osx trackpad), so adjusting scrolling accordingly
+					amount=e.deltaFactor; dur=17;
+				}
+				_scrollTo($this,(contentPos-(dlt*amount)).toString(),{dir:dir,dur:dur});
+			}
+		},
+		/* -------------------- */
+		
+		
+		/* checks if iframe can be accessed */
+		_canAccessIFrameCache=new Object(),
+		_canAccessIFrame=function(iframe){
+		    var result=false,cacheKey=false,html=null;
+		    if(iframe===undefined){
+				cacheKey="#empty";
+		    }else if($(iframe).attr("id")!==undefined){
+				cacheKey=$(iframe).attr("id");
+		    }
+			if(cacheKey!==false && _canAccessIFrameCache[cacheKey]!==undefined){
+				return _canAccessIFrameCache[cacheKey];
+			}
+			if(!iframe){
+				try{
+					var doc=top.document;
+					html=doc.body.innerHTML;
+				}catch(err){/* do nothing */}
+				result=(html!==null);
+			}else{
+				try{
+					var doc=iframe.contentDocument || iframe.contentWindow.document;
+					html=doc.body.innerHTML;
+				}catch(err){/* do nothing */}
+				result=(html!==null);
+			}
+			if(cacheKey!==false){_canAccessIFrameCache[cacheKey]=result;}
+			return result;
+		},
+		/* -------------------- */
+		
+		
+		/* switches iframe's pointer-events property (drag, mousewheel etc. over cross-domain iframes) */
+		_iframe=function(evt){
+			var el=this.find("iframe");
+			if(!el.length){return;} /* check if content contains iframes */
+			var val=!evt ? "none" : "auto";
+			el.css("pointer-events",val); /* for IE11, iframe's display property should not be "block" */
+		},
+		/* -------------------- */
+		
+		
+		/* disables mouse-wheel when hovering specific elements like select, datalist etc. */
+		_disableMousewheel=function(el,target){
+			var tag=target.nodeName.toLowerCase(),
+				tags=el.data(pluginPfx).opt.mouseWheel.disableOver,
+				/* elements that require focus */
+				focusTags=["select","textarea"];
+			return $.inArray(tag,tags) > -1 && !($.inArray(tag,focusTags) > -1 && !$(target).is(":focus"));
+		},
+		/* -------------------- */
+		
+		
+		/* 
+		DRAGGER RAIL CLICK EVENT
+		scrolls content via dragger rail 
+		*/
+		_draggerRail=function(){
+			var $this=$(this),d=$this.data(pluginPfx),
+				namespace=pluginPfx+"_"+d.idx,
+				mCSB_container=$("#mCSB_"+d.idx+"_container"),
+				wrapper=mCSB_container.parent(),
+				mCSB_draggerContainer=$(".mCSB_"+d.idx+"_scrollbar ."+classes[12]),
+				clickable;
+			mCSB_draggerContainer.bind("mousedown."+namespace+" touchstart."+namespace+" pointerdown."+namespace+" MSPointerDown."+namespace,function(e){
+				touchActive=true;
+				if(!$(e.target).hasClass("mCSB_dragger")){clickable=1;}
+			}).bind("touchend."+namespace+" pointerup."+namespace+" MSPointerUp."+namespace,function(e){
+				touchActive=false;
+			}).bind("click."+namespace,function(e){
+				if(!clickable){return;}
+				clickable=0;
+				if($(e.target).hasClass(classes[12]) || $(e.target).hasClass("mCSB_draggerRail")){
+					_stop($this);
+					var el=$(this),mCSB_dragger=el.find(".mCSB_dragger");
+					if(el.parent(".mCSB_scrollTools_horizontal").length>0){
+						if(!d.overflowed[1]){return;}
+						var dir="x",
+							clickDir=e.pageX>mCSB_dragger.offset().left ? -1 : 1,
+							to=Math.abs(mCSB_container[0].offsetLeft)-(clickDir*(wrapper.width()*0.9));
+					}else{
+						if(!d.overflowed[0]){return;}
+						var dir="y",
+							clickDir=e.pageY>mCSB_dragger.offset().top ? -1 : 1,
+							to=Math.abs(mCSB_container[0].offsetTop)-(clickDir*(wrapper.height()*0.9));
+					}
+					_scrollTo($this,to.toString(),{dir:dir,scrollEasing:"mcsEaseInOut"});
+				}
+			});
+		},
+		/* -------------------- */
+		
+		
+		/* 
+		FOCUS EVENT
+		scrolls content via element focus (e.g. clicking an input, pressing TAB key etc.)
+		*/
+		_focus=function(){
+			var $this=$(this),d=$this.data(pluginPfx),o=d.opt,
+				namespace=pluginPfx+"_"+d.idx,
+				mCSB_container=$("#mCSB_"+d.idx+"_container"),
+				wrapper=mCSB_container.parent();
+			mCSB_container.bind("focusin."+namespace,function(e){
+				var el=$(document.activeElement),
+					nested=mCSB_container.find(".mCustomScrollBox").length,
+					dur=0;
+				if(!el.is(o.advanced.autoScrollOnFocus)){return;}
+				_stop($this);
+				clearTimeout($this[0]._focusTimeout);
+				$this[0]._focusTimer=nested ? (dur+17)*nested : 0;
+				$this[0]._focusTimeout=setTimeout(function(){
+					var	to=[_childPos(el)[0],_childPos(el)[1]],
+						contentPos=[mCSB_container[0].offsetTop,mCSB_container[0].offsetLeft],
+						isVisible=[
+							(contentPos[0]+to[0]>=0 && contentPos[0]+to[0]<wrapper.height()-el.outerHeight(false)),
+							(contentPos[1]+to[1]>=0 && contentPos[0]+to[1]<wrapper.width()-el.outerWidth(false))
+						],
+						overwrite=(o.axis==="yx" && !isVisible[0] && !isVisible[1]) ? "none" : "all";
+					if(o.axis!=="x" && !isVisible[0]){
+						_scrollTo($this,to[0].toString(),{dir:"y",scrollEasing:"mcsEaseInOut",overwrite:overwrite,dur:dur});
+					}
+					if(o.axis!=="y" && !isVisible[1]){
+						_scrollTo($this,to[1].toString(),{dir:"x",scrollEasing:"mcsEaseInOut",overwrite:overwrite,dur:dur});
+					}
+				},$this[0]._focusTimer);
+			});
+		},
+		/* -------------------- */
+		
+		
+		/* sets content wrapper scrollTop/scrollLeft always to 0 */
+		_wrapperScroll=function(){
+			var $this=$(this),d=$this.data(pluginPfx),
+				namespace=pluginPfx+"_"+d.idx,
+				wrapper=$("#mCSB_"+d.idx+"_container").parent();
+			wrapper.bind("scroll."+namespace,function(e){
+				if(wrapper.scrollTop()!==0 || wrapper.scrollLeft()!==0){
+					$(".mCSB_"+d.idx+"_scrollbar").css("visibility","hidden"); /* hide scrollbar(s) */
+				}
+			});
+		},
+		/* -------------------- */
+		
+		
+		/* 
+		BUTTONS EVENTS
+		scrolls content via up, down, left and right buttons 
+		*/
+		_buttons=function(){
+			var $this=$(this),d=$this.data(pluginPfx),o=d.opt,seq=d.sequential,
+				namespace=pluginPfx+"_"+d.idx,
+				sel=".mCSB_"+d.idx+"_scrollbar",
+				btn=$(sel+">a");
+			btn.bind("contextmenu."+namespace,function(e){
+				e.preventDefault(); //prevent right click
+			}).bind("mousedown."+namespace+" touchstart."+namespace+" pointerdown."+namespace+" MSPointerDown."+namespace+" mouseup."+namespace+" touchend."+namespace+" pointerup."+namespace+" MSPointerUp."+namespace+" mouseout."+namespace+" pointerout."+namespace+" MSPointerOut."+namespace+" click."+namespace,function(e){
+				e.preventDefault();
+				if(!_mouseBtnLeft(e)){return;} /* left mouse button only */
+				var btnClass=$(this).attr("class");
+				seq.type=o.scrollButtons.scrollType;
+				switch(e.type){
+					case "mousedown": case "touchstart": case "pointerdown": case "MSPointerDown":
+						if(seq.type==="stepped"){return;}
+						touchActive=true;
+						d.tweenRunning=false;
+						_seq("on",btnClass);
+						break;
+					case "mouseup": case "touchend": case "pointerup": case "MSPointerUp":
+					case "mouseout": case "pointerout": case "MSPointerOut":
+						if(seq.type==="stepped"){return;}
+						touchActive=false;
+						if(seq.dir){_seq("off",btnClass);}
+						break;
+					case "click":
+						if(seq.type!=="stepped" || d.tweenRunning){return;}
+						_seq("on",btnClass);
+						break;
+				}
+				function _seq(a,c){
+					seq.scrollAmount=o.scrollButtons.scrollAmount;
+					_sequentialScroll($this,a,c);
+				}
+			});
+		},
+		/* -------------------- */
+		
+		
+		/* 
+		KEYBOARD EVENTS
+		scrolls content via keyboard 
+		Keys: up arrow, down arrow, left arrow, right arrow, PgUp, PgDn, Home, End
+		*/
+		_keyboard=function(){
+			var $this=$(this),d=$this.data(pluginPfx),o=d.opt,seq=d.sequential,
+				namespace=pluginPfx+"_"+d.idx,
+				mCustomScrollBox=$("#mCSB_"+d.idx),
+				mCSB_container=$("#mCSB_"+d.idx+"_container"),
+				wrapper=mCSB_container.parent(),
+				editables="input,textarea,select,datalist,keygen,[contenteditable='true']",
+				iframe=mCSB_container.find("iframe"),
+				events=["blur."+namespace+" keydown."+namespace+" keyup."+namespace];
+			if(iframe.length){
+				iframe.each(function(){
+					$(this).bind("load",function(){
+						/* bind events on accessible iframes */
+						if(_canAccessIFrame(this)){
+							$(this.contentDocument || this.contentWindow.document).bind(events[0],function(e){
+								_onKeyboard(e);
+							});
+						}
+					});
+				});
+			}
+			mCustomScrollBox.attr("tabindex","0").bind(events[0],function(e){
+				_onKeyboard(e);
+			});
+			function _onKeyboard(e){
+				switch(e.type){
+					case "blur":
+						if(d.tweenRunning && seq.dir){_seq("off",null);}
+						break;
+					case "keydown": case "keyup":
+						var code=e.keyCode ? e.keyCode : e.which,action="on";
+						if((o.axis!=="x" && (code===38 || code===40)) || (o.axis!=="y" && (code===37 || code===39))){
+							/* up (38), down (40), left (37), right (39) arrows */
+							if(((code===38 || code===40) && !d.overflowed[0]) || ((code===37 || code===39) && !d.overflowed[1])){return;}
+							if(e.type==="keyup"){action="off";}
+							if(!$(document.activeElement).is(editables)){
+								e.preventDefault();
+								e.stopImmediatePropagation();
+								_seq(action,code);
+							}
+						}else if(code===33 || code===34){
+							/* PgUp (33), PgDn (34) */
+							if(d.overflowed[0] || d.overflowed[1]){
+								e.preventDefault();
+								e.stopImmediatePropagation();
+							}
+							if(e.type==="keyup"){
+								_stop($this);
+								var keyboardDir=code===34 ? -1 : 1;
+								if(o.axis==="x" || (o.axis==="yx" && d.overflowed[1] && !d.overflowed[0])){
+									var dir="x",to=Math.abs(mCSB_container[0].offsetLeft)-(keyboardDir*(wrapper.width()*0.9));
+								}else{
+									var dir="y",to=Math.abs(mCSB_container[0].offsetTop)-(keyboardDir*(wrapper.height()*0.9));
+								}
+								_scrollTo($this,to.toString(),{dir:dir,scrollEasing:"mcsEaseInOut"});
+							}
+						}else if(code===35 || code===36){
+							/* End (35), Home (36) */
+							if(!$(document.activeElement).is(editables)){
+								if(d.overflowed[0] || d.overflowed[1]){
+									e.preventDefault();
+									e.stopImmediatePropagation();
+								}
+								if(e.type==="keyup"){
+									if(o.axis==="x" || (o.axis==="yx" && d.overflowed[1] && !d.overflowed[0])){
+										var dir="x",to=code===35 ? Math.abs(wrapper.width()-mCSB_container.outerWidth(false)) : 0;
+									}else{
+										var dir="y",to=code===35 ? Math.abs(wrapper.height()-mCSB_container.outerHeight(false)) : 0;
+									}
+									_scrollTo($this,to.toString(),{dir:dir,scrollEasing:"mcsEaseInOut"});
+								}
+							}
+						}
+						break;
+				}
+				function _seq(a,c){
+					seq.type=o.keyboard.scrollType;
+					seq.scrollAmount=o.keyboard.scrollAmount;
+					if(seq.type==="stepped" && d.tweenRunning){return;}
+					_sequentialScroll($this,a,c);
+				}
+			}
+		},
+		/* -------------------- */
+		
+		
+		/* scrolls content sequentially (used when scrolling via buttons, keyboard arrows etc.) */
+		_sequentialScroll=function(el,action,trigger,e,s){
+			var d=el.data(pluginPfx),o=d.opt,seq=d.sequential,
+				mCSB_container=$("#mCSB_"+d.idx+"_container"),
+				once=seq.type==="stepped" ? true : false,
+				steplessSpeed=o.scrollInertia < 26 ? 26 : o.scrollInertia, /* 26/1.5=17 */
+				steppedSpeed=o.scrollInertia < 1 ? 17 : o.scrollInertia;
+			switch(action){
+				case "on":
+					seq.dir=[
+						(trigger===classes[16] || trigger===classes[15] || trigger===39 || trigger===37 ? "x" : "y"),
+						(trigger===classes[13] || trigger===classes[15] || trigger===38 || trigger===37 ? -1 : 1)
+					];
+					_stop(el);
+					if(_isNumeric(trigger) && seq.type==="stepped"){return;}
+					_on(once);
+					break;
+				case "off":
+					_off();
+					if(once || (d.tweenRunning && seq.dir)){
+						_on(true);
+					}
+					break;
+			}
+			
+			/* starts sequence */
+			function _on(once){
+				if(o.snapAmount){seq.scrollAmount=!(o.snapAmount instanceof Array) ? o.snapAmount : seq.dir[0]==="x" ? o.snapAmount[1] : o.snapAmount[0];} /* scrolling snapping */
+				var c=seq.type!=="stepped", /* continuous scrolling */
+					t=s ? s : !once ? 1000/60 : c ? steplessSpeed/1.5 : steppedSpeed, /* timer */
+					m=!once ? 2.5 : c ? 7.5 : 40, /* multiplier */
+					contentPos=[Math.abs(mCSB_container[0].offsetTop),Math.abs(mCSB_container[0].offsetLeft)],
+					ratio=[d.scrollRatio.y>10 ? 10 : d.scrollRatio.y,d.scrollRatio.x>10 ? 10 : d.scrollRatio.x],
+					amount=seq.dir[0]==="x" ? contentPos[1]+(seq.dir[1]*(ratio[1]*m)) : contentPos[0]+(seq.dir[1]*(ratio[0]*m)),
+					px=seq.dir[0]==="x" ? contentPos[1]+(seq.dir[1]*parseInt(seq.scrollAmount)) : contentPos[0]+(seq.dir[1]*parseInt(seq.scrollAmount)),
+					to=seq.scrollAmount!=="auto" ? px : amount,
+					easing=e ? e : !once ? "mcsLinear" : c ? "mcsLinearOut" : "mcsEaseInOut",
+					onComplete=!once ? false : true;
+				if(once && t<17){
+					to=seq.dir[0]==="x" ? contentPos[1] : contentPos[0];
+				}
+				_scrollTo(el,to.toString(),{dir:seq.dir[0],scrollEasing:easing,dur:t,onComplete:onComplete});
+				if(once){
+					seq.dir=false;
+					return;
+				}
+				clearTimeout(seq.step);
+				seq.step=setTimeout(function(){
+					_on();
+				},t);
+			}
+			/* stops sequence */
+			function _off(){
+				clearTimeout(seq.step);
+				_delete(seq,"step");
+				_stop(el);
+			}
+		},
+		/* -------------------- */
+		
+		
+		/* returns a yx array from value */
+		_arr=function(val){
+			var o=$(this).data(pluginPfx).opt,vals=[];
+			if(typeof val==="function"){val=val();} /* check if the value is a single anonymous function */
+			/* check if value is object or array, its length and create an array with yx values */
+			if(!(val instanceof Array)){ /* object value (e.g. {y:"100",x:"100"}, 100 etc.) */
+				vals[0]=val.y ? val.y : val.x || o.axis==="x" ? null : val;
+				vals[1]=val.x ? val.x : val.y || o.axis==="y" ? null : val;
+			}else{ /* array value (e.g. [100,100]) */
+				vals=val.length>1 ? [val[0],val[1]] : o.axis==="x" ? [null,val[0]] : [val[0],null];
+			}
+			/* check if array values are anonymous functions */
+			if(typeof vals[0]==="function"){vals[0]=vals[0]();}
+			if(typeof vals[1]==="function"){vals[1]=vals[1]();}
+			return vals;
+		},
+		/* -------------------- */
+		
+		
+		/* translates values (e.g. "top", 100, "100px", "#id") to actual scroll-to positions */
+		_to=function(val,dir){
+			if(val==null || typeof val=="undefined"){return;}
+			var $this=$(this),d=$this.data(pluginPfx),o=d.opt,
+				mCSB_container=$("#mCSB_"+d.idx+"_container"),
+				wrapper=mCSB_container.parent(),
+				t=typeof val;
+			if(!dir){dir=o.axis==="x" ? "x" : "y";}
+			var contentLength=dir==="x" ? mCSB_container.outerWidth(false)-wrapper.width() : mCSB_container.outerHeight(false)-wrapper.height(),
+				contentPos=dir==="x" ? mCSB_container[0].offsetLeft : mCSB_container[0].offsetTop,
+				cssProp=dir==="x" ? "left" : "top";
+			switch(t){
+				case "function": /* this currently is not used. Consider removing it */
+					return val();
+					break;
+				case "object": /* js/jquery object */
+					var obj=val.jquery ? val : $(val);
+					if(!obj.length){return;}
+					return dir==="x" ? _childPos(obj)[1] : _childPos(obj)[0];
+					break;
+				case "string": case "number":
+					if(_isNumeric(val)){ /* numeric value */
+						return Math.abs(val);
+					}else if(val.indexOf("%")!==-1){ /* percentage value */
+						return Math.abs(contentLength*parseInt(val)/100);
+					}else if(val.indexOf("-=")!==-1){ /* decrease value */
+						return Math.abs(contentPos-parseInt(val.split("-=")[1]));
+					}else if(val.indexOf("+=")!==-1){ /* inrease value */
+						var p=(contentPos+parseInt(val.split("+=")[1]));
+						return p>=0 ? 0 : Math.abs(p);
+					}else if(val.indexOf("px")!==-1 && _isNumeric(val.split("px")[0])){ /* pixels string value (e.g. "100px") */
+						return Math.abs(val.split("px")[0]);
+					}else{
+						if(val==="top" || val==="left"){ /* special strings */
+							return 0;
+						}else if(val==="bottom"){
+							return Math.abs(wrapper.height()-mCSB_container.outerHeight(false));
+						}else if(val==="right"){
+							return Math.abs(wrapper.width()-mCSB_container.outerWidth(false));
+						}else if(val==="first" || val==="last"){
+							var obj=mCSB_container.find(":"+val);
+							return dir==="x" ? _childPos(obj)[1] : _childPos(obj)[0];
+						}else{
+							if($(val).length){ /* jquery selector */
+								return dir==="x" ? _childPos($(val))[1] : _childPos($(val))[0];
+							}else{ /* other values (e.g. "100em") */
+								mCSB_container.css(cssProp,val);
+								methods.update.call(null,$this[0]);
+								return;
+							}
+						}
+					}
+					break;
+			}
+		},
+		/* -------------------- */
+		
+		
+		/* calls the update method automatically */
+		_autoUpdate=function(rem){
+			var $this=$(this),d=$this.data(pluginPfx),o=d.opt,
+				mCSB_container=$("#mCSB_"+d.idx+"_container");
+			if(rem){
+				/* 
+				removes autoUpdate timer 
+				usage: _autoUpdate.call(this,"remove");
+				*/
+				clearTimeout(mCSB_container[0].autoUpdate);
+				_delete(mCSB_container[0],"autoUpdate");
+				return;
+			}
+			upd();
+			function upd(){
+				clearTimeout(mCSB_container[0].autoUpdate);
+				if($this.parents("html").length===0){
+					/* check element in dom tree */
+					$this=null;
+					return;
+				}
+				mCSB_container[0].autoUpdate=setTimeout(function(){
+					/* update on specific selector(s) length and size change */
+					if(o.advanced.updateOnSelectorChange){
+						d.poll.change.n=sizesSum();
+						if(d.poll.change.n!==d.poll.change.o){
+							d.poll.change.o=d.poll.change.n;
+							doUpd(3);
+							return;
+						}
+					}
+					/* update on main element and scrollbar size changes */
+					if(o.advanced.updateOnContentResize){
+						d.poll.size.n=$this[0].scrollHeight+$this[0].scrollWidth+mCSB_container[0].offsetHeight+$this[0].offsetHeight+$this[0].offsetWidth;
+						if(d.poll.size.n!==d.poll.size.o){
+							d.poll.size.o=d.poll.size.n;
+							doUpd(1);
+							return;
+						}
+					}
+					/* update on image load */
+					if(o.advanced.updateOnImageLoad){
+						if(!(o.advanced.updateOnImageLoad==="auto" && o.axis==="y")){ //by default, it doesn't run on vertical content
+							d.poll.img.n=mCSB_container.find("img").length;
+							if(d.poll.img.n!==d.poll.img.o){
+								d.poll.img.o=d.poll.img.n;
+								mCSB_container.find("img").each(function(){
+									imgLoader(this);
+								});
+								return;
+							}
+						}
+					}
+					if(o.advanced.updateOnSelectorChange || o.advanced.updateOnContentResize || o.advanced.updateOnImageLoad){upd();}
+				},o.advanced.autoUpdateTimeout);
+			}
+			/* a tiny image loader */
+			function imgLoader(el){
+				if($(el).hasClass(classes[2])){doUpd(); return;}
+				var img=new Image();
+				function createDelegate(contextObject,delegateMethod){
+					return function(){return delegateMethod.apply(contextObject,arguments);}
+				}
+				function imgOnLoad(){
+					this.onload=null;
+					$(el).addClass(classes[2]);
+					doUpd(2);
+				}
+				img.onload=createDelegate(img,imgOnLoad);
+				img.src=el.src;
+			}
+			/* returns the total height and width sum of all elements matching the selector */
+			function sizesSum(){
+				if(o.advanced.updateOnSelectorChange===true){o.advanced.updateOnSelectorChange="*";}
+				var total=0,sel=mCSB_container.find(o.advanced.updateOnSelectorChange);
+				if(o.advanced.updateOnSelectorChange && sel.length>0){sel.each(function(){total+=this.offsetHeight+this.offsetWidth;});}
+				return total;
+			}
+			/* calls the update method */
+			function doUpd(cb){
+				clearTimeout(mCSB_container[0].autoUpdate);
+				methods.update.call(null,$this[0],cb);
+			}
+		},
+		/* -------------------- */
+		
+		
+		/* snaps scrolling to a multiple of a pixels number */
+		_snapAmount=function(to,amount,offset){
+			return (Math.round(to/amount)*amount-offset); 
+		},
+		/* -------------------- */
+		
+		
+		/* stops content and scrollbar animations */
+		_stop=function(el){
+			var d=el.data(pluginPfx),
+				sel=$("#mCSB_"+d.idx+"_container,#mCSB_"+d.idx+"_container_wrapper,#mCSB_"+d.idx+"_dragger_vertical,#mCSB_"+d.idx+"_dragger_horizontal");
+			sel.each(function(){
+				_stopTween.call(this);
+			});
+		},
+		/* -------------------- */
+		
+		
+		/* 
+		ANIMATES CONTENT 
+		This is where the actual scrolling happens
+		*/
+		_scrollTo=function(el,to,options){
+			var d=el.data(pluginPfx),o=d.opt,
+				defaults={
+					trigger:"internal",
+					dir:"y",
+					scrollEasing:"mcsEaseOut",
+					drag:false,
+					dur:o.scrollInertia,
+					overwrite:"all",
+					callbacks:true,
+					onStart:true,
+					onUpdate:true,
+					onComplete:true
+				},
+				options=$.extend(defaults,options),
+				dur=[options.dur,(options.drag ? 0 : options.dur)],
+				mCustomScrollBox=$("#mCSB_"+d.idx),
+				mCSB_container=$("#mCSB_"+d.idx+"_container"),
+				wrapper=mCSB_container.parent(),
+				totalScrollOffsets=o.callbacks.onTotalScrollOffset ? _arr.call(el,o.callbacks.onTotalScrollOffset) : [0,0],
+				totalScrollBackOffsets=o.callbacks.onTotalScrollBackOffset ? _arr.call(el,o.callbacks.onTotalScrollBackOffset) : [0,0];
+			d.trigger=options.trigger;
+			if(wrapper.scrollTop()!==0 || wrapper.scrollLeft()!==0){ /* always reset scrollTop/Left */
+				$(".mCSB_"+d.idx+"_scrollbar").css("visibility","visible");
+				wrapper.scrollTop(0).scrollLeft(0);
+			}
+			if(to==="_resetY" && !d.contentReset.y){
+				/* callbacks: onOverflowYNone */
+				if(_cb("onOverflowYNone")){o.callbacks.onOverflowYNone.call(el[0]);}
+				d.contentReset.y=1;
+			}
+			if(to==="_resetX" && !d.contentReset.x){
+				/* callbacks: onOverflowXNone */
+				if(_cb("onOverflowXNone")){o.callbacks.onOverflowXNone.call(el[0]);}
+				d.contentReset.x=1;
+			}
+			if(to==="_resetY" || to==="_resetX"){return;}
+			if((d.contentReset.y || !el[0].mcs) && d.overflowed[0]){
+				/* callbacks: onOverflowY */
+				if(_cb("onOverflowY")){o.callbacks.onOverflowY.call(el[0]);}
+				d.contentReset.x=null;
+			}
+			if((d.contentReset.x || !el[0].mcs) && d.overflowed[1]){
+				/* callbacks: onOverflowX */
+				if(_cb("onOverflowX")){o.callbacks.onOverflowX.call(el[0]);}
+				d.contentReset.x=null;
+			}
+			if(o.snapAmount){ /* scrolling snapping */
+				var snapAmount=!(o.snapAmount instanceof Array) ? o.snapAmount : options.dir==="x" ? o.snapAmount[1] : o.snapAmount[0];
+				to=_snapAmount(to,snapAmount,o.snapOffset);
+			}
+			switch(options.dir){
+				case "x":
+					var mCSB_dragger=$("#mCSB_"+d.idx+"_dragger_horizontal"),
+						property="left",
+						contentPos=mCSB_container[0].offsetLeft,
+						limit=[
+							mCustomScrollBox.width()-mCSB_container.outerWidth(false),
+							mCSB_dragger.parent().width()-mCSB_dragger.width()
+						],
+						scrollTo=[to,to===0 ? 0 : (to/d.scrollRatio.x)],
+						tso=totalScrollOffsets[1],
+						tsbo=totalScrollBackOffsets[1],
+						totalScrollOffset=tso>0 ? tso/d.scrollRatio.x : 0,
+						totalScrollBackOffset=tsbo>0 ? tsbo/d.scrollRatio.x : 0;
+					break;
+				case "y":
+					var mCSB_dragger=$("#mCSB_"+d.idx+"_dragger_vertical"),
+						property="top",
+						contentPos=mCSB_container[0].offsetTop,
+						limit=[
+							mCustomScrollBox.height()-mCSB_container.outerHeight(false),
+							mCSB_dragger.parent().height()-mCSB_dragger.height()
+						],
+						scrollTo=[to,to===0 ? 0 : (to/d.scrollRatio.y)],
+						tso=totalScrollOffsets[0],
+						tsbo=totalScrollBackOffsets[0],
+						totalScrollOffset=tso>0 ? tso/d.scrollRatio.y : 0,
+						totalScrollBackOffset=tsbo>0 ? tsbo/d.scrollRatio.y : 0;
+					break;
+			}
+			if(scrollTo[1]<0 || (scrollTo[0]===0 && scrollTo[1]===0)){
+				scrollTo=[0,0];
+			}else if(scrollTo[1]>=limit[1]){
+				scrollTo=[limit[0],limit[1]];
+			}else{
+				scrollTo[0]=-scrollTo[0];
+			}
+			if(!el[0].mcs){
+				_mcs();  /* init mcs object (once) to make it available before callbacks */
+				if(_cb("onInit")){o.callbacks.onInit.call(el[0]);} /* callbacks: onInit */
+			}
+			clearTimeout(mCSB_container[0].onCompleteTimeout);
+			_tweenTo(mCSB_dragger[0],property,Math.round(scrollTo[1]),dur[1],options.scrollEasing);
+			if(!d.tweenRunning && ((contentPos===0 && scrollTo[0]>=0) || (contentPos===limit[0] && scrollTo[0]<=limit[0]))){return;}
+			_tweenTo(mCSB_container[0],property,Math.round(scrollTo[0]),dur[0],options.scrollEasing,options.overwrite,{
+				onStart:function(){
+					if(options.callbacks && options.onStart && !d.tweenRunning){
+						/* callbacks: onScrollStart */
+						if(_cb("onScrollStart")){_mcs(); o.callbacks.onScrollStart.call(el[0]);}
+						d.tweenRunning=true;
+						_onDragClasses(mCSB_dragger);
+						d.cbOffsets=_cbOffsets();
+					}
+				},onUpdate:function(){
+					if(options.callbacks && options.onUpdate){
+						/* callbacks: whileScrolling */
+						if(_cb("whileScrolling")){_mcs(); o.callbacks.whileScrolling.call(el[0]);}
+					}
+				},onComplete:function(){
+					if(options.callbacks && options.onComplete){
+						if(o.axis==="yx"){clearTimeout(mCSB_container[0].onCompleteTimeout);}
+						var t=mCSB_container[0].idleTimer || 0;
+						mCSB_container[0].onCompleteTimeout=setTimeout(function(){
+							/* callbacks: onScroll, onTotalScroll, onTotalScrollBack */
+							if(_cb("onScroll")){_mcs(); o.callbacks.onScroll.call(el[0]);}
+							if(_cb("onTotalScroll") && scrollTo[1]>=limit[1]-totalScrollOffset && d.cbOffsets[0]){_mcs(); o.callbacks.onTotalScroll.call(el[0]);}
+							if(_cb("onTotalScrollBack") && scrollTo[1]<=totalScrollBackOffset && d.cbOffsets[1]){_mcs(); o.callbacks.onTotalScrollBack.call(el[0]);}
+							d.tweenRunning=false;
+							mCSB_container[0].idleTimer=0;
+							_onDragClasses(mCSB_dragger,"hide");
+						},t);
+					}
+				}
+			});
+			/* checks if callback function exists */
+			function _cb(cb){
+				return d && o.callbacks[cb] && typeof o.callbacks[cb]==="function";
+			}
+			/* checks whether callback offsets always trigger */
+			function _cbOffsets(){
+				return [o.callbacks.alwaysTriggerOffsets || contentPos>=limit[0]+tso,o.callbacks.alwaysTriggerOffsets || contentPos<=-tsbo];
+			}
+			/* 
+			populates object with useful values for the user 
+			values: 
+				content: this.mcs.content
+				content top position: this.mcs.top 
+				content left position: this.mcs.left 
+				dragger top position: this.mcs.draggerTop 
+				dragger left position: this.mcs.draggerLeft 
+				scrolling y percentage: this.mcs.topPct 
+				scrolling x percentage: this.mcs.leftPct 
+				scrolling direction: this.mcs.direction
+			*/
+			function _mcs(){
+				var cp=[mCSB_container[0].offsetTop,mCSB_container[0].offsetLeft], /* content position */
+					dp=[mCSB_dragger[0].offsetTop,mCSB_dragger[0].offsetLeft], /* dragger position */
+					cl=[mCSB_container.outerHeight(false),mCSB_container.outerWidth(false)], /* content length */
+					pl=[mCustomScrollBox.height(),mCustomScrollBox.width()]; /* content parent length */
+				el[0].mcs={
+					content:mCSB_container, /* original content wrapper as jquery object */
+					top:cp[0],left:cp[1],draggerTop:dp[0],draggerLeft:dp[1],
+					topPct:Math.round((100*Math.abs(cp[0]))/(Math.abs(cl[0])-pl[0])),leftPct:Math.round((100*Math.abs(cp[1]))/(Math.abs(cl[1])-pl[1])),
+					direction:options.dir
+				};
+				/* 
+				this refers to the original element containing the scrollbar(s)
+				usage: this.mcs.top, this.mcs.leftPct etc. 
+				*/
+			}
+		},
+		/* -------------------- */
+		
+		
+		/* 
+		CUSTOM JAVASCRIPT ANIMATION TWEEN 
+		Lighter and faster than jquery animate() and css transitions 
+		Animates top/left properties and includes easings 
+		*/
+		_tweenTo=function(el,prop,to,duration,easing,overwrite,callbacks){
+			if(!el._mTween){el._mTween={top:{},left:{}};}
+			var callbacks=callbacks || {},
+				onStart=callbacks.onStart || function(){},onUpdate=callbacks.onUpdate || function(){},onComplete=callbacks.onComplete || function(){},
+				startTime=_getTime(),_delay,progress=0,from=el.offsetTop,elStyle=el.style,_request,tobj=el._mTween[prop];
+			if(prop==="left"){from=el.offsetLeft;}
+			var diff=to-from;
+			tobj.stop=0;
+			if(overwrite!=="none"){_cancelTween();}
+			_startTween();
+			function _step(){
+				if(tobj.stop){return;}
+				if(!progress){onStart.call();}
+				progress=_getTime()-startTime;
+				_tween();
+				if(progress>=tobj.time){
+					tobj.time=(progress>tobj.time) ? progress+_delay-(progress-tobj.time) : progress+_delay-1;
+					if(tobj.time<progress+1){tobj.time=progress+1;}
+				}
+				if(tobj.time<duration){tobj.id=_request(_step);}else{onComplete.call();}
+			}
+			function _tween(){
+				if(duration>0){
+					tobj.currVal=_ease(tobj.time,from,diff,duration,easing);
+					elStyle[prop]=Math.round(tobj.currVal)+"px";
+				}else{
+					elStyle[prop]=to+"px";
+				}
+				onUpdate.call();
+			}
+			function _startTween(){
+				_delay=1000/60;
+				tobj.time=progress+_delay;
+				_request=(!window.requestAnimationFrame) ? function(f){_tween(); return setTimeout(f,0.01);} : window.requestAnimationFrame;
+				tobj.id=_request(_step);
+			}
+			function _cancelTween(){
+				if(tobj.id==null){return;}
+				if(!window.requestAnimationFrame){clearTimeout(tobj.id);
+				}else{window.cancelAnimationFrame(tobj.id);}
+				tobj.id=null;
+			}
+			function _ease(t,b,c,d,type){
+				switch(type){
+					case "linear": case "mcsLinear":
+						return c*t/d + b;
+						break;
+					case "mcsLinearOut":
+						t/=d; t--; return c * Math.sqrt(1 - t*t) + b;
+						break;
+					case "easeInOutSmooth":
+						t/=d/2;
+						if(t<1) return c/2*t*t + b;
+						t--;
+						return -c/2 * (t*(t-2) - 1) + b;
+						break;
+					case "easeInOutStrong":
+						t/=d/2;
+						if(t<1) return c/2 * Math.pow( 2, 10 * (t - 1) ) + b;
+						t--;
+						return c/2 * ( -Math.pow( 2, -10 * t) + 2 ) + b;
+						break;
+					case "easeInOut": case "mcsEaseInOut":
+						t/=d/2;
+						if(t<1) return c/2*t*t*t + b;
+						t-=2;
+						return c/2*(t*t*t + 2) + b;
+						break;
+					case "easeOutSmooth":
+						t/=d; t--;
+						return -c * (t*t*t*t - 1) + b;
+						break;
+					case "easeOutStrong":
+						return c * ( -Math.pow( 2, -10 * t/d ) + 1 ) + b;
+						break;
+					case "easeOut": case "mcsEaseOut": default:
+						var ts=(t/=d)*t,tc=ts*t;
+						return b+c*(0.499999999999997*tc*ts + -2.5*ts*ts + 5.5*tc + -6.5*ts + 4*t);
+				}
+			}
+		},
+		/* -------------------- */
+		
+		
+		/* returns current time */
+		_getTime=function(){
+			if(window.performance && window.performance.now){
+				return window.performance.now();
+			}else{
+				if(window.performance && window.performance.webkitNow){
+					return window.performance.webkitNow();
+				}else{
+					if(Date.now){return Date.now();}else{return new Date().getTime();}
+				}
+			}
+		},
+		/* -------------------- */
+		
+		
+		/* stops a tween */
+		_stopTween=function(){
+			var el=this;
+			if(!el._mTween){el._mTween={top:{},left:{}};}
+			var props=["top","left"];
+			for(var i=0; i<props.length; i++){
+				var prop=props[i];
+				if(el._mTween[prop].id){
+					if(!window.requestAnimationFrame){clearTimeout(el._mTween[prop].id);
+					}else{window.cancelAnimationFrame(el._mTween[prop].id);}
+					el._mTween[prop].id=null;
+					el._mTween[prop].stop=1;
+				}
+			}
+		},
+		/* -------------------- */
+		
+		
+		/* deletes a property (avoiding the exception thrown by IE) */
+		_delete=function(c,m){
+			try{delete c[m];}catch(e){c[m]=null;}
+		},
+		/* -------------------- */
+		
+		
+		/* detects left mouse button */
+		_mouseBtnLeft=function(e){
+			return !(e.which && e.which!==1);
+		},
+		/* -------------------- */
+		
+		
+		/* detects if pointer type event is touch */
+		_pointerTouch=function(e){
+			var t=e.originalEvent.pointerType;
+			return !(t && t!=="touch" && t!==2);
+		},
+		/* -------------------- */
+		
+		
+		/* checks if value is numeric */
+		_isNumeric=function(val){
+			return !isNaN(parseFloat(val)) && isFinite(val);
+		},
+		/* -------------------- */
+		
+		
+		/* returns element position according to content */
+		_childPos=function(el){
+			var p=el.parents(".mCSB_container");
+			return [el.offset().top-p.offset().top,el.offset().left-p.offset().left];
+		},
+		/* -------------------- */
+		
+		
+		/* checks if browser tab is hidden/inactive via Page Visibility API */
+		_isTabHidden=function(){
+			var prop=_getHiddenProp();
+			if(!prop) return false;
+			return document[prop];
+			function _getHiddenProp(){
+				var pfx=["webkit","moz","ms","o"];
+				if("hidden" in document) return "hidden"; //natively supported
+				for(var i=0; i<pfx.length; i++){ //prefixed
+				    if((pfx[i]+"Hidden") in document) 
+				        return pfx[i]+"Hidden";
+				}
+				return null; //not supported
+			}
+		};
+		/* -------------------- */
+		
+	
+	
+	
+	
+	/* 
+	----------------------------------------
+	PLUGIN SETUP 
+	----------------------------------------
+	*/
+	
+	/* plugin constructor functions */
+	$.fn[pluginNS]=function(method){ /* usage: $(selector).mCustomScrollbar(); */
+		if(methods[method]){
+			return methods[method].apply(this,Array.prototype.slice.call(arguments,1));
+		}else if(typeof method==="object" || !method){
+			return methods.init.apply(this,arguments);
+		}else{
+			$.error("Method "+method+" does not exist");
+		}
+	};
+	$[pluginNS]=function(method){ /* usage: $.mCustomScrollbar(); */
+		if(methods[method]){
+			return methods[method].apply(this,Array.prototype.slice.call(arguments,1));
+		}else if(typeof method==="object" || !method){
+			return methods.init.apply(this,arguments);
+		}else{
+			$.error("Method "+method+" does not exist");
+		}
+	};
+	
+	/* 
+	allow setting plugin default options. 
+	usage: $.mCustomScrollbar.defaults.scrollInertia=500; 
+	to apply any changed default options on default selectors (below), use inside document ready fn 
+	e.g.: $(document).ready(function(){ $.mCustomScrollbar.defaults.scrollInertia=500; });
+	*/
+	$[pluginNS].defaults=defaults;
+	
+	/* 
+	add window object (window.mCustomScrollbar) 
+	usage: if(window.mCustomScrollbar){console.log("custom scrollbar plugin loaded");}
+	*/
+	window[pluginNS]=true;
+	
+	$(window).bind("load",function(){
+		
+		$(defaultSelector)[pluginNS](); /* add scrollbars automatically on default selector */
+		
+		/* extend jQuery expressions */
+		$.extend($.expr[":"],{
+			/* checks if element is within scrollable viewport */
+			mcsInView:$.expr[":"].mcsInView || function(el){
+				var $el=$(el),content=$el.parents(".mCSB_container"),wrapper,cPos;
+				if(!content.length){return;}
+				wrapper=content.parent();
+				cPos=[content[0].offsetTop,content[0].offsetLeft];
+				return 	cPos[0]+_childPos($el)[0]>=0 && cPos[0]+_childPos($el)[0]<wrapper.height()-$el.outerHeight(false) && 
+						cPos[1]+_childPos($el)[1]>=0 && cPos[1]+_childPos($el)[1]<wrapper.width()-$el.outerWidth(false);
+			},
+			/* checks if element or part of element is in view of scrollable viewport */
+			mcsInSight:$.expr[":"].mcsInSight || function(el,i,m){
+				var $el=$(el),elD,content=$el.parents(".mCSB_container"),wrapperView,pos,wrapperViewPct,
+					pctVals=m[3]==="exact" ? [[1,0],[1,0]] : [[0.9,0.1],[0.6,0.4]];
+				if(!content.length){return;}
+				elD=[$el.outerHeight(false),$el.outerWidth(false)];
+				pos=[content[0].offsetTop+_childPos($el)[0],content[0].offsetLeft+_childPos($el)[1]];
+				wrapperView=[content.parent()[0].offsetHeight,content.parent()[0].offsetWidth];
+				wrapperViewPct=[elD[0]<wrapperView[0] ? pctVals[0] : pctVals[1],elD[1]<wrapperView[1] ? pctVals[0] : pctVals[1]];
+				return 	pos[0]-(wrapperView[0]*wrapperViewPct[0][0])<0 && pos[0]+elD[0]-(wrapperView[0]*wrapperViewPct[0][1])>=0 && 
+						pos[1]-(wrapperView[1]*wrapperViewPct[1][0])<0 && pos[1]+elD[1]-(wrapperView[1]*wrapperViewPct[1][1])>=0;
+			},
+			/* checks if element is overflowed having visible scrollbar(s) */
+			mcsOverflow:$.expr[":"].mcsOverflow || function(el){
+				var d=$(el).data(pluginPfx);
+				if(!d){return;}
+				return d.overflowed[0] || d.overflowed[1];
+			}
+		});
+	
+	});
+
+}))}));
+
+/***/ }),
+/* 8 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {const loadGoogleMapsApi = __webpack_require__(193);
+const pinImg = __webpack_require__(194);
+
+class Map {
+  constructor(domElement, googleMaps) {
+    this.$domElement = $(domElement);
+    this.googleMaps = googleMaps;
+    this.mapContainer = this.$domElement.find('.js-map__container')[0];
+    this.mapCenter = this._getInitialMapCenter();
+    this._initialize();
+  }
+
+  static loadGoogleMapsApi() {
+    return loadGoogleMapsApi({
+      key: 'AIzaSyB0GpB2Y8XOyVrs-stxlE0I4yR_rAaEyjU',
+    });
+  }
+
+  _initialize() {
+    this._loadImages();
+    this._initMap();
+  }
+
+  _loadImages() {
+    this.images = [
+      {
+        url: './assets/img/pins.png',
+        size: new this.googleMaps.Size(78, 78),
+        origin: new this.googleMaps.Point(0, 0),
+        anchor: new this.googleMaps.Point(39, 78),
+      },
+      {
+        url: './assets/img/pins.png',
+        size: new this.googleMaps.Size(45, 78),
+        origin: new this.googleMaps.Point(78, 0),
+        anchor: new this.googleMaps.Point(22.5, 78),
+      },
+    ];
+  }
+
+  _initMap() {
+    const initOptions = { center: this.mapCenter, zoom: 14 };
+    const $pin = this.$domElement.find('.js-map__pin');
+    const $search = this.$domElement.find('.js-map__search');
+    this.map = new this.googleMaps.Map(this.mapContainer, initOptions);
+    this.infoWindow = new this.googleMaps.InfoWindow();
+    this._addMarker(this._getMainPinCenter(), this.images[0], 'Meet us here!');
+    this._locateUser();
+
+    $pin
+      .on('click.map', this._handlePinClick.bind(this))
+      .on('keypress.map', this._handleEnterPress.bind(this));
+    $search
+      .on('click.map', this._handleSearchClick.bind(this))
+      .on('keypress.map', this._handleEnterPress.bind(this));
+  }
+
+  _addMarker(location, image, title) {
+    const marker = new this.googleMaps.Marker({
+      position: location,
+      map: this.map,
+      icon: image,
+      title,
+    });
+    return marker;
+  }
+
+  _getInitialMapCenter() {
+    const mapCoords = this.mapContainer.dataset;
+    const lat = Number(mapCoords.lat);
+    const lng = Number(mapCoords.lng);
+    return new this.googleMaps.LatLng(lat, lng);
+  }
+
+  _getMainPinCenter() {
+    const mapCoords = this.mapContainer.dataset;
+    const plat = Number(mapCoords.plat);
+    const plng = Number(mapCoords.plng);
+    return new this.googleMaps.LatLng(plat, plng);
+  }
+
+  _locateUser() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        this._handleLocationSuccess.bind(this),
+        this._handleLocationError.bind(this, true)
+      );
+    } else {
+      // Browser doesn't support Geolocation
+      this._handleLocationError(false);
+    }
+  }
+
+  _handleLocationSuccess(position) {
+    const pos = {
+      lat: position.coords.latitude,
+      lng: position.coords.longitude,
+    };
+    this.userMarker = this._addMarker(pos, this.images[1], 'You are here');
+  }
+
+  _handleLocationError(browserHasGeolocation) {
+    this.infoWindow.setPosition(this.map.getCenter());
+    this.infoWindow.setContent(browserHasGeolocation
+      ? 'Error: The Geolocation service failed.'
+      : 'Error: Your browser doesn\'t support geolocation.');
+  }
+
+  _handlePinClick(event) {
+    this._backToCenter();
+    $(event.target).blur();
+  }
+
+  _handleSearchClick(event) {
+    this._showUserLocation();
+    $(event.target).blur();
+  }
+
+  _handleEnterPress(event) {
+    if (event.which === 13) {
+      $(event.target).trigger('click');
+    }
+  }
+
+  _backToCenter() {
+    this.map.panTo(this.mapCenter);
+    if (this.infoWindow) this.infoWindow.close();
+  }
+
+  _showUserLocation() {
+    if (this.userMarker) this.map.panTo(this.userMarker.getPosition());
+    this.infoWindow.open(this.map);
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Map);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
+
+/***/ }),
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -12799,7 +15623,1098 @@ return $;
 }));
 
 /***/ }),
-/* 7 */
+/* 10 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {class ArrowButton {
+  constructor(domElement) {
+    this._initialize(domElement);
+  }
+
+  _initialize(domElement) {
+    this.$button = $(domElement);
+
+    this.$button
+      .on('click.arrowbutton', this._handleButtonClick.bind(this))
+      .on('keydown.arrowbutton', this._handleEnterDown.bind(this))
+      .on('keyup.arrowbutton', this._handleEnterUp.bind(this))
+      .on('touchstart.arrowbutton', this._addActiveClass.bind(this))
+      .on('touchend.arrowbutton', this._removeActiveClass.bind(this));
+  }
+
+  _handleButtonClick() {
+    this.$button.blur();
+  }
+
+  _addActiveClass() {
+    this.$button.addClass('arrow-button_active');
+  }
+
+  _removeActiveClass() {
+    this.$button
+      .removeClass('arrow-button_active')
+      .trigger('click');
+  }
+
+  _handleEnterDown(event) {
+    if (event.which === 13) {
+      this._addActiveClass();
+    }
+  }
+
+  _handleEnterUp(event) {
+    if (event.which === 13) {
+      this._removeActiveClass();
+    }
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (ArrowButton);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
+
+/***/ }),
+/* 11 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var legit_ripple_dist_ripple_min__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(184);
+/* harmony import */ var legit_ripple_dist_ripple_min__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(legit_ripple_dist_ripple_min__WEBPACK_IMPORTED_MODULE_0__);
+
+
+class Button {
+  constructor(domElement) {
+    this._initialize(domElement);
+  }
+
+  _initialize(domElement) {
+    this.$button = $(domElement);
+    this.$button
+      .on('keypress.button', this._handleEnterPress.bind(this))
+      .on('transitionend webkitTransitionEnd oTransitionEnd', this._handleButtonAnimationEnd.bind(this))
+      .ripple({ dragging: false });
+    return this;
+  }
+
+  _handleButtonAnimationEnd() {
+    this.$button.blur();
+  }
+
+  _handleEnterPress(event) {
+    if (event.which === 13) {
+      this.$button.click();
+    }
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Button);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
+
+/***/ }),
+/* 12 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var jquery_ui_ui_widgets_datepicker__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(186);
+/* harmony import */ var jquery_ui_ui_widgets_datepicker__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery_ui_ui_widgets_datepicker__WEBPACK_IMPORTED_MODULE_0__);
+
+
+class Calendar {
+  constructor(domElement) {
+    this._initialize(domElement);
+  }
+
+  _initialize(domElement) {
+    this.$calendar = $(domElement);
+
+    const settings = this._generateCalendarSettings();
+    this.$calendar.datepicker(settings);
+
+    this
+      ._prependDayContainer()
+      ._appendButtonPane()
+      ._updateDayText(this.$calendar.datepicker('getDate'));
+  }
+
+  _generateCalendarSettings() {
+    const settings = {
+      firstDay: 1,
+      prevText: '',
+      nextText: '',
+      showOtherMonths: true,
+      dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+      onChangeMonthYear: (y, m, inst) => this._handleMonthChange(y, m, inst),
+      onSelect: (date) => this._updateDayText(date),
+    };
+
+    return settings;
+  }
+
+  _prependDayContainer() {
+    const $dayContainer = $('<div></div>', { class: 'calendar__day-container' });
+    this.$dayText = $('<span></span>', {
+      class: 'calendar__day-text',
+      type: 'text',
+      disabled: 'disabled',
+    });
+    $dayContainer.prepend(this.$dayText);
+
+    this.$calendar.prepend($dayContainer);
+
+    return this;
+  }
+
+  _appendButtonPane() {
+    const $buttonPane = $('<div></div>', { class: 'calendar__button-pane' });
+    this.$todayButton = $('<button></button>', {
+      class: 'calendar__today-button',
+      type: 'button',
+    });
+    this.$todayButton
+      .text('today')
+      .on('click.calendar', this._handleTodayButtonClick.bind(this));
+
+    $buttonPane.append(this.$todayButton);
+    this.$calendar.append($buttonPane);
+
+    return this;
+  }
+
+  _updateDayText(value) {
+    const date = new Date(value);
+    this.$dayText.text(date.getDate());
+
+    return this;
+  }
+
+  _handleMonthChange(year, month, instance) {
+    const isBackFromOtherMonth = instance.selectedMonth !== instance.currentMonth;
+    const isBackFromOtherYear = instance.selectedYear !== instance.currentYear;
+    if (isBackFromOtherMonth || isBackFromOtherYear) {
+      const newDate = `${month}/1/${year}`;
+      this.$calendar.datepicker('setDate', newDate);
+      this._updateDayText(newDate);
+    }
+    return this;
+  }
+
+  _handleTodayButtonClick() {
+    const today = new Date();
+    this.$calendar.datepicker('setDate', today);
+    this._updateDayText(today);
+    this.$todayButton.blur();
+
+    return this;
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Calendar);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
+
+/***/ }),
+/* 13 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {class DonutChart {
+  constructor(domElement) {
+    this.$domElement = $(domElement);
+    this._initialize();
+  }
+
+  _initialize() {
+    this.values = this._getValues();
+
+    this._initDonutCircle();
+    this._drawSegments();
+
+    this.$domElement.append(this.$svg);
+    this._setViewBox();
+  }
+
+  _getValues() {
+    const values = this.$domElement.data('values');
+    if (typeof values === 'number') return [values];
+    return values.split(/,\s*/);
+  }
+
+  _initDonutCircle() {
+    this.$svg = DonutChart.$s('svg').attr({ class: 'donut-chart__chart-container' });
+    this.$ring = DonutChart.$createSVGCircle({ class: 'donut-chart__ring' });
+    this.$svg.append(this.$ring);
+  }
+
+  _drawSegments() {
+    let offset = 0;
+    this.values.forEach((value, i) => {
+      const $segment = DonutChart.$createSVGSegment({ value, i, offset });
+      this.$svg.append($segment);
+      offset += Number(value);
+    });
+  }
+
+  _setViewBox() {
+    const strokeWidth = parseFloat(this.$ring.css('stroke-width'));
+    const viewBoxTop = 0 - (strokeWidth / 2);
+    const viewBoxBottom = DonutChart.radius * 2 + strokeWidth;
+    const viewBoxValue = `${viewBoxTop} ${viewBoxTop} ${viewBoxBottom} ${viewBoxBottom}`;
+    this.$svg.attr({ viewBox: viewBoxValue });
+  }
+
+  // creates svg element, returned as jQuery object
+  static $s(elem) {
+    return $(document.createElementNS('http://www.w3.org/2000/svg', elem));
+  }
+
+  static get radius() {
+    // radius = C/(2*pi), where C is circle length assumed to equal 100
+    return 15.91549430918954;
+  }
+
+  static $createSVGCircle(attributes) {
+    const defaultAttributes = {
+      cx: DonutChart.radius,
+      cy: DonutChart.radius,
+      r: DonutChart.radius,
+    };
+    return DonutChart.$s('circle').attr({ ...defaultAttributes, ...attributes });
+  }
+
+  static $createSVGSegment(data) {
+    /**
+     * dashoffsetInitial rotates offset 25% counter clockwise,
+     * because stroke-dasharray starts not at top (12:00), but at right (3:00)
+     */
+    const { value, i, offset } = data;
+    const dashoffsetInitial = 25;
+    const dashoffset = i === 0 ? dashoffsetInitial : (100 - offset + dashoffsetInitial);
+    const $segment = DonutChart.$createSVGCircle({ class: 'donut-chart__segment' });
+
+    $segment.attr('stroke-dasharray', `${value} ${100 - value}`);
+    $segment.attr('stroke-dashoffset', dashoffset);
+
+    return $segment;
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (DonutChart);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
+
+/***/ }),
+/* 14 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {class DropDown {
+  constructor(domElement) {
+    this._initialize(domElement);
+  }
+
+  _initialize(domElement) {
+    const $domElement = $(domElement);
+    this.$dropdown = $domElement;
+    this.$label = $domElement.find('.js-drop-down__label');
+    this.$dropdown
+      .on('click.drop-down', this._handleDropDownClick.bind(this))
+      .on('keypress.drop-down', this._handleDropDownKeypress.bind(this));
+  }
+
+  _handleDropDownClick(event) {
+    const $targetElement = $(event.target);
+    const isItemChosen = $targetElement.hasClass('js-drop-down__item');
+    this.$dropdown.toggleClass('drop-down_active');
+
+    if (isItemChosen) {
+      const chosenOption = $targetElement.text();
+      this.$label.text(chosenOption);
+    }
+  }
+
+  _handleDropDownFocusOut() {
+    this.$dropdown.removeClass('drop-down_active');
+  }
+
+  _handleDropDownKeypress(event) {
+    if (event.which === 13) {
+      $(event.target).click();
+      return false;
+    }
+    return true;
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (DropDown);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
+
+/***/ }),
+/* 15 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var jquery_validation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
+/* harmony import */ var jquery_validation__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery_validation__WEBPACK_IMPORTED_MODULE_0__);
+
+
+class EmailForm {
+  constructor(domElement) {
+    this._initialize(domElement);
+  }
+
+  _initialize(domElement) {
+    const $form = $(domElement);
+    $form.validate({
+      rules: {
+        name: 'required',
+        email: {
+          required: true,
+          email: true,
+        },
+      },
+      errorPlacement() {},
+    });
+    const $button = $form.find('.js-email-form__button');
+    $button.on('click.email-form', $form.submit());
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (EmailForm);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
+
+/***/ }),
+/* 16 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var jquery_mousewheel__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5);
+/* harmony import */ var jquery_mousewheel__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery_mousewheel__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var malihu_custom_scrollbar_plugin__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7);
+/* harmony import */ var malihu_custom_scrollbar_plugin__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(malihu_custom_scrollbar_plugin__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+class EventCarousel {
+  constructor(domElement) {
+    this._initialize(domElement);
+  }
+
+  _initialize(domElement) {
+    const $domElement = $(domElement);
+    this.$cards = $domElement.find('.js-event-carousel__cards');
+    this.$calendarOverlay = $domElement.find('.js-event-carousel__calendar-overlay');
+    this.$calendar = $domElement.find('.js-event-carousel__calendar');
+
+    this.$cards
+      .on('click.event-carousel', this._handleButtonClick.bind(this))
+      .mCustomScrollbar({
+        axis: 'x',
+        theme: 'dark-thin',
+        autoExpandScrollbar: true,
+        advanced: {
+          autoExpandHorizontalScroll: true,
+          autoScrollOnFocuss: false,
+        },
+      });
+  }
+
+  _handleButtonClick(event) {
+    const $target = $(event.target);
+    if ($target.hasClass('js-button')) {
+      this.$calendarOverlay.addClass('event-carousel__calendar-overlay_visible');
+      $(document).on('click.event-carousel', this._handleDocumentClick.bind(this));
+      return false;
+    }
+  }
+
+  _handleDocumentClick(event) {
+    if (event.target === this.$calendarOverlay[0]) {
+      this.$calendarOverlay.removeClass('event-carousel__calendar-overlay_visible');
+      $(document).off('click.event-carousel');
+      return false;
+    }
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (EventCarousel);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
+
+/***/ }),
+/* 17 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var jquery_mousewheel__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5);
+/* harmony import */ var jquery_mousewheel__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery_mousewheel__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var malihu_custom_scrollbar_plugin__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7);
+/* harmony import */ var malihu_custom_scrollbar_plugin__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(malihu_custom_scrollbar_plugin__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+class NewsCard {
+  constructor(domElement) {
+    this._initialize(domElement);
+  }
+
+  _initialize(domElement) {
+    const $newsCard = $(domElement);
+    if ($newsCard.hasClass('news-card_with-scrollbar')) {
+      const $text = $newsCard.find('.js-news-card__text');
+      $text.mCustomScrollbar();
+    }
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (NewsCard);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
+
+/***/ }),
+/* 18 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {class OnlineHelp {
+  constructor(domElement) {
+    this.$domElement = $(domElement);
+    this._initialize();
+  }
+
+  _initialize() {
+    const $container = this.$domElement;
+    const $button = $container.find('.js-online-help__button');
+    this.$messenger = $container.find('.js-online-help__messenger');
+    $button.on('click.messenger', this._handleButtonClick.bind(this));
+  }
+
+  _handleButtonClick() {
+    this.$messenger.toggleClass('online-help__messenger_visible');
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (OnlineHelp);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
+
+/***/ }),
+/* 19 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {class PassSelector {
+  constructor(domElement) {
+    this.$domElement = $(domElement);
+    this._initialize();
+  }
+
+  _initialize() {
+    this.$tickboxes = this.$domElement.find('input[type=checkbox]');
+    this.$tickboxes.on('change.pass-selector', this._handleTickboxChange.bind(this));
+  }
+
+  _handleTickboxChange(event) {
+    const $currentTickbox = $(event.target);
+    this.$tickboxes.not($currentTickbox).prop('checked', false);
+    if (this.$tickboxes.filter(':checked').length === 0) {
+      $currentTickbox.prop('checked', true);
+    }
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (PassSelector);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
+
+/***/ }),
+/* 20 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var jquery_validation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
+/* harmony import */ var jquery_validation__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery_validation__WEBPACK_IMPORTED_MODULE_0__);
+
+
+class RegistrationForm {
+  constructor(domElement) {
+    this._initialize(domElement);
+  }
+
+  _initialize(domElement) {
+    this._findElements(domElement);
+    this._addFormValidation();
+
+    this.$inputs.on('change.registration-form', this._handleInputChange.bind(this));
+    $(window).on('scroll.registration-form', this._handleWindowScroll.bind(this));
+    this.$button.on('click.registration-form', this._handleRegisterButtonClick.bind(this));
+  }
+
+  _findElements(domElement) {
+    const $domElement = $(domElement);
+    this.$inputs = $domElement.find('input');
+    this.$form = $domElement.find('.js-registration-form__form');
+    this.$breadCrumbsItems = $domElement.find('.js-bread-crumbs__item');
+    this.$formStages = $domElement.find('.js-registration-form__stage');
+    this.$header = $domElement.find('.js-registration-form__header');
+    this.$passHeader = $domElement.find('.js-pass-selector__title');
+    this.$button = $domElement.find('.js-registration-form__button');
+  }
+
+  _addFormValidation() {
+    this.$form.validate({
+      rules: {
+        name: 'required',
+        email: {
+          required: true,
+          email: true,
+        },
+        policy: 'required',
+      },
+      focusInvalid: true,
+      errorPlacement() {},
+    });
+  }
+
+  _updateBreadCrumbs(itemNumber) {
+    const activeClass = 'bread-crumbs__item_active';
+    if (!this.$breadCrumbsItems.eq(itemNumber).hasClass(activeClass)) {
+      this.$breadCrumbsItems.removeClass(activeClass);
+      this.$breadCrumbsItems.eq(itemNumber).addClass(activeClass);
+    }
+  }
+
+  _handleInputChange(event) {
+    const $target = $(event.target);
+    const $currentStage = $target.parents('.js-registration-form__stage');
+    let stageNumber = 0;
+    this.$formStages.each((i, element) => {
+      if ($(element).is($currentStage)) {
+        stageNumber = i;
+      }
+    });
+    this._updateBreadCrumbs(stageNumber);
+  }
+
+  _handleWindowScroll(event) {
+    const headerHeight = this.$header.outerHeight();
+    const passHeaderOffset = this.$passHeader.offset().top;
+    if ($(event.target).scrollTop() + headerHeight > passHeaderOffset) {
+      this.$header.css({ position: 'absolute', top: passHeaderOffset - headerHeight });
+    } else {
+      this.$header.removeAttr('style');
+    }
+  }
+
+  _handleRegisterButtonClick() {
+    this.$form.submit();
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (RegistrationForm);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
+
+/***/ }),
+/* 21 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {class SearchBox {
+  constructor(domElement) {
+    this._findElements(domElement);
+    this._initialize();
+  }
+
+  _findElements(domElement) {
+    const $searchbox = $(domElement);
+    this.$searchbox = $searchbox;
+    this.$button = $searchbox.find('.js-search-box__button');
+    this.$input = $searchbox.find('.js-search-box__input');
+  }
+
+  _initialize() {
+    this.$searchbox
+      .on('click.searchbox', this._handleSearchBoxClick.bind(this))
+      .on('keypress.searchbox', this._handleSearchBoxKeypress.bind(this));
+    this.$input.on('focus.searchbox', this._handleInputFocus.bind(this));
+
+    if (this.$searchbox.hasClass('search-box_filled')) {
+      this._handleButtonClick();
+    }
+  }
+
+  _handleSearchBoxClick(event) {
+    const $element = $(event.target);
+    if ($element.hasClass('js-search-box__button')) {
+      this._handleButtonClick(event);
+    }
+  }
+
+  _handleButtonClick(event) {
+    const notFoundMessage = "I've not found what I'm looking for...";
+    this.$input.val(notFoundMessage);
+    this.$searchbox.addClass('search-box_filled');
+    if (event !== undefined) {
+      $(event.target).blur();
+    }
+  }
+
+  _handleSearchBoxKeypress(event) {
+    if (event.which === 13) {
+      this._handleButtonClick(event);
+    }
+  }
+
+  _emptyInput() {
+    this.$input.val('');
+    this.$searchbox.removeClass('search-box_filled');
+  }
+
+  _handleInputFocus() {
+    if (this.$searchbox.hasClass('search-box_filled')) {
+      this._emptyInput();
+    }
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (SearchBox);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
+
+/***/ }),
+/* 22 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var jquery_ui_ui_widgets_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(201);
+/* harmony import */ var jquery_ui_ui_widgets_slider__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery_ui_ui_widgets_slider__WEBPACK_IMPORTED_MODULE_0__);
+
+
+__webpack_require__(204);
+
+class Slider {
+  constructor(domElement) {
+    this._initialize(domElement);
+  }
+
+  _initialize(domElement) {
+    this._findElements(domElement);
+    const settings = this._generateSliderSettings();
+    this.$sliderContainer.slider(settings);
+  }
+
+  _findElements(domElement) {
+    this.$slider = $(domElement);
+    this.$sliderContainer = this.$slider.find('.js-slider__container');
+    this.$tip = this.$slider.find('.js-slider__tip');
+  }
+
+  _generateSliderSettings() {
+    let typeSettings = {};
+    const settings = {
+      min: 0,
+      max: 100,
+      classes: {
+        'ui-slider': 'slider__container',
+        'ui-slider-handle': 'slider__handle',
+        'ui-slider-range': 'slider__range',
+      },
+    };
+    if (this.$slider.hasClass('js-slider_type_tip')) {
+      typeSettings = {
+        value: 40,
+        create: () => { this._updateTip(40); },
+        slide: (event, ui) => { this._updateTip(ui.value); },
+        start: () => { this.$tip.addClass('slider__tip_visible'); },
+        stop: () => { this.$tip.removeClass('slider__tip_visible'); },
+      };
+    } else if (this.$slider.hasClass('js-slider_type_scale')) {
+      typeSettings = {
+        value: 75,
+        step: 25,
+        range: 'min',
+      };
+    }
+
+    return { ...settings, ...typeSettings };
+  }
+
+  _updateTip(value) {
+    this.$tip
+      .text(value)
+      .css('left', `${value}%`);
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Slider);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
+
+/***/ }),
+/* 23 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var jquery_mousewheel__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5);
+/* harmony import */ var jquery_mousewheel__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery_mousewheel__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var malihu_custom_scrollbar_plugin__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7);
+/* harmony import */ var malihu_custom_scrollbar_plugin__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(malihu_custom_scrollbar_plugin__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+class SpeakerCard {
+  constructor(domElement) {
+    this._initialize(domElement);
+  }
+
+  _initialize(domElement) {
+    this.$text = $(domElement).find('.js-speaker-card__text');
+    this._addScrollBar();
+  }
+
+  _addScrollBar() {
+    this.$text.mCustomScrollbar();
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (SpeakerCard);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
+
+/***/ }),
+/* 24 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var jquery_mousewheel__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5);
+/* harmony import */ var jquery_mousewheel__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery_mousewheel__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var malihu_custom_scrollbar_plugin__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7);
+/* harmony import */ var malihu_custom_scrollbar_plugin__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(malihu_custom_scrollbar_plugin__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+class SpeakerCarousel {
+  constructor(domElement) {
+    this.cardsAreExpanded = false;
+    this._initialize(domElement);
+  }
+
+  _findElements(domElement) {
+    const $domElement = $(domElement);
+    this.$page = $domElement;
+    this.$cards = $domElement.find('.js-speaker-carousel__cards');
+    this.$rightButton = $domElement.find('.js-speaker-carousel__arrow-button .js-arrow-button_direction_right');
+    this.$leftButton = $domElement.find('.js-speaker-carousel__arrow-button .js-arrow-button_direction_left');
+    this.$viewAllLink = $domElement.find('.js-speaker-carousel__link');
+  }
+
+  _initialize(domElement) {
+    this._findElements(domElement);
+    this._addCustomScrollBar();
+    this.$scrollBarContainer = this.$cards.find('.mCSB_container');
+    this.windowIsSmall = false;
+
+    const mediaQuery = window.matchMedia('(max-width: 500px)');
+    const handleWidthChange = this._updatePageView.bind(this);
+    mediaQuery.addListener(handleWidthChange);
+
+    this._updatePageView(mediaQuery);
+    this._addEventListeners();
+  }
+
+  _addCustomScrollBar() {
+    const onTotalScroll = this._handleTotalScroll.bind(this);
+    const onTotalScrollBack = this._handleTotalScrollBack.bind(this);
+    const onScrollStart = this._handleScrollStart.bind(this);
+
+    const scrollBarSettings = {
+      axis: 'x',
+      theme: 'dark-thin',
+      autoExpandScrollbar: true,
+      advanced: {
+        autoExpandHorizontalScroll: true,
+      },
+      callbacks: {
+        onTotalScroll,
+        onTotalScrollBack,
+        onScrollStart,
+      },
+    };
+
+    this.$cards.mCustomScrollbar(scrollBarSettings);
+  }
+
+  _handleTotalScroll() {
+    this.$rightButton
+      .addClass('arrow-button_disabled')
+      .attr('tabindex', '-1');
+  }
+
+  _handleTotalScrollBack() {
+    this.$leftButton
+      .addClass('arrow-button_disabled')
+      .attr('tabindex', '-1');
+  }
+
+  _handleScrollStart() {
+    this.$leftButton
+      .removeClass('arrow-button_disabled')
+      .attr('tabindex', '0');
+    this.$rightButton
+      .removeClass('arrow-button_disabled')
+      .attr('tabindex', '0');
+  }
+
+  _updatePageView(mediaQuery) {
+    if (mediaQuery.matches) {
+      this.windowIsSmall = true;
+      this.$page.addClass('speaker-carousel_view_small');
+      this._hideCustomScrollBar();
+    } else {
+      this.windowIsSmall = false;
+      this.$page.removeClass('speaker-carousel_view_small');
+      if (!this.cardsAreExpanded) {
+        this._updateCustomScrollBar();
+      }
+    }
+  }
+
+  _addEventListeners() {
+    this.$rightButton.on('click.speakers', this._handleRightButtonClick.bind(this));
+    this.$leftButton.on('click.speakers', this._handleLeftButtonClick.bind(this));
+    this.$viewAllLink.on('click.speakers', this._handleViewAllClick.bind(this));
+  }
+
+  _handleRightButtonClick() {
+    this.$cards.mCustomScrollbar('scrollTo', '-=500');
+  }
+
+  _handleLeftButtonClick() {
+    this.$cards.mCustomScrollbar('scrollTo', '+=500');
+  }
+
+  _handleViewAllClick() {
+    if (this.cardsAreExpanded) {
+      this.$page.removeClass('speaker-carousel_view_full');
+      this.$viewAllLink.text('View all speakers');
+      this.cardsAreExpanded = false;
+      if (!this.windowIsSmall) {
+        this._updateCustomScrollBar();
+      }
+    } else {
+      this.$page.addClass('speaker-carousel_view_full');
+      this.$viewAllLink.text('Back to compact view');
+      this.cardsAreExpanded = true;
+      if (!this.windowIsSmall) {
+        this._hideCustomScrollBar();
+      }
+    }
+  }
+
+  _updateCustomScrollBar() {
+    this.$cards.mCustomScrollbar('update');
+    this.$scrollBarContainer.css('position', 'relative');
+  }
+
+  _hideCustomScrollBar() {
+    this.$cards.mCustomScrollbar('disable', true);
+    this.$scrollBarContainer.removeAttr('style');
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (SpeakerCarousel);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
+
+/***/ }),
+/* 25 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {class TickBox {
+  constructor(domElement) {
+    this._initialize(domElement);
+  }
+
+  _initialize(domElement) {
+    const $domElement = $(domElement);
+    this.$tickbox = $domElement;
+    this.$input = $domElement.find('.js-tick-box__input');
+    this.$checkmark = $domElement.find('.js-tick-box__checkmark');
+    this.$tickbox
+      .on('keypress.tickbox', this._handleEnterPress.bind(this))
+      .on('click.tickbox', this._removeFocus.bind(this));
+  }
+
+  _handleEnterPress(event) {
+    if (event.which === 13) {
+      this.$input[0].checked = !this.$input[0].checked;
+      this.$input.trigger('change');
+    }
+  }
+
+  _removeFocus() {
+    this.$checkmark.blur();
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (TickBox);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
+
+/***/ }),
+/* 26 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {class ToggleSwitch {
+  constructor(domElement) {
+    this._initialize(domElement);
+  }
+
+  _initialize(domElement) {
+    const $domElement = $(domElement);
+    this.$toggle = $domElement;
+    this.$input = $domElement.find('.js-toggle-switch__checkbox');
+    this.$slider = $domElement.find('.js-toggle-switch__slider');
+    this.$toggle
+      .on('keypress.toggle', this._handleEnterPress.bind(this))
+      .on('click.toggle', this._removeFocus.bind(this));
+  }
+
+  _handleEnterPress(event) {
+    if (event.which === 13) {
+      this.$input[0].checked = !this.$input[0].checked;
+      this.$input.trigger('change');
+    }
+  }
+
+  _removeFocus() {
+    this.$slider.blur();
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (ToggleSwitch);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
+
+/***/ }),
+/* 27 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var jquery_validation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
+/* harmony import */ var jquery_validation__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery_validation__WEBPACK_IMPORTED_MODULE_0__);
+
+
+class ValidationInput {
+  constructor(domElement) {
+    this._initialize(domElement);
+  }
+
+  _initialize(domElement) {
+    const $container = $(domElement);
+    this.$input = $container.find('.js-validation-input__input');
+    this.$bubble = $container.find('.js-validation-input__bubble');
+    this.bubbleModifiers = {
+      good: 'validation-input__bubble_type_good',
+      error: 'validation-input__bubble_type_error',
+      hidden: 'validation-input__bubble_hidden',
+    };
+
+    this.$input
+      .on('blur.validation', this._handleInputBlur.bind(this))
+      .on('focus.validation', this._handleInputFocus.bind(this));
+  }
+
+  _handleInputBlur() {
+    const { good, error, hidden } = this.bubbleModifiers;
+    if (this.$input.valid()) {
+      this.$bubble
+        .removeClass(`${error} ${hidden}`)
+        .addClass(good)
+        .text('Thanks!');
+    } else {
+      this.$bubble
+        .removeClass(`${good} ${hidden}`)
+        .addClass(error)
+        .text('Error');
+    }
+  }
+
+  _handleInputFocus() {
+    const { good, error, hidden } = this.bubbleModifiers;
+    this.$bubble
+      .addClass(hidden)
+      .removeClass(`${good} ${error}`);
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (ValidationInput);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
+
+/***/ }),
+/* 28 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {class Video {
+  constructor(domElement) {
+    this._initialize(domElement);
+  }
+
+  _initialize(domElement) {
+    this.$video = $(domElement).find('.js-video__frame');
+
+    const video = this.$video[0];
+    this.aspectRatio = video.height / video.width;
+    video.dataset.aspectRatio = this.aspectRatio;
+    video.removeAttribute('height');
+    video.removeAttribute('width');
+
+    this._resize();
+
+    $(window).on('resize.video', this._resize.bind(this));
+  }
+
+  _resize() {
+    const newWidth = document.width;
+    this.$video
+      .width(newWidth)
+      .height(newWidth * this.aspectRatio);
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Video);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
+
+/***/ }),
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -12849,7 +16764,7 @@ return $.ui.keyCode = {
 
 
 /***/ }),
-/* 8 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -13587,80 +17502,80 @@ return $.widget;
 
 
 /***/ }),
-/* 9 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 function importAll(r) {
   r.keys().forEach(r);
 }
 
-importAll(__webpack_require__(10));
-importAll(__webpack_require__(151));
-importAll(__webpack_require__(161));
-importAll(__webpack_require__(192));
+importAll(__webpack_require__(32));
+importAll(__webpack_require__(172));
+importAll(__webpack_require__(182));
+importAll(__webpack_require__(212));
 
 /***/ }),
-/* 10 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./common.blocks/about-section/styl/about-section.styl": 11,
-	"./common.blocks/arrow-button/styl/arrow-button.styl": 13,
-	"./common.blocks/arrow-section/styl/arrow-section.styl": 15,
-	"./common.blocks/banner-section/styl/banner-section.styl": 17,
-	"./common.blocks/bread-crumbs/styl/bread-crumbs.styl": 20,
-	"./common.blocks/button-section/styl/button-section.styl": 22,
-	"./common.blocks/button/styl/button.styl": 24,
-	"./common.blocks/calendar-section/styl/calendar-section.styl": 27,
-	"./common.blocks/calendar/styl/calendar.styl": 29,
-	"./common.blocks/chart-section/styl/chart-section.styl": 31,
-	"./common.blocks/donut-chart/styl/donut-chart.styl": 33,
-	"./common.blocks/drop-down/styl/drop-down.styl": 35,
-	"./common.blocks/email-form/styl/email-form.styl": 37,
-	"./common.blocks/event-carousel/styl/event-carousel.styl": 39,
-	"./common.blocks/footer-section/styl/footer-section.styl": 41,
-	"./common.blocks/form-section/styl/form-section.styl": 43,
-	"./common.blocks/infogram/styl/infogram.styl": 45,
-	"./common.blocks/map-section/styl/map-section.styl": 47,
-	"./common.blocks/map/styl/map.styl": 49,
-	"./common.blocks/message-section/styl/message-section.styl": 51,
-	"./common.blocks/messenger/styl/messenger.styl": 53,
-	"./common.blocks/navigation-bar/styl/navigation-bar.styl": 57,
-	"./common.blocks/news-card/styl/news-card.styl": 59,
-	"./common.blocks/news-section/styl/news-section.styl": 61,
-	"./common.blocks/online-help/styl/online-help.styl": 63,
-	"./common.blocks/pass-info/styl/pass-info.styl": 66,
-	"./common.blocks/pass-selector/styl/pass-selector.styl": 68,
-	"./common.blocks/policy-tickbox/styl/policy-tickbox.styl": 70,
-	"./common.blocks/profile-card/styl/profile-card.styl": 72,
-	"./common.blocks/profile-section/styl/profile-section.styl": 77,
-	"./common.blocks/registration-form/styl/registration-form.styl": 79,
-	"./common.blocks/scrollbar/styl/scrollbar.styl": 81,
-	"./common.blocks/search-box/styl/search-box.styl": 85,
-	"./common.blocks/search-section/styl/search-section.styl": 87,
-	"./common.blocks/slider-section/styl/slider-section.styl": 89,
-	"./common.blocks/slider/styl/slider.styl": 91,
-	"./common.blocks/speaker-card/styl/speaker-card.styl": 93,
-	"./common.blocks/speaker-carousel/styl/speaker-carousel.styl": 95,
-	"./common.blocks/stages-section/styl/stages-section.styl": 97,
-	"./common.blocks/subscribe-form/styl/subscribe-form.styl": 99,
-	"./common.blocks/subscribe-toggle/styl/subscribe-toggle.styl": 101,
-	"./common.blocks/talks-section/styl/talks-section.styl": 103,
-	"./common.blocks/tick-box/styl/tick-box.styl": 105,
-	"./common.blocks/toggle-switch/styl/toggle-switch.styl": 107,
-	"./common.blocks/validation-input/styl/validation-input.styl": 109,
-	"./common.blocks/video-section/styl/video-section.styl": 111,
-	"./common.blocks/video/styl/video.styl": 113,
-	"./pages/contacts/styl/contacts.styl": 115,
-	"./pages/index/styl/index.styl": 117,
-	"./pages/registration/styl/registration.styl": 119,
-	"./pages/schedule/styl/schedule.styl": 121,
-	"./pages/speakers/styl/speakers.styl": 123,
-	"./pages/uidemo/styl/uidemo.styl": 125,
-	"./styles/fonts.styl": 127,
-	"./styles/mixins.styl": 145,
-	"./styles/variables.styl": 147,
-	"./templates/styl/layout.styl": 149
+	"./common.blocks/about-section/styl/about-section.styl": 33,
+	"./common.blocks/arrow-button/styl/arrow-button.styl": 35,
+	"./common.blocks/arrow-section/styl/arrow-section.styl": 37,
+	"./common.blocks/banner-section/styl/banner-section.styl": 39,
+	"./common.blocks/bread-crumbs/styl/bread-crumbs.styl": 42,
+	"./common.blocks/button-section/styl/button-section.styl": 44,
+	"./common.blocks/button/styl/button.styl": 46,
+	"./common.blocks/calendar-section/styl/calendar-section.styl": 49,
+	"./common.blocks/calendar/styl/calendar.styl": 51,
+	"./common.blocks/chart-section/styl/chart-section.styl": 53,
+	"./common.blocks/donut-chart/styl/donut-chart-mixin.styl": 55,
+	"./common.blocks/donut-chart/styl/donut-chart.styl": 57,
+	"./common.blocks/drop-down/styl/drop-down.styl": 59,
+	"./common.blocks/email-form/styl/email-form.styl": 61,
+	"./common.blocks/event-carousel/styl/event-carousel.styl": 63,
+	"./common.blocks/footer-section/styl/footer-section.styl": 66,
+	"./common.blocks/form-section/styl/form-section.styl": 68,
+	"./common.blocks/infogram/styl/infogram.styl": 70,
+	"./common.blocks/map-section/styl/map-section.styl": 72,
+	"./common.blocks/map/styl/map.styl": 74,
+	"./common.blocks/message-section/styl/message-section.styl": 76,
+	"./common.blocks/messenger/styl/messenger.styl": 78,
+	"./common.blocks/navigation-bar/styl/navigation-bar.styl": 82,
+	"./common.blocks/news-card/styl/news-card.styl": 84,
+	"./common.blocks/news-section/styl/news-section.styl": 86,
+	"./common.blocks/online-help/styl/online-help.styl": 88,
+	"./common.blocks/pass-info/styl/pass-info.styl": 91,
+	"./common.blocks/pass-selector/styl/pass-selector.styl": 93,
+	"./common.blocks/policy-tickbox/styl/policy-tickbox.styl": 95,
+	"./common.blocks/profile-card/styl/profile-card.styl": 97,
+	"./common.blocks/profile-section/styl/profile-section.styl": 102,
+	"./common.blocks/registration-form/styl/registration-form.styl": 104,
+	"./common.blocks/search-box/styl/search-box.styl": 106,
+	"./common.blocks/search-section/styl/search-section.styl": 108,
+	"./common.blocks/slider-section/styl/slider-section.styl": 110,
+	"./common.blocks/slider/styl/slider.styl": 112,
+	"./common.blocks/speaker-card/styl/speaker-card.styl": 114,
+	"./common.blocks/speaker-carousel/styl/speaker-carousel.styl": 116,
+	"./common.blocks/stages-section/styl/stages-section.styl": 118,
+	"./common.blocks/subscribe-form/styl/subscribe-form.styl": 120,
+	"./common.blocks/subscribe-toggle/styl/subscribe-toggle.styl": 122,
+	"./common.blocks/talks-section/styl/talks-section.styl": 124,
+	"./common.blocks/tick-box/styl/tick-box.styl": 126,
+	"./common.blocks/toggle-switch/styl/toggle-switch.styl": 128,
+	"./common.blocks/validation-input/styl/validation-input.styl": 130,
+	"./common.blocks/video-section/styl/video-section.styl": 132,
+	"./common.blocks/video/styl/video.styl": 134,
+	"./pages/contacts/styl/contacts.styl": 136,
+	"./pages/index/styl/index.styl": 138,
+	"./pages/registration/styl/registration.styl": 140,
+	"./pages/schedule/styl/schedule.styl": 142,
+	"./pages/speakers/styl/speakers.styl": 144,
+	"./pages/uidemo/styl/uidemo.styl": 146,
+	"./styles/fonts.styl": 148,
+	"./styles/mixins.styl": 166,
+	"./styles/variables.styl": 168,
+	"./templates/styl/layout.styl": 170
 };
 
 
@@ -13681,337 +17596,7 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 10;
-
-/***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var content = __webpack_require__(12);
-
-if (typeof content === 'string') {
-  content = [[module.i, content, '']];
-}
-
-var options = {}
-
-options.insert = "head";
-options.singleton = false;
-
-var update = __webpack_require__(1)(content, options);
-
-if (content.locals) {
-  module.exports = content.locals;
-}
-
-
-/***/ }),
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(false);
-// Module
-exports.push([module.i, ".about-section {\n  width: 100%;\n  background-color: #e5e5e5;\n}\n.about-section__block {\n  display: flex;\n  width: 100%;\n}\n@media screen and (max-width: 768px) {\n  .about-section__block {\n    flex-wrap: wrap;\n  }\n}\n.about-section__title {\n  text-transform: uppercase;\n  font: bold 1.285714285714286rem/1 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #4f4f4f;\n  letter-spacing: 0.095rem;\n  margin: 2rem 0 1rem;\n}\n.about-section__title:first-of-type {\n  margin-top: 0;\n}\n.about-section__subtitle {\n  margin: 1rem 0 0.5rem;\n  font: bold 1rem 'Lato', Arial, sans-serif;\n  color: #4eb7a8;\n}\n.about-section__text {\n  flex: 32.96703297rem 2 2;\n  max-width: 60.44rem;\n  padding: 2rem;\n}\n.about-section__intro {\n  font-size: 1rem;\n  text-align: justify;\n  color: #4f4f4f;\n}\n.about-section__intro:first-of-type {\n  zoom: 1;\n}\n.about-section__intro:first-of-type:before,\n.about-section__intro:first-of-type:after {\n  content: \"\";\n  display: table;\n}\n.about-section__intro:first-of-type:after {\n  clear: both;\n}\n.about-section__common-paragraph {\n  padding-top: 0.9rem;\n}\n.about-section__video-link {\n  float: right;\n  margin-top: 0.9rem;\n  color: #e75735;\n  text-decoration: underline;\n}\n@media (hover: hover) {\n  .about-section__video-link:hover {\n    text-decoration: none;\n  }\n}\n@media (hover: hover) {\n  .about-section__video-link:active {\n    text-decoration: underline;\n    color: #4f4f4f;\n  }\n}\n@media (hover: none) {\n  .about-section__video-link:active {\n    text-decoration: none;\n  }\n}\n.about-section__right-col {\n  flex: 21.97802198rem 1 1;\n  padding: 1rem;\n  text-align: center;\n  background-color: #fff;\n}\n.about-section__video {\n  position: relative;\n  top: 50%;\n  width: 100%;\n  max-width: 32.96703297rem;\n  margin: 0 auto;\n  transform: translateY(-50%);\n}\n", ""]);
-
-
-/***/ }),
-/* 13 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var content = __webpack_require__(14);
-
-if (typeof content === 'string') {
-  content = [[module.i, content, '']];
-}
-
-var options = {}
-
-options.insert = "head";
-options.singleton = false;
-
-var update = __webpack_require__(1)(content, options);
-
-if (content.locals) {
-  module.exports = content.locals;
-}
-
-
-/***/ }),
-/* 14 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(false);
-// Module
-exports.push([module.i, ".arrow-button {\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n  -webkit-tap-highlight-color: transparent;\n  user-select: none;\n  position: relative;\n  display: inline-block;\n  width: 3.626373626373626rem;\n  height: 3.626373626373626rem;\n  font-size: inherit;\n  background-color: #fff;\n  border: 0.21978021978022rem #4eb7a8 solid;\n  border-radius: 50%;\n  cursor: pointer;\n  outline: none;\n}\n.arrow-button_disabled {\n  pointer-events: none;\n  background-color: #e5e5e5;\n  border-color: #e5e5e5;\n}\n.arrow-button_disabled .arrow-button__arrow {\n  background-color: #e5e5e5;\n  border-color: #fff;\n}\n@media (hover: hover) {\n  .arrow-button:hover {\n    background-color: #4eb7a8;\n  }\n  .arrow-button:hover .arrow-button__arrow {\n    background-color: #4eb7a8;\n    border-color: #fff;\n  }\n}\n@media (hover: none) {\n  .arrow-button:active {\n    background-color: #4eb7a8;\n  }\n  .arrow-button:active .arrow-button__arrow {\n    background-color: #4eb7a8;\n    border-color: #fff;\n  }\n}\n.arrow-button:focus,\n.arrow-button_active {\n  background-color: #4eb7a8;\n}\n.arrow-button:focus .arrow-button__arrow,\n.arrow-button_active .arrow-button__arrow {\n  background-color: #4eb7a8;\n  border-color: #fff;\n}\n.arrow-button_direction_right .arrow-button__arrow {\n  right: 50%;\n  transform: translate(30%, -50%) rotate(-45deg);\n}\n.arrow-button_direction_right:active,\n.arrow-button_direction_right.arrow-button_active {\n  transform: translateX(1px);\n}\n.arrow-button_direction_left .arrow-button__arrow {\n  left: 50%;\n  transform: translate(-30%, -50%) rotate(135deg);\n}\n.arrow-button_direction_left:active,\n.arrow-button_direction_left.arrow-button_active {\n  transform: translateX(-1px);\n}\n.arrow-button__arrow {\n  position: absolute;\n  top: 50%;\n  width: 1.263736263736264rem;\n  height: 1.263736263736264rem;\n  border: solid #4eb7a8;\n  border-width: 0 0.274725274725275rem 0.274725274725275rem 0;\n}\n.arrow-button_size_small {\n  width: 1.8rem;\n  height: 1.8rem;\n  border-width: 0.15rem;\n}\n.arrow-button_size_small .arrow-button__arrow {\n  width: 0.65rem;\n  height: 0.65rem;\n  border-width: 0 0.15rem 0.15rem 0;\n}\n", ""]);
-
-
-/***/ }),
-/* 15 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var content = __webpack_require__(16);
-
-if (typeof content === 'string') {
-  content = [[module.i, content, '']];
-}
-
-var options = {}
-
-options.insert = "head";
-options.singleton = false;
-
-var update = __webpack_require__(1)(content, options);
-
-if (content.locals) {
-  module.exports = content.locals;
-}
-
-
-/***/ }),
-/* 16 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(false);
-// Module
-exports.push([module.i, ".arrow-section__title {\n  text-transform: uppercase;\n  font: bold 1.285714285714286rem/1 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #4f4f4f;\n  letter-spacing: 0.095rem;\n  margin-bottom: 2.5rem;\n  letter-spacing: 0.06rem;\n  word-spacing: 0.3rem;\n}\n.arrow-section__container {\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: space-between;\n  margin: 0 auto;\n}\n.arrow-section__button {\n  margin-bottom: 1.3rem;\n  font-size: 1rem;\n}\n@media screen and (max-width: 672px) {\n  .arrow-section__button:nth-child(2n+2) {\n    order: 2;\n  }\n}\n", ""]);
-
-
-/***/ }),
-/* 17 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var content = __webpack_require__(18);
-
-if (typeof content === 'string') {
-  content = [[module.i, content, '']];
-}
-
-var options = {}
-
-options.insert = "head";
-options.singleton = false;
-
-var update = __webpack_require__(1)(content, options);
-
-if (content.locals) {
-  module.exports = content.locals;
-}
-
-
-/***/ }),
-/* 18 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(false);
-// Imports
-var getUrl = __webpack_require__(3);
-var ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(19));
-// Module
-exports.push([module.i, ".banner-section {\n  width: 100%;\n  padding: 7rem 2rem 4rem;\n  text-align: center;\n  color: #fff;\n  background: #4eb7a8 url(" + ___CSS_LOADER_URL___0___ + ") no-repeat;\n  background-size: cover;\n}\n.banner-section__location {\n  width: -webkit-max-content;\n  width: -moz-max-content;\n  width: max-content;\n  margin: 0 auto;\n  padding: 0.3rem 0.8rem;\n  font: lighter 1.6rem 'Lato', Arial, sans-serif;\n  border: 2px solid #80d8cb;\n}\n.banner-section__title {\n  margin: 3rem auto 0;\n  font: 900 6rem 'Lato', Arial, sans-serif;\n  letter-spacing: 0.15rem;\n}\n@media screen and (max-width: 630px) {\n  .banner-section__title {\n    font-size: 4rem;\n  }\n}\n@media screen and (max-width: 375px) {\n  .banner-section__title {\n    font-size: 3.5rem;\n  }\n}\n.banner-section__tagline {\n  max-width: 52.1978022rem;\n  margin: 0.8rem auto 2.5rem;\n  font: lighter 1rem 'Lato', Arial, sans-serif;\n}\n.banner-section__register-button {\n  width: 16.48351648rem;\n  margin: 0 auto;\n  font-size: 1rem;\n}\n", ""]);
-
-
-/***/ }),
-/* 19 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "assets/img/banner-bg.jpg";
-
-/***/ }),
-/* 20 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var content = __webpack_require__(21);
-
-if (typeof content === 'string') {
-  content = [[module.i, content, '']];
-}
-
-var options = {}
-
-options.insert = "head";
-options.singleton = false;
-
-var update = __webpack_require__(1)(content, options);
-
-if (content.locals) {
-  module.exports = content.locals;
-}
-
-
-/***/ }),
-/* 21 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(false);
-// Module
-exports.push([module.i, ".bread-crumbs {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  flex-flow: row nowrap;\n  width: 100%;\n  padding: 0;\n}\n.bread-crumbs__item {\n  flex: 9.835164835rem 1 1;\n  position: relative;\n  z-index: 0;\n  list-style-type: none;\n  transition: all 0.2s ease;\n}\n.bread-crumbs__item:nth-child(1) {\n  flex-basis: 9.340659341rem;\n}\n.bread-crumbs__item:nth-child(2) {\n  flex-basis: 10.16483516rem;\n}\n.bread-crumbs__item:last-child {\n  flex: auto 0 0;\n}\n.bread-crumbs__item:last-child::after {\n  display: none;\n}\n.bread-crumbs__item::after {\n  content: '';\n  display: block;\n  position: absolute;\n  top: 50%;\n  z-index: -1;\n  width: 100%;\n  height: 0.32967032967033rem;\n  background: #e75735;\n  transform: translateY(-50%);\n  transition: all 0.2s ease;\n}\n.bread-crumbs__item_active::after,\n.bread-crumbs__item_active ~ .bread-crumbs__item .bread-crumbs__circle,\n.bread-crumbs__item_active ~ .bread-crumbs__item::after {\n  background-color: #e5e5e5;\n  transition: all 0.2s ease;\n}\n.bread-crumbs__circle {\n  width: 2.032967032967033rem;\n  height: 2.032967032967033rem;\n  padding-top: 0.32967032967033rem;\n  font: bold 1rem 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #fff;\n  border-radius: 50%;\n  background: #e75735;\n  transition: all 0.2s ease;\n}\n", ""]);
-
-
-/***/ }),
-/* 22 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var content = __webpack_require__(23);
-
-if (typeof content === 'string') {
-  content = [[module.i, content, '']];
-}
-
-var options = {}
-
-options.insert = "head";
-options.singleton = false;
-
-var update = __webpack_require__(1)(content, options);
-
-if (content.locals) {
-  module.exports = content.locals;
-}
-
-
-/***/ }),
-/* 23 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(false);
-// Module
-exports.push([module.i, ".button-section {\n  width: 100%;\n}\n.button-section__title {\n  text-transform: uppercase;\n  font: bold 1.285714285714286rem/1 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #4f4f4f;\n  letter-spacing: 0.095rem;\n  margin-bottom: 5rem;\n}\n@media screen and (max-width: 672px) {\n  .button-section__title {\n    margin-bottom: 3rem;\n  }\n}\n.button-section__container {\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: space-between;\n}\n.button-section__column {\n  display: flex;\n  flex-flow: column wrap;\n  justify-content: normal;\n  flex: 15.65934065934066rem 1 0;\n  align-content: space-around;\n  height: 12rem;\n  margin: 0 auto;\n}\n@media screen and (min-width: 700px) {\n  .button-section__column:first-child {\n    margin-right: 4%;\n  }\n}\n.button-section__button {\n  margin-bottom: 1.3rem;\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n}\n@media screen and (min-width: 700px) {\n  .button-section__button:nth-child(-n+3) {\n    margin-right: 8%;\n  }\n}\n.button-section__button_size_small {\n  margin-top: 0.769230769230769rem;\n}\n@media screen and (max-width: 672px) {\n  .button-section__button_size_small:nth-last-child(-n+3) {\n    order: -1;\n  }\n}\n", ""]);
-
-
-/***/ }),
-/* 24 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var content = __webpack_require__(25);
-
-if (typeof content === 'string') {
-  content = [[module.i, content, '']];
-}
-
-var options = {}
-
-options.insert = "head";
-options.singleton = false;
-
-var update = __webpack_require__(1)(content, options);
-
-if (content.locals) {
-  module.exports = content.locals;
-}
-
-
-/***/ }),
-/* 25 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(false);
-// Imports
-exports.i(__webpack_require__(26), "");
-// Module
-exports.push([module.i, ".button {\n  display: inline-block;\n  width: 8.406593406593407rem;\n  padding: 0.659340659340659rem;\n  overflow: hidden;\n  font: bold 0.857142857142857rem 'Lato', Arial, sans-serif;\n  text-align: center;\n  text-decoration: none;\n  text-transform: uppercase;\n  letter-spacing: 0.035rem;\n  color: #28a290;\n  cursor: pointer;\n  background-color: #fff;\n  border: solid 1px #28a290;\n  border-radius: 0.274725275rem;\n  box-shadow: 0 0.21978022rem 0 0 #28a290;\n  transition: all 0.3s, visibility 0s;\n  outline: none;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n  -webkit-tap-highlight-color: transparent;\n  user-select: none;\n}\n@media (hover: hover) {\n  .button:hover {\n    color: #fff;\n    background-color: #4eb7a8;\n    border-color: #4eb7a8;\n  }\n}\n.button:focus,\n.button:active {\n  color: #fff;\n  background-color: #4eb7a8;\n  border-color: #4eb7a8;\n}\n.button:active {\n  box-shadow: none;\n  transform: translateY(0.21978022rem);\n}\n.button_size_small {\n  width: 5.604395604395605rem;\n  padding: 0.32967032967033rem;\n  font-size: 0.714285714285714rem;\n}\n.button_size_responsive {\n  width: 100%;\n  font-size: inherit;\n}\n.button_color_orange {\n  color: #bf3e1f;\n  background-color: #fff;\n  border-color: #bf3e1f;\n  box-shadow: 0 0.21978022rem 0 0 #bf3e1f;\n}\n@media (hover: hover) {\n  .button_color_orange:hover {\n    color: #fff;\n    background-color: #e75735;\n    border-color: #e75735;\n  }\n}\n.button_color_orange:focus,\n.button_color_orange:active {\n  color: #fff;\n  background-color: #e75735;\n  border-color: #e75735;\n}\n.button_color_reverse {\n  color: #fff;\n  background-color: #4eb7a8;\n  border: 1px solid #4eb7a8;\n  box-shadow: 0 0.21978022rem 0 0 #28a290;\n}\n@media (hover: hover) {\n  .button_color_reverse:hover {\n    box-shadow: none;\n    transform: translateY(0.21978022rem);\n  }\n}\n.button_color_reverse:active,\n.button_color_reverse:focus {\n  box-shadow: none;\n  transform: translateY(0.21978022rem);\n}\n", ""]);
-
-
-/***/ }),
-/* 26 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(false);
-// Module
-exports.push([module.i, "/*! legitRipple.js v1.1.0: ripple.min.css by Matthias Vogt (ISC license) */\n.legitRipple,.legitRipple-custom{overflow:hidden}.legitRipple{position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;z-index:0}.legitRipple-ripple{position:absolute;z-index:-1;transform:translate(-50%,-50%);pointer-events:none;border-radius:50%;background:rgba(255,255,255,.4);will-change:transform,width,opacity;transform:translate3d(0,0,0);width:0;opacity:1;transition:width .15s linear,opacity .9s ease-out}.legitRipple-ripple:before{content:\"\";padding-top:100%;display:block}img~.legitRipple-ripple{z-index:auto}.legitRipple-template{display:none}.legitRipple-custom>*{position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;transform:translate(-50%,-50%)}", ""]);
-
-
-/***/ }),
-/* 27 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var content = __webpack_require__(28);
-
-if (typeof content === 'string') {
-  content = [[module.i, content, '']];
-}
-
-var options = {}
-
-options.insert = "head";
-options.singleton = false;
-
-var update = __webpack_require__(1)(content, options);
-
-if (content.locals) {
-  module.exports = content.locals;
-}
-
-
-/***/ }),
-/* 28 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(false);
-// Module
-exports.push([module.i, ".calendar-section__title {\n  text-transform: uppercase;\n  font: bold 1.285714285714286rem/1 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #4f4f4f;\n  letter-spacing: 0.095rem;\n  margin-bottom: 1.8rem;\n}\n.calendar-section__container {\n  max-width: 20.32967033rem;\n  margin: 0 auto;\n}\n@media screen and (max-width: 768px) {\n  .calendar-section__container {\n    max-width: 17.03296703rem;\n  }\n}\n", ""]);
-
-
-/***/ }),
-/* 29 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var content = __webpack_require__(30);
-
-if (typeof content === 'string') {
-  content = [[module.i, content, '']];
-}
-
-var options = {}
-
-options.insert = "head";
-options.singleton = false;
-
-var update = __webpack_require__(1)(content, options);
-
-if (content.locals) {
-  module.exports = content.locals;
-}
-
-
-/***/ }),
-/* 30 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(false);
-// Module
-exports.push([module.i, ".calendar {\n  background-color: #f2f2f2;\n  border-radius: 0.3rem;\n  overflow: hidden;\n}\n.calendar__day-container {\n  padding: 0.6rem 0 0.3rem;\n  width: 100%;\n  background-color: #e75735;\n  text-align: center;\n}\n.calendar__day-text {\n  font: lighter 5.714285714rem 'Lato', Arial, sans-serif;\n  color: #fff;\n  background: none;\n  border: none;\n}\n@media screen and (max-width: 768px) {\n  .calendar__day-text {\n    font-size: 4.5rem;\n  }\n}\n.calendar .ui-datepicker-header {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 0.7rem 1.1rem;\n  background-color: #d54c2c;\n  color: #fff;\n}\n.calendar .ui-datepicker-prev {\n  order: 1;\n  flex: 0 0 0.8rem;\n  height: 0.8rem;\n  border: 0.15rem #fff solid;\n  border-color: #fff transparent transparent #fff;\n  transform: rotate(-45deg);\n  cursor: pointer;\n}\n.calendar .ui-datepicker-prev:active {\n  transform: translateX(-0.2rem) rotate(-45deg);\n}\n.calendar .ui-datepicker-next {\n  order: 3;\n  flex: 0 0 0.8rem;\n  height: 0.8rem;\n  border: 0.15rem #fff solid;\n  border-color: #fff transparent transparent #fff;\n  transform: rotate(135deg);\n  cursor: pointer;\n}\n.calendar .ui-datepicker-next:active {\n  transform: translateX(0.2rem) rotate(135deg);\n}\n.calendar .ui-datepicker-title {\n  order: 2;\n  font: lighter 1.7rem/1 'Lato', Arial, sans-serif;\n  letter-spacing: -0.04rem;\n}\n.calendar .ui-datepicker-year {\n  display: none;\n}\n.calendar .ui-datepicker-calendar {\n  width: calc(100% + 1px);\n  border-spacing: 0;\n}\n.calendar .ui-datepicker-calendar thead {\n  background-color: #e75735;\n  font: bold 0.642857142857143rem 'Lato', Arial, sans-serif;\n  color: #fff;\n  text-transform: uppercase;\n}\n.calendar .ui-datepicker-calendar th {\n  padding: 0.65rem;\n}\n@media screen and (max-width: 768px) {\n  .calendar .ui-datepicker-calendar th {\n    padding: 0.4rem 0.2rem;\n  }\n}\n.calendar .ui-datepicker-calendar td {\n  padding: 0.5rem 0.25rem;\n  width: 14.28571428571429%;\n  text-align: center;\n  border-right: 1px solid #fff;\n  border-bottom: 1px solid #fff;\n  cursor: pointer;\n}\n@media screen and (max-width: 768px) {\n  .calendar .ui-datepicker-calendar td {\n    padding: 0.3rem;\n  }\n}\n.calendar .ui-datepicker-calendar td:last-child {\n  border-right: none;\n}\n@media (hover: hover) {\n  .calendar .ui-datepicker-calendar td:not(.ui-datepicker-unselectable):hover {\n    background-color: #e75735;\n  }\n  .calendar .ui-datepicker-calendar td:not(.ui-datepicker-unselectable):hover .ui-state-default {\n    color: #fff;\n  }\n}\n.calendar .ui-datepicker-calendar .ui-datepicker-current-day {\n  background-color: #e75735;\n}\n.calendar .ui-datepicker-calendar .ui-datepicker-current-day .ui-state-default,\n.calendar .ui-datepicker-calendar .ui-datepicker-current-day .ui-state-default:focus {\n  color: #fff;\n}\n.calendar .ui-datepicker-calendar .ui-datepicker-days-cell-over {\n  box-shadow: inset 0 0 0 0.10989011rem #e75735;\n}\n.calendar .ui-datepicker-calendar .ui-state-default {\n  font: normal 1.428571429rem 'SourceSansPro', Arial, sans-serif;\n  color: #868686;\n  text-decoration: none;\n  outline: none;\n}\n@media screen and (max-width: 768px) {\n  .calendar .ui-datepicker-calendar .ui-state-default {\n    font-size: 1rem;\n  }\n}\n.calendar .ui-datepicker-calendar .ui-state-default:focus {\n  color: #e75735;\n}\n.calendar .ui-datepicker-calendar .ui-state-disabled {\n  cursor: text;\n}\n.calendar .ui-datepicker-calendar .ui-state-disabled .ui-state-default {\n  color: #fff;\n}\n.calendar__button-pane {\n  padding: 1.2rem 1.37rem;\n  text-align: left;\n  background-color: #e5e5e5;\n}\n@media screen and (max-width: 768px) {\n  .calendar__button-pane {\n    padding: 1rem 1.4rem;\n  }\n}\n.calendar__today-button {\n  font: bold 1rem 'Lato', Arial, sans-serif;\n  text-transform: uppercase;\n  color: #868686;\n  background: none;\n  border: none;\n  cursor: pointer;\n  outline: none;\n}\n@media screen and (max-width: 768px) {\n  .calendar__today-button {\n    font-size: 0.8rem;\n  }\n}\n.calendar__today-button:focus,\n.calendar__today-button:active {\n  color: #e75735;\n}\n", ""]);
-
-
-/***/ }),
-/* 31 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var content = __webpack_require__(32);
-
-if (typeof content === 'string') {
-  content = [[module.i, content, '']];
-}
-
-var options = {}
-
-options.insert = "head";
-options.singleton = false;
-
-var update = __webpack_require__(1)(content, options);
-
-if (content.locals) {
-  module.exports = content.locals;
-}
-
-
-/***/ }),
-/* 32 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(false);
-// Module
-exports.push([module.i, ".chart-section__title {\n  text-transform: uppercase;\n  font: bold 1.285714285714286rem/1 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #4f4f4f;\n  letter-spacing: 0.095rem;\n  margin-bottom: 1.7rem;\n  letter-spacing: 0.06rem;\n}\n.chart-section__container {\n  display: flex;\n  justify-content: space-between;\n  flex-flow: row nowrap;\n}\n@media screen and (max-width: 900px) {\n  .chart-section__container {\n    flex-wrap: wrap;\n    justify-content: space-around;\n  }\n}\n.chart-section__chart {\n  flex: 6.868131868rem 0 0;\n  max-width: 16.48351648rem;\n  margin: 0 1rem 1.5rem;\n  font-size: 1rem;\n}\n", ""]);
-
+webpackContext.id = 32;
 
 /***/ }),
 /* 33 */
@@ -14041,7 +17626,7 @@ if (content.locals) {
 
 exports = module.exports = __webpack_require__(0)(false);
 // Module
-exports.push([module.i, ".donut-chart {\n  position: relative;\n}\n.donut-chart circle {\n  stroke-width: 0.384615384615385rem;\n}\n.donut-chart__label {\n  display: block;\n  position: absolute;\n  top: 46%;\n  left: 50%;\n  font: lighter 2.857142857142857rem 'Lato', Arial, sans-serif;\n  color: #686868;\n  transform: translate(-50%, -50%);\n}\n.donut-chart_type_percentage circle {\n  stroke-width: 0.10989010989011rem;\n}\n", ""]);
+exports.push([module.i, ".about-section {\n  width: 100%;\n  background-color: #e5e5e5;\n}\n.about-section__block {\n  display: flex;\n  width: 100%;\n}\n@media screen and (max-width: 768px) {\n  .about-section__block {\n    flex-wrap: wrap;\n  }\n}\n.about-section__title {\n  text-transform: uppercase;\n  font: bold 1.285714285714286rem/1 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #4f4f4f;\n  letter-spacing: 0.095rem;\n  margin: 2rem 0 1rem;\n}\n.about-section__title:first-of-type {\n  margin-top: 0;\n}\n.about-section__subtitle {\n  margin: 1rem 0 0.5rem;\n  font: bold 1rem 'Lato', Arial, sans-serif;\n  color: #4eb7a8;\n}\n.about-section__text {\n  flex: 32.96703297rem 2 2;\n  max-width: 60.44rem;\n  padding: 2rem;\n}\n.about-section__intro {\n  font-size: 1rem;\n  text-align: justify;\n  color: #4f4f4f;\n}\n.about-section__intro:first-of-type {\n  zoom: 1;\n}\n.about-section__intro:first-of-type:before,\n.about-section__intro:first-of-type:after {\n  content: \"\";\n  display: table;\n}\n.about-section__intro:first-of-type:after {\n  clear: both;\n}\n.about-section__common-paragraph {\n  padding-top: 0.9rem;\n}\n.about-section__video-link {\n  float: right;\n  margin-top: 0.9rem;\n  color: #e75735;\n  text-decoration: underline;\n}\n@media (hover: hover) {\n  .about-section__video-link:hover {\n    text-decoration: none;\n  }\n}\n@media (hover: hover) {\n  .about-section__video-link:active {\n    text-decoration: underline;\n    color: #4f4f4f;\n  }\n}\n@media (hover: none) {\n  .about-section__video-link:active {\n    text-decoration: none;\n  }\n}\n.about-section__right-col {\n  flex: 21.97802198rem 1 1;\n  padding: 1rem;\n  text-align: center;\n  background-color: #fff;\n}\n.about-section__video {\n  position: relative;\n  top: 50%;\n  width: 100%;\n  max-width: 32.96703297rem;\n  margin: 0 auto;\n  transform: translateY(-50%);\n}\n", ""]);
 
 
 /***/ }),
@@ -14072,7 +17657,7 @@ if (content.locals) {
 
 exports = module.exports = __webpack_require__(0)(false);
 // Module
-exports.push([module.i, ".drop-down {\n  text-align: left;\n}\n.drop-down__textarea {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: stretch;\n  background-color: #e5e5e5;\n  border-radius: 0.164835164835165rem;\n  overflow: hidden;\n}\n.drop-down__label {\n  width: 100%;\n  padding: 0.32967033rem 0.934065934rem 0.384615385rem;\n  font: normal 1rem 'SourceSansPro', Arial, sans-serif;\n  letter-spacing: 0.010989011rem;\n  color: #7e7e7e;\n  background: inherit;\n  border: none;\n  -webkit-appearance: none;\n  cursor: pointer;\n}\n.drop-down__button {\n  position: relative;\n  flex: 2.362637363rem 0 0;\n  border: none;\n  background-color: #4eb7a8;\n  cursor: pointer;\n  -webkit-appearance: none;\n  outline: none;\n}\n.drop-down__button::before {\n  content: '';\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  height: 0.714285714rem;\n  width: 0.714285714rem;\n  border: 0.164835165rem solid #fff;\n  border-top: none;\n  border-right: none;\n  transform: translate(-55%, -55%) rotate(-45deg);\n}\n@media (hover: hover) {\n  .drop-down__button:hover,\n  .drop-down__button:focus {\n    background-color: #44a799;\n  }\n}\n@media (hover: none) {\n  .drop-down__button:active {\n    background-color: #44a799;\n  }\n}\n@media (hover: hover) {\n  .drop-down__button:active::before {\n    transform: translate(-55%, -55%) rotate(-45deg) scale(0.9);\n  }\n}\n.drop-down__list {\n  display: none;\n  margin: 0;\n  padding: 0.3rem 0;\n  background-color: #4eb7a8;\n  border-radius: 0 0 0.21978021978022rem 0.21978021978022rem;\n}\n.drop-down_active .drop-down__list {\n  display: block;\n}\n.drop-down__item {\n  padding: 0.32967033rem 0.989010989rem;\n  margin-bottom: 0.21978022rem;\n  font: normal 1rem 'SourceSansPro', Arial, sans-serif;\n  letter-spacing: 0.010989011rem;\n  color: #fff;\n  background-color: inherit;\n  list-style: none;\n  cursor: pointer;\n}\n@media (hover: hover) {\n  .drop-down__item:hover {\n    background-color: #28a290;\n  }\n}\n.drop-down__item:active,\n.drop-down__item:focus {\n  background-color: #28a290;\n}\n", ""]);
+exports.push([module.i, ".arrow-button {\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n  -webkit-tap-highlight-color: transparent;\n  user-select: none;\n  position: relative;\n  display: inline-block;\n  width: 3.626373626373626rem;\n  height: 3.626373626373626rem;\n  font-size: inherit;\n  background-color: #fff;\n  border: 0.21978021978022rem #4eb7a8 solid;\n  border-radius: 50%;\n  cursor: pointer;\n  outline: none;\n}\n.arrow-button_disabled {\n  pointer-events: none;\n  background-color: #e5e5e5;\n  border-color: #e5e5e5;\n}\n.arrow-button_disabled .arrow-button__arrow {\n  background-color: #e5e5e5;\n  border-color: #fff;\n}\n@media (hover: hover) {\n  .arrow-button:hover {\n    background-color: #4eb7a8;\n  }\n  .arrow-button:hover .arrow-button__arrow {\n    background-color: #4eb7a8;\n    border-color: #fff;\n  }\n}\n@media (hover: none) {\n  .arrow-button:active {\n    background-color: #4eb7a8;\n  }\n  .arrow-button:active .arrow-button__arrow {\n    background-color: #4eb7a8;\n    border-color: #fff;\n  }\n}\n.arrow-button:focus,\n.arrow-button_active {\n  background-color: #4eb7a8;\n}\n.arrow-button:focus .arrow-button__arrow,\n.arrow-button_active .arrow-button__arrow {\n  background-color: #4eb7a8;\n  border-color: #fff;\n}\n.arrow-button_direction_right .arrow-button__arrow {\n  right: 50%;\n  transform: translate(30%, -50%) rotate(-45deg);\n}\n.arrow-button_direction_right:active,\n.arrow-button_direction_right.arrow-button_active {\n  transform: translateX(1px);\n}\n.arrow-button_direction_left .arrow-button__arrow {\n  left: 50%;\n  transform: translate(-30%, -50%) rotate(135deg);\n}\n.arrow-button_direction_left:active,\n.arrow-button_direction_left.arrow-button_active {\n  transform: translateX(-1px);\n}\n.arrow-button__arrow {\n  position: absolute;\n  top: 50%;\n  width: 1.263736263736264rem;\n  height: 1.263736263736264rem;\n  border: solid #4eb7a8;\n  border-width: 0 0.274725274725275rem 0.274725274725275rem 0;\n}\n.arrow-button_size_small {\n  width: 1.8rem;\n  height: 1.8rem;\n  border-width: 0.15rem;\n}\n.arrow-button_size_small .arrow-button__arrow {\n  width: 0.65rem;\n  height: 0.65rem;\n  border-width: 0 0.15rem 0.15rem 0;\n}\n", ""]);
 
 
 /***/ }),
@@ -14103,7 +17688,7 @@ if (content.locals) {
 
 exports = module.exports = __webpack_require__(0)(false);
 // Module
-exports.push([module.i, ".email-form__input_type_name {\n  margin-bottom: 0.72rem;\n}\n.email-form__input_type_email {\n  margin-bottom: 0.8rem;\n}\n.email-form__message {\n  padding: 0.384615384615385rem 0.989010989010989rem;\n  font: normal 1rem 'SourceSansPro', Arial, sans-serif;\n  color: #7e7e7e;\n  background: #e5e5e5;\n  border: none;\n  border-radius: 0.164835164835165rem;\n  margin-bottom: 0.5rem;\n  padding: 0.7rem 1rem;\n  width: 100%;\n  resize: none;\n  height: 12.6vw;\n  min-height: 6.318681318681319rem;\n}\n.email-form__button {\n  text-align: right;\n}\n", ""]);
+exports.push([module.i, ".arrow-section__title {\n  text-transform: uppercase;\n  font: bold 1.285714285714286rem/1 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #4f4f4f;\n  letter-spacing: 0.095rem;\n  margin-bottom: 2.5rem;\n  letter-spacing: 0.06rem;\n  word-spacing: 0.3rem;\n}\n.arrow-section__container {\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: space-between;\n  margin: 0 auto;\n}\n.arrow-section__button {\n  margin-bottom: 1.3rem;\n  font-size: 1rem;\n}\n@media screen and (max-width: 672px) {\n  .arrow-section__button:nth-child(2n+2) {\n    order: 2;\n  }\n}\n", ""]);
 
 
 /***/ }),
@@ -14133,15 +17718,24 @@ if (content.locals) {
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
+// Imports
+var getUrl = __webpack_require__(3);
+var ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(41));
 // Module
-exports.push([module.i, ".event-carousel {\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: left;\n  align-items: center;\n  background-color: #c6c6c6;\n}\n.event-carousel__top {\n  width: 100%;\n  padding: 0.5rem 1rem 0;\n  text-align: right;\n}\n.event-carousel__link {\n  text-align: right;\n  flex-shrink: 0;\n  color: #e75735;\n  text-decoration: underline;\n}\n@media (hover: hover) {\n  .event-carousel__link:hover {\n    text-decoration: none;\n  }\n}\n@media (hover: hover) {\n  .event-carousel__link:active {\n    text-decoration: underline;\n  }\n}\n@media (hover: none) {\n  .event-carousel__link:active {\n    text-decoration: none;\n  }\n}\n.event-carousel__cards {\n  width: 100%;\n  padding: 0.549450549rem 0.549450549rem 0 0.549450549rem;\n  font-size: 1rem;\n}\n.event-carousel__card-wrapper {\n  display: flex;\n  align-items: stretch;\n  justify-content: space-between;\n  overflow-x: auto;\n}\n.event-carousel__card {\n  width: 20rem;\n  flex-shrink: 0;\n  overflow: hidden;\n  margin-right: 0.8rem;\n  font-size: 1.2rem;\n}\n.event-carousel__card:last-child {\n  margin-right: 0;\n}\n.event-carousel__calendar-overlay {\n  display: none;\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background-color: rgba(10,10,10,0.3);\n  z-index: 100000;\n  overflow: hidden;\n}\n.event-carousel__calendar-overlay_visible {\n  display: block;\n}\n.event-carousel__calendar {\n  position: fixed;\n  top: 30%;\n  right: 5%;\n  width: 20rem;\n  font-size: 0.7rem;\n  box-shadow: 0 0.6rem 0.8rem -0.4rem rgba(0,0,0,0.2), 0 1.3rem 2rem 0.16rem rgba(0,0,0,0.14), 0 0.5rem 2.5rem 0.4rem rgba(0,0,0,0.12);\n  transition: transform 0.25s ease, opacity 0.25s ease;\n  z-index: 100001;\n}\n", ""]);
+exports.push([module.i, ".banner-section {\n  width: 100%;\n  padding: 7rem 2rem 4rem;\n  text-align: center;\n  color: #fff;\n  background: #4eb7a8 url(" + ___CSS_LOADER_URL___0___ + ") no-repeat;\n  background-size: cover;\n}\n.banner-section__location {\n  width: -webkit-max-content;\n  width: -moz-max-content;\n  width: max-content;\n  margin: 0 auto;\n  padding: 0.3rem 0.8rem;\n  font: lighter 1.6rem 'Lato', Arial, sans-serif;\n  border: 2px solid #80d8cb;\n}\n.banner-section__title {\n  margin: 3rem auto 0;\n  font: 900 6rem 'Lato', Arial, sans-serif;\n  letter-spacing: 0.15rem;\n}\n@media screen and (max-width: 630px) {\n  .banner-section__title {\n    font-size: 4rem;\n  }\n}\n@media screen and (max-width: 375px) {\n  .banner-section__title {\n    font-size: 3.5rem;\n  }\n}\n.banner-section__tagline {\n  max-width: 52.1978022rem;\n  margin: 0.8rem auto 2.5rem;\n  font: lighter 1rem 'Lato', Arial, sans-serif;\n}\n.banner-section__register-button {\n  width: 16.48351648rem;\n  margin: 0 auto;\n  font-size: 1rem;\n}\n", ""]);
 
 
 /***/ }),
 /* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(42);
+module.exports = __webpack_require__.p + "assets/img/banner-bg.jpg";
+
+/***/ }),
+/* 42 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(43);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -14157,84 +17751,53 @@ var update = __webpack_require__(1)(content, options);
 if (content.locals) {
   module.exports = content.locals;
 }
-
-
-/***/ }),
-/* 42 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(false);
-// Module
-exports.push([module.i, ".footer-section {\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: space-between;\n  width: 100%;\n  padding: 2rem 3rem;\n  color: #fff;\n  background-color: #4f4f4f;\n}\n@media screen and (max-width: 600px) {\n  .footer-section {\n    padding: 1.5rem 2rem;\n  }\n}\n.footer-section__header {\n  margin-bottom: 1rem;\n  color: #4eb7a8;\n  font: bold 1.2rem 'Lato', Arial, sans-serif;\n}\n@media screen and (max-width: 600px) {\n  .footer-section__header {\n    font-size: 1rem;\n  }\n}\n.footer-section__contacts {\n  width: 50%;\n  flex-shrink: 0;\n  text-align: left;\n}\n.footer-section__list {\n  margin: 0;\n  padding: 0;\n}\n.footer-section__list-item {\n  margin: 0;\n  padding: 0;\n  list-style: none;\n  font: normal 1rem/1.5 'Lato', Arial, sans-serif;\n}\n@media screen and (max-width: 600px) {\n  .footer-section__list-item {\n    font: normal 0.8rem/1.625 'Lato', Arial, sans-serif;\n  }\n}\n.footer-section__link {\n  color: inherit;\n  overflow-wrap: anywhere;\n}\n@media (hover: hover) {\n  .footer-section__link:hover {\n    text-decoration: none;\n  }\n}\n@media (hover: hover) {\n  .footer-section__link:active {\n    text-decoration: underline;\n  }\n}\n@media (hover: none) {\n  .footer-section__link:active {\n    text-decoration: none;\n  }\n}\n.footer-section__docs {\n  width: 50%;\n  flex-shrink: 0;\n  text-align: right;\n}\n.footer-section__copyright {\n  width: 100%;\n  margin-top: 2rem;\n  text-align: center;\n  font-size: 1rem;\n}\n@media screen and (max-width: 600px) {\n  .footer-section__copyright {\n    font-size: 0.8rem;\n  }\n}\n", ""]);
 
 
 /***/ }),
 /* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(44);
-
-if (typeof content === 'string') {
-  content = [[module.i, content, '']];
-}
-
-var options = {}
-
-options.insert = "head";
-options.singleton = false;
-
-var update = __webpack_require__(1)(content, options);
-
-if (content.locals) {
-  module.exports = content.locals;
-}
+exports = module.exports = __webpack_require__(0)(false);
+// Module
+exports.push([module.i, ".bread-crumbs {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  flex-flow: row nowrap;\n  width: 100%;\n  padding: 0;\n}\n.bread-crumbs__item {\n  flex: 9.835164835rem 1 1;\n  position: relative;\n  z-index: 0;\n  list-style-type: none;\n  transition: all 0.2s ease;\n}\n.bread-crumbs__item:nth-child(1) {\n  flex-basis: 9.340659341rem;\n}\n.bread-crumbs__item:nth-child(2) {\n  flex-basis: 10.16483516rem;\n}\n.bread-crumbs__item:last-child {\n  flex: auto 0 0;\n}\n.bread-crumbs__item:last-child::after {\n  display: none;\n}\n.bread-crumbs__item::after {\n  content: '';\n  display: block;\n  position: absolute;\n  top: 50%;\n  z-index: -1;\n  width: 100%;\n  height: 0.32967032967033rem;\n  background: #e75735;\n  transform: translateY(-50%);\n  transition: all 0.2s ease;\n}\n.bread-crumbs__item_active::after,\n.bread-crumbs__item_active ~ .bread-crumbs__item .bread-crumbs__circle,\n.bread-crumbs__item_active ~ .bread-crumbs__item::after {\n  background-color: #e5e5e5;\n  transition: all 0.2s ease;\n}\n.bread-crumbs__circle {\n  width: 2.032967032967033rem;\n  height: 2.032967032967033rem;\n  padding-top: 0.32967032967033rem;\n  font: bold 1rem 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #fff;\n  border-radius: 50%;\n  background: #e75735;\n  transition: all 0.2s ease;\n}\n", ""]);
 
 
 /***/ }),
 /* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(0)(false);
-// Module
-exports.push([module.i, ".form-section__title {\n  text-transform: uppercase;\n  font: bold 1.285714285714286rem/1 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #4f4f4f;\n  letter-spacing: 0.095rem;\n  margin-bottom: 3.8rem;\n  letter-spacing: 0.08rem;\n}\n.form-section__container {\n  display: flex;\n  justify-content: space-between;\n  flex-flow: row nowrap;\n}\n@media screen and (max-width: 700px) {\n  .form-section__container {\n    flex-wrap: wrap;\n  }\n}\n.form-section__form {\n  flex: 20.43956044rem 2 1;\n  margin: 0 1.8rem 2.5rem 0;\n}\n@media screen and (max-width: 700px) {\n  .form-section__form {\n    flex: 100% 0 0;\n    min-width: 5.494505495rem;\n    margin-right: 0;\n  }\n}\n.form-section__checkboxes {\n  flex: 20.05494505rem 1 2;\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: space-around;\n  align-content: flex-start;\n}\n.form-section__toggles {\n  flex: 100% 0 0;\n  margin-bottom: 2.9rem;\n  text-align: center;\n}\n@media screen and (max-width: 700px) {\n  .form-section__toggles {\n    flex: 10.98901099rem 1 1;\n  }\n}\n.form-section__toggles .form-section__title {\n  margin-bottom: 2.5rem;\n}\n.form-section__toggle {\n  display: inline-block;\n}\n.form-section__toggle:first-of-type {\n  margin-right: 0.7rem;\n}\n.form-section__tickboxes {\n  flex: 100% 0 0;\n  text-align: center;\n}\n@media screen and (max-width: 700px) {\n  .form-section__tickboxes {\n    flex: 10.98901099rem 1 1;\n    margin-bottom: 2.9rem;\n  }\n}\n.form-section__tickboxes .form-section__title {\n  margin-bottom: 2.5rem;\n  word-spacing: 0.2rem;\n}\n.form-section__tickbox {\n  display: inline-block;\n}\n.form-section__tickbox:first-of-type {\n  margin: 0 0.9rem 0 -0.9rem;\n}\n", ""]);
+var content = __webpack_require__(45);
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = "head";
+options.singleton = false;
+
+var update = __webpack_require__(1)(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
 
 
 /***/ }),
 /* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(46);
-
-if (typeof content === 'string') {
-  content = [[module.i, content, '']];
-}
-
-var options = {}
-
-options.insert = "head";
-options.singleton = false;
-
-var update = __webpack_require__(1)(content, options);
-
-if (content.locals) {
-  module.exports = content.locals;
-}
+exports = module.exports = __webpack_require__(0)(false);
+// Module
+exports.push([module.i, ".button-section {\n  width: 100%;\n}\n.button-section__title {\n  text-transform: uppercase;\n  font: bold 1.285714285714286rem/1 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #4f4f4f;\n  letter-spacing: 0.095rem;\n  margin-bottom: 5rem;\n}\n@media screen and (max-width: 672px) {\n  .button-section__title {\n    margin-bottom: 3rem;\n  }\n}\n.button-section__container {\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: space-between;\n}\n.button-section__column {\n  display: flex;\n  flex-flow: column wrap;\n  justify-content: normal;\n  flex: 15.65934065934066rem 1 0;\n  align-content: space-around;\n  height: 12rem;\n  margin: 0 auto;\n}\n@media screen and (min-width: 700px) {\n  .button-section__column:first-child {\n    margin-right: 4%;\n  }\n}\n.button-section__button {\n  margin-bottom: 1.2rem;\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n}\n@media screen and (min-width: 700px) {\n  .button-section__button:nth-child(-n+3) {\n    margin-right: 8%;\n  }\n}\n.button-section__button_size_small {\n  margin-top: 0.769230769230769rem;\n}\n@media screen and (max-width: 672px) {\n  .button-section__button_size_small:nth-last-child(-n+3) {\n    order: -1;\n  }\n}\n", ""]);
 
 
 /***/ }),
 /* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(0)(false);
-// Module
-exports.push([module.i, ".infogram {\n  display: table;\n  width: 100%;\n  padding: 0;\n}\n.infogram__stat-item {\n  display: table-row;\n  margin: 0;\n  padding: 0;\n  list-style: none;\n}\n.infogram__comment {\n  display: table-cell;\n  vertical-align: middle;\n  font: lighter 1rem 'Lato', Arial, sans-serif;\n  color: #4f4f4f;\n  border-left: 1.3rem solid transparent;\n}\n.infogram__comment:first-child {\n  border-left: none;\n  border-right: 0.8rem solid transparent;\n}\n.infogram__topic {\n  font: bold 1.2rem 'Lato', Arial, sans-serif;\n}\n.infogram__topic_color_blue {\n  color: #4eb7a8;\n}\n.infogram__topic_color_red {\n  color: #e75735;\n}\n.infogram__topic_color_gray {\n  color: #747474;\n}\n.infogram__chart {\n  display: table-cell;\n  width: 6.593406593rem;\n  vertical-align: middle;\n  font-size: 0.8rem;\n}\n.infogram__number {\n  display: table-cell;\n  vertical-align: middle;\n  font: bold 3rem 'Lato', Arial, sans-serif;\n  text-align: right;\n  color: #28a290;\n}\n", ""]);
-
-
-/***/ }),
-/* 47 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var content = __webpack_require__(48);
+var content = __webpack_require__(47);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -14250,6 +17813,17 @@ var update = __webpack_require__(1)(content, options);
 if (content.locals) {
   module.exports = content.locals;
 }
+
+
+/***/ }),
+/* 47 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// Imports
+exports.i(__webpack_require__(48), "");
+// Module
+exports.push([module.i, ".button {\n  display: inline-block;\n  width: 8.406593406593407rem;\n  padding: 0.659340659340659rem;\n  overflow: hidden;\n  font: bold 0.857142857142857rem 'Lato', Arial, sans-serif;\n  text-align: center;\n  text-decoration: none;\n  text-transform: uppercase;\n  letter-spacing: 0.035rem;\n  color: #28a290;\n  cursor: pointer;\n  background-color: #fff;\n  border: solid 1px #28a290;\n  border-radius: 0.274725275rem;\n  box-shadow: 0 0.21978022rem 0 0 #28a290;\n  transition: all 0.3s, visibility 0s;\n  outline: none;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n  -webkit-tap-highlight-color: transparent;\n  user-select: none;\n}\n@media (hover: hover) {\n  .button:hover {\n    color: #fff;\n    background-color: #4eb7a8;\n    border-color: #4eb7a8;\n  }\n}\n.button:focus,\n.button:active {\n  color: #fff;\n  background-color: #4eb7a8;\n  border-color: #4eb7a8;\n}\n.button:active {\n  box-shadow: none;\n  transform: translateY(0.21978022rem);\n}\n.button_size_small {\n  width: 5.604395604395605rem;\n  padding: 0.32967032967033rem;\n  font-size: 0.714285714285714rem;\n}\n.button_size_responsive {\n  width: 100%;\n  font-size: inherit;\n}\n.button_color_orange {\n  color: #bf3e1f;\n  background-color: #fff;\n  border-color: #bf3e1f;\n  box-shadow: 0 0.21978022rem 0 0 #bf3e1f;\n}\n@media (hover: hover) {\n  .button_color_orange:hover {\n    color: #fff;\n    background-color: #e75735;\n    border-color: #e75735;\n  }\n}\n.button_color_orange:focus,\n.button_color_orange:active {\n  color: #fff;\n  background-color: #e75735;\n  border-color: #e75735;\n}\n.button_color_reverse {\n  color: #fff;\n  background-color: #4eb7a8;\n  border: 1px solid #4eb7a8;\n  box-shadow: 0 0.21978022rem 0 0 #28a290;\n}\n@media (hover: hover) {\n  .button_color_reverse:hover {\n    box-shadow: none;\n    transform: translateY(0.21978022rem);\n  }\n}\n.button_color_reverse:active,\n.button_color_reverse:focus {\n  box-shadow: none;\n  transform: translateY(0.21978022rem);\n}\n", ""]);
 
 
 /***/ }),
@@ -14258,7 +17832,7 @@ if (content.locals) {
 
 exports = module.exports = __webpack_require__(0)(false);
 // Module
-exports.push([module.i, ".map-section__title {\n  text-transform: uppercase;\n  font: bold 1.285714285714286rem/1 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #4f4f4f;\n  letter-spacing: 0.095rem;\n  margin-bottom: 2.2rem;\n}\n.map-section__container {\n  width: 100%;\n}\n", ""]);
+exports.push([module.i, "/*! legitRipple.js v1.1.0: ripple.min.css by Matthias Vogt (ISC license) */\n.legitRipple,.legitRipple-custom{overflow:hidden}.legitRipple{position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;z-index:0}.legitRipple-ripple{position:absolute;z-index:-1;transform:translate(-50%,-50%);pointer-events:none;border-radius:50%;background:rgba(255,255,255,.4);will-change:transform,width,opacity;transform:translate3d(0,0,0);width:0;opacity:1;transition:width .15s linear,opacity .9s ease-out}.legitRipple-ripple:before{content:\"\";padding-top:100%;display:block}img~.legitRipple-ripple{z-index:auto}.legitRipple-template{display:none}.legitRipple-custom>*{position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;transform:translate(-50%,-50%)}", ""]);
 
 
 /***/ }),
@@ -14289,7 +17863,7 @@ if (content.locals) {
 
 exports = module.exports = __webpack_require__(0)(false);
 // Module
-exports.push([module.i, ".map {\n  width: 100%;\n  border-radius: 0.274725275rem;\n  overflow: hidden;\n  background-color: #e5e5e5;\n}\n.map__container {\n  width: 100%;\n  height: 28.5vw;\n  min-height: 14.50549451rem;\n}\n.map__footer {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-between;\n  align-items: center;\n  padding: 1rem 4.3% 1.3rem;\n  background-color: #e75735;\n}\n@media screen and (max-width: 600px) {\n  .map__footer {\n    flex-wrap: wrap;\n    padding: 0.6rem 4.3%;\n  }\n}\n.map__title {\n  color: #fff;\n  flex: auto 0 0;\n  font: lighter 2.142857142857143rem 'Lato', Arial, sans-serif;\n  margin-right: 4.7%;\n}\n.map__address {\n  flex: auto 0 0;\n  padding-top: 0.3rem;\n  text-align: left;\n}\n@media screen and (max-width: 600px) {\n  .map__address {\n    order: 2;\n    flex-basis: 100%;\n  }\n}\n.map__address-item {\n  color: #fff;\n  text-transform: uppercase;\n  font: bold 0.892857142857143rem 'Lato', Arial, sans-serif;\n}\n.map__address-item_type_street {\n  letter-spacing: 0.045rem;\n}\n.map__address-item_type_city {\n  letter-spacing: 0.03rem;\n}\n.map__icons {\n  padding-top: 0.3rem;\n  flex-grow: 1;\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: flex-end;\n  align-items: center;\n}\n@media screen and (max-width: 600px) {\n  .map__icons {\n    order: 1;\n    flex: 4.395604396rem 1 1;\n  }\n}\n.map__search {\n  font-size: 1rem;\n  position: relative;\n  margin-right: 1.9rem;\n  flex: 1.3rem 0 0;\n  height: 1.3rem;\n  border-radius: 50%;\n  border: 0.10989010989011rem solid #fff;\n  cursor: pointer;\n  outline: none;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n  -webkit-tap-highlight-color: transparent;\n  user-select: none;\n}\n@media screen and (max-width: 600px) {\n  .map__search {\n    margin-right: 1rem;\n  }\n}\n.map__search::before {\n  content: '';\n  position: absolute;\n  top: 50%;\n  left: 0;\n  height: 0.10989010989011rem;\n  width: 1.8rem;\n  border-left: 0.549450549450549rem solid #fff;\n  border-right: 0.549450549450545rem solid #fff;\n  transform: translate(-20%, -50%);\n}\n.map__search::after {\n  content: '';\n  position: absolute;\n  top: 0;\n  left: 50%;\n  height: 1.8rem;\n  width: 0.10989010989011rem;\n  border-top: 0.549450549450549rem solid #fff;\n  border-bottom: 0.549450549450549rem solid #fff;\n  transform: translate(-50%, -20%);\n}\n.map__search:focus {\n  transform: scale(1.1);\n}\n.map__search:focus::before {\n  transform: translate(-18%, -50%) scale(1.1);\n}\n.map__search:focus::after {\n  transform: translate(-50%, -18%) scale(1.1);\n}\n@media (hover: hover) {\n  .map__search:hover {\n    transform: scale(1.1);\n  }\n}\n@media (hover: hover) {\n  .map__search:hover::before {\n    transform: translate(-18%, -50%) scale(1.1);\n  }\n}\n@media (hover: hover) {\n  .map__search:hover::after {\n    transform: translate(-50%, -18%) scale(1.1);\n  }\n}\n@media (hover: hover) {\n  .map__search:active {\n    transform: scale(0.9);\n  }\n}\n@media (hover: none) {\n  .map__search:active {\n    transform: scale(1.1);\n  }\n}\n@media (hover: hover) {\n  .map__search:active::before {\n    transform: translate(-18%, -50%) scale(0.9);\n  }\n}\n@media (hover: none) {\n  .map__search:active::before {\n    transform: translate(-18%, -50%) scale(1.1);\n  }\n}\n@media (hover: hover) {\n  .map__search:active::after {\n    transform: translate(-50%, -18%) scale(0.9);\n  }\n}\n@media (hover: none) {\n  .map__search:active::after {\n    transform: translate(-50%, -18%) scale(1.1);\n  }\n}\n.map__pin {\n  position: relative;\n  align-self: flex-start;\n  flex: 0 0 1.099rem;\n  height: 1.649rem;\n  cursor: pointer;\n  outline: none;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n  -webkit-tap-highlight-color: transparent;\n  user-select: none;\n}\n.map__pin::before {\n  content: '';\n  display: block;\n  position: absolute;\n  top: 0.55rem;\n  left: 0;\n  width: 0.55rem;\n  height: 1.099rem;\n  background: radial-gradient(2.198rem 2.418rem at 1.099rem 0, #fff 50%, transparent 50%);\n  z-index: 1;\n}\n.map__pin::after {\n  content: '';\n  display: block;\n  position: absolute;\n  top: 0.55rem;\n  right: 0;\n  width: 0.55rem;\n  height: 1.099rem;\n  background: radial-gradient(2.198rem 2.418rem at -0.55rem 0, #fff 50%, transparent 50%);\n  z-index: 1;\n}\n@media (hover: hover) {\n  .map__pin:hover {\n    transform: scale(1.1);\n  }\n}\n@media (hover: hover) {\n  .map__pin:active {\n    transform: scale(0.9);\n  }\n}\n@media (hover: none) {\n  .map__pin:active {\n    transform: scale(1.1);\n  }\n}\n.map__pin:focus {\n  transform: scale(1.1);\n}\n.map__pin-circle {\n  position: relative;\n  width: 1.099rem;\n  height: 1.099rem;\n  border: 0.33rem solid #fff;\n  border-radius: 50%;\n  background: #e75735;\n  z-index: 2;\n}\n", ""]);
+exports.push([module.i, ".calendar-section__title {\n  text-transform: uppercase;\n  font: bold 1.285714285714286rem/1 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #4f4f4f;\n  letter-spacing: 0.095rem;\n  margin-bottom: 1.8rem;\n}\n.calendar-section__container {\n  max-width: 20.32967033rem;\n  margin: 0 auto;\n}\n@media screen and (max-width: 768px) {\n  .calendar-section__container {\n    max-width: 17.03296703rem;\n  }\n}\n", ""]);
 
 
 /***/ }),
@@ -14320,7 +17894,7 @@ if (content.locals) {
 
 exports = module.exports = __webpack_require__(0)(false);
 // Module
-exports.push([module.i, ".message-section__title {\n  text-transform: uppercase;\n  font: bold 1.285714285714286rem/1 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #4f4f4f;\n  letter-spacing: 0.095rem;\n  margin-bottom: 1.8rem;\n}\n.message-section__container {\n  max-width: 20.32967033rem;\n  margin: 0 auto;\n}\n@media screen and (max-width: 768px) {\n  .message-section__container {\n    max-width: 17.03296703rem;\n  }\n}\n", ""]);
+exports.push([module.i, ".calendar {\n  background-color: #f2f2f2;\n  border-radius: 0.3rem;\n  overflow: hidden;\n}\n.calendar__day-container {\n  padding: 0.6rem 0 0.3rem;\n  width: 100%;\n  background-color: #e75735;\n  text-align: center;\n}\n.calendar__day-text {\n  font: lighter 5.714285714rem 'Lato', Arial, sans-serif;\n  color: #fff;\n  background: none;\n  border: none;\n}\n@media screen and (max-width: 768px) {\n  .calendar__day-text {\n    font-size: 4.5rem;\n  }\n}\n.calendar .ui-datepicker-header {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 0.7rem 1.1rem;\n  background-color: #d54c2c;\n  color: #fff;\n}\n.calendar .ui-datepicker-prev {\n  order: 1;\n  flex: 0 0 0.8rem;\n  height: 0.8rem;\n  border: 0.15rem #fff solid;\n  border-color: #fff transparent transparent #fff;\n  transform: rotate(-45deg);\n  cursor: pointer;\n}\n.calendar .ui-datepicker-prev:active {\n  transform: translateX(-0.2rem) rotate(-45deg);\n}\n.calendar .ui-datepicker-next {\n  order: 3;\n  flex: 0 0 0.8rem;\n  height: 0.8rem;\n  border: 0.15rem #fff solid;\n  border-color: #fff transparent transparent #fff;\n  transform: rotate(135deg);\n  cursor: pointer;\n}\n.calendar .ui-datepicker-next:active {\n  transform: translateX(0.2rem) rotate(135deg);\n}\n.calendar .ui-datepicker-title {\n  order: 2;\n  font: lighter 1.7rem/1 'Lato', Arial, sans-serif;\n  letter-spacing: -0.04rem;\n}\n.calendar .ui-datepicker-year {\n  display: none;\n}\n.calendar .ui-datepicker-calendar {\n  width: calc(100% + 1px);\n  border-spacing: 0;\n}\n.calendar .ui-datepicker-calendar thead {\n  background-color: #e75735;\n  font: bold 0.642857142857143rem 'Lato', Arial, sans-serif;\n  color: #fff;\n  text-transform: uppercase;\n}\n.calendar .ui-datepicker-calendar th {\n  padding: 0.65rem;\n}\n@media screen and (max-width: 768px) {\n  .calendar .ui-datepicker-calendar th {\n    padding: 0.4rem 0.2rem;\n  }\n}\n.calendar .ui-datepicker-calendar td {\n  padding: 0.5rem 0.25rem;\n  width: 14.28571428571429%;\n  text-align: center;\n  border-right: 1px solid #fff;\n  border-bottom: 1px solid #fff;\n  cursor: pointer;\n}\n@media screen and (max-width: 768px) {\n  .calendar .ui-datepicker-calendar td {\n    padding: 0.3rem;\n  }\n}\n.calendar .ui-datepicker-calendar td:last-child {\n  border-right: none;\n}\n@media (hover: hover) {\n  .calendar .ui-datepicker-calendar td:not(.ui-datepicker-unselectable):hover {\n    background-color: #e75735;\n  }\n  .calendar .ui-datepicker-calendar td:not(.ui-datepicker-unselectable):hover .ui-state-default {\n    color: #fff;\n  }\n}\n.calendar .ui-datepicker-calendar .ui-datepicker-current-day {\n  background-color: #e75735;\n}\n.calendar .ui-datepicker-calendar .ui-datepicker-current-day .ui-state-default,\n.calendar .ui-datepicker-calendar .ui-datepicker-current-day .ui-state-default:focus {\n  color: #fff;\n}\n.calendar .ui-datepicker-calendar .ui-datepicker-days-cell-over {\n  box-shadow: inset 0 0 0 0.10989011rem #e75735;\n}\n.calendar .ui-datepicker-calendar .ui-state-default {\n  font: normal 1.428571429rem 'SourceSansPro', Arial, sans-serif;\n  color: #868686;\n  text-decoration: none;\n  outline: none;\n}\n@media screen and (max-width: 768px) {\n  .calendar .ui-datepicker-calendar .ui-state-default {\n    font-size: 1rem;\n  }\n}\n.calendar .ui-datepicker-calendar .ui-state-default:focus {\n  color: #e75735;\n}\n.calendar .ui-datepicker-calendar .ui-state-disabled {\n  cursor: text;\n}\n.calendar .ui-datepicker-calendar .ui-state-disabled .ui-state-default {\n  color: #fff;\n}\n.calendar__button-pane {\n  padding: 1.2rem 1.37rem;\n  text-align: left;\n  background-color: #e5e5e5;\n}\n@media screen and (max-width: 768px) {\n  .calendar__button-pane {\n    padding: 1rem 1.4rem;\n  }\n}\n.calendar__today-button {\n  font: bold 1rem 'Lato', Arial, sans-serif;\n  text-transform: uppercase;\n  color: #868686;\n  background: none;\n  border: none;\n  cursor: pointer;\n  outline: none;\n}\n@media screen and (max-width: 768px) {\n  .calendar__today-button {\n    font-size: 0.8rem;\n  }\n}\n.calendar__today-button:focus,\n.calendar__today-button:active {\n  color: #e75735;\n}\n", ""]);
 
 
 /***/ }),
@@ -14350,25 +17924,40 @@ if (content.locals) {
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
-// Imports
-var getUrl = __webpack_require__(3);
-var ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(55));
-var ___CSS_LOADER_URL___1___ = getUrl(__webpack_require__(56));
 // Module
-exports.push([module.i, ".messenger {\n  border-radius: 0.3rem;\n  overflow: hidden;\n}\n.messenger__header {\n  position: relative;\n  width: 100%;\n  padding: 1.2rem 1.1rem 2.2rem;\n  text-align: center;\n  background-color: #4eb7a8;\n  box-shadow: inset 0 -2.5rem 0 #46ab9d;\n}\n@media screen and (max-width: 768px) {\n  .messenger__header {\n    box-shadow: inset 0 -2rem 0 #46ab9d;\n  }\n}\n.messenger__name {\n  padding-bottom: 1.9rem;\n  font: lighter 2.428571428571429rem 'Lato', Arial, sans-serif;\n  text-transform: capitalize;\n  word-spacing: -0.02rem;\n  letter-spacing: -0.11rem;\n  color: #fff;\n  word-break: break-word;\n}\n@media screen and (max-width: 768px) {\n  .messenger__name {\n    font-size: 2rem;\n    padding-bottom: 1.3rem;\n  }\n}\n.messenger__photo {\n  position: absolute;\n  left: 50%;\n  top: 100%;\n  width: 6.5rem;\n  height: 6.5rem;\n  border: 0.274725275rem solid #e5e5e5;\n  border-radius: 50%;\n  background-size: cover;\n  background-repeat: no-repeat;\n  transform: translateX(-54%) translateY(-50%);\n  z-index: 2;\n}\n@media screen and (max-width: 768px) {\n  .messenger__photo {\n    width: 5.5rem;\n    height: 5.5rem;\n  }\n}\n.messenger__container {\n  padding: 1.5rem 1.6rem 1.9rem;\n  background-color: #f2f2f2;\n  overflow-y: hidden;\n}\n@media screen and (max-width: 768px) {\n  .messenger__container {\n    padding: 1.2rem 1.2rem 1.6rem;\n  }\n}\n.messenger__icons {\n  display: flex;\n  justify-content: space-between;\n  padding: 0 0.3rem 0 0.1rem;\n}\n.messenger__bubble-icon {\n  width: 1.55rem;\n  height: 1.55rem;\n  background: url(" + ___CSS_LOADER_URL___0___ + ") no-repeat;\n  cursor: pointer;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n  -webkit-tap-highlight-color: transparent;\n  user-select: none;\n}\n@media (hover: hover) {\n  .messenger__bubble-icon:hover {\n    transform: scale(1.1);\n  }\n}\n@media (hover: hover) {\n  .messenger__bubble-icon:active {\n    transform: scale(0.9);\n  }\n}\n@media (hover: none) {\n  .messenger__bubble-icon:active {\n    transform: scale(1.1);\n  }\n}\n.messenger__camera-icon {\n  width: 1.8rem;\n  height: 1.41rem;\n  background: url(" + ___CSS_LOADER_URL___1___ + ") no-repeat;\n  cursor: pointer;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n  -webkit-tap-highlight-color: transparent;\n  user-select: none;\n}\n@media (hover: hover) {\n  .messenger__camera-icon:hover {\n    transform: scale(1.1);\n  }\n}\n@media (hover: hover) {\n  .messenger__camera-icon:active {\n    transform: scale(0.9);\n  }\n}\n@media (hover: none) {\n  .messenger__camera-icon:active {\n    transform: scale(1.1);\n  }\n}\n.messenger__message {\n  font: bold 0.892857142857143rem 'Lato', Arial, sans-serif;\n  text-align: left;\n  letter-spacing: 0.04rem;\n  color: #8e8d8d;\n}\n@media screen and (max-width: 768px) {\n  .messenger__message {\n    font-size: 0.8rem;\n  }\n}\n.messenger__message_type_inbox {\n  position: relative;\n  margin: 1.4rem auto 0;\n  padding: 1.3rem 1.2rem 1.5rem;\n  width: 100%;\n  background-color: #fff;\n  border-radius: 0.549450549rem;\n  overflow-wrap: break-word;\n}\n@media screen and (max-width: 768px) {\n  .messenger__message_type_inbox {\n    padding: 1rem;\n    margin-top: 1rem;\n  }\n}\n.messenger__message_type_inbox::before {\n  content: '';\n  width: 0.72rem;\n  height: 0.72rem;\n  display: block;\n  position: absolute;\n  top: 0;\n  left: 50%;\n  background-color: #fff;\n  border-radius: 0.21978022rem;\n  transform: translate(-90%, -40%) rotate(45deg);\n}\n.messenger__message_type_outbox {\n  width: 98%;\n  padding: 1.12rem 1rem 1.56rem;\n  margin: 1.5rem auto 1rem;\n  background-color: #e5e5e5;\n  border: none;\n  border-radius: 0.274725275rem;\n  box-shadow: 0 0 0 0.21978022rem #fff;\n  resize: none;\n  outline: none;\n}\n@media screen and (max-width: 768px) {\n  .messenger__message_type_outbox {\n    padding: 1rem;\n    margin-top: 1rem;\n  }\n}\n.messenger__text {\n  overflow-y: auto;\n}\n.messenger__button {\n  width: 100%;\n  font-size: 0.85rem;\n}\n", ""]);
+exports.push([module.i, ".chart-section__title {\n  text-transform: uppercase;\n  font: bold 1.285714285714286rem/1 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #4f4f4f;\n  letter-spacing: 0.095rem;\n  margin-bottom: 1.7rem;\n  letter-spacing: 0.06rem;\n}\n.chart-section__container {\n  display: flex;\n  justify-content: space-between;\n  flex-flow: row nowrap;\n}\n@media screen and (max-width: 900px) {\n  .chart-section__container {\n    flex-wrap: wrap;\n    justify-content: space-around;\n  }\n}\n.chart-section__chart {\n  flex: 6.868131868rem 0 0;\n  max-width: 16.48351648rem;\n  margin: 0 1rem 1.5rem;\n  font-size: 1rem;\n}\n", ""]);
 
 
 /***/ }),
 /* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/img/bubble-icon.svg";
+var content = __webpack_require__(56);
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = "head";
+options.singleton = false;
+
+var update = __webpack_require__(1)(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
+
 
 /***/ }),
 /* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/img/camera-icon.svg";
+exports = module.exports = __webpack_require__(0)(false);
+// Module
+exports.push([module.i, "", ""]);
+
 
 /***/ }),
 /* 57 */
@@ -14398,7 +17987,7 @@ if (content.locals) {
 
 exports = module.exports = __webpack_require__(0)(false);
 // Module
-exports.push([module.i, ".navigation-bar {\n  position: fixed;\n  width: 100%;\n  top: 0;\n  left: 0;\n  background-color: #fff;\n  z-index: 200;\n}\n@media screen and (max-width: 425px) {\n  .navigation-bar {\n    height: 3.296703297rem;\n    background-color: transparent;\n  }\n}\n.navigation-bar__menu {\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: space-around;\n  width: 100%;\n  margin: 0;\n  padding: 1rem 1rem 0;\n  transition: all 1s cubic-bezier(0.325, 1, 0.22, 1);\n}\n@media screen and (max-width: 425px) {\n  .navigation-bar__menu {\n    overflow: hidden;\n    flex-flow: column wrap;\n    justify-content: flex-start;\n    height: 0rem;\n    padding: 0;\n  }\n}\n.navigation-bar__item {\n  margin: 0 0.5rem 1rem;\n  padding: 0;\n  flex: auto 1 1;\n  text-align: center;\n  list-style: none;\n}\n.navigation-bar__link {\n  font: lighter 1rem 'Lato', Arial, sans-serif;\n  text-decoration: none;\n  color: #4f4f4f;\n  text-transform: uppercase;\n}\n@media (hover: hover) {\n  .navigation-bar__link:hover {\n    text-decoration: underline;\n  }\n}\n@media (hover: hover) {\n  .navigation-bar__link:active {\n    text-decoration: none;\n  }\n}\n@media (hover: none) {\n  .navigation-bar__link:active {\n    text-decoration: underline;\n  }\n}\n.navigation-bar__icon {\n  display: none;\n}\n@media screen and (max-width: 425px) {\n  .navigation-bar__icon {\n    display: block;\n    position: absolute;\n    top: 1.098901099rem;\n    left: 0.714285714rem;\n    height: 1.483516484rem;\n    width: 1.483516484rem;\n    cursor: pointer;\n    text-indent: -9999px;\n    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);\n    border: none;\n    color: transparent;\n    text-shadow: 0 0 0 #808080;\n    text-align: center;\n  }\n  .navigation-bar__icon:focus {\n    outline: none;\n  }\n}\n.navigation-bar__icon-line {\n  position: absolute;\n  display: block;\n  background: #28a290;\n  width: 1.483516484rem;\n  height: 0.2rem;\n  border-radius: 0.2rem;\n  left: 0;\n  text-indent: 0;\n  transition: all 0.6s cubic-bezier(0.5, 0.1, 0, 1.2);\n}\n.navigation-bar__icon-line:first-child {\n  top: 0;\n}\n.navigation-bar__icon-line:nth-child(2) {\n  top: 0.4rem;\n}\n.navigation-bar__icon-line:nth-child(3) {\n  top: 0.8rem;\n}\n.navigation-bar__toggle {\n  display: none;\n  visibility: hidden;\n}\n.navigation-bar__toggle:checked ~ .navigation-bar__menu {\n  height: auto;\n  padding: 1rem 1rem 0;\n  background-color: #e5e5e5;\n}\n.navigation-bar__toggle:checked ~ .navigation-bar__menu .navigation-bar__item {\n  height: auto;\n  max-height: 30rem;\n  transition: all 2s cubic-bezier(0.5, 1, 0.22, 1);\n}\n.navigation-bar__toggle:checked ~ .navigation-bar__icon .navigation-bar__icon-line:first-child {\n  top: 0;\n  width: 1.483516484rem;\n  transform: translateX(-0.43956044rem) rotate(-45deg) translateY(0.659340659rem);\n}\n.navigation-bar__toggle:checked ~ .navigation-bar__icon .navigation-bar__icon-line:nth-child(2) {\n  opacity: 0;\n}\n.navigation-bar__toggle:checked ~ .navigation-bar__icon .navigation-bar__icon-line:nth-child(3) {\n  top: 0.769230769rem;\n  width: 1.483516484rem;\n  transform: translateX(-0.274725275rem) rotate(45deg) translateY(-0.43956044rem);\n}\n", ""]);
+exports.push([module.i, ".donut-chart {\n  position: relative;\n}\n.donut-chart__chart-container {\n  fill: transparent;\n}\n.donut-chart__ring {\n  fill: transparent;\n  stroke: #e5e5e5;\n}\n.donut-chart_type_percentage .donut-chart__ring {\n  stroke-width: 0.10989010989011rem;\n}\n.donut-chart_type_percentage .donut-chart__segment {\n  stroke: #e75735;\n  stroke-width: 0.10989010989011rem;\n}\n.donut-chart_type_percentage .donut-chart__label {\n  display: block;\n  position: absolute;\n  top: 46%;\n  left: 50%;\n  font: lighter 2.857142857142857rem 'Lato', Arial, sans-serif;\n  color: #686868;\n  transform: translate(-50%, -50%);\n}\n.donut-chart_type_pie .donut-chart__ring {\n  stroke-width: 0.384615384615385rem;\n}\n.donut-chart_type_pie .donut-chart__segment {\n  stroke-width: 0.384615384615385rem;\n}\n.donut-chart_type_pie .donut-chart__segment:nth-child(1) {\n  stroke: #747474;\n}\n.donut-chart_type_pie .donut-chart__segment:nth-child(2) {\n  stroke: #e75735;\n}\n.donut-chart_type_pie .donut-chart__segment:nth-child(3) {\n  stroke: #4eb7a8;\n}\n.donut-chart_type_pie .donut-chart__segment:nth-child(4) {\n  stroke: rgba(116,116,116,0.8);\n}\n.donut-chart_type_pie .donut-chart__segment:nth-child(5) {\n  stroke: rgba(231,87,53,0.8);\n}\n.donut-chart_type_pie .donut-chart__segment:nth-child(6) {\n  stroke: rgba(78,183,168,0.8);\n}\n.donut-chart_type_pie .donut-chart__segment:nth-child(7) {\n  stroke: rgba(116,116,116,0.6);\n}\n.donut-chart_type_pie .donut-chart__segment:nth-child(8) {\n  stroke: rgba(231,87,53,0.6);\n}\n.donut-chart_type_pie .donut-chart__segment:nth-child(9) {\n  stroke: rgba(78,183,168,0.6);\n}\n.donut-chart_type_pie .donut-chart__segment:nth-child(10) {\n  stroke: rgba(116,116,116,0.4);\n}\n.donut-chart_color_transparent .donut-chart__ring {\n  stroke: transparent;\n}\n", ""]);
 
 
 /***/ }),
@@ -14429,7 +18018,7 @@ if (content.locals) {
 
 exports = module.exports = __webpack_require__(0)(false);
 // Module
-exports.push([module.i, ".news-card {\n  display: flex;\n  align-items: stretch;\n  width: 100%;\n  height: 100%;\n  text-align: left;\n  background-color: #e75735;\n  border-radius: 0.274725274725275rem;\n  overflow: hidden;\n}\n.news-card__image {\n  flex: 6.758241758rem 0 2;\n  min-width: 4.395604396rem;\n  background: #e75735 no-repeat 0rem 0rem;\n  background-clip: border-box;\n  background-size: cover;\n}\n.news-card__content {\n  display: flex;\n  flex-flow: column nowrap;\n  justify-content: space-between;\n  flex: 13.73626374rem 2 1;\n  padding: 1.4rem 1.3rem 2.5rem 1.6rem;\n  overflow: hidden;\n}\n.news-card__title {\n  flex: auto 0 0;\n  margin-bottom: 0.7rem;\n  font: lighter 2rem/1 'Lato', Arial, sans-serif;\n  color: #fff;\n}\n.news-card__date {\n  flex: auto 0 0;\n  margin-bottom: 1rem;\n  font: bold 0.8rem 'Lato', Arial, sans-serif;\n  letter-spacing: 0.05rem;\n  color: #fff;\n  text-transform: uppercase;\n}\n.news-card__text {\n  flex: auto 1 0;\n  font: normal 0.8rem 'Lato', Arial, sans-serif;\n  color: #fff;\n  letter-spacing: 0.036rem;\n}\n.news-card_type_event {\n  background-color: #4eb7a8;\n}\n.news-card_type_event .news-card__image {\n  background-color: #4eb7a8;\n}\n.news-card_type_event .news-card__content {\n  position: relative;\n  padding: 1.4rem 1.5rem 1.6rem;\n}\n.news-card_type_event .news-card__date {\n  margin-bottom: 1.4rem;\n}\n.news-card_type_event .news-card__day {\n  font: lighter 5.1rem/4.1rem 'Lato', Arial, sans-serif;\n  letter-spacing: -0.2rem;\n  color: #fff;\n}\n.news-card_type_event .news-card__month {\n  font: lighter 2.1rem 'Lato', Arial, sans-serif;\n  color: #fff;\n  text-transform: capitalize;\n  margin-left: 0.95rem;\n}\n.news-card_type_event .news-card__title {\n  margin-bottom: 0.35rem;\n  font: bold 0.9rem 'Lato', Arial, sans-serif;\n  color: #fff;\n  text-transform: uppercase;\n  letter-spacing: 0.03rem;\n}\n.news-card_type_event .news-card__text {\n  min-height: 2.48rem;\n  margin-bottom: 0.8rem;\n  color: #fff;\n  font-weight: normal;\n}\n.news-card_type_event .news-card__button {\n  width: 87%;\n  font-size: 0.714285714285714rem;\n  flex: auto 0 0;\n  margin: 0 auto;\n}\n.news-card_size_compact .news-card__content {\n  padding: 1.3rem 1.3rem;\n}\n.news-card_size_compact .news-card__title {\n  font-size: 1.2rem;\n}\n.news-card_size_compact.news-card_type_event .news-card__content {\n  padding: 1.1rem 1.2rem 0.6rem;\n}\n.news-card_size_compact.news-card_type_event .news-card__date {\n  margin-bottom: 1rem;\n}\n.news-card_size_compact.news-card_type_event .news-card__title {\n  font-size: 0.8rem;\n  line-height: 1.2;\n}\n.news-card_size_compact.news-card_type_event .news-card__text {\n  margin-bottom: 0.7rem;\n}\n.news-card_color_reverted {\n  background-color: #4eb7a8;\n}\n.news-card_color_reverted.news-card_type_event {\n  background-color: #e75735;\n}\n.news-card_with-scrollbar .news-card__text {\n  max-height: 6em;\n  overflow-y: auto;\n}\n", ""]);
+exports.push([module.i, ".drop-down {\n  text-align: left;\n}\n.drop-down__textarea {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: stretch;\n  background-color: #e5e5e5;\n  border-radius: 0.164835164835165rem;\n  overflow: hidden;\n}\n.drop-down__label {\n  width: 100%;\n  padding: 0.32967033rem 0.934065934rem 0.384615385rem;\n  font: normal 1rem 'SourceSansPro', Arial, sans-serif;\n  letter-spacing: 0.010989011rem;\n  color: #7e7e7e;\n  background: inherit;\n  border: none;\n  -webkit-appearance: none;\n  cursor: pointer;\n}\n.drop-down__button {\n  position: relative;\n  flex: 2.362637363rem 0 0;\n  border: none;\n  background-color: #4eb7a8;\n  cursor: pointer;\n  -webkit-appearance: none;\n  outline: none;\n}\n.drop-down__button::before {\n  content: '';\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  height: 0.714285714rem;\n  width: 0.714285714rem;\n  border: 0.164835165rem solid #fff;\n  border-top: none;\n  border-right: none;\n  transform: translate(-55%, -55%) rotate(-45deg);\n}\n@media (hover: hover) {\n  .drop-down__button:hover,\n  .drop-down__button:focus {\n    background-color: #44a799;\n  }\n}\n@media (hover: none) {\n  .drop-down__button:active {\n    background-color: #44a799;\n  }\n}\n@media (hover: hover) {\n  .drop-down__button:active::before {\n    transform: translate(-55%, -55%) rotate(-45deg) scale(0.9);\n  }\n}\n.drop-down__list {\n  display: none;\n  margin: 0;\n  padding: 0.3rem 0;\n  background-color: #4eb7a8;\n  border-radius: 0 0 0.21978021978022rem 0.21978021978022rem;\n}\n.drop-down_active .drop-down__list {\n  display: block;\n}\n.drop-down__item {\n  padding: 0.32967033rem 0.989010989rem;\n  margin-bottom: 0.21978022rem;\n  font: normal 1rem 'SourceSansPro', Arial, sans-serif;\n  letter-spacing: 0.010989011rem;\n  color: #fff;\n  background-color: inherit;\n  list-style: none;\n  cursor: pointer;\n}\n@media (hover: hover) {\n  .drop-down__item:hover {\n    background-color: #28a290;\n  }\n}\n.drop-down__item:active,\n.drop-down__item:focus {\n  background-color: #28a290;\n}\n", ""]);
 
 
 /***/ }),
@@ -14460,7 +18049,7 @@ if (content.locals) {
 
 exports = module.exports = __webpack_require__(0)(false);
 // Module
-exports.push([module.i, ".news-section__title {\n  text-transform: uppercase;\n  font: bold 1.285714285714286rem/1 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #4f4f4f;\n  letter-spacing: 0.095rem;\n  margin-bottom: 2.4rem;\n}\n.news-section__container {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-around;\n  width: 100%;\n}\n@media screen and (max-width: 900px) {\n  .news-section__container {\n    flex-wrap: wrap;\n  }\n}\n.news-section__news-card {\n  flex: 20.41120879rem 0 1;\n}\n.news-section__news-card:first-child {\n  margin-right: 3%;\n}\n@media screen and (max-width: 900px) {\n  .news-section__news-card:first-child {\n    margin: 0 0 1.3rem 0;\n  }\n}\n", ""]);
+exports.push([module.i, ".email-form__input_type_name {\n  margin-bottom: 0.72rem;\n}\n.email-form__input_type_email {\n  margin-bottom: 0.8rem;\n}\n.email-form__message {\n  padding: 0.384615384615385rem 0.989010989010989rem;\n  font: normal 1rem 'SourceSansPro', Arial, sans-serif;\n  color: #7e7e7e;\n  background: #e5e5e5;\n  border: none;\n  border-radius: 0.164835164835165rem;\n  margin-bottom: 0.5rem;\n  padding: 0.7rem 1rem;\n  width: 100%;\n  resize: none;\n  height: 12.6vw;\n  min-height: 6.318681318681319rem;\n}\n.email-form__button {\n  text-align: right;\n}\n", ""]);
 
 
 /***/ }),
@@ -14491,17 +18080,16 @@ if (content.locals) {
 
 exports = module.exports = __webpack_require__(0)(false);
 // Imports
-var getUrl = __webpack_require__(3);
-var ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(65));
+exports.i(__webpack_require__(6), "");
 // Module
-exports.push([module.i, ".online-help {\n  position: fixed;\n  bottom: 1.098901099rem;\n  right: 1.098901099rem;\n  z-index: 5000;\n}\n.online-help__messenger {\n  visibility: hidden;\n  position: absolute;\n  bottom: 3.296703297rem;\n  right: 0;\n  width: 17.58241758rem;\n  box-shadow: 0 0 1.098901099rem 0 rgba(0,0,0,0.3);\n}\n.online-help__messenger_visible {\n  visibility: visible;\n}\n.online-help__button {\n  position: absolute;\n  bottom: 0;\n  right: 0;\n  width: 2.747252747rem;\n  height: 2.747252747rem;\n  background: #e75735 url(" + ___CSS_LOADER_URL___0___ + ") center no-repeat;\n  background-size: 1.373626374rem;\n  border: none;\n  border-radius: 0.384615385rem;\n  box-shadow: 0 0 0.549450549rem 0 rgba(0,0,0,0.4);\n  z-index: 10;\n  outline: none;\n  cursor: pointer;\n}\n@media (hover: hover) {\n  .online-help__button:hover {\n    background-color: darker(#e5e5e5, 50%);\n  }\n}\n@media (hover: none) {\n  .online-help__button:active {\n    background-color: darker(#e5e5e5, 50%);\n  }\n}\n", ""]);
+exports.push([module.i, ".event-carousel {\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: left;\n  align-items: center;\n  background-color: #c6c6c6;\n}\n.event-carousel__top {\n  width: 100%;\n  padding: 0.5rem 1rem 0;\n  text-align: right;\n}\n.event-carousel__link {\n  text-align: right;\n  flex-shrink: 0;\n  color: #e75735;\n  text-decoration: underline;\n}\n@media (hover: hover) {\n  .event-carousel__link:hover {\n    text-decoration: none;\n  }\n}\n@media (hover: hover) {\n  .event-carousel__link:active {\n    text-decoration: underline;\n  }\n}\n@media (hover: none) {\n  .event-carousel__link:active {\n    text-decoration: none;\n  }\n}\n.event-carousel__cards {\n  width: 100%;\n  padding: 0.549450549rem 0.549450549rem 0 0.549450549rem;\n  font-size: 1rem;\n}\n.event-carousel__card-wrapper {\n  display: flex;\n  align-items: stretch;\n  justify-content: space-between;\n  overflow-x: auto;\n}\n.event-carousel__card {\n  width: 20rem;\n  flex-shrink: 0;\n  overflow: hidden;\n  margin-right: 0.8rem;\n  font-size: 1.2rem;\n}\n.event-carousel__card:last-child {\n  margin-right: 0;\n}\n.event-carousel__calendar-overlay {\n  display: none;\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background-color: rgba(10,10,10,0.3);\n  z-index: 100000;\n  overflow: hidden;\n}\n.event-carousel__calendar-overlay_visible {\n  display: block;\n}\n.event-carousel__calendar {\n  position: fixed;\n  top: 30%;\n  right: 5%;\n  width: 20rem;\n  font-size: 0.7rem;\n  box-shadow: 0 0.6rem 0.8rem -0.4rem rgba(0,0,0,0.2), 0 1.3rem 2rem 0.16rem rgba(0,0,0,0.14), 0 0.5rem 2.5rem 0.4rem rgba(0,0,0,0.12);\n  transition: transform 0.25s ease, opacity 0.25s ease;\n  z-index: 100001;\n}\n.event-carousel .mCS-dark-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {\n  background-color: rgba(0,0,0,0.3);\n}\n.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {\n  background-color: rgba(0,0,0,0.5);\n}\n.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar .mCS-dark-thin.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {\n  background-color: rgba(0,0,0,0.7);\n}\n", ""]);
 
 
 /***/ }),
 /* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/img/bubble-icon_white.svg";
+module.exports = __webpack_require__.p + "assets/img/mCSB_buttons.png";
 
 /***/ }),
 /* 66 */
@@ -14531,7 +18119,7 @@ if (content.locals) {
 
 exports = module.exports = __webpack_require__(0)(false);
 // Module
-exports.push([module.i, ".pass-info {\n  display: flex;\n  flex-flow: column nowrap;\n  height: 100%;\n  padding: 0.5rem;\n  text-align: center;\n}\n@media screen and (max-width: 425px) {\n  .pass-info {\n    padding: 0.25rem;\n  }\n}\n.pass-info__header {\n  margin-bottom: 1rem;\n  padding-bottom: 1rem;\n  border-bottom: 0.10989011rem solid #e75735;\n}\n@media screen and (max-width: 425px) {\n  .pass-info__header {\n    margin-bottom: 0.8rem;\n    padding-bottom: 0.8rem;\n  }\n}\n.pass-info__name {\n  text-transform: capitalize;\n  color: #e75735;\n  font: bold 2.5rem 'Lato', Arial, sans-serif;\n}\n@media screen and (max-width: 768px) {\n  .pass-info__name {\n    font-size: 1.8rem;\n  }\n}\n@media screen and (max-width: 600px) {\n  .pass-info__name {\n    font-size: 1.5rem;\n  }\n}\n@media screen and (max-width: 425px) {\n  .pass-info__name {\n    font-size: 1rem;\n  }\n}\n.pass-info__price {\n  margin-bottom: 1rem;\n  font: lighter 2rem 'Lato', Arial, sans-serif;\n  color: #4f4f4f;\n}\n@media screen and (max-width: 768px) {\n  .pass-info__price {\n    font-size: 1.7rem;\n  }\n}\n@media screen and (max-width: 600px) {\n  .pass-info__price {\n    font-size: 1.3rem;\n  }\n}\n@media screen and (max-width: 425px) {\n  .pass-info__price {\n    font-size: 1rem;\n    margin-bottom: 0.8rem;\n  }\n}\n.pass-info__text {\n  flex-grow: 1;\n  margin-bottom: 1rem;\n  font: lighter 1rem 'Lato', Arial, sans-serif;\n  color: #4f4f4f;\n}\n", ""]);
+exports.push([module.i, ".footer-section {\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: space-between;\n  width: 100%;\n  padding: 2rem 3rem;\n  color: #fff;\n  background-color: #4f4f4f;\n}\n@media screen and (max-width: 600px) {\n  .footer-section {\n    padding: 1.5rem 2rem;\n  }\n}\n.footer-section__header {\n  margin-bottom: 1rem;\n  color: #4eb7a8;\n  font: bold 1.2rem 'Lato', Arial, sans-serif;\n}\n@media screen and (max-width: 600px) {\n  .footer-section__header {\n    font-size: 1rem;\n  }\n}\n.footer-section__contacts {\n  width: 50%;\n  flex-shrink: 0;\n  text-align: left;\n}\n.footer-section__list {\n  margin: 0;\n  padding: 0;\n}\n.footer-section__list-item {\n  margin: 0;\n  padding: 0;\n  list-style: none;\n  font: normal 1rem/1.5 'Lato', Arial, sans-serif;\n}\n@media screen and (max-width: 600px) {\n  .footer-section__list-item {\n    font: normal 0.8rem/1.625 'Lato', Arial, sans-serif;\n  }\n}\n.footer-section__link {\n  color: inherit;\n  overflow-wrap: anywhere;\n}\n@media (hover: hover) {\n  .footer-section__link:hover {\n    text-decoration: none;\n  }\n}\n@media (hover: hover) {\n  .footer-section__link:active {\n    text-decoration: underline;\n  }\n}\n@media (hover: none) {\n  .footer-section__link:active {\n    text-decoration: none;\n  }\n}\n.footer-section__docs {\n  width: 50%;\n  flex-shrink: 0;\n  text-align: right;\n}\n.footer-section__copyright {\n  width: 100%;\n  margin-top: 2rem;\n  text-align: center;\n  font-size: 1rem;\n}\n@media screen and (max-width: 600px) {\n  .footer-section__copyright {\n    font-size: 0.8rem;\n  }\n}\n", ""]);
 
 
 /***/ }),
@@ -14562,7 +18150,7 @@ if (content.locals) {
 
 exports = module.exports = __webpack_require__(0)(false);
 // Module
-exports.push([module.i, ".pass-selector__title {\n  text-transform: uppercase;\n  font: bold 1.285714285714286rem/1 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #4f4f4f;\n  letter-spacing: 0.095rem;\n  margin-bottom: 1rem;\n}\n.pass-selector__options {\n  display: flex;\n  align-items: stretch;\n  font-size: 0;\n}\n.pass-selector__pass-info {\n  width: 33.33333%;\n}\n", ""]);
+exports.push([module.i, ".form-section__title {\n  text-transform: uppercase;\n  font: bold 1.285714285714286rem/1 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #4f4f4f;\n  letter-spacing: 0.095rem;\n  margin-bottom: 3.6rem;\n  letter-spacing: 0.08rem;\n}\n.form-section__container {\n  display: flex;\n  justify-content: space-between;\n  flex-flow: row nowrap;\n}\n@media screen and (max-width: 700px) {\n  .form-section__container {\n    flex-wrap: wrap;\n  }\n}\n.form-section__form {\n  flex: 20.43956044rem 2 1;\n  margin: 0 1.8rem 2.7rem 0;\n}\n@media screen and (max-width: 700px) {\n  .form-section__form {\n    flex: 100% 0 0;\n    min-width: 5.494505495rem;\n    margin-right: 0;\n  }\n}\n.form-section__checkboxes {\n  flex: 20.05494505rem 1 2;\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: space-around;\n  align-content: flex-start;\n}\n.form-section__toggles {\n  flex: 100% 0 0;\n  margin-bottom: 2.6rem;\n  text-align: center;\n}\n@media screen and (max-width: 700px) {\n  .form-section__toggles {\n    flex: 10.98901099rem 1 1;\n  }\n}\n.form-section__toggles .form-section__title {\n  margin-bottom: 2.3rem;\n}\n.form-section__toggle {\n  display: inline-block;\n}\n.form-section__toggle:first-of-type {\n  margin-right: 0.7rem;\n}\n.form-section__tickboxes {\n  flex: 100% 0 0;\n  text-align: center;\n}\n@media screen and (max-width: 700px) {\n  .form-section__tickboxes {\n    flex: 10.98901099rem 1 1;\n    margin-bottom: 2.9rem;\n  }\n}\n.form-section__tickboxes .form-section__title {\n  margin-bottom: 2.5rem;\n  word-spacing: 0.2rem;\n}\n.form-section__tickbox {\n  display: inline-block;\n}\n.form-section__tickbox:first-of-type {\n  margin: 0 0.9rem 0 -0.9rem;\n}\n", ""]);
 
 
 /***/ }),
@@ -14593,7 +18181,7 @@ if (content.locals) {
 
 exports = module.exports = __webpack_require__(0)(false);
 // Module
-exports.push([module.i, ".policy-tickbox {\n  display: flex;\n  align-items: center;\n}\n.policy-tickbox__checkbox {\n  flex: auto 0 0;\n}\n.policy-tickbox__text {\n  flex: auto 1 1;\n  font-size: 1rem;\n  margin-left: 1rem;\n}\n", ""]);
+exports.push([module.i, ".infogram {\n  display: table;\n  width: 100%;\n  padding: 0;\n}\n.infogram__stat-item {\n  display: table-row;\n  margin: 0;\n  padding: 0;\n  list-style: none;\n}\n.infogram__comment {\n  display: table-cell;\n  vertical-align: middle;\n  font: lighter 1rem 'Lato', Arial, sans-serif;\n  color: #4f4f4f;\n  border-left: 1.3rem solid transparent;\n}\n.infogram__comment:first-child {\n  border-left: none;\n  border-right: 0.8rem solid transparent;\n}\n.infogram__topic {\n  font: bold 1.2rem 'Lato', Arial, sans-serif;\n}\n.infogram__topic_color_red {\n  color: #e75735;\n}\n.infogram__topic_color_blue {\n  color: #4eb7a8;\n}\n.infogram__topic_color_gray {\n  color: #747474;\n}\n.infogram__chart {\n  display: table-cell;\n  width: 6.593406593rem;\n  vertical-align: middle;\n  font-size: 0.8rem;\n}\n.infogram__number {\n  display: table-cell;\n  vertical-align: middle;\n  font: bold 3rem 'Lato', Arial, sans-serif;\n  text-align: right;\n  color: #28a290;\n}\n", ""]);
 
 
 /***/ }),
@@ -14623,38 +18211,15 @@ if (content.locals) {
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
-// Imports
-var getUrl = __webpack_require__(3);
-var ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(74));
-var ___CSS_LOADER_URL___1___ = getUrl(__webpack_require__(75));
-var ___CSS_LOADER_URL___2___ = getUrl(__webpack_require__(76));
 // Module
-exports.push([module.i, ".profile-card {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.profile-card__photo {\n  display: inline-block;\n  flex: 0 0 6.648351648351648rem;\n  height: 6.648351648351648rem;\n  margin-right: 0.934065934065934rem;\n  border-radius: 50%;\n  border: 0.384615384615385rem solid #e5e5e5;\n  background: #e5e5e5 no-repeat;\n  background-size: cover;\n}\n.profile-card__box {\n  position: relative;\n  flex: 1 1 11.64835164835165rem;\n  padding: 0.714285714285714rem;\n  border-radius: 0.549450549450549rem;\n  text-align: center;\n  background-color: #e5e5e5;\n  z-index: 1;\n}\n.profile-card__box::before {\n  content: '';\n  position: absolute;\n  top: 50%;\n  left: 0;\n  width: 1.098901098901099rem;\n  height: 1.098901098901099rem;\n  background-color: inherit;\n  border-radius: 0.274725274725275rem;\n  transform: scaleY(0.8) translate(-30%, -50%) rotate(45deg);\n  z-index: -1;\n}\n.profile-card__name {\n  margin-bottom: 0.10989010989011rem;\n  font: normal 1.285714285714286rem 'Lato', Arial, sans-serif;\n  color: #e75735;\n  text-transform: capitalize;\n}\n.profile-card__position {\n  margin: 0 0 0.714285714285714rem 0;\n  font: bold 0.785714285714286rem 'Lato', Arial, sans-serif;\n  color: #4f4f4f;\n  letter-spacing: 0.049450549450549rem;\n  text-transform: uppercase;\n}\n.profile-card__icons {\n  display: flex;\n  justify-content: space-around;\n  align-items: center;\n  max-width: 8.791208791rem;\n  margin: 0 auto;\n}\n.profile-card__icon {\n  flex: 1.6rem 0 0;\n  height: 1.9rem;\n  background: #747474;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n  -webkit-tap-highlight-color: transparent;\n  user-select: none;\n}\n@media (hover: hover) {\n  .profile-card__icon:hover {\n    background: #e75735;\n  }\n}\n.profile-card__icon:active,\n.profile-card__icon:focus {\n  background: #e75735;\n}\n.profile-card__icon_for-facebook {\n  height: 1.6rem;\n  -webkit-mask: url(" + ___CSS_LOADER_URL___0___ + ") center no-repeat;\n          mask: url(" + ___CSS_LOADER_URL___0___ + ") center no-repeat;\n  -webkit-mask-size: contain;\n          mask-size: contain;\n}\n.profile-card__icon_for-twitter {\n  -webkit-mask: url(" + ___CSS_LOADER_URL___1___ + ") center no-repeat;\n          mask: url(" + ___CSS_LOADER_URL___1___ + ") center no-repeat;\n  -webkit-mask-size: contain;\n          mask-size: contain;\n  flex-basis: 1.9rem;\n}\n.profile-card__icon_for-dribbble {\n  -webkit-mask: url(" + ___CSS_LOADER_URL___2___ + ") center no-repeat;\n          mask: url(" + ___CSS_LOADER_URL___2___ + ") center no-repeat;\n  -webkit-mask-size: contain;\n          mask-size: contain;\n}\n.profile-card_color_cyan .profile-card__box {\n  background-color: #4eb7a8;\n}\n.profile-card_color_cyan .profile-card__box::before {\n  background-color: #4eb7a8;\n}\n.profile-card_color_cyan .profile-card__name {\n  color: #fff;\n}\n.profile-card_color_cyan .profile-card__position {\n  color: #fff;\n}\n.profile-card_color_cyan .profile-card__icon {\n  background-color: #fff;\n}\n@media (hover: hover) {\n  .profile-card_color_cyan .profile-card__icon:hover {\n    opacity: 0.8;\n  }\n}\n.profile-card_color_cyan .profile-card__icon:active,\n.profile-card_color_cyan .profile-card__icon:focus {\n  opacity: 0.8;\n}\n", ""]);
+exports.push([module.i, ".map-section__title {\n  text-transform: uppercase;\n  font: bold 1.285714285714286rem/1 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #4f4f4f;\n  letter-spacing: 0.095rem;\n  margin-bottom: 2.2rem;\n}\n.map-section__container {\n  width: 100%;\n}\n", ""]);
 
 
 /***/ }),
 /* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/img/facebook.svg";
-
-/***/ }),
-/* 75 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "assets/img/twitter.svg";
-
-/***/ }),
-/* 76 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "assets/img/dribbble.svg";
-
-/***/ }),
-/* 77 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var content = __webpack_require__(78);
+var content = __webpack_require__(75);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -14670,53 +18235,100 @@ var update = __webpack_require__(1)(content, options);
 if (content.locals) {
   module.exports = content.locals;
 }
+
+
+/***/ }),
+/* 75 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// Module
+exports.push([module.i, ".map {\n  width: 100%;\n  border-radius: 0.274725275rem;\n  overflow: hidden;\n  background-color: #e5e5e5;\n}\n.map__container {\n  width: 100%;\n  height: 28.5vw;\n  min-height: 14.50549451rem;\n}\n.map__footer {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-between;\n  align-items: center;\n  padding: 1rem 4.3% 1.3rem;\n  background-color: #e75735;\n}\n@media screen and (max-width: 600px) {\n  .map__footer {\n    flex-wrap: wrap;\n    padding: 0.6rem 4.3%;\n  }\n}\n.map__title {\n  color: #fff;\n  flex: auto 0 0;\n  font: lighter 2.142857142857143rem 'Lato', Arial, sans-serif;\n  margin-right: 4.7%;\n}\n.map__address {\n  flex: auto 0 0;\n  padding-top: 0.3rem;\n  text-align: left;\n}\n@media screen and (max-width: 600px) {\n  .map__address {\n    order: 2;\n    flex-basis: 100%;\n  }\n}\n.map__address-item {\n  color: #fff;\n  text-transform: uppercase;\n  font: bold 0.892857142857143rem 'Lato', Arial, sans-serif;\n}\n.map__address-item_type_street {\n  letter-spacing: 0.045rem;\n}\n.map__address-item_type_city {\n  letter-spacing: 0.03rem;\n}\n.map__icons {\n  padding-top: 0.3rem;\n  flex-grow: 1;\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: flex-end;\n  align-items: center;\n}\n@media screen and (max-width: 600px) {\n  .map__icons {\n    order: 1;\n    flex: 4.395604396rem 1 1;\n  }\n}\n.map__search {\n  font-size: 1rem;\n  position: relative;\n  margin-right: 1.9rem;\n  flex: 1.3rem 0 0;\n  height: 1.3rem;\n  border-radius: 50%;\n  border: 0.10989010989011rem solid #fff;\n  cursor: pointer;\n  outline: none;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n  -webkit-tap-highlight-color: transparent;\n  user-select: none;\n}\n@media screen and (max-width: 600px) {\n  .map__search {\n    margin-right: 1rem;\n  }\n}\n.map__search::before {\n  content: '';\n  position: absolute;\n  top: 50%;\n  left: 0;\n  height: 0.10989010989011rem;\n  width: 1.8rem;\n  border-left: 0.549450549450549rem solid #fff;\n  border-right: 0.549450549450545rem solid #fff;\n  transform: translate(-20%, -50%);\n}\n.map__search::after {\n  content: '';\n  position: absolute;\n  top: 0;\n  left: 50%;\n  height: 1.8rem;\n  width: 0.10989010989011rem;\n  border-top: 0.549450549450549rem solid #fff;\n  border-bottom: 0.549450549450549rem solid #fff;\n  transform: translate(-50%, -20%);\n}\n.map__search:focus {\n  transform: scale(1.1);\n}\n.map__search:focus::before {\n  transform: translate(-18%, -50%) scale(1.1);\n}\n.map__search:focus::after {\n  transform: translate(-50%, -18%) scale(1.1);\n}\n@media (hover: hover) {\n  .map__search:hover {\n    transform: scale(1.1);\n  }\n}\n@media (hover: hover) {\n  .map__search:hover::before {\n    transform: translate(-18%, -50%) scale(1.1);\n  }\n}\n@media (hover: hover) {\n  .map__search:hover::after {\n    transform: translate(-50%, -18%) scale(1.1);\n  }\n}\n@media (hover: hover) {\n  .map__search:active {\n    transform: scale(0.9);\n  }\n}\n@media (hover: none) {\n  .map__search:active {\n    transform: scale(1.1);\n  }\n}\n@media (hover: hover) {\n  .map__search:active::before {\n    transform: translate(-18%, -50%) scale(0.9);\n  }\n}\n@media (hover: none) {\n  .map__search:active::before {\n    transform: translate(-18%, -50%) scale(1.1);\n  }\n}\n@media (hover: hover) {\n  .map__search:active::after {\n    transform: translate(-50%, -18%) scale(0.9);\n  }\n}\n@media (hover: none) {\n  .map__search:active::after {\n    transform: translate(-50%, -18%) scale(1.1);\n  }\n}\n.map__pin {\n  position: relative;\n  align-self: flex-start;\n  flex: 0 0 1.099rem;\n  height: 1.649rem;\n  cursor: pointer;\n  outline: none;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n  -webkit-tap-highlight-color: transparent;\n  user-select: none;\n}\n.map__pin::before {\n  content: '';\n  display: block;\n  position: absolute;\n  top: 0.55rem;\n  left: 0;\n  width: 0.55rem;\n  height: 1.099rem;\n  background: radial-gradient(2.198rem 2.418rem at 1.099rem 0, #fff 50%, transparent 50%);\n  z-index: 1;\n}\n.map__pin::after {\n  content: '';\n  display: block;\n  position: absolute;\n  top: 0.55rem;\n  right: 0;\n  width: 0.55rem;\n  height: 1.099rem;\n  background: radial-gradient(2.198rem 2.418rem at -0.55rem 0, #fff 50%, transparent 50%);\n  z-index: 1;\n}\n@media (hover: hover) {\n  .map__pin:hover {\n    transform: scale(1.1);\n  }\n}\n@media (hover: hover) {\n  .map__pin:active {\n    transform: scale(0.9);\n  }\n}\n@media (hover: none) {\n  .map__pin:active {\n    transform: scale(1.1);\n  }\n}\n.map__pin:focus {\n  transform: scale(1.1);\n}\n.map__pin-circle {\n  position: relative;\n  width: 1.099rem;\n  height: 1.099rem;\n  border: 0.33rem solid #fff;\n  border-radius: 50%;\n  background: #e75735;\n  z-index: 2;\n}\n", ""]);
+
+
+/***/ }),
+/* 76 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(77);
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = "head";
+options.singleton = false;
+
+var update = __webpack_require__(1)(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
+
+
+/***/ }),
+/* 77 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// Module
+exports.push([module.i, ".message-section__title {\n  text-transform: uppercase;\n  font: bold 1.285714285714286rem/1 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #4f4f4f;\n  letter-spacing: 0.095rem;\n  margin-bottom: 1.8rem;\n}\n.message-section__container {\n  max-width: 20.32967033rem;\n  margin: 0 auto;\n}\n@media screen and (max-width: 768px) {\n  .message-section__container {\n    max-width: 17.03296703rem;\n  }\n}\n", ""]);
 
 
 /***/ }),
 /* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(0)(false);
-// Module
-exports.push([module.i, ".profile-section__title {\n  text-transform: uppercase;\n  font: bold 1.285714285714286rem/1 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #4f4f4f;\n  letter-spacing: 0.095rem;\n  margin-bottom: 2.032967033rem;\n  letter-spacing: 0.05rem;\n  word-spacing: 0.3rem;\n}\n.profile-section__container {\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: space-around;\n}\n.profile-section__card {\n  margin-bottom: 2rem;\n  width: 100%;\n  max-width: 19.78021978rem;\n  min-width: 14.28571429rem;\n}\n@media screen and (max-width: 900px) {\n  .profile-section__card {\n    margin: 0 1rem 2rem;\n  }\n}\n", ""]);
+var content = __webpack_require__(79);
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = "head";
+options.singleton = false;
+
+var update = __webpack_require__(1)(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
 
 
 /***/ }),
 /* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(80);
-
-if (typeof content === 'string') {
-  content = [[module.i, content, '']];
-}
-
-var options = {}
-
-options.insert = "head";
-options.singleton = false;
-
-var update = __webpack_require__(1)(content, options);
-
-if (content.locals) {
-  module.exports = content.locals;
-}
+exports = module.exports = __webpack_require__(0)(false);
+// Imports
+var getUrl = __webpack_require__(3);
+var ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(80));
+var ___CSS_LOADER_URL___1___ = getUrl(__webpack_require__(81));
+// Module
+exports.push([module.i, ".messenger {\n  border-radius: 0.3rem;\n  overflow: hidden;\n}\n.messenger__header {\n  position: relative;\n  width: 100%;\n  padding: 1.2rem 1.1rem 2.2rem;\n  text-align: center;\n  background-color: #4eb7a8;\n  box-shadow: inset 0 -2.5rem 0 #46ab9d;\n}\n@media screen and (max-width: 768px) {\n  .messenger__header {\n    box-shadow: inset 0 -2rem 0 #46ab9d;\n  }\n}\n.messenger__name {\n  padding-bottom: 1.9rem;\n  font: lighter 2.428571428571429rem 'Lato', Arial, sans-serif;\n  text-transform: capitalize;\n  word-spacing: -0.02rem;\n  letter-spacing: -0.11rem;\n  color: #fff;\n  word-break: break-word;\n}\n@media screen and (max-width: 768px) {\n  .messenger__name {\n    font-size: 2rem;\n    padding-bottom: 1.3rem;\n  }\n}\n.messenger__photo {\n  position: absolute;\n  left: 50%;\n  top: 100%;\n  width: 6.5rem;\n  height: 6.5rem;\n  border: 0.274725275rem solid #e5e5e5;\n  border-radius: 50%;\n  background-size: cover;\n  background-repeat: no-repeat;\n  transform: translateX(-54%) translateY(-50%);\n  z-index: 2;\n}\n@media screen and (max-width: 768px) {\n  .messenger__photo {\n    width: 5.5rem;\n    height: 5.5rem;\n  }\n}\n.messenger__container {\n  padding: 1.5rem 1.6rem 1.9rem;\n  background-color: #f2f2f2;\n  overflow-y: hidden;\n}\n@media screen and (max-width: 768px) {\n  .messenger__container {\n    padding: 1.2rem 1.2rem 1.6rem;\n  }\n}\n.messenger__icons {\n  display: flex;\n  justify-content: space-between;\n  padding: 0 0.3rem 0 0.1rem;\n}\n.messenger__bubble-icon {\n  width: 1.55rem;\n  height: 1.55rem;\n  background: url(" + ___CSS_LOADER_URL___0___ + ") no-repeat;\n  cursor: pointer;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n  -webkit-tap-highlight-color: transparent;\n  user-select: none;\n}\n@media (hover: hover) {\n  .messenger__bubble-icon:hover {\n    transform: scale(1.1);\n  }\n}\n@media (hover: hover) {\n  .messenger__bubble-icon:active {\n    transform: scale(0.9);\n  }\n}\n@media (hover: none) {\n  .messenger__bubble-icon:active {\n    transform: scale(1.1);\n  }\n}\n.messenger__camera-icon {\n  width: 1.8rem;\n  height: 1.41rem;\n  background: url(" + ___CSS_LOADER_URL___1___ + ") no-repeat;\n  cursor: pointer;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n  -webkit-tap-highlight-color: transparent;\n  user-select: none;\n}\n@media (hover: hover) {\n  .messenger__camera-icon:hover {\n    transform: scale(1.1);\n  }\n}\n@media (hover: hover) {\n  .messenger__camera-icon:active {\n    transform: scale(0.9);\n  }\n}\n@media (hover: none) {\n  .messenger__camera-icon:active {\n    transform: scale(1.1);\n  }\n}\n.messenger__message {\n  font: bold 0.892857142857143rem 'Lato', Arial, sans-serif;\n  text-align: left;\n  letter-spacing: 0.04rem;\n  color: #8e8d8d;\n}\n@media screen and (max-width: 768px) {\n  .messenger__message {\n    font-size: 0.8rem;\n  }\n}\n.messenger__message_type_inbox {\n  position: relative;\n  margin: 1.4rem auto 0;\n  padding: 1.3rem 1.2rem 1.5rem;\n  width: 100%;\n  background-color: #fff;\n  border-radius: 0.549450549rem;\n  overflow-wrap: break-word;\n}\n@media screen and (max-width: 768px) {\n  .messenger__message_type_inbox {\n    padding: 1rem;\n    margin-top: 1rem;\n  }\n}\n.messenger__message_type_inbox::before {\n  content: '';\n  width: 0.72rem;\n  height: 0.72rem;\n  display: block;\n  position: absolute;\n  top: 0;\n  left: 50%;\n  background-color: #fff;\n  border-radius: 0.21978022rem;\n  transform: translate(-90%, -40%) rotate(45deg);\n}\n.messenger__message_type_outbox {\n  width: 98%;\n  padding: 1.12rem 1rem 1.56rem;\n  margin: 1.5rem auto 1rem;\n  background-color: #e5e5e5;\n  border: none;\n  border-radius: 0.274725275rem;\n  box-shadow: 0 0 0 0.21978022rem #fff;\n  resize: none;\n  outline: none;\n}\n@media screen and (max-width: 768px) {\n  .messenger__message_type_outbox {\n    padding: 1rem;\n    margin-top: 1rem;\n  }\n}\n.messenger__text {\n  overflow-y: auto;\n}\n.messenger__button {\n  width: 100%;\n  font-size: 0.85rem;\n}\n", ""]);
 
 
 /***/ }),
 /* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(0)(false);
-// Module
-exports.push([module.i, ".registration-form__header {\n  position: fixed;\n  padding: 6rem 0 0;\n  top: 0;\n  left: 50%;\n  width: 96%;\n  max-width: 54.94505495rem;\n  background: linear-gradient(#fff 0%, #fff 85%, rgba(255,255,255,0) 85%, rgba(255,255,255,0) 100%);\n  z-index: 100;\n  transform: translateX(-50%);\n}\n.registration-form__title {\n  text-transform: uppercase;\n  font: bold 2rem 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #4f4f4f;\n  letter-spacing: 0.095rem;\n}\n@media screen and (max-width: 600px) {\n  .registration-form__title {\n    font-size: 1.5rem;\n  }\n}\n.registration-form__bread-crumbs {\n  width: 100%;\n  margin: 1rem 0;\n}\n.registration-form__stage_first {\n  width: 100%;\n  max-width: 43.95604396rem;\n  margin: 0 auto;\n}\n.registration-form__stage_second {\n  margin-top: 3rem;\n  overflow: hidden;\n}\n.registration-form__stage_third {\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: center;\n  align-items: center;\n  padding: 0.5rem 1rem;\n  margin: 2rem auto;\n  width: 100%;\n  max-width: 43.95604396rem;\n  background-color: #bfcac8;\n  border-radius: 0.549450549rem;\n}\n.registration-form__policy-tickbox {\n  flex: 12.63736264rem 1 1;\n  margin-right: 1rem;\n}\n@media screen and (max-width: 425px) {\n  .registration-form__policy-tickbox {\n    flex: 100% 0 0;\n    margin: 0 0 0.5rem;\n  }\n}\n.registration-form__button {\n  flex: auto 0 0;\n}\n", ""]);
-
+module.exports = __webpack_require__.p + "assets/img/bubble-icon.svg";
 
 /***/ }),
 /* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(82);
+module.exports = __webpack_require__.p + "assets/img/camera-icon.svg";
+
+/***/ }),
+/* 82 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(83);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -14732,17 +18344,6 @@ var update = __webpack_require__(1)(content, options);
 if (content.locals) {
   module.exports = content.locals;
 }
-
-
-/***/ }),
-/* 82 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(false);
-// Imports
-exports.i(__webpack_require__(83), "");
-// Module
-exports.push([module.i, "\n", ""]);
 
 
 /***/ }),
@@ -14750,24 +18351,15 @@ exports.push([module.i, "\n", ""]);
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
-// Imports
-var getUrl = __webpack_require__(3);
-var ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(84));
 // Module
-exports.push([module.i, ".mCustomScrollbar{touch-action:pinch-zoom}.mCustomScrollbar.mCS_no_scrollbar,.mCustomScrollbar.mCS_touch_action{touch-action:auto}.mCustomScrollBox{position:relative;overflow:hidden;height:100%;max-width:100%;outline:0;direction:ltr}.mCSB_container{overflow:hidden;width:auto;height:auto}.mCSB_inside>.mCSB_container{margin-right:20px}.mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden{margin-right:0}.mCS-dir-rtl>.mCSB_inside>.mCSB_container{margin-right:0;margin-left:30px}.mCS-dir-rtl>.mCSB_inside>.mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden{margin-left:0}.mCSB_scrollTools{position:absolute;width:16px;height:auto;left:auto;top:0;right:0;bottom:0;opacity:.75;filter:\"alpha(opacity=75)\";-ms-filter:\"alpha(opacity=75)\"}.mCSB_outside+.mCSB_scrollTools{right:-26px}.mCS-dir-rtl>.mCSB_inside>.mCSB_scrollTools,.mCS-dir-rtl>.mCSB_outside+.mCSB_scrollTools{right:auto;left:0}.mCS-dir-rtl>.mCSB_outside+.mCSB_scrollTools{left:-26px}.mCSB_scrollTools .mCSB_draggerContainer{position:absolute;top:0;left:0;bottom:0;right:0;height:auto}.mCSB_scrollTools a+.mCSB_draggerContainer{margin:20px 0}.mCSB_scrollTools .mCSB_draggerRail{width:2px;height:100%;margin:0 auto;border-radius:16px}.mCSB_scrollTools .mCSB_dragger{cursor:pointer;width:100%;height:30px;z-index:1}.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{position:relative;width:4px;height:100%;margin:0 auto;border-radius:16px;text-align:center}.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{width:12px}.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded+.mCSB_draggerRail,.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{width:8px}.mCSB_scrollTools .mCSB_buttonDown,.mCSB_scrollTools .mCSB_buttonUp{display:block;position:absolute;height:20px;width:100%;overflow:hidden;margin:0 auto;cursor:pointer}.mCSB_scrollTools .mCSB_buttonDown{bottom:0}.mCSB_horizontal.mCSB_inside>.mCSB_container{margin-right:0;margin-bottom:20px}.mCSB_horizontal.mCSB_outside>.mCSB_container{min-height:100%}.mCSB_horizontal>.mCSB_container.mCS_no_scrollbar_x.mCS_x_hidden{margin-bottom:0;}.mCSB_scrollTools.mCSB_scrollTools_horizontal{width:auto;height:16px;top:auto;right:0;bottom:0;left:0}.mCustomScrollBox+.mCSB_scrollTools+.mCSB_scrollTools.mCSB_scrollTools_horizontal,.mCustomScrollBox+.mCSB_scrollTools.mCSB_scrollTools_horizontal{bottom:-26px}.mCSB_scrollTools.mCSB_scrollTools_horizontal a+.mCSB_draggerContainer{margin:0 20px}.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_draggerRail{width:100%;height:2px;margin:7px 0}.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger{width:30px;height:100%;left:0}.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{width:100%;height:4px;margin:6px auto}.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{height:12px;margin:2px auto}.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded+.mCSB_draggerRail,.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{height:8px;margin:4px 0}.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft,.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight{display:block;position:absolute;width:20px;height:100%;overflow:hidden;margin:0 auto;cursor:pointer}.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft{left:0}.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight{right:0}.mCSB_container_wrapper{position:absolute;height:auto;width:auto;overflow:hidden;top:0;left:0;right:0;bottom:0;margin-right:20px;margin-bottom:20px}.mCSB_container_wrapper>.mCSB_container{padding-right:30px;padding-bottom:30px;box-sizing:border-box}.mCSB_vertical_horizontal>.mCSB_scrollTools.mCSB_scrollTools_vertical{bottom:20px}.mCSB_vertical_horizontal>.mCSB_scrollTools.mCSB_scrollTools_horizontal{right:20px}.mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden+.mCSB_scrollTools.mCSB_scrollTools_vertical{bottom:0}.mCS-dir-rtl>.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside>.mCSB_scrollTools.mCSB_scrollTools_horizontal,.mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden+.mCSB_scrollTools~.mCSB_scrollTools.mCSB_scrollTools_horizontal{right:0}.mCS-dir-rtl>.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside>.mCSB_scrollTools.mCSB_scrollTools_horizontal{left:20px}.mCS-dir-rtl>.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside>.mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden+.mCSB_scrollTools~.mCSB_scrollTools.mCSB_scrollTools_horizontal{left:0}.mCS-dir-rtl>.mCSB_inside>.mCSB_container_wrapper{margin-right:0;margin-left:30px}.mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden>.mCSB_container{padding-right:0}.mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden>.mCSB_container{padding-bottom:0}.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside>.mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden{margin-right:0;margin-left:0}.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside>.mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden{margin-bottom:0}.mCSB_scrollTools,.mCSB_scrollTools .mCSB_buttonDown,.mCSB_scrollTools .mCSB_buttonLeft,.mCSB_scrollTools .mCSB_buttonRight,.mCSB_scrollTools .mCSB_buttonUp,.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{transition:opacity .2s ease-in-out,background-color .2s ease-in-out}.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail,.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger_bar,.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail,.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger_bar{transition:width .2s ease-out .2s,height .2s ease-out .2s,margin-left .2s ease-out .2s,margin-right .2s ease-out .2s,margin-top .2s ease-out .2s,margin-bottom .2s ease-out .2s,opacity .2s ease-in-out,background-color .2s ease-in-out}.mCS-autoHide>.mCustomScrollBox>.mCSB_scrollTools,.mCS-autoHide>.mCustomScrollBox~.mCSB_scrollTools{opacity:0;filter:\"alpha(opacity=0)\";-ms-filter:\"alpha(opacity=0)\"}.mCS-autoHide:hover>.mCustomScrollBox>.mCSB_scrollTools,.mCS-autoHide:hover>.mCustomScrollBox~.mCSB_scrollTools,.mCustomScrollBox:hover>.mCSB_scrollTools,.mCustomScrollBox:hover~.mCSB_scrollTools,.mCustomScrollbar>.mCustomScrollBox>.mCSB_scrollTools.mCSB_scrollTools_onDrag,.mCustomScrollbar>.mCustomScrollBox~.mCSB_scrollTools.mCSB_scrollTools_onDrag{opacity:1;filter:\"alpha(opacity=100)\";-ms-filter:\"alpha(opacity=100)\"}.mCSB_scrollTools .mCSB_draggerRail{background-color:#000;background-color:rgba(0,0,0,.4);filter:\"alpha(opacity=40)\";-ms-filter:\"alpha(opacity=40)\"}.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color:#fff;background-color:rgba(255,255,255,.75);filter:\"alpha(opacity=75)\";-ms-filter:\"alpha(opacity=75)\"}.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background-color:#fff;background-color:rgba(255,255,255,.85);filter:\"alpha(opacity=85)\";-ms-filter:\"alpha(opacity=85)\"}.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar{background-color:#fff;background-color:rgba(255,255,255,.9);filter:\"alpha(opacity=90)\";-ms-filter:\"alpha(opacity=90)\"}.mCSB_scrollTools .mCSB_buttonDown,.mCSB_scrollTools .mCSB_buttonLeft,.mCSB_scrollTools .mCSB_buttonRight,.mCSB_scrollTools .mCSB_buttonUp{background-image:url(" + ___CSS_LOADER_URL___0___ + ");background-repeat:no-repeat;opacity:.4;filter:\"alpha(opacity=40)\";-ms-filter:\"alpha(opacity=40)\"}.mCSB_scrollTools .mCSB_buttonUp{background-position:0 0}.mCSB_scrollTools .mCSB_buttonDown{background-position:0 -20px}.mCSB_scrollTools .mCSB_buttonLeft{background-position:0 -40px}.mCSB_scrollTools .mCSB_buttonRight{background-position:0 -56px}.mCSB_scrollTools .mCSB_buttonDown:hover,.mCSB_scrollTools .mCSB_buttonLeft:hover,.mCSB_scrollTools .mCSB_buttonRight:hover,.mCSB_scrollTools .mCSB_buttonUp:hover{opacity:.75;filter:\"alpha(opacity=75)\";-ms-filter:\"alpha(opacity=75)\"}.mCSB_scrollTools .mCSB_buttonDown:active,.mCSB_scrollTools .mCSB_buttonLeft:active,.mCSB_scrollTools .mCSB_buttonRight:active,.mCSB_scrollTools .mCSB_buttonUp:active{opacity:.9;filter:\"alpha(opacity=90)\";-ms-filter:\"alpha(opacity=90)\"}.mCS-dark.mCSB_scrollTools .mCSB_draggerRail{background-color:#000;background-color:rgba(0,0,0,.15)}.mCS-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color:#000;background-color:rgba(0,0,0,.75)}.mCS-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background-color:rgba(0,0,0,.85)}.mCS-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,.mCS-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar{background-color:rgba(0,0,0,.9)}.mCS-dark.mCSB_scrollTools .mCSB_buttonUp{background-position:-80px 0}.mCS-dark.mCSB_scrollTools .mCSB_buttonDown{background-position:-80px -20px}.mCS-dark.mCSB_scrollTools .mCSB_buttonLeft{background-position:-80px -40px}.mCS-dark.mCSB_scrollTools .mCSB_buttonRight{background-position:-80px -56px}.mCS-dark-2.mCSB_scrollTools .mCSB_draggerRail,.mCS-light-2.mCSB_scrollTools .mCSB_draggerRail{width:4px;background-color:#fff;background-color:rgba(255,255,255,.1);border-radius:1px}.mCS-dark-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-light-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width:4px;background-color:#fff;background-color:rgba(255,255,255,.75);border-radius:1px}.mCS-dark-2.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,.mCS-dark-2.mCSB_scrollTools_horizontal .mCSB_draggerRail,.mCS-light-2.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,.mCS-light-2.mCSB_scrollTools_horizontal .mCSB_draggerRail{width:100%;height:4px;margin:6px auto}.mCS-light-2.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background-color:#fff;background-color:rgba(255,255,255,.85)}.mCS-light-2.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,.mCS-light-2.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar{background-color:#fff;background-color:rgba(255,255,255,.9)}.mCS-light-2.mCSB_scrollTools .mCSB_buttonUp{background-position:-32px 0}.mCS-light-2.mCSB_scrollTools .mCSB_buttonDown{background-position:-32px -20px}.mCS-light-2.mCSB_scrollTools .mCSB_buttonLeft{background-position:-40px -40px}.mCS-light-2.mCSB_scrollTools .mCSB_buttonRight{background-position:-40px -56px}.mCS-dark-2.mCSB_scrollTools .mCSB_draggerRail{background-color:#000;background-color:rgba(0,0,0,.1);border-radius:1px}.mCS-dark-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color:#000;background-color:rgba(0,0,0,.75);border-radius:1px}.mCS-dark-2.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background-color:#000;background-color:rgba(0,0,0,.85)}.mCS-dark-2.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,.mCS-dark-2.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar{background-color:#000;background-color:rgba(0,0,0,.9)}.mCS-dark-2.mCSB_scrollTools .mCSB_buttonUp{background-position:-112px 0}.mCS-dark-2.mCSB_scrollTools .mCSB_buttonDown{background-position:-112px -20px}.mCS-dark-2.mCSB_scrollTools .mCSB_buttonLeft{background-position:-120px -40px}.mCS-dark-2.mCSB_scrollTools .mCSB_buttonRight{background-position:-120px -56px}.mCS-dark-thick.mCSB_scrollTools .mCSB_draggerRail,.mCS-light-thick.mCSB_scrollTools .mCSB_draggerRail{width:4px;background-color:#fff;background-color:rgba(255,255,255,.1);border-radius:2px}.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-light-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width:6px;background-color:#fff;background-color:rgba(255,255,255,.75);border-radius:2px}.mCS-dark-thick.mCSB_scrollTools_horizontal .mCSB_draggerRail,.mCS-light-thick.mCSB_scrollTools_horizontal .mCSB_draggerRail{width:100%;height:4px;margin:6px 0}.mCS-dark-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,.mCS-light-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{width:100%;height:6px;margin:5px auto}.mCS-light-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background-color:#fff;background-color:rgba(255,255,255,.85)}.mCS-light-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,.mCS-light-thick.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar{background-color:#fff;background-color:rgba(255,255,255,.9)}.mCS-light-thick.mCSB_scrollTools .mCSB_buttonUp{background-position:-16px 0}.mCS-light-thick.mCSB_scrollTools .mCSB_buttonDown{background-position:-16px -20px}.mCS-light-thick.mCSB_scrollTools .mCSB_buttonLeft{background-position:-20px -40px}.mCS-light-thick.mCSB_scrollTools .mCSB_buttonRight{background-position:-20px -56px}.mCS-dark-thick.mCSB_scrollTools .mCSB_draggerRail{background-color:#000;background-color:rgba(0,0,0,.1);border-radius:2px}.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color:#000;background-color:rgba(0,0,0,.75);border-radius:2px}.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background-color:#000;background-color:rgba(0,0,0,.85)}.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar{background-color:#000;background-color:rgba(0,0,0,.9)}.mCS-dark-thick.mCSB_scrollTools .mCSB_buttonUp{background-position:-96px 0}.mCS-dark-thick.mCSB_scrollTools .mCSB_buttonDown{background-position:-96px -20px}.mCS-dark-thick.mCSB_scrollTools .mCSB_buttonLeft{background-position:-100px -40px}.mCS-dark-thick.mCSB_scrollTools .mCSB_buttonRight{background-position:-100px -56px}.mCS-light-thin.mCSB_scrollTools .mCSB_draggerRail{background-color:#fff;background-color:rgba(255,255,255,.1)}.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-light-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width:2px}.mCS-dark-thin.mCSB_scrollTools_horizontal .mCSB_draggerRail,.mCS-light-thin.mCSB_scrollTools_horizontal .mCSB_draggerRail{width:100%}.mCS-dark-thin.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,.mCS-light-thin.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{width:100%;height:2px;margin:7px auto}.mCS-dark-thin.mCSB_scrollTools .mCSB_draggerRail{background-color:#28a290;background-color:rgba(0,0,0,.15)}.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color:#28a290;background-color:#28a290;}.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background-color:#28a290;background-color:#28a290;}.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar{background-color:#28a290;background-color:#28a290;}.mCS-dark-thin.mCSB_scrollTools .mCSB_buttonUp{background-position:-80px 0}.mCS-dark-thin.mCSB_scrollTools .mCSB_buttonDown{background-position:-80px -20px}.mCS-dark-thin.mCSB_scrollTools .mCSB_buttonLeft{background-position:-80px -40px}.mCS-dark-thin.mCSB_scrollTools .mCSB_buttonRight{background-position:-80px -56px}.mCS-rounded.mCSB_scrollTools .mCSB_draggerRail{background-color:#fff;background-color:rgba(255,255,255,.15)}.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger,.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger,.mCS-rounded-dots.mCSB_scrollTools .mCSB_dragger,.mCS-rounded.mCSB_scrollTools .mCSB_dragger{height:14px}.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-rounded-dots.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-rounded.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width:14px;margin:0 1px}.mCS-rounded-dark.mCSB_scrollTools_horizontal .mCSB_dragger,.mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_dragger,.mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_dragger,.mCS-rounded.mCSB_scrollTools_horizontal .mCSB_dragger{width:14px}.mCS-rounded-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,.mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,.mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,.mCS-rounded.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{height:14px;margin:1px 0}.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar,.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{width:16px;height:16px;margin:-1px 0}.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded+.mCSB_draggerRail,.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail,.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded+.mCSB_draggerRail,.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{width:4px}.mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,.mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar,.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{height:16px;width:16px;margin:0 -1px}.mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded+.mCSB_draggerRail,.mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail,.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded+.mCSB_draggerRail,.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{height:4px;margin:6px 0}.mCS-rounded.mCSB_scrollTools .mCSB_buttonUp{background-position:0 -72px}.mCS-rounded.mCSB_scrollTools .mCSB_buttonDown{background-position:0 -92px}.mCS-rounded.mCSB_scrollTools .mCSB_buttonLeft{background-position:0 -112px}.mCS-rounded.mCSB_scrollTools .mCSB_buttonRight{background-position:0 -128px}.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color:#000;background-color:rgba(0,0,0,.75)}.mCS-rounded-dark.mCSB_scrollTools .mCSB_draggerRail{background-color:#000;background-color:rgba(0,0,0,.15)}.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background-color:#000;background-color:rgba(0,0,0,.85)}.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar{background-color:#000;background-color:rgba(0,0,0,.9)}.mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonUp{background-position:-80px -72px}.mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonDown{background-position:-80px -92px}.mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonLeft{background-position:-80px -112px}.mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonRight{background-position:-80px -128px}.mCS-rounded-dots-dark.mCSB_scrollTools_vertical .mCSB_draggerRail,.mCS-rounded-dots.mCSB_scrollTools_vertical .mCSB_draggerRail{width:4px}.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_draggerRail,.mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail,.mCS-rounded-dots.mCSB_scrollTools .mCSB_draggerRail,.mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_draggerRail{background-color:transparent;background-position:center}.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_draggerRail,.mCS-rounded-dots.mCSB_scrollTools .mCSB_draggerRail{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAANElEQVQYV2NkIAAYiVbw//9/Y6DiM1ANJoyMjGdBbLgJQAX/kU0DKgDLkaQAvxW4HEvQFwCRcxIJK1XznAAAAABJRU5ErkJggg==);background-repeat:repeat-y;opacity:.3;filter:\"alpha(opacity=30)\";-ms-filter:\"alpha(opacity=30)\"}.mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail,.mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_draggerRail{height:4px;margin:6px 0;background-repeat:repeat-x}.mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonUp{background-position:-16px -72px}.mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonDown{background-position:-16px -92px}.mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonLeft{background-position:-20px -112px}.mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonRight{background-position:-20px -128px}.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_draggerRail{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAALElEQVQYV2NkIAAYSVFgDFR8BqrBBEifBbGRTfiPZhpYjiQFBK3A6l6CvgAAE9kGCd1mvgEAAAAASUVORK5CYII=)}.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonUp{background-position:-96px -72px}.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonDown{background-position:-96px -92px}.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonLeft{background-position:-100px -112px}.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonRight{background-position:-100px -128px}.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-repeat:repeat-y;background-image:linear-gradient(to right,rgba(255,255,255,.5) 0,rgba(255,255,255,0) 100%)}.mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,.mCS-3d-thick-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,.mCS-3d-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,.mCS-3d.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{background-repeat:repeat-x;background-image:linear-gradient(to bottom,rgba(255,255,255,.5) 0,rgba(255,255,255,0) 100%)}.mCS-3d-dark.mCSB_scrollTools_vertical .mCSB_dragger,.mCS-3d.mCSB_scrollTools_vertical .mCSB_dragger{height:70px}.mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_dragger,.mCS-3d.mCSB_scrollTools_horizontal .mCSB_dragger{width:70px}.mCS-3d-dark.mCSB_scrollTools,.mCS-3d.mCSB_scrollTools{opacity:1;filter:\"alpha(opacity=30)\";-ms-filter:\"alpha(opacity=30)\"}.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-3d-dark.mCSB_scrollTools .mCSB_draggerRail,.mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-3d.mCSB_scrollTools .mCSB_draggerRail{border-radius:16px}.mCS-3d-dark.mCSB_scrollTools .mCSB_draggerRail,.mCS-3d.mCSB_scrollTools .mCSB_draggerRail{width:8px;background-color:#000;background-color:rgba(0,0,0,.2);box-shadow:inset 1px 0 1px rgba(0,0,0,.5),inset -1px 0 1px rgba(255,255,255,.2)}.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,.mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-3d.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,.mCS-3d.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,.mCS-3d.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background-color:#555}.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width:8px}.mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail,.mCS-3d.mCSB_scrollTools_horizontal .mCSB_draggerRail{width:100%;height:8px;margin:4px 0;box-shadow:inset 0 1px 1px rgba(0,0,0,.5),inset 0 -1px 1px rgba(255,255,255,.2)}.mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,.mCS-3d.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{width:100%;height:8px;margin:4px auto}.mCS-3d.mCSB_scrollTools .mCSB_buttonUp{background-position:-32px -72px}.mCS-3d.mCSB_scrollTools .mCSB_buttonDown{background-position:-32px -92px}.mCS-3d.mCSB_scrollTools .mCSB_buttonLeft{background-position:-40px -112px}.mCS-3d.mCSB_scrollTools .mCSB_buttonRight{background-position:-40px -128px}.mCS-3d-dark.mCSB_scrollTools .mCSB_draggerRail{background-color:#000;background-color:rgba(0,0,0,.1);box-shadow:inset 1px 0 1px rgba(0,0,0,.1)}.mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail{box-shadow:inset 0 1px 1px rgba(0,0,0,.1)}.mCS-3d-dark.mCSB_scrollTools .mCSB_buttonUp{background-position:-112px -72px}.mCS-3d-dark.mCSB_scrollTools .mCSB_buttonDown{background-position:-112px -92px}.mCS-3d-dark.mCSB_scrollTools .mCSB_buttonLeft{background-position:-120px -112px}.mCS-3d-dark.mCSB_scrollTools .mCSB_buttonRight{background-position:-120px -128px}.mCS-3d-thick-dark.mCSB_scrollTools,.mCS-3d-thick.mCSB_scrollTools{opacity:1;filter:\"alpha(opacity=30)\";-ms-filter:\"alpha(opacity=30)\"}.mCS-3d-thick-dark.mCSB_scrollTools,.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_draggerContainer,.mCS-3d-thick.mCSB_scrollTools,.mCS-3d-thick.mCSB_scrollTools .mCSB_draggerContainer{border-radius:7px}.mCSB_inside+.mCS-3d-thick-dark.mCSB_scrollTools_vertical,.mCSB_inside+.mCS-3d-thick.mCSB_scrollTools_vertical{right:1px}.mCS-3d-thick-dark.mCSB_scrollTools_vertical,.mCS-3d-thick.mCSB_scrollTools_vertical{box-shadow:inset 1px 0 1px rgba(0,0,0,.1),inset 0 0 14px rgba(0,0,0,.5)}.mCS-3d-thick-dark.mCSB_scrollTools_horizontal,.mCS-3d-thick.mCSB_scrollTools_horizontal{bottom:1px;box-shadow:inset 0 1px 1px rgba(0,0,0,.1),inset 0 0 14px rgba(0,0,0,.5)}.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{border-radius:5px;box-shadow:inset 1px 0 0 rgba(255,255,255,.4);width:12px;margin:2px;position:absolute;height:auto;top:0;bottom:0;left:0;right:0}.mCS-3d-thick-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,.mCS-3d-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{box-shadow:inset 0 1px 0 rgba(255,255,255,.4);height:12px;width:auto}.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background-color:#555}.mCS-3d-thick.mCSB_scrollTools .mCSB_draggerContainer{background-color:#000;background-color:rgba(0,0,0,.05);box-shadow:inset 1px 1px 16px rgba(0,0,0,.1)}.mCS-3d-thick.mCSB_scrollTools .mCSB_draggerRail{background-color:transparent}.mCS-3d-thick.mCSB_scrollTools .mCSB_buttonUp{background-position:-32px -72px}.mCS-3d-thick.mCSB_scrollTools .mCSB_buttonDown{background-position:-32px -92px}.mCS-3d-thick.mCSB_scrollTools .mCSB_buttonLeft{background-position:-40px -112px}.mCS-3d-thick.mCSB_scrollTools .mCSB_buttonRight{background-position:-40px -128px}.mCS-3d-thick-dark.mCSB_scrollTools{box-shadow:inset 0 0 14px rgba(0,0,0,.2)}.mCS-3d-thick-dark.mCSB_scrollTools_horizontal{box-shadow:inset 0 1px 1px rgba(0,0,0,.1),inset 0 0 14px rgba(0,0,0,.2)}.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{box-shadow:inset 1px 0 0 rgba(255,255,255,.4),inset -1px 0 0 rgba(0,0,0,.2)}.mCS-3d-thick-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{box-shadow:inset 0 1px 0 rgba(255,255,255,.4),inset 0 -1px 0 rgba(0,0,0,.2)}.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background-color:#777}.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_draggerContainer{background-color:#fff;background-color:rgba(0,0,0,.05);box-shadow:inset 1px 1px 16px rgba(0,0,0,.1)}.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_draggerRail,.mCS-minimal-dark.mCSB_scrollTools .mCSB_draggerRail,.mCS-minimal.mCSB_scrollTools .mCSB_draggerRail{background-color:transparent}.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_buttonUp{background-position:-112px -72px}.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_buttonDown{background-position:-112px -92px}.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_buttonLeft{background-position:-120px -112px}.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_buttonRight{background-position:-120px -128px}.mCSB_outside+.mCS-minimal-dark.mCSB_scrollTools_vertical,.mCSB_outside+.mCS-minimal.mCSB_scrollTools_vertical{right:0;margin:12px 0}.mCustomScrollBox.mCS-minimal+.mCSB_scrollTools+.mCSB_scrollTools.mCSB_scrollTools_horizontal,.mCustomScrollBox.mCS-minimal+.mCSB_scrollTools.mCSB_scrollTools_horizontal,.mCustomScrollBox.mCS-minimal-dark+.mCSB_scrollTools+.mCSB_scrollTools.mCSB_scrollTools_horizontal,.mCustomScrollBox.mCS-minimal-dark+.mCSB_scrollTools.mCSB_scrollTools_horizontal{bottom:0;margin:0 12px}.mCS-dir-rtl>.mCSB_outside+.mCS-minimal-dark.mCSB_scrollTools_vertical,.mCS-dir-rtl>.mCSB_outside+.mCS-minimal.mCSB_scrollTools_vertical{left:0;right:auto}.mCS-minimal-dark.mCSB_scrollTools_vertical .mCSB_dragger,.mCS-minimal.mCSB_scrollTools_vertical .mCSB_dragger{height:50px}.mCS-minimal-dark.mCSB_scrollTools_horizontal .mCSB_dragger,.mCS-minimal.mCSB_scrollTools_horizontal .mCSB_dragger{width:50px}.mCS-minimal.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color:#fff;background-color:rgba(255,255,255,.2);filter:\"alpha(opacity=20)\";-ms-filter:\"alpha(opacity=20)\"}.mCS-minimal.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,.mCS-minimal.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar{background-color:#fff;background-color:rgba(255,255,255,.5);filter:\"alpha(opacity=50)\";-ms-filter:\"alpha(opacity=50)\"}.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color:#000;background-color:rgba(0,0,0,.2);filter:\"alpha(opacity=20)\";-ms-filter:\"alpha(opacity=20)\"}.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar{background-color:#000;background-color:rgba(0,0,0,.5);filter:\"alpha(opacity=50)\";-ms-filter:\"alpha(opacity=50)\"}.mCS-dark-3.mCSB_scrollTools .mCSB_draggerRail,.mCS-light-3.mCSB_scrollTools .mCSB_draggerRail{width:6px;background-color:#000;background-color:rgba(0,0,0,.2)}.mCS-dark-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-light-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width:6px}.mCS-dark-3.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,.mCS-dark-3.mCSB_scrollTools_horizontal .mCSB_draggerRail,.mCS-light-3.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,.mCS-light-3.mCSB_scrollTools_horizontal .mCSB_draggerRail{width:100%;height:6px;margin:5px 0}.mCS-dark-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded+.mCSB_draggerRail,.mCS-dark-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail,.mCS-light-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded+.mCSB_draggerRail,.mCS-light-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{width:12px}.mCS-dark-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded+.mCSB_draggerRail,.mCS-dark-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail,.mCS-light-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded+.mCSB_draggerRail,.mCS-light-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{height:12px;margin:2px 0}.mCS-light-3.mCSB_scrollTools .mCSB_buttonUp{background-position:-32px -72px}.mCS-light-3.mCSB_scrollTools .mCSB_buttonDown{background-position:-32px -92px}.mCS-light-3.mCSB_scrollTools .mCSB_buttonLeft{background-position:-40px -112px}.mCS-light-3.mCSB_scrollTools .mCSB_buttonRight{background-position:-40px -128px}.mCS-dark-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color:#000;background-color:rgba(0,0,0,.75)}.mCS-dark-3.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background-color:#000;background-color:rgba(0,0,0,.85)}.mCS-dark-3.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,.mCS-dark-3.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar{background-color:#000;background-color:rgba(0,0,0,.9)}.mCS-dark-3.mCSB_scrollTools .mCSB_draggerRail{background-color:#000;background-color:rgba(0,0,0,.1)}.mCS-dark-3.mCSB_scrollTools .mCSB_buttonUp{background-position:-112px -72px}.mCS-dark-3.mCSB_scrollTools .mCSB_buttonDown{background-position:-112px -92px}.mCS-dark-3.mCSB_scrollTools .mCSB_buttonLeft{background-position:-120px -112px}.mCS-dark-3.mCSB_scrollTools .mCSB_buttonRight{background-position:-120px -128px}.mCS-inset-2-dark.mCSB_scrollTools .mCSB_draggerRail,.mCS-inset-2.mCSB_scrollTools .mCSB_draggerRail,.mCS-inset-3-dark.mCSB_scrollTools .mCSB_draggerRail,.mCS-inset-3.mCSB_scrollTools .mCSB_draggerRail,.mCS-inset-dark.mCSB_scrollTools .mCSB_draggerRail,.mCS-inset.mCSB_scrollTools .mCSB_draggerRail{width:12px;background-color:#000;background-color:rgba(0,0,0,.2)}.mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-inset-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-inset-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-inset-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-inset.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width:6px;margin:3px 5px;position:absolute;height:auto;top:0;bottom:0;left:0;right:0}.mCS-inset-2-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,.mCS-inset-2.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,.mCS-inset-3-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,.mCS-inset-3.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,.mCS-inset-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,.mCS-inset.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{height:6px;margin:5px 3px;position:absolute;width:auto;top:0;bottom:0;left:0;right:0}.mCS-inset-2-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail,.mCS-inset-2.mCSB_scrollTools_horizontal .mCSB_draggerRail,.mCS-inset-3-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail,.mCS-inset-3.mCSB_scrollTools_horizontal .mCSB_draggerRail,.mCS-inset-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail,.mCS-inset.mCSB_scrollTools_horizontal .mCSB_draggerRail{width:100%;height:12px;margin:2px 0}.mCS-inset-2.mCSB_scrollTools .mCSB_buttonUp,.mCS-inset-3.mCSB_scrollTools .mCSB_buttonUp,.mCS-inset.mCSB_scrollTools .mCSB_buttonUp{background-position:-32px -72px}.mCS-inset-2.mCSB_scrollTools .mCSB_buttonDown,.mCS-inset-3.mCSB_scrollTools .mCSB_buttonDown,.mCS-inset.mCSB_scrollTools .mCSB_buttonDown{background-position:-32px -92px}.mCS-inset-2.mCSB_scrollTools .mCSB_buttonLeft,.mCS-inset-3.mCSB_scrollTools .mCSB_buttonLeft,.mCS-inset.mCSB_scrollTools .mCSB_buttonLeft{background-position:-40px -112px}.mCS-inset-2.mCSB_scrollTools .mCSB_buttonRight,.mCS-inset-3.mCSB_scrollTools .mCSB_buttonRight,.mCS-inset.mCSB_scrollTools .mCSB_buttonRight{background-position:-40px -128px}.mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-inset-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color:#000;background-color:rgba(0,0,0,.75)}.mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,.mCS-inset-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background-color:#000;background-color:rgba(0,0,0,.85)}.mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,.mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,.mCS-inset-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,.mCS-inset-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar{background-color:#000;background-color:rgba(0,0,0,.9)}.mCS-inset-2-dark.mCSB_scrollTools .mCSB_draggerRail,.mCS-inset-3-dark.mCSB_scrollTools .mCSB_draggerRail,.mCS-inset-dark.mCSB_scrollTools .mCSB_draggerRail{background-color:#000;background-color:rgba(0,0,0,.1)}.mCS-inset-2-dark.mCSB_scrollTools .mCSB_buttonUp,.mCS-inset-3-dark.mCSB_scrollTools .mCSB_buttonUp,.mCS-inset-dark.mCSB_scrollTools .mCSB_buttonUp{background-position:-112px -72px}.mCS-inset-2-dark.mCSB_scrollTools .mCSB_buttonDown,.mCS-inset-3-dark.mCSB_scrollTools .mCSB_buttonDown,.mCS-inset-dark.mCSB_scrollTools .mCSB_buttonDown{background-position:-112px -92px}.mCS-inset-2-dark.mCSB_scrollTools .mCSB_buttonLeft,.mCS-inset-3-dark.mCSB_scrollTools .mCSB_buttonLeft,.mCS-inset-dark.mCSB_scrollTools .mCSB_buttonLeft{background-position:-120px -112px}.mCS-inset-2-dark.mCSB_scrollTools .mCSB_buttonRight,.mCS-inset-3-dark.mCSB_scrollTools .mCSB_buttonRight,.mCS-inset-dark.mCSB_scrollTools .mCSB_buttonRight{background-position:-120px -128px}.mCS-inset-2-dark.mCSB_scrollTools .mCSB_draggerRail,.mCS-inset-2.mCSB_scrollTools .mCSB_draggerRail{background-color:transparent;border-width:1px;border-style:solid;border-color:#fff;border-color:rgba(255,255,255,.2);box-sizing:border-box}.mCS-inset-2-dark.mCSB_scrollTools .mCSB_draggerRail{border-color:#000;border-color:rgba(0,0,0,.2)}.mCS-inset-3.mCSB_scrollTools .mCSB_draggerRail{background-color:#fff;background-color:rgba(255,255,255,.6)}.mCS-inset-3-dark.mCSB_scrollTools .mCSB_draggerRail{background-color:#000;background-color:rgba(0,0,0,.6)}.mCS-inset-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color:#000;background-color:rgba(0,0,0,.75)}.mCS-inset-3.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background-color:#000;background-color:rgba(0,0,0,.85)}.mCS-inset-3.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,.mCS-inset-3.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar{background-color:#000;background-color:rgba(0,0,0,.9)}.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color:#fff;background-color:rgba(255,255,255,.75)}.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background-color:#fff;background-color:rgba(255,255,255,.85)}.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar{background-color:#fff;background-color:rgba(255,255,255,.9)}", ""]);
+exports.push([module.i, ".navigation-bar {\n  position: fixed;\n  width: 100%;\n  top: 0;\n  left: 0;\n  background-color: #fff;\n  z-index: 200;\n}\n@media screen and (max-width: 425px) {\n  .navigation-bar {\n    height: 3.296703297rem;\n    background-color: transparent;\n  }\n}\n.navigation-bar__menu {\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: space-around;\n  width: 100%;\n  margin: 0;\n  padding: 1rem 1rem 0;\n  transition: all 1s cubic-bezier(0.325, 1, 0.22, 1);\n}\n@media screen and (max-width: 425px) {\n  .navigation-bar__menu {\n    overflow: hidden;\n    flex-flow: column wrap;\n    justify-content: flex-start;\n    height: 0rem;\n    padding: 0;\n  }\n}\n.navigation-bar__item {\n  margin: 0 0.5rem 1rem;\n  padding: 0;\n  flex: auto 1 1;\n  text-align: center;\n  list-style: none;\n}\n.navigation-bar__link {\n  font: lighter 1rem 'Lato', Arial, sans-serif;\n  text-decoration: none;\n  color: #4f4f4f;\n  text-transform: uppercase;\n}\n@media (hover: hover) {\n  .navigation-bar__link:hover {\n    text-decoration: underline;\n  }\n}\n@media (hover: hover) {\n  .navigation-bar__link:active {\n    text-decoration: none;\n  }\n}\n@media (hover: none) {\n  .navigation-bar__link:active {\n    text-decoration: underline;\n  }\n}\n.navigation-bar__icon {\n  display: none;\n}\n@media screen and (max-width: 425px) {\n  .navigation-bar__icon {\n    display: block;\n    position: absolute;\n    top: 1.098901099rem;\n    left: 0.714285714rem;\n    height: 1.483516484rem;\n    width: 1.483516484rem;\n    cursor: pointer;\n    text-indent: -9999px;\n    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);\n    border: none;\n    color: transparent;\n    text-shadow: 0 0 0 #808080;\n    text-align: center;\n  }\n  .navigation-bar__icon:focus {\n    outline: none;\n  }\n}\n.navigation-bar__icon-line {\n  position: absolute;\n  display: block;\n  background: #28a290;\n  width: 1.483516484rem;\n  height: 0.2rem;\n  border-radius: 0.2rem;\n  left: 0;\n  text-indent: 0;\n  transition: all 0.6s cubic-bezier(0.5, 0.1, 0, 1.2);\n}\n.navigation-bar__icon-line:first-child {\n  top: 0;\n}\n.navigation-bar__icon-line:nth-child(2) {\n  top: 0.4rem;\n}\n.navigation-bar__icon-line:nth-child(3) {\n  top: 0.8rem;\n}\n.navigation-bar__toggle {\n  display: none;\n  visibility: hidden;\n}\n.navigation-bar__toggle:checked ~ .navigation-bar__menu {\n  height: auto;\n  padding: 1rem 1rem 0;\n  background-color: #e5e5e5;\n}\n.navigation-bar__toggle:checked ~ .navigation-bar__menu .navigation-bar__item {\n  height: auto;\n  max-height: 30rem;\n  transition: all 2s cubic-bezier(0.5, 1, 0.22, 1);\n}\n.navigation-bar__toggle:checked ~ .navigation-bar__icon .navigation-bar__icon-line:first-child {\n  top: 0;\n  width: 1.483516484rem;\n  transform: translateX(-0.43956044rem) rotate(-45deg) translateY(0.659340659rem);\n}\n.navigation-bar__toggle:checked ~ .navigation-bar__icon .navigation-bar__icon-line:nth-child(2) {\n  opacity: 0;\n}\n.navigation-bar__toggle:checked ~ .navigation-bar__icon .navigation-bar__icon-line:nth-child(3) {\n  top: 0.769230769rem;\n  width: 1.483516484rem;\n  transform: translateX(-0.274725275rem) rotate(45deg) translateY(-0.43956044rem);\n}\n", ""]);
 
 
 /***/ }),
 /* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/img/mCSB_buttons.png";
-
-/***/ }),
-/* 85 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var content = __webpack_require__(86);
+var content = __webpack_require__(85);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -14783,53 +18375,55 @@ var update = __webpack_require__(1)(content, options);
 if (content.locals) {
   module.exports = content.locals;
 }
+
+
+/***/ }),
+/* 85 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// Imports
+exports.i(__webpack_require__(6), "");
+// Module
+exports.push([module.i, ".news-card {\n  display: flex;\n  align-items: stretch;\n  width: 100%;\n  height: 100%;\n  text-align: left;\n  background-color: #e75735;\n  border-radius: 0.274725274725275rem;\n  overflow: hidden;\n}\n.news-card__image {\n  flex: 6.758241758rem 0 2;\n  min-width: 4.395604396rem;\n  background: #e75735 no-repeat 0rem 0rem;\n  background-clip: border-box;\n  background-size: cover;\n}\n.news-card__content {\n  display: flex;\n  flex-flow: column nowrap;\n  justify-content: space-between;\n  flex: 13.73626374rem 2 1;\n  padding: 1.4rem 1.3rem 2.5rem 1.6rem;\n  overflow: hidden;\n}\n.news-card__title {\n  flex: auto 0 0;\n  margin-bottom: 0.7rem;\n  font: lighter 2rem/1 'Lato', Arial, sans-serif;\n  color: #fff;\n}\n.news-card__date {\n  flex: auto 0 0;\n  margin-bottom: 1rem;\n  font: bold 0.8rem 'Lato', Arial, sans-serif;\n  letter-spacing: 0.05rem;\n  color: #fff;\n  text-transform: uppercase;\n}\n.news-card__text {\n  flex: auto 1 0;\n  font: normal 0.8rem 'Lato', Arial, sans-serif;\n  color: #fff;\n  letter-spacing: 0.036rem;\n}\n.news-card_type_event {\n  background-color: #4eb7a8;\n}\n.news-card_type_event .news-card__image {\n  background-color: #4eb7a8;\n}\n.news-card_type_event .news-card__content {\n  position: relative;\n  padding: 1.4rem 1.5rem 1.6rem;\n}\n.news-card_type_event .news-card__date {\n  margin-bottom: 1.4rem;\n}\n.news-card_type_event .news-card__day {\n  font: lighter 5.1rem/4.1rem 'Lato', Arial, sans-serif;\n  letter-spacing: -0.2rem;\n  color: #fff;\n}\n.news-card_type_event .news-card__month {\n  font: lighter 2.1rem 'Lato', Arial, sans-serif;\n  color: #fff;\n  text-transform: capitalize;\n  margin-left: 0.95rem;\n}\n.news-card_type_event .news-card__title {\n  margin-bottom: 0.35rem;\n  font: bold 0.9rem 'Lato', Arial, sans-serif;\n  color: #fff;\n  text-transform: uppercase;\n  letter-spacing: 0.03rem;\n}\n.news-card_type_event .news-card__text {\n  min-height: 2.48rem;\n  margin-bottom: 0.8rem;\n  color: #fff;\n  font-weight: normal;\n}\n.news-card_type_event .news-card__button {\n  width: 87%;\n  font-size: 0.714285714285714rem;\n  flex: auto 0 0;\n  margin: 0 auto;\n}\n.news-card_size_compact .news-card__content {\n  padding: 1.3rem 1.3rem;\n}\n.news-card_size_compact .news-card__title {\n  font-size: 1.2rem;\n}\n.news-card_size_compact.news-card_type_event .news-card__content {\n  padding: 1.1rem 1.2rem 0.6rem;\n}\n.news-card_size_compact.news-card_type_event .news-card__date {\n  margin-bottom: 1rem;\n}\n.news-card_size_compact.news-card_type_event .news-card__title {\n  font-size: 0.8rem;\n  line-height: 1.2;\n}\n.news-card_size_compact.news-card_type_event .news-card__text {\n  margin-bottom: 0.7rem;\n}\n.news-card_color_reverted {\n  background-color: #4eb7a8;\n}\n.news-card_color_reverted.news-card_type_event {\n  background-color: #e75735;\n}\n.news-card_with-scrollbar .news-card__text {\n  max-height: 6em;\n  overflow-y: auto;\n}\n", ""]);
 
 
 /***/ }),
 /* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(0)(false);
-// Module
-exports.push([module.i, ".search-box {\n  display: flex;\n  flex-flow: row nowrap;\n  background-color: #e5e5e5;\n  border-radius: 0.164835165rem;\n  overflow: hidden;\n}\n.search-box_filled {\n  background-color: #e75735;\n}\n.search-box_filled .search-box__input {\n  color: #fff;\n}\n.search-box__label {\n  flex-grow: 1;\n}\n.search-box__input {\n  width: 100%;\n  padding: 0.32967033rem 0.934065934rem 0.384615385rem;\n  font: normal 1rem 'SourceSansPro', Arial, sans-serif;\n  letter-spacing: 0.01rem;\n  color: #7e7e7e;\n  background: inherit;\n  border: none;\n  -webkit-appearance: none;\n}\n.search-box__button {\n  flex: 2.362637363rem 0 0;\n  position: relative;\n  border: none;\n  background-color: #e75735;\n  cursor: pointer;\n  -webkit-appearance: none;\n  outline: none;\n}\n.search-box__button:focus {\n  background-color: #d03c19;\n}\n.search-box__button::before {\n  content: '';\n  display: block;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  width: 0.75rem;\n  height: 0.75rem;\n  border: 0.10989011rem #fff solid;\n  border-radius: 50%;\n  transform: translate(-65%, -60%);\n}\n.search-box__button::after {\n  content: '';\n  position: absolute;\n  top: 62%;\n  left: 50%;\n  display: block;\n  height: 0.164835165rem;\n  width: 0.55rem;\n  background-color: #fff;\n  border-radius: 0.10989011rem;\n  transform: rotate(45deg);\n}\n@media (hover: hover) {\n  .search-box__button:hover {\n    background-color: #d03c19;\n  }\n}\n@media (hover: none) {\n  .search-box__button:active {\n    background-color: #d03c19;\n  }\n}\n@media (hover: hover) {\n  .search-box__button:active::before {\n    transform: translate(-65%, -60%) rotate(45deg) scale(0.9);\n  }\n}\n@media (hover: hover) {\n  .search-box__button:active::after {\n    transform: rotate(45deg) scale(0.9);\n  }\n}\n", ""]);
+var content = __webpack_require__(87);
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = "head";
+options.singleton = false;
+
+var update = __webpack_require__(1)(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
 
 
 /***/ }),
 /* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(88);
-
-if (typeof content === 'string') {
-  content = [[module.i, content, '']];
-}
-
-var options = {}
-
-options.insert = "head";
-options.singleton = false;
-
-var update = __webpack_require__(1)(content, options);
-
-if (content.locals) {
-  module.exports = content.locals;
-}
+exports = module.exports = __webpack_require__(0)(false);
+// Module
+exports.push([module.i, ".news-section__title {\n  text-transform: uppercase;\n  font: bold 1.285714285714286rem/1 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #4f4f4f;\n  letter-spacing: 0.095rem;\n  margin-bottom: 2.4rem;\n}\n.news-section__container {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-around;\n  width: 100%;\n}\n@media screen and (max-width: 900px) {\n  .news-section__container {\n    flex-wrap: wrap;\n  }\n}\n.news-section__news-card {\n  flex: 20.41120879rem 0 1;\n}\n.news-section__news-card:first-child {\n  margin-right: 3%;\n}\n@media screen and (max-width: 900px) {\n  .news-section__news-card:first-child {\n    margin: 0 0 1.3rem 0;\n  }\n}\n", ""]);
 
 
 /***/ }),
 /* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(0)(false);
-// Module
-exports.push([module.i, ".search-section__title {\n  text-transform: uppercase;\n  font: bold 1.285714285714286rem/1 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #4f4f4f;\n  letter-spacing: 0.095rem;\n  margin-bottom: 1.46rem;\n  letter-spacing: 0.05rem;\n}\n.search-section__search-box {\n  margin-bottom: 1.19rem;\n}\n.search-section__search-box:nth-child(2) {\n  margin-bottom: 1.25rem;\n}\n.search-section__form {\n  width: 100%;\n  margin: 0 auto;\n}\n", ""]);
-
-
-/***/ }),
-/* 89 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var content = __webpack_require__(90);
+var content = __webpack_require__(89);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -14848,13 +18442,22 @@ if (content.locals) {
 
 
 /***/ }),
-/* 90 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
+// Imports
+var getUrl = __webpack_require__(3);
+var ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(90));
 // Module
-exports.push([module.i, ".slider-section__title {\n  text-transform: uppercase;\n  font: bold 1.285714285714286rem/1 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #4f4f4f;\n  letter-spacing: 0.095rem;\n  margin-bottom: 3.3rem;\n}\n.slider-section__container {\n  display: flex;\n  justify-content: space-between;\n  flex-flow: row wrap;\n}\n.slider-section__slider {\n  flex: 12.36263736rem 1 0;\n  margin-bottom: 2.5rem;\n  max-width: 38.46153846rem;\n  min-width: 12.36263736rem;\n}\n@media screen and (min-width: 701px) {\n  .slider-section__slider:first-child {\n    margin-right: 10%;\n  }\n}\n@media screen and (max-width: 700px) {\n  .slider-section__slider {\n    margin: 0 5% 2.5rem;\n  }\n}\n", ""]);
+exports.push([module.i, ".online-help {\n  position: fixed;\n  bottom: 1.098901099rem;\n  right: 1.098901099rem;\n  z-index: 5000;\n}\n.online-help__messenger {\n  visibility: hidden;\n  position: absolute;\n  bottom: 3.296703297rem;\n  right: 0;\n  width: 17.58241758rem;\n  box-shadow: 0 0 1.098901099rem 0 rgba(0,0,0,0.3);\n}\n.online-help__messenger_visible {\n  visibility: visible;\n}\n.online-help__button {\n  position: absolute;\n  bottom: 0;\n  right: 0;\n  width: 2.747252747rem;\n  height: 2.747252747rem;\n  background: #e75735 url(" + ___CSS_LOADER_URL___0___ + ") center no-repeat;\n  background-size: 1.373626374rem;\n  border: none;\n  border-radius: 0.384615385rem;\n  box-shadow: 0 0 0.549450549rem 0 rgba(0,0,0,0.4);\n  z-index: 10;\n  outline: none;\n  cursor: pointer;\n}\n@media (hover: hover) {\n  .online-help__button:hover {\n    background-color: darker(#e5e5e5, 50%);\n  }\n}\n@media (hover: none) {\n  .online-help__button:active {\n    background-color: darker(#e5e5e5, 50%);\n  }\n}\n", ""]);
 
+
+/***/ }),
+/* 90 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/img/bubble-icon_white.svg";
 
 /***/ }),
 /* 91 */
@@ -14884,7 +18487,7 @@ if (content.locals) {
 
 exports = module.exports = __webpack_require__(0)(false);
 // Module
-exports.push([module.i, ".slider__tip {\n  display: none;\n  position: absolute;\n  width: 2.472527472527473rem;\n  height: 1.758241758241758rem;\n  padding-top: 0.274725274725275rem;\n  z-index: 2;\n  font: bold 0.92rem 'Lato', Arial, sans-serif;\n  letter-spacing: 0.08rem;\n  text-align: center;\n  color: #fff;\n  background-color: #e75735;\n  border-radius: 0.384615385rem;\n  transform: translate(-50%, -160%);\n}\n.slider__tip::before {\n  content: '';\n  display: block;\n  position: absolute;\n  left: 50%;\n  bottom: 0;\n  width: 0.549450549450549rem;\n  height: 0.549450549450549rem;\n  background-color: inherit;\n  border-radius: 30%;\n  transform: translate(-50%, 20%) scaleY(1.3) rotate(-45deg);\n}\n.slider__tip_visible {\n  display: block;\n}\n.slider__container {\n  position: relative;\n  width: 98%;\n  height: 0.384615384615385rem;\n  background-color: #e5e5e5;\n  border-radius: 0.549450549450549rem;\n}\n.slider__handle {\n  position: absolute;\n  width: 1.4rem;\n  height: 1.4rem;\n  z-index: 2;\n  background-color: #e75735;\n  border-radius: 50%;\n  outline: none;\n  transform: translate(-50%, -40%);\n  cursor: pointer;\n}\n.slider__range {\n  position: absolute;\n  height: inherit;\n  z-index: 1;\n  background-color: #4eb7a8;\n  border-radius: inherit;\n}\n.slider_type_scale .slider__handle {\n  background-color: #4eb7a8;\n}\n.slider__scale {\n  position: relative;\n}\n.slider__scale-item {\n  display: inline-block;\n  position: absolute;\n  top: 1rem;\n  transform: translateX(-50%);\n  color: #cfcfcf;\n  font: bold 0.785714285714286rem 'Lato', Arial, sans-serif;\n}\n", ""]);
+exports.push([module.i, ".pass-info {\n  display: flex;\n  flex-flow: column nowrap;\n  height: 100%;\n  padding: 0.5rem;\n  text-align: center;\n}\n@media screen and (max-width: 425px) {\n  .pass-info {\n    padding: 0.25rem;\n  }\n}\n.pass-info__header {\n  margin-bottom: 1rem;\n  padding-bottom: 1rem;\n  border-bottom: 0.10989011rem solid #e75735;\n}\n@media screen and (max-width: 425px) {\n  .pass-info__header {\n    margin-bottom: 0.8rem;\n    padding-bottom: 0.8rem;\n  }\n}\n.pass-info__name {\n  text-transform: capitalize;\n  color: #e75735;\n  font: bold 2.5rem 'Lato', Arial, sans-serif;\n}\n@media screen and (max-width: 768px) {\n  .pass-info__name {\n    font-size: 1.8rem;\n  }\n}\n@media screen and (max-width: 600px) {\n  .pass-info__name {\n    font-size: 1.5rem;\n  }\n}\n@media screen and (max-width: 425px) {\n  .pass-info__name {\n    font-size: 1rem;\n  }\n}\n.pass-info__price {\n  margin-bottom: 1rem;\n  font: lighter 2rem 'Lato', Arial, sans-serif;\n  color: #4f4f4f;\n}\n@media screen and (max-width: 768px) {\n  .pass-info__price {\n    font-size: 1.7rem;\n  }\n}\n@media screen and (max-width: 600px) {\n  .pass-info__price {\n    font-size: 1.3rem;\n  }\n}\n@media screen and (max-width: 425px) {\n  .pass-info__price {\n    font-size: 1rem;\n    margin-bottom: 0.8rem;\n  }\n}\n.pass-info__text {\n  flex-grow: 1;\n  margin-bottom: 1rem;\n  font: lighter 1rem 'Lato', Arial, sans-serif;\n  color: #4f4f4f;\n}\n", ""]);
 
 
 /***/ }),
@@ -14915,7 +18518,7 @@ if (content.locals) {
 
 exports = module.exports = __webpack_require__(0)(false);
 // Module
-exports.push([module.i, ".speaker-card {\n  display: flex;\n  flex-flow: column nowrap;\n  width: 100%;\n  height: 100%;\n  padding: 1rem;\n  background-color: #e75735;\n  border-radius: 0.549450549rem;\n  overflow: hidden;\n}\n.speaker-card__profile-card {\n  width: 100%;\n  margin-bottom: 1rem;\n}\n.speaker-card__text {\n  font: lighter 1rem 'Lato', Arial, sans-serif;\n  text-align: center;\n  max-height: 8.5rem;\n  color: #fff;\n  flex-grow: 1;\n  overflow-y: auto;\n}\n", ""]);
+exports.push([module.i, ".pass-selector__title {\n  text-transform: uppercase;\n  font: bold 1.285714285714286rem/1 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #4f4f4f;\n  letter-spacing: 0.095rem;\n  margin-bottom: 1rem;\n}\n.pass-selector__options {\n  display: flex;\n  align-items: stretch;\n  font-size: 0;\n}\n.pass-selector__pass-info {\n  width: 33.33333%;\n}\n", ""]);
 
 
 /***/ }),
@@ -14946,7 +18549,7 @@ if (content.locals) {
 
 exports = module.exports = __webpack_require__(0)(false);
 // Module
-exports.push([module.i, ".speaker-carousel {\n  border-left: 0.549450549450549rem solid #fff;\n  border-right: 0.549450549450549rem solid #fff;\n}\n.speaker-carousel__cards {\n  border-radius: 0.549450549450549rem;\n  background-color: #c6c6c6;\n  width: 100%;\n  padding: 0.549450549450549rem 0.549450549450549rem 0 0.549450549450549rem;\n  margin: 3rem auto 1rem;\n}\n.speaker-carousel__card-wrapper {\n  display: flex;\n  flex-flow: row nowrap;\n  overflow-x: auto;\n  align-items: stretch;\n  justify-content: flex-start;\n}\n.speaker-carousel__card {\n  width: 21rem;\n  flex-shrink: 0;\n  overflow: hidden;\n  margin-right: 0.8rem;\n}\n@media screen and (max-width: 425px) {\n  .speaker-carousel__card {\n    width: 100%;\n    max-width: 19rem;\n  }\n}\n.speaker-carousel__card:last-child {\n  margin-right: 0;\n}\n.speaker-carousel__controls {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin-bottom: 3rem;\n}\n.speaker-carousel__controls_hidden {\n  display: none;\n}\n.speaker-carousel__arrow-button {\n  flex: auto 0 0;\n}\n.speaker-carousel__link {\n  margin: 0 1rem 0.3rem;\n  color: #4eb7a8;\n  text-decoration: underline;\n  cursor: pointer;\n  font-size: normal 1rem/1 'Lato', Arial, sans-serif;\n}\n@media (hover: hover) {\n  .speaker-carousel__link:hover {\n    text-decoration: none;\n  }\n}\n@media (hover: hover) {\n  .speaker-carousel__link:active,\n  .speaker-carousel__link:visited {\n    text-decoration: underline;\n  }\n}\n@media (hover: none) {\n  .speaker-carousel__link:active,\n  .speaker-carousel__link:visited {\n    text-decoration: none;\n  }\n}\n.speaker-carousel_view_small .speaker-carousel__arrow-button {\n  display: none;\n}\n.speaker-carousel_view_small .speaker-carousel__cards {\n  text-align: center;\n  background-color: #fff;\n}\n.speaker-carousel_view_small .speaker-carousel__card-wrapper {\n  flex-wrap: wrap;\n  justify-content: center;\n}\n.speaker-carousel_view_small .speaker-carousel__card {\n  margin: 0 0 1rem;\n}\n.speaker-carousel_view_small .speaker-carousel__card:nth-child(n+4) {\n  display: none;\n}\n.speaker-carousel_view_small.speaker-carousel_view_full .speaker-carousel__card-wrapper {\n  max-height: none;\n}\n.speaker-carousel_view_full .speaker-carousel__arrow-button {\n  display: none;\n}\n.speaker-carousel_view_full .speaker-carousel__cards {\n  text-align: center;\n  background-color: #fff;\n}\n.speaker-carousel_view_full .speaker-carousel__card-wrapper {\n  flex-wrap: wrap;\n  justify-content: center;\n}\n.speaker-carousel_view_full .speaker-carousel__card {\n  margin: 0 0.8rem 1rem 0.8rem;\n}\n.speaker-carousel_view_full.speaker-carousel_view_small .speaker-carousel__card {\n  margin: 0 0 1rem;\n  display: block;\n}\n", ""]);
+exports.push([module.i, ".policy-tickbox {\n  display: flex;\n  align-items: center;\n}\n.policy-tickbox__checkbox {\n  flex: auto 0 0;\n}\n.policy-tickbox__text {\n  flex: auto 1 1;\n  font-size: 1rem;\n  margin-left: 1rem;\n}\n", ""]);
 
 
 /***/ }),
@@ -14976,15 +18579,38 @@ if (content.locals) {
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
+// Imports
+var getUrl = __webpack_require__(3);
+var ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(99));
+var ___CSS_LOADER_URL___1___ = getUrl(__webpack_require__(100));
+var ___CSS_LOADER_URL___2___ = getUrl(__webpack_require__(101));
 // Module
-exports.push([module.i, ".stages-section__title {\n  text-transform: uppercase;\n  font: bold 1.285714285714286rem/1 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #4f4f4f;\n  letter-spacing: 0.095rem;\n  margin-bottom: 1.9rem;\n}\n.stages-section__bread-crumbs {\n  width: 100%;\n}\n", ""]);
+exports.push([module.i, ".profile-card {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.profile-card__photo {\n  display: inline-block;\n  flex: 0 0 6.648351648351648rem;\n  height: 6.648351648351648rem;\n  margin-right: 0.934065934065934rem;\n  border-radius: 50%;\n  border: 0.384615384615385rem solid #e5e5e5;\n  background: #e5e5e5 no-repeat;\n  background-size: cover;\n}\n.profile-card__box {\n  position: relative;\n  flex: 1 1 11.64835164835165rem;\n  padding: 0.714285714285714rem;\n  border-radius: 0.549450549450549rem;\n  text-align: center;\n  background-color: #e5e5e5;\n  z-index: 1;\n}\n.profile-card__box::before {\n  content: '';\n  position: absolute;\n  top: 50%;\n  left: 0;\n  width: 1.098901098901099rem;\n  height: 1.098901098901099rem;\n  background-color: inherit;\n  border-radius: 0.274725274725275rem;\n  transform: scaleY(0.8) translate(-30%, -50%) rotate(45deg);\n  z-index: -1;\n}\n.profile-card__name {\n  margin-bottom: 0.10989010989011rem;\n  font: normal 1.285714285714286rem 'Lato', Arial, sans-serif;\n  color: #e75735;\n  text-transform: capitalize;\n}\n.profile-card__position {\n  margin: 0 0 0.714285714285714rem 0;\n  font: bold 0.785714285714286rem 'Lato', Arial, sans-serif;\n  color: #4f4f4f;\n  letter-spacing: 0.049450549450549rem;\n  text-transform: uppercase;\n}\n.profile-card__icons {\n  display: flex;\n  justify-content: space-around;\n  align-items: center;\n  max-width: 8.791208791rem;\n  margin: 0 auto;\n}\n.profile-card__icon {\n  flex: 1.6rem 0 0;\n  height: 1.9rem;\n  background: #747474;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n  -webkit-tap-highlight-color: transparent;\n  user-select: none;\n}\n@media (hover: hover) {\n  .profile-card__icon:hover {\n    background: #e75735;\n  }\n}\n.profile-card__icon:active,\n.profile-card__icon:focus {\n  background: #e75735;\n}\n.profile-card__icon_for-facebook {\n  height: 1.6rem;\n  -webkit-mask: url(" + ___CSS_LOADER_URL___0___ + ") center no-repeat;\n          mask: url(" + ___CSS_LOADER_URL___0___ + ") center no-repeat;\n  -webkit-mask-size: contain;\n          mask-size: contain;\n}\n.profile-card__icon_for-twitter {\n  -webkit-mask: url(" + ___CSS_LOADER_URL___1___ + ") center no-repeat;\n          mask: url(" + ___CSS_LOADER_URL___1___ + ") center no-repeat;\n  -webkit-mask-size: contain;\n          mask-size: contain;\n  flex-basis: 1.9rem;\n}\n.profile-card__icon_for-dribbble {\n  -webkit-mask: url(" + ___CSS_LOADER_URL___2___ + ") center no-repeat;\n          mask: url(" + ___CSS_LOADER_URL___2___ + ") center no-repeat;\n  -webkit-mask-size: contain;\n          mask-size: contain;\n}\n.profile-card_color_cyan .profile-card__box {\n  background-color: #4eb7a8;\n}\n.profile-card_color_cyan .profile-card__box::before {\n  background-color: #4eb7a8;\n}\n.profile-card_color_cyan .profile-card__name {\n  color: #fff;\n}\n.profile-card_color_cyan .profile-card__position {\n  color: #fff;\n}\n.profile-card_color_cyan .profile-card__icon {\n  background-color: #fff;\n}\n@media (hover: hover) {\n  .profile-card_color_cyan .profile-card__icon:hover {\n    opacity: 0.8;\n  }\n}\n.profile-card_color_cyan .profile-card__icon:active,\n.profile-card_color_cyan .profile-card__icon:focus {\n  opacity: 0.8;\n}\n", ""]);
 
 
 /***/ }),
 /* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(100);
+module.exports = __webpack_require__.p + "assets/img/facebook.svg";
+
+/***/ }),
+/* 100 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/img/twitter.svg";
+
+/***/ }),
+/* 101 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/img/dribbble.svg";
+
+/***/ }),
+/* 102 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(103);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -15003,7 +18629,290 @@ if (content.locals) {
 
 
 /***/ }),
-/* 100 */
+/* 103 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// Module
+exports.push([module.i, ".profile-section__title {\n  text-transform: uppercase;\n  font: bold 1.285714285714286rem/1 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #4f4f4f;\n  letter-spacing: 0.095rem;\n  margin-bottom: 2.032967033rem;\n  letter-spacing: 0.05rem;\n  word-spacing: 0.3rem;\n}\n.profile-section__container {\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: space-around;\n}\n.profile-section__card {\n  margin-bottom: 2rem;\n  width: 100%;\n  max-width: 19.78021978rem;\n  min-width: 14.28571429rem;\n}\n@media screen and (max-width: 900px) {\n  .profile-section__card {\n    margin: 0 1rem 2rem;\n  }\n}\n", ""]);
+
+
+/***/ }),
+/* 104 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(105);
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = "head";
+options.singleton = false;
+
+var update = __webpack_require__(1)(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
+
+
+/***/ }),
+/* 105 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// Module
+exports.push([module.i, ".registration-form__header {\n  position: fixed;\n  padding: 6rem 0 0;\n  top: 0;\n  left: 50%;\n  width: 96%;\n  max-width: 54.94505495rem;\n  background: linear-gradient(#fff 0%, #fff 85%, rgba(255,255,255,0) 85%, rgba(255,255,255,0) 100%);\n  z-index: 100;\n  transform: translateX(-50%);\n}\n.registration-form__title {\n  text-transform: uppercase;\n  font: bold 2rem 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #4f4f4f;\n  letter-spacing: 0.095rem;\n}\n@media screen and (max-width: 600px) {\n  .registration-form__title {\n    font-size: 1.5rem;\n  }\n}\n.registration-form__bread-crumbs {\n  width: 100%;\n  margin: 1rem 0;\n}\n.registration-form__stage_first {\n  width: 100%;\n  max-width: 43.95604396rem;\n  margin: 0 auto;\n}\n.registration-form__stage_second {\n  margin-top: 3rem;\n  overflow: hidden;\n}\n.registration-form__stage_third {\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: center;\n  align-items: center;\n  padding: 0.5rem 1rem;\n  margin: 2rem auto;\n  width: 100%;\n  max-width: 43.95604396rem;\n  background-color: #bfcac8;\n  border-radius: 0.549450549rem;\n}\n.registration-form__policy-tickbox {\n  flex: 12.63736264rem 1 1;\n  margin-right: 1rem;\n}\n@media screen and (max-width: 425px) {\n  .registration-form__policy-tickbox {\n    flex: 100% 0 0;\n    margin: 0 0 0.5rem;\n  }\n}\n.registration-form__button {\n  flex: auto 0 0;\n}\n", ""]);
+
+
+/***/ }),
+/* 106 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(107);
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = "head";
+options.singleton = false;
+
+var update = __webpack_require__(1)(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
+
+
+/***/ }),
+/* 107 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// Module
+exports.push([module.i, ".search-box {\n  display: flex;\n  flex-flow: row nowrap;\n  background-color: #e5e5e5;\n  border-radius: 0.164835165rem;\n  overflow: hidden;\n}\n.search-box_filled {\n  background-color: #e75735;\n}\n.search-box_filled .search-box__input {\n  color: #fff;\n}\n.search-box__label {\n  flex-grow: 1;\n}\n.search-box__input {\n  width: 100%;\n  padding: 0.32967033rem 0.934065934rem 0.384615385rem;\n  font: normal 1rem 'SourceSansPro', Arial, sans-serif;\n  letter-spacing: 0.01rem;\n  color: #7e7e7e;\n  background: inherit;\n  border: none;\n  -webkit-appearance: none;\n}\n.search-box__button {\n  flex: 2.362637363rem 0 0;\n  position: relative;\n  border: none;\n  background-color: #e75735;\n  cursor: pointer;\n  -webkit-appearance: none;\n  outline: none;\n}\n.search-box__button:focus {\n  background-color: #d03c19;\n}\n.search-box__button::before {\n  content: '';\n  display: block;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  width: 0.75rem;\n  height: 0.75rem;\n  border: 0.10989011rem #fff solid;\n  border-radius: 50%;\n  transform: translate(-65%, -60%);\n}\n.search-box__button::after {\n  content: '';\n  position: absolute;\n  top: 62%;\n  left: 50%;\n  display: block;\n  height: 0.164835165rem;\n  width: 0.55rem;\n  background-color: #fff;\n  border-radius: 0.10989011rem;\n  transform: rotate(45deg);\n}\n@media (hover: hover) {\n  .search-box__button:hover {\n    background-color: #d03c19;\n  }\n}\n@media (hover: none) {\n  .search-box__button:active {\n    background-color: #d03c19;\n  }\n}\n@media (hover: hover) {\n  .search-box__button:active::before {\n    transform: translate(-65%, -60%) rotate(45deg) scale(0.9);\n  }\n}\n@media (hover: hover) {\n  .search-box__button:active::after {\n    transform: rotate(45deg) scale(0.9);\n  }\n}\n", ""]);
+
+
+/***/ }),
+/* 108 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(109);
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = "head";
+options.singleton = false;
+
+var update = __webpack_require__(1)(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
+
+
+/***/ }),
+/* 109 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// Module
+exports.push([module.i, ".search-section__title {\n  text-transform: uppercase;\n  font: bold 1.285714285714286rem/1 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #4f4f4f;\n  letter-spacing: 0.095rem;\n  margin-bottom: 1.46rem;\n  letter-spacing: 0.05rem;\n}\n.search-section__search-box {\n  margin-bottom: 1.19rem;\n}\n.search-section__search-box:nth-child(2) {\n  margin-bottom: 1.25rem;\n}\n.search-section__form {\n  width: 100%;\n  margin: 0 auto;\n}\n", ""]);
+
+
+/***/ }),
+/* 110 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(111);
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = "head";
+options.singleton = false;
+
+var update = __webpack_require__(1)(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
+
+
+/***/ }),
+/* 111 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// Module
+exports.push([module.i, ".slider-section__title {\n  text-transform: uppercase;\n  font: bold 1.285714285714286rem/1 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #4f4f4f;\n  letter-spacing: 0.095rem;\n  margin-bottom: 3.3rem;\n}\n.slider-section__container {\n  display: flex;\n  justify-content: space-between;\n  flex-flow: row wrap;\n}\n.slider-section__slider {\n  flex: 12.36263736rem 1 0;\n  margin-bottom: 2.5rem;\n  max-width: 38.46153846rem;\n  min-width: 12.36263736rem;\n}\n@media screen and (min-width: 701px) {\n  .slider-section__slider:first-child {\n    margin-right: 10%;\n  }\n}\n@media screen and (max-width: 700px) {\n  .slider-section__slider {\n    margin: 0 5% 2.5rem;\n  }\n}\n", ""]);
+
+
+/***/ }),
+/* 112 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(113);
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = "head";
+options.singleton = false;
+
+var update = __webpack_require__(1)(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
+
+
+/***/ }),
+/* 113 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// Module
+exports.push([module.i, ".slider__tip {\n  display: none;\n  position: absolute;\n  width: 2.472527472527473rem;\n  height: 1.758241758241758rem;\n  padding-top: 0.274725274725275rem;\n  z-index: 2;\n  font: bold 0.92rem 'Lato', Arial, sans-serif;\n  letter-spacing: 0.08rem;\n  text-align: center;\n  color: #fff;\n  background-color: #e75735;\n  border-radius: 0.384615385rem;\n  transform: translate(-50%, -160%);\n}\n.slider__tip::before {\n  content: '';\n  display: block;\n  position: absolute;\n  left: 50%;\n  bottom: 0;\n  width: 0.549450549450549rem;\n  height: 0.549450549450549rem;\n  background-color: inherit;\n  border-radius: 30%;\n  transform: translate(-50%, 20%) scaleY(1.3) rotate(-45deg);\n}\n.slider__tip_visible {\n  display: block;\n}\n.slider__container {\n  position: relative;\n  width: 98%;\n  height: 0.384615384615385rem;\n  background-color: #e5e5e5;\n  border-radius: 0.549450549450549rem;\n}\n.slider__handle {\n  position: absolute;\n  width: 1.4rem;\n  height: 1.4rem;\n  z-index: 2;\n  background-color: #e75735;\n  border-radius: 50%;\n  outline: none;\n  transform: translate(-50%, -40%);\n  cursor: pointer;\n}\n.slider__range {\n  position: absolute;\n  height: inherit;\n  z-index: 1;\n  background-color: #4eb7a8;\n  border-radius: inherit;\n}\n.slider_type_scale .slider__handle {\n  background-color: #4eb7a8;\n}\n.slider__scale {\n  position: relative;\n}\n.slider__scale-item {\n  display: inline-block;\n  position: absolute;\n  top: 1rem;\n  transform: translateX(-50%);\n  color: #cfcfcf;\n  font: bold 0.785714285714286rem 'Lato', Arial, sans-serif;\n}\n", ""]);
+
+
+/***/ }),
+/* 114 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(115);
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = "head";
+options.singleton = false;
+
+var update = __webpack_require__(1)(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
+
+
+/***/ }),
+/* 115 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// Imports
+exports.i(__webpack_require__(6), "");
+// Module
+exports.push([module.i, ".speaker-card {\n  display: flex;\n  flex-flow: column nowrap;\n  width: 100%;\n  height: 100%;\n  padding: 1rem;\n  background-color: #e75735;\n  border-radius: 0.549450549rem;\n  overflow: hidden;\n}\n.speaker-card__profile-card {\n  width: 100%;\n  margin-bottom: 1rem;\n}\n.speaker-card__text {\n  font: lighter 1rem 'Lato', Arial, sans-serif;\n  text-align: center;\n  max-height: 8.5rem;\n  color: #fff;\n  flex-grow: 1;\n  overflow-y: auto;\n}\n", ""]);
+
+
+/***/ }),
+/* 116 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(117);
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = "head";
+options.singleton = false;
+
+var update = __webpack_require__(1)(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
+
+
+/***/ }),
+/* 117 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// Imports
+exports.i(__webpack_require__(6), "");
+// Module
+exports.push([module.i, ".speaker-carousel {\n  border-left: 0.549450549450549rem solid #fff;\n  border-right: 0.549450549450549rem solid #fff;\n}\n.speaker-carousel__cards {\n  border-radius: 0.549450549450549rem;\n  background-color: #c6c6c6;\n  width: 100%;\n  padding: 0.549450549450549rem 0.549450549450549rem 0 0.549450549450549rem;\n  margin: 3rem auto 1rem;\n}\n.speaker-carousel__card-wrapper {\n  display: flex;\n  flex-flow: row nowrap;\n  overflow-x: auto;\n  align-items: stretch;\n  justify-content: flex-start;\n}\n.speaker-carousel__card {\n  width: 21rem;\n  flex-shrink: 0;\n  overflow: hidden;\n  margin-right: 0.8rem;\n}\n@media screen and (max-width: 425px) {\n  .speaker-carousel__card {\n    width: 100%;\n    max-width: 19rem;\n  }\n}\n.speaker-carousel__card:last-child {\n  margin-right: 0;\n}\n.speaker-carousel__controls {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin-bottom: 3rem;\n}\n.speaker-carousel__controls_hidden {\n  display: none;\n}\n.speaker-carousel__arrow-button {\n  flex: auto 0 0;\n}\n.speaker-carousel__link {\n  margin: 0 1rem 0.3rem;\n  color: #4eb7a8;\n  text-decoration: underline;\n  cursor: pointer;\n  font-size: normal 1rem/1 'Lato', Arial, sans-serif;\n}\n@media (hover: hover) {\n  .speaker-carousel__link:hover {\n    text-decoration: none;\n  }\n}\n@media (hover: hover) {\n  .speaker-carousel__link:active,\n  .speaker-carousel__link:visited {\n    text-decoration: underline;\n  }\n}\n@media (hover: none) {\n  .speaker-carousel__link:active,\n  .speaker-carousel__link:visited {\n    text-decoration: none;\n  }\n}\n.speaker-carousel_view_small .speaker-carousel__arrow-button {\n  display: none;\n}\n.speaker-carousel_view_small .speaker-carousel__cards {\n  text-align: center;\n  background-color: #fff;\n}\n.speaker-carousel_view_small .speaker-carousel__card-wrapper {\n  flex-wrap: wrap;\n  justify-content: center;\n}\n.speaker-carousel_view_small .speaker-carousel__card {\n  margin: 0 0 1rem;\n}\n.speaker-carousel_view_small .speaker-carousel__card:nth-child(n+4) {\n  display: none;\n}\n.speaker-carousel_view_small.speaker-carousel_view_full .speaker-carousel__card-wrapper {\n  max-height: none;\n}\n.speaker-carousel_view_full .speaker-carousel__arrow-button {\n  display: none;\n}\n.speaker-carousel_view_full .speaker-carousel__cards {\n  text-align: center;\n  background-color: #fff;\n}\n.speaker-carousel_view_full .speaker-carousel__card-wrapper {\n  flex-wrap: wrap;\n  justify-content: center;\n}\n.speaker-carousel_view_full .speaker-carousel__card {\n  margin: 0 0.8rem 1rem 0.8rem;\n}\n.speaker-carousel_view_full.speaker-carousel_view_small .speaker-carousel__card {\n  margin: 0 0 1rem;\n  display: block;\n}\n.speaker-carousel .mCS-dark-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {\n  background-color: rgba(0,0,0,0.3);\n}\n.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {\n  background-color: rgba(0,0,0,0.5);\n}\n.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar .mCS-dark-thin.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {\n  background-color: rgba(0,0,0,0.7);\n}\n", ""]);
+
+
+/***/ }),
+/* 118 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(119);
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = "head";
+options.singleton = false;
+
+var update = __webpack_require__(1)(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
+
+
+/***/ }),
+/* 119 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// Module
+exports.push([module.i, ".stages-section__title {\n  text-transform: uppercase;\n  font: bold 1.285714285714286rem/1 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #4f4f4f;\n  letter-spacing: 0.095rem;\n  margin-bottom: 1.9rem;\n}\n.stages-section__bread-crumbs {\n  width: 100%;\n}\n", ""]);
+
+
+/***/ }),
+/* 120 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(121);
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = "head";
+options.singleton = false;
+
+var update = __webpack_require__(1)(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
+
+
+/***/ }),
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -15012,10 +18921,10 @@ exports.push([module.i, ".subscribe-form {\n  width: 100%;\n  padding: 2.5rem 1r
 
 
 /***/ }),
-/* 101 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(102);
+var content = __webpack_require__(123);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -15034,7 +18943,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 102 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -15043,10 +18952,10 @@ exports.push([module.i, ".subscribe-toggle {\n  display: flex;\n  flex-flow: row
 
 
 /***/ }),
-/* 103 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(104);
+var content = __webpack_require__(125);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -15065,7 +18974,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 104 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -15074,10 +18983,10 @@ exports.push([module.i, ".talks-section {\n  text-align: center;\n}\n.talks-sect
 
 
 /***/ }),
-/* 105 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(106);
+var content = __webpack_require__(127);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -15096,7 +19005,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 106 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -15105,10 +19014,10 @@ exports.push([module.i, ".tick-box {\n  position: relative;\n  display: inline-b
 
 
 /***/ }),
-/* 107 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(108);
+var content = __webpack_require__(129);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -15127,7 +19036,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 108 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -15136,10 +19045,10 @@ exports.push([module.i, ".toggle-switch {\n  position: relative;\n  display: inl
 
 
 /***/ }),
-/* 109 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(110);
+var content = __webpack_require__(131);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -15158,7 +19067,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 110 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -15167,10 +19076,10 @@ exports.push([module.i, ".validation-input {\n  width: 100%;\n  display: flex;\n
 
 
 /***/ }),
-/* 111 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(112);
+var content = __webpack_require__(133);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -15189,19 +19098,19 @@ if (content.locals) {
 
 
 /***/ }),
-/* 112 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
 // Module
-exports.push([module.i, ".video-section__title {\n  text-transform: uppercase;\n  font: bold 1.285714285714286rem/1 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #4f4f4f;\n  letter-spacing: 0.095rem;\n  margin-bottom: 1.7rem;\n}\n", ""]);
+exports.push([module.i, ".video-section__title {\n  text-transform: uppercase;\n  font: bold 1.285714285714286rem/1 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #4f4f4f;\n  letter-spacing: 0.095rem;\n  margin-bottom: 1.9rem;\n}\n", ""]);
 
 
 /***/ }),
-/* 113 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(114);
+var content = __webpack_require__(135);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -15220,7 +19129,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 114 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -15229,10 +19138,10 @@ exports.push([module.i, ".video {\n  position: relative;\n  padding-bottom: 56.2
 
 
 /***/ }),
-/* 115 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(116);
+var content = __webpack_require__(137);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -15251,7 +19160,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 116 */
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -15260,10 +19169,10 @@ exports.push([module.i, ".contacts {\n  display: flex;\n  flex-flow: column nowr
 
 
 /***/ }),
-/* 117 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(118);
+var content = __webpack_require__(139);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -15282,19 +19191,19 @@ if (content.locals) {
 
 
 /***/ }),
-/* 118 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
 // Module
-exports.push([module.i, ".index {\n  display: flex;\n  flex-flow: column nowrap;\n  min-height: 100%;\n  background-color: #e5e5e5;\n}\n.index__main {\n  flex: 1 0 auto;\n  max-width: 110rem;\n  margin: 0 auto;\n  box-shadow: 0 0 5.5rem 0px rgba(0,0,0,0.4);\n}\n.index__footer {\n  flex: 0 0 auto;\n}\n", ""]);
+exports.push([module.i, ".index {\n  display: flex;\n  flex-flow: column nowrap;\n  min-height: 100%;\n  background-color: #e5e5e5;\n}\n.index__main {\n  flex: 1 0 auto;\n  width: 100%;\n  max-width: 110rem;\n  margin: 0 auto;\n  box-shadow: 0 0 5.5rem 0px rgba(0,0,0,0.4);\n}\n.index__footer {\n  flex: 0 0 auto;\n}\n", ""]);
 
 
 /***/ }),
-/* 119 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(120);
+var content = __webpack_require__(141);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -15313,7 +19222,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 120 */
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -15322,10 +19231,10 @@ exports.push([module.i, ".registration {\n  display: flex;\n  flex-flow: column 
 
 
 /***/ }),
-/* 121 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(122);
+var content = __webpack_require__(143);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -15344,19 +19253,19 @@ if (content.locals) {
 
 
 /***/ }),
-/* 122 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
 // Module
-exports.push([module.i, ".schedule {\n  width: 100%;\n  margin-top: 5.494505495rem;\n  display: flex;\n  flex-flow: column nowrap;\n  min-height: 100%;\n}\n.schedule__main {\n  flex: 1 0 auto;\n}\n.schedule__title {\n  text-transform: uppercase;\n  font: bold 2rem 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #4f4f4f;\n  letter-spacing: 0.095rem;\n}\n.schedule__content {\n  width: 100%;\n  max-width: 71.42857143rem;\n  margin: 2rem auto;\n}\n.schedule__footer {\n  flex: 0 0 auto;\n}\n", ""]);
+exports.push([module.i, ".schedule {\n  width: 100%;\n  display: flex;\n  flex-flow: column nowrap;\n  min-height: 100%;\n}\n.schedule__main {\n  flex: 1 0 auto;\n  margin-top: 5.494505495rem;\n}\n.schedule__title {\n  text-transform: uppercase;\n  font: bold 2rem 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #4f4f4f;\n  letter-spacing: 0.095rem;\n}\n.schedule__content {\n  width: 100%;\n  max-width: 71.42857143rem;\n  margin: 2rem auto;\n}\n.schedule__footer {\n  flex: 0 0 auto;\n}\n", ""]);
 
 
 /***/ }),
-/* 123 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(124);
+var content = __webpack_require__(145);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -15375,7 +19284,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 124 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -15384,217 +19293,41 @@ exports.push([module.i, ".speakers {\n  display: flex;\n  flex-flow: column nowr
 
 
 /***/ }),
-/* 125 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var content = __webpack_require__(126);
-
-if (typeof content === 'string') {
-  content = [[module.i, content, '']];
-}
-
-var options = {}
-
-options.insert = "head";
-options.singleton = false;
-
-var update = __webpack_require__(1)(content, options);
-
-if (content.locals) {
-  module.exports = content.locals;
-}
-
-
-/***/ }),
-/* 126 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(false);
-// Module
-exports.push([module.i, ".uidemo {\n  width: 87%;\n  max-width: 54.94505494505495rem;\n  margin: 5.769230769230769rem auto 7.802197802197802rem;\n  text-align: center;\n}\n.uidemo__button-section {\n  width: 78%;\n  max-width: 39.56043956043956rem;\n  margin: 0 auto;\n}\n@media screen and (max-width: 900px) {\n  .uidemo__button-section {\n    width: 100%;\n  }\n}\n@media screen and (max-width: 672px) {\n  .uidemo__button-section {\n    max-width: 21.97802197802198rem;\n  }\n}\n.uidemo__arrow-section {\n  width: 69.34532455885511%;\n  margin: 2rem auto 0;\n  max-width: 30.21978021978022rem;\n}\n@media screen and (max-width: 900px) {\n  .uidemo__arrow-section {\n    width: 100%;\n  }\n}\n@media screen and (max-width: 672px) {\n  .uidemo__arrow-section {\n    max-width: 14.28571428571429rem;\n  }\n}\n.uidemo__chart-section {\n  width: 100%;\n  margin: 1.65rem auto 0;\n}\n@media screen and (max-width: 900px) {\n  .uidemo__chart-section {\n    max-width: 35.16483516483516rem;\n  }\n}\n.uidemo__slider-section {\n  width: 97.38660334221728%;\n  margin: 0.824175824175824rem auto 0;\n}\n.uidemo__stages-section {\n  width: 98.01816367517588%;\n  margin: 1.7rem auto 0;\n}\n.uidemo__form-section {\n  width: 97.63922747540073%;\n  margin: 4.1rem auto 0;\n  max-width: 71.42857rem;\n}\n.uidemo__search-section {\n  display: inline-block;\n  width: 47.36702497189557%;\n  margin: 2.032967033rem 5.684042997% 0 auto;\n  max-width: 32.96703rem;\n  vertical-align: top;\n}\n@media screen and (max-width: 900px) {\n  .uidemo__search-section {\n    width: 100%;\n    margin-right: auto;\n  }\n}\n.uidemo__profile-section {\n  display: inline-block;\n  width: 43.956599174%;\n  margin-top: 2.032967033rem;\n  vertical-align: top;\n}\n@media screen and (max-width: 900px) {\n  .uidemo__profile-section {\n    width: 100%;\n    margin: 4rem auto 0;\n  }\n}\n.uidemo__news-section {\n  width: 97.512915409%;\n  margin: 4.7rem auto 0;\n  max-width: 52.1978022rem;\n}\n@media screen and (max-width: 900px) {\n  .uidemo__news-section {\n    margin: 2rem auto 0;\n    max-width: 27.47252747rem;\n  }\n}\n.uidemo__map-section {\n  width: 98.1%;\n  margin: 3.3rem auto 0;\n}\n.uidemo__calendar-section {\n  display: inline-block;\n  width: 45.851280173%;\n  margin: 3.6rem 4.4% 0 auto;\n  vertical-align: top;\n}\n@media screen and (max-width: 900px) {\n  .uidemo__calendar-section {\n    width: 100%;\n    margin-right: auto;\n  }\n}\n.uidemo__message-section {\n  display: inline-block;\n  width: 47.240712905%;\n  margin-top: 3.6rem;\n  vertical-align: top;\n}\n@media screen and (max-width: 900px) {\n  .uidemo__message-section {\n    width: 100%;\n  }\n}\n.uidemo__video-section {\n  width: 97.7%;\n  margin: 3.7rem auto 0;\n}\n@media screen and (max-width: 425px) {\n  .uidemo__video-section {\n    margin-top: 2rem;\n  }\n}\n", ""]);
-
-
-/***/ }),
-/* 127 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var content = __webpack_require__(128);
-
-if (typeof content === 'string') {
-  content = [[module.i, content, '']];
-}
-
-var options = {}
-
-options.insert = "head";
-options.singleton = false;
-
-var update = __webpack_require__(1)(content, options);
-
-if (content.locals) {
-  module.exports = content.locals;
-}
-
-
-/***/ }),
-/* 128 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(false);
-// Imports
-var getUrl = __webpack_require__(3);
-var ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(129));
-var ___CSS_LOADER_URL___1___ = getUrl(__webpack_require__(130));
-var ___CSS_LOADER_URL___2___ = getUrl(__webpack_require__(131));
-var ___CSS_LOADER_URL___3___ = getUrl(__webpack_require__(132));
-var ___CSS_LOADER_URL___4___ = getUrl(__webpack_require__(133));
-var ___CSS_LOADER_URL___5___ = getUrl(__webpack_require__(134));
-var ___CSS_LOADER_URL___6___ = getUrl(__webpack_require__(135));
-var ___CSS_LOADER_URL___7___ = getUrl(__webpack_require__(136));
-var ___CSS_LOADER_URL___8___ = getUrl(__webpack_require__(137));
-var ___CSS_LOADER_URL___9___ = getUrl(__webpack_require__(138));
-var ___CSS_LOADER_URL___10___ = getUrl(__webpack_require__(139));
-var ___CSS_LOADER_URL___11___ = getUrl(__webpack_require__(140));
-var ___CSS_LOADER_URL___12___ = getUrl(__webpack_require__(141));
-var ___CSS_LOADER_URL___13___ = getUrl(__webpack_require__(142));
-var ___CSS_LOADER_URL___14___ = getUrl(__webpack_require__(143));
-var ___CSS_LOADER_URL___15___ = getUrl(__webpack_require__(144));
-// Module
-exports.push([module.i, "@font-face {\n  font-family: 'Lato';\n  src: url(" + ___CSS_LOADER_URL___0___ + ");\n  src: local('☺'), url(" + ___CSS_LOADER_URL___1___ + ") format('woff'), url(" + ___CSS_LOADER_URL___2___ + ") format('truetype'), url(" + ___CSS_LOADER_URL___3___ + ") format('svg');\n  font-weight: normal;\n  font-style: normal;\n}\n@font-face {\n  font-family: 'Lato';\n  src: url(" + ___CSS_LOADER_URL___4___ + ");\n  src: local('☺'), url(" + ___CSS_LOADER_URL___5___ + ") format('woff'), url(" + ___CSS_LOADER_URL___6___ + ") format('truetype'), url(" + ___CSS_LOADER_URL___7___ + ") format('svg');\n  font-weight: bold;\n  font-style: normal;\n}\n@font-face {\n  font-family: 'Lato';\n  src: url(" + ___CSS_LOADER_URL___8___ + ");\n  src: local('☺'), url(" + ___CSS_LOADER_URL___9___ + ") format('woff'), url(" + ___CSS_LOADER_URL___10___ + ") format('truetype'), url(" + ___CSS_LOADER_URL___11___ + ") format('svg');\n  font-weight: lighter;\n  font-style: normal;\n}\n@font-face {\n  font-family: 'SourceSansPro';\n  src: url(" + ___CSS_LOADER_URL___12___ + ");\n  src: local('☺'), url(" + ___CSS_LOADER_URL___13___ + ") format('woff'), url(" + ___CSS_LOADER_URL___14___ + ") format('truetype'), url(" + ___CSS_LOADER_URL___15___ + ") format('svg');\n  font-weight: normal;\n  font-style: normal;\n}\n", ""]);
-
-
-/***/ }),
-/* 129 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "assets/fonts/lato-regular.eot";
-
-/***/ }),
-/* 130 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "assets/fonts/lato-regular.woff";
-
-/***/ }),
-/* 131 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "assets/fonts/lato-regular.ttf";
-
-/***/ }),
-/* 132 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "assets/fonts/lato-regular.svg";
-
-/***/ }),
-/* 133 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "assets/fonts/lato-black.eot";
-
-/***/ }),
-/* 134 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "assets/fonts/lato-black.woff";
-
-/***/ }),
-/* 135 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "assets/fonts/lato-black.ttf";
-
-/***/ }),
-/* 136 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "assets/fonts/lato-black.svg";
-
-/***/ }),
-/* 137 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "assets/fonts/lato-light.eot";
-
-/***/ }),
-/* 138 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "assets/fonts/lato-light.woff";
-
-/***/ }),
-/* 139 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "assets/fonts/lato-light.ttf";
-
-/***/ }),
-/* 140 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "assets/fonts/lato-light.svg";
-
-/***/ }),
-/* 141 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "assets/fonts/sourcesanspro-regular.eot";
-
-/***/ }),
-/* 142 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "assets/fonts/sourcesanspro-regular.woff";
-
-/***/ }),
-/* 143 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "assets/fonts/sourcesanspro-regular.ttf";
-
-/***/ }),
-/* 144 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "assets/fonts/sourcesanspro-regular.svg";
-
-/***/ }),
-/* 145 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var content = __webpack_require__(146);
-
-if (typeof content === 'string') {
-  content = [[module.i, content, '']];
-}
-
-var options = {}
-
-options.insert = "head";
-options.singleton = false;
-
-var update = __webpack_require__(1)(content, options);
-
-if (content.locals) {
-  module.exports = content.locals;
-}
-
-
-/***/ }),
 /* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(0)(false);
-// Module
-exports.push([module.i, "", ""]);
+var content = __webpack_require__(147);
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = "head";
+options.singleton = false;
+
+var update = __webpack_require__(1)(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
 
 
 /***/ }),
 /* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(148);
+exports = module.exports = __webpack_require__(0)(false);
+// Module
+exports.push([module.i, ".uidemo__main {\n  width: 87%;\n  max-width: 54.94505494505495rem;\n  margin: 6rem auto 7.8rem;\n  text-align: center;\n}\n.uidemo__button-section {\n  width: 78%;\n  max-width: 39.56043956043956rem;\n  margin: 0 auto;\n}\n@media screen and (max-width: 900px) {\n  .uidemo__button-section {\n    width: 100%;\n  }\n}\n@media screen and (max-width: 672px) {\n  .uidemo__button-section {\n    max-width: 21.97802197802198rem;\n  }\n}\n.uidemo__arrow-section {\n  width: 69.34532455885511%;\n  margin: 2.2rem auto 0;\n  max-width: 30.21978021978022rem;\n}\n@media screen and (max-width: 900px) {\n  .uidemo__arrow-section {\n    width: 100%;\n  }\n}\n@media screen and (max-width: 672px) {\n  .uidemo__arrow-section {\n    max-width: 14.28571428571429rem;\n  }\n}\n.uidemo__chart-section {\n  width: 100%;\n  margin: 1.9rem auto 0;\n}\n@media screen and (max-width: 900px) {\n  .uidemo__chart-section {\n    max-width: 35.16483516483516rem;\n  }\n}\n.uidemo__slider-section {\n  width: 97.38660334221728%;\n  margin: 1rem auto 0;\n}\n.uidemo__stages-section {\n  width: 98.01816367517588%;\n  margin: 2.1rem auto 0;\n}\n.uidemo__form-section {\n  width: 97.63922747540073%;\n  margin: 4.1rem auto 0;\n  max-width: 71.42857rem;\n}\n.uidemo__search-section {\n  display: inline-block;\n  width: 47.36702497189557%;\n  margin: 2.032967033rem 5.684042997% 0 auto;\n  max-width: 32.96703rem;\n  vertical-align: top;\n}\n@media screen and (max-width: 900px) {\n  .uidemo__search-section {\n    width: 100%;\n    margin-right: auto;\n  }\n}\n.uidemo__profile-section {\n  display: inline-block;\n  width: 43.956599174%;\n  margin-top: 2.032967033rem;\n  vertical-align: top;\n}\n@media screen and (max-width: 900px) {\n  .uidemo__profile-section {\n    width: 100%;\n    margin: 4rem auto 0;\n  }\n}\n.uidemo__news-section {\n  width: 97.512915409%;\n  margin: 4.9rem auto 0;\n  max-width: 52.1978022rem;\n}\n@media screen and (max-width: 900px) {\n  .uidemo__news-section {\n    margin: 2rem auto 0;\n    max-width: 27.47252747rem;\n  }\n}\n.uidemo__map-section {\n  width: 98.1%;\n  margin: 3.5rem auto 0;\n}\n.uidemo__calendar-section {\n  display: inline-block;\n  width: 45.851280173%;\n  margin: 3.9rem 4.4% 0 auto;\n  vertical-align: top;\n}\n@media screen and (max-width: 900px) {\n  .uidemo__calendar-section {\n    width: 100%;\n    margin-right: auto;\n  }\n}\n.uidemo__message-section {\n  display: inline-block;\n  width: 47.240712905%;\n  margin-top: 3.9rem;\n  vertical-align: top;\n}\n@media screen and (max-width: 900px) {\n  .uidemo__message-section {\n    width: 100%;\n  }\n}\n.uidemo__video-section {\n  width: 97.7%;\n  margin: 3.9rem auto 0;\n}\n@media screen and (max-width: 425px) {\n  .uidemo__video-section {\n    margin-top: 2rem;\n  }\n}\n", ""]);
+
+
+/***/ }),
+/* 148 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(149);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -15613,7 +19346,152 @@ if (content.locals) {
 
 
 /***/ }),
-/* 148 */
+/* 149 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// Imports
+var getUrl = __webpack_require__(3);
+var ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(150));
+var ___CSS_LOADER_URL___1___ = getUrl(__webpack_require__(151));
+var ___CSS_LOADER_URL___2___ = getUrl(__webpack_require__(152));
+var ___CSS_LOADER_URL___3___ = getUrl(__webpack_require__(153));
+var ___CSS_LOADER_URL___4___ = getUrl(__webpack_require__(154));
+var ___CSS_LOADER_URL___5___ = getUrl(__webpack_require__(155));
+var ___CSS_LOADER_URL___6___ = getUrl(__webpack_require__(156));
+var ___CSS_LOADER_URL___7___ = getUrl(__webpack_require__(157));
+var ___CSS_LOADER_URL___8___ = getUrl(__webpack_require__(158));
+var ___CSS_LOADER_URL___9___ = getUrl(__webpack_require__(159));
+var ___CSS_LOADER_URL___10___ = getUrl(__webpack_require__(160));
+var ___CSS_LOADER_URL___11___ = getUrl(__webpack_require__(161));
+var ___CSS_LOADER_URL___12___ = getUrl(__webpack_require__(162));
+var ___CSS_LOADER_URL___13___ = getUrl(__webpack_require__(163));
+var ___CSS_LOADER_URL___14___ = getUrl(__webpack_require__(164));
+var ___CSS_LOADER_URL___15___ = getUrl(__webpack_require__(165));
+// Module
+exports.push([module.i, "@font-face {\n  font-family: 'Lato';\n  src: url(" + ___CSS_LOADER_URL___0___ + ");\n  src: local('☺'), url(" + ___CSS_LOADER_URL___1___ + ") format('woff'), url(" + ___CSS_LOADER_URL___2___ + ") format('truetype'), url(" + ___CSS_LOADER_URL___3___ + ") format('svg');\n  font-weight: normal;\n  font-style: normal;\n}\n@font-face {\n  font-family: 'Lato';\n  src: url(" + ___CSS_LOADER_URL___4___ + ");\n  src: local('☺'), url(" + ___CSS_LOADER_URL___5___ + ") format('woff'), url(" + ___CSS_LOADER_URL___6___ + ") format('truetype'), url(" + ___CSS_LOADER_URL___7___ + ") format('svg');\n  font-weight: bold;\n  font-style: normal;\n}\n@font-face {\n  font-family: 'Lato';\n  src: url(" + ___CSS_LOADER_URL___8___ + ");\n  src: local('☺'), url(" + ___CSS_LOADER_URL___9___ + ") format('woff'), url(" + ___CSS_LOADER_URL___10___ + ") format('truetype'), url(" + ___CSS_LOADER_URL___11___ + ") format('svg');\n  font-weight: lighter;\n  font-style: normal;\n}\n@font-face {\n  font-family: 'SourceSansPro';\n  src: url(" + ___CSS_LOADER_URL___12___ + ");\n  src: local('☺'), url(" + ___CSS_LOADER_URL___13___ + ") format('woff'), url(" + ___CSS_LOADER_URL___14___ + ") format('truetype'), url(" + ___CSS_LOADER_URL___15___ + ") format('svg');\n  font-weight: normal;\n  font-style: normal;\n}\n", ""]);
+
+
+/***/ }),
+/* 150 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/fonts/lato-regular.eot";
+
+/***/ }),
+/* 151 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/fonts/lato-regular.woff";
+
+/***/ }),
+/* 152 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/fonts/lato-regular.ttf";
+
+/***/ }),
+/* 153 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/fonts/lato-regular.svg";
+
+/***/ }),
+/* 154 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/fonts/lato-black.eot";
+
+/***/ }),
+/* 155 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/fonts/lato-black.woff";
+
+/***/ }),
+/* 156 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/fonts/lato-black.ttf";
+
+/***/ }),
+/* 157 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/fonts/lato-black.svg";
+
+/***/ }),
+/* 158 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/fonts/lato-light.eot";
+
+/***/ }),
+/* 159 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/fonts/lato-light.woff";
+
+/***/ }),
+/* 160 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/fonts/lato-light.ttf";
+
+/***/ }),
+/* 161 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/fonts/lato-light.svg";
+
+/***/ }),
+/* 162 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/fonts/sourcesanspro-regular.eot";
+
+/***/ }),
+/* 163 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/fonts/sourcesanspro-regular.woff";
+
+/***/ }),
+/* 164 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/fonts/sourcesanspro-regular.ttf";
+
+/***/ }),
+/* 165 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/fonts/sourcesanspro-regular.svg";
+
+/***/ }),
+/* 166 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(167);
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = "head";
+options.singleton = false;
+
+var update = __webpack_require__(1)(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
+
+
+/***/ }),
+/* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -15622,10 +19500,10 @@ exports.push([module.i, "", ""]);
 
 
 /***/ }),
-/* 149 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(150);
+var content = __webpack_require__(169);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -15644,7 +19522,38 @@ if (content.locals) {
 
 
 /***/ }),
-/* 150 */
+/* 169 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// Module
+exports.push([module.i, "", ""]);
+
+
+/***/ }),
+/* 170 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(171);
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = "head";
+options.singleton = false;
+
+var update = __webpack_require__(1)(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
+
+
+/***/ }),
+/* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -15653,19 +19562,19 @@ exports.push([module.i, "* {\n  margin: 0;\n  padding: 0;\n}\n*,\n*::after,\n*::
 
 
 /***/ }),
-/* 151 */
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./android-chrome-192x192.png": 152,
-	"./android-chrome-256x256.png": 153,
-	"./apple-touch-icon.png": 154,
-	"./browserconfig.xml": 155,
-	"./favicon-16x16.png": 156,
-	"./favicon-32x32.png": 157,
-	"./favicon.ico": 158,
-	"./mstile-150x150.png": 159,
-	"./safari-pinned-tab.svg": 160
+	"./android-chrome-192x192.png": 173,
+	"./android-chrome-256x256.png": 174,
+	"./apple-touch-icon.png": 175,
+	"./browserconfig.xml": 176,
+	"./favicon-16x16.png": 177,
+	"./favicon-32x32.png": 178,
+	"./favicon.ico": 179,
+	"./mstile-150x150.png": 180,
+	"./safari-pinned-tab.svg": 181
 };
 
 
@@ -15686,88 +19595,107 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 151;
+webpackContext.id = 172;
 
 /***/ }),
-/* 152 */
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/favicons/android-chrome-192x192.png";
 
 /***/ }),
-/* 153 */
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/favicons/android-chrome-256x256.png";
 
 /***/ }),
-/* 154 */
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/favicons/apple-touch-icon.png";
 
 /***/ }),
-/* 155 */
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/favicons/browserconfig.xml";
 
 /***/ }),
-/* 156 */
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/favicons/favicon-16x16.png";
 
 /***/ }),
-/* 157 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/favicons/favicon-32x32.png";
 
 /***/ }),
-/* 158 */
+/* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/favicons/favicon.ico";
 
 /***/ }),
-/* 159 */
+/* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/favicons/mstile-150x150.png";
 
 /***/ }),
-/* 160 */
+/* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/favicons/safari-pinned-tab.svg";
 
 /***/ }),
-/* 161 */
+/* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./arrow-button/js/arrow-button.js": 162,
-	"./button/js/button.js": 163,
-	"./calendar/js/calendar.js": 165,
-	"./donut-chart/js/donut-chart.js": 167,
-	"./drop-down/js/drop-down.js": 168,
-	"./email-form/js/email-form.js": 169,
-	"./event-carousel/js/event-carousel.js": 170,
-	"./map/js/map.js": 173,
-	"./news-card/js/news-card.js": 176,
-	"./online-help/js/online-help.js": 177,
-	"./pass-selector/js/pass-selector.js": 178,
-	"./registration-form/js/registration-form.js": 179,
-	"./scrollbar/js/scrollbar.js": 5,
-	"./search-box/js/search-box.js": 180,
-	"./slider/js/slider.js": 181,
-	"./speaker-card/js/speaker-card.js": 186,
-	"./speaker-carousel/js/speaker-carousel.js": 187,
-	"./tick-box/js/tick-box.js": 188,
-	"./toggle-switch/js/toggle-switch.js": 189,
-	"./validation-input/js/validation-input.js": 190,
-	"./video/js/video.js": 191
+	"./arrow-button/js/ArrowButton.js": 10,
+	"./arrow-button/js/init.js": 183,
+	"./button/js/Button.js": 11,
+	"./button/js/init.js": 185,
+	"./calendar/js/Calendar.js": 12,
+	"./calendar/js/init.js": 187,
+	"./donut-chart/js/DonutChart.js": 13,
+	"./donut-chart/js/init.js": 188,
+	"./drop-down/js/DropDown.js": 14,
+	"./drop-down/js/init.js": 189,
+	"./email-form/js/EmailForm.js": 15,
+	"./email-form/js/init.js": 190,
+	"./event-carousel/js/EventCarousel.js": 16,
+	"./event-carousel/js/init.js": 192,
+	"./map/js/Map.js": 8,
+	"./map/js/init.js": 195,
+	"./news-card/js/NewsCard.js": 17,
+	"./news-card/js/init.js": 196,
+	"./online-help/js/OnlineHelp.js": 18,
+	"./online-help/js/init.js": 197,
+	"./pass-selector/js/PassSelector.js": 19,
+	"./pass-selector/js/init.js": 198,
+	"./registration-form/js/RegistrationForm.js": 20,
+	"./registration-form/js/init.js": 199,
+	"./search-box/js/SearchBox.js": 21,
+	"./search-box/js/init.js": 200,
+	"./slider/js/Slider.js": 22,
+	"./slider/js/init.js": 205,
+	"./speaker-card/js/SpeakerCard.js": 23,
+	"./speaker-card/js/init.js": 206,
+	"./speaker-carousel/js/SpeakerCarousel.js": 24,
+	"./speaker-carousel/js/init.js": 207,
+	"./tick-box/js/TickBox.js": 25,
+	"./tick-box/js/init.js": 208,
+	"./toggle-switch/js/ToggleSwitch.js": 26,
+	"./toggle-switch/js/init.js": 209,
+	"./validation-input/js/ValidationInput.js": 27,
+	"./validation-input/js/init.js": 210,
+	"./video/js/Video.js": 28,
+	"./video/js/init.js": 211
 };
 
 
@@ -15788,104 +19716,27 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 161;
+webpackContext.id = 182;
 
 /***/ }),
-/* 162 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function($) {class ArrowButton {
-  constructor(domElement) {
-    this._initialize(domElement);
-  }
-
-  _initialize(domElement) {
-    $(document).ready(() => {
-      this.$button = $(domElement);
-
-      this.$button
-        .on('click.arrowbutton', () => this._handleButtonClick())
-        .on('keydown.arrowbutton', e => this._handleEnterDown(e))
-        .on('keyup.arrowbutton', e => this._handleEnterUp(e))
-        .on('touchstart.arrowbutton', () => this._addActiveClass())
-        .on('touchend.arrowbutton', () => this._removeActiveClass());
-    });
-  }
-
-  _handleButtonClick() {
-    this.$button.blur();
-  }
-
-  _addActiveClass() {
-    this.$button.addClass('arrow-button_active');
-  }
-
-  _removeActiveClass() {
-    this.$button
-      .removeClass('arrow-button_active')
-      .trigger('click');
-  }
-
-  _handleEnterDown(event) {
-    if (event.which === 13) {
-      this._addActiveClass();
-    }
-  }
-
-  _handleEnterUp(event) {
-    if (event.which === 13) {
-      this._removeActiveClass();
-    }
-  }
-}
-
-$('.js-arrow-button').each((i, element) => new ArrowButton(element));
-
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
-
-/***/ }),
-/* 163 */
+/* 183 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var legit_ripple_dist_ripple_min__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(164);
-/* harmony import */ var legit_ripple_dist_ripple_min__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(legit_ripple_dist_ripple_min__WEBPACK_IMPORTED_MODULE_0__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _ArrowButton__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(10);
 
 
-class Button {
-  constructor(domElement) {
-    this._initialize(domElement);
-  }
+const initArrowButtons = function createInstances() {
+  $('.js-arrow-button').each((i, element) => new _ArrowButton__WEBPACK_IMPORTED_MODULE_0__["default"](element));
+};
 
-  _initialize(domElement) {
-    $(document).ready(() => {
-      this.$button = $(domElement);
-      this.$button
-        .on('keypress.button', e => this._handleEnterPress(e))
-        .on('transitionend webkitTransitionEnd oTransitionEnd', () => this._handleButtonAnimationEnd())
-        .ripple({ dragging: false });
-    });
-    return this;
-  }
-
-  _handleButtonAnimationEnd() {
-    this.$button.blur();
-  }
-
-  _handleEnterPress(event) {
-    if (event.which === 13) {
-      this.$button.click()
-    }
-  }
-}
-
-$('.js-button').each((i, element) => new Button(element));
+$(document).ready(initArrowButtons);
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
-/* 164 */
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/*! legitRipple.js v1.1.0: ripple.min.js by Matthias Vogt (ISC license) */
@@ -15893,112 +19744,24 @@ $('.js-button').each((i, element) => new Button(element));
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
-/* 165 */
+/* 185 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var jquery_ui_ui_widgets_datepicker__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(166);
-/* harmony import */ var jquery_ui_ui_widgets_datepicker__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery_ui_ui_widgets_datepicker__WEBPACK_IMPORTED_MODULE_0__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(11);
 
 
-class Calendar {
-  constructor(domElement) {
-    this._initialize(domElement);
-  }
+const initButtons = function createInstances() {
+  $('.js-button').each((i, element) => new _Button__WEBPACK_IMPORTED_MODULE_0__["default"](element));
+};
 
-  _initialize(domElement) {
-    $(document).ready(() => {
-      this.$calendar = $(domElement);
- 
-      const settings = this._generateCalendarSettings();
-      this.$calendar.datepicker(settings);
-      
-      this
-        ._prependDayContainer()
-        ._appendButtonPane()
-        ._updateDayText(this.$calendar.datepicker('getDate'));
-    });
-  }
-
-  _generateCalendarSettings() {
-    const settings = {
-      firstDay: 1,
-      prevText: '',
-      nextText: '',
-      showOtherMonths: true,
-      dayNamesMin: [ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" ],
-      onChangeMonthYear: (y, m, inst) => this._handleMonthChange(y, m, inst),
-      onSelect: (date) => this._updateDayText(date),
-    };
-
-    return settings;
-  }
-
-  _prependDayContainer() {
-    const $dayContainer = $('<div></div>', { class: 'calendar__day-container' });
-    this.$dayText = $('<span></span>', {
-      class: 'calendar__day-text',
-      type: 'text',
-      disabled: 'disabled',
-    });
-    $dayContainer.prepend(this.$dayText);
-    
-    this.$calendar.prepend($dayContainer);
-
-    return this;
-  }
-
-  _appendButtonPane() {
-    const $buttonPane = $('<div></div>', { class: 'calendar__button-pane' });
-    this.$todayButton = $('<button></button>', {
-      class: 'calendar__today-button',
-      type: 'button',
-    });
-    this.$todayButton
-      .text('today')
-      .on('click.calendar', () => this._handleTodayButtonClick());
-
-    $buttonPane.append(this.$todayButton);
-    this.$calendar.append($buttonPane);
-
-    return this;
-  }
-
-  _updateDayText(value) {
-    const date = new Date(value);
-    this.$dayText.text(date.getDate());
-
-    return this;
-  }
-
-  _handleMonthChange(year, month, instance) {
-    const isBackFromOtherMonth = instance.selectedMonth !== instance.currentMonth;
-    const isBackFromOtherYear = instance.selectedYear !== instance.currentYear;
-    if (isBackFromOtherMonth || isBackFromOtherYear) {
-      const newDate = `${month}/1/${year}`;
-      this.$calendar.datepicker('setDate', newDate);
-      this._updateDayText(newDate);
-    }
-    return this;
-  }
-
-  _handleTodayButtonClick() {
-    const today = new Date();
-    this.$calendar.datepicker('setDate', today);
-    this._updateDayText(today);
-    this.$todayButton.blur();
-
-    return this;
-  }
-}
-
-$('.js-calendar').each((i, element) => new Calendar(element));
+$(document).ready(initButtons);
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
-/* 166 */
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// jscs:disable maximumLineLength
@@ -16028,7 +19791,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 			__webpack_require__(2),
 			__webpack_require__(4),
-			__webpack_require__(7)
+			__webpack_require__(29)
 		], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
@@ -18123,234 +21886,75 @@ return $.datepicker;
 
 
 /***/ }),
-/* 167 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function($) {class DonutChart {
-  constructor(domElement) {
-    this.domElement = domElement;
-    this.values = this._getValues();
-    this.colors = this._getColors();
-    this._initialize();
-  }
-
-  _getValues() {
-    const values = $(this.domElement).data('values');
-    if (typeof values === 'number') return [values];
-    return values.split(',');
-  }
-
-  _getColors() {
-    return $(this.domElement).data('colors').split(',');
-  }
-
-  _initialize() {
-    $(document).ready(() => this._drawDonut());
-  }
-
-  _drawDonut() {
-    const radius = 15.91549430918954;
-    const $donut = $(this.domElement);
-    const values = this.values;
-    const colors = this.colors;
-
-    let backgroundColor = '#e5e5e5';
-    if (values[0] === 0 && values.length === 1) {
-      backgroundColor = 'transparent';
-    }
-
-    const $svg = DonutChart.$s('svg').attr({ width: '100%', height: '100%' });
-    const $circle = DonutChart.$s('circle').attr({
-      cx: radius, cy: radius, r: radius, fill: 'transparent', stroke: backgroundColor,
-    });
-    $svg.append($circle);
-
-    let offset = 0;
-    const dashoffset0 = 25;
-
-    values.forEach((value, i) => {
-      const $segment = DonutChart.$s('circle').attr({
-        cx: radius, cy: radius, r: radius, fill: 'transparent', stroke: colors[i],
-      });
-      const dashoffset = 100 - offset + dashoffset0;
-
-      $segment.attr('stroke-dasharray', `${value} ${100 - value}`);
-      if (i === 0) {
-        $segment.attr('stroke-dashoffset', dashoffset0);
-      } else {
-        $segment.attr('stroke-dashoffset', dashoffset);
-      }
-      $svg.append($segment);
-      offset += Number(value);
-    });
-
-    $donut.append($svg);
-
-    const strokeWidth = parseFloat($donut.find('circle').css('stroke-width'));
-    const viewBoxTop = 0 - (strokeWidth / 2);
-    const viewBoxBottom = radius * 2 + strokeWidth;
-    const viewBoxValue = `${viewBoxTop} ${viewBoxTop} ${viewBoxBottom} ${viewBoxBottom}`;
-    $svg.attr({ viewBox: viewBoxValue });
-
-    const $label = $donut.find('.js-donut-chart__label');
-    if ($label.length > 0) {
-      $label.text(values[0]);
-    }
-  }
-
-  // creates svg element, returned as jQuery object
-  static $s(elem) {
-    return $(document.createElementNS('http://www.w3.org/2000/svg', elem));
-  }
-}
-
-$('.donut-chart').each((i, element) => new DonutChart(element));
-
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
-
-/***/ }),
-/* 168 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function($) {class DropDown {
-  constructor(domElement) {
-    this._initialize(domElement);
-  }
-
-  _initialize(domElement) {
-    $(document).ready(() => {
-      const $domElement = $(domElement);
-      this.$dropdown = $domElement;
-      this.$label = $domElement.find('.js-drop-down__label');
-      this.$dropdown
-        .on('click.drop-down', e => this._handleDropDownClick(e))
-        .on('keypress.drop-down', e => this._handleDropDownKeypress(e));
-    });
-  }
-
-  _handleDropDownClick(event) {
-    const $targetElement = $(event.target);
-    const isItemChosen = $targetElement.hasClass('js-drop-down__item');
-    this.$dropdown.toggleClass('drop-down_active');
-
-    if (isItemChosen) {
-      const chosenOption = $targetElement.text();
-      this.$label.text(chosenOption);
-    }
-  }
-
-  _handleDropDownFocusOut() {
-    this.$dropdown.removeClass('drop-down_active');
-  }
-
-  _handleDropDownKeypress(event) {
-    if (event.which === 13) {
-      $(event.target).click();
-      return false;
-    }
-  }
-}
-
-$('.js-drop-down').each((i, element) => new DropDown(element));
-
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
-
-/***/ }),
-/* 169 */
+/* 187 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var jquery_validation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
-/* harmony import */ var jquery_validation__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery_validation__WEBPACK_IMPORTED_MODULE_0__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _Calendar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(12);
 
 
-class EmailForm {
-  constructor(domElement) {
-    this._initialize(domElement);
-  }
+const initCalendars = function createInstances() {
+  $('.js-calendar').each((i, element) => new _Calendar__WEBPACK_IMPORTED_MODULE_0__["default"](element));
+};
 
-  _initialize(domElement) {
-    $(document).ready(() => {
-      const $form = $(domElement);
-      $form.validate({
-        rules: {
-          name: 'required',
-          email: {
-            required: true,
-            email: true,
-          },
-        },
-        errorPlacement() {},
-      });
-      const $button = $form.find('.js-email-form__button');
-      $button.on('click.email-form', () => $form.submit());
-    });
-  }
-}
-
-$('.js-email-form').each((i, element) => new EmailForm(element));
+$(document).ready(initCalendars);
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
-/* 170 */
+/* 188 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _scrollbar_js_scrollbar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5);
-/* harmony import */ var _scrollbar_js_scrollbar__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_scrollbar_js_scrollbar__WEBPACK_IMPORTED_MODULE_0__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _DonutChart__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(13);
 
 
-class EventCarousel {
-  constructor(domElement) {
-    this._initialize(domElement);
-  }
+const initDonutCharts = function createInstances() {
+  $('.js-donut-chart').each((i, element) => new _DonutChart__WEBPACK_IMPORTED_MODULE_0__["default"](element));
+};
 
-  _initialize(domElement) {
-    const $domElement = $(domElement);
-    this.$cards = $domElement.find('.js-event-carousel__cards');
-    this.$calendarOverlay = $domElement.find('.js-event-carousel__calendar-overlay');
-    this.$calendar = $domElement.find('.js-event-carousel__calendar');
-
-    this.$cards
-      .on('click.event-carousel', event => this._handleButtonClick(event))
-      .mCustomScrollbar({
-        axis: 'x',
-        theme: 'dark-thin',
-        autoExpandScrollbar: true,
-        advanced: {
-          autoExpandHorizontalScroll: true,
-          autoScrollOnFocuss: false,
-        },
-      });
-  }
-
-  _handleButtonClick(event) {
-    const $target = $(event.target);
-    if ($target.hasClass('js-button')) {
-      this.$calendarOverlay.addClass('event-carousel__calendar-overlay_visible');
-      $(document).on('click.event-carousel', e => this._handleDocumentClick(e));
-      return false;
-    }
-  }
-
-  _handleDocumentClick(event) {
-    if (event.target === this.$calendarOverlay[0]) {
-      this.$calendarOverlay.removeClass('event-carousel__calendar-overlay_visible');
-      $(document).off('click.event-carousel');
-      return false;
-    }
-  }
-}
-
-$('.js-event-carousel').each((i, element) => new EventCarousel(element));
+$(document).ready(initDonutCharts);
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
-/* 171 */
+/* 189 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _DropDown__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(14);
+
+
+const initDropDowns = function createInstances() {
+  $('.js-drop-down').each((i, element) => new _DropDown__WEBPACK_IMPORTED_MODULE_0__["default"](element));
+};
+
+$(document).ready(initDropDowns);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
+
+/***/ }),
+/* 190 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _EmailForm__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(15);
+
+
+const initEmailForms = function createInstances() {
+  $('.js-email-form').each((i, element) => new _EmailForm__WEBPACK_IMPORTED_MODULE_0__["default"](element));
+};
+
+$(document).ready(initEmailForms);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
+
+/***/ }),
+/* 191 */
 /***/ (function(module, exports) {
 
 /* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {/* globals __webpack_amd_options__ */
@@ -18359,377 +21963,24 @@ module.exports = __webpack_amd_options__;
 /* WEBPACK VAR INJECTION */}.call(this, {}))
 
 /***/ }),
-/* 172 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 192 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
- * jQuery Mousewheel 3.1.13
- *
- * Copyright jQuery Foundation and other contributors
- * Released under the MIT license
- * http://jquery.org/license
- */
-
-(function (factory) {
-    if ( true ) {
-        // AMD. Register as an anonymous module.
-        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(2)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-    } else {}
-}(function ($) {
-
-    var toFix  = ['wheel', 'mousewheel', 'DOMMouseScroll', 'MozMousePixelScroll'],
-        toBind = ( 'onwheel' in document || document.documentMode >= 9 ) ?
-                    ['wheel'] : ['mousewheel', 'DomMouseScroll', 'MozMousePixelScroll'],
-        slice  = Array.prototype.slice,
-        nullLowestDeltaTimeout, lowestDelta;
-
-    if ( $.event.fixHooks ) {
-        for ( var i = toFix.length; i; ) {
-            $.event.fixHooks[ toFix[--i] ] = $.event.mouseHooks;
-        }
-    }
-
-    var special = $.event.special.mousewheel = {
-        version: '3.1.12',
-
-        setup: function() {
-            if ( this.addEventListener ) {
-                for ( var i = toBind.length; i; ) {
-                    this.addEventListener( toBind[--i], handler, false );
-                }
-            } else {
-                this.onmousewheel = handler;
-            }
-            // Store the line height and page height for this particular element
-            $.data(this, 'mousewheel-line-height', special.getLineHeight(this));
-            $.data(this, 'mousewheel-page-height', special.getPageHeight(this));
-        },
-
-        teardown: function() {
-            if ( this.removeEventListener ) {
-                for ( var i = toBind.length; i; ) {
-                    this.removeEventListener( toBind[--i], handler, false );
-                }
-            } else {
-                this.onmousewheel = null;
-            }
-            // Clean up the data we added to the element
-            $.removeData(this, 'mousewheel-line-height');
-            $.removeData(this, 'mousewheel-page-height');
-        },
-
-        getLineHeight: function(elem) {
-            var $elem = $(elem),
-                $parent = $elem['offsetParent' in $.fn ? 'offsetParent' : 'parent']();
-            if (!$parent.length) {
-                $parent = $('body');
-            }
-            return parseInt($parent.css('fontSize'), 10) || parseInt($elem.css('fontSize'), 10) || 16;
-        },
-
-        getPageHeight: function(elem) {
-            return $(elem).height();
-        },
-
-        settings: {
-            adjustOldDeltas: true, // see shouldAdjustOldDeltas() below
-            normalizeOffset: true  // calls getBoundingClientRect for each event
-        }
-    };
-
-    $.fn.extend({
-        mousewheel: function(fn) {
-            return fn ? this.bind('mousewheel', fn) : this.trigger('mousewheel');
-        },
-
-        unmousewheel: function(fn) {
-            return this.unbind('mousewheel', fn);
-        }
-    });
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _EventCarousel__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(16);
 
 
-    function handler(event) {
-        var orgEvent   = event || window.event,
-            args       = slice.call(arguments, 1),
-            delta      = 0,
-            deltaX     = 0,
-            deltaY     = 0,
-            absDelta   = 0,
-            offsetX    = 0,
-            offsetY    = 0;
-        event = $.event.fix(orgEvent);
-        event.type = 'mousewheel';
+const initEventCarousels = function createInstances() {
+  $('.js-event-carousel').each((i, element) => new _EventCarousel__WEBPACK_IMPORTED_MODULE_0__["default"](element));
+};
 
-        // Old school scrollwheel delta
-        if ( 'detail'      in orgEvent ) { deltaY = orgEvent.detail * -1;      }
-        if ( 'wheelDelta'  in orgEvent ) { deltaY = orgEvent.wheelDelta;       }
-        if ( 'wheelDeltaY' in orgEvent ) { deltaY = orgEvent.wheelDeltaY;      }
-        if ( 'wheelDeltaX' in orgEvent ) { deltaX = orgEvent.wheelDeltaX * -1; }
+$(document).ready(initEventCarousels);
 
-        // Firefox < 17 horizontal scrolling related to DOMMouseScroll event
-        if ( 'axis' in orgEvent && orgEvent.axis === orgEvent.HORIZONTAL_AXIS ) {
-            deltaX = deltaY * -1;
-            deltaY = 0;
-        }
-
-        // Set delta to be deltaY or deltaX if deltaY is 0 for backwards compatabilitiy
-        delta = deltaY === 0 ? deltaX : deltaY;
-
-        // New school wheel delta (wheel event)
-        if ( 'deltaY' in orgEvent ) {
-            deltaY = orgEvent.deltaY * -1;
-            delta  = deltaY;
-        }
-        if ( 'deltaX' in orgEvent ) {
-            deltaX = orgEvent.deltaX;
-            if ( deltaY === 0 ) { delta  = deltaX * -1; }
-        }
-
-        // No change actually happened, no reason to go any further
-        if ( deltaY === 0 && deltaX === 0 ) { return; }
-
-        // Need to convert lines and pages to pixels if we aren't already in pixels
-        // There are three delta modes:
-        //   * deltaMode 0 is by pixels, nothing to do
-        //   * deltaMode 1 is by lines
-        //   * deltaMode 2 is by pages
-        if ( orgEvent.deltaMode === 1 ) {
-            var lineHeight = $.data(this, 'mousewheel-line-height');
-            delta  *= lineHeight;
-            deltaY *= lineHeight;
-            deltaX *= lineHeight;
-        } else if ( orgEvent.deltaMode === 2 ) {
-            var pageHeight = $.data(this, 'mousewheel-page-height');
-            delta  *= pageHeight;
-            deltaY *= pageHeight;
-            deltaX *= pageHeight;
-        }
-
-        // Store lowest absolute delta to normalize the delta values
-        absDelta = Math.max( Math.abs(deltaY), Math.abs(deltaX) );
-
-        if ( !lowestDelta || absDelta < lowestDelta ) {
-            lowestDelta = absDelta;
-
-            // Adjust older deltas if necessary
-            if ( shouldAdjustOldDeltas(orgEvent, absDelta) ) {
-                lowestDelta /= 40;
-            }
-        }
-
-        // Adjust older deltas if necessary
-        if ( shouldAdjustOldDeltas(orgEvent, absDelta) ) {
-            // Divide all the things by 40!
-            delta  /= 40;
-            deltaX /= 40;
-            deltaY /= 40;
-        }
-
-        // Get a whole, normalized value for the deltas
-        delta  = Math[ delta  >= 1 ? 'floor' : 'ceil' ](delta  / lowestDelta);
-        deltaX = Math[ deltaX >= 1 ? 'floor' : 'ceil' ](deltaX / lowestDelta);
-        deltaY = Math[ deltaY >= 1 ? 'floor' : 'ceil' ](deltaY / lowestDelta);
-
-        // Normalise offsetX and offsetY properties
-        if ( special.settings.normalizeOffset && this.getBoundingClientRect ) {
-            var boundingRect = this.getBoundingClientRect();
-            offsetX = event.clientX - boundingRect.left;
-            offsetY = event.clientY - boundingRect.top;
-        }
-
-        // Add information to the event object
-        event.deltaX = deltaX;
-        event.deltaY = deltaY;
-        event.deltaFactor = lowestDelta;
-        event.offsetX = offsetX;
-        event.offsetY = offsetY;
-        // Go ahead and set deltaMode to 0 since we converted to pixels
-        // Although this is a little odd since we overwrite the deltaX/Y
-        // properties with normalized deltas.
-        event.deltaMode = 0;
-
-        // Add event and delta to the front of the arguments
-        args.unshift(event, delta, deltaX, deltaY);
-
-        // Clearout lowestDelta after sometime to better
-        // handle multiple device types that give different
-        // a different lowestDelta
-        // Ex: trackpad = 3 and mouse wheel = 120
-        if (nullLowestDeltaTimeout) { clearTimeout(nullLowestDeltaTimeout); }
-        nullLowestDeltaTimeout = setTimeout(nullLowestDelta, 200);
-
-        return ($.event.dispatch || $.event.handle).apply(this, args);
-    }
-
-    function nullLowestDelta() {
-        lowestDelta = null;
-    }
-
-    function shouldAdjustOldDeltas(orgEvent, absDelta) {
-        // If this is an older event and the delta is divisable by 120,
-        // then we are assuming that the browser is treating this as an
-        // older mouse wheel event and that we should divide the deltas
-        // by 40 to try and get a more usable deltaFactor.
-        // Side note, this actually impacts the reported scroll distance
-        // in older browsers and can cause scrolling to be slower than native.
-        // Turn this off by setting $.event.special.mousewheel.settings.adjustOldDeltas to false.
-        return special.settings.adjustOldDeltas && orgEvent.type === 'mousewheel' && absDelta % 120 === 0;
-    }
-
-}));
-
-
-/***/ }),
-/* 173 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function($) {const loadGoogleMapsApi = __webpack_require__(174);
-const pinImg = __webpack_require__(175);
-
-class Map {
-  constructor(domElement, googleMaps) {
-    this.$domElement = $(domElement);
-    this.googleMaps = googleMaps;
-    this.mapContainer = this.$domElement.find('.js-map__container')[0];
-    this.mapCenter = this._getInitialMapCenter();
-    this._initialize();
-  }
-
-  static loadGoogleMapsApi() {
-    return loadGoogleMapsApi({
-      key: 'AIzaSyB0GpB2Y8XOyVrs-stxlE0I4yR_rAaEyjU',
-    });
-  }
-
-  _initialize() {
-    $(window).on('load.map', () => {
-      this._loadImages();
-      this._initMap();
-    });
-  }
-
-  _loadImages() {
-    this.images = [
-      {
-        url: './assets/img/pins.png',
-        size: new this.googleMaps.Size(78, 78),
-        origin: new this.googleMaps.Point(0, 0),
-        anchor: new this.googleMaps.Point(39, 78),
-      },
-      {
-        url: './assets/img/pins.png',
-        size: new this.googleMaps.Size(45, 78),
-        origin: new this.googleMaps.Point(78, 0),
-        anchor: new this.googleMaps.Point(22.5, 78),
-      },
-    ];
-  }
-
-  _initMap() {
-    const initOptions = { center: this.mapCenter, zoom: 14 };
-    const $pin = this.$domElement.find('.js-map__pin');
-    const $search = this.$domElement.find('.js-map__search');
-    this.map = new this.googleMaps.Map(this.mapContainer, initOptions);
-    this.infoWindow = new this.googleMaps.InfoWindow();
-    this._addMarker(this._getMainPinCenter(), this.images[0], 'Meet us here!');
-    this._locateUser();
-
-    $pin
-      .on('click.map', e => this._handlePinClick(e))
-      .on('keypress.map', e => this._handleEnterPress(e));
-    $search
-      .on('click.map', e => this._handleSearchClick(e))
-      .on('keypress.map', e => this._handleEnterPress(e));
-  }
-
-  _addMarker(location, image, title) {
-    const marker = new this.googleMaps.Marker({
-      position: location,
-      map: this.map,
-      icon: image,
-      title,
-    });
-    return marker;
-  }
-
-  _getInitialMapCenter() {
-    const mapCoords = this.mapContainer.dataset;
-    const lat = Number(mapCoords.lat);
-    const lng = Number(mapCoords.lng);
-    return new this.googleMaps.LatLng(lat, lng);
-  }
-
-  _getMainPinCenter() {
-    const mapCoords = this.mapContainer.dataset;
-    const plat = Number(mapCoords.plat);
-    const plng = Number(mapCoords.plng);
-    return new this.googleMaps.LatLng(plat, plng);
-  }
-
-  _locateUser() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          const pos = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude,
-          };
-          this.userMarker = this._addMarker(pos, this.images[1], 'You are here');
-        },
-        () => this._handleLocationError(true),
-      );
-    } else {
-      // Browser doesn't support Geolocation
-      this._handleLocationError(false);
-    }
-  }
-
-  _handleLocationError(browserHasGeolocation) {
-    this.infoWindow.setPosition(this.map.getCenter());
-    this.infoWindow.setContent(browserHasGeolocation
-      ? 'Error: The Geolocation service failed.'
-      : 'Error: Your browser doesn\'t support geolocation.');
-  }
-
-  _handlePinClick(event) {
-    this._backToCenter();
-    $(event.target).blur();
-  }
-
-  _handleSearchClick(event) {
-    this._showUserLocation();
-    $(event.target).blur();
-  }
-
-  _handleEnterPress(event) {
-    if (event.which === 13) {
-      $(event.target).trigger('click');
-    }
-  }
-
-  _backToCenter() {
-    this.map.panTo(this.mapCenter);
-    if (this.infoWindow) this.infoWindow.close();
-  }
-
-  _showUserLocation() {
-    if (this.userMarker) this.map.panTo(this.userMarker.getPosition());
-    this.infoWindow.open(this.map);
-  }
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  Map.loadGoogleMapsApi().then((googleMaps) => {
-    $('.js-map').each((i, element) => new Map(element, googleMaps));
-  });
-});
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
-/* 174 */
+/* 193 */
 /***/ (function(module, exports) {
 
 const API_URL = 'https://maps.googleapis.com/maps/api/js'
@@ -18779,327 +22030,118 @@ module.exports = function (options = {}) {
 
 
 /***/ }),
-/* 175 */
+/* 194 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/img/pins.png";
 
 /***/ }),
-/* 176 */
+/* 195 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _scrollbar_js_scrollbar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5);
-/* harmony import */ var _scrollbar_js_scrollbar__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_scrollbar_js_scrollbar__WEBPACK_IMPORTED_MODULE_0__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _Map__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8);
 
 
-class NewsCard {
-  constructor(domElement) {
-    this._initialize(domElement);
-  }
+const initMaps = function createInstances() {
+  _Map__WEBPACK_IMPORTED_MODULE_0__["default"].loadGoogleMapsApi().then((googleMaps) => {
+    $('.js-map').each((i, element) => new _Map__WEBPACK_IMPORTED_MODULE_0__["default"](element, googleMaps));
+  });
+};
 
-  _initialize(domElement) {
-    const $newsCard = $(domElement);
-    if ($newsCard.hasClass('news-card_with-scrollbar')) {
-      const $text = $newsCard.find('.js-news-card__text');
-      $text.mCustomScrollbar();
-    }
-  }
-}
-
-$('.js-news-card').each((i, element) => new NewsCard(element));
+$(document).ready(initMaps);
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
-/* 177 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function($) {class OnlineHelp {
-  constructor(domElement) {
-    this.$domElement = $(domElement);
-    this._initialize();
-  }
-
-  _initialize() {
-    $(document).ready(() => {
-      const $container = this.$domElement;
-      const $button = $container.find('.js-online-help__button');
-      this.$messenger = $container.find('.js-online-help__messenger');
-      $button.click(() => this._handleButtonClick());
-    });
-  }
-
-  _handleButtonClick() {
-    this.$messenger.toggleClass('online-help__messenger_visible');
-  }
-}
-
-$('.js-online-help').each((i, element) => new OnlineHelp(element));
-
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
-
-/***/ }),
-/* 178 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function($) {class PassSelector {
-  constructor(domElement) {
-    this.$domElement = $(domElement);
-    this._initialize();
-  }
-
-  _initialize() {
-    $(document).ready(() => {
-      this.$tickboxes = this.$domElement.find('input[type=checkbox]');
-      this.$tickboxes.on('change.pass-selector', e => this._handleTickboxChange(e));
-    });
-  }
-
-  _handleTickboxChange(event) {
-    const $currentTickbox = $(event.target);
-    this.$tickboxes.not($currentTickbox).prop('checked', false);
-    if (this.$tickboxes.filter(':checked').length === 0) {
-      $currentTickbox.prop('checked', true);
-    }
-  }
-}
-
-$('.js-pass-selector').each((i, element) => new PassSelector(element));
-
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
-
-/***/ }),
-/* 179 */
+/* 196 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var jquery_validation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
-/* harmony import */ var jquery_validation__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery_validation__WEBPACK_IMPORTED_MODULE_0__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _NewsCard__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(17);
 
 
-class RegistrationForm {
-  constructor(domElement) {
-    this._initialize(domElement);
-  }
+const initNewsCards = function createInstances() {
+  $('.js-news-card').each((i, element) => new _NewsCard__WEBPACK_IMPORTED_MODULE_0__["default"](element));
+};
 
-  _initialize(domElement) {
-    $(document).ready(() => {
-      this._findElements(domElement);
-      this._addFormValidation();
+$(document).ready(initNewsCards);
 
-      this.$inputs.on('change.registration-form', e => this._handleInputChange(e));
-      $(window).on('scroll.registration-form', e => this._handleWindowScroll(e));
-      this.$button.on('click.registration-form', () => this.$form.submit());
-    });
-  }
-
-  _findElements(domElement) {
-    const $domElement = $(domElement);
-    this.$inputs = $domElement.find('input');
-    this.$form = $domElement.find('.js-registration-form__form');
-    this.$breadCrumbsItems = $domElement.find('.js-bread-crumbs__item');
-    this.$formStages = $domElement.find('.js-registration-form__stage');
-    this.$header = $domElement.find('.js-registration-form__header');
-    this.$passHeader = $domElement.find('.js-pass-selector__title');
-    this.$button = $domElement.find('.js-registration-form__button');
-  }
-
-  _addFormValidation() {
-    this.$form.validate({
-      rules: {
-        name: 'required',
-        email: {
-          required: true,
-          email: true,
-        },
-        policy: 'required',
-      },
-      focusInvalid: true,
-      errorPlacement() {},
-    });
-  }
-
-  _updateBreadCrumbs(itemNumber) {
-    const activeClass = 'bread-crumbs__item_active';
-    if (!this.$breadCrumbsItems.eq(itemNumber).hasClass(activeClass)) {
-      this.$breadCrumbsItems.removeClass(activeClass);
-      this.$breadCrumbsItems.eq(itemNumber).addClass(activeClass);
-    }
-  }
-
-  _handleInputChange(event) {
-    const $target = $(event.target);
-    const $currentStage = $target.parents('.js-registration-form__stage');
-    let stageNumber = 0;
-    this.$formStages.each((i, element) => {
-      if ($(element).is($currentStage)) {
-        stageNumber = i;
-      }
-    });
-    this._updateBreadCrumbs(stageNumber);
-  }
-
-  _handleWindowScroll(event) {
-    const headerHeight = this.$header.outerHeight();
-    const passHeaderOffset = this.$passHeader.offset().top;
-    if ($(event.target).scrollTop() + headerHeight > passHeaderOffset) {
-      this.$header.css({ position: 'absolute', top: passHeaderOffset - headerHeight });
-    } else {
-      this.$header.removeAttr('style');
-    }
-  }
-}
-
-$('.js-registration-form').each((i, element) => new RegistrationForm(element));
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
-/* 180 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function($) {class SearchBox {
-  constructor(domElement) {
-    this._findElements(domElement);
-    this._initialize();
-  }
-
-  _findElements(domElement) {
-    const $searchbox = $(domElement);
-    this.$searchbox = $searchbox;
-    this.$button = $searchbox.find('.js-search-box__button');
-    this.$input = $searchbox.find('.js-search-box__input');
-  }
-
-  _initialize() {
-    $(document).ready(() => {
-      this.$searchbox
-        .on('click.searchbox', e => this._handleSearchBoxClick(e))
-        .on('keypress.searchbox', e => this._handleSearchBoxKeypress(e));
-      this.$input.on('focus.searchbox', () => this._handleInputFocus());
-
-      if (this.$searchbox.hasClass('search-box_filled')) {
-        this._handleButtonClick();
-      }
-    });
-  }
-
-  _handleSearchBoxClick(event) {
-    const $element = $(event.target);
-    if ($element.hasClass('js-search-box__button')) {
-      this._handleButtonClick(event);
-    }
-  }
-
-  _handleButtonClick(event) {
-    const notFoundMessage = "I've not found what I'm looking for...";
-    this.$input.val(notFoundMessage);
-    this.$searchbox.addClass('search-box_filled');
-    if (event !== undefined) {
-      $(event.target).blur();
-    }
-  }
-
-  _handleSearchBoxKeypress(event) {
-    if (event.which === 13) {
-      this._handleButtonClick(event);
-    }
-  }
-
-  _emptyInput() {
-    this.$input.val('');
-    this.$searchbox.removeClass('search-box_filled');
-  }
-
-  _handleInputFocus() {
-    if (this.$searchbox.hasClass('search-box_filled')) {
-      this._emptyInput();
-    }
-  }
-}
-
-$('.js-search-box').each((i, element) => new SearchBox(element));
-
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
-
-/***/ }),
-/* 181 */
+/* 197 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var jquery_ui_ui_widgets_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(182);
-/* harmony import */ var jquery_ui_ui_widgets_slider__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery_ui_ui_widgets_slider__WEBPACK_IMPORTED_MODULE_0__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _OnlineHelp__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(18);
 
- 
-__webpack_require__(185);
 
-class Slider {
-  constructor(domElement) {
-    this._initialize(domElement);
-  }
+const initOnlineHelp = function createInstances() {
+  $('.js-online-help').each((i, element) => new _OnlineHelp__WEBPACK_IMPORTED_MODULE_0__["default"](element));
+};
 
-  _initialize(domElement) {
-    $(document).ready(() => {
-      this._findElements(domElement);
-      const settings = this._generateSliderSettings();
-      this.$sliderContainer.slider(settings);
-    });
-  }
-
-  _findElements(domElement) {
-    this.$slider = $(domElement);
-    this.$sliderContainer = this.$slider.find('.js-slider__container');
-    this.$tip = this.$slider.find('.js-slider__tip');
-  }
-
-  _generateSliderSettings() {
-    let typeSettings = {};
-    let settings = {
-      min: 0,
-      max: 100,
-      classes: {
-        'ui-slider': 'slider__container',
-        'ui-slider-handle': 'slider__handle',
-        'ui-slider-range': 'slider__range',
-      },
-    };
-    if (this.$slider.hasClass('js-slider_type_tip')) {
-      typeSettings = {
-        value: 40,
-        create: () => { this._updateTip(40); },
-        slide: (event, ui) => { this._updateTip(ui.value); },
-        start: () => { this.$tip.addClass('slider__tip_visible'); },
-        stop: () => { this.$tip.removeClass('slider__tip_visible'); },
-      };
-      }
-    else if (this.$slider.hasClass('js-slider_type_scale')) {
-      typeSettings = {
-        value: 75,
-        step: 25,
-        range: 'min',
-      };
-    }
-
-    return { ...settings, ...typeSettings };
-  }
-
-  _updateTip(value) {
-    this.$tip
-      .text(value)
-      .css('left', `${value}%`);  
-  }
-}
-
-$('.js-slider').each((i, element) => new Slider(element));
+$(document).ready(initOnlineHelp);
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
-/* 182 */
+/* 198 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _PassSelector__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(19);
+
+
+const initPassSelectors = function createInstances() {
+  $('.js-pass-selector').each((i, element) => new _PassSelector__WEBPACK_IMPORTED_MODULE_0__["default"](element));
+};
+
+$(document).ready(initPassSelectors);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
+
+/***/ }),
+/* 199 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _RegistrationForm__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
+
+
+const initRegistrationForms = function createInstances() {
+  $('.js-registration-form').each((i, element) => new _RegistrationForm__WEBPACK_IMPORTED_MODULE_0__["default"](element));
+};
+
+$(document).ready(initRegistrationForms);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
+
+/***/ }),
+/* 200 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _SearchBox__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(21);
+
+
+const initSearchBoxes = function createInstances() {
+  $('.js-search-box').each((i, element) => new _SearchBox__WEBPACK_IMPORTED_MODULE_0__["default"](element));
+};
+
+$(document).ready(initSearchBoxes);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
+
+/***/ }),
+/* 201 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -19126,10 +22168,10 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 		// AMD. Register as an anonymous module.
 		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 			__webpack_require__(2),
-			__webpack_require__(183),
-			__webpack_require__(7),
+			__webpack_require__(202),
+			__webpack_require__(29),
 			__webpack_require__(4),
-			__webpack_require__(8)
+			__webpack_require__(30)
 		], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
@@ -19856,7 +22898,7 @@ return $.widget( "ui.slider", $.ui.mouse, {
 
 
 /***/ }),
-/* 183 */
+/* 202 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -19879,9 +22921,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 		// AMD. Register as an anonymous module.
 		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 			__webpack_require__(2),
-			__webpack_require__(184),
+			__webpack_require__(203),
 			__webpack_require__(4),
-			__webpack_require__(8)
+			__webpack_require__(30)
 		], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
@@ -20087,7 +23129,7 @@ return $.widget( "ui.mouse", {
 
 
 /***/ }),
-/* 184 */
+/* 203 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;( function( factory ) {
@@ -20107,7 +23149,7 @@ return $.ui.ie = !!/msie [\w.]+/.exec( navigator.userAgent.toLowerCase() );
 
 
 /***/ }),
-/* 185 */
+/* 204 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/*!
@@ -20293,342 +23335,126 @@ return $.ui.ie = !!/msie [\w.]+/.exec( navigator.userAgent.toLowerCase() );
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
-/* 186 */
+/* 205 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _scrollbar_js_scrollbar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5);
-/* harmony import */ var _scrollbar_js_scrollbar__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_scrollbar_js_scrollbar__WEBPACK_IMPORTED_MODULE_0__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _Slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(22);
 
 
-class SpeakerCard {
-  constructor(domElement) {
-    this._initialize(domElement);
-  }
+const initSliders = function createInstances() {
+  $('.js-slider').each((i, element) => new _Slider__WEBPACK_IMPORTED_MODULE_0__["default"](element));
+};
 
-  _initialize(domElement) {
-    this.$text = $(domElement).find('.js-speaker-card__text');
-    $(window).on('load.speakercard', () => this._addScrollBar());
-  }
-
-  _addScrollBar() {
-    this.$text.mCustomScrollbar();
-  }
-}
-
-$('.js-speaker-card').each((i, element) => new SpeakerCard(element));
+$(document).ready(initSliders);
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
-/* 187 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function($) {class SpeakerCarousel {
-  constructor(domElement) {
-    this.cardsAreExpanded = false;
-    this._initialize(domElement);
-  }
-
-  _findElements(domElement) {
-    const $domElement = $(domElement);
-    this.$page = $domElement;
-    this.$cards = $domElement.find('.js-speaker-carousel__cards');
-    this.$rightButton = $domElement.find('.js-speaker-carousel__arrow-button .js-arrow-button_direction_right');
-    this.$leftButton = $domElement.find('.js-speaker-carousel__arrow-button .js-arrow-button_direction_left');
-    this.$viewAllLink = $domElement.find('.js-speaker-carousel__link');
-  }
-
-  _initialize(domElement) {
-    $(document).ready(() => {
-      this._findElements(domElement);
-      this._addCustomScrollBar();
-      this.$scrollBarContainer = this.$cards.find('.mCSB_container');
-      this.windowIsSmall = false;
-
-      const mediaQuery = window.matchMedia('(max-width: 500px)');
-      const handleWidthChange = this._updatePageView.bind(this);
-      mediaQuery.addListener(handleWidthChange);
-
-      this._updatePageView(mediaQuery);
-      this._addEventListeners();
-    });
-  }
-
-  _addCustomScrollBar() {
-    const onTotalScroll = this._handleTotalScroll.bind(this);
-    const onTotalScrollBack = this._handleTotalScrollBack.bind(this);
-    const onScrollStart = this._handleScrollStart.bind(this);
-
-    const scrollBarSettings = {
-      axis: 'x',
-      theme: 'dark-thin',
-      autoExpandScrollbar: true,
-      advanced: {
-        autoExpandHorizontalScroll: true,
-      },
-      callbacks: {
-        onTotalScroll,
-        onTotalScrollBack,
-        onScrollStart,
-      },
-    };
-
-    this.$cards.mCustomScrollbar(scrollBarSettings);
-  }
-
-  _handleTotalScroll() {
-    this.$rightButton
-      .addClass('arrow-button_disabled')
-      .attr('tabindex', '-1');
-  }
-
-  _handleTotalScrollBack() {
-    this.$leftButton
-      .addClass('arrow-button_disabled')
-      .attr('tabindex', '-1');
-  }
-
-  _handleScrollStart() {
-    this.$leftButton
-      .removeClass('arrow-button_disabled')
-      .attr('tabindex', '0');
-    this.$rightButton
-      .removeClass('arrow-button_disabled')
-      .attr('tabindex', '0');
-  }
-
-  _updatePageView(mediaQuery) {
-    if (mediaQuery.matches) {
-      this.windowIsSmall = true;
-      this.$page.addClass('speaker-carousel_view_small');
-      this._hideCustomScrollBar();
-    } else {
-      this.windowIsSmall = false;
-      this.$page.removeClass('speaker-carousel_view_small');
-      if (!this.cardsAreExpanded) {
-        this._updateCustomScrollBar();
-      }
-    }
-  }
-
-  _addEventListeners() {
-    this.$rightButton.on('click.speakers', () => this._handleRightButtonClick());
-    this.$leftButton.on('click.speakers', () => this._handleLeftButtonClick());
-    this.$viewAllLink.on('click.speakers', () => this._handleViewAllClick());
-  }
-
-  _handleRightButtonClick() {
-    this.$cards.mCustomScrollbar('scrollTo', '-=500');
-  }
-
-  _handleLeftButtonClick() {
-    this.$cards.mCustomScrollbar('scrollTo', '+=500');
-  }
-
-  _handleViewAllClick() {
-    if (this.cardsAreExpanded) {
-      this.$page.removeClass('speaker-carousel_view_full');
-      this.$viewAllLink.text('View all speakers');
-      this.cardsAreExpanded = false;
-      if (!this.windowIsSmall) {
-        this._updateCustomScrollBar();
-      }
-    } else {
-      this.$page.addClass('speaker-carousel_view_full');
-      this.$viewAllLink.text('Back to compact view');
-      this.cardsAreExpanded = true;
-      if (!this.windowIsSmall) {
-        this._hideCustomScrollBar();
-      }
-    }
-  }
-
-  _updateCustomScrollBar() {
-    this.$cards.mCustomScrollbar('update');
-    this.$scrollBarContainer.css('position', 'relative');
-  }
-
-  _hideCustomScrollBar() {
-    this.$cards.mCustomScrollbar('disable', true);
-    this.$scrollBarContainer.removeAttr('style');
-  }
-}
-
-$('.js-speaker-carousel').each((i, element) => new SpeakerCarousel(element));
-
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
-
-/***/ }),
-/* 188 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function($) {class TickBox {
-  constructor(domElement) {
-    this._initialize(domElement);
-  }
-
-  _initialize(domElement) {
-    $(document).ready(() => {
-      const $domElement = $(domElement);
-      this.$tickbox = $domElement;
-      this.$input = $domElement.find('.js-tick-box__input');
-      this.$checkmark = $domElement.find('.js-tick-box__checkmark');
-      this.$tickbox
-        .on('keypress.tickbox', e => this._handleEnterPress(e))
-        .on('click.tickbox', () => this._removeFocus());
-    });
-  }
-
-  _handleEnterPress(event) {
-    if (event.which === 13) {
-      this.$input[0].checked = !this.$input[0].checked;
-      this.$input.trigger('change');
-    }
-  }
-
-  _removeFocus() {
-    this.$checkmark.blur();
-  }
-}
-
-$('.js-tick-box').each((i, element) => new TickBox(element));
-
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
-
-/***/ }),
-/* 189 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function($) {class ToggleSwitch {
-  constructor(domElement) {
-    this._initialize(domElement);
-  }
-
-  _initialize(domElement) {
-    $(document).ready(() => {
-      const $domElement = $(domElement);
-      this.$toggle = $domElement;
-      this.$input = $domElement.find('.js-toggle-switch__checkbox');
-      this.$slider = $domElement.find('.js-toggle-switch__slider');
-      this.$toggle
-        .on('keypress.toggle', e => this._handleEnterPress(e))
-        .on('click.toggle', () => this._removeFocus());
-    });
-  }
-
-  _handleEnterPress(event) {
-    if (event.which === 13) {
-      this.$input[0].checked = !this.$input[0].checked;
-      this.$input.trigger('change');
-    }
-  }
-
-  _removeFocus() {
-    this.$slider.blur();
-  }
-}
-
-$('.js-toggle-switch').each((i, element) => new ToggleSwitch(element));
-
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
-
-/***/ }),
-/* 190 */
+/* 206 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var jquery_validation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
-/* harmony import */ var jquery_validation__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery_validation__WEBPACK_IMPORTED_MODULE_0__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _SpeakerCard__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(23);
 
 
-class ValidationInput {
-  constructor(domElement) {
-    this._initialize(domElement);
-  }
+const initSpeakerCards = function createInstances() {
+  $('.js-speaker-card').each((i, element) => new _SpeakerCard__WEBPACK_IMPORTED_MODULE_0__["default"](element));
+};
 
-  _initialize(domElement) {
-    const $container = $(domElement);
-    this.$input = $container.find('.js-validation-input__input');
-    this.$bubble = $container.find('.js-validation-input__bubble');
-    this.bubbleModifiers = {
-      good: 'validation-input__bubble_type_good',
-      error: 'validation-input__bubble_type_error',
-      hidden: 'validation-input__bubble_hidden',
-    };
-
-    this.$input
-      .on('blur.validation', () => this._handleInputBlur())
-      .on('focus.validation', () => this._handleInputFocus());
-  }
-
-  _handleInputBlur() {
-    const { good, error, hidden } = this.bubbleModifiers;
-    if (this.$input.valid()) {
-      this.$bubble
-        .removeClass(`${error} ${hidden}`)
-        .addClass(good)
-        .text('Thanks!');
-    } else {
-      this.$bubble
-        .removeClass(`${good} ${hidden}`)
-        .addClass(error)
-        .text('Error');
-    }
-  }
-
-  _handleInputFocus() {
-    const { good, error, hidden } = this.bubbleModifiers;
-    this.$bubble
-      .addClass(hidden)
-      .removeClass(`${good} ${error}`);
-  }
-}
-
-$('.js-validation-input').each((i, element) => new ValidationInput(element));
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
-
-/***/ }),
-/* 191 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function($) {class Video {
-  constructor(domElement) {
-    this._initialize(domElement);
-  }
-
-  _initialize(domElement) {
-    $(document).ready(() => {
-      this.$video = $(domElement).find('.js-video__frame');
-
-      const video = this.$video[0];
-      this.aspectRatio = video.height / video.width;
-      video.dataset.aspectRatio = this.aspectRatio;
-      video.removeAttribute('height');
-      video.removeAttribute('width');
-
-      this._resize();
-    });
-
-    $(window).on('resize.video', () => this._resize());
-  }
-
-  _resize() {
-    const newWidth = document.width;
-    this.$video
-      .width(newWidth)
-      .height(newWidth * this.aspectRatio);
-  }
-}
-
-$('.js-video').each((i, element) => new Video(element));
+$(document).ready(initSpeakerCards);
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
-/* 192 */
+/* 207 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _SpeakerCarousel__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
+
+
+const initSpeakerCarousels = function createInstances() {
+  $('.js-speaker-carousel').each((i, element) => new _SpeakerCarousel__WEBPACK_IMPORTED_MODULE_0__["default"](element));
+};
+
+$(document).ready(initSpeakerCarousels);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
+
+/***/ }),
+/* 208 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _TickBox__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(25);
+
+
+const initTickBoxes = function createInstances() {
+  $('.js-tick-box').each((i, element) => new _TickBox__WEBPACK_IMPORTED_MODULE_0__["default"](element));
+};
+
+$(document).ready(initTickBoxes);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
+
+/***/ }),
+/* 209 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _ToggleSwitch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(26);
+
+
+const initToggleSwitches = function createInstances() {
+  $('.js-toggle-switch').each((i, element) => new _ToggleSwitch__WEBPACK_IMPORTED_MODULE_0__["default"](element));
+};
+
+$(document).ready(initToggleSwitches);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
+
+/***/ }),
+/* 210 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _ValidationInput__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(27);
+
+
+const initValidationInputs = function createInstances() {
+  $('.js-validation-input').each((i, element) => new _ValidationInput__WEBPACK_IMPORTED_MODULE_0__["default"](element));
+};
+
+$(document).ready(initValidationInputs);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
+
+/***/ }),
+/* 211 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _Video__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(28);
+
+
+const initVideos = function createInstances() {
+  $('.js-video').each((i, element) => new _Video__WEBPACK_IMPORTED_MODULE_0__["default"](element));
+};
+
+$(document).ready(initVideos);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
+
+/***/ }),
+/* 212 */
 /***/ (function(module, exports) {
 
 function webpackEmptyContext(req) {
@@ -20639,7 +23465,7 @@ function webpackEmptyContext(req) {
 webpackEmptyContext.keys = function() { return []; };
 webpackEmptyContext.resolve = webpackEmptyContext;
 module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 192;
+webpackEmptyContext.id = 212;
 
 /***/ })
 /******/ ]);

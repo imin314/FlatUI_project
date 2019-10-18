@@ -81,21 +81,22 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 193);
+/******/ 	return __webpack_require__(__webpack_require__.s = 213);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 193:
+/***/ 213:
 /***/ (function(module, exports) {
 
 document.documentElement.style.visibility = 'hidden';
 
-window.addEventListener('load', () => 
-  {
-    document.documentElement.style.visibility = '';
-  }
-);
+const showDocument = function unhideHTMLContent() {
+  document.documentElement.style.visibility = '';
+};
+
+window.addEventListener('load', showDocument);
+
 
 /***/ })
 
