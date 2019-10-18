@@ -1,19 +1,17 @@
 class ArrowButton {
   constructor(domElement) {
-    this._initialize(domElement);
+    $(document).ready(this._initialize.bind(this, domElement));
   }
 
   _initialize(domElement) {
-    $(document).ready(() => {
-      this.$button = $(domElement);
+    this.$button = $(domElement);
 
-      this.$button
-        .on('click.arrowbutton', () => this._handleButtonClick())
-        .on('keydown.arrowbutton', e => this._handleEnterDown(e))
-        .on('keyup.arrowbutton', e => this._handleEnterUp(e))
-        .on('touchstart.arrowbutton', () => this._addActiveClass())
-        .on('touchend.arrowbutton', () => this._removeActiveClass());
-    });
+    this.$button
+      .on('click.arrowbutton', this._handleButtonClick.bind(this))
+      .on('keydown.arrowbutton', this._handleEnterDown.bind(this))
+      .on('keyup.arrowbutton', this._handleEnterUp.bind(this))
+      .on('touchstart.arrowbutton', this._addActiveClass.bind(this))
+      .on('touchend.arrowbutton', this._removeActiveClass.bind(this));
   }
 
   _handleButtonClick() {

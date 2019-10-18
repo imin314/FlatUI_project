@@ -1,17 +1,15 @@
 class DropDown {
   constructor(domElement) {
-    this._initialize(domElement);
+    $(document).ready(this._initialize.bind(this, domElement));
   }
 
   _initialize(domElement) {
-    $(document).ready(() => {
-      const $domElement = $(domElement);
-      this.$dropdown = $domElement;
-      this.$label = $domElement.find('.js-drop-down__label');
-      this.$dropdown
-        .on('click.drop-down', e => this._handleDropDownClick(e))
-        .on('keypress.drop-down', e => this._handleDropDownKeypress(e));
-    });
+    const $domElement = $(domElement);
+    this.$dropdown = $domElement;
+    this.$label = $domElement.find('.js-drop-down__label');
+    this.$dropdown
+      .on('click.drop-down', this._handleDropDownClick.bind(this))
+      .on('keypress.drop-down', this._handleDropDownKeypress.bind(this));
   }
 
   _handleDropDownClick(event) {

@@ -2,21 +2,19 @@ import 'jquery-ui/ui/widgets/datepicker';
 
 class Calendar {
   constructor(domElement) {
-    this._initialize(domElement);
+    $(document).ready(this._initialize.bind(this, domElement));
   }
 
   _initialize(domElement) {
-    $(document).ready(() => {
-      this.$calendar = $(domElement);
+    this.$calendar = $(domElement);
 
-      const settings = this._generateCalendarSettings();
-      this.$calendar.datepicker(settings);
+    const settings = this._generateCalendarSettings();
+    this.$calendar.datepicker(settings);
 
-      this
-        ._prependDayContainer()
-        ._appendButtonPane()
-        ._updateDayText(this.$calendar.datepicker('getDate'));
-    });
+    this
+      ._prependDayContainer()
+      ._appendButtonPane()
+      ._updateDayText(this.$calendar.datepicker('getDate'));
   }
 
   _generateCalendarSettings() {
@@ -55,7 +53,7 @@ class Calendar {
     });
     this.$todayButton
       .text('today')
-      .on('click.calendar', () => this._handleTodayButtonClick());
+      .on('click.calendar', this._handleTodayButtonClick.bind(this));
 
     $buttonPane.append(this.$todayButton);
     this.$calendar.append($buttonPane);

@@ -2,17 +2,15 @@ import 'legit-ripple/dist/ripple.min';
 
 class Button {
   constructor(domElement) {
-    this._initialize(domElement);
+    $(document).ready(this._initialize.bind(this, domElement));
   }
 
   _initialize(domElement) {
-    $(document).ready(() => {
-      this.$button = $(domElement);
-      this.$button
-        .on('keypress.button', e => this._handleEnterPress(e))
-        .on('transitionend webkitTransitionEnd oTransitionEnd', () => this._handleButtonAnimationEnd())
-        .ripple({ dragging: false });
-    });
+    this.$button = $(domElement);
+    this.$button
+      .on('keypress.button', this._handleEnterPress.bind(this))
+      .on('transitionend webkitTransitionEnd oTransitionEnd', this._handleButtonAnimationEnd.bind(this))
+      .ripple({ dragging: false });
     return this;
   }
 
