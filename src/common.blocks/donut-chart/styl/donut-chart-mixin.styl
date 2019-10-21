@@ -1,7 +1,7 @@
 @import '../../../styles/variables.styl'
 
 setSliceColorByIndex(num)
-  pie-colors = ( color-text-darker color-orange color-cyan #454545)
+  pie-colors = (color-bg-darker color-orange color-cyan)
   divider = length(pie-colors)
   index = (num - 2)*1 % divider
   opacityRatio = (num - 2 - index) / divider

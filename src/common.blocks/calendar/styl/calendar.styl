@@ -2,7 +2,7 @@
 @import '../../../styles/mixins.styl'
 
 .calendar
-  background-color #f2f2f2
+  background-color lighten(color-bg, 5.10)
   border-radius 0.3rem
   overflow hidden
 
@@ -26,7 +26,7 @@
     justify-content space-between
     align-items center
     padding 0.7rem 1.1rem
-    background-color #d54c2c
+    background-color darken(desaturate(color-orange, 11.96), 5.29)
     color white
   
   & .ui-datepicker-prev
@@ -110,7 +110,7 @@
 
     & .ui-state-default
       font normal 1.428571429rem ui-font-family
-      color #868686
+      color lighten(color-text, 21.57)
       text-decoration none
       outline none
 
@@ -137,7 +137,7 @@
   &__today-button
     font bold 1rem font-family
     text-transform uppercase
-    color #868686
+    color lighten(color-text, 21.57)
     background none
     border none
     cursor pointer
