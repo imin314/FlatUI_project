@@ -30,7 +30,7 @@ mixin newsCard(cardData, settings)
         .news-card__title= cardTitle
         .news-card__text.js-news-card__text= cardText
         .news-card__button
-          +button({ title:'add to calendar', size:'small responsive' })
+          +button({ title:'add to calendar', size: 'small' })
       - } else {
         .news-card__title= cardTitle
         .news-card__date= day + ' ' + month + ' ' + year
