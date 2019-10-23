@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 31);
+/******/ 	return __webpack_require__(__webpack_require__.s = 32);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -11356,7 +11356,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 exports = module.exports = __webpack_require__(0)(false);
 // Imports
 var getUrl = __webpack_require__(3);
-var ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(65));
+var ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(66));
 // Module
 exports.push([module.i, "/*\r\n== malihu jquery custom scrollbar plugin ==\r\nPlugin URI: http://manos.malihu.gr/jquery-custom-content-scroller\r\n*/\r\n\r\n\r\n\r\n/*\r\nCONTENTS: \r\n\t1. BASIC STYLE - Plugin's basic/essential CSS properties (normally, should not be edited). \r\n\t2. VERTICAL SCROLLBAR - Positioning and dimensions of vertical scrollbar. \r\n\t3. HORIZONTAL SCROLLBAR - Positioning and dimensions of horizontal scrollbar.\r\n\t4. VERTICAL AND HORIZONTAL SCROLLBARS - Positioning and dimensions of 2-axis scrollbars. \r\n\t5. TRANSITIONS - CSS3 transitions for hover events, auto-expanded and auto-hidden scrollbars. \r\n\t6. SCROLLBAR COLORS, OPACITY AND BACKGROUNDS \r\n\t\t6.1 THEMES - Scrollbar colors, opacity, dimensions, backgrounds etc. via ready-to-use themes.\r\n*/\r\n\r\n\r\n\r\n/* \r\n------------------------------------------------------------------------------------------------------------------------\r\n1. BASIC STYLE  \r\n------------------------------------------------------------------------------------------------------------------------\r\n*/\r\n\r\n\t.mCustomScrollbar{ touch-action: pinch-zoom; /* direct pointer events to js */ }\r\n\t.mCustomScrollbar.mCS_no_scrollbar, .mCustomScrollbar.mCS_touch_action{ touch-action: auto; }\r\n\t\r\n\t.mCustomScrollBox{ /* contains plugin's markup */\r\n\t\tposition: relative;\r\n\t\toverflow: hidden;\r\n\t\theight: 100%;\r\n\t\tmax-width: 100%;\r\n\t\toutline: none;\r\n\t\tdirection: ltr;\r\n\t}\r\n\r\n\t.mCSB_container{ /* contains the original content */\r\n\t\toverflow: hidden;\r\n\t\twidth: auto;\r\n\t\theight: auto;\r\n\t}\r\n\r\n\r\n\r\n/* \r\n------------------------------------------------------------------------------------------------------------------------\r\n2. VERTICAL SCROLLBAR \r\ny-axis\r\n------------------------------------------------------------------------------------------------------------------------\r\n*/\r\n\r\n\t.mCSB_inside > .mCSB_container{ margin-right: 30px; }\r\n\r\n\t.mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden{ margin-right: 0; } /* non-visible scrollbar */\r\n\t\r\n\t.mCS-dir-rtl > .mCSB_inside > .mCSB_container{ /* RTL direction/left-side scrollbar */\r\n\t\tmargin-right: 0;\r\n\t\tmargin-left: 30px;\r\n\t}\r\n\t\r\n\t.mCS-dir-rtl > .mCSB_inside > .mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden{ margin-left: 0; } /* RTL direction/left-side scrollbar */\r\n\r\n\t.mCSB_scrollTools{ /* contains scrollbar markup (draggable element, dragger rail, buttons etc.) */\r\n\t\tposition: absolute;\r\n\t\twidth: 16px;\r\n\t\theight: auto;\r\n\t\tleft: auto;\r\n\t\ttop: 0;\r\n\t\tright: 0;\r\n\t\tbottom: 0;\r\n\t}\r\n\r\n\t.mCSB_outside + .mCSB_scrollTools{ right: -26px; } /* scrollbar position: outside */\r\n\t\r\n\t.mCS-dir-rtl > .mCSB_inside > .mCSB_scrollTools, \r\n\t.mCS-dir-rtl > .mCSB_outside + .mCSB_scrollTools{ /* RTL direction/left-side scrollbar */\r\n\t\tright: auto;\r\n\t\tleft: 0;\r\n\t}\r\n\t\r\n\t.mCS-dir-rtl > .mCSB_outside + .mCSB_scrollTools{ left: -26px; } /* RTL direction/left-side scrollbar (scrollbar position: outside) */\r\n\r\n\t.mCSB_scrollTools .mCSB_draggerContainer{ /* contains the draggable element and dragger rail markup */\r\n\t\tposition: absolute;\r\n\t\ttop: 0;\r\n\t\tleft: 0;\r\n\t\tbottom: 0;\r\n\t\tright: 0; \r\n\t\theight: auto;\r\n\t}\r\n\r\n\t.mCSB_scrollTools a + .mCSB_draggerContainer{ margin: 20px 0; }\r\n\r\n\t.mCSB_scrollTools .mCSB_draggerRail{\r\n\t\twidth: 2px;\r\n\t\theight: 100%;\r\n\t\tmargin: 0 auto; border-radius: 16px;\r\n\t}\r\n\r\n\t.mCSB_scrollTools .mCSB_dragger{ /* the draggable element */\r\n\t\tcursor: pointer;\r\n\t\twidth: 100%;\r\n\t\theight: 30px; /* minimum dragger height */\r\n\t\tz-index: 1;\r\n\t}\r\n\r\n\t.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ /* the dragger element */\r\n\t\tposition: relative;\r\n\t\twidth: 4px;\r\n\t\theight: 100%;\r\n\t\tmargin: 0 auto; border-radius: 16px;\r\n\t\ttext-align: center;\r\n\t}\r\n\t\r\n\t.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, \r\n\t.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{ width: 12px; /* auto-expanded scrollbar */ }\r\n\t\r\n\t.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, \r\n\t.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{ width: 8px; /* auto-expanded scrollbar */ }\r\n\r\n\t.mCSB_scrollTools .mCSB_buttonUp,\r\n\t.mCSB_scrollTools .mCSB_buttonDown{\r\n\t\tdisplay: block;\r\n\t\tposition: absolute;\r\n\t\theight: 20px;\r\n\t\twidth: 100%;\r\n\t\toverflow: hidden;\r\n\t\tmargin: 0 auto;\r\n\t\tcursor: pointer;\r\n\t}\r\n\r\n\t.mCSB_scrollTools .mCSB_buttonDown{ bottom: 0; }\r\n\r\n\r\n\r\n/* \r\n------------------------------------------------------------------------------------------------------------------------\r\n3. HORIZONTAL SCROLLBAR \r\nx-axis\r\n------------------------------------------------------------------------------------------------------------------------\r\n*/\r\n\r\n\t.mCSB_horizontal.mCSB_inside > .mCSB_container{\r\n\t\tmargin-right: 0;\r\n\t\tmargin-bottom: 30px;\r\n\t}\r\n\t\r\n\t.mCSB_horizontal.mCSB_outside > .mCSB_container{ min-height: 100%; }\r\n\r\n\t.mCSB_horizontal > .mCSB_container.mCS_no_scrollbar_x.mCS_x_hidden{ margin-bottom: 0; } /* non-visible scrollbar */\r\n\r\n\t.mCSB_scrollTools.mCSB_scrollTools_horizontal{\r\n\t\twidth: auto;\r\n\t\theight: 16px;\r\n\t\ttop: auto;\r\n\t\tright: 0;\r\n\t\tbottom: 0;\r\n\t\tleft: 0;\r\n\t}\r\n\r\n\t.mCustomScrollBox + .mCSB_scrollTools.mCSB_scrollTools_horizontal,\r\n\t.mCustomScrollBox + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal{ bottom: -26px; } /* scrollbar position: outside */\r\n\r\n\t.mCSB_scrollTools.mCSB_scrollTools_horizontal a + .mCSB_draggerContainer{ margin: 0 20px; }\r\n\r\n\t.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_draggerRail{\r\n\t\twidth: 100%;\r\n\t\theight: 2px;\r\n\t\tmargin: 7px 0;\r\n\t}\r\n\r\n\t.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger{\r\n\t\twidth: 30px; /* minimum dragger width */\r\n\t\theight: 100%;\r\n\t\tleft: 0;\r\n\t}\r\n\r\n\t.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{\r\n\t\twidth: 100%;\r\n\t\theight: 4px;\r\n\t\tmargin: 6px auto;\r\n\t}\r\n\t\r\n\t.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, \r\n\t.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{\r\n\t\theight: 12px; /* auto-expanded scrollbar */\r\n\t\tmargin: 2px auto;\r\n\t}\r\n\t\r\n\t.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, \r\n\t.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{\r\n\t\theight: 8px; /* auto-expanded scrollbar */\r\n\t\tmargin: 4px 0;\r\n\t}\r\n\r\n\t.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft,\r\n\t.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight{\r\n\t\tdisplay: block;\r\n\t\tposition: absolute;\r\n\t\twidth: 20px;\r\n\t\theight: 100%;\r\n\t\toverflow: hidden;\r\n\t\tmargin: 0 auto;\r\n\t\tcursor: pointer;\r\n\t}\r\n\t\r\n\t.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft{ left: 0; }\r\n\r\n\t.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight{ right: 0; }\r\n\r\n\r\n\r\n/* \r\n------------------------------------------------------------------------------------------------------------------------\r\n4. VERTICAL AND HORIZONTAL SCROLLBARS \r\nyx-axis \r\n------------------------------------------------------------------------------------------------------------------------\r\n*/\r\n\r\n\t.mCSB_container_wrapper{\r\n\t\tposition: absolute;\r\n\t\theight: auto;\r\n\t\twidth: auto;\r\n\t\toverflow: hidden;\r\n\t\ttop: 0;\r\n\t\tleft: 0;\r\n\t\tright: 0;\r\n\t\tbottom: 0;\r\n\t\tmargin-right: 30px;\r\n\t\tmargin-bottom: 30px;\r\n\t}\r\n\t\r\n\t.mCSB_container_wrapper > .mCSB_container{\r\n\t\tpadding-right: 30px;\r\n\t\tpadding-bottom: 30px; box-sizing: border-box;\r\n\t}\r\n\t\r\n\t.mCSB_vertical_horizontal > .mCSB_scrollTools.mCSB_scrollTools_vertical{ bottom: 20px; }\r\n\t\r\n\t.mCSB_vertical_horizontal > .mCSB_scrollTools.mCSB_scrollTools_horizontal{ right: 20px; }\r\n\t\r\n\t/* non-visible horizontal scrollbar */\r\n\t.mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden + .mCSB_scrollTools.mCSB_scrollTools_vertical{ bottom: 0; }\r\n\t\r\n\t/* non-visible vertical scrollbar/RTL direction/left-side scrollbar */\r\n\t.mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden + .mCSB_scrollTools ~ .mCSB_scrollTools.mCSB_scrollTools_horizontal, \r\n\t.mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_scrollTools.mCSB_scrollTools_horizontal{ right: 0; }\r\n\t\r\n\t/* RTL direction/left-side scrollbar */\r\n\t.mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_scrollTools.mCSB_scrollTools_horizontal{ left: 20px; }\r\n\t\r\n\t/* non-visible scrollbar/RTL direction/left-side scrollbar */\r\n\t.mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden + .mCSB_scrollTools ~ .mCSB_scrollTools.mCSB_scrollTools_horizontal{ left: 0; }\r\n\t\r\n\t.mCS-dir-rtl > .mCSB_inside > .mCSB_container_wrapper{ /* RTL direction/left-side scrollbar */\r\n\t\tmargin-right: 0;\r\n\t\tmargin-left: 30px;\r\n\t}\r\n\t\r\n\t.mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden > .mCSB_container{ padding-right: 0; }\r\n\t\r\n\t.mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden > .mCSB_container{ padding-bottom: 0; }\r\n\t\r\n\t.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden{\r\n\t\tmargin-right: 0; /* non-visible scrollbar */\r\n\t\tmargin-left: 0;\r\n\t}\r\n\t\r\n\t/* non-visible horizontal scrollbar */\r\n\t.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden{ margin-bottom: 0; }\r\n\r\n\r\n\r\n/* \r\n------------------------------------------------------------------------------------------------------------------------\r\n5. TRANSITIONS  \r\n------------------------------------------------------------------------------------------------------------------------\r\n*/\r\n\r\n\t.mCSB_scrollTools, \r\n\t.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCSB_scrollTools .mCSB_buttonUp,\r\n\t.mCSB_scrollTools .mCSB_buttonDown,\r\n\t.mCSB_scrollTools .mCSB_buttonLeft,\r\n\t.mCSB_scrollTools .mCSB_buttonRight{\r\n\t\ttransition: opacity .2s ease-in-out, background-color .2s ease-in-out;\r\n\t}\r\n\t\r\n\t.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger_bar, /* auto-expanded scrollbar */\r\n\t.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail, \r\n\t.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger_bar, \r\n\t.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail{ \r\n\t\ttransition: width .2s ease-out .2s, height .2s ease-out .2s, \r\n\t\t\t\t\tmargin-left .2s ease-out .2s, margin-right .2s ease-out .2s, \r\n\t\t\t\t\tmargin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s,\r\n\t\t\t\t\topacity .2s ease-in-out, background-color .2s ease-in-out; \r\n\t}\r\n\r\n\r\n\r\n/* \r\n------------------------------------------------------------------------------------------------------------------------\r\n6. SCROLLBAR COLORS, OPACITY AND BACKGROUNDS  \r\n------------------------------------------------------------------------------------------------------------------------\r\n*/\r\n\r\n\t/* \r\n\t----------------------------------------\r\n\t6.1 THEMES \r\n\t----------------------------------------\r\n\t*/\r\n\t\r\n\t/* default theme (\"light\") */\r\n\r\n\t.mCSB_scrollTools{ opacity: 0.75; filter: \"alpha(opacity=75)\"; -ms-filter: \"alpha(opacity=75)\"; }\r\n\t\r\n\t.mCS-autoHide > .mCustomScrollBox > .mCSB_scrollTools,\r\n\t.mCS-autoHide > .mCustomScrollBox ~ .mCSB_scrollTools{ opacity: 0; filter: \"alpha(opacity=0)\"; -ms-filter: \"alpha(opacity=0)\"; }\r\n\t\r\n\t.mCustomScrollbar > .mCustomScrollBox > .mCSB_scrollTools.mCSB_scrollTools_onDrag,\r\n\t.mCustomScrollbar > .mCustomScrollBox ~ .mCSB_scrollTools.mCSB_scrollTools_onDrag,\r\n\t.mCustomScrollBox:hover > .mCSB_scrollTools,\r\n\t.mCustomScrollBox:hover ~ .mCSB_scrollTools,\r\n\t.mCS-autoHide:hover > .mCustomScrollBox > .mCSB_scrollTools,\r\n\t.mCS-autoHide:hover > .mCustomScrollBox ~ .mCSB_scrollTools{ opacity: 1; filter: \"alpha(opacity=100)\"; -ms-filter: \"alpha(opacity=100)\"; }\r\n\r\n\t.mCSB_scrollTools .mCSB_draggerRail{\r\n\t\tbackground-color: #000; background-color: rgba(0,0,0,0.4);\r\n\t\tfilter: \"alpha(opacity=40)\"; -ms-filter: \"alpha(opacity=40)\"; \r\n\t}\r\n\r\n\t.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{\r\n\t\tbackground-color: #fff; background-color: rgba(255,255,255,0.75);\r\n\t\tfilter: \"alpha(opacity=75)\"; -ms-filter: \"alpha(opacity=75)\"; \r\n\t}\r\n\r\n\t.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{\r\n\t\tbackground-color: #fff; background-color: rgba(255,255,255,0.85);\r\n\t\tfilter: \"alpha(opacity=85)\"; -ms-filter: \"alpha(opacity=85)\"; \r\n\t}\r\n\t.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{\r\n\t\tbackground-color: #fff; background-color: rgba(255,255,255,0.9);\r\n\t\tfilter: \"alpha(opacity=90)\"; -ms-filter: \"alpha(opacity=90)\"; \r\n\t}\r\n\r\n\t.mCSB_scrollTools .mCSB_buttonUp,\r\n\t.mCSB_scrollTools .mCSB_buttonDown,\r\n\t.mCSB_scrollTools .mCSB_buttonLeft,\r\n\t.mCSB_scrollTools .mCSB_buttonRight{\r\n\t\tbackground-image: url(" + ___CSS_LOADER_URL___0___ + "); /* css sprites */\r\n\t\tbackground-repeat: no-repeat;\r\n\t\topacity: 0.4; filter: \"alpha(opacity=40)\"; -ms-filter: \"alpha(opacity=40)\"; \r\n\t}\r\n\r\n\t.mCSB_scrollTools .mCSB_buttonUp{\r\n\t\tbackground-position: 0 0;\r\n\t\t/* \r\n\t\tsprites locations \r\n\t\tlight: 0 0, -16px 0, -32px 0, -48px 0, 0 -72px, -16px -72px, -32px -72px\r\n\t\tdark: -80px 0, -96px 0, -112px 0, -128px 0, -80px -72px, -96px -72px, -112px -72px\r\n\t\t*/\r\n\t}\r\n\r\n\t.mCSB_scrollTools .mCSB_buttonDown{\r\n\t\tbackground-position: 0 -20px;\r\n\t\t/* \r\n\t\tsprites locations\r\n\t\tlight: 0 -20px, -16px -20px, -32px -20px, -48px -20px, 0 -92px, -16px -92px, -32px -92px\r\n\t\tdark: -80px -20px, -96px -20px, -112px -20px, -128px -20px, -80px -92px, -96px -92px, -112 -92px\r\n\t\t*/\r\n\t}\r\n\r\n\t.mCSB_scrollTools .mCSB_buttonLeft{\r\n\t\tbackground-position: 0 -40px;\r\n\t\t/* \r\n\t\tsprites locations \r\n\t\tlight: 0 -40px, -20px -40px, -40px -40px, -60px -40px, 0 -112px, -20px -112px, -40px -112px\r\n\t\tdark: -80px -40px, -100px -40px, -120px -40px, -140px -40px, -80px -112px, -100px -112px, -120px -112px\r\n\t\t*/\r\n\t}\r\n\r\n\t.mCSB_scrollTools .mCSB_buttonRight{\r\n\t\tbackground-position: 0 -56px;\r\n\t\t/* \r\n\t\tsprites locations \r\n\t\tlight: 0 -56px, -20px -56px, -40px -56px, -60px -56px, 0 -128px, -20px -128px, -40px -128px\r\n\t\tdark: -80px -56px, -100px -56px, -120px -56px, -140px -56px, -80px -128px, -100px -128px, -120px -128px\r\n\t\t*/\r\n\t}\r\n\r\n\t.mCSB_scrollTools .mCSB_buttonUp:hover,\r\n\t.mCSB_scrollTools .mCSB_buttonDown:hover,\r\n\t.mCSB_scrollTools .mCSB_buttonLeft:hover,\r\n\t.mCSB_scrollTools .mCSB_buttonRight:hover{ opacity: 0.75; filter: \"alpha(opacity=75)\"; -ms-filter: \"alpha(opacity=75)\"; }\r\n\r\n\t.mCSB_scrollTools .mCSB_buttonUp:active,\r\n\t.mCSB_scrollTools .mCSB_buttonDown:active,\r\n\t.mCSB_scrollTools .mCSB_buttonLeft:active,\r\n\t.mCSB_scrollTools .mCSB_buttonRight:active{ opacity: 0.9; filter: \"alpha(opacity=90)\"; -ms-filter: \"alpha(opacity=90)\"; }\r\n\t\r\n\r\n\t/* theme: \"dark\" */\r\n\r\n\t.mCS-dark.mCSB_scrollTools .mCSB_draggerRail{ background-color: #000; background-color: rgba(0,0,0,0.15); }\r\n\r\n\t.mCS-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.75); }\r\n\r\n\t.mCS-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: rgba(0,0,0,0.85); }\r\n\r\n\t.mCS-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: rgba(0,0,0,0.9); }\r\n\r\n\t.mCS-dark.mCSB_scrollTools .mCSB_buttonUp{ background-position: -80px 0; }\r\n\r\n\t.mCS-dark.mCSB_scrollTools .mCSB_buttonDown{ background-position: -80px -20px; }\r\n\r\n\t.mCS-dark.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -80px -40px; }\r\n\r\n\t.mCS-dark.mCSB_scrollTools .mCSB_buttonRight{ background-position: -80px -56px; }\r\n\t\r\n\t/* ---------------------------------------- */\r\n\t\r\n\r\n\r\n\t/* theme: \"light-2\", \"dark-2\" */\r\n\r\n\t.mCS-light-2.mCSB_scrollTools .mCSB_draggerRail, \r\n\t.mCS-dark-2.mCSB_scrollTools .mCSB_draggerRail{\r\n\t\twidth: 4px;\r\n\t\tbackground-color: #fff; background-color: rgba(255,255,255,0.1); border-radius: 1px;\r\n\t}\r\n\r\n\t.mCS-light-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-dark-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{\r\n\t\twidth: 4px;\r\n\t\tbackground-color: #fff; background-color: rgba(255,255,255,0.75); border-radius: 1px;\r\n\t}\r\n\r\n\t.mCS-light-2.mCSB_scrollTools_horizontal .mCSB_draggerRail, \r\n\t.mCS-dark-2.mCSB_scrollTools_horizontal .mCSB_draggerRail, \r\n\t.mCS-light-2.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-dark-2.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{\r\n\t\twidth: 100%;\r\n\t\theight: 4px;\r\n\t\tmargin: 6px auto;\r\n\t}\r\n\r\n\t.mCS-light-2.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #fff; background-color: rgba(255,255,255,0.85); }\r\n\r\n\t.mCS-light-2.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-light-2.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #fff; background-color: rgba(255,255,255,0.9); }\r\n\r\n\t.mCS-light-2.mCSB_scrollTools .mCSB_buttonUp{ background-position: -32px 0; }\r\n\r\n\t.mCS-light-2.mCSB_scrollTools .mCSB_buttonDown{\tbackground-position: -32px -20px; }\r\n\r\n\t.mCS-light-2.mCSB_scrollTools .mCSB_buttonLeft{\tbackground-position: -40px -40px; }\r\n\r\n\t.mCS-light-2.mCSB_scrollTools .mCSB_buttonRight{ background-position: -40px -56px; }\r\n\t\r\n\t\r\n\t/* theme: \"dark-2\" */\r\n\r\n\t.mCS-dark-2.mCSB_scrollTools .mCSB_draggerRail{\r\n\t\tbackground-color: #000; background-color: rgba(0,0,0,0.1); border-radius: 1px;\r\n\t}\r\n\r\n\t.mCS-dark-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{\r\n\t\tbackground-color: #000; background-color: rgba(0,0,0,0.75); border-radius: 1px;\r\n\t}\r\n\r\n\t.mCS-dark-2.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.85); }\r\n\r\n\t.mCS-dark-2.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-dark-2.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.9); }\r\n\r\n\t.mCS-dark-2.mCSB_scrollTools .mCSB_buttonUp{ background-position: -112px 0; }\r\n\r\n\t.mCS-dark-2.mCSB_scrollTools .mCSB_buttonDown{ background-position: -112px -20px; }\r\n\r\n\t.mCS-dark-2.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -120px -40px; }\r\n\r\n\t.mCS-dark-2.mCSB_scrollTools .mCSB_buttonRight{\tbackground-position: -120px -56px; }\r\n\t\r\n\t/* ---------------------------------------- */\r\n\t\r\n\r\n\r\n\t/* theme: \"light-thick\", \"dark-thick\" */\r\n\r\n\t.mCS-light-thick.mCSB_scrollTools .mCSB_draggerRail, \r\n\t.mCS-dark-thick.mCSB_scrollTools .mCSB_draggerRail{\r\n\t\twidth: 4px;\r\n\t\tbackground-color: #fff; background-color: rgba(255,255,255,0.1); border-radius: 2px;\r\n\t}\r\n\r\n\t.mCS-light-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{\r\n\t\twidth: 6px;\r\n\t\tbackground-color: #fff; background-color: rgba(255,255,255,0.75); border-radius: 2px;\r\n\t}\r\n\r\n\t.mCS-light-thick.mCSB_scrollTools_horizontal .mCSB_draggerRail, \r\n\t.mCS-dark-thick.mCSB_scrollTools_horizontal .mCSB_draggerRail{\r\n\t\twidth: 100%;\r\n\t\theight: 4px;\r\n\t\tmargin: 6px 0;\r\n\t}\r\n\r\n\t.mCS-light-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-dark-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{\r\n\t\twidth: 100%;\r\n\t\theight: 6px;\r\n\t\tmargin: 5px auto;\r\n\t}\r\n\r\n\t.mCS-light-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #fff; background-color: rgba(255,255,255,0.85); }\r\n\r\n\t.mCS-light-thick.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-light-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #fff; background-color: rgba(255,255,255,0.9); }\r\n\r\n\t.mCS-light-thick.mCSB_scrollTools .mCSB_buttonUp{ background-position: -16px 0; }\r\n\r\n\t.mCS-light-thick.mCSB_scrollTools .mCSB_buttonDown{\tbackground-position: -16px -20px; }\r\n\r\n\t.mCS-light-thick.mCSB_scrollTools .mCSB_buttonLeft{\tbackground-position: -20px -40px; }\r\n\r\n\t.mCS-light-thick.mCSB_scrollTools .mCSB_buttonRight{ background-position: -20px -56px; }\r\n\r\n\r\n\t/* theme: \"dark-thick\" */\r\n\t\r\n\t.mCS-dark-thick.mCSB_scrollTools .mCSB_draggerRail{\r\n\t\tbackground-color: #000; background-color: rgba(0,0,0,0.1); border-radius: 2px;\r\n\t}\r\n\r\n\t.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{\r\n\t\tbackground-color: #000; background-color: rgba(0,0,0,0.75); border-radius: 2px;\r\n\t}\r\n\r\n\t.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.85); }\r\n\r\n\t.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.9); }\r\n\r\n\t.mCS-dark-thick.mCSB_scrollTools .mCSB_buttonUp{ background-position: -96px 0; }\r\n\r\n\t.mCS-dark-thick.mCSB_scrollTools .mCSB_buttonDown{ background-position: -96px -20px; }\r\n\r\n\t.mCS-dark-thick.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -100px -40px; }\r\n\r\n\t.mCS-dark-thick.mCSB_scrollTools .mCSB_buttonRight{\tbackground-position: -100px -56px; }\r\n\t\r\n\t/* ---------------------------------------- */\r\n\t\r\n\r\n\r\n\t/* theme: \"light-thin\", \"dark-thin\" */\r\n\t\r\n\t.mCS-light-thin.mCSB_scrollTools .mCSB_draggerRail{ background-color: #fff; background-color: rgba(255,255,255,0.1); }\r\n\r\n\t.mCS-light-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ width: 2px; }\r\n\r\n\t.mCS-light-thin.mCSB_scrollTools_horizontal .mCSB_draggerRail, \r\n\t.mCS-dark-thin.mCSB_scrollTools_horizontal .mCSB_draggerRail{ width: 100%; }\r\n\r\n\t.mCS-light-thin.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-dark-thin.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{\r\n\t\twidth: 100%;\r\n\t\theight: 2px;\r\n\t\tmargin: 7px auto;\r\n\t}\r\n\r\n\r\n\t/* theme \"dark-thin\" */\r\n\t\r\n\t.mCS-dark-thin.mCSB_scrollTools .mCSB_draggerRail{ background-color: #000; background-color: rgba(0,0,0,0.15); }\r\n\r\n\t.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.75); }\r\n\t\r\n\t.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.85); }\r\n\t\r\n\t.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.9); }\r\n\t\r\n\t.mCS-dark-thin.mCSB_scrollTools .mCSB_buttonUp{\tbackground-position: -80px 0; }\r\n\r\n\t.mCS-dark-thin.mCSB_scrollTools .mCSB_buttonDown{ background-position: -80px -20px; }\r\n\r\n\t.mCS-dark-thin.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -80px -40px; }\r\n\r\n\t.mCS-dark-thin.mCSB_scrollTools .mCSB_buttonRight{ background-position: -80px -56px; }\r\n\t\r\n\t/* ---------------------------------------- */\r\n\t\r\n\t\r\n\t\r\n\t/* theme \"rounded\", \"rounded-dark\", \"rounded-dots\", \"rounded-dots-dark\" */\r\n\t\r\n\t.mCS-rounded.mCSB_scrollTools .mCSB_draggerRail{ background-color: #fff; background-color: rgba(255,255,255,0.15); }\r\n\t\r\n\t.mCS-rounded.mCSB_scrollTools .mCSB_dragger, \r\n\t.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger, \r\n\t.mCS-rounded-dots.mCSB_scrollTools .mCSB_dragger, \r\n\t.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger{ height: 14px; }\r\n\t\r\n\t.mCS-rounded.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-rounded-dots.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{\r\n\t\twidth: 14px;\r\n\t\tmargin: 0 1px;\r\n\t}\r\n\t\r\n\t.mCS-rounded.mCSB_scrollTools_horizontal .mCSB_dragger, \r\n\t.mCS-rounded-dark.mCSB_scrollTools_horizontal .mCSB_dragger, \r\n\t.mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_dragger, \r\n\t.mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_dragger{ width: 14px; }\r\n\t\r\n\t.mCS-rounded.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-rounded-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{\r\n\t\theight: 14px;\r\n\t\tmargin: 1px 0;\r\n\t}\r\n\t\r\n\t.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, \r\n\t.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, \r\n\t.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{\r\n\t\twidth: 16px; /* auto-expanded scrollbar */\r\n\t\theight: 16px;\r\n\t\tmargin: -1px 0;\r\n\t}\r\n\t\r\n\t.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, \r\n\t.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail, \r\n\t.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, \r\n\t.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{ width: 4px; /* auto-expanded scrollbar */ }\r\n\t\r\n\t.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, \r\n\t.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, \r\n\t.mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{\r\n\t\theight: 16px; /* auto-expanded scrollbar */\r\n\t\twidth: 16px;\r\n\t\tmargin: 0 -1px;\r\n\t}\r\n\t\r\n\t.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, \r\n\t.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail, \r\n\t.mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, \r\n\t.mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{\r\n\t\theight: 4px; /* auto-expanded scrollbar */\r\n\t\tmargin: 6px 0;\r\n\t}\r\n\t\r\n\t.mCS-rounded.mCSB_scrollTools .mCSB_buttonUp{ background-position: 0 -72px; }\r\n\t\r\n\t.mCS-rounded.mCSB_scrollTools .mCSB_buttonDown{ background-position: 0 -92px; }\r\n\t\r\n\t.mCS-rounded.mCSB_scrollTools .mCSB_buttonLeft{ background-position: 0 -112px; }\r\n\t\r\n\t.mCS-rounded.mCSB_scrollTools .mCSB_buttonRight{ background-position: 0 -128px; }\r\n\t\r\n\t\r\n\t/* theme \"rounded-dark\", \"rounded-dots-dark\" */\r\n\t\r\n\t.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.75); }\r\n\t\r\n\t.mCS-rounded-dark.mCSB_scrollTools .mCSB_draggerRail{ background-color: #000; background-color: rgba(0,0,0,0.15); }\r\n\t\r\n\t.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, \r\n\t.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.85); }\r\n\t\r\n\t.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, \r\n\t.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.9); }\r\n\t\r\n\t.mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonUp{ background-position: -80px -72px; }\r\n\t\r\n\t.mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonDown{ background-position: -80px -92px; }\r\n\t\r\n\t.mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -80px -112px; }\r\n\t\r\n\t.mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonRight{ background-position: -80px -128px; }\r\n\t\r\n\t\r\n\t/* theme \"rounded-dots\", \"rounded-dots-dark\" */\r\n\t\r\n\t.mCS-rounded-dots.mCSB_scrollTools_vertical .mCSB_draggerRail, \r\n\t.mCS-rounded-dots-dark.mCSB_scrollTools_vertical .mCSB_draggerRail{ width: 4px; }\r\n\t\r\n\t.mCS-rounded-dots.mCSB_scrollTools .mCSB_draggerRail, \r\n\t.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_draggerRail, \r\n\t.mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_draggerRail, \r\n\t.mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail{\r\n\t\tbackground-color: transparent;\r\n\t\tbackground-position: center;\r\n\t}\r\n\t\r\n\t.mCS-rounded-dots.mCSB_scrollTools .mCSB_draggerRail, \r\n\t.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_draggerRail{\r\n\t\tbackground-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAANElEQVQYV2NkIAAYiVbw//9/Y6DiM1ANJoyMjGdBbLgJQAX/kU0DKgDLkaQAvxW4HEvQFwCRcxIJK1XznAAAAABJRU5ErkJggg==\");\r\n\t\tbackground-repeat: repeat-y;\r\n\t\topacity: 0.3;\r\n\t\tfilter: \"alpha(opacity=30)\"; -ms-filter: \"alpha(opacity=30)\"; \r\n\t}\r\n\t\r\n\t.mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_draggerRail, \r\n\t.mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail{\r\n\t\theight: 4px;\r\n\t\tmargin: 6px 0;\r\n\t\tbackground-repeat: repeat-x;\r\n\t}\r\n\t\r\n\t.mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonUp{ background-position: -16px -72px; }\r\n\t\r\n\t.mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonDown{ background-position: -16px -92px; }\r\n\t\r\n\t.mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -20px -112px; }\r\n\t\r\n\t.mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonRight{ background-position: -20px -128px; }\r\n\t\r\n\t\r\n\t/* theme \"rounded-dots-dark\" */\r\n\t\r\n\t.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_draggerRail{\r\n\t\tbackground-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAALElEQVQYV2NkIAAYSVFgDFR8BqrBBEifBbGRTfiPZhpYjiQFBK3A6l6CvgAAE9kGCd1mvgEAAAAASUVORK5CYII=\");\r\n\t}\r\n\t\r\n\t.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonUp{ background-position: -96px -72px; }\r\n\t\r\n\t.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonDown{ background-position: -96px -92px; }\r\n\t\r\n\t.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -100px -112px; }\r\n\t\r\n\t.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonRight{ background-position: -100px -128px; }\r\n\t\r\n\t/* ---------------------------------------- */\r\n\t\r\n\t\r\n\t\r\n\t/* theme \"3d\", \"3d-dark\", \"3d-thick\", \"3d-thick-dark\" */\r\n\t\r\n\t.mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{\r\n\t\tbackground-repeat: repeat-y;\r\n\t\tbackground-image: linear-gradient(to right, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 100%);\r\n\t}\r\n\t\r\n\t.mCS-3d.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-3d-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-3d-thick-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{\r\n\t\tbackground-repeat: repeat-x;\r\n\t\tbackground-image: linear-gradient(to bottom, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 100%);\r\n\t}\r\n\t\r\n\t\r\n\t/* theme \"3d\", \"3d-dark\" */\r\n\t\r\n\t.mCS-3d.mCSB_scrollTools_vertical .mCSB_dragger, \r\n\t.mCS-3d-dark.mCSB_scrollTools_vertical .mCSB_dragger{ height: 70px; }\r\n\t\r\n\t.mCS-3d.mCSB_scrollTools_horizontal .mCSB_dragger, \r\n\t.mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_dragger{ width: 70px; }\r\n\t\r\n\t.mCS-3d.mCSB_scrollTools, \r\n\t.mCS-3d-dark.mCSB_scrollTools{\r\n\t\topacity: 1;\r\n\t\tfilter: \"alpha(opacity=30)\"; -ms-filter: \"alpha(opacity=30)\"; \r\n\t}\r\n\t\r\n\t.mCS-3d.mCSB_scrollTools .mCSB_draggerRail, \r\n\t.mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-3d-dark.mCSB_scrollTools .mCSB_draggerRail, \r\n\t.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ border-radius: 16px; }\r\n\t\r\n\t.mCS-3d.mCSB_scrollTools .mCSB_draggerRail, \r\n\t.mCS-3d-dark.mCSB_scrollTools .mCSB_draggerRail{\r\n\t\twidth: 8px;\r\n\t\tbackground-color: #000; background-color: rgba(0,0,0,0.2);\r\n\t\tbox-shadow: inset 1px 0 1px rgba(0,0,0,0.5), inset -1px 0 1px rgba(255,255,255,0.2);\r\n\t}\r\n\t\r\n\t.mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \t \r\n\t.mCS-3d.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, \r\n\t.mCS-3d.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-3d.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, \r\n\t.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, \r\n\t.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #555; }\r\n\r\n\t.mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ width: 8px; }\r\n\r\n\t.mCS-3d.mCSB_scrollTools_horizontal .mCSB_draggerRail, \r\n\t.mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail{\r\n\t\twidth: 100%;\r\n\t\theight: 8px;\r\n\t\tmargin: 4px 0;\r\n\t\tbox-shadow: inset 0 1px 1px rgba(0,0,0,0.5), inset 0 -1px 1px rgba(255,255,255,0.2);\r\n\t}\r\n\r\n\t.mCS-3d.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{\r\n\t\twidth: 100%;\r\n\t\theight: 8px;\r\n\t\tmargin: 4px auto;\r\n\t}\r\n\t\r\n\t.mCS-3d.mCSB_scrollTools .mCSB_buttonUp{ background-position: -32px -72px; }\r\n\t\r\n\t.mCS-3d.mCSB_scrollTools .mCSB_buttonDown{ background-position: -32px -92px; }\r\n\t\r\n\t.mCS-3d.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -40px -112px; }\r\n\t\r\n\t.mCS-3d.mCSB_scrollTools .mCSB_buttonRight{ background-position: -40px -128px; }\r\n\t\r\n\t\r\n\t/* theme \"3d-dark\" */\r\n\t\r\n\t.mCS-3d-dark.mCSB_scrollTools .mCSB_draggerRail{\r\n\t\tbackground-color: #000; background-color: rgba(0,0,0,0.1);\r\n\t\tbox-shadow: inset 1px 0 1px rgba(0,0,0,0.1);\r\n\t}\r\n\t\r\n\t.mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail{ box-shadow: inset 0 1px 1px rgba(0,0,0,0.1); }\r\n\t\r\n\t.mCS-3d-dark.mCSB_scrollTools .mCSB_buttonUp{ background-position: -112px -72px; }\r\n\r\n\t.mCS-3d-dark.mCSB_scrollTools .mCSB_buttonDown{ background-position: -112px -92px; }\r\n\r\n\t.mCS-3d-dark.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -120px -112px; }\r\n\r\n\t.mCS-3d-dark.mCSB_scrollTools .mCSB_buttonRight{\tbackground-position: -120px -128px; }\r\n\t\r\n\t/* ---------------------------------------- */\r\n\t\r\n\t\r\n\t\r\n\t/* theme: \"3d-thick\", \"3d-thick-dark\" */\r\n\t\r\n\t.mCS-3d-thick.mCSB_scrollTools, \r\n\t.mCS-3d-thick-dark.mCSB_scrollTools{\r\n\t\topacity: 1;\r\n\t\tfilter: \"alpha(opacity=30)\"; -ms-filter: \"alpha(opacity=30)\"; \r\n\t}\r\n\t\r\n\t.mCS-3d-thick.mCSB_scrollTools, \r\n\t.mCS-3d-thick-dark.mCSB_scrollTools, \r\n\t.mCS-3d-thick.mCSB_scrollTools .mCSB_draggerContainer, \r\n\t.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_draggerContainer{ border-radius: 7px; }\r\n\t\r\n\t.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ border-radius: 5px; }\r\n\t\r\n\t.mCSB_inside + .mCS-3d-thick.mCSB_scrollTools_vertical, \r\n\t.mCSB_inside + .mCS-3d-thick-dark.mCSB_scrollTools_vertical{ right: 1px; }\r\n\t\r\n\t.mCS-3d-thick.mCSB_scrollTools_vertical, \r\n\t.mCS-3d-thick-dark.mCSB_scrollTools_vertical{ box-shadow: inset 1px 0 1px rgba(0,0,0,0.1), inset 0 0 14px rgba(0,0,0,0.5); }\r\n\t\r\n\t.mCS-3d-thick.mCSB_scrollTools_horizontal, \r\n\t.mCS-3d-thick-dark.mCSB_scrollTools_horizontal{\r\n\t\tbottom: 1px;\r\n\t\tbox-shadow: inset 0 1px 1px rgba(0,0,0,0.1), inset 0 0 14px rgba(0,0,0,0.5);\r\n\t}\r\n\t\r\n\t.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{\r\n\t\tbox-shadow: inset 1px 0 0 rgba(255,255,255,0.4);\r\n\t\twidth: 12px;\r\n\t\tmargin: 2px;\r\n\t\tposition: absolute;\r\n\t\theight: auto;\r\n\t\ttop: 0;\r\n\t\tbottom: 0;\r\n\t\tleft: 0;\r\n\t\tright: 0;\r\n\t}\r\n\t\r\n\t.mCS-3d-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-3d-thick-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{ box-shadow: inset 0 1px 0 rgba(255,255,255,0.4); }\r\n\t\r\n\t.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,  \r\n\t.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, \r\n\t.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #555; }\r\n\t\r\n\t.mCS-3d-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-3d-thick-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{\r\n\t\theight: 12px;\r\n\t\twidth: auto;\r\n\t}\r\n\t\r\n\t.mCS-3d-thick.mCSB_scrollTools .mCSB_draggerContainer{\r\n\t\tbackground-color: #000; background-color: rgba(0,0,0,0.05);\r\n\t\tbox-shadow: inset 1px 1px 16px rgba(0,0,0,0.1);\r\n\t}\r\n\t\r\n\t.mCS-3d-thick.mCSB_scrollTools .mCSB_draggerRail{ background-color: transparent; }\r\n\t\r\n\t.mCS-3d-thick.mCSB_scrollTools .mCSB_buttonUp{ background-position: -32px -72px; }\r\n\t\r\n\t.mCS-3d-thick.mCSB_scrollTools .mCSB_buttonDown{ background-position: -32px -92px; }\r\n\r\n\t.mCS-3d-thick.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -40px -112px; }\r\n\r\n\t.mCS-3d-thick.mCSB_scrollTools .mCSB_buttonRight{\tbackground-position: -40px -128px; }\r\n\t\r\n\t\r\n\t/* theme: \"3d-thick-dark\" */\r\n\t\r\n\t.mCS-3d-thick-dark.mCSB_scrollTools{ box-shadow: inset 0 0 14px rgba(0,0,0,0.2); }\r\n\t\r\n\t.mCS-3d-thick-dark.mCSB_scrollTools_horizontal{ box-shadow: inset 0 1px 1px rgba(0,0,0,0.1), inset 0 0 14px rgba(0,0,0,0.2); }\r\n\t\r\n\t.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ box-shadow: inset 1px 0 0 rgba(255,255,255,0.4), inset -1px 0 0 rgba(0,0,0,0.2); }\r\n\t \r\n\t.mCS-3d-thick-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{ box-shadow: inset 0 1px 0 rgba(255,255,255,0.4), inset 0 -1px 0 rgba(0,0,0,0.2); }\r\n\t\r\n\t.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,  \r\n\t.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, \r\n\t.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #777; }\r\n\t\r\n\t.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_draggerContainer{\r\n\t\tbackground-color: #fff; background-color: rgba(0,0,0,0.05);\r\n\t\tbox-shadow: inset 1px 1px 16px rgba(0,0,0,0.1);\r\n\t}\r\n\t\r\n\t.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_draggerRail{ background-color: transparent; }\r\n\t\r\n\t.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_buttonUp{ background-position: -112px -72px; }\r\n\t\r\n\t.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_buttonDown{ background-position: -112px -92px; }\r\n\r\n\t.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -120px -112px; }\r\n\r\n\t.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_buttonRight{\tbackground-position: -120px -128px; }\r\n\t\r\n\t/* ---------------------------------------- */\r\n\t\r\n\t\r\n\t\r\n\t/* theme: \"minimal\", \"minimal-dark\" */\r\n\t\r\n\t.mCSB_outside + .mCS-minimal.mCSB_scrollTools_vertical, \r\n\t.mCSB_outside + .mCS-minimal-dark.mCSB_scrollTools_vertical{\r\n\t\tright: 0; \r\n\t\tmargin: 12px 0; \r\n\t}\r\n\t\r\n\t.mCustomScrollBox.mCS-minimal + .mCSB_scrollTools.mCSB_scrollTools_horizontal, \r\n\t.mCustomScrollBox.mCS-minimal + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal, \r\n\t.mCustomScrollBox.mCS-minimal-dark + .mCSB_scrollTools.mCSB_scrollTools_horizontal, \r\n\t.mCustomScrollBox.mCS-minimal-dark + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal{\r\n\t\tbottom: 0; \r\n\t\tmargin: 0 12px; \r\n\t}\r\n\t\r\n\t/* RTL direction/left-side scrollbar */\r\n\t.mCS-dir-rtl > .mCSB_outside + .mCS-minimal.mCSB_scrollTools_vertical, \r\n\t.mCS-dir-rtl > .mCSB_outside + .mCS-minimal-dark.mCSB_scrollTools_vertical{\r\n\t\tleft: 0; \r\n\t\tright: auto;\r\n\t}\r\n\t\r\n\t.mCS-minimal.mCSB_scrollTools .mCSB_draggerRail, \r\n\t.mCS-minimal-dark.mCSB_scrollTools .mCSB_draggerRail{ background-color: transparent; }\r\n\t\r\n\t.mCS-minimal.mCSB_scrollTools_vertical .mCSB_dragger, \r\n\t.mCS-minimal-dark.mCSB_scrollTools_vertical .mCSB_dragger{ height: 50px; }\r\n\t\r\n\t.mCS-minimal.mCSB_scrollTools_horizontal .mCSB_dragger, \r\n\t.mCS-minimal-dark.mCSB_scrollTools_horizontal .mCSB_dragger{ width: 50px; }\r\n\t\r\n\t.mCS-minimal.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{\r\n\t\tbackground-color: #fff; background-color: rgba(255,255,255,0.2);\r\n\t\tfilter: \"alpha(opacity=20)\"; -ms-filter: \"alpha(opacity=20)\"; \r\n\t}\r\n\t\r\n\t.mCS-minimal.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-minimal.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{\r\n\t\tbackground-color: #fff; background-color: rgba(255,255,255,0.5);\r\n\t\tfilter: \"alpha(opacity=50)\"; -ms-filter: \"alpha(opacity=50)\"; \r\n\t}\r\n\t\r\n\t\r\n\t/* theme: \"minimal-dark\" */\r\n\t\r\n\t.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{\r\n\t\tbackground-color: #000; background-color: rgba(0,0,0,0.2);\r\n\t\tfilter: \"alpha(opacity=20)\"; -ms-filter: \"alpha(opacity=20)\"; \r\n\t}\r\n\t\r\n\t.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{\r\n\t\tbackground-color: #000; background-color: rgba(0,0,0,0.5);\r\n\t\tfilter: \"alpha(opacity=50)\"; -ms-filter: \"alpha(opacity=50)\"; \r\n\t}\r\n\t\r\n\t/* ---------------------------------------- */\r\n\t\r\n\t\r\n\t\r\n\t/* theme \"light-3\", \"dark-3\" */\r\n\t\r\n\t.mCS-light-3.mCSB_scrollTools .mCSB_draggerRail, \r\n\t.mCS-dark-3.mCSB_scrollTools .mCSB_draggerRail{\r\n\t\twidth: 6px;\r\n\t\tbackground-color: #000; background-color: rgba(0,0,0,0.2);\r\n\t}\r\n\r\n\t.mCS-light-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-dark-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ width: 6px; }\r\n\r\n\t.mCS-light-3.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-dark-3.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-light-3.mCSB_scrollTools_horizontal .mCSB_draggerRail, \r\n\t.mCS-dark-3.mCSB_scrollTools_horizontal .mCSB_draggerRail{\r\n\t\twidth: 100%;\r\n\t\theight: 6px;\r\n\t\tmargin: 5px 0;\r\n\t}\r\n\t\r\n\t.mCS-light-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, \r\n\t.mCS-light-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail, \r\n\t.mCS-dark-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, \r\n\t.mCS-dark-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{\r\n\t\twidth: 12px;\r\n\t}\r\n\t\r\n\t.mCS-light-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, \r\n\t.mCS-light-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail, \r\n\t.mCS-dark-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, \r\n\t.mCS-dark-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{\r\n\t\theight: 12px;\r\n\t\tmargin: 2px 0;\r\n\t}\r\n\t\r\n\t.mCS-light-3.mCSB_scrollTools .mCSB_buttonUp{ background-position: -32px -72px; }\r\n\t\r\n\t.mCS-light-3.mCSB_scrollTools .mCSB_buttonDown{ background-position: -32px -92px; }\r\n\t\r\n\t.mCS-light-3.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -40px -112px; }\r\n\t\r\n\t.mCS-light-3.mCSB_scrollTools .mCSB_buttonRight{ background-position: -40px -128px; }\r\n\t\r\n\t\r\n\t/* theme \"dark-3\" */\r\n\t\r\n\t.mCS-dark-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.75); }\r\n\r\n\t.mCS-dark-3.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.85); }\r\n\r\n\t.mCS-dark-3.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-dark-3.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.9); }\r\n\t\r\n\t.mCS-dark-3.mCSB_scrollTools .mCSB_draggerRail{ background-color: #000; background-color: rgba(0,0,0,0.1); }\r\n\t\r\n\t.mCS-dark-3.mCSB_scrollTools .mCSB_buttonUp{ background-position: -112px -72px; }\r\n\r\n\t.mCS-dark-3.mCSB_scrollTools .mCSB_buttonDown{ background-position: -112px -92px; }\r\n\r\n\t.mCS-dark-3.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -120px -112px; }\r\n\r\n\t.mCS-dark-3.mCSB_scrollTools .mCSB_buttonRight{\tbackground-position: -120px -128px; }\r\n\t\r\n\t/* ---------------------------------------- */\r\n\t\r\n\t\r\n\t\r\n\t/* theme \"inset\", \"inset-dark\", \"inset-2\", \"inset-2-dark\", \"inset-3\", \"inset-3-dark\" */\r\n\t\r\n\t.mCS-inset.mCSB_scrollTools .mCSB_draggerRail, \r\n\t.mCS-inset-dark.mCSB_scrollTools .mCSB_draggerRail, \r\n\t.mCS-inset-2.mCSB_scrollTools .mCSB_draggerRail, \r\n\t.mCS-inset-2-dark.mCSB_scrollTools .mCSB_draggerRail, \r\n\t.mCS-inset-3.mCSB_scrollTools .mCSB_draggerRail, \r\n\t.mCS-inset-3-dark.mCSB_scrollTools .mCSB_draggerRail{\r\n\t\twidth: 12px;\r\n\t\tbackground-color: #000; background-color: rgba(0,0,0,0.2);\r\n\t}\r\n\r\n\t.mCS-inset.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-inset-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-inset-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-inset-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ \r\n\t\twidth: 6px;\r\n\t\tmargin: 3px 5px;\r\n\t\tposition: absolute;\r\n\t\theight: auto;\r\n\t\ttop: 0;\r\n\t\tbottom: 0;\r\n\t\tleft: 0;\r\n\t\tright: 0;\r\n\t}\r\n\r\n\t.mCS-inset.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-inset-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-inset-2.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-inset-2-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-inset-3.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-inset-3-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{\r\n\t\theight: 6px;\r\n\t\tmargin: 5px 3px;\r\n\t\tposition: absolute;\r\n\t\twidth: auto;\r\n\t\ttop: 0;\r\n\t\tbottom: 0;\r\n\t\tleft: 0;\r\n\t\tright: 0;\r\n\t}\r\n\t\r\n\t.mCS-inset.mCSB_scrollTools_horizontal .mCSB_draggerRail, \r\n\t.mCS-inset-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail, \r\n\t.mCS-inset-2.mCSB_scrollTools_horizontal .mCSB_draggerRail, \r\n\t.mCS-inset-2-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail, \r\n\t.mCS-inset-3.mCSB_scrollTools_horizontal .mCSB_draggerRail, \r\n\t.mCS-inset-3-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail{\r\n\t\twidth: 100%;\r\n\t\theight: 12px;\r\n\t\tmargin: 2px 0;\r\n\t}\r\n\t\r\n\t.mCS-inset.mCSB_scrollTools .mCSB_buttonUp, \r\n\t.mCS-inset-2.mCSB_scrollTools .mCSB_buttonUp, \r\n\t.mCS-inset-3.mCSB_scrollTools .mCSB_buttonUp{ background-position: -32px -72px; }\r\n\t\r\n\t.mCS-inset.mCSB_scrollTools .mCSB_buttonDown, \r\n\t.mCS-inset-2.mCSB_scrollTools .mCSB_buttonDown, \r\n\t.mCS-inset-3.mCSB_scrollTools .mCSB_buttonDown{ background-position: -32px -92px; }\r\n\t\r\n\t.mCS-inset.mCSB_scrollTools .mCSB_buttonLeft, \r\n\t.mCS-inset-2.mCSB_scrollTools .mCSB_buttonLeft, \r\n\t.mCS-inset-3.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -40px -112px; }\r\n\t\r\n\t.mCS-inset.mCSB_scrollTools .mCSB_buttonRight, \r\n\t.mCS-inset-2.mCSB_scrollTools .mCSB_buttonRight, \r\n\t.mCS-inset-3.mCSB_scrollTools .mCSB_buttonRight{ background-position: -40px -128px; }\r\n\t\r\n\t\r\n\t/* theme \"inset-dark\", \"inset-2-dark\", \"inset-3-dark\" */\r\n\t\r\n\t.mCS-inset-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, \r\n\t.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.75); }\r\n\r\n\t.mCS-inset-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, \r\n\t.mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, \r\n\t.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.85); }\r\n\r\n\t.mCS-inset-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-inset-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, \r\n\t.mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, \r\n\t.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.9); }\r\n\t\r\n\t.mCS-inset-dark.mCSB_scrollTools .mCSB_draggerRail, \r\n\t.mCS-inset-2-dark.mCSB_scrollTools .mCSB_draggerRail, \r\n\t.mCS-inset-3-dark.mCSB_scrollTools .mCSB_draggerRail{ background-color: #000; background-color: rgba(0,0,0,0.1); }\r\n\t\r\n\t.mCS-inset-dark.mCSB_scrollTools .mCSB_buttonUp, \r\n\t.mCS-inset-2-dark.mCSB_scrollTools .mCSB_buttonUp, \r\n\t.mCS-inset-3-dark.mCSB_scrollTools .mCSB_buttonUp{ background-position: -112px -72px; }\r\n\r\n\t.mCS-inset-dark.mCSB_scrollTools .mCSB_buttonDown, \r\n\t.mCS-inset-2-dark.mCSB_scrollTools .mCSB_buttonDown, \r\n\t.mCS-inset-3-dark.mCSB_scrollTools .mCSB_buttonDown{ background-position: -112px -92px; }\r\n\r\n\t.mCS-inset-dark.mCSB_scrollTools .mCSB_buttonLeft, \r\n\t.mCS-inset-2-dark.mCSB_scrollTools .mCSB_buttonLeft, \r\n\t.mCS-inset-3-dark.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -120px -112px; }\r\n\r\n\t.mCS-inset-dark.mCSB_scrollTools .mCSB_buttonRight, \r\n\t.mCS-inset-2-dark.mCSB_scrollTools .mCSB_buttonRight, \r\n\t.mCS-inset-3-dark.mCSB_scrollTools .mCSB_buttonRight{\tbackground-position: -120px -128px; }\r\n\t\r\n\t\r\n\t/* theme \"inset-2\", \"inset-2-dark\" */\r\n\t\r\n\t.mCS-inset-2.mCSB_scrollTools .mCSB_draggerRail, \r\n\t.mCS-inset-2-dark.mCSB_scrollTools .mCSB_draggerRail{\r\n\t\tbackground-color: transparent;\r\n\t\tborder-width: 1px;\r\n\t\tborder-style: solid;\r\n\t\tborder-color: #fff;\r\n\t\tborder-color: rgba(255,255,255,0.2); box-sizing: border-box;\r\n\t}\r\n\t\r\n\t.mCS-inset-2-dark.mCSB_scrollTools .mCSB_draggerRail{ border-color: #000; border-color: rgba(0,0,0,0.2); }\r\n\t\r\n\t\r\n\t/* theme \"inset-3\", \"inset-3-dark\" */\r\n\t\r\n\t.mCS-inset-3.mCSB_scrollTools .mCSB_draggerRail{ background-color: #fff; background-color: rgba(255,255,255,0.6); }\r\n\t\r\n\t.mCS-inset-3-dark.mCSB_scrollTools .mCSB_draggerRail{ background-color: #000; background-color: rgba(0,0,0,0.6); }\r\n\t\r\n\t.mCS-inset-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.75); }\r\n\t\r\n\t.mCS-inset-3.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.85); }\r\n\t\r\n\t.mCS-inset-3.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-inset-3.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.9); }\r\n\t\r\n\t.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background-color: #fff; background-color: rgba(255,255,255,0.75); }\r\n\t\r\n\t.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #fff; background-color: rgba(255,255,255,0.85); }\r\n\t\r\n\t.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,\r\n\t.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #fff; background-color: rgba(255,255,255,0.9); }\r\n\t\r\n\t/* ---------------------------------------- */\r\n", ""]);
 
@@ -11412,7 +11412,7 @@ and dependencies (minified).
 	}else {}
 }(function($){
 (function(init){
-	var _rjs= true && __webpack_require__(191), /* RequireJS */
+	var _rjs= true && __webpack_require__(192), /* RequireJS */
 		_njs= true && module.exports, /* NodeJS */
 		_dlp=("https:"==document.location.protocol) ? "https:" : "http:", /* location protocol */
 		_url="cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js";
@@ -13829,8 +13829,9 @@ and dependencies (minified).
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function($) {const loadGoogleMapsApi = __webpack_require__(193);
-const pinImg = __webpack_require__(194);
+/* WEBPACK VAR INJECTION */(function($) {const loadGoogleMapsApi = __webpack_require__(194);
+
+const pinImg = __webpack_require__(195);
 
 class Map {
   constructor(domElement, googleMaps) {
@@ -13838,52 +13839,52 @@ class Map {
     this.googleMaps = googleMaps;
     this.mapContainer = this.$domElement.find('.js-map__container')[0];
     this.mapCenter = this._getInitialMapCenter();
+
     this._initialize();
   }
 
   static loadGoogleMapsApi() {
     return loadGoogleMapsApi({
-      key: 'AIzaSyB0GpB2Y8XOyVrs-stxlE0I4yR_rAaEyjU',
+      key: 'AIzaSyB0GpB2Y8XOyVrs-stxlE0I4yR_rAaEyjU'
     });
   }
 
   _initialize() {
     this._loadImages();
+
     this._initMap();
   }
 
   _loadImages() {
-    this.images = [
-      {
-        url: './assets/img/pins.png',
-        size: new this.googleMaps.Size(78, 78),
-        origin: new this.googleMaps.Point(0, 0),
-        anchor: new this.googleMaps.Point(39, 78),
-      },
-      {
-        url: './assets/img/pins.png',
-        size: new this.googleMaps.Size(45, 78),
-        origin: new this.googleMaps.Point(78, 0),
-        anchor: new this.googleMaps.Point(22.5, 78),
-      },
-    ];
+    this.images = [{
+      url: './assets/img/pins.png',
+      size: new this.googleMaps.Size(78, 78),
+      origin: new this.googleMaps.Point(0, 0),
+      anchor: new this.googleMaps.Point(39, 78)
+    }, {
+      url: './assets/img/pins.png',
+      size: new this.googleMaps.Size(45, 78),
+      origin: new this.googleMaps.Point(78, 0),
+      anchor: new this.googleMaps.Point(22.5, 78)
+    }];
   }
 
   _initMap() {
-    const initOptions = { center: this.mapCenter, zoom: 14 };
+    const initOptions = {
+      center: this.mapCenter,
+      zoom: 14
+    };
     const $pin = this.$domElement.find('.js-map__pin');
     const $search = this.$domElement.find('.js-map__search');
     this.map = new this.googleMaps.Map(this.mapContainer, initOptions);
     this.infoWindow = new this.googleMaps.InfoWindow();
+
     this._addMarker(this._getMainPinCenter(), this.images[0], 'Meet us here!');
+
     this._locateUser();
 
-    $pin
-      .on('click.map', this._handlePinClick.bind(this))
-      .on('keypress.map', this._handleEnterPress.bind(this));
-    $search
-      .on('click.map', this._handleSearchClick.bind(this))
-      .on('keypress.map', this._handleEnterPress.bind(this));
+    $pin.on('click.map', this._handlePinClick.bind(this)).on('keypress.map', this._handleEnterPress.bind(this));
+    $search.on('click.map', this._handleSearchClick.bind(this)).on('keypress.map', this._handleEnterPress.bind(this));
   }
 
   _addMarker(location, image, title) {
@@ -13891,7 +13892,7 @@ class Map {
       position: location,
       map: this.map,
       icon: image,
-      title,
+      title
     });
     return marker;
   }
@@ -13912,10 +13913,7 @@ class Map {
 
   _locateUser() {
     if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        this._handleLocationSuccess.bind(this),
-        this._handleLocationError.bind(this, true)
-      );
+      navigator.geolocation.getCurrentPosition(this._handleLocationSuccess.bind(this), this._handleLocationError.bind(this, true));
     } else {
       // Browser doesn't support Geolocation
       this._handleLocationError(false);
@@ -13925,25 +13923,25 @@ class Map {
   _handleLocationSuccess(position) {
     const pos = {
       lat: position.coords.latitude,
-      lng: position.coords.longitude,
+      lng: position.coords.longitude
     };
     this.userMarker = this._addMarker(pos, this.images[1], 'You are here');
   }
 
   _handleLocationError(browserHasGeolocation) {
     this.infoWindow.setPosition(this.map.getCenter());
-    this.infoWindow.setContent(browserHasGeolocation
-      ? 'Error: The Geolocation service failed.'
-      : 'Error: Your browser doesn\'t support geolocation.');
+    this.infoWindow.setContent(browserHasGeolocation ? 'Error: The Geolocation service failed.' : 'Error: Your browser doesn\'t support geolocation.');
   }
 
   _handlePinClick(event) {
     this._backToCenter();
+
     $(event.target).blur();
   }
 
   _handleSearchClick(event) {
     this._showUserLocation();
+
     $(event.target).blur();
   }
 
@@ -13962,10 +13960,10 @@ class Map {
     if (this.userMarker) this.map.panTo(this.userMarker.getPosition());
     this.infoWindow.open(this.map);
   }
+
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Map);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
@@ -15628,51 +15626,35 @@ return $;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function($) {class ArrowButton {
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var bind_decorator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(29);
+/* harmony import */ var bind_decorator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bind_decorator__WEBPACK_IMPORTED_MODULE_0__);
+var _class;
+
+function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) { var desc = {}; Object.keys(descriptor).forEach(function (key) { desc[key] = descriptor[key]; }); desc.enumerable = !!desc.enumerable; desc.configurable = !!desc.configurable; if ('value' in desc || desc.initializer) { desc.writable = true; } desc = decorators.slice().reverse().reduce(function (desc, decorator) { return decorator(target, property, desc) || desc; }, desc); if (context && desc.initializer !== void 0) { desc.value = desc.initializer ? desc.initializer.call(context) : void 0; desc.initializer = undefined; } if (desc.initializer === void 0) { Object.defineProperty(target, property, desc); desc = null; } return desc; }
+
+
+let ArrowButton = (_class = class ArrowButton {
   constructor(domElement) {
     this._initialize(domElement);
   }
 
   _initialize(domElement) {
     this.$button = $(domElement);
-
-    this.$button
-      .on('click.arrowbutton', this._handleButtonClick.bind(this))
-      .on('keydown.arrowbutton', this._handleEnterDown.bind(this))
-      .on('keyup.arrowbutton', this._handleEnterUp.bind(this))
-      .on('touchstart.arrowbutton', this._addActiveClass.bind(this))
-      .on('touchend.arrowbutton', this._removeActiveClass.bind(this));
+    this.$button.on('click.arrowbutton', this._handleButtonClick).on('keydown.arrowbutton', this._handleEnterDown);
   }
 
   _handleButtonClick() {
     this.$button.blur();
   }
 
-  _addActiveClass() {
-    this.$button.addClass('arrow-button_active');
-  }
-
-  _removeActiveClass() {
-    this.$button
-      .removeClass('arrow-button_active')
-      .trigger('click');
-  }
-
   _handleEnterDown(event) {
     if (event.which === 13) {
-      this._addActiveClass();
+      this.$button.click();
     }
   }
 
-  _handleEnterUp(event) {
-    if (event.which === 13) {
-      this._removeActiveClass();
-    }
-  }
-}
-
+}, (_applyDecoratedDescriptor(_class.prototype, "_handleButtonClick", [bind_decorator__WEBPACK_IMPORTED_MODULE_0___default.a], Object.getOwnPropertyDescriptor(_class.prototype, "_handleButtonClick"), _class.prototype), _applyDecoratedDescriptor(_class.prototype, "_handleEnterDown", [bind_decorator__WEBPACK_IMPORTED_MODULE_0___default.a], Object.getOwnPropertyDescriptor(_class.prototype, "_handleEnterDown"), _class.prototype)), _class);
 /* harmony default export */ __webpack_exports__["default"] = (ArrowButton);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
@@ -15681,7 +15663,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var legit_ripple_dist_ripple_min__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(184);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var legit_ripple_dist_ripple_min__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(185);
 /* harmony import */ var legit_ripple_dist_ripple_min__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(legit_ripple_dist_ripple_min__WEBPACK_IMPORTED_MODULE_0__);
 
 
@@ -15692,10 +15674,9 @@ class Button {
 
   _initialize(domElement) {
     this.$button = $(domElement);
-    this.$button
-      .on('keypress.button', this._handleEnterPress.bind(this))
-      .on('transitionend webkitTransitionEnd oTransitionEnd', this._handleButtonAnimationEnd.bind(this))
-      .ripple({ dragging: false });
+    this.$button.on('keypress.button', this._handleEnterPress.bind(this)).on('transitionend webkitTransitionEnd oTransitionEnd', this._handleButtonAnimationEnd.bind(this)).ripple({
+      dragging: false
+    });
     return this;
   }
 
@@ -15708,10 +15689,10 @@ class Button {
       this.$button.click();
     }
   }
+
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Button);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
@@ -15720,7 +15701,7 @@ class Button {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var jquery_ui_ui_widgets_datepicker__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(186);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var jquery_ui_ui_widgets_datepicker__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(187);
 /* harmony import */ var jquery_ui_ui_widgets_datepicker__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery_ui_ui_widgets_datepicker__WEBPACK_IMPORTED_MODULE_0__);
 
 
@@ -15733,12 +15714,10 @@ class Calendar {
     this.$calendar = $(domElement);
 
     const settings = this._generateCalendarSettings();
+
     this.$calendar.datepicker(settings);
 
-    this
-      ._prependDayContainer()
-      ._appendButtonPane()
-      ._updateDayText(this.$calendar.datepicker('getDate'));
+    this._prependDayContainer()._appendButtonPane()._updateDayText(this.$calendar.datepicker('getDate'));
   }
 
   _generateCalendarSettings() {
@@ -15749,72 +15728,72 @@ class Calendar {
       showOtherMonths: true,
       dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
       onChangeMonthYear: (y, m, inst) => this._handleMonthChange(y, m, inst),
-      onSelect: (date) => this._updateDayText(date),
+      onSelect: date => this._updateDayText(date)
     };
-
     return settings;
   }
 
   _prependDayContainer() {
-    const $dayContainer = $('<div></div>', { class: 'calendar__day-container' });
+    const $dayContainer = $('<div></div>', {
+      class: 'calendar__day-container'
+    });
     this.$dayText = $('<span></span>', {
       class: 'calendar__day-text',
       type: 'text',
-      disabled: 'disabled',
+      disabled: 'disabled'
     });
     $dayContainer.prepend(this.$dayText);
-
     this.$calendar.prepend($dayContainer);
-
     return this;
   }
 
   _appendButtonPane() {
-    const $buttonPane = $('<div></div>', { class: 'calendar__button-pane' });
+    const $buttonPane = $('<div></div>', {
+      class: 'calendar__button-pane'
+    });
     this.$todayButton = $('<button></button>', {
       class: 'calendar__today-button',
-      type: 'button',
+      type: 'button'
     });
-    this.$todayButton
-      .text('today')
-      .on('click.calendar', this._handleTodayButtonClick.bind(this));
-
+    this.$todayButton.text('today').on('click.calendar', this._handleTodayButtonClick.bind(this));
     $buttonPane.append(this.$todayButton);
     this.$calendar.append($buttonPane);
-
     return this;
   }
 
   _updateDayText(value) {
     const date = new Date(value);
     this.$dayText.text(date.getDate());
-
     return this;
   }
 
   _handleMonthChange(year, month, instance) {
     const isBackFromOtherMonth = instance.selectedMonth !== instance.currentMonth;
     const isBackFromOtherYear = instance.selectedYear !== instance.currentYear;
+
     if (isBackFromOtherMonth || isBackFromOtherYear) {
       const newDate = `${month}/1/${year}`;
       this.$calendar.datepicker('setDate', newDate);
+
       this._updateDayText(newDate);
     }
+
     return this;
   }
 
   _handleTodayButtonClick() {
     const today = new Date();
     this.$calendar.datepicker('setDate', today);
-    this._updateDayText(today);
-    this.$todayButton.blur();
 
+    this._updateDayText(today);
+
+    this.$todayButton.blur();
     return this;
   }
+
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Calendar);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
@@ -15826,6 +15805,7 @@ __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function($) {class DonutChart {
   constructor(domElement) {
     this.$domElement = $(domElement);
+
     this._initialize();
   }
 
@@ -15833,9 +15813,11 @@ __webpack_require__.r(__webpack_exports__);
     this.values = this._getValues();
 
     this._initDonutCircle();
+
     this._drawSegments();
 
     this.$domElement.append(this.$svg);
+
     this._setViewBox();
   }
 
@@ -15846,15 +15828,23 @@ __webpack_require__.r(__webpack_exports__);
   }
 
   _initDonutCircle() {
-    this.$svg = DonutChart.$s('svg').attr({ class: 'donut-chart__chart-container' });
-    this.$ring = DonutChart.$createSVGCircle({ class: 'donut-chart__ring' });
+    this.$svg = DonutChart.$s('svg').attr({
+      class: 'donut-chart__chart-container'
+    });
+    this.$ring = DonutChart.$createSVGCircle({
+      class: 'donut-chart__ring'
+    });
     this.$svg.append(this.$ring);
   }
 
   _drawSegments() {
     let offset = 0;
     this.values.forEach((value, i) => {
-      const $segment = DonutChart.$createSVGSegment({ value, i, offset });
+      const $segment = DonutChart.$createSVGSegment({
+        value,
+        i,
+        offset
+      });
       this.$svg.append($segment);
       offset += Number(value);
     });
@@ -15862,13 +15852,15 @@ __webpack_require__.r(__webpack_exports__);
 
   _setViewBox() {
     const strokeWidth = parseFloat(this.$ring.css('stroke-width'));
-    const viewBoxTop = 0 - (strokeWidth / 2);
+    const viewBoxTop = 0 - strokeWidth / 2;
     const viewBoxBottom = DonutChart.radius * 2 + strokeWidth;
     const viewBoxValue = `${viewBoxTop} ${viewBoxTop} ${viewBoxBottom} ${viewBoxBottom}`;
-    this.$svg.attr({ viewBox: viewBoxValue });
-  }
+    this.$svg.attr({
+      viewBox: viewBoxValue
+    });
+  } // creates svg element, returned as jQuery object
 
-  // creates svg element, returned as jQuery object
+
   static $s(elem) {
     return $(document.createElementNS('http://www.w3.org/2000/svg', elem));
   }
@@ -15882,9 +15874,11 @@ __webpack_require__.r(__webpack_exports__);
     const defaultAttributes = {
       cx: DonutChart.radius,
       cy: DonutChart.radius,
-      r: DonutChart.radius,
+      r: DonutChart.radius
     };
-    return DonutChart.$s('circle').attr({ ...defaultAttributes, ...attributes });
+    return DonutChart.$s('circle').attr({ ...defaultAttributes,
+      ...attributes
+    });
   }
 
   static $createSVGSegment(data) {
@@ -15892,20 +15886,24 @@ __webpack_require__.r(__webpack_exports__);
      * dashoffsetInitial rotates offset 25% counter clockwise,
      * because stroke-dasharray starts not at top (12:00), but at right (3:00)
      */
-    const { value, i, offset } = data;
+    const {
+      value,
+      i,
+      offset
+    } = data;
     const dashoffsetInitial = 25;
-    const dashoffset = i === 0 ? dashoffsetInitial : (100 - offset + dashoffsetInitial);
-    const $segment = DonutChart.$createSVGCircle({ class: 'donut-chart__segment' });
-
+    const dashoffset = i === 0 ? dashoffsetInitial : 100 - offset + dashoffsetInitial;
+    const $segment = DonutChart.$createSVGCircle({
+      class: 'donut-chart__segment'
+    });
     $segment.attr('stroke-dasharray', `${value} ${100 - value}`);
     $segment.attr('stroke-dashoffset', dashoffset);
-
     return $segment;
   }
+
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (DonutChart);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
@@ -15923,9 +15921,7 @@ __webpack_require__.r(__webpack_exports__);
     const $domElement = $(domElement);
     this.$dropdown = $domElement;
     this.$label = $domElement.find('.js-drop-down__label');
-    this.$dropdown
-      .on('click.drop-down', this._handleDropDownClick.bind(this))
-      .on('keypress.drop-down', this._handleDropDownKeypress.bind(this));
+    this.$dropdown.on('click.drop-down', this._handleDropDownClick.bind(this)).on('keypress.drop-down', this._handleDropDownKeypress.bind(this));
   }
 
   _handleDropDownClick(event) {
@@ -15948,12 +15944,13 @@ __webpack_require__.r(__webpack_exports__);
       $(event.target).click();
       return false;
     }
+
     return true;
   }
+
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (DropDown);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
@@ -15978,18 +15975,20 @@ class EmailForm {
         name: 'required',
         email: {
           required: true,
-          email: true,
-        },
+          email: true
+        }
       },
-      errorPlacement() {},
+
+      errorPlacement() {}
+
     });
     const $button = $form.find('.js-email-form__button');
     $button.on('click.email-form', $form.submit());
   }
+
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (EmailForm);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
@@ -16015,22 +16014,20 @@ class EventCarousel {
     this.$cards = $domElement.find('.js-event-carousel__cards');
     this.$calendarOverlay = $domElement.find('.js-event-carousel__calendar-overlay');
     this.$calendar = $domElement.find('.js-event-carousel__calendar');
-
-    this.$cards
-      .on('click.event-carousel', this._handleButtonClick.bind(this))
-      .mCustomScrollbar({
-        axis: 'x',
-        theme: 'dark-thin',
-        autoExpandScrollbar: true,
-        advanced: {
-          autoExpandHorizontalScroll: true,
-          autoScrollOnFocuss: false,
-        },
-      });
+    this.$cards.on('click.event-carousel', this._handleButtonClick.bind(this)).mCustomScrollbar({
+      axis: 'x',
+      theme: 'dark-thin',
+      autoExpandScrollbar: true,
+      advanced: {
+        autoExpandHorizontalScroll: true,
+        autoScrollOnFocuss: false
+      }
+    });
   }
 
   _handleButtonClick(event) {
     const $target = $(event.target);
+
     if ($target.hasClass('js-button')) {
       this.$calendarOverlay.addClass('event-carousel__calendar-overlay_visible');
       $(document).on('click.event-carousel', this._handleDocumentClick.bind(this));
@@ -16045,10 +16042,10 @@ class EventCarousel {
       return false;
     }
   }
+
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (EventCarousel);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
@@ -16071,15 +16068,16 @@ class NewsCard {
 
   _initialize(domElement) {
     const $newsCard = $(domElement);
+
     if ($newsCard.hasClass('news-card_with-scrollbar')) {
       const $text = $newsCard.find('.js-news-card__text');
       $text.mCustomScrollbar();
     }
   }
+
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (NewsCard);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
@@ -16091,6 +16089,7 @@ __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function($) {class OnlineHelp {
   constructor(domElement) {
     this.$domElement = $(domElement);
+
     this._initialize();
   }
 
@@ -16104,10 +16103,10 @@ __webpack_require__.r(__webpack_exports__);
   _handleButtonClick() {
     this.$messenger.toggleClass('online-help__messenger_visible');
   }
+
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (OnlineHelp);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
@@ -16119,6 +16118,7 @@ __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function($) {class PassSelector {
   constructor(domElement) {
     this.$domElement = $(domElement);
+
     this._initialize();
   }
 
@@ -16130,14 +16130,15 @@ __webpack_require__.r(__webpack_exports__);
   _handleTickboxChange(event) {
     const $currentTickbox = $(event.target);
     this.$tickboxes.not($currentTickbox).prop('checked', false);
+
     if (this.$tickboxes.filter(':checked').length === 0) {
       $currentTickbox.prop('checked', true);
     }
   }
+
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (PassSelector);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
@@ -16157,6 +16158,7 @@ class RegistrationForm {
 
   _initialize(domElement) {
     this._findElements(domElement);
+
     this._addFormValidation();
 
     this.$inputs.on('change.registration-form', this._handleInputChange.bind(this));
@@ -16181,17 +16183,20 @@ class RegistrationForm {
         name: 'required',
         email: {
           required: true,
-          email: true,
+          email: true
         },
-        policy: 'required',
+        policy: 'required'
       },
       focusInvalid: true,
-      errorPlacement() {},
+
+      errorPlacement() {}
+
     });
   }
 
   _updateBreadCrumbs(itemNumber) {
     const activeClass = 'bread-crumbs__item_active';
+
     if (!this.$breadCrumbsItems.eq(itemNumber).hasClass(activeClass)) {
       this.$breadCrumbsItems.removeClass(activeClass);
       this.$breadCrumbsItems.eq(itemNumber).addClass(activeClass);
@@ -16207,14 +16212,19 @@ class RegistrationForm {
         stageNumber = i;
       }
     });
+
     this._updateBreadCrumbs(stageNumber);
   }
 
   _handleWindowScroll(event) {
     const headerHeight = this.$header.outerHeight();
     const passHeaderOffset = this.$passHeader.offset().top;
+
     if ($(event.target).scrollTop() + headerHeight > passHeaderOffset) {
-      this.$header.css({ position: 'absolute', top: passHeaderOffset - headerHeight });
+      this.$header.css({
+        position: 'absolute',
+        top: passHeaderOffset - headerHeight
+      });
     } else {
       this.$header.removeAttr('style');
     }
@@ -16223,10 +16233,10 @@ class RegistrationForm {
   _handleRegisterButtonClick() {
     this.$form.submit();
   }
+
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (RegistrationForm);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
@@ -16238,6 +16248,7 @@ __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function($) {class SearchBox {
   constructor(domElement) {
     this._findElements(domElement);
+
     this._initialize();
   }
 
@@ -16249,9 +16260,7 @@ __webpack_require__.r(__webpack_exports__);
   }
 
   _initialize() {
-    this.$searchbox
-      .on('click.searchbox', this._handleSearchBoxClick.bind(this))
-      .on('keypress.searchbox', this._handleSearchBoxKeypress.bind(this));
+    this.$searchbox.on('click.searchbox', this._handleSearchBoxClick.bind(this)).on('keypress.searchbox', this._handleSearchBoxKeypress.bind(this));
     this.$input.on('focus.searchbox', this._handleInputFocus.bind(this));
 
     if (this.$searchbox.hasClass('search-box_filled')) {
@@ -16261,6 +16270,7 @@ __webpack_require__.r(__webpack_exports__);
 
   _handleSearchBoxClick(event) {
     const $element = $(event.target);
+
     if ($element.hasClass('js-search-box__button')) {
       this._handleButtonClick(event);
     }
@@ -16270,6 +16280,7 @@ __webpack_require__.r(__webpack_exports__);
     const notFoundMessage = "I've not found what I'm looking for...";
     this.$input.val(notFoundMessage);
     this.$searchbox.addClass('search-box_filled');
+
     if (event !== undefined) {
       $(event.target).blur();
     }
@@ -16291,10 +16302,10 @@ __webpack_require__.r(__webpack_exports__);
       this._emptyInput();
     }
   }
+
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (SearchBox);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
@@ -16303,11 +16314,11 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var jquery_ui_ui_widgets_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(201);
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var jquery_ui_ui_widgets_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(202);
 /* harmony import */ var jquery_ui_ui_widgets_slider__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery_ui_ui_widgets_slider__WEBPACK_IMPORTED_MODULE_0__);
 
 
-__webpack_require__(204);
+__webpack_require__(205);
 
 class Slider {
   constructor(domElement) {
@@ -16316,7 +16327,9 @@ class Slider {
 
   _initialize(domElement) {
     this._findElements(domElement);
+
     const settings = this._generateSliderSettings();
+
     this.$sliderContainer.slider(settings);
   }
 
@@ -16334,37 +16347,46 @@ class Slider {
       classes: {
         'ui-slider': 'slider__container',
         'ui-slider-handle': 'slider__handle',
-        'ui-slider-range': 'slider__range',
-      },
+        'ui-slider-range': 'slider__range'
+      }
     };
+
     if (this.$slider.hasClass('js-slider_type_tip')) {
       typeSettings = {
         value: 40,
-        create: () => { this._updateTip(40); },
-        slide: (event, ui) => { this._updateTip(ui.value); },
-        start: () => { this.$tip.addClass('slider__tip_visible'); },
-        stop: () => { this.$tip.removeClass('slider__tip_visible'); },
+        create: () => {
+          this._updateTip(40);
+        },
+        slide: (event, ui) => {
+          this._updateTip(ui.value);
+        },
+        start: () => {
+          this.$tip.addClass('slider__tip_visible');
+        },
+        stop: () => {
+          this.$tip.removeClass('slider__tip_visible');
+        }
       };
     } else if (this.$slider.hasClass('js-slider_type_scale')) {
       typeSettings = {
         value: 75,
         step: 25,
-        range: 'min',
+        range: 'min'
       };
     }
 
-    return { ...settings, ...typeSettings };
+    return { ...settings,
+      ...typeSettings
+    };
   }
 
   _updateTip(value) {
-    this.$tip
-      .text(value)
-      .css('left', `${value}%`);
+    this.$tip.text(value).css('left', `${value}%`);
   }
+
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Slider);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
@@ -16387,16 +16409,17 @@ class SpeakerCard {
 
   _initialize(domElement) {
     this.$text = $(domElement).find('.js-speaker-card__text');
+
     this._addScrollBar();
   }
 
   _addScrollBar() {
     this.$text.mCustomScrollbar();
   }
+
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (SpeakerCard);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
@@ -16415,6 +16438,7 @@ __webpack_require__.r(__webpack_exports__);
 class SpeakerCarousel {
   constructor(domElement) {
     this.cardsAreExpanded = false;
+
     this._initialize(domElement);
   }
 
@@ -16429,21 +16453,27 @@ class SpeakerCarousel {
 
   _initialize(domElement) {
     this._findElements(domElement);
+
     this._addCustomScrollBar();
+
     this.$scrollBarContainer = this.$cards.find('.mCSB_container');
     this.windowIsSmall = false;
-
     const mediaQuery = window.matchMedia('(max-width: 500px)');
+
     const handleWidthChange = this._updatePageView.bind(this);
+
     mediaQuery.addListener(handleWidthChange);
 
     this._updatePageView(mediaQuery);
+
     this._addEventListeners();
   }
 
   _addCustomScrollBar() {
     const onTotalScroll = this._handleTotalScroll.bind(this);
+
     const onTotalScrollBack = this._handleTotalScrollBack.bind(this);
+
     const onScrollStart = this._handleScrollStart.bind(this);
 
     const scrollBarSettings = {
@@ -16451,47 +16481,40 @@ class SpeakerCarousel {
       theme: 'dark-thin',
       autoExpandScrollbar: true,
       advanced: {
-        autoExpandHorizontalScroll: true,
+        autoExpandHorizontalScroll: true
       },
       callbacks: {
         onTotalScroll,
         onTotalScrollBack,
-        onScrollStart,
-      },
+        onScrollStart
+      }
     };
-
     this.$cards.mCustomScrollbar(scrollBarSettings);
   }
 
   _handleTotalScroll() {
-    this.$rightButton
-      .addClass('arrow-button_disabled')
-      .attr('tabindex', '-1');
+    this.$rightButton.addClass('arrow-button_disabled').attr('tabindex', '-1');
   }
 
   _handleTotalScrollBack() {
-    this.$leftButton
-      .addClass('arrow-button_disabled')
-      .attr('tabindex', '-1');
+    this.$leftButton.addClass('arrow-button_disabled').attr('tabindex', '-1');
   }
 
   _handleScrollStart() {
-    this.$leftButton
-      .removeClass('arrow-button_disabled')
-      .attr('tabindex', '0');
-    this.$rightButton
-      .removeClass('arrow-button_disabled')
-      .attr('tabindex', '0');
+    this.$leftButton.removeClass('arrow-button_disabled').attr('tabindex', '0');
+    this.$rightButton.removeClass('arrow-button_disabled').attr('tabindex', '0');
   }
 
   _updatePageView(mediaQuery) {
     if (mediaQuery.matches) {
       this.windowIsSmall = true;
       this.$page.addClass('speaker-carousel_view_small');
+
       this._hideCustomScrollBar();
     } else {
       this.windowIsSmall = false;
       this.$page.removeClass('speaker-carousel_view_small');
+
       if (!this.cardsAreExpanded) {
         this._updateCustomScrollBar();
       }
@@ -16517,6 +16540,7 @@ class SpeakerCarousel {
       this.$page.removeClass('speaker-carousel_view_full');
       this.$viewAllLink.text('View all speakers');
       this.cardsAreExpanded = false;
+
       if (!this.windowIsSmall) {
         this._updateCustomScrollBar();
       }
@@ -16524,6 +16548,7 @@ class SpeakerCarousel {
       this.$page.addClass('speaker-carousel_view_full');
       this.$viewAllLink.text('Back to compact view');
       this.cardsAreExpanded = true;
+
       if (!this.windowIsSmall) {
         this._hideCustomScrollBar();
       }
@@ -16539,10 +16564,10 @@ class SpeakerCarousel {
     this.$cards.mCustomScrollbar('disable', true);
     this.$scrollBarContainer.removeAttr('style');
   }
+
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (SpeakerCarousel);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
@@ -16561,9 +16586,7 @@ __webpack_require__.r(__webpack_exports__);
     this.$tickbox = $domElement;
     this.$input = $domElement.find('.js-tick-box__input');
     this.$checkmark = $domElement.find('.js-tick-box__checkmark');
-    this.$tickbox
-      .on('keypress.tickbox', this._handleEnterPress.bind(this))
-      .on('click.tickbox', this._removeFocus.bind(this));
+    this.$tickbox.on('keypress.tickbox', this._handleEnterPress.bind(this)).on('click.tickbox', this._removeFocus.bind(this));
   }
 
   _handleEnterPress(event) {
@@ -16576,10 +16599,10 @@ __webpack_require__.r(__webpack_exports__);
   _removeFocus() {
     this.$checkmark.blur();
   }
+
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (TickBox);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
@@ -16598,9 +16621,7 @@ __webpack_require__.r(__webpack_exports__);
     this.$toggle = $domElement;
     this.$input = $domElement.find('.js-toggle-switch__checkbox');
     this.$slider = $domElement.find('.js-toggle-switch__slider');
-    this.$toggle
-      .on('keypress.toggle', this._handleEnterPress.bind(this))
-      .on('click.toggle', this._removeFocus.bind(this));
+    this.$toggle.on('keypress.toggle', this._handleEnterPress.bind(this)).on('click.toggle', this._removeFocus.bind(this));
   }
 
   _handleEnterPress(event) {
@@ -16613,10 +16634,10 @@ __webpack_require__.r(__webpack_exports__);
   _removeFocus() {
     this.$slider.blur();
   }
+
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (ToggleSwitch);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
@@ -16641,39 +16662,37 @@ class ValidationInput {
     this.bubbleModifiers = {
       good: 'validation-input__bubble_type_good',
       error: 'validation-input__bubble_type_error',
-      hidden: 'validation-input__bubble_hidden',
+      hidden: 'validation-input__bubble_hidden'
     };
-
-    this.$input
-      .on('blur.validation', this._handleInputBlur.bind(this))
-      .on('focus.validation', this._handleInputFocus.bind(this));
+    this.$input.on('blur.validation', this._handleInputBlur.bind(this)).on('focus.validation', this._handleInputFocus.bind(this));
   }
 
   _handleInputBlur() {
-    const { good, error, hidden } = this.bubbleModifiers;
+    const {
+      good,
+      error,
+      hidden
+    } = this.bubbleModifiers;
+
     if (this.$input.valid()) {
-      this.$bubble
-        .removeClass(`${error} ${hidden}`)
-        .addClass(good)
-        .text('Thanks!');
+      this.$bubble.removeClass(`${error} ${hidden}`).addClass(good).text('Thanks!');
     } else {
-      this.$bubble
-        .removeClass(`${good} ${hidden}`)
-        .addClass(error)
-        .text('Error');
+      this.$bubble.removeClass(`${good} ${hidden}`).addClass(error).text('Error');
     }
   }
 
   _handleInputFocus() {
-    const { good, error, hidden } = this.bubbleModifiers;
-    this.$bubble
-      .addClass(hidden)
-      .removeClass(`${good} ${error}`);
+    const {
+      good,
+      error,
+      hidden
+    } = this.bubbleModifiers;
+    this.$bubble.addClass(hidden).removeClass(`${good} ${error}`);
   }
+
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (ValidationInput);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
@@ -16689,7 +16708,6 @@ __webpack_require__.r(__webpack_exports__);
 
   _initialize(domElement) {
     this.$video = $(domElement).find('.js-video__frame');
-
     const video = this.$video[0];
     this.aspectRatio = video.height / video.width;
     video.dataset.aspectRatio = this.aspectRatio;
@@ -16703,18 +16721,50 @@ __webpack_require__.r(__webpack_exports__);
 
   _resize() {
     const newWidth = document.width;
-    this.$video
-      .width(newWidth)
-      .height(newWidth * this.aspectRatio);
+    this.$video.width(newWidth).height(newWidth * this.aspectRatio);
   }
+
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Video);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
 /* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var constants;
+(function (constants) {
+    constants.typeOfFunction = 'function';
+    constants.boolTrue = true;
+})(constants || (constants = {}));
+function bind(target, propertyKey, descriptor) {
+    if (!descriptor || (typeof descriptor.value !== constants.typeOfFunction)) {
+        throw new TypeError("Only methods can be decorated with @bind. <" + propertyKey + "> is not a method!");
+    }
+    return {
+        configurable: constants.boolTrue,
+        get: function () {
+            var bound = descriptor.value.bind(this);
+            // Credits to https://github.com/andreypopp/autobind-decorator for memoizing the result of bind against a symbol on the instance.
+            Object.defineProperty(this, propertyKey, {
+                value: bound,
+                configurable: constants.boolTrue,
+                writable: constants.boolTrue
+            });
+            return bound;
+        }
+    };
+}
+exports.bind = bind;
+exports.default = bind;
+
+
+/***/ }),
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -16764,7 +16814,7 @@ return $.ui.keyCode = {
 
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -17502,80 +17552,80 @@ return $.widget;
 
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 function importAll(r) {
   r.keys().forEach(r);
 }
 
-importAll(__webpack_require__(32));
-importAll(__webpack_require__(172));
-importAll(__webpack_require__(182));
-importAll(__webpack_require__(212));
+importAll(__webpack_require__(33));
+importAll(__webpack_require__(173));
+importAll(__webpack_require__(183));
+importAll(__webpack_require__(213));
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./common.blocks/about-section/styl/about-section.styl": 33,
-	"./common.blocks/arrow-button/styl/arrow-button.styl": 35,
-	"./common.blocks/arrow-section/styl/arrow-section.styl": 37,
-	"./common.blocks/banner-section/styl/banner-section.styl": 39,
-	"./common.blocks/bread-crumbs/styl/bread-crumbs.styl": 42,
-	"./common.blocks/button-section/styl/button-section.styl": 44,
-	"./common.blocks/button/styl/button.styl": 46,
-	"./common.blocks/calendar-section/styl/calendar-section.styl": 49,
-	"./common.blocks/calendar/styl/calendar.styl": 51,
-	"./common.blocks/chart-section/styl/chart-section.styl": 53,
-	"./common.blocks/donut-chart/styl/donut-chart-mixin.styl": 55,
-	"./common.blocks/donut-chart/styl/donut-chart.styl": 57,
-	"./common.blocks/drop-down/styl/drop-down.styl": 59,
-	"./common.blocks/email-form/styl/email-form.styl": 61,
-	"./common.blocks/event-carousel/styl/event-carousel.styl": 63,
-	"./common.blocks/footer-section/styl/footer-section.styl": 66,
-	"./common.blocks/form-section/styl/form-section.styl": 68,
-	"./common.blocks/infogram/styl/infogram.styl": 70,
-	"./common.blocks/map-section/styl/map-section.styl": 72,
-	"./common.blocks/map/styl/map.styl": 74,
-	"./common.blocks/message-section/styl/message-section.styl": 76,
-	"./common.blocks/messenger/styl/messenger.styl": 78,
-	"./common.blocks/navigation-bar/styl/navigation-bar.styl": 82,
-	"./common.blocks/news-card/styl/news-card.styl": 84,
-	"./common.blocks/news-section/styl/news-section.styl": 86,
-	"./common.blocks/online-help/styl/online-help.styl": 88,
-	"./common.blocks/pass-info/styl/pass-info.styl": 91,
-	"./common.blocks/pass-selector/styl/pass-selector.styl": 93,
-	"./common.blocks/policy-tickbox/styl/policy-tickbox.styl": 95,
-	"./common.blocks/profile-card/styl/profile-card.styl": 97,
-	"./common.blocks/profile-section/styl/profile-section.styl": 102,
-	"./common.blocks/registration-form/styl/registration-form.styl": 104,
-	"./common.blocks/search-box/styl/search-box.styl": 106,
-	"./common.blocks/search-section/styl/search-section.styl": 108,
-	"./common.blocks/slider-section/styl/slider-section.styl": 110,
-	"./common.blocks/slider/styl/slider.styl": 112,
-	"./common.blocks/speaker-card/styl/speaker-card.styl": 114,
-	"./common.blocks/speaker-carousel/styl/speaker-carousel.styl": 116,
-	"./common.blocks/stages-section/styl/stages-section.styl": 118,
-	"./common.blocks/subscribe-form/styl/subscribe-form.styl": 120,
-	"./common.blocks/subscribe-toggle/styl/subscribe-toggle.styl": 122,
-	"./common.blocks/talks-section/styl/talks-section.styl": 124,
-	"./common.blocks/tick-box/styl/tick-box.styl": 126,
-	"./common.blocks/toggle-switch/styl/toggle-switch.styl": 128,
-	"./common.blocks/validation-input/styl/validation-input.styl": 130,
-	"./common.blocks/video-section/styl/video-section.styl": 132,
-	"./common.blocks/video/styl/video.styl": 134,
-	"./pages/contacts/styl/contacts.styl": 136,
-	"./pages/index/styl/index.styl": 138,
-	"./pages/registration/styl/registration.styl": 140,
-	"./pages/schedule/styl/schedule.styl": 142,
-	"./pages/speakers/styl/speakers.styl": 144,
-	"./pages/uidemo/styl/uidemo.styl": 146,
-	"./styles/fonts.styl": 148,
-	"./styles/mixins.styl": 166,
-	"./styles/variables.styl": 168,
-	"./templates/styl/layout.styl": 170
+	"./common.blocks/about-section/styl/about-section.styl": 34,
+	"./common.blocks/arrow-button/styl/arrow-button.styl": 36,
+	"./common.blocks/arrow-section/styl/arrow-section.styl": 38,
+	"./common.blocks/banner-section/styl/banner-section.styl": 40,
+	"./common.blocks/bread-crumbs/styl/bread-crumbs.styl": 43,
+	"./common.blocks/button-section/styl/button-section.styl": 45,
+	"./common.blocks/button/styl/button.styl": 47,
+	"./common.blocks/calendar-section/styl/calendar-section.styl": 50,
+	"./common.blocks/calendar/styl/calendar.styl": 52,
+	"./common.blocks/chart-section/styl/chart-section.styl": 54,
+	"./common.blocks/donut-chart/styl/donut-chart-mixin.styl": 56,
+	"./common.blocks/donut-chart/styl/donut-chart.styl": 58,
+	"./common.blocks/drop-down/styl/drop-down.styl": 60,
+	"./common.blocks/email-form/styl/email-form.styl": 62,
+	"./common.blocks/event-carousel/styl/event-carousel.styl": 64,
+	"./common.blocks/footer-section/styl/footer-section.styl": 67,
+	"./common.blocks/form-section/styl/form-section.styl": 69,
+	"./common.blocks/infogram/styl/infogram.styl": 71,
+	"./common.blocks/map-section/styl/map-section.styl": 73,
+	"./common.blocks/map/styl/map.styl": 75,
+	"./common.blocks/message-section/styl/message-section.styl": 77,
+	"./common.blocks/messenger/styl/messenger.styl": 79,
+	"./common.blocks/navigation-bar/styl/navigation-bar.styl": 83,
+	"./common.blocks/news-card/styl/news-card.styl": 85,
+	"./common.blocks/news-section/styl/news-section.styl": 87,
+	"./common.blocks/online-help/styl/online-help.styl": 89,
+	"./common.blocks/pass-info/styl/pass-info.styl": 92,
+	"./common.blocks/pass-selector/styl/pass-selector.styl": 94,
+	"./common.blocks/policy-tickbox/styl/policy-tickbox.styl": 96,
+	"./common.blocks/profile-card/styl/profile-card.styl": 98,
+	"./common.blocks/profile-section/styl/profile-section.styl": 103,
+	"./common.blocks/registration-form/styl/registration-form.styl": 105,
+	"./common.blocks/search-box/styl/search-box.styl": 107,
+	"./common.blocks/search-section/styl/search-section.styl": 109,
+	"./common.blocks/slider-section/styl/slider-section.styl": 111,
+	"./common.blocks/slider/styl/slider.styl": 113,
+	"./common.blocks/speaker-card/styl/speaker-card.styl": 115,
+	"./common.blocks/speaker-carousel/styl/speaker-carousel.styl": 117,
+	"./common.blocks/stages-section/styl/stages-section.styl": 119,
+	"./common.blocks/subscribe-form/styl/subscribe-form.styl": 121,
+	"./common.blocks/subscribe-toggle/styl/subscribe-toggle.styl": 123,
+	"./common.blocks/talks-section/styl/talks-section.styl": 125,
+	"./common.blocks/tick-box/styl/tick-box.styl": 127,
+	"./common.blocks/toggle-switch/styl/toggle-switch.styl": 129,
+	"./common.blocks/validation-input/styl/validation-input.styl": 131,
+	"./common.blocks/video-section/styl/video-section.styl": 133,
+	"./common.blocks/video/styl/video.styl": 135,
+	"./pages/contacts/styl/contacts.styl": 137,
+	"./pages/index/styl/index.styl": 139,
+	"./pages/registration/styl/registration.styl": 141,
+	"./pages/schedule/styl/schedule.styl": 143,
+	"./pages/speakers/styl/speakers.styl": 145,
+	"./pages/uidemo/styl/uidemo.styl": 147,
+	"./styles/fonts.styl": 149,
+	"./styles/mixins.styl": 167,
+	"./styles/variables.styl": 169,
+	"./templates/styl/layout.styl": 171
 };
 
 
@@ -17596,13 +17646,13 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 32;
+webpackContext.id = 33;
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(34);
+var content = __webpack_require__(35);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -17621,7 +17671,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -17630,10 +17680,10 @@ exports.push([module.i, ".about-section {\n  width: 100%;\n  background-color: #
 
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(36);
+var content = __webpack_require__(37);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -17649,22 +17699,22 @@ var update = __webpack_require__(1)(content, options);
 if (content.locals) {
   module.exports = content.locals;
 }
-
-
-/***/ }),
-/* 36 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(false);
-// Module
-exports.push([module.i, ".arrow-button {\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n  -webkit-tap-highlight-color: transparent;\n  user-select: none;\n  position: relative;\n  display: inline-block;\n  width: 3.626373626373626rem;\n  height: 3.626373626373626rem;\n  font-size: inherit;\n  background-color: #fff;\n  border: 0.21978021978022rem #4eb7a8 solid;\n  border-radius: 50%;\n  cursor: pointer;\n  outline: none;\n}\n.arrow-button_disabled {\n  pointer-events: none;\n  background-color: #e5e5e5;\n  border-color: #e5e5e5;\n}\n.arrow-button_disabled .arrow-button__arrow {\n  background-color: #e5e5e5;\n  border-color: #fff;\n}\n@media (hover: hover) {\n  .arrow-button:hover {\n    background-color: #4eb7a8;\n  }\n  .arrow-button:hover .arrow-button__arrow {\n    background-color: #4eb7a8;\n    border-color: #fff;\n  }\n}\n@media (hover: none) {\n  .arrow-button:active {\n    background-color: #4eb7a8;\n  }\n  .arrow-button:active .arrow-button__arrow {\n    background-color: #4eb7a8;\n    border-color: #fff;\n  }\n}\n.arrow-button:focus,\n.arrow-button_active {\n  background-color: #4eb7a8;\n}\n.arrow-button:focus .arrow-button__arrow,\n.arrow-button_active .arrow-button__arrow {\n  background-color: #4eb7a8;\n  border-color: #fff;\n}\n.arrow-button_direction_right .arrow-button__arrow {\n  right: 50%;\n  transform: translate(30%, -50%) rotate(-45deg);\n}\n.arrow-button_direction_right:active,\n.arrow-button_direction_right.arrow-button_active {\n  transform: translateX(1px);\n}\n.arrow-button_direction_left .arrow-button__arrow {\n  left: 50%;\n  transform: translate(-30%, -50%) rotate(135deg);\n}\n.arrow-button_direction_left:active,\n.arrow-button_direction_left.arrow-button_active {\n  transform: translateX(-1px);\n}\n.arrow-button__arrow {\n  position: absolute;\n  top: 50%;\n  width: 1.263736263736264rem;\n  height: 1.263736263736264rem;\n  border: solid #4eb7a8;\n  border-width: 0 0.274725274725275rem 0.274725274725275rem 0;\n}\n.arrow-button_size_small {\n  width: 1.8rem;\n  height: 1.8rem;\n  border-width: 0.15rem;\n}\n.arrow-button_size_small .arrow-button__arrow {\n  width: 0.65rem;\n  height: 0.65rem;\n  border-width: 0 0.15rem 0.15rem 0;\n}\n", ""]);
 
 
 /***/ }),
 /* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(38);
+exports = module.exports = __webpack_require__(0)(false);
+// Module
+exports.push([module.i, ".arrow-button {\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n  -webkit-tap-highlight-color: transparent;\n  user-select: none;\n  position: relative;\n  display: inline-block;\n  width: 3.626373626373626rem;\n  height: 3.626373626373626rem;\n  font-size: inherit;\n  background-color: #fff;\n  border: 0.21978021978022rem #4eb7a8 solid;\n  border-radius: 50%;\n  cursor: pointer;\n  outline: none;\n}\n.arrow-button_disabled {\n  pointer-events: none;\n  background-color: #e5e5e5;\n  border-color: #e5e5e5;\n}\n.arrow-button_disabled .arrow-button__arrow {\n  background-color: #e5e5e5;\n  border-color: #fff;\n}\n@media (hover: hover) {\n  .arrow-button:hover {\n    background-color: #4eb7a8;\n  }\n  .arrow-button:hover .arrow-button__arrow {\n    background-color: #4eb7a8;\n    border-color: #fff;\n  }\n}\n@media (hover: none) {\n  .arrow-button:active {\n    background-color: #4eb7a8;\n  }\n  .arrow-button:active .arrow-button__arrow {\n    background-color: #4eb7a8;\n    border-color: #fff;\n  }\n}\n.arrow-button:focus {\n  background-color: #4eb7a8;\n}\n.arrow-button:focus .arrow-button__arrow {\n  background-color: #4eb7a8;\n  border-color: #fff;\n}\n.arrow-button_direction_right .arrow-button__arrow {\n  right: 50%;\n  transform: translate(30%, -50%) rotate(-45deg);\n}\n.arrow-button_direction_right:active {\n  transform: translateX(1px);\n}\n.arrow-button_direction_left .arrow-button__arrow {\n  left: 50%;\n  transform: translate(-30%, -50%) rotate(135deg);\n}\n.arrow-button_direction_left:active {\n  transform: translateX(-1px);\n}\n.arrow-button__arrow {\n  position: absolute;\n  top: 50%;\n  width: 1.263736263736264rem;\n  height: 1.263736263736264rem;\n  border: solid #4eb7a8;\n  border-width: 0 0.274725274725275rem 0.274725274725275rem 0;\n}\n.arrow-button_size_small {\n  width: 1.8rem;\n  height: 1.8rem;\n  border-width: 0.15rem;\n}\n.arrow-button_size_small .arrow-button__arrow {\n  width: 0.65rem;\n  height: 0.65rem;\n  border-width: 0 0.15rem 0.15rem 0;\n}\n", ""]);
+
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(39);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -17683,7 +17733,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -17692,10 +17742,10 @@ exports.push([module.i, ".arrow-section__title {\n  text-transform: uppercase;\n
 
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(40);
+var content = __webpack_require__(41);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -17711,31 +17761,31 @@ var update = __webpack_require__(1)(content, options);
 if (content.locals) {
   module.exports = content.locals;
 }
-
-
-/***/ }),
-/* 40 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(false);
-// Imports
-var getUrl = __webpack_require__(3);
-var ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(41));
-// Module
-exports.push([module.i, ".banner-section {\n  width: 100%;\n  padding: 7rem 2rem 4rem;\n  text-align: center;\n  color: #fff;\n  background: #4eb7a8 url(" + ___CSS_LOADER_URL___0___ + ") no-repeat;\n  background-size: cover;\n}\n.banner-section__location {\n  width: -webkit-max-content;\n  width: -moz-max-content;\n  width: max-content;\n  margin: 0 auto;\n  padding: 0.3rem 0.8rem;\n  font: lighter 1.6rem 'Lato', Arial, sans-serif;\n  border: 2px solid #80d8cb;\n}\n.banner-section__title {\n  margin: 3rem auto 0;\n  font: 900 6rem 'Lato', Arial, sans-serif;\n  letter-spacing: 0.15rem;\n}\n@media screen and (max-width: 630px) {\n  .banner-section__title {\n    font-size: 4rem;\n  }\n}\n@media screen and (max-width: 375px) {\n  .banner-section__title {\n    font-size: 3.5rem;\n  }\n}\n.banner-section__tagline {\n  max-width: 52.1978022rem;\n  margin: 0.8rem auto 2.5rem;\n  font: lighter 1rem 'Lato', Arial, sans-serif;\n}\n.banner-section__register-button {\n  width: 16.48351648rem;\n  margin: 0 auto;\n  font-size: 1rem;\n}\n", ""]);
 
 
 /***/ }),
 /* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/img/banner-bg.jpg";
+exports = module.exports = __webpack_require__(0)(false);
+// Imports
+var getUrl = __webpack_require__(3);
+var ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(42));
+// Module
+exports.push([module.i, ".banner-section {\n  width: 100%;\n  padding: 7rem 2rem 4rem;\n  text-align: center;\n  color: #fff;\n  background: #4eb7a8 url(" + ___CSS_LOADER_URL___0___ + ") no-repeat;\n  background-size: cover;\n}\n.banner-section__location {\n  width: -webkit-max-content;\n  width: -moz-max-content;\n  width: max-content;\n  margin: 0 auto;\n  padding: 0.3rem 0.8rem;\n  font: lighter 1.6rem 'Lato', Arial, sans-serif;\n  border: 2px solid #80d8cc;\n}\n.banner-section__title {\n  margin: 3rem auto 0;\n  font: 900 6rem 'Lato', Arial, sans-serif;\n  letter-spacing: 0.15rem;\n}\n@media screen and (max-width: 630px) {\n  .banner-section__title {\n    font-size: 4rem;\n  }\n}\n@media screen and (max-width: 375px) {\n  .banner-section__title {\n    font-size: 3.5rem;\n  }\n}\n.banner-section__tagline {\n  max-width: 52.1978022rem;\n  margin: 0.8rem auto 2.5rem;\n  font: lighter 1rem 'Lato', Arial, sans-serif;\n}\n.banner-section__register-button {\n  width: 16.48351648rem;\n  margin: 0 auto;\n  font-size: 1rem;\n}\n", ""]);
+
 
 /***/ }),
 /* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(43);
+module.exports = __webpack_require__.p + "assets/img/banner-bg.jpg";
+
+/***/ }),
+/* 43 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(44);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -17754,7 +17804,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -17763,10 +17813,10 @@ exports.push([module.i, ".bread-crumbs {\n  display: flex;\n  justify-content: s
 
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(45);
+var content = __webpack_require__(46);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -17782,22 +17832,22 @@ var update = __webpack_require__(1)(content, options);
 if (content.locals) {
   module.exports = content.locals;
 }
-
-
-/***/ }),
-/* 45 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(false);
-// Module
-exports.push([module.i, ".button-section {\n  width: 100%;\n}\n.button-section__title {\n  text-transform: uppercase;\n  font: bold 1.285714285714286rem/1 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #4f4f4f;\n  letter-spacing: 0.095rem;\n  margin-bottom: 5rem;\n}\n@media screen and (max-width: 672px) {\n  .button-section__title {\n    margin-bottom: 3rem;\n  }\n}\n.button-section__container {\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: space-between;\n}\n.button-section__column {\n  display: flex;\n  flex-flow: column wrap;\n  justify-content: normal;\n  flex: 15.65934065934066rem 1 0;\n  align-content: space-around;\n  height: 12rem;\n  margin: 0 auto;\n}\n@media screen and (min-width: 700px) {\n  .button-section__column:first-child {\n    margin-right: 4%;\n  }\n}\n.button-section__button {\n  margin-bottom: 1.2rem;\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n}\n@media screen and (min-width: 700px) {\n  .button-section__button:nth-child(-n+3) {\n    margin-right: 8%;\n  }\n}\n.button-section__button_size_small {\n  margin-top: 0.769230769230769rem;\n}\n@media screen and (max-width: 672px) {\n  .button-section__button_size_small:nth-last-child(-n+3) {\n    order: -1;\n  }\n}\n", ""]);
 
 
 /***/ }),
 /* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(47);
+exports = module.exports = __webpack_require__(0)(false);
+// Module
+exports.push([module.i, ".button-section {\n  width: 100%;\n}\n.button-section__title {\n  text-transform: uppercase;\n  font: bold 1.285714285714286rem/1 'Lato', Arial, sans-serif;\n  text-align: center;\n  color: #4f4f4f;\n  letter-spacing: 0.095rem;\n  margin-bottom: 5rem;\n}\n@media screen and (max-width: 672px) {\n  .button-section__title {\n    margin-bottom: 3rem;\n  }\n}\n.button-section__container {\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: space-between;\n}\n.button-section__column {\n  display: flex;\n  flex-flow: column wrap;\n  justify-content: normal;\n  flex: 15.65934065934066rem 1 0;\n  align-content: space-around;\n  height: 12rem;\n  margin: 0 auto;\n}\n@media screen and (min-width: 700px) {\n  .button-section__column:first-child {\n    margin-right: 4%;\n  }\n}\n.button-section__button {\n  margin-bottom: 1.2rem;\n  width: 8.406593406593407rem;\n}\n@media screen and (min-width: 700px) {\n  .button-section__button:nth-child(-n+3) {\n    margin-right: 8%;\n  }\n}\n.button-section__button_size_small {\n  width: 5.604395604395605rem;\n  margin-top: 0.769230769230769rem;\n}\n@media screen and (max-width: 672px) {\n  .button-section__button_size_small:nth-last-child(-n+3) {\n    order: -1;\n  }\n}\n", ""]);
+
+
+/***/ }),
+/* 47 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(48);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -17816,18 +17866,18 @@ if (content.locals) {
 
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
 // Imports
-exports.i(__webpack_require__(48), "");
+exports.i(__webpack_require__(49), "");
 // Module
-exports.push([module.i, ".button {\n  display: inline-block;\n  width: 8.406593406593407rem;\n  padding: 0.659340659340659rem;\n  overflow: hidden;\n  font: bold 0.857142857142857rem 'Lato', Arial, sans-serif;\n  text-align: center;\n  text-decoration: none;\n  text-transform: uppercase;\n  letter-spacing: 0.035rem;\n  color: #28a290;\n  cursor: pointer;\n  background-color: #fff;\n  border: solid 1px #28a290;\n  border-radius: 0.274725275rem;\n  box-shadow: 0 0.21978022rem 0 0 #28a290;\n  transition: all 0.3s, visibility 0s;\n  outline: none;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n  -webkit-tap-highlight-color: transparent;\n  user-select: none;\n}\n@media (hover: hover) {\n  .button:hover {\n    color: #fff;\n    background-color: #4eb7a8;\n    border-color: #4eb7a8;\n  }\n}\n.button:focus,\n.button:active {\n  color: #fff;\n  background-color: #4eb7a8;\n  border-color: #4eb7a8;\n}\n.button:active {\n  box-shadow: none;\n  transform: translateY(0.21978022rem);\n}\n.button_size_small {\n  width: 5.604395604395605rem;\n  padding: 0.32967032967033rem;\n  font-size: 0.714285714285714rem;\n}\n.button_size_responsive {\n  width: 100%;\n  font-size: inherit;\n}\n.button_color_orange {\n  color: #bf3e1f;\n  background-color: #fff;\n  border-color: #bf3e1f;\n  box-shadow: 0 0.21978022rem 0 0 #bf3e1f;\n}\n@media (hover: hover) {\n  .button_color_orange:hover {\n    color: #fff;\n    background-color: #e75735;\n    border-color: #e75735;\n  }\n}\n.button_color_orange:focus,\n.button_color_orange:active {\n  color: #fff;\n  background-color: #e75735;\n  border-color: #e75735;\n}\n.button_color_reverse {\n  color: #fff;\n  background-color: #4eb7a8;\n  border: 1px solid #4eb7a8;\n  box-shadow: 0 0.21978022rem 0 0 #28a290;\n}\n@media (hover: hover) {\n  .button_color_reverse:hover {\n    box-shadow: none;\n    transform: translateY(0.21978022rem);\n  }\n}\n.button_color_reverse:active,\n.button_color_reverse:focus {\n  box-shadow: none;\n  transform: translateY(0.21978022rem);\n}\n", ""]);
+exports.push([module.i, ".button {\n  display: inline-block;\n  width: 100%;\n  padding: 0.659340659340659rem;\n  overflow: hidden;\n  font: bold 0.857142857142857rem 'Lato', Arial, sans-serif;\n  text-align: center;\n  text-decoration: none;\n  text-transform: uppercase;\n  letter-spacing: 0.035rem;\n  color: #28a290;\n  cursor: pointer;\n  background-color: #fff;\n  border: solid 1px #28a290;\n  border-radius: 0.274725275rem;\n  box-shadow: 0 0.21978022rem 0 0 #28a290;\n  transition: all 0.3s, visibility 0s;\n  outline: none;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n  -webkit-tap-highlight-color: transparent;\n  user-select: none;\n}\n@media (hover: hover) {\n  .button:hover {\n    color: #fff;\n    background-color: #4eb7a8;\n    border-color: #4eb7a8;\n  }\n}\n.button:focus,\n.button:active {\n  color: #fff;\n  background-color: #4eb7a8;\n  border-color: #4eb7a8;\n}\n.button:active {\n  box-shadow: none;\n  transform: translateY(0.21978022rem);\n}\n.button_size_small {\n  padding: 0.32967032967033rem;\n  font-size: 0.714285714285714rem;\n}\n.button_color_orange {\n  color: #bf3e1f;\n  background-color: #fff;\n  border-color: #bf3e1f;\n  box-shadow: 0 0.21978022rem 0 0 #bf3e1f;\n}\n@media (hover: hover) {\n  .button_color_orange:hover {\n    color: #fff;\n    background-color: #e75735;\n    border-color: #e75735;\n  }\n}\n.button_color_orange:focus,\n.button_color_orange:active {\n  color: #fff;\n  background-color: #e75735;\n  border-color: #e75735;\n}\n.button_color_reverse {\n  color: #fff;\n  background-color: #4eb7a8;\n  border: 1px solid #4eb7a8;\n  box-shadow: 0 0.21978022rem 0 0 #28a290;\n}\n@media (hover: hover) {\n  .button_color_reverse:hover {\n    box-shadow: none;\n    transform: translateY(0.21978022rem);\n  }\n}\n.button_color_reverse:active,\n.button_color_reverse:focus {\n  box-shadow: none;\n  transform: translateY(0.21978022rem);\n}\n", ""]);
 
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -17836,10 +17886,10 @@ exports.push([module.i, "/*! legitRipple.js v1.1.0: ripple.min.css by Matthias V
 
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(50);
+var content = __webpack_require__(51);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -17858,7 +17908,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -17867,10 +17917,10 @@ exports.push([module.i, ".calendar-section__title {\n  text-transform: uppercase
 
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(52);
+var content = __webpack_require__(53);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -17886,22 +17936,22 @@ var update = __webpack_require__(1)(content, options);
 if (content.locals) {
   module.exports = content.locals;
 }
-
-
-/***/ }),
-/* 52 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(false);
-// Module
-exports.push([module.i, ".calendar {\n  background-color: #f2f2f2;\n  border-radius: 0.3rem;\n  overflow: hidden;\n}\n.calendar__day-container {\n  padding: 0.6rem 0 0.3rem;\n  width: 100%;\n  background-color: #e75735;\n  text-align: center;\n}\n.calendar__day-text {\n  font: lighter 5.714285714rem 'Lato', Arial, sans-serif;\n  color: #fff;\n  background: none;\n  border: none;\n}\n@media screen and (max-width: 768px) {\n  .calendar__day-text {\n    font-size: 4.5rem;\n  }\n}\n.calendar .ui-datepicker-header {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 0.7rem 1.1rem;\n  background-color: #d54c2c;\n  color: #fff;\n}\n.calendar .ui-datepicker-prev {\n  order: 1;\n  flex: 0 0 0.8rem;\n  height: 0.8rem;\n  border: 0.15rem #fff solid;\n  border-color: #fff transparent transparent #fff;\n  transform: rotate(-45deg);\n  cursor: pointer;\n}\n.calendar .ui-datepicker-prev:active {\n  transform: translateX(-0.2rem) rotate(-45deg);\n}\n.calendar .ui-datepicker-next {\n  order: 3;\n  flex: 0 0 0.8rem;\n  height: 0.8rem;\n  border: 0.15rem #fff solid;\n  border-color: #fff transparent transparent #fff;\n  transform: rotate(135deg);\n  cursor: pointer;\n}\n.calendar .ui-datepicker-next:active {\n  transform: translateX(0.2rem) rotate(135deg);\n}\n.calendar .ui-datepicker-title {\n  order: 2;\n  font: lighter 1.7rem/1 'Lato', Arial, sans-serif;\n  letter-spacing: -0.04rem;\n}\n.calendar .ui-datepicker-year {\n  display: none;\n}\n.calendar .ui-datepicker-calendar {\n  width: calc(100% + 1px);\n  border-spacing: 0;\n}\n.calendar .ui-datepicker-calendar thead {\n  background-color: #e75735;\n  font: bold 0.642857142857143rem 'Lato', Arial, sans-serif;\n  color: #fff;\n  text-transform: uppercase;\n}\n.calendar .ui-datepicker-calendar th {\n  padding: 0.65rem;\n}\n@media screen and (max-width: 768px) {\n  .calendar .ui-datepicker-calendar th {\n    padding: 0.4rem 0.2rem;\n  }\n}\n.calendar .ui-datepicker-calendar td {\n  padding: 0.5rem 0.25rem;\n  width: 14.28571428571429%;\n  text-align: center;\n  border-right: 1px solid #fff;\n  border-bottom: 1px solid #fff;\n  cursor: pointer;\n}\n@media screen and (max-width: 768px) {\n  .calendar .ui-datepicker-calendar td {\n    padding: 0.3rem;\n  }\n}\n.calendar .ui-datepicker-calendar td:last-child {\n  border-right: none;\n}\n@media (hover: hover) {\n  .calendar .ui-datepicker-calendar td:not(.ui-datepicker-unselectable):hover {\n    background-color: #e75735;\n  }\n  .calendar .ui-datepicker-calendar td:not(.ui-datepicker-unselectable):hover .ui-state-default {\n    color: #fff;\n  }\n}\n.calendar .ui-datepicker-calendar .ui-datepicker-current-day {\n  background-color: #e75735;\n}\n.calendar .ui-datepicker-calendar .ui-datepicker-current-day .ui-state-default,\n.calendar .ui-datepicker-calendar .ui-datepicker-current-day .ui-state-default:focus {\n  color: #fff;\n}\n.calendar .ui-datepicker-calendar .ui-datepicker-days-cell-over {\n  box-shadow: inset 0 0 0 0.10989011rem #e75735;\n}\n.calendar .ui-datepicker-calendar .ui-state-default {\n  font: normal 1.428571429rem 'SourceSansPro', Arial, sans-serif;\n  color: #868686;\n  text-decoration: none;\n  outline: none;\n}\n@media screen and (max-width: 768px) {\n  .calendar .ui-datepicker-calendar .ui-state-default {\n    font-size: 1rem;\n  }\n}\n.calendar .ui-datepicker-calendar .ui-state-default:focus {\n  color: #e75735;\n}\n.calendar .ui-datepicker-calendar .ui-state-disabled {\n  cursor: text;\n}\n.calendar .ui-datepicker-calendar .ui-state-disabled .ui-state-default {\n  color: #fff;\n}\n.calendar__button-pane {\n  padding: 1.2rem 1.37rem;\n  text-align: left;\n  background-color: #e5e5e5;\n}\n@media screen and (max-width: 768px) {\n  .calendar__button-pane {\n    padding: 1rem 1.4rem;\n  }\n}\n.calendar__today-button {\n  font: bold 1rem 'Lato', Arial, sans-serif;\n  text-transform: uppercase;\n  color: #868686;\n  background: none;\n  border: none;\n  cursor: pointer;\n  outline: none;\n}\n@media screen and (max-width: 768px) {\n  .calendar__today-button {\n    font-size: 0.8rem;\n  }\n}\n.calendar__today-button:focus,\n.calendar__today-button:active {\n  color: #e75735;\n}\n", ""]);
 
 
 /***/ }),
 /* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(54);
+exports = module.exports = __webpack_require__(0)(false);
+// Module
+exports.push([module.i, ".calendar {\n  background-color: #f2f2f2;\n  border-radius: 0.3rem;\n  overflow: hidden;\n}\n.calendar__day-container {\n  padding: 0.6rem 0 0.3rem;\n  width: 100%;\n  background-color: #e75735;\n  text-align: center;\n}\n.calendar__day-text {\n  font: lighter 5.714285714rem 'Lato', Arial, sans-serif;\n  color: #fff;\n  background: none;\n  border: none;\n}\n@media screen and (max-width: 768px) {\n  .calendar__day-text {\n    font-size: 4.5rem;\n  }\n}\n.calendar .ui-datepicker-header {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 0.7rem 1.1rem;\n  background-color: #d44c2d;\n  color: #fff;\n}\n.calendar .ui-datepicker-prev {\n  order: 1;\n  flex: 0 0 0.8rem;\n  height: 0.8rem;\n  border: 0.15rem #fff solid;\n  border-color: #fff transparent transparent #fff;\n  transform: rotate(-45deg);\n  cursor: pointer;\n}\n.calendar .ui-datepicker-prev:active {\n  transform: translateX(-0.2rem) rotate(-45deg);\n}\n.calendar .ui-datepicker-next {\n  order: 3;\n  flex: 0 0 0.8rem;\n  height: 0.8rem;\n  border: 0.15rem #fff solid;\n  border-color: #fff transparent transparent #fff;\n  transform: rotate(135deg);\n  cursor: pointer;\n}\n.calendar .ui-datepicker-next:active {\n  transform: translateX(0.2rem) rotate(135deg);\n}\n.calendar .ui-datepicker-title {\n  order: 2;\n  font: lighter 1.7rem/1 'Lato', Arial, sans-serif;\n  letter-spacing: -0.04rem;\n}\n.calendar .ui-datepicker-year {\n  display: none;\n}\n.calendar .ui-datepicker-calendar {\n  width: calc(100% + 1px);\n  border-spacing: 0;\n}\n.calendar .ui-datepicker-calendar thead {\n  background-color: #e75735;\n  font: bold 0.642857142857143rem 'Lato', Arial, sans-serif;\n  color: #fff;\n  text-transform: uppercase;\n}\n.calendar .ui-datepicker-calendar th {\n  padding: 0.65rem;\n}\n@media screen and (max-width: 768px) {\n  .calendar .ui-datepicker-calendar th {\n    padding: 0.4rem 0.2rem;\n  }\n}\n.calendar .ui-datepicker-calendar td {\n  padding: 0.5rem 0.25rem;\n  width: 14.28571428571429%;\n  text-align: center;\n  border-right: 1px solid #fff;\n  border-bottom: 1px solid #fff;\n  cursor: pointer;\n}\n@media screen and (max-width: 768px) {\n  .calendar .ui-datepicker-calendar td {\n    padding: 0.3rem;\n  }\n}\n.calendar .ui-datepicker-calendar td:last-child {\n  border-right: none;\n}\n@media (hover: hover) {\n  .calendar .ui-datepicker-calendar td:not(.ui-datepicker-unselectable):hover {\n    background-color: #e75735;\n  }\n  .calendar .ui-datepicker-calendar td:not(.ui-datepicker-unselectable):hover .ui-state-default {\n    color: #fff;\n  }\n}\n.calendar .ui-datepicker-calendar .ui-datepicker-current-day {\n  background-color: #e75735;\n}\n.calendar .ui-datepicker-calendar .ui-datepicker-current-day .ui-state-default,\n.calendar .ui-datepicker-calendar .ui-datepicker-current-day .ui-state-default:focus {\n  color: #fff;\n}\n.calendar .ui-datepicker-calendar .ui-datepicker-days-cell-over {\n  box-shadow: inset 0 0 0 0.10989011rem #e75735;\n}\n.calendar .ui-datepicker-calendar .ui-state-default {\n  font: normal 1.428571429rem 'SourceSansPro', Arial, sans-serif;\n  color: #868686;\n  text-decoration: none;\n  outline: none;\n}\n@media screen and (max-width: 768px) {\n  .calendar .ui-datepicker-calendar .ui-state-default {\n    font-size: 1rem;\n  }\n}\n.calendar .ui-datepicker-calendar .ui-state-default:focus {\n  color: #e75735;\n}\n.calendar .ui-datepicker-calendar .ui-state-disabled {\n  cursor: text;\n}\n.calendar .ui-datepicker-calendar .ui-state-disabled .ui-state-default {\n  color: #fff;\n}\n.calendar__button-pane {\n  padding: 1.2rem 1.37rem;\n  text-align: left;\n  background-color: #e5e5e5;\n}\n@media screen and (max-width: 768px) {\n  .calendar__button-pane {\n    padding: 1rem 1.4rem;\n  }\n}\n.calendar__today-button {\n  font: bold 1rem 'Lato', Arial, sans-serif;\n  text-transform: uppercase;\n  color: #868686;\n  background: none;\n  border: none;\n  cursor: pointer;\n  outline: none;\n}\n@media screen and (max-width: 768px) {\n  .calendar__today-button {\n    font-size: 0.8rem;\n  }\n}\n.calendar__today-button:focus,\n.calendar__today-button:active {\n  color: #e75735;\n}\n", ""]);
+
+
+/***/ }),
+/* 54 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(55);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -17920,7 +17970,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -17929,10 +17979,10 @@ exports.push([module.i, ".chart-section__title {\n  text-transform: uppercase;\n
 
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(56);
+var content = __webpack_require__(57);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -17951,7 +18001,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -17960,10 +18010,10 @@ exports.push([module.i, "", ""]);
 
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(58);
+var content = __webpack_require__(59);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -17979,22 +18029,22 @@ var update = __webpack_require__(1)(content, options);
 if (content.locals) {
   module.exports = content.locals;
 }
-
-
-/***/ }),
-/* 58 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(false);
-// Module
-exports.push([module.i, ".donut-chart {\n  position: relative;\n}\n.donut-chart__chart-container {\n  fill: transparent;\n}\n.donut-chart__ring {\n  fill: transparent;\n  stroke: #e5e5e5;\n}\n.donut-chart_type_percentage .donut-chart__ring {\n  stroke-width: 0.10989010989011rem;\n}\n.donut-chart_type_percentage .donut-chart__segment {\n  stroke: #e75735;\n  stroke-width: 0.10989010989011rem;\n}\n.donut-chart_type_percentage .donut-chart__label {\n  display: block;\n  position: absolute;\n  top: 46%;\n  left: 50%;\n  font: lighter 2.857142857142857rem 'Lato', Arial, sans-serif;\n  color: #686868;\n  transform: translate(-50%, -50%);\n}\n.donut-chart_type_pie .donut-chart__ring {\n  stroke-width: 0.384615384615385rem;\n}\n.donut-chart_type_pie .donut-chart__segment {\n  stroke-width: 0.384615384615385rem;\n}\n.donut-chart_type_pie .donut-chart__segment:nth-child(2) {\n  stroke: #747474;\n}\n.donut-chart_type_pie .donut-chart__segment:nth-child(3) {\n  stroke: #e75735;\n}\n.donut-chart_type_pie .donut-chart__segment:nth-child(4) {\n  stroke: #4eb7a8;\n}\n.donut-chart_type_pie .donut-chart__segment:nth-child(5) {\n  stroke: #454545;\n}\n.donut-chart_type_pie .donut-chart__segment:nth-child(6) {\n  stroke: rgba(116,116,116,0.8);\n}\n.donut-chart_type_pie .donut-chart__segment:nth-child(7) {\n  stroke: rgba(231,87,53,0.8);\n}\n.donut-chart_type_pie .donut-chart__segment:nth-child(8) {\n  stroke: rgba(78,183,168,0.8);\n}\n.donut-chart_type_pie .donut-chart__segment:nth-child(9) {\n  stroke: rgba(69,69,69,0.8);\n}\n.donut-chart_type_pie .donut-chart__segment:nth-child(10) {\n  stroke: rgba(116,116,116,0.6);\n}\n.donut-chart_color_transparent .donut-chart__ring {\n  stroke: transparent;\n}\n", ""]);
 
 
 /***/ }),
 /* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(60);
+exports = module.exports = __webpack_require__(0)(false);
+// Module
+exports.push([module.i, ".donut-chart {\n  position: relative;\n}\n.donut-chart__chart-container {\n  fill: transparent;\n}\n.donut-chart__ring {\n  fill: transparent;\n  stroke: #e5e5e5;\n}\n.donut-chart_type_percentage .donut-chart__ring {\n  stroke-width: 0.10989010989011rem;\n}\n.donut-chart_type_percentage .donut-chart__segment {\n  stroke: #e75735;\n  stroke-width: 0.10989010989011rem;\n}\n.donut-chart_type_percentage .donut-chart__label {\n  display: block;\n  position: absolute;\n  top: 46%;\n  left: 50%;\n  font: lighter 2.857142857142857rem 'Lato', Arial, sans-serif;\n  color: #686868;\n  transform: translate(-50%, -50%);\n}\n.donut-chart_type_pie .donut-chart__ring {\n  stroke-width: 0.384615384615385rem;\n}\n.donut-chart_type_pie .donut-chart__segment {\n  stroke-width: 0.384615384615385rem;\n}\n.donut-chart_type_pie .donut-chart__segment:nth-child(2) {\n  stroke: #747474;\n}\n.donut-chart_type_pie .donut-chart__segment:nth-child(3) {\n  stroke: #e75735;\n}\n.donut-chart_type_pie .donut-chart__segment:nth-child(4) {\n  stroke: #4eb7a8;\n}\n.donut-chart_type_pie .donut-chart__segment:nth-child(5) {\n  stroke: rgba(116,116,116,0.8);\n}\n.donut-chart_type_pie .donut-chart__segment:nth-child(6) {\n  stroke: rgba(231,87,53,0.8);\n}\n.donut-chart_type_pie .donut-chart__segment:nth-child(7) {\n  stroke: rgba(78,183,168,0.8);\n}\n.donut-chart_type_pie .donut-chart__segment:nth-child(8) {\n  stroke: rgba(116,116,116,0.6);\n}\n.donut-chart_type_pie .donut-chart__segment:nth-child(9) {\n  stroke: rgba(231,87,53,0.6);\n}\n.donut-chart_type_pie .donut-chart__segment:nth-child(10) {\n  stroke: rgba(78,183,168,0.6);\n}\n.donut-chart_color_transparent .donut-chart__ring {\n  stroke: transparent;\n}\n", ""]);
+
+
+/***/ }),
+/* 60 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(61);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -18013,7 +18063,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 60 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -18022,10 +18072,10 @@ exports.push([module.i, ".drop-down {\n  text-align: left;\n}\n.drop-down__texta
 
 
 /***/ }),
-/* 61 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(62);
+var content = __webpack_require__(63);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -18041,22 +18091,22 @@ var update = __webpack_require__(1)(content, options);
 if (content.locals) {
   module.exports = content.locals;
 }
-
-
-/***/ }),
-/* 62 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(false);
-// Module
-exports.push([module.i, ".email-form__input_type_name {\n  margin-bottom: 0.72rem;\n}\n.email-form__input_type_email {\n  margin-bottom: 0.8rem;\n}\n.email-form__message {\n  padding: 0.384615384615385rem 0.989010989010989rem;\n  font: normal 1rem 'SourceSansPro', Arial, sans-serif;\n  color: #7e7e7e;\n  background: #e5e5e5;\n  border: none;\n  border-radius: 0.164835164835165rem;\n  margin-bottom: 0.5rem;\n  padding: 0.7rem 1rem;\n  width: 100%;\n  resize: none;\n  height: 12.6vw;\n  min-height: 6.318681318681319rem;\n}\n.email-form__button {\n  text-align: right;\n}\n", ""]);
 
 
 /***/ }),
 /* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(64);
+exports = module.exports = __webpack_require__(0)(false);
+// Module
+exports.push([module.i, ".email-form {\n  zoom: 1;\n}\n.email-form:before,\n.email-form:after {\n  content: \"\";\n  display: table;\n}\n.email-form:after {\n  clear: both;\n}\n.email-form__input_type_name {\n  margin-bottom: 0.72rem;\n}\n.email-form__input_type_email {\n  margin-bottom: 0.8rem;\n}\n.email-form__message {\n  padding: 0.384615384615385rem 0.989010989010989rem;\n  font: normal 1rem 'SourceSansPro', Arial, sans-serif;\n  color: #7e7e7e;\n  background: #e5e5e5;\n  border: none;\n  border-radius: 0.164835164835165rem;\n  margin-bottom: 0.5rem;\n  padding: 0.7rem 1rem;\n  width: 100%;\n  resize: none;\n  height: 12.6vw;\n  min-height: 6.318681318681319rem;\n}\n.email-form__button {\n  width: 8.406593406593407rem;\n  float: right;\n}\n", ""]);
+
+
+/***/ }),
+/* 64 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(65);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -18075,7 +18125,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 64 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -18086,16 +18136,16 @@ exports.push([module.i, ".event-carousel {\n  display: flex;\n  flex-flow: row w
 
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/img/mCSB_buttons.png";
 
 /***/ }),
-/* 66 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(67);
+var content = __webpack_require__(68);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -18114,7 +18164,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 67 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -18123,10 +18173,10 @@ exports.push([module.i, ".footer-section {\n  display: flex;\n  flex-flow: row w
 
 
 /***/ }),
-/* 68 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(69);
+var content = __webpack_require__(70);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -18145,7 +18195,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 69 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -18154,10 +18204,10 @@ exports.push([module.i, ".form-section__title {\n  text-transform: uppercase;\n 
 
 
 /***/ }),
-/* 70 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(71);
+var content = __webpack_require__(72);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -18173,22 +18223,22 @@ var update = __webpack_require__(1)(content, options);
 if (content.locals) {
   module.exports = content.locals;
 }
-
-
-/***/ }),
-/* 71 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(false);
-// Module
-exports.push([module.i, ".infogram {\n  display: table;\n  width: 100%;\n  padding: 0;\n}\n.infogram__stat-item {\n  display: table-row;\n  margin: 0;\n  padding: 0;\n  list-style: none;\n}\n.infogram__comment {\n  display: table-cell;\n  vertical-align: middle;\n  font: lighter 1rem 'Lato', Arial, sans-serif;\n  color: #4f4f4f;\n  border-left: 1.3rem solid transparent;\n}\n.infogram__comment:first-child {\n  border-left: none;\n  border-right: 0.8rem solid transparent;\n}\n.infogram__topic {\n  font: bold 1.2rem 'Lato', Arial, sans-serif;\n}\n.infogram__topic_color_red {\n  color: #e75735;\n}\n.infogram__topic_color_blue {\n  color: #4eb7a8;\n}\n.infogram__topic_color_gray {\n  color: #747474;\n}\n.infogram__chart {\n  display: table-cell;\n  width: 6.593406593rem;\n  vertical-align: middle;\n  font-size: 0.8rem;\n}\n.infogram__number {\n  display: table-cell;\n  vertical-align: middle;\n  font: bold 3rem 'Lato', Arial, sans-serif;\n  text-align: right;\n  color: #28a290;\n}\n", ""]);
 
 
 /***/ }),
 /* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(73);
+exports = module.exports = __webpack_require__(0)(false);
+// Module
+exports.push([module.i, ".infogram {\n  display: table;\n  width: 100%;\n  padding: 0;\n}\n.infogram__stat-item {\n  display: table-row;\n  margin: 0;\n  padding: 0;\n  list-style: none;\n}\n.infogram__comment {\n  display: table-cell;\n  vertical-align: middle;\n  font: lighter 1rem 'Lato', Arial, sans-serif;\n  color: #4f4f4f;\n  border-left: 1.3rem solid transparent;\n}\n.infogram__comment:first-child {\n  border-left: none;\n  border-right: 0.8rem solid transparent;\n}\n.infogram__topic {\n  font: bold 1.2rem 'Lato', Arial, sans-serif;\n}\n.infogram__topic_color_gray {\n  color: #747474;\n}\n.infogram__topic_color_orange {\n  color: #e75735;\n}\n.infogram__topic_color_cyan {\n  color: #4eb7a8;\n}\n.infogram__chart {\n  display: table-cell;\n  width: 6.593406593rem;\n  vertical-align: middle;\n  font-size: 0.8rem;\n}\n.infogram__number {\n  display: table-cell;\n  vertical-align: middle;\n  font: bold 3rem 'Lato', Arial, sans-serif;\n  text-align: right;\n  color: #28a290;\n}\n", ""]);
+
+
+/***/ }),
+/* 73 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(74);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -18207,7 +18257,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 73 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -18216,10 +18266,10 @@ exports.push([module.i, ".map-section__title {\n  text-transform: uppercase;\n  
 
 
 /***/ }),
-/* 74 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(75);
+var content = __webpack_require__(76);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -18238,7 +18288,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 75 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -18247,10 +18297,10 @@ exports.push([module.i, ".map {\n  width: 100%;\n  border-radius: 0.274725275rem
 
 
 /***/ }),
-/* 76 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(77);
+var content = __webpack_require__(78);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -18269,7 +18319,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 77 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -18278,10 +18328,10 @@ exports.push([module.i, ".message-section__title {\n  text-transform: uppercase;
 
 
 /***/ }),
-/* 78 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(79);
+var content = __webpack_require__(80);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -18297,38 +18347,38 @@ var update = __webpack_require__(1)(content, options);
 if (content.locals) {
   module.exports = content.locals;
 }
-
-
-/***/ }),
-/* 79 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(false);
-// Imports
-var getUrl = __webpack_require__(3);
-var ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(80));
-var ___CSS_LOADER_URL___1___ = getUrl(__webpack_require__(81));
-// Module
-exports.push([module.i, ".messenger {\n  border-radius: 0.3rem;\n  overflow: hidden;\n}\n.messenger__header {\n  position: relative;\n  width: 100%;\n  padding: 1.2rem 1.1rem 2.2rem;\n  text-align: center;\n  background-color: #4eb7a8;\n  box-shadow: inset 0 -2.5rem 0 #46ab9d;\n}\n@media screen and (max-width: 768px) {\n  .messenger__header {\n    box-shadow: inset 0 -2rem 0 #46ab9d;\n  }\n}\n.messenger__name {\n  padding-bottom: 1.9rem;\n  font: lighter 2.428571428571429rem 'Lato', Arial, sans-serif;\n  text-transform: capitalize;\n  word-spacing: -0.02rem;\n  letter-spacing: -0.11rem;\n  color: #fff;\n  word-break: break-word;\n}\n@media screen and (max-width: 768px) {\n  .messenger__name {\n    font-size: 2rem;\n    padding-bottom: 1.3rem;\n  }\n}\n.messenger__photo {\n  position: absolute;\n  left: 50%;\n  top: 100%;\n  width: 6.5rem;\n  height: 6.5rem;\n  border: 0.274725275rem solid #e5e5e5;\n  border-radius: 50%;\n  background-size: cover;\n  background-repeat: no-repeat;\n  transform: translateX(-54%) translateY(-50%);\n  z-index: 2;\n}\n@media screen and (max-width: 768px) {\n  .messenger__photo {\n    width: 5.5rem;\n    height: 5.5rem;\n  }\n}\n.messenger__container {\n  padding: 1.5rem 1.6rem 1.9rem;\n  background-color: #f2f2f2;\n  overflow-y: hidden;\n}\n@media screen and (max-width: 768px) {\n  .messenger__container {\n    padding: 1.2rem 1.2rem 1.6rem;\n  }\n}\n.messenger__icons {\n  display: flex;\n  justify-content: space-between;\n  padding: 0 0.3rem 0 0.1rem;\n}\n.messenger__bubble-icon {\n  width: 1.55rem;\n  height: 1.55rem;\n  background: url(" + ___CSS_LOADER_URL___0___ + ") no-repeat;\n  cursor: pointer;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n  -webkit-tap-highlight-color: transparent;\n  user-select: none;\n}\n@media (hover: hover) {\n  .messenger__bubble-icon:hover {\n    transform: scale(1.1);\n  }\n}\n@media (hover: hover) {\n  .messenger__bubble-icon:active {\n    transform: scale(0.9);\n  }\n}\n@media (hover: none) {\n  .messenger__bubble-icon:active {\n    transform: scale(1.1);\n  }\n}\n.messenger__camera-icon {\n  width: 1.8rem;\n  height: 1.41rem;\n  background: url(" + ___CSS_LOADER_URL___1___ + ") no-repeat;\n  cursor: pointer;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n  -webkit-tap-highlight-color: transparent;\n  user-select: none;\n}\n@media (hover: hover) {\n  .messenger__camera-icon:hover {\n    transform: scale(1.1);\n  }\n}\n@media (hover: hover) {\n  .messenger__camera-icon:active {\n    transform: scale(0.9);\n  }\n}\n@media (hover: none) {\n  .messenger__camera-icon:active {\n    transform: scale(1.1);\n  }\n}\n.messenger__message {\n  font: bold 0.892857142857143rem 'Lato', Arial, sans-serif;\n  text-align: left;\n  letter-spacing: 0.04rem;\n  color: #8e8d8d;\n}\n@media screen and (max-width: 768px) {\n  .messenger__message {\n    font-size: 0.8rem;\n  }\n}\n.messenger__message_type_inbox {\n  position: relative;\n  margin: 1.4rem auto 0;\n  padding: 1.3rem 1.2rem 1.5rem;\n  width: 100%;\n  background-color: #fff;\n  border-radius: 0.549450549rem;\n  overflow-wrap: break-word;\n}\n@media screen and (max-width: 768px) {\n  .messenger__message_type_inbox {\n    padding: 1rem;\n    margin-top: 1rem;\n  }\n}\n.messenger__message_type_inbox::before {\n  content: '';\n  width: 0.72rem;\n  height: 0.72rem;\n  display: block;\n  position: absolute;\n  top: 0;\n  left: 50%;\n  background-color: #fff;\n  border-radius: 0.21978022rem;\n  transform: translate(-90%, -40%) rotate(45deg);\n}\n.messenger__message_type_outbox {\n  width: 98%;\n  padding: 1.12rem 1rem 1.56rem;\n  margin: 1.5rem auto 1rem;\n  background-color: #e5e5e5;\n  border: none;\n  border-radius: 0.274725275rem;\n  box-shadow: 0 0 0 0.21978022rem #fff;\n  resize: none;\n  outline: none;\n}\n@media screen and (max-width: 768px) {\n  .messenger__message_type_outbox {\n    padding: 1rem;\n    margin-top: 1rem;\n  }\n}\n.messenger__text {\n  overflow-y: auto;\n}\n.messenger__button {\n  width: 100%;\n  font-size: 0.85rem;\n}\n", ""]);
 
 
 /***/ }),
 /* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/img/bubble-icon.svg";
+exports = module.exports = __webpack_require__(0)(false);
+// Imports
+var getUrl = __webpack_require__(3);
+var ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(81));
+var ___CSS_LOADER_URL___1___ = getUrl(__webpack_require__(82));
+// Module
+exports.push([module.i, ".messenger {\n  border-radius: 0.3rem;\n  overflow: hidden;\n}\n.messenger__header {\n  position: relative;\n  width: 100%;\n  padding: 1.2rem 1.1rem 2.2rem;\n  text-align: center;\n  background-color: #4eb7a8;\n  box-shadow: inset 0 -2.5rem 0 #46ab9d;\n}\n@media screen and (max-width: 768px) {\n  .messenger__header {\n    box-shadow: inset 0 -2rem 0 #46ab9d;\n  }\n}\n.messenger__name {\n  padding-bottom: 1.9rem;\n  font: lighter 2.428571428571429rem 'Lato', Arial, sans-serif;\n  text-transform: capitalize;\n  word-spacing: -0.02rem;\n  letter-spacing: -0.11rem;\n  color: #fff;\n  word-break: break-word;\n}\n@media screen and (max-width: 768px) {\n  .messenger__name {\n    font-size: 2rem;\n    padding-bottom: 1.3rem;\n  }\n}\n.messenger__photo {\n  position: absolute;\n  left: 50%;\n  top: 100%;\n  width: 6.5rem;\n  height: 6.5rem;\n  border: 0.274725275rem solid #e5e5e5;\n  border-radius: 50%;\n  background-size: cover;\n  background-repeat: no-repeat;\n  transform: translateX(-54%) translateY(-50%);\n  z-index: 2;\n}\n@media screen and (max-width: 768px) {\n  .messenger__photo {\n    width: 5.5rem;\n    height: 5.5rem;\n  }\n}\n.messenger__container {\n  padding: 1.5rem 1.6rem 1.9rem;\n  background-color: #f2f2f2;\n  overflow-y: hidden;\n}\n@media screen and (max-width: 768px) {\n  .messenger__container {\n    padding: 1.2rem 1.2rem 1.6rem;\n  }\n}\n.messenger__icons {\n  display: flex;\n  justify-content: space-between;\n  padding: 0 0.3rem 0 0.1rem;\n}\n.messenger__bubble-icon {\n  width: 1.55rem;\n  height: 1.55rem;\n  background: url(" + ___CSS_LOADER_URL___0___ + ") no-repeat;\n  cursor: pointer;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n  -webkit-tap-highlight-color: transparent;\n  user-select: none;\n}\n@media (hover: hover) {\n  .messenger__bubble-icon:hover {\n    transform: scale(1.1);\n  }\n}\n@media (hover: hover) {\n  .messenger__bubble-icon:active {\n    transform: scale(0.9);\n  }\n}\n@media (hover: none) {\n  .messenger__bubble-icon:active {\n    transform: scale(1.1);\n  }\n}\n.messenger__camera-icon {\n  width: 1.8rem;\n  height: 1.41rem;\n  background: url(" + ___CSS_LOADER_URL___1___ + ") no-repeat;\n  cursor: pointer;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n  -webkit-tap-highlight-color: transparent;\n  user-select: none;\n}\n@media (hover: hover) {\n  .messenger__camera-icon:hover {\n    transform: scale(1.1);\n  }\n}\n@media (hover: hover) {\n  .messenger__camera-icon:active {\n    transform: scale(0.9);\n  }\n}\n@media (hover: none) {\n  .messenger__camera-icon:active {\n    transform: scale(1.1);\n  }\n}\n.messenger__message {\n  font: bold 0.892857142857143rem 'Lato', Arial, sans-serif;\n  text-align: left;\n  letter-spacing: 0.04rem;\n  color: #8e8e8e;\n}\n@media screen and (max-width: 768px) {\n  .messenger__message {\n    font-size: 0.8rem;\n  }\n}\n.messenger__message_type_inbox {\n  position: relative;\n  margin: 1.4rem auto 0;\n  padding: 1.3rem 1.2rem 1.5rem;\n  width: 100%;\n  background-color: #fff;\n  border-radius: 0.549450549rem;\n  overflow-wrap: break-word;\n}\n@media screen and (max-width: 768px) {\n  .messenger__message_type_inbox {\n    padding: 1rem;\n    margin-top: 1rem;\n  }\n}\n.messenger__message_type_inbox::before {\n  content: '';\n  width: 0.72rem;\n  height: 0.72rem;\n  display: block;\n  position: absolute;\n  top: 0;\n  left: 50%;\n  background-color: #fff;\n  border-radius: 0.21978022rem;\n  transform: translate(-90%, -40%) rotate(45deg);\n}\n.messenger__message_type_outbox {\n  width: 98%;\n  padding: 1.12rem 1rem 1.56rem;\n  margin: 1.5rem auto 1rem;\n  background-color: #e5e5e5;\n  border: none;\n  border-radius: 0.274725275rem;\n  box-shadow: 0 0 0 0.21978022rem #fff;\n  resize: none;\n  outline: none;\n}\n@media screen and (max-width: 768px) {\n  .messenger__message_type_outbox {\n    padding: 1rem;\n    margin-top: 1rem;\n  }\n}\n.messenger__text {\n  overflow-y: auto;\n}\n.messenger__button {\n  width: 100%;\n  font-size: 0.85rem;\n}\n", ""]);
+
 
 /***/ }),
 /* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/img/camera-icon.svg";
+module.exports = __webpack_require__.p + "assets/img/bubble-icon.svg";
 
 /***/ }),
 /* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(83);
+module.exports = __webpack_require__.p + "assets/img/camera-icon.svg";
+
+/***/ }),
+/* 83 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(84);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -18347,7 +18397,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 83 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -18356,10 +18406,10 @@ exports.push([module.i, ".navigation-bar {\n  position: fixed;\n  width: 100%;\n
 
 
 /***/ }),
-/* 84 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(85);
+var content = __webpack_require__(86);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -18375,24 +18425,24 @@ var update = __webpack_require__(1)(content, options);
 if (content.locals) {
   module.exports = content.locals;
 }
-
-
-/***/ }),
-/* 85 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(false);
-// Imports
-exports.i(__webpack_require__(6), "");
-// Module
-exports.push([module.i, ".news-card {\n  display: flex;\n  align-items: stretch;\n  width: 100%;\n  height: 100%;\n  text-align: left;\n  background-color: #e75735;\n  border-radius: 0.274725274725275rem;\n  overflow: hidden;\n}\n.news-card__image {\n  flex: 6.758241758rem 0 2;\n  min-width: 4.395604396rem;\n  background: #e75735 no-repeat 0rem 0rem;\n  background-clip: border-box;\n  background-size: cover;\n}\n.news-card__content {\n  display: flex;\n  flex-flow: column nowrap;\n  justify-content: space-between;\n  flex: 13.73626374rem 2 1;\n  padding: 1.4rem 1.3rem 2.5rem 1.6rem;\n  overflow: hidden;\n}\n.news-card__title {\n  flex: auto 0 0;\n  margin-bottom: 0.7rem;\n  font: lighter 2rem/1 'Lato', Arial, sans-serif;\n  color: #fff;\n}\n.news-card__date {\n  flex: auto 0 0;\n  margin-bottom: 1rem;\n  font: bold 0.8rem 'Lato', Arial, sans-serif;\n  letter-spacing: 0.05rem;\n  color: #fff;\n  text-transform: uppercase;\n}\n.news-card__text {\n  flex: auto 1 0;\n  font: normal 0.8rem 'Lato', Arial, sans-serif;\n  color: #fff;\n  letter-spacing: 0.036rem;\n}\n.news-card_type_event {\n  background-color: #4eb7a8;\n}\n.news-card_type_event .news-card__image {\n  background-color: #4eb7a8;\n}\n.news-card_type_event .news-card__content {\n  position: relative;\n  padding: 1.4rem 1.5rem 1.6rem;\n}\n.news-card_type_event .news-card__date {\n  margin-bottom: 1.4rem;\n}\n.news-card_type_event .news-card__day {\n  font: lighter 5.1rem/4.1rem 'Lato', Arial, sans-serif;\n  letter-spacing: -0.2rem;\n  color: #fff;\n}\n.news-card_type_event .news-card__month {\n  font: lighter 2.1rem 'Lato', Arial, sans-serif;\n  color: #fff;\n  text-transform: capitalize;\n  margin-left: 0.95rem;\n}\n.news-card_type_event .news-card__title {\n  margin-bottom: 0.35rem;\n  font: bold 0.9rem 'Lato', Arial, sans-serif;\n  color: #fff;\n  text-transform: uppercase;\n  letter-spacing: 0.03rem;\n}\n.news-card_type_event .news-card__text {\n  min-height: 2.48rem;\n  margin-bottom: 0.8rem;\n  color: #fff;\n  font-weight: normal;\n}\n.news-card_type_event .news-card__button {\n  width: 87%;\n  font-size: 0.714285714285714rem;\n  flex: auto 0 0;\n  margin: 0 auto;\n}\n.news-card_size_compact .news-card__content {\n  padding: 1.3rem 1.3rem;\n}\n.news-card_size_compact .news-card__title {\n  font-size: 1.2rem;\n}\n.news-card_size_compact.news-card_type_event .news-card__content {\n  padding: 1.1rem 1.2rem 0.6rem;\n}\n.news-card_size_compact.news-card_type_event .news-card__date {\n  margin-bottom: 1rem;\n}\n.news-card_size_compact.news-card_type_event .news-card__title {\n  font-size: 0.8rem;\n  line-height: 1.2;\n}\n.news-card_size_compact.news-card_type_event .news-card__text {\n  margin-bottom: 0.7rem;\n}\n.news-card_color_reverted {\n  background-color: #4eb7a8;\n}\n.news-card_color_reverted.news-card_type_event {\n  background-color: #e75735;\n}\n.news-card_with-scrollbar .news-card__text {\n  max-height: 6em;\n  overflow-y: auto;\n}\n", ""]);
 
 
 /***/ }),
 /* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(87);
+exports = module.exports = __webpack_require__(0)(false);
+// Imports
+exports.i(__webpack_require__(6), "");
+// Module
+exports.push([module.i, ".news-card {\n  display: flex;\n  align-items: stretch;\n  width: 100%;\n  height: 100%;\n  text-align: left;\n  background-color: #e75735;\n  border-radius: 0.274725274725275rem;\n  overflow: hidden;\n}\n.news-card__image {\n  flex: 6.758241758rem 0 2;\n  min-width: 4.395604396rem;\n  background: #e75735 no-repeat 0rem 0rem;\n  background-clip: border-box;\n  background-size: cover;\n}\n.news-card__content {\n  display: flex;\n  flex-flow: column nowrap;\n  justify-content: space-between;\n  flex: 13.73626374rem 2 1;\n  padding: 1.4rem 1.3rem 2.5rem 1.6rem;\n  overflow: hidden;\n}\n.news-card__title {\n  flex: auto 0 0;\n  margin-bottom: 0.7rem;\n  font: lighter 2rem/1 'Lato', Arial, sans-serif;\n  color: #fff;\n}\n.news-card__date {\n  flex: auto 0 0;\n  margin-bottom: 1rem;\n  font: bold 0.8rem 'Lato', Arial, sans-serif;\n  letter-spacing: 0.05rem;\n  color: #fff;\n  text-transform: uppercase;\n}\n.news-card__text {\n  flex: auto 1 0;\n  font: normal 0.8rem 'Lato', Arial, sans-serif;\n  color: #fff;\n  letter-spacing: 0.036rem;\n}\n.news-card_type_event {\n  background-color: #4eb7a8;\n}\n.news-card_type_event .news-card__image {\n  background-color: #4eb7a8;\n}\n.news-card_type_event .news-card__content {\n  position: relative;\n  padding: 1.4rem 1.5rem 1.6rem;\n}\n.news-card_type_event .news-card__date {\n  margin-bottom: 1.4rem;\n}\n.news-card_type_event .news-card__day {\n  font: lighter 5.1rem/4.1rem 'Lato', Arial, sans-serif;\n  letter-spacing: -0.2rem;\n  color: #fff;\n}\n.news-card_type_event .news-card__month {\n  font: lighter 2.1rem 'Lato', Arial, sans-serif;\n  color: #fff;\n  text-transform: capitalize;\n  margin-left: 0.95rem;\n}\n.news-card_type_event .news-card__title {\n  margin-bottom: 0.35rem;\n  font: bold 0.9rem 'Lato', Arial, sans-serif;\n  color: #fff;\n  text-transform: uppercase;\n  letter-spacing: 0.03rem;\n}\n.news-card_type_event .news-card__text {\n  min-height: 2.48rem;\n  margin-bottom: 0.8rem;\n  color: #fff;\n  font-weight: normal;\n}\n.news-card_type_event .news-card__button {\n  width: 87%;\n  flex: auto 0 0;\n  margin: 0 auto;\n}\n.news-card_size_compact .news-card__content {\n  padding: 1.3rem 1.3rem;\n}\n.news-card_size_compact .news-card__title {\n  font-size: 1.2rem;\n}\n.news-card_size_compact.news-card_type_event .news-card__content {\n  padding: 1.1rem 1.2rem 0.6rem;\n}\n.news-card_size_compact.news-card_type_event .news-card__date {\n  margin-bottom: 1rem;\n}\n.news-card_size_compact.news-card_type_event .news-card__title {\n  font-size: 0.8rem;\n  line-height: 1.2;\n}\n.news-card_size_compact.news-card_type_event .news-card__text {\n  margin-bottom: 0.7rem;\n}\n.news-card_color_reverted {\n  background-color: #4eb7a8;\n}\n.news-card_color_reverted.news-card_type_event {\n  background-color: #e75735;\n}\n.news-card_with-scrollbar .news-card__text {\n  max-height: 6em;\n  overflow-y: auto;\n}\n", ""]);
+
+
+/***/ }),
+/* 87 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(88);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -18411,7 +18461,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 87 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -18420,10 +18470,10 @@ exports.push([module.i, ".news-section__title {\n  text-transform: uppercase;\n 
 
 
 /***/ }),
-/* 88 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(89);
+var content = __webpack_require__(90);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -18439,31 +18489,31 @@ var update = __webpack_require__(1)(content, options);
 if (content.locals) {
   module.exports = content.locals;
 }
-
-
-/***/ }),
-/* 89 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(false);
-// Imports
-var getUrl = __webpack_require__(3);
-var ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(90));
-// Module
-exports.push([module.i, ".online-help {\n  position: fixed;\n  bottom: 1.098901099rem;\n  right: 1.098901099rem;\n  z-index: 5000;\n}\n.online-help__messenger {\n  visibility: hidden;\n  position: absolute;\n  bottom: 3.296703297rem;\n  right: 0;\n  width: 17.58241758rem;\n  box-shadow: 0 0 1.098901099rem 0 rgba(0,0,0,0.3);\n}\n.online-help__messenger_visible {\n  visibility: visible;\n}\n.online-help__button {\n  position: absolute;\n  bottom: 0;\n  right: 0;\n  width: 2.747252747rem;\n  height: 2.747252747rem;\n  background: #e75735 url(" + ___CSS_LOADER_URL___0___ + ") center no-repeat;\n  background-size: 1.373626374rem;\n  border: none;\n  border-radius: 0.384615385rem;\n  box-shadow: 0 0 0.549450549rem 0 rgba(0,0,0,0.4);\n  z-index: 10;\n  outline: none;\n  cursor: pointer;\n}\n@media (hover: hover) {\n  .online-help__button:hover {\n    background-color: darker(#e5e5e5, 50%);\n  }\n}\n@media (hover: none) {\n  .online-help__button:active {\n    background-color: darker(#e5e5e5, 50%);\n  }\n}\n", ""]);
 
 
 /***/ }),
 /* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/img/bubble-icon_white.svg";
+exports = module.exports = __webpack_require__(0)(false);
+// Imports
+var getUrl = __webpack_require__(3);
+var ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(91));
+// Module
+exports.push([module.i, ".online-help {\n  position: fixed;\n  bottom: 1.098901099rem;\n  right: 1.098901099rem;\n  z-index: 5000;\n}\n.online-help__messenger {\n  visibility: hidden;\n  position: absolute;\n  bottom: 3.296703297rem;\n  right: 0;\n  width: 17.58241758rem;\n  box-shadow: 0 0 1.098901099rem 0 rgba(0,0,0,0.3);\n}\n.online-help__messenger_visible {\n  visibility: visible;\n}\n.online-help__button {\n  position: absolute;\n  bottom: 0;\n  right: 0;\n  width: 2.747252747rem;\n  height: 2.747252747rem;\n  background: #e75735 url(" + ___CSS_LOADER_URL___0___ + ") center no-repeat;\n  background-size: 1.373626374rem;\n  border: none;\n  border-radius: 0.384615385rem;\n  box-shadow: 0 0 0.549450549rem 0 rgba(0,0,0,0.4);\n  z-index: 10;\n  outline: none;\n  cursor: pointer;\n}\n@media (hover: hover) {\n  .online-help__button:hover {\n    background-color: darker(#e5e5e5, 50%);\n  }\n}\n@media (hover: none) {\n  .online-help__button:active {\n    background-color: darker(#e5e5e5, 50%);\n  }\n}\n", ""]);
+
 
 /***/ }),
 /* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(92);
+module.exports = __webpack_require__.p + "assets/img/bubble-icon_white.svg";
+
+/***/ }),
+/* 92 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(93);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -18482,7 +18532,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 92 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -18491,10 +18541,10 @@ exports.push([module.i, ".pass-info {\n  display: flex;\n  flex-flow: column now
 
 
 /***/ }),
-/* 93 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(94);
+var content = __webpack_require__(95);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -18513,7 +18563,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 94 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -18522,10 +18572,10 @@ exports.push([module.i, ".pass-selector__title {\n  text-transform: uppercase;\n
 
 
 /***/ }),
-/* 95 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(96);
+var content = __webpack_require__(97);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -18544,7 +18594,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 96 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -18553,10 +18603,10 @@ exports.push([module.i, ".policy-tickbox {\n  display: flex;\n  align-items: cen
 
 
 /***/ }),
-/* 97 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(98);
+var content = __webpack_require__(99);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -18572,45 +18622,45 @@ var update = __webpack_require__(1)(content, options);
 if (content.locals) {
   module.exports = content.locals;
 }
-
-
-/***/ }),
-/* 98 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(false);
-// Imports
-var getUrl = __webpack_require__(3);
-var ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(99));
-var ___CSS_LOADER_URL___1___ = getUrl(__webpack_require__(100));
-var ___CSS_LOADER_URL___2___ = getUrl(__webpack_require__(101));
-// Module
-exports.push([module.i, ".profile-card {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.profile-card__photo {\n  display: inline-block;\n  flex: 0 0 6.648351648351648rem;\n  height: 6.648351648351648rem;\n  margin-right: 0.934065934065934rem;\n  border-radius: 50%;\n  border: 0.384615384615385rem solid #e5e5e5;\n  background: #e5e5e5 no-repeat;\n  background-size: cover;\n}\n.profile-card__box {\n  position: relative;\n  flex: 1 1 11.64835164835165rem;\n  padding: 0.714285714285714rem;\n  border-radius: 0.549450549450549rem;\n  text-align: center;\n  background-color: #e5e5e5;\n  z-index: 1;\n}\n.profile-card__box::before {\n  content: '';\n  position: absolute;\n  top: 50%;\n  left: 0;\n  width: 1.098901098901099rem;\n  height: 1.098901098901099rem;\n  background-color: inherit;\n  border-radius: 0.274725274725275rem;\n  transform: scaleY(0.8) translate(-30%, -50%) rotate(45deg);\n  z-index: -1;\n}\n.profile-card__name {\n  margin-bottom: 0.10989010989011rem;\n  font: normal 1.285714285714286rem 'Lato', Arial, sans-serif;\n  color: #e75735;\n  text-transform: capitalize;\n}\n.profile-card__position {\n  margin: 0 0 0.714285714285714rem 0;\n  font: bold 0.785714285714286rem 'Lato', Arial, sans-serif;\n  color: #4f4f4f;\n  letter-spacing: 0.049450549450549rem;\n  text-transform: uppercase;\n}\n.profile-card__icons {\n  display: flex;\n  justify-content: space-around;\n  align-items: center;\n  max-width: 8.791208791rem;\n  margin: 0 auto;\n}\n.profile-card__icon {\n  flex: 1.6rem 0 0;\n  height: 1.9rem;\n  background: #747474;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n  -webkit-tap-highlight-color: transparent;\n  user-select: none;\n}\n@media (hover: hover) {\n  .profile-card__icon:hover {\n    background: #e75735;\n  }\n}\n.profile-card__icon:active,\n.profile-card__icon:focus {\n  background: #e75735;\n}\n.profile-card__icon_for-facebook {\n  height: 1.6rem;\n  -webkit-mask: url(" + ___CSS_LOADER_URL___0___ + ") center no-repeat;\n          mask: url(" + ___CSS_LOADER_URL___0___ + ") center no-repeat;\n  -webkit-mask-size: contain;\n          mask-size: contain;\n}\n.profile-card__icon_for-twitter {\n  -webkit-mask: url(" + ___CSS_LOADER_URL___1___ + ") center no-repeat;\n          mask: url(" + ___CSS_LOADER_URL___1___ + ") center no-repeat;\n  -webkit-mask-size: contain;\n          mask-size: contain;\n  flex-basis: 1.9rem;\n}\n.profile-card__icon_for-dribbble {\n  -webkit-mask: url(" + ___CSS_LOADER_URL___2___ + ") center no-repeat;\n          mask: url(" + ___CSS_LOADER_URL___2___ + ") center no-repeat;\n  -webkit-mask-size: contain;\n          mask-size: contain;\n}\n.profile-card_color_cyan .profile-card__box {\n  background-color: #4eb7a8;\n}\n.profile-card_color_cyan .profile-card__box::before {\n  background-color: #4eb7a8;\n}\n.profile-card_color_cyan .profile-card__name {\n  color: #fff;\n}\n.profile-card_color_cyan .profile-card__position {\n  color: #fff;\n}\n.profile-card_color_cyan .profile-card__icon {\n  background-color: #fff;\n}\n@media (hover: hover) {\n  .profile-card_color_cyan .profile-card__icon:hover {\n    opacity: 0.8;\n  }\n}\n.profile-card_color_cyan .profile-card__icon:active,\n.profile-card_color_cyan .profile-card__icon:focus {\n  opacity: 0.8;\n}\n", ""]);
 
 
 /***/ }),
 /* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/img/facebook.svg";
+exports = module.exports = __webpack_require__(0)(false);
+// Imports
+var getUrl = __webpack_require__(3);
+var ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(100));
+var ___CSS_LOADER_URL___1___ = getUrl(__webpack_require__(101));
+var ___CSS_LOADER_URL___2___ = getUrl(__webpack_require__(102));
+// Module
+exports.push([module.i, ".profile-card {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.profile-card__photo {\n  display: inline-block;\n  flex: 0 0 6.648351648351648rem;\n  height: 6.648351648351648rem;\n  margin-right: 0.934065934065934rem;\n  border-radius: 50%;\n  border: 0.384615384615385rem solid #e5e5e5;\n  background: #e5e5e5 no-repeat;\n  background-size: cover;\n}\n.profile-card__box {\n  position: relative;\n  flex: 1 1 11.64835164835165rem;\n  padding: 0.714285714285714rem;\n  border-radius: 0.549450549450549rem;\n  text-align: center;\n  background-color: #e5e5e5;\n  z-index: 1;\n}\n.profile-card__box::before {\n  content: '';\n  position: absolute;\n  top: 50%;\n  left: 0;\n  width: 1.098901098901099rem;\n  height: 1.098901098901099rem;\n  background-color: inherit;\n  border-radius: 0.274725274725275rem;\n  transform: scaleY(0.8) translate(-30%, -50%) rotate(45deg);\n  z-index: -1;\n}\n.profile-card__name {\n  margin-bottom: 0.10989010989011rem;\n  font: normal 1.285714285714286rem 'Lato', Arial, sans-serif;\n  color: #e75735;\n  text-transform: capitalize;\n}\n.profile-card__position {\n  margin: 0 0 0.714285714285714rem 0;\n  font: bold 0.785714285714286rem 'Lato', Arial, sans-serif;\n  color: #4f4f4f;\n  letter-spacing: 0.049450549450549rem;\n  text-transform: uppercase;\n}\n.profile-card__icons {\n  display: flex;\n  justify-content: space-around;\n  align-items: center;\n  max-width: 8.791208791rem;\n  margin: 0 auto;\n}\n.profile-card__icon {\n  flex: 1.6rem 0 0;\n  height: 1.9rem;\n  background: #747474;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n  -webkit-tap-highlight-color: transparent;\n  user-select: none;\n}\n@media (hover: hover) {\n  .profile-card__icon:hover {\n    background: #e75735;\n  }\n}\n.profile-card__icon:active,\n.profile-card__icon:focus {\n  background: #e75735;\n}\n.profile-card__icon_for-facebook {\n  height: 1.6rem;\n  -webkit-mask: url(" + ___CSS_LOADER_URL___0___ + ") center no-repeat;\n          mask: url(" + ___CSS_LOADER_URL___0___ + ") center no-repeat;\n  -webkit-mask-size: contain;\n          mask-size: contain;\n}\n.profile-card__icon_for-twitter {\n  -webkit-mask: url(" + ___CSS_LOADER_URL___1___ + ") center no-repeat;\n          mask: url(" + ___CSS_LOADER_URL___1___ + ") center no-repeat;\n  -webkit-mask-size: contain;\n          mask-size: contain;\n  flex-basis: 1.9rem;\n}\n.profile-card__icon_for-dribbble {\n  -webkit-mask: url(" + ___CSS_LOADER_URL___2___ + ") center no-repeat;\n          mask: url(" + ___CSS_LOADER_URL___2___ + ") center no-repeat;\n  -webkit-mask-size: contain;\n          mask-size: contain;\n}\n.profile-card_color_cyan .profile-card__box {\n  background-color: #4eb7a8;\n}\n.profile-card_color_cyan .profile-card__box::before {\n  background-color: #4eb7a8;\n}\n.profile-card_color_cyan .profile-card__name {\n  color: #fff;\n}\n.profile-card_color_cyan .profile-card__position {\n  color: #fff;\n}\n.profile-card_color_cyan .profile-card__icon {\n  background-color: #fff;\n}\n@media (hover: hover) {\n  .profile-card_color_cyan .profile-card__icon:hover {\n    opacity: 0.8;\n  }\n}\n.profile-card_color_cyan .profile-card__icon:active,\n.profile-card_color_cyan .profile-card__icon:focus {\n  opacity: 0.8;\n}\n", ""]);
+
 
 /***/ }),
 /* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/img/twitter.svg";
+module.exports = __webpack_require__.p + "assets/img/facebook.svg";
 
 /***/ }),
 /* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/img/dribbble.svg";
+module.exports = __webpack_require__.p + "assets/img/twitter.svg";
 
 /***/ }),
 /* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(103);
+module.exports = __webpack_require__.p + "assets/img/dribbble.svg";
+
+/***/ }),
+/* 103 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(104);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -18629,7 +18679,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 103 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -18638,10 +18688,10 @@ exports.push([module.i, ".profile-section__title {\n  text-transform: uppercase;
 
 
 /***/ }),
-/* 104 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(105);
+var content = __webpack_require__(106);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -18660,7 +18710,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 105 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -18669,10 +18719,10 @@ exports.push([module.i, ".registration-form__header {\n  position: fixed;\n  pad
 
 
 /***/ }),
-/* 106 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(107);
+var content = __webpack_require__(108);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -18691,7 +18741,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 107 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -18700,10 +18750,10 @@ exports.push([module.i, ".search-box {\n  display: flex;\n  flex-flow: row nowra
 
 
 /***/ }),
-/* 108 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(109);
+var content = __webpack_require__(110);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -18722,7 +18772,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 109 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -18731,10 +18781,10 @@ exports.push([module.i, ".search-section__title {\n  text-transform: uppercase;\
 
 
 /***/ }),
-/* 110 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(111);
+var content = __webpack_require__(112);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -18753,7 +18803,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 111 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -18762,10 +18812,10 @@ exports.push([module.i, ".slider-section__title {\n  text-transform: uppercase;\
 
 
 /***/ }),
-/* 112 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(113);
+var content = __webpack_require__(114);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -18784,7 +18834,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 113 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -18793,10 +18843,10 @@ exports.push([module.i, ".slider__tip {\n  display: none;\n  position: absolute;
 
 
 /***/ }),
-/* 114 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(115);
+var content = __webpack_require__(116);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -18815,7 +18865,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 115 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -18826,10 +18876,10 @@ exports.push([module.i, ".speaker-card {\n  display: flex;\n  flex-flow: column 
 
 
 /***/ }),
-/* 116 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(117);
+var content = __webpack_require__(118);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -18848,7 +18898,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 117 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -18859,10 +18909,10 @@ exports.push([module.i, ".speaker-carousel {\n  border-left: 0.549450549450549re
 
 
 /***/ }),
-/* 118 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(119);
+var content = __webpack_require__(120);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -18881,7 +18931,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 119 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -18890,10 +18940,10 @@ exports.push([module.i, ".stages-section__title {\n  text-transform: uppercase;\
 
 
 /***/ }),
-/* 120 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(121);
+var content = __webpack_require__(122);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -18912,7 +18962,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 121 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -18921,10 +18971,10 @@ exports.push([module.i, ".subscribe-form {\n  width: 100%;\n  padding: 2.5rem 1r
 
 
 /***/ }),
-/* 122 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(123);
+var content = __webpack_require__(124);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -18943,7 +18993,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 123 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -18952,10 +19002,10 @@ exports.push([module.i, ".subscribe-toggle {\n  display: flex;\n  flex-flow: row
 
 
 /***/ }),
-/* 124 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(125);
+var content = __webpack_require__(126);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -18974,7 +19024,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 125 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -18983,10 +19033,10 @@ exports.push([module.i, ".talks-section {\n  text-align: center;\n}\n.talks-sect
 
 
 /***/ }),
-/* 126 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(127);
+var content = __webpack_require__(128);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -19005,7 +19055,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 127 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -19014,10 +19064,10 @@ exports.push([module.i, ".tick-box {\n  position: relative;\n  display: inline-b
 
 
 /***/ }),
-/* 128 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(129);
+var content = __webpack_require__(130);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -19036,7 +19086,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 129 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -19045,10 +19095,10 @@ exports.push([module.i, ".toggle-switch {\n  position: relative;\n  display: inl
 
 
 /***/ }),
-/* 130 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(131);
+var content = __webpack_require__(132);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -19067,7 +19117,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 131 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -19076,10 +19126,10 @@ exports.push([module.i, ".validation-input {\n  width: 100%;\n  display: flex;\n
 
 
 /***/ }),
-/* 132 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(133);
+var content = __webpack_require__(134);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -19098,7 +19148,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 133 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -19107,10 +19157,10 @@ exports.push([module.i, ".video-section__title {\n  text-transform: uppercase;\n
 
 
 /***/ }),
-/* 134 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(135);
+var content = __webpack_require__(136);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -19129,7 +19179,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 135 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -19138,10 +19188,10 @@ exports.push([module.i, ".video {\n  position: relative;\n  padding-bottom: 56.2
 
 
 /***/ }),
-/* 136 */
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(137);
+var content = __webpack_require__(138);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -19160,7 +19210,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 137 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -19169,10 +19219,10 @@ exports.push([module.i, ".contacts {\n  display: flex;\n  flex-flow: column nowr
 
 
 /***/ }),
-/* 138 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(139);
+var content = __webpack_require__(140);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -19191,7 +19241,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 139 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -19200,10 +19250,10 @@ exports.push([module.i, ".index {\n  display: flex;\n  flex-flow: column nowrap;
 
 
 /***/ }),
-/* 140 */
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(141);
+var content = __webpack_require__(142);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -19222,7 +19272,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 141 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -19231,10 +19281,10 @@ exports.push([module.i, ".registration {\n  display: flex;\n  flex-flow: column 
 
 
 /***/ }),
-/* 142 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(143);
+var content = __webpack_require__(144);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -19253,7 +19303,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 143 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -19262,10 +19312,10 @@ exports.push([module.i, ".schedule {\n  width: 100%;\n  display: flex;\n  flex-f
 
 
 /***/ }),
-/* 144 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(145);
+var content = __webpack_require__(146);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -19284,7 +19334,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 145 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -19293,10 +19343,10 @@ exports.push([module.i, ".speakers {\n  display: flex;\n  flex-flow: column nowr
 
 
 /***/ }),
-/* 146 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(147);
+var content = __webpack_require__(148);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -19315,7 +19365,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 147 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -19324,10 +19374,10 @@ exports.push([module.i, ".uidemo__main {\n  width: 87%;\n  max-width: 54.9450549
 
 
 /***/ }),
-/* 148 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(149);
+var content = __webpack_require__(150);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -19343,136 +19393,136 @@ var update = __webpack_require__(1)(content, options);
 if (content.locals) {
   module.exports = content.locals;
 }
-
-
-/***/ }),
-/* 149 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(false);
-// Imports
-var getUrl = __webpack_require__(3);
-var ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(150));
-var ___CSS_LOADER_URL___1___ = getUrl(__webpack_require__(151));
-var ___CSS_LOADER_URL___2___ = getUrl(__webpack_require__(152));
-var ___CSS_LOADER_URL___3___ = getUrl(__webpack_require__(153));
-var ___CSS_LOADER_URL___4___ = getUrl(__webpack_require__(154));
-var ___CSS_LOADER_URL___5___ = getUrl(__webpack_require__(155));
-var ___CSS_LOADER_URL___6___ = getUrl(__webpack_require__(156));
-var ___CSS_LOADER_URL___7___ = getUrl(__webpack_require__(157));
-var ___CSS_LOADER_URL___8___ = getUrl(__webpack_require__(158));
-var ___CSS_LOADER_URL___9___ = getUrl(__webpack_require__(159));
-var ___CSS_LOADER_URL___10___ = getUrl(__webpack_require__(160));
-var ___CSS_LOADER_URL___11___ = getUrl(__webpack_require__(161));
-var ___CSS_LOADER_URL___12___ = getUrl(__webpack_require__(162));
-var ___CSS_LOADER_URL___13___ = getUrl(__webpack_require__(163));
-var ___CSS_LOADER_URL___14___ = getUrl(__webpack_require__(164));
-var ___CSS_LOADER_URL___15___ = getUrl(__webpack_require__(165));
-// Module
-exports.push([module.i, "@font-face {\n  font-family: 'Lato';\n  src: url(" + ___CSS_LOADER_URL___0___ + ");\n  src: local('☺'), url(" + ___CSS_LOADER_URL___1___ + ") format('woff'), url(" + ___CSS_LOADER_URL___2___ + ") format('truetype'), url(" + ___CSS_LOADER_URL___3___ + ") format('svg');\n  font-weight: normal;\n  font-style: normal;\n}\n@font-face {\n  font-family: 'Lato';\n  src: url(" + ___CSS_LOADER_URL___4___ + ");\n  src: local('☺'), url(" + ___CSS_LOADER_URL___5___ + ") format('woff'), url(" + ___CSS_LOADER_URL___6___ + ") format('truetype'), url(" + ___CSS_LOADER_URL___7___ + ") format('svg');\n  font-weight: bold;\n  font-style: normal;\n}\n@font-face {\n  font-family: 'Lato';\n  src: url(" + ___CSS_LOADER_URL___8___ + ");\n  src: local('☺'), url(" + ___CSS_LOADER_URL___9___ + ") format('woff'), url(" + ___CSS_LOADER_URL___10___ + ") format('truetype'), url(" + ___CSS_LOADER_URL___11___ + ") format('svg');\n  font-weight: lighter;\n  font-style: normal;\n}\n@font-face {\n  font-family: 'SourceSansPro';\n  src: url(" + ___CSS_LOADER_URL___12___ + ");\n  src: local('☺'), url(" + ___CSS_LOADER_URL___13___ + ") format('woff'), url(" + ___CSS_LOADER_URL___14___ + ") format('truetype'), url(" + ___CSS_LOADER_URL___15___ + ") format('svg');\n  font-weight: normal;\n  font-style: normal;\n}\n", ""]);
 
 
 /***/ }),
 /* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/fonts/lato-regular.eot";
+exports = module.exports = __webpack_require__(0)(false);
+// Imports
+var getUrl = __webpack_require__(3);
+var ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(151));
+var ___CSS_LOADER_URL___1___ = getUrl(__webpack_require__(152));
+var ___CSS_LOADER_URL___2___ = getUrl(__webpack_require__(153));
+var ___CSS_LOADER_URL___3___ = getUrl(__webpack_require__(154));
+var ___CSS_LOADER_URL___4___ = getUrl(__webpack_require__(155));
+var ___CSS_LOADER_URL___5___ = getUrl(__webpack_require__(156));
+var ___CSS_LOADER_URL___6___ = getUrl(__webpack_require__(157));
+var ___CSS_LOADER_URL___7___ = getUrl(__webpack_require__(158));
+var ___CSS_LOADER_URL___8___ = getUrl(__webpack_require__(159));
+var ___CSS_LOADER_URL___9___ = getUrl(__webpack_require__(160));
+var ___CSS_LOADER_URL___10___ = getUrl(__webpack_require__(161));
+var ___CSS_LOADER_URL___11___ = getUrl(__webpack_require__(162));
+var ___CSS_LOADER_URL___12___ = getUrl(__webpack_require__(163));
+var ___CSS_LOADER_URL___13___ = getUrl(__webpack_require__(164));
+var ___CSS_LOADER_URL___14___ = getUrl(__webpack_require__(165));
+var ___CSS_LOADER_URL___15___ = getUrl(__webpack_require__(166));
+// Module
+exports.push([module.i, "@font-face {\n  font-family: 'Lato';\n  src: url(" + ___CSS_LOADER_URL___0___ + ");\n  src: local('☺'), url(" + ___CSS_LOADER_URL___1___ + ") format('woff'), url(" + ___CSS_LOADER_URL___2___ + ") format('truetype'), url(" + ___CSS_LOADER_URL___3___ + ") format('svg');\n  font-weight: normal;\n  font-style: normal;\n}\n@font-face {\n  font-family: 'Lato';\n  src: url(" + ___CSS_LOADER_URL___4___ + ");\n  src: local('☺'), url(" + ___CSS_LOADER_URL___5___ + ") format('woff'), url(" + ___CSS_LOADER_URL___6___ + ") format('truetype'), url(" + ___CSS_LOADER_URL___7___ + ") format('svg');\n  font-weight: bold;\n  font-style: normal;\n}\n@font-face {\n  font-family: 'Lato';\n  src: url(" + ___CSS_LOADER_URL___8___ + ");\n  src: local('☺'), url(" + ___CSS_LOADER_URL___9___ + ") format('woff'), url(" + ___CSS_LOADER_URL___10___ + ") format('truetype'), url(" + ___CSS_LOADER_URL___11___ + ") format('svg');\n  font-weight: lighter;\n  font-style: normal;\n}\n@font-face {\n  font-family: 'SourceSansPro';\n  src: url(" + ___CSS_LOADER_URL___12___ + ");\n  src: local('☺'), url(" + ___CSS_LOADER_URL___13___ + ") format('woff'), url(" + ___CSS_LOADER_URL___14___ + ") format('truetype'), url(" + ___CSS_LOADER_URL___15___ + ") format('svg');\n  font-weight: normal;\n  font-style: normal;\n}\n", ""]);
+
 
 /***/ }),
 /* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/fonts/lato-regular.woff";
+module.exports = __webpack_require__.p + "assets/fonts/lato-regular.eot";
 
 /***/ }),
 /* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/fonts/lato-regular.ttf";
+module.exports = __webpack_require__.p + "assets/fonts/lato-regular.woff";
 
 /***/ }),
 /* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/fonts/lato-regular.svg";
+module.exports = __webpack_require__.p + "assets/fonts/lato-regular.ttf";
 
 /***/ }),
 /* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/fonts/lato-black.eot";
+module.exports = __webpack_require__.p + "assets/fonts/lato-regular.svg";
 
 /***/ }),
 /* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/fonts/lato-black.woff";
+module.exports = __webpack_require__.p + "assets/fonts/lato-black.eot";
 
 /***/ }),
 /* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/fonts/lato-black.ttf";
+module.exports = __webpack_require__.p + "assets/fonts/lato-black.woff";
 
 /***/ }),
 /* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/fonts/lato-black.svg";
+module.exports = __webpack_require__.p + "assets/fonts/lato-black.ttf";
 
 /***/ }),
 /* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/fonts/lato-light.eot";
+module.exports = __webpack_require__.p + "assets/fonts/lato-black.svg";
 
 /***/ }),
 /* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/fonts/lato-light.woff";
+module.exports = __webpack_require__.p + "assets/fonts/lato-light.eot";
 
 /***/ }),
 /* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/fonts/lato-light.ttf";
+module.exports = __webpack_require__.p + "assets/fonts/lato-light.woff";
 
 /***/ }),
 /* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/fonts/lato-light.svg";
+module.exports = __webpack_require__.p + "assets/fonts/lato-light.ttf";
 
 /***/ }),
 /* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/fonts/sourcesanspro-regular.eot";
+module.exports = __webpack_require__.p + "assets/fonts/lato-light.svg";
 
 /***/ }),
 /* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/fonts/sourcesanspro-regular.woff";
+module.exports = __webpack_require__.p + "assets/fonts/sourcesanspro-regular.eot";
 
 /***/ }),
 /* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/fonts/sourcesanspro-regular.ttf";
+module.exports = __webpack_require__.p + "assets/fonts/sourcesanspro-regular.woff";
 
 /***/ }),
 /* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/fonts/sourcesanspro-regular.svg";
+module.exports = __webpack_require__.p + "assets/fonts/sourcesanspro-regular.ttf";
 
 /***/ }),
 /* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(167);
+module.exports = __webpack_require__.p + "assets/fonts/sourcesanspro-regular.svg";
+
+/***/ }),
+/* 167 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(168);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -19488,22 +19538,22 @@ var update = __webpack_require__(1)(content, options);
 if (content.locals) {
   module.exports = content.locals;
 }
-
-
-/***/ }),
-/* 167 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(false);
-// Module
-exports.push([module.i, "", ""]);
 
 
 /***/ }),
 /* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(169);
+exports = module.exports = __webpack_require__(0)(false);
+// Module
+exports.push([module.i, "", ""]);
+
+
+/***/ }),
+/* 169 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(170);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -19522,7 +19572,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 169 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -19531,10 +19581,10 @@ exports.push([module.i, "", ""]);
 
 
 /***/ }),
-/* 170 */
+/* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(171);
+var content = __webpack_require__(172);
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -19553,7 +19603,7 @@ if (content.locals) {
 
 
 /***/ }),
-/* 171 */
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -19562,19 +19612,19 @@ exports.push([module.i, "* {\n  margin: 0;\n  padding: 0;\n}\n*,\n*::after,\n*::
 
 
 /***/ }),
-/* 172 */
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./android-chrome-192x192.png": 173,
-	"./android-chrome-256x256.png": 174,
-	"./apple-touch-icon.png": 175,
-	"./browserconfig.xml": 176,
-	"./favicon-16x16.png": 177,
-	"./favicon-32x32.png": 178,
-	"./favicon.ico": 179,
-	"./mstile-150x150.png": 180,
-	"./safari-pinned-tab.svg": 181
+	"./android-chrome-192x192.png": 174,
+	"./android-chrome-256x256.png": 175,
+	"./apple-touch-icon.png": 176,
+	"./browserconfig.xml": 177,
+	"./favicon-16x16.png": 178,
+	"./favicon-32x32.png": 179,
+	"./favicon.ico": 180,
+	"./mstile-150x150.png": 181,
+	"./safari-pinned-tab.svg": 182
 };
 
 
@@ -19595,107 +19645,107 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 172;
-
-/***/ }),
-/* 173 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "assets/favicons/android-chrome-192x192.png";
+webpackContext.id = 173;
 
 /***/ }),
 /* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/favicons/android-chrome-256x256.png";
+module.exports = __webpack_require__.p + "assets/favicons/android-chrome-192x192.png";
 
 /***/ }),
 /* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/favicons/apple-touch-icon.png";
+module.exports = __webpack_require__.p + "assets/favicons/android-chrome-256x256.png";
 
 /***/ }),
 /* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/favicons/browserconfig.xml";
+module.exports = __webpack_require__.p + "assets/favicons/apple-touch-icon.png";
 
 /***/ }),
 /* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/favicons/favicon-16x16.png";
+module.exports = __webpack_require__.p + "assets/favicons/browserconfig.xml";
 
 /***/ }),
 /* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/favicons/favicon-32x32.png";
+module.exports = __webpack_require__.p + "assets/favicons/favicon-16x16.png";
 
 /***/ }),
 /* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/favicons/favicon.ico";
+module.exports = __webpack_require__.p + "assets/favicons/favicon-32x32.png";
 
 /***/ }),
 /* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/favicons/mstile-150x150.png";
+module.exports = __webpack_require__.p + "assets/favicons/favicon.ico";
 
 /***/ }),
 /* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/favicons/safari-pinned-tab.svg";
+module.exports = __webpack_require__.p + "assets/favicons/mstile-150x150.png";
 
 /***/ }),
 /* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
+module.exports = __webpack_require__.p + "assets/favicons/safari-pinned-tab.svg";
+
+/***/ }),
+/* 183 */
+/***/ (function(module, exports, __webpack_require__) {
+
 var map = {
 	"./arrow-button/js/ArrowButton.js": 10,
-	"./arrow-button/js/init.js": 183,
+	"./arrow-button/js/init.js": 184,
 	"./button/js/Button.js": 11,
-	"./button/js/init.js": 185,
+	"./button/js/init.js": 186,
 	"./calendar/js/Calendar.js": 12,
-	"./calendar/js/init.js": 187,
+	"./calendar/js/init.js": 188,
 	"./donut-chart/js/DonutChart.js": 13,
-	"./donut-chart/js/init.js": 188,
+	"./donut-chart/js/init.js": 189,
 	"./drop-down/js/DropDown.js": 14,
-	"./drop-down/js/init.js": 189,
+	"./drop-down/js/init.js": 190,
 	"./email-form/js/EmailForm.js": 15,
-	"./email-form/js/init.js": 190,
+	"./email-form/js/init.js": 191,
 	"./event-carousel/js/EventCarousel.js": 16,
-	"./event-carousel/js/init.js": 192,
+	"./event-carousel/js/init.js": 193,
 	"./map/js/Map.js": 8,
-	"./map/js/init.js": 195,
+	"./map/js/init.js": 196,
 	"./news-card/js/NewsCard.js": 17,
-	"./news-card/js/init.js": 196,
+	"./news-card/js/init.js": 197,
 	"./online-help/js/OnlineHelp.js": 18,
-	"./online-help/js/init.js": 197,
+	"./online-help/js/init.js": 198,
 	"./pass-selector/js/PassSelector.js": 19,
-	"./pass-selector/js/init.js": 198,
+	"./pass-selector/js/init.js": 199,
 	"./registration-form/js/RegistrationForm.js": 20,
-	"./registration-form/js/init.js": 199,
+	"./registration-form/js/init.js": 200,
 	"./search-box/js/SearchBox.js": 21,
-	"./search-box/js/init.js": 200,
+	"./search-box/js/init.js": 201,
 	"./slider/js/Slider.js": 22,
-	"./slider/js/init.js": 205,
+	"./slider/js/init.js": 206,
 	"./speaker-card/js/SpeakerCard.js": 23,
-	"./speaker-card/js/init.js": 206,
+	"./speaker-card/js/init.js": 207,
 	"./speaker-carousel/js/SpeakerCarousel.js": 24,
-	"./speaker-carousel/js/init.js": 207,
+	"./speaker-carousel/js/init.js": 208,
 	"./tick-box/js/TickBox.js": 25,
-	"./tick-box/js/init.js": 208,
+	"./tick-box/js/init.js": 209,
 	"./toggle-switch/js/ToggleSwitch.js": 26,
-	"./toggle-switch/js/init.js": 209,
+	"./toggle-switch/js/init.js": 210,
 	"./validation-input/js/ValidationInput.js": 27,
-	"./validation-input/js/init.js": 210,
+	"./validation-input/js/init.js": 211,
 	"./video/js/Video.js": 28,
-	"./video/js/init.js": 211
+	"./video/js/init.js": 212
 };
 
 
@@ -19716,10 +19766,10 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 182;
+webpackContext.id = 183;
 
 /***/ }),
-/* 183 */
+/* 184 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19732,11 +19782,10 @@ const initArrowButtons = function createInstances() {
 };
 
 $(document).ready(initArrowButtons);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
-/* 184 */
+/* 185 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/*! legitRipple.js v1.1.0: ripple.min.js by Matthias Vogt (ISC license) */
@@ -19744,7 +19793,7 @@ $(document).ready(initArrowButtons);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
-/* 185 */
+/* 186 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19757,11 +19806,10 @@ const initButtons = function createInstances() {
 };
 
 $(document).ready(initButtons);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
-/* 186 */
+/* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// jscs:disable maximumLineLength
@@ -19791,7 +19839,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 			__webpack_require__(2),
 			__webpack_require__(4),
-			__webpack_require__(29)
+			__webpack_require__(30)
 		], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
@@ -21886,7 +21934,7 @@ return $.datepicker;
 
 
 /***/ }),
-/* 187 */
+/* 188 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21899,11 +21947,10 @@ const initCalendars = function createInstances() {
 };
 
 $(document).ready(initCalendars);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
-/* 188 */
+/* 189 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21916,11 +21963,10 @@ const initDonutCharts = function createInstances() {
 };
 
 $(document).ready(initDonutCharts);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
-/* 189 */
+/* 190 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21933,11 +21979,10 @@ const initDropDowns = function createInstances() {
 };
 
 $(document).ready(initDropDowns);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
-/* 190 */
+/* 191 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21950,11 +21995,10 @@ const initEmailForms = function createInstances() {
 };
 
 $(document).ready(initEmailForms);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
-/* 191 */
+/* 192 */
 /***/ (function(module, exports) {
 
 /* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {/* globals __webpack_amd_options__ */
@@ -21963,7 +22007,7 @@ module.exports = __webpack_amd_options__;
 /* WEBPACK VAR INJECTION */}.call(this, {}))
 
 /***/ }),
-/* 192 */
+/* 193 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21976,11 +22020,10 @@ const initEventCarousels = function createInstances() {
 };
 
 $(document).ready(initEventCarousels);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
-/* 193 */
+/* 194 */
 /***/ (function(module, exports) {
 
 const API_URL = 'https://maps.googleapis.com/maps/api/js'
@@ -22030,13 +22073,13 @@ module.exports = function (options = {}) {
 
 
 /***/ }),
-/* 194 */
+/* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/img/pins.png";
 
 /***/ }),
-/* 195 */
+/* 196 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22045,17 +22088,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const initMaps = function createInstances() {
-  _Map__WEBPACK_IMPORTED_MODULE_0__["default"].loadGoogleMapsApi().then((googleMaps) => {
+  _Map__WEBPACK_IMPORTED_MODULE_0__["default"].loadGoogleMapsApi().then(googleMaps => {
     $('.js-map').each((i, element) => new _Map__WEBPACK_IMPORTED_MODULE_0__["default"](element, googleMaps));
   });
 };
 
 $(document).ready(initMaps);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
-/* 196 */
+/* 197 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22068,12 +22110,10 @@ const initNewsCards = function createInstances() {
 };
 
 $(document).ready(initNewsCards);
-
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
-/* 197 */
+/* 198 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22086,11 +22126,10 @@ const initOnlineHelp = function createInstances() {
 };
 
 $(document).ready(initOnlineHelp);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
-/* 198 */
+/* 199 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22103,11 +22142,10 @@ const initPassSelectors = function createInstances() {
 };
 
 $(document).ready(initPassSelectors);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
-/* 199 */
+/* 200 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22120,11 +22158,10 @@ const initRegistrationForms = function createInstances() {
 };
 
 $(document).ready(initRegistrationForms);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
-/* 200 */
+/* 201 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22137,11 +22174,10 @@ const initSearchBoxes = function createInstances() {
 };
 
 $(document).ready(initSearchBoxes);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
-/* 201 */
+/* 202 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -22168,10 +22204,10 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 		// AMD. Register as an anonymous module.
 		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 			__webpack_require__(2),
-			__webpack_require__(202),
-			__webpack_require__(29),
+			__webpack_require__(203),
+			__webpack_require__(30),
 			__webpack_require__(4),
-			__webpack_require__(30)
+			__webpack_require__(31)
 		], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
@@ -22898,7 +22934,7 @@ return $.widget( "ui.slider", $.ui.mouse, {
 
 
 /***/ }),
-/* 202 */
+/* 203 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -22921,9 +22957,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 		// AMD. Register as an anonymous module.
 		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 			__webpack_require__(2),
-			__webpack_require__(203),
+			__webpack_require__(204),
 			__webpack_require__(4),
-			__webpack_require__(30)
+			__webpack_require__(31)
 		], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
@@ -23129,7 +23165,7 @@ return $.widget( "ui.mouse", {
 
 
 /***/ }),
-/* 203 */
+/* 204 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;( function( factory ) {
@@ -23149,7 +23185,7 @@ return $.ui.ie = !!/msie [\w.]+/.exec( navigator.userAgent.toLowerCase() );
 
 
 /***/ }),
-/* 204 */
+/* 205 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/*!
@@ -23335,7 +23371,7 @@ return $.ui.ie = !!/msie [\w.]+/.exec( navigator.userAgent.toLowerCase() );
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
-/* 205 */
+/* 206 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -23348,11 +23384,10 @@ const initSliders = function createInstances() {
 };
 
 $(document).ready(initSliders);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
-/* 206 */
+/* 207 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -23365,11 +23400,10 @@ const initSpeakerCards = function createInstances() {
 };
 
 $(document).ready(initSpeakerCards);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
-/* 207 */
+/* 208 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -23382,11 +23416,10 @@ const initSpeakerCarousels = function createInstances() {
 };
 
 $(document).ready(initSpeakerCarousels);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
-/* 208 */
+/* 209 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -23399,11 +23432,10 @@ const initTickBoxes = function createInstances() {
 };
 
 $(document).ready(initTickBoxes);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
-/* 209 */
+/* 210 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -23416,11 +23448,10 @@ const initToggleSwitches = function createInstances() {
 };
 
 $(document).ready(initToggleSwitches);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
-/* 210 */
+/* 211 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -23433,11 +23464,10 @@ const initValidationInputs = function createInstances() {
 };
 
 $(document).ready(initValidationInputs);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
-/* 211 */
+/* 212 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -23450,11 +23480,10 @@ const initVideos = function createInstances() {
 };
 
 $(document).ready(initVideos);
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ }),
-/* 212 */
+/* 213 */
 /***/ (function(module, exports) {
 
 function webpackEmptyContext(req) {
@@ -23465,7 +23494,7 @@ function webpackEmptyContext(req) {
 webpackEmptyContext.keys = function() { return []; };
 webpackEmptyContext.resolve = webpackEmptyContext;
 module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 212;
+webpackEmptyContext.id = 213;
 
 /***/ })
 /******/ ]);
