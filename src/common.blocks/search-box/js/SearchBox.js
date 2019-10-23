@@ -1,3 +1,5 @@
+import bind from 'bind-decorator';
+
 class SearchBox {
   constructor(domElement) {
     this._findElements(domElement);
@@ -13,15 +15,16 @@ class SearchBox {
 
   _initialize() {
     this.$searchbox
-      .on('click.searchbox', this._handleSearchBoxClick.bind(this))
-      .on('keypress.searchbox', this._handleSearchBoxKeypress.bind(this));
-    this.$input.on('focus.searchbox', this._handleInputFocus.bind(this));
+      .on('click.searchbox', this._handleSearchBoxClick)
+      .on('keypress.searchbox', this._handleSearchBoxKeyPress);
+    this.$input.on('focus.searchbox', this._handleInputFocus);
 
     if (this.$searchbox.hasClass('search-box_filled')) {
       this._handleButtonClick();
     }
   }
 
+  @bind
   _handleSearchBoxClick(event) {
     const $element = $(event.target);
     if ($element.hasClass('js-search-box__button')) {
@@ -38,7 +41,8 @@ class SearchBox {
     }
   }
 
-  _handleSearchBoxKeypress(event) {
+  @bind
+  _handleSearchBoxKeyPress(event) {
     if (event.which === 13) {
       this._handleButtonClick(event);
     }
@@ -49,6 +53,7 @@ class SearchBox {
     this.$searchbox.removeClass('search-box_filled');
   }
 
+  @bind
   _handleInputFocus() {
     if (this.$searchbox.hasClass('search-box_filled')) {
       this._emptyInput();

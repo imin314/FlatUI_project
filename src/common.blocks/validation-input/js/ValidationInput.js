@@ -1,3 +1,4 @@
+import bind from 'bind-decorator';
 import 'jquery-validation';
 
 class ValidationInput {
@@ -16,10 +17,11 @@ class ValidationInput {
     };
 
     this.$input
-      .on('blur.validation', this._handleInputBlur.bind(this))
-      .on('focus.validation', this._handleInputFocus.bind(this));
+      .on('blur.validation', this._handleInputBlur)
+      .on('focus.validation', this._handleInputFocus);
   }
 
+  @bind
   _handleInputBlur() {
     const { good, error, hidden } = this.bubbleModifiers;
     if (this.$input.valid()) {
@@ -35,6 +37,7 @@ class ValidationInput {
     }
   }
 
+  @bind
   _handleInputFocus() {
     const { good, error, hidden } = this.bubbleModifiers;
     this.$bubble

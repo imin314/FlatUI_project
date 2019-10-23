@@ -1,3 +1,5 @@
+import bind from 'bind-decorator';
+
 const loadGoogleMapsApi = require('load-google-maps-api');
 const pinImg = require('../img/pins.png');
 
@@ -48,11 +50,11 @@ class Map {
     this._locateUser();
 
     $pin
-      .on('click.map', this._handlePinClick.bind(this))
-      .on('keypress.map', this._handleEnterPress.bind(this));
+      .on('click.map', this._handlePinClick)
+      .on('keypress.map', this._handleMapKeyPress);
     $search
-      .on('click.map', this._handleSearchClick.bind(this))
-      .on('keypress.map', this._handleEnterPress.bind(this));
+      .on('click.map', this._handleSearchClick)
+      .on('keypress.map', this._handleMapKeyPress);
   }
 
   _addMarker(location, image, title) {
@@ -82,16 +84,16 @@ class Map {
   _locateUser() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
-        this._handleLocationSuccess.bind(this),
-        this._handleLocationError.bind(this, true)
+        this._handlePositionSuccess,
+        this._handlePositionError,
       );
     } else {
-      // Browser doesn't support Geolocation
-      this._handleLocationError(false);
+      this._handleLocationError();
     }
   }
 
-  _handleLocationSuccess(position) {
+  @bind
+  _handlePositionSuccess(position) {
     const pos = {
       lat: position.coords.latitude,
       lng: position.coords.longitude,
@@ -99,24 +101,26 @@ class Map {
     this.userMarker = this._addMarker(pos, this.images[1], 'You are here');
   }
 
-  _handleLocationError(browserHasGeolocation) {
+  @bind
+  _handlePositionError() {
     this.infoWindow.setPosition(this.map.getCenter());
-    this.infoWindow.setContent(browserHasGeolocation
-      ? 'Error: The Geolocation service failed.'
-      : 'Error: Your browser doesn\'t support geolocation.');
+    this.infoWindow.setContent('Error: The Geolocation service failed.');
   }
 
+  @bind
   _handlePinClick(event) {
     this._backToCenter();
     $(event.target).blur();
   }
 
+  @bind
   _handleSearchClick(event) {
     this._showUserLocation();
     $(event.target).blur();
   }
 
-  _handleEnterPress(event) {
+  @bind
+  _handleMapKeyPress(event) {
     if (event.which === 13) {
       $(event.target).trigger('click');
     }

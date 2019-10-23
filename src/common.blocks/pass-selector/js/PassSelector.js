@@ -1,3 +1,5 @@
+import bind from 'bind-decorator';
+
 class PassSelector {
   constructor(domElement) {
     this.$domElement = $(domElement);
@@ -6,9 +8,10 @@ class PassSelector {
 
   _initialize() {
     this.$tickboxes = this.$domElement.find('input[type=checkbox]');
-    this.$tickboxes.on('change.pass-selector', this._handleTickboxChange.bind(this));
+    this.$tickboxes.on('change.pass-selector', this._handleTickboxChange);
   }
 
+  @bind
   _handleTickboxChange(event) {
     const $currentTickbox = $(event.target);
     this.$tickboxes.not($currentTickbox).prop('checked', false);

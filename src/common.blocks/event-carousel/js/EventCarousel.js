@@ -1,3 +1,4 @@
+import bind from 'bind-decorator';
 import 'jquery-mousewheel';
 import 'malihu-custom-scrollbar-plugin';
 
@@ -13,7 +14,7 @@ class EventCarousel {
     this.$calendar = $domElement.find('.js-event-carousel__calendar');
 
     this.$cards
-      .on('click.event-carousel', this._handleButtonClick.bind(this))
+      .on('click.event-carousel', this._handleCardsClick)
       .mCustomScrollbar({
         axis: 'x',
         theme: 'dark-thin',
@@ -25,21 +26,25 @@ class EventCarousel {
       });
   }
 
-  _handleButtonClick(event) {
+  @bind
+  _handleCardsClick(event) {
     const $target = $(event.target);
     if ($target.hasClass('js-button')) {
       this.$calendarOverlay.addClass('event-carousel__calendar-overlay_visible');
-      $(document).on('click.event-carousel', this._handleDocumentClick.bind(this));
+      $(document).on('click.event-carousel', this._handleDocumentClick);
       return false;
     }
+    return true;
   }
 
+  @bind
   _handleDocumentClick(event) {
     if (event.target === this.$calendarOverlay[0]) {
       this.$calendarOverlay.removeClass('event-carousel__calendar-overlay_visible');
       $(document).off('click.event-carousel');
       return false;
     }
+    return true;
   }
 }
 

@@ -38,8 +38,8 @@
       & ^[0]__arrow
         background-color color-cyan
         border-color white
-
-  &:focus, &_active
+  
+  &:focus
     background-color color-cyan
 
     & ^[0]__arrow
@@ -51,7 +51,7 @@
       right 50%
       transform translate(30%, -50%) rotate(-45deg)
 
-    &:active, &^[0]_active
+    &:active
       transform translateX(1px)
 
   &_direction_left
@@ -59,7 +59,7 @@
       left 50%
       transform translate(-30%, -50%) rotate(135deg)
 
-    &:active, &^[0]_active
+    &:active
       transform translateX(-1px)
       
   &__arrow

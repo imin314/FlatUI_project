@@ -1,3 +1,5 @@
+import bind from 'bind-decorator';
+
 class Video {
   constructor(domElement) {
     this._initialize(domElement);
@@ -12,12 +14,13 @@ class Video {
     video.removeAttribute('height');
     video.removeAttribute('width');
 
-    this._resize();
+    this._handleWindowResize();
 
-    $(window).on('resize.video', this._resize.bind(this));
+    $(window).on('resize.video', this._handleWindowResize);
   }
 
-  _resize() {
+  @bind
+  _handleWindowResize() {
     const newWidth = document.width;
     this.$video
       .width(newWidth)

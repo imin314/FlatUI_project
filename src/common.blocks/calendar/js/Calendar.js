@@ -1,3 +1,4 @@
+import bind from 'bind-decorator';
 import 'jquery-ui/ui/widgets/datepicker';
 
 class Calendar {
@@ -13,8 +14,7 @@ class Calendar {
 
     this
       ._prependDayContainer()
-      ._appendButtonPane()
-      ._updateDayText(this.$calendar.datepicker('getDate'));
+      ._appendButtonPane();
   }
 
   _generateCalendarSettings() {
@@ -24,8 +24,8 @@ class Calendar {
       nextText: '',
       showOtherMonths: true,
       dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-      onChangeMonthYear: (y, m, inst) => this._handleMonthChange(y, m, inst),
-      onSelect: (date) => this._updateDayText(date),
+      onChangeMonthYear: this._handleCalendarChangeMonthYear,
+      onSelect: this._handleCalendarSelect,
     };
 
     return settings;
@@ -33,11 +33,13 @@ class Calendar {
 
   _prependDayContainer() {
     const $dayContainer = $('<div></div>', { class: 'calendar__day-container' });
+    const currentDay = this.$calendar.datepicker('getDate');
     this.$dayText = $('<span></span>', {
       class: 'calendar__day-text',
       type: 'text',
       disabled: 'disabled',
     });
+    this.$dayText.text(currentDay.getDate());
     $dayContainer.prepend(this.$dayText);
 
     this.$calendar.prepend($dayContainer);
@@ -53,7 +55,7 @@ class Calendar {
     });
     this.$todayButton
       .text('today')
-      .on('click.calendar', this._handleTodayButtonClick.bind(this));
+      .on('click.calendar', this._handleTodayButtonClick);
 
     $buttonPane.append(this.$todayButton);
     this.$calendar.append($buttonPane);
@@ -61,14 +63,16 @@ class Calendar {
     return this;
   }
 
-  _updateDayText(value) {
+  @bind
+  _handleCalendarSelect(value) {
     const date = new Date(value);
     this.$dayText.text(date.getDate());
 
     return this;
   }
 
-  _handleMonthChange(year, month, instance) {
+  @bind
+  _handleCalendarChangeMonthYear(year, month, instance) {
     const isBackFromOtherMonth = instance.selectedMonth !== instance.currentMonth;
     const isBackFromOtherYear = instance.selectedYear !== instance.currentYear;
     if (isBackFromOtherMonth || isBackFromOtherYear) {
@@ -79,6 +83,7 @@ class Calendar {
     return this;
   }
 
+  @bind
   _handleTodayButtonClick() {
     const today = new Date();
     this.$calendar.datepicker('setDate', today);

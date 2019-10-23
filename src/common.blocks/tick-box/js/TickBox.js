@@ -1,3 +1,5 @@
+import bind from 'bind-decorator';
+
 class TickBox {
   constructor(domElement) {
     this._initialize(domElement);
@@ -9,18 +11,20 @@ class TickBox {
     this.$input = $domElement.find('.js-tick-box__input');
     this.$checkmark = $domElement.find('.js-tick-box__checkmark');
     this.$tickbox
-      .on('keypress.tickbox', this._handleEnterPress.bind(this))
-      .on('click.tickbox', this._removeFocus.bind(this));
+      .on('keypress.tickbox', this._handleTickboxKeyPress)
+      .on('click.tickbox', this._handleTickboxClick);
   }
 
-  _handleEnterPress(event) {
+  @bind
+  _handleTickboxKeyPress(event) {
     if (event.which === 13) {
       this.$input[0].checked = !this.$input[0].checked;
       this.$input.trigger('change');
     }
   }
 
-  _removeFocus() {
+  @bind
+  _handleTickboxClick() {
     this.$checkmark.blur();
   }
 }

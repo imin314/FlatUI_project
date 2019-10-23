@@ -1,3 +1,5 @@
+import bind from 'bind-decorator';
+
 class DropDown {
   constructor(domElement) {
     this._initialize(domElement);
@@ -8,10 +10,11 @@ class DropDown {
     this.$dropdown = $domElement;
     this.$label = $domElement.find('.js-drop-down__label');
     this.$dropdown
-      .on('click.drop-down', this._handleDropDownClick.bind(this))
-      .on('keypress.drop-down', this._handleDropDownKeypress.bind(this));
+      .on('click.drop-down', this._handleDropDownClick)
+      .on('keypress.drop-down', this._handleDropDownKeyPress);
   }
 
+  @bind
   _handleDropDownClick(event) {
     const $targetElement = $(event.target);
     const isItemChosen = $targetElement.hasClass('js-drop-down__item');
@@ -23,11 +26,8 @@ class DropDown {
     }
   }
 
-  _handleDropDownFocusOut() {
-    this.$dropdown.removeClass('drop-down_active');
-  }
-
-  _handleDropDownKeypress(event) {
+  @bind
+  _handleDropDownKeyPress(event) {
     if (event.which === 13) {
       $(event.target).click();
       return false;

@@ -1,3 +1,4 @@
+import bind from 'bind-decorator';
 import 'jquery-validation';
 
 class RegistrationForm {
@@ -9,9 +10,9 @@ class RegistrationForm {
     this._findElements(domElement);
     this._addFormValidation();
 
-    this.$inputs.on('change.registration-form', this._handleInputChange.bind(this));
-    $(window).on('scroll.registration-form', this._handleWindowScroll.bind(this));
-    this.$button.on('click.registration-form', this._handleRegisterButtonClick.bind(this));
+    this.$inputs.on('change.registration-form', this._handleInputChange);
+    $(window).on('scroll.registration-form', this._handleWindowScroll);
+    this.$registerButton.on('click.registration-form', this._handleRegisterButtonClick);
   }
 
   _findElements(domElement) {
@@ -22,7 +23,7 @@ class RegistrationForm {
     this.$formStages = $domElement.find('.js-registration-form__stage');
     this.$header = $domElement.find('.js-registration-form__header');
     this.$passHeader = $domElement.find('.js-pass-selector__title');
-    this.$button = $domElement.find('.js-registration-form__button');
+    this.$registerButton = $domElement.find('.js-registration-form__button');
   }
 
   _addFormValidation() {
@@ -48,6 +49,7 @@ class RegistrationForm {
     }
   }
 
+  @bind
   _handleInputChange(event) {
     const $target = $(event.target);
     const $currentStage = $target.parents('.js-registration-form__stage');
@@ -60,6 +62,7 @@ class RegistrationForm {
     this._updateBreadCrumbs(stageNumber);
   }
 
+  @bind
   _handleWindowScroll(event) {
     const headerHeight = this.$header.outerHeight();
     const passHeaderOffset = this.$passHeader.offset().top;
@@ -70,6 +73,7 @@ class RegistrationForm {
     }
   }
 
+  @bind
   _handleRegisterButtonClick() {
     this.$form.submit();
   }
