@@ -50,7 +50,7 @@
     &_type_city
       letter-spacing 0.03rem
 
-  &__icons
+  &__buttons
     padding-top 0.3rem
     flex-grow 1
     display flex
@@ -62,130 +62,81 @@
       order 1
       flex 4.395604396rem 1 1
 
-  &__search
-    font-size 1rem
+  &__button
     position relative
-    margin-right 1.9rem
-    flex 1.3rem 0 0
-    height 1.3rem 
-    border-radius 50%
-    border 0.1098901098901099rem solid white
     cursor pointer
     outline none
     noselect()
-
-    @media screen and (max-width: 600px)
-      margin-right 1rem
-
-    &::before
-      content ''
-      position absolute
-      top 50%
-      left 0
-      height 0.1098901098901099rem
-      width 1.8rem
-      border-left 0.5494505494505495rem solid white
-      border-right 0.549450549450545rem solid white
-      transform translate(-20%,-50%)
-
-    &::after
-      content ''
-      position absolute
-      top 0
-      left 50%
-      height 1.8rem
-      width 0.1098901098901099rem
-      border-top 0.5494505494505495rem solid white
-      border-bottom 0.5494505494505495rem solid white
-      transform translate(-50%,-20%)
-
-    &:focus
-      transform scale(1.1)
-
-      &::before
-        transform translate(-18%,-50%) scale(1.1)
-
-      &::after
-        transform translate(-50%,-18%) scale(1.1)
-
-    &:hover
-      @media (hover:hover)
-        transform scale(1.1)
-
-    &:hover::before
-      @media (hover:hover)
-        transform translate(-18%,-50%) scale(1.1)
-
-    &:hover::after
-      @media (hover:hover)
-        transform translate(-50%,-18%) scale(1.1)
-
-    &:active
-      @media (hover:hover)
-        transform scale(0.9)
-
-      @media (hover:none)
-        transform scale(1.1)
-
-    &:active::before
-      @media (hover:hover)
-        transform translate(-18%,-50%) scale(0.9)
-
-      @media (hover:none)
-        transform translate(-18%,-50%) scale(1.1)
-
-    &:active::after
-      @media (hover:hover)
-        transform translate(-50%,-18%) scale(0.9)
-
-      @media (hover:none)
-        transform translate(-50%,-18%) scale(1.1)
-
-  &__pin
-    position relative
-    align-self flex-start
-    flex 0 0 1.099rem
-    height 1.649rem
-    cursor pointer
-    outline none
-    noselect()
-
-    &::before
-      content ''
-      display block
-      position absolute
-      top 0.55rem
-      left 0
-      width 0.55rem
-      height 1.099rem
-      background radial-gradient(2.198rem 2.418rem at 1.099rem 0, white 50%, transparent 50%)
-      z-index 1
-    
-    &::after
-      content ''
-      display block
-      position absolute
-      top 0.55rem
-      right 0
-      width 0.55rem
-      height 1.099rem
-      background radial-gradient(2.198rem 2.418rem at -0.55rem 0, white 50%, transparent 50%)
-      z-index 1
 
     &:hover
       @media (hover:hover)
         transform scale(1.1)
 
     &:active
-      @media (hover:hover)
-        transform scale(0.9)
-
       @media (hover:none)
         transform scale(1.1)
         
     &:focus
       transform scale(1.1)
-    
+
+    &_type_search
+      margin-right 1.9rem
+      flex 1.3rem 0 0
+      height 1.3rem 
+      border-radius 50%
+      border 0.1098901098901099rem solid white
+      @media screen and (max-width: 600px)
+        margin-right 1rem
+
+      &::before
+        content ''
+        position absolute
+        top 50%
+        left 0
+        height 0.1098901098901099rem
+        width 1.8rem
+        border-left 0.5494505494505495rem solid white
+        border-right 0.549450549450545rem solid white
+        transform translate(-20%,-50%)
+
+      &::after
+        content ''
+        position absolute
+        top 0
+        left 50%
+        height 1.8rem
+        width 0.1098901098901099rem
+        border-top 0.5494505494505495rem solid white
+        border-bottom 0.5494505494505495rem solid white
+        transform translate(-50%,-20%)
+
+    &_type_pin
+      align-self flex-start
+      flex 0 0 1.099rem
+      height 1.649rem
+
+      &::before
+        content ''
+        display block
+        position absolute
+        top 0.55rem
+        left 0
+        width 0.55rem
+        height 1.099rem
+        background radial-gradient(2.198rem 2.418rem at 1.099rem 0, white 50%, transparent 50%)
+        z-index 1
+      
+      &::after
+        content ''
+        display block
+        position absolute
+        top 0.55rem
+        right 0
+        width 0.55rem
+        height 1.099rem
+        background radial-gradient(2.198rem 2.418rem at -0.55rem 0, white 50%, transparent 50%)
+        z-index 1
+
   &__pin-circle
     position relative
     width 1.099rem

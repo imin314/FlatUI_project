@@ -14,7 +14,8 @@ class Calendar {
 
     this
       ._prependDayContainer()
-      ._appendButtonPane();
+      ._appendButtonPane()
+      ._updateDayText(this.$calendar.datepicker('getDate'));
   }
 
   _generateCalendarSettings() {
@@ -33,15 +34,12 @@ class Calendar {
 
   _prependDayContainer() {
     const $dayContainer = $('<div></div>', { class: 'calendar__day-container' });
-    const currentDay = this.$calendar.datepicker('getDate');
     this.$dayText = $('<span></span>', {
       class: 'calendar__day-text',
       type: 'text',
       disabled: 'disabled',
     });
-    this.$dayText.text(currentDay.getDate());
     $dayContainer.prepend(this.$dayText);
-
     this.$calendar.prepend($dayContainer);
 
     return this;
@@ -63,11 +61,15 @@ class Calendar {
     return this;
   }
 
-  @bind
-  _handleCalendarSelect(value) {
+  _updateDayText(value) {
     const date = new Date(value);
     this.$dayText.text(date.getDate());
+    return this;
+  }
 
+  @bind
+  _handleCalendarSelect(value) {
+    this._updateDayText(value);
     return this;
   }
 

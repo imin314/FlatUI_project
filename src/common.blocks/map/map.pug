@@ -17,7 +17,7 @@ mixin map(settings)
       .map__address
         .map__address-item.map__address-item_type_street= street
         .map__address-item.map__address-item_type_city= city
-      .map__icons
-        .map__search.js-map__search(tabindex="0")
-        .map__pin.js-map__pin
+      .map__buttons
+        .map__button.js-map__button.map__button_type_search.js-map__button_type_search(tabindex="0")
+        .map__button.js-map__button.map__button_type_pin.js-map__button_type_pin(tabindex="0")
           .map__pin-circle

@@ -42,19 +42,15 @@ class Map {
 
   _initMap() {
     const initOptions = { center: this.mapCenter, zoom: 14 };
-    const $pin = this.$domElement.find('.js-map__pin');
-    const $search = this.$domElement.find('.js-map__search');
+    const $footerButton = this.$domElement.find('.js-map__button');
     this.map = new this.googleMaps.Map(this.mapContainer, initOptions);
     this.infoWindow = new this.googleMaps.InfoWindow();
     this._addMarker(this._getMainPinCenter(), this.images[0], 'Meet us here!');
     this._locateUser();
 
-    $pin
-      .on('click.map', this._handlePinClick)
-      .on('keypress.map', this._handleMapKeyPress);
-    $search
-      .on('click.map', this._handleSearchClick)
-      .on('keypress.map', this._handleMapKeyPress);
+    $footerButton
+      .on('click.map', this._handleFooterButtonClick)
+      .on('keypress.map', this._handleFooterButtonKeyPress);
   }
 
   _addMarker(location, image, title) {
@@ -108,19 +104,18 @@ class Map {
   }
 
   @bind
-  _handlePinClick(event) {
-    this._backToCenter();
-    $(event.target).blur();
+  _handleFooterButtonClick(event) {
+    const $target = $(event.currentTarget);
+    if ($target.hasClass('js-map__button_type_search')) {
+      this._showUserLocation();
+    } else if ($target.hasClass('js-map__button_type_pin')) {
+      this._backToCenter();
+    }
+    $target.blur();
   }
 
   @bind
-  _handleSearchClick(event) {
-    this._showUserLocation();
-    $(event.target).blur();
-  }
-
-  @bind
-  _handleMapKeyPress(event) {
+  _handleFooterButtonKeyPress(event) {
     if (event.which === 13) {
       $(event.target).trigger('click');
     }
