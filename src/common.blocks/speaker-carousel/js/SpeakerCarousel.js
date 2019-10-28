@@ -4,7 +4,6 @@ import 'malihu-custom-scrollbar-plugin';
 
 class SpeakerCarousel {
   constructor(domElement) {
-    this.cardsAreExpanded = false;
     this._initialize(domElement);
   }
 
@@ -15,19 +14,24 @@ class SpeakerCarousel {
     this.$rightButton = $domElement.find('.js-speaker-carousel__arrow-button .js-arrow-button_direction_right');
     this.$leftButton = $domElement.find('.js-speaker-carousel__arrow-button .js-arrow-button_direction_left');
     this.$viewAllLink = $domElement.find('.js-speaker-carousel__link');
+    return this;
   }
 
   _initialize(domElement) {
-    this._findElements(domElement);
-    this._addCustomScrollBar();
+    this
+      ._findElements(domElement)
+      ._addCustomScrollBar();
     this.$scrollBarContainer = this.$cards.find('.mCSB_container');
     this.windowIsSmall = false;
+    this.cardsAreExpanded = false;
 
+    // need to add media query listener to hide customScrollbar
     const mediaQuery = window.matchMedia('(max-width: 500px)');
-    mediaQuery.addListener(this._updatePageView);
+    mediaQuery.addListener(this._handleMediaQueryMatch);
 
-    this._updatePageView(mediaQuery);
-    this._addEventListeners();
+    this
+      ._updatePageView(mediaQuery)
+      ._addEventListeners();
   }
 
   _addCustomScrollBar() {
@@ -39,31 +43,32 @@ class SpeakerCarousel {
         autoExpandHorizontalScroll: true,
       },
       callbacks: {
-        onTotalScroll: this.handleScrollbarTotalScroll,
-        onTotalScrollBack: this.handleScrollbarTotalScrollBack,
-        onScrollStart: this.handleScrollbarScrollStart,
+        onTotalScroll: this._handleScrollbarTotalScroll,
+        onTotalScrollBack: this._handleScrollbarTotalScrollBack,
+        onScrollStart: this._handleScrollbarScrollStart,
       },
     };
 
     this.$cards.mCustomScrollbar(scrollBarSettings);
+    return this;
   }
 
   @bind
-  handleScrollbarTotalScroll() {
+  _handleScrollbarTotalScroll() {
     this.$rightButton
       .addClass('arrow-button_disabled')
       .attr('tabindex', '-1');
   }
 
   @bind
-  handleScrollbarTotalScrollBack() {
+  _handleScrollbarTotalScrollBack() {
     this.$leftButton
       .addClass('arrow-button_disabled')
       .attr('tabindex', '-1');
   }
 
   @bind
-  handleScrollbarScrollStart() {
+  _handleScrollbarScrollStart() {
     this.$leftButton
       .removeClass('arrow-button_disabled')
       .attr('tabindex', '0');
@@ -73,6 +78,10 @@ class SpeakerCarousel {
   }
 
   @bind
+  _handleMediaQueryMatch(mqEvent) {
+    this._updatePageView(mqEvent);
+  }
+
   _updatePageView(mediaQuery) {
     if (mediaQuery.matches) {
       this.windowIsSmall = true;
@@ -85,12 +94,14 @@ class SpeakerCarousel {
         this._updateCustomScrollBar();
       }
     }
+    return this;
   }
 
   _addEventListeners() {
     this.$rightButton.on('click.speakers', this._handleRightButtonClick);
     this.$leftButton.on('click.speakers', this._handleLeftButtonClick);
     this.$viewAllLink.on('click.speakers', this._handleViewAllLinkClick);
+    return this;
   }
 
   @bind

@@ -12,7 +12,6 @@ class Button {
       .on('keypress.button', this._handleButtonKeyPress)
       .on('transitionend webkitTransitionEnd oTransitionEnd', this._handleButtonTransitionEnd)
       .ripple({ dragging: false });
-    return this;
   }
 
   @bind

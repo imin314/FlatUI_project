@@ -25,7 +25,7 @@ class ToggleSwitch {
 
   @bind
   _handleToggleClick() {
-    this.$slider.blur();
+    this.$slider.trigger('blur');
   }
 }
 

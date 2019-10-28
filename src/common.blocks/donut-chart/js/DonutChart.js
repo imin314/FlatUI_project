@@ -7,8 +7,9 @@ class DonutChart {
   _initialize() {
     this.values = this._getValues();
 
-    this._initDonutCircle();
-    this._drawSegments();
+    this
+      ._initDonutCircle()
+      ._drawSegments();
 
     this.$domElement.append(this.$svg);
     this._setViewBox();
@@ -21,18 +22,22 @@ class DonutChart {
   }
 
   _initDonutCircle() {
-    this.$svg = DonutChart.$s('svg').attr({ class: 'donut-chart__chart-container' });
-    this.$ring = DonutChart.$createSVGCircle({ class: 'donut-chart__ring' });
+    this.$svg = DonutChart.createSVGElement('svg').attr({ class: 'donut-chart__chart-container' });
+    this.$ring = DonutChart.createSVGCircle({ class: 'donut-chart__ring' });
     this.$svg.append(this.$ring);
+
+    return this;
   }
 
   _drawSegments() {
     let offset = 0;
     this.values.forEach((value, i) => {
-      const $segment = DonutChart.$createSVGSegment({ value, i, offset });
+      const $segment = DonutChart.createSVGSegment({ value, i, offset });
       this.$svg.append($segment);
       offset += Number(value);
     });
+
+    return this;
   }
 
   _setViewBox() {
@@ -41,10 +46,12 @@ class DonutChart {
     const viewBoxBottom = DonutChart.radius * 2 + strokeWidth;
     const viewBoxValue = `${viewBoxTop} ${viewBoxTop} ${viewBoxBottom} ${viewBoxBottom}`;
     this.$svg.attr({ viewBox: viewBoxValue });
+
+    return this;
   }
 
   // creates svg element, returned as jQuery object
-  static $s(elem) {
+  static createSVGElement(elem) {
     return $(document.createElementNS('http://www.w3.org/2000/svg', elem));
   }
 
@@ -53,16 +60,16 @@ class DonutChart {
     return 15.91549430918954;
   }
 
-  static $createSVGCircle(attributes) {
+  static createSVGCircle(attributes) {
     const defaultAttributes = {
       cx: DonutChart.radius,
       cy: DonutChart.radius,
       r: DonutChart.radius,
     };
-    return DonutChart.$s('circle').attr({ ...defaultAttributes, ...attributes });
+    return DonutChart.createSVGElement('circle').attr({ ...defaultAttributes, ...attributes });
   }
 
-  static $createSVGSegment(data) {
+  static createSVGSegment(data) {
     /**
      * dashoffsetInitial rotates offset 25% counter clockwise,
      * because stroke-dasharray starts not at top (12:00), but at right (3:00)
@@ -70,7 +77,7 @@ class DonutChart {
     const { value, i, offset } = data;
     const dashoffsetInitial = 25;
     const dashoffset = i === 0 ? dashoffsetInitial : (100 - offset + dashoffsetInitial);
-    const $segment = DonutChart.$createSVGCircle({ class: 'donut-chart__segment' });
+    const $segment = DonutChart.createSVGCircle({ class: 'donut-chart__segment' });
 
     $segment.attr('stroke-dasharray', `${value} ${100 - value}`);
     $segment.attr('stroke-dashoffset', dashoffset);

@@ -25,7 +25,7 @@ class TickBox {
 
   @bind
   _handleTickboxClick() {
-    this.$checkmark.blur();
+    this.$checkmark.trigger('blur');
   }
 }
 

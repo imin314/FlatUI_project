@@ -7,8 +7,9 @@ class RegistrationForm {
   }
 
   _initialize(domElement) {
-    this._findElements(domElement);
-    this._addFormValidation();
+    this
+      ._findElements(domElement)
+      ._addFormValidation();
 
     this.$inputs.on('change.registration-form', this._handleInputChange);
     $(window).on('scroll.registration-form', this._handleWindowScroll);
@@ -24,6 +25,7 @@ class RegistrationForm {
     this.$header = $domElement.find('.js-registration-form__header');
     this.$passHeader = $domElement.find('.js-pass-selector__title');
     this.$registerButton = $domElement.find('.js-registration-form__button');
+    return this;
   }
 
   _addFormValidation() {
@@ -39,6 +41,7 @@ class RegistrationForm {
       focusInvalid: true,
       errorPlacement() {},
     });
+    return this;
   }
 
   _updateBreadCrumbs(itemNumber) {

@@ -1,4 +1,5 @@
 import 'jquery-ui/ui/widgets/slider';
+import bind from 'bind-decorator';
 
 require('jquery-ui-touch-punch');
 
@@ -11,12 +12,16 @@ class Slider {
     this._findElements(domElement);
     const settings = this._generateSliderSettings();
     this.$sliderContainer.slider(settings);
+
+    const currentValue = this.$sliderContainer.slider('option', 'value');
+    this._updateTip(currentValue);
   }
 
   _findElements(domElement) {
     this.$slider = $(domElement);
     this.$sliderContainer = this.$slider.find('.js-slider__container');
     this.$tip = this.$slider.find('.js-slider__tip');
+    return this;
   }
 
   _generateSliderSettings() {
@@ -33,10 +38,9 @@ class Slider {
     if (this.$slider.hasClass('js-slider_type_tip')) {
       typeSettings = {
         value: 40,
-        create: () => { this._updateTip(40); },
-        slide: (event, ui) => { this._updateTip(ui.value); },
-        start: () => { this.$tip.addClass('slider__tip_visible'); },
-        stop: () => { this.$tip.removeClass('slider__tip_visible'); },
+        slide: this._handleSliderSlide,
+        start: this._handleSliderStart,
+        stop: this._handleSliderStop,
       };
     } else if (this.$slider.hasClass('js-slider_type_scale')) {
       typeSettings = {
@@ -47,6 +51,21 @@ class Slider {
     }
 
     return { ...settings, ...typeSettings };
+  }
+
+  @bind
+  _handleSliderSlide(event, ui) {
+    this._updateTip(ui.value);
+  }
+
+  @bind
+  _handleSliderStart() {
+    this.$tip.addClass('slider__tip_visible');
+  }
+
+  @bind
+  _handleSliderStop() {
+    this.$tip.removeClass('slider__tip_visible');
   }
 
   _updateTip(value) {

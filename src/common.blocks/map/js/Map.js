@@ -5,11 +5,8 @@ const pinImg = require('../img/pins.png');
 
 class Map {
   constructor(domElement, googleMaps) {
-    this.$domElement = $(domElement);
     this.googleMaps = googleMaps;
-    this.mapContainer = this.$domElement.find('.js-map__container')[0];
-    this.mapCenter = this._getInitialMapCenter();
-    this._initialize();
+    this._initialize(domElement);
   }
 
   static loadGoogleMapsApi() {
@@ -18,9 +15,18 @@ class Map {
     });
   }
 
-  _initialize() {
-    this._loadImages();
-    this._initMap();
+  _initialize(domElement) {
+    this
+      ._findElements(domElement)
+      ._loadImages()
+      ._initMap();
+  }
+
+  _findElements(domElement) {
+    const $domElement = $(domElement);
+    this.$footerButton = $domElement.find('.js-map__button');
+    this.$mapContainer = $domElement.find('.js-map__container');
+    return this;
   }
 
   _loadImages() {
@@ -38,19 +44,22 @@ class Map {
         anchor: new this.googleMaps.Point(22.5, 78),
       },
     ];
+    return this;
   }
 
   _initMap() {
+    this.mapCenter = this._getInitialMapCenter();
     const initOptions = { center: this.mapCenter, zoom: 14 };
-    const $footerButton = this.$domElement.find('.js-map__button');
-    this.map = new this.googleMaps.Map(this.mapContainer, initOptions);
+    this.map = new this.googleMaps.Map(this.$mapContainer[0], initOptions);
     this.infoWindow = new this.googleMaps.InfoWindow();
     this._addMarker(this._getMainPinCenter(), this.images[0], 'Meet us here!');
     this._locateUser();
 
-    $footerButton
+    this.$footerButton
       .on('click.map', this._handleFooterButtonClick)
       .on('keypress.map', this._handleFooterButtonKeyPress);
+
+    return this;
   }
 
   _addMarker(location, image, title) {
@@ -64,14 +73,14 @@ class Map {
   }
 
   _getInitialMapCenter() {
-    const mapCoords = this.mapContainer.dataset;
+    const mapCoords = this.$mapContainer[0].dataset;
     const lat = Number(mapCoords.lat);
     const lng = Number(mapCoords.lng);
     return new this.googleMaps.LatLng(lat, lng);
   }
 
   _getMainPinCenter() {
-    const mapCoords = this.mapContainer.dataset;
+    const mapCoords = this.$mapContainer[0].dataset;
     const plat = Number(mapCoords.plat);
     const plng = Number(mapCoords.plng);
     return new this.googleMaps.LatLng(plat, plng);
@@ -107,9 +116,9 @@ class Map {
   _handleFooterButtonClick(event) {
     const $target = $(event.currentTarget);
     if ($target.hasClass('js-map__button_type_search')) {
-      this._showUserLocation();
+      this._handleSearchButtonClick();
     } else if ($target.hasClass('js-map__button_type_pin')) {
-      this._backToCenter();
+      this._handlePinButtonClick();
     }
     $target.blur();
   }
@@ -121,14 +130,14 @@ class Map {
     }
   }
 
-  _backToCenter() {
-    this.map.panTo(this.mapCenter);
-    if (this.infoWindow) this.infoWindow.close();
-  }
-
-  _showUserLocation() {
+  _handleSearchButtonClick() {
     if (this.userMarker) this.map.panTo(this.userMarker.getPosition());
     this.infoWindow.open(this.map);
+  }
+
+  _handlePinButtonClick() {
+    this.map.panTo(this.mapCenter);
+    if (this.infoWindow) this.infoWindow.close();
   }
 }
 

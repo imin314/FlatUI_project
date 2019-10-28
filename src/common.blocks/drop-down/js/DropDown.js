@@ -30,9 +30,7 @@ class DropDown {
   _handleDropDownKeyPress(event) {
     if (event.which === 13) {
       $(event.target).click();
-      return false;
     }
-    return true;
   }
 }
 

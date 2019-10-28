@@ -2,12 +2,11 @@ import bind from 'bind-decorator';
 
 class OnlineHelp {
   constructor(domElement) {
-    this.$domElement = $(domElement);
-    this._initialize();
+    this._initialize(domElement);
   }
 
-  _initialize() {
-    const $container = this.$domElement;
+  _initialize(domElement) {
+    const $container = $(domElement);
     const $button = $container.find('.js-online-help__button');
     this.$messenger = $container.find('.js-online-help__messenger');
     $button.on('click.messenger', this._handleButtonClick);

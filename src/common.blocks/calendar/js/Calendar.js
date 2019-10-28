@@ -13,8 +13,8 @@ class Calendar {
     this.$calendar.datepicker(settings);
 
     this
-      ._prependDayContainer()
-      ._appendButtonPane()
+      ._addDayContainer()
+      ._addButtonPane()
       ._updateDayText(this.$calendar.datepicker('getDate'));
   }
 
@@ -32,7 +32,7 @@ class Calendar {
     return settings;
   }
 
-  _prependDayContainer() {
+  _addDayContainer() {
     const $dayContainer = $('<div></div>', { class: 'calendar__day-container' });
     this.$dayText = $('<span></span>', {
       class: 'calendar__day-text',
@@ -45,7 +45,7 @@ class Calendar {
     return this;
   }
 
-  _appendButtonPane() {
+  _addButtonPane() {
     const $buttonPane = $('<div></div>', { class: 'calendar__button-pane' });
     this.$todayButton = $('<button></button>', {
       class: 'calendar__today-button',
@@ -70,7 +70,6 @@ class Calendar {
   @bind
   _handleCalendarSelect(value) {
     this._updateDayText(value);
-    return this;
   }
 
   @bind
@@ -82,7 +81,6 @@ class Calendar {
       this.$calendar.datepicker('setDate', newDate);
       this._updateDayText(newDate);
     }
-    return this;
   }
 
   @bind
@@ -91,8 +89,6 @@ class Calendar {
     this.$calendar.datepicker('setDate', today);
     this._updateDayText(today);
     this.$todayButton.blur();
-
-    return this;
   }
 }
 
