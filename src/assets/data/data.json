@@ -312,5 +312,31 @@
         "isExternal": true
       }
     ]
-  }
+  },
+  "navigation": [
+    {
+      "link": "index.html",
+      "text": "Home"
+    },
+    {
+      "link": "registration.html",
+      "text": "Registration"
+    },
+    {
+      "link": "schedule.html",
+      "text": "Schedule"
+    },
+    {
+      "link": "speakers.html",
+      "text": "Speakers"
+    },
+    {
+      "link": "contacts.html",
+      "text": "Contacts"
+    },
+    {
+      "link": "uidemo.html",
+      "text": "UI Kit Demo"
+    }
+  ]
 }

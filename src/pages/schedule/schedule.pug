@@ -2,6 +2,7 @@ extends ../../templates/layout.pug
 
 include ../../common.blocks/talks-section/talks-section.pug
 include ../../common.blocks/footer-section/footer-section.pug
+include ../../common.blocks/navigation-bar/navigation-bar.pug
 
 block title
   title Schedule
@@ -9,13 +10,15 @@ block title
 block content
   -
     const data = require('../../assets/data/data.json');
-    const { talks, footer } = data;
+    const { navigation, talks, footer } = data;
   .schedule
+    .schedule__navigation-bar
+      +navigationBar(navigation)
     main.schedule__main
       h1.schedule__title Schedule
       main.schedule__content
         +talksSection(talks)
-    footer.schedule__footer
+    .schedule__footer
       +footerSection(footer)
 
    

@@ -1,4 +1,4 @@
-mixin navigationBar()
+mixin navigationBar(navData)
   nav.navigation-bar
     input.navigation-bar__toggle(id="toggle" type="checkbox")
     label.navigation-bar__icon(for="toggle")
@@ -6,15 +6,7 @@ mixin navigationBar()
       span.navigation-bar__icon-line
       span.navigation-bar__icon-line
     ul.navigation-bar__menu
-      li.navigation-bar__item
-        a.navigation-bar__link(href="index.html" title="Home") Home
-      li.navigation-bar__item
-        a.navigation-bar__link(href="registration.html" title="Registration") Registration
-      li.navigation-bar__item
-        a.navigation-bar__link(href="schedule.html" title="Schedule") Schedule
-      li.navigation-bar__item
-        a.navigation-bar__link(href="speakers.html" title="Speakers") Speakers
-      li.navigation-bar__item
-        a.navigation-bar__link(href="contacts.html" title="Contacts") Contacts
-      li.navigation-bar__item
-        a.navigation-bar__link(href="uidemo.html" title="UI Kit Demo") UI Kit Demo
+      each item in navData
+        - const { link, text } = item;
+        li.navigation-bar__item
+          a.navigation-bar__link(href=link title=text)= text

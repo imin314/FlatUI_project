@@ -1,5 +1,6 @@
 extends ../../templates/layout.pug
 
+include ../../common.blocks/navigation-bar/navigation-bar.pug
 include ../../common.blocks/button-section/button-section.pug
 include ../../common.blocks/arrow-section/arrow-section.pug
 include ../../common.blocks/chart-section/chart-section.pug
@@ -18,7 +19,12 @@ block title
   title UI Demo Kit
 
 block content
+  -
+    const data = require('../../assets/data/data.json');
+    const { navigation } = data;
   .uidemo
+    .uidemo__navigation-bar
+      +navigationBar(navigation)
     main.uidemo__main
       section.uidemo__button-section
         +buttonSection()

@@ -2,7 +2,7 @@ include ../footer-link-list/footer-link-list.pug
 
 mixin footerSection(footerData)
   - const { contacts = [], docs = []} = footerData
-  .footer-section
+  footer.footer-section
     .footer-section__contacts
       +footer-link-list({
         title: 'Contact Us',

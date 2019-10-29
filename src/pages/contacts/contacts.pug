@@ -4,6 +4,7 @@ include ../../common.blocks/email-form/email-form.pug
 include ../../common.blocks/map/map.pug
 include ../../common.blocks/online-help/online-help.pug
 include ../../common.blocks/footer-section/footer-section.pug
+include ../../common.blocks/navigation-bar/navigation-bar.pug
 
 block title
   title Contact Us
@@ -11,8 +12,10 @@ block title
 block content
   -
     const data = require('../../assets/data/data.json');
-    const { footer } = data;
+    const { navigation, footer } = data;
   .contacts
+    .contacts__navigation-bar
+      +navigationBar(navigation)
     main.contacts__main
       h1.contacts__title Contact Us
       section.contacts__email
@@ -36,5 +39,5 @@ block content
         })
       aside.contacts__online-help
         +onlineHelp()
-    footer.contacts__footer
+    .contacts__footer
       +footerSection(footer)

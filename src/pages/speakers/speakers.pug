@@ -3,6 +3,7 @@ extends ../../templates/layout.pug
 include ../../common.blocks/search-box/search-box.pug
 include ../../common.blocks/speaker-carousel/speaker-carousel.pug
 include ../../common.blocks/footer-section/footer-section.pug
+include ../../common.blocks/navigation-bar/navigation-bar.pug
 
 block title
   title Speakers
@@ -10,8 +11,10 @@ block title
 block content
   -
     const data = require('../../assets/data/data.json');
-    const { speakers, footer } = data;
+    const { navigation, speakers, footer } = data;
   .speakers.js-speakers
+    .speakers__navigation-bar
+      +navigationBar(navigation)
     main.speakers__main
       header.speakers__header
         h1.speakers__title Speakers
@@ -20,5 +23,5 @@ block content
         +searchBox()
       .speakers__carousel
         +speakerCarousel(speakers)
-    footer.speakers__footer
+    .speakers__footer
       +footerSection(footer)

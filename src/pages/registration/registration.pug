@@ -3,6 +3,7 @@ extends ../../templates/layout.pug
 include ../../common.blocks/bread-crumbs/bread-crumbs.pug
 include ../../common.blocks/registration-form/registration-form.pug
 include ../../common.blocks/footer-section/footer-section.pug
+include ../../common.blocks/navigation-bar/navigation-bar.pug
 
 block title
   title Register
@@ -10,11 +11,13 @@ block title
 block content
   -
     const data = require('../../assets/data/data.json');
-    const { footer } = data;
+    const { navigation, footer } = data;
   .registration.js-registration
+    .registration__navigation-bar
+      +navigationBar(navigation)
     main.registration__main
       .registration__form
         +registrationForm()
-    footer.registration__footer
+    .registration__footer
       +footerSection(footer)
   

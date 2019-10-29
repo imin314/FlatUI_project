@@ -4,12 +4,15 @@ include ../../common.blocks/banner-section/banner-section.pug
 include ../../common.blocks/about-section/about-section.pug
 include ../../common.blocks/event-carousel/event-carousel.pug
 include ../../common.blocks/footer-section/footer-section.pug
+include ../../common.blocks/navigation-bar/navigation-bar.pug
 
 block content
   -
     const data = require('../../assets/data/data.json');
-    const { talks, footer } = data;
+    const { navigation, talks, footer } = data;
   .index
+    .index__navigation-bar
+      +navigationBar(navigation)
     main.index__main
       .index__banner
         +bannerSection()
@@ -17,5 +20,5 @@ block content
         +aboutSection()
       .index__events
         +eventCarousel(talks)
-    footer.index__footer
+    .index__footer
       +footerSection(footer)

@@ -1,6 +1,6 @@
 mixin footer-link-list(options)
   -
-    const { title: listTitle, data: listData, type: listType } = options
+    const { title: listTitle, data: listData, type: listType } = options;
     const typeModifiers = { titled: 'footer-link-list_titled' };
     let className = 'footer-link-list';
     if (listType in typeModifiers) {
@@ -11,7 +11,7 @@ mixin footer-link-list(options)
     ul.footer-link-list__list
       each item in listData
         -
-          const { title, link, text, isExternal } = item
+          const { title, link, text, isExternal } = item;
           const target = !!isExternal ? '_blank' : false;
           const rel = !!isExternal ? 'noopener noreferrer' : false;
         li.footer-link-list__list-item
