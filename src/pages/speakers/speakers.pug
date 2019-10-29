@@ -10,7 +10,7 @@ block title
 block content
   -
     const data = require('../../assets/data/data.json');
-    const { speakers } = data;
+    const { speakers, footer } = data;
   .speakers.js-speakers
     main.speakers__main
       header.speakers__header
@@ -21,4 +21,4 @@ block content
       .speakers__carousel
         +speakerCarousel(speakers)
     footer.speakers__footer
-      +footerSection()
+      +footerSection(footer)

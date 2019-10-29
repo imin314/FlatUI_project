@@ -9,6 +9,9 @@ block title
   title Contact Us
 
 block content
+  -
+    const data = require('../../assets/data/data.json');
+    const { footer } = data;
   .contacts
     main.contacts__main
       h1.contacts__title Contact Us
@@ -34,4 +37,4 @@ block content
       aside.contacts__online-help
         +onlineHelp()
     footer.contacts__footer
-      +footerSection()
+      +footerSection(footer)

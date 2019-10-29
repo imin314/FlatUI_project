@@ -8,10 +8,13 @@ block title
   title Register
 
 block content
+  -
+    const data = require('../../assets/data/data.json');
+    const { footer } = data;
   .registration.js-registration
     main.registration__main
       .registration__form
         +registrationForm()
     footer.registration__footer
-      +footerSection()
+      +footerSection(footer)
   

@@ -272,5 +272,45 @@
       "text": "Modern CSS gives us a comprehensive set of tools that lets us embrace the fluidity of the web.",
       "img": "development-img.jpg"
     }
-  ]
+  ],
+  "footer": {
+    "contacts": [
+      {
+        "title": "E-mail",
+        "link": "mailto:info@nonexistingwt.org",
+        "text": "info@nonexistingwt.org"
+      },
+      {
+        "title": "Twitter",
+        "link": "./sorry_this_link_is_dead",
+        "isExternal": true,
+        "text": "@nonexistingwebtalks"
+      },
+      {
+        "title": "Phone",
+        "link": "tel:+73822000000",
+        "text": "+7 3822 000 000"
+      }
+    ],
+    "docs": [
+      {
+        "title": "newsletter",
+        "text": "Newsletter",
+        "link": "./sorry_this_link_is_dead",
+        "isExternal": true
+      },
+      {
+        "title": "terms and conditions",
+        "text": "Terms and conditions",
+        "link": "./sorry_this_link_is_dead",
+        "isExternal": true
+      },
+      {
+        "title": "privacy policy",
+        "text": "Privacy policy",
+        "link": "./sorry_this_link_is_dead",
+        "isExternal": true
+      }
+    ]
+  }
 }

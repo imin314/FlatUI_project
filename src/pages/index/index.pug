@@ -8,7 +8,7 @@ include ../../common.blocks/footer-section/footer-section.pug
 block content
   -
     const data = require('../../assets/data/data.json');
-    const { talks } = data;
+    const { talks, footer } = data;
   .index
     main.index__main
       .index__banner
@@ -18,4 +18,4 @@ block content
       .index__events
         +eventCarousel(talks)
     footer.index__footer
-      +footerSection()
+      +footerSection(footer)

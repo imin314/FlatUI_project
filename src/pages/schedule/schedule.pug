@@ -9,13 +9,13 @@ block title
 block content
   -
     const data = require('../../assets/data/data.json');
-    const { talks } = data;
+    const { talks, footer } = data;
   .schedule
     main.schedule__main
       h1.schedule__title Schedule
       main.schedule__content
         +talksSection(talks)
     footer.schedule__footer
-      +footerSection()
+      +footerSection(footer)
 
    

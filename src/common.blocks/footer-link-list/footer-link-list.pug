@@ -1,0 +1,25 @@
+mixin footer-link-list(options)
+  -
+    const { title: listTitle, data: listData, type: listType } = options
+    const typeModifiers = { titled: 'footer-link-list_titled' };
+    let className = 'footer-link-list';
+    if (listType in typeModifiers) {
+      className += ` ${typeModifiers[listType]}`;
+    }
+  section(class=className)
+    h3.footer-link-list__title= listTitle
+    ul.footer-link-list__list
+      each item in listData
+        -
+          const { title, link, text, isExternal } = item
+          const target = !!isExternal ? '_blank' : false;
+          const rel = !!isExternal ? 'noopener noreferrer' : false;
+        li.footer-link-list__list-item
+          - if (listType === 'titled')
+            p.footer-link-list__paragraph= `${title}:`
+          p.footer-link-list__paragraph
+            a.footer-link-list__link(
+              href=link
+              title=title
+              target=target
+              rel=rel)= text
