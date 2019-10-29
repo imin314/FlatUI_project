@@ -12,7 +12,7 @@ block title
 block content
   -
     const data = require('../../assets/data/data.json');
-    const { navigation, footer } = data;
+    const { navigation, footer, map } = data;
   .contacts
     .contacts__navigation-bar
       +navigationBar(navigation)
@@ -23,20 +23,7 @@ block content
         .contacts__form
           +emailForm()
       section.contacts__map
-        +map({
-          address: {
-            street: '14 Karla Marksa st',
-            city: 'Tomsk, Russia'
-          },
-          mapCenter: {
-            lat: 56.490925,
-            lng: 84.946053
-          },
-          pinCenter: {
-            lat: 56.490025,
-            lng: 84.946053
-          }
-        })
+        +map(map)
       aside.contacts__online-help
         +onlineHelp()
     .contacts__footer

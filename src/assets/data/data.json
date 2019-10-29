@@ -364,5 +364,19 @@
       "link": "uidemo.html",
       "text": "UI Kit Demo"
     }
-  ]
+  ],
+  "map": {
+    "address": {
+      "street": "14 Karla Marksa st",
+      "city": "Tomsk, Russia"
+    },
+    "mapCenter": {
+      "lat": 56.490925,
+      "lng": 84.946053
+    },
+    "pinCenter": {
+      "lat": 56.490025,
+      "lng": 84.946053
+    }
+  }
 }
