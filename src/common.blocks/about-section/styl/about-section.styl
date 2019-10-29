@@ -12,6 +12,11 @@
     @media screen and (max-width: 768px)
       flex-wrap wrap
 
+  &__left-col
+    flex 32.96703297rem 2 2
+    max-width 60.44rem
+    padding 2rem
+
   &__title
     sectionTitle()
     margin 2rem 0 1rem
@@ -19,25 +24,15 @@
     &:first-of-type
       margin-top 0
 
-  &__subtitle
-    margin 1rem 0 0.5rem
-    font bold 1rem font-family
-    color color-cyan
-
   &__text
-    flex 32.96703297rem 2 2
-    max-width 60.44rem
-    padding 2rem
-
-  &__intro
     font-size 1rem
     text-align justify
     color color-text
 
-    &:first-of-type
-      clearfix()
+    &~&
+      margin-top 1rem
 
-  &__common-paragraph
+  &__paragraph
     padding-top 0.9rem
 
   &__video-link
@@ -72,7 +67,7 @@
     margin 0 auto
     transform translateY(-50%)
 
-
-
-  
-    
+  &__subtitle
+    font bold 1rem font-family
+    text-transform capitalize
+    color color-cyan

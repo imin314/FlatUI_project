@@ -273,6 +273,32 @@
       "img": "development-img.jpg"
     }
   ],
+  "about": {
+    "intro": {
+      "title": "about web talks 2019",
+      "text": [
+        "Our field is constantly changing, where last year's cutting edge is this year's commonplace, and today's best practice is tomorrow's old hat. For well over a decade, we've tracked practices, patterns and technologies to keep our audience up to date.",
+        "Web Talks brings together the whole team, with three curated tracks, one focused on development and engineering, one focused on design, and one focused on management. For this, we've brought together the finest minds at the intersection of technology, design, and management in an atmosphere unlike any other."
+      ]
+    },
+    "audience": {
+      "title": "who's it for?",
+      "text": [
+        {
+          "subtitle": "the design team",
+          "content": "UX, IxD, visual, Web, Front End and CX experts, Art Directors, Creative Directors, Experience Leads, Design Leads and Design Researchers should all attend to hear these world leading experts."
+        },
+        {
+          "subtitle": "the engineering team",
+          "content": "We've got the whole front end development team covered: front end engineers, JavaScript and Web developers, engineering leads, engineering managers, devops experts, CTOs."
+        },
+        {
+          "subtitle": "leaders and decision makers",
+          "content": "To round it out, our audience is full of smart decision makers, who know taking the pulse of what's now, and next, is vital in making the right strategic decisions. Two tracks, and a mixture of deep dive and high level sessions ensures there's something for you too. Meanwhile, outside the sessions, you'll find engaging showcases of technology and design to keep you thinking."
+        }
+      ]
+    }
+  },
   "footer": {
     "contacts": [
       {

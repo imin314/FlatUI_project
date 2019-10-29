@@ -1,32 +1,35 @@
 include ../video/video.pug
 include ../infogram/infogram.pug
 
-mixin aboutSection()
+mixin aboutSection(aboutData)
+  -
+    const { intro, audience } = aboutData;
+    const { title: introTitle, text: introText } = intro;
+    const { title: audienceTitle, text: audienceText } = audience;
   section.about-section
     .about-section__block
-      .about-section__text
-        h3.about-section__title About Web Talks 2019
-        .about-section__intro
-          p.about-section__common-paragraph field is constantly changing, where last year's cutting edge is this year's commonplace, and today's best practice is tomorrow's old hat. For well over a decade, we've tracked practices, patterns and technologies to keep our audience up to date.
-          p.about-section__common-paragraph Web Talks brings together the whole team, with three curated tracks, one focused on development and engineering, one focused on design, and one focused on management. For this, we've brought together the finest minds at the intersection of technology, design, and management in an atmosphere unlike any other.
-          a.about-section__video-link(
-            href="https://www.youtube.com/channel/UCELSb-IYi_d5rYFOxWeOz5g"
-            title="Watch more"
-            target="_blank"
-            rel="noopener noreferrer"
-          ) See what happened in 2018 &gt;
+      .about-section__left-col
+        h3.about-section__title= introTitle
+        .about-section__text
+          each item in introText
+            p.about-section__paragraph= item
+        a.about-section__video-link(
+          href="https://www.youtube.com/channel/UCELSb-IYi_d5rYFOxWeOz5g"
+          title="Watch more"
+          target="_blank"
+          rel="noopener noreferrer"
+        ) See what happened in 2018 &gt;
       .about-section__right-col
         .about-section__video
           +video('https://www.youtube.com/embed/yNVLjsAvp3E')
     .about-section__block
-      .about-section__text
-        h3.about-section__title Who's it for?
-        h4.about-section__subtitle The Design Team
-        p.about-section__intro UX, IxD, visual, Web, Front End and CX experts, Art Directors, Creative Directors, Experience Leads, Design Leads and Design Researchers should all attend to hear these world leading experts.
-        h4.about-section__subtitle The Engineering Team
-        p.about-section__intro We've got the whole front end development team covered: front end engineers, JavaScript and Web developers, engineering leads, engineering managers, devops experts, CTOs.
-        h4.about-section__subtitle Leaders and Decision Makers
-        p.about-section__intro To round it out, our audience is full of smart decision makers, who know taking the pulse of what's now, and next, is vital in making the right strategic decisions. Two tracks, and a mixture of deep dive and high level sessions ensures there's something for you too. Meanwhile, outside the sessions, you'll find engaging showcases of technology and design to keep you thinking.
+      .about-section__left-col
+        h3.about-section__title= audienceTitle
+        each item in audienceText
+          - const { subtitle, content } = item
+          .about-section__text
+            h4.about-section__subtitle= subtitle
+            p.about-section__paragraph= content
       .about-section__right-col
         +infogram()
         

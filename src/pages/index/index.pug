@@ -9,7 +9,7 @@ include ../../common.blocks/navigation-bar/navigation-bar.pug
 block content
   -
     const data = require('../../assets/data/data.json');
-    const { navigation, talks, footer } = data;
+    const { navigation, about, talks, footer } = data;
   .index
     .index__navigation-bar
       +navigationBar(navigation)
@@ -17,7 +17,7 @@ block content
       .index__banner
         +bannerSection()
       .index__about
-        +aboutSection()
+        +aboutSection(about)
       .index__events
         +eventCarousel(talks)
     .index__footer
