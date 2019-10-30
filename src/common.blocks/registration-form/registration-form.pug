@@ -12,12 +12,15 @@ mixin registrationForm()
         h1.registration-form__title Join us at Web Talks 2019
         .registration-form__bread-crumbs
           +breadCrumbs({ active: 1, max: 3 })
-      section.registration-form__stage.js-registration-form__stage.registration-form__stage_first
-        +subscribeForm()
-      section.registration-form__stage.js-registration-form__stage.registration-form__stage_second
-        +passSelector()
-      section.registration-form__stage.js-registration-form__stage.registration-form__stage_third
-        .registration-form__policy-tickbox
-          +policyTickbox()
-        .registration-form__button.js-registration-form__button
-          +button({ title: 'register', color: 'reverse' })
+      section.registration-form__stage.js-registration-form__stage
+        .registration-form__subscribe-form
+          +subscribeForm()
+      section.registration-form__stage.js-registration-form__stage
+        .registration-form__pass-selector
+          +passSelector()
+      section.registration-form__stage.js-registration-form__stage
+        .registration-form__submit
+          .registration-form__policy-tickbox
+            +policyTickbox()
+          .registration-form__button.js-registration-form__button
+            +button({ title: 'register', color: 'reverse' })
