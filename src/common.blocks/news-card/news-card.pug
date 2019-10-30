@@ -5,20 +5,24 @@ mixin newsCard(cardData, settings)
     const options = settings || {};
     const { img: cardImg, date: cardDate, title: cardTitle, text: cardText } = cardData;
     const { type: cardType, isCompact, color, withScrollbar } = options;
+    
     const typeModifiers = { event: 'news-card_type_event' };
     const sizeModifiers = { compact: 'news-card_size_compact' };
     const colorModifiers = { reverted: 'news-card_color_reverted' };
     const scrollbarModifiers = { withScrollbar: 'news-card_with-scrollbar' };
+    
     const img = require(`../../common.blocks/news-card/img/${cardImg}`);
     const date = new Date(cardDate);
     const day = date.getDate();
     const year = date.getFullYear();
     let month = date.toLocaleString('en-us', { month: 'long' });
     let className = 'news-card js-news-card';
+    
     if (cardType in typeModifiers) className += ` ${typeModifiers[cardType]}`;
     if (isCompact) className += ` ${sizeModifiers.compact}`;
     if (color in colorModifiers) className += ` ${colorModifiers[color]}`;
     if (withScrollbar) className += ` ${scrollbarModifiers.withScrollbar}`;
+    
   div(class=className)
     .news-card__image(style=`background-image: url(${img})`)
     .news-card__content
@@ -33,6 +37,6 @@ mixin newsCard(cardData, settings)
           +button({ title:'add to calendar', size: 'small' })
       - } else {
         .news-card__title= cardTitle
-        .news-card__date= day + ' ' + month + ' ' + year
+        .news-card__date= `${day} ${month} ${year}`
         .news-card__text.js-news-card__text= cardText
       - }
