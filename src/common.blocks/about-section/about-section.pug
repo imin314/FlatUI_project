@@ -3,9 +3,10 @@ include ../infogram/infogram.pug
 
 mixin aboutSection(aboutData)
   -
-    const { intro, audience } = aboutData;
+    const { intro, audience, video, infogram } = aboutData;
     const { title: introTitle, text: introText } = intro;
     const { title: audienceTitle, text: audienceText } = audience;
+    const { link, linkTitle, linkToEmbed, caption } = video;
   section.about-section
     .about-section__block
       .about-section__left-col
@@ -14,14 +15,14 @@ mixin aboutSection(aboutData)
           each item in introText
             p.about-section__paragraph= item
         a.about-section__video-link(
-          href="https://www.youtube.com/channel/UCELSb-IYi_d5rYFOxWeOz5g"
-          title="Watch more"
+          href=link
+          title=linkTitle
           target="_blank"
           rel="noopener noreferrer"
-        ) See what happened in 2018 &gt;
+        )= caption
       .about-section__right-col
         .about-section__video
-          +video('https://www.youtube.com/embed/yNVLjsAvp3E')
+          +video(linkToEmbed)
     .about-section__block
       .about-section__left-col
         h3.about-section__title= audienceTitle
@@ -31,6 +32,6 @@ mixin aboutSection(aboutData)
             h4.about-section__subtitle= subtitle
             p.about-section__paragraph= content
       .about-section__right-col
-        +infogram()
+        +infogram(infogram)
         
     

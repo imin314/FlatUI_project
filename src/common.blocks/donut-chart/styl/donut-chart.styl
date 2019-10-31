@@ -1,5 +1,5 @@
 @import '../../../styles/variables.styl'
-@import './donut-chart-mixin.styl'
+@import '../../../styles/mixins.styl'
 
 .donut-chart
   position relative
@@ -34,9 +34,9 @@
 
     & ^[0]__segment
       stroke-width 0.384615384615385rem
-      for num in (2..10)
-        &:nth-child({num})
-          stroke setSliceColorByIndex(num)
+      for num in (1..10)
+        &:nth-child({num + 1})
+          stroke setColorByIndex(num)
   
   &_color_transparent
     & ^[0]__ring

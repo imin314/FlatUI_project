@@ -297,7 +297,31 @@
           "content": "To round it out, our audience is full of smart decision makers, who know taking the pulse of what's now, and next, is vital in making the right strategic decisions. Two tracks, and a mixture of deep dive and high level sessions ensures there's something for you too. Meanwhile, outside the sessions, you'll find engaging showcases of technology and design to keep you thinking."
         }
       ]
-    }
+    },
+    "video": {
+      "link": "https://www.youtube.com/channel/UCELSb-IYi_d5rYFOxWeOz5g",
+      "linkTitle": "Watch more",
+      "linkToEmbed": "https://www.youtube.com/embed/yNVLjsAvp3E",
+      "caption": "See what happened in 2018 >"
+    },
+    "infogram": [
+      {
+        "type": "chart",
+        "comment": "Three tracks covering actual topics of Development, Design, and Management with total of 18 intense workshops and talks.",
+        "values": [61, 22, 17],
+        "highlights": ["Development", "Design", "Management"]
+      },
+      {
+        "type": "fact",
+        "value": "600+",
+        "comment": "Passionate attendees"
+      },
+      {
+        "type": "fact",
+        "value": "7",
+        "description": "Intense days"
+      }
+    ]
   },
   "footer": {
     "contacts": [

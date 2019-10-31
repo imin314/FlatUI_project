@@ -1,21 +1,27 @@
 include ../donut-chart/donut-chart.pug
 
-mixin infogram()
+mixin infogram(infogramData)
   ul.infogram
-    li.infogram__stat-item
-      .infogram__comment
-        | Three tracks covering actual topics of 
-        span.infogram__topic.infogram__topic_color_gray Development
-        | , 
-        span.infogram__topic.infogram__topic_color_orange Design
-        | , and 
-        span.infogram__topic.infogram__topic_color_cyan Management 
-        | with total of 18 intense workshops and talks.
-      .infogram__chart
-        +donutChart({ values: '61, 22, 17', type: 'pie' })
-    li.infogram__stat-item
-      .infogram__number 600+
-      .infogram__comment Passionate attendees
-    li.infogram__stat-item
-      .infogram__number 7
-      .infogram__comment Intense Days 
+    each item in infogramData
+      - const { type, value, comment } = item;
+      if (type === 'fact')
+        li.infogram__stat-item
+          .infogram__number= value
+          .infogram__comment= comment
+      else if (type === 'chart')
+        -
+          const { values, highlights } = item;
+          const pattern = highlights.map((value) => {
+            return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+          }).join('|');
+          const findMarkedRegExp = new RegExp(`(${pattern})`, 'g');
+          const splittedText = comment.split(findMarkedRegExp);
+        li.infogram__stat-item
+          .infogram__comment
+            each substring in splittedText
+              if (highlights.indexOf(substring) !== -1)
+                span.infogram__highlight= substring
+              else
+                =substring
+          .infogram__chart
+            +donutChart({ values: values.join(', '), type: 'pie' })

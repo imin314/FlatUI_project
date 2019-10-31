@@ -1,4 +1,5 @@
 @import '../../../styles/variables.styl'
+@import '../../../styles/mixins.styl'
 
 .infogram
   display table
@@ -22,18 +23,11 @@
       border-left none
       border-right 0.8rem solid transparent
 
-  &__topic
+  &__highlight
     font bold 1.2rem font-family
-
-    &_color
-      &_gray
-        color color-bg-darker
-
-      &_orange
-        color color-orange
-
-      &_cyan
-        color color-cyan
+    for num in (1..3)
+      &:nth-child({num})
+        color setColorByIndex(num)
 
   &__chart
     display table-cell
