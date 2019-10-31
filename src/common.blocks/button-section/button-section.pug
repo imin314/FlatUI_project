@@ -1,32 +1,17 @@
 include ../button/button.pug
 
-mixin buttonSection()
+mixin buttonSection(sectionData)
+  - const { title, elements } = sectionData;
   section.button-section
-    h2.button-section__title standard buttons
+    h2.button-section__title= title
     .button-section__container
-      .button-section__column
-        .button-section__button.button-section__button_size_small
-          +button({ title: 'button', size: 'small' })
-        .button-section__button.button-section__button_size_small
-          +button({ title: 'button', size: 'small' })
-        .button-section__button.button-section__button_size_small
-          +button({ title: 'button', size: 'small' })
-        .button-section__button
-          +button({ title: 'button' })
-        .button-section__button
-          +button({ title: 'button' })
-        .button-section__button
-          +button({ title: 'button' })
-      .button-section__column
-        .button-section__button
-          +button({ title: 'button', color: 'orange' })
-        .button-section__button
-          +button({ title: 'button', color: 'orange' })
-        .button-section__button
-          +button({ title: 'button', color: 'orange' })
-        .button-section__button.button-section__button_size_small
-          +button({ title: 'button', color: 'orange', size: 'small'})
-        .button-section__button.button-section__button_size_small
-          +button({ title: 'button', color: 'orange', size: 'small'})
-        .button-section__button.button-section__button_size_small
-          +button({ title: 'button', color: 'orange', size: 'small'})
+      each item in elements
+        .button-section__column
+          - const smallItem = Object.assign({ size: 'small' }, item);
+          - for (let i = 0; i < 3; i++)
+            .button-section__button.button-section__button_size_small
+              +button(smallItem)
+          - for (let i = 0; i < 3; i++)
+            .button-section__button
+              +button(item)
+          

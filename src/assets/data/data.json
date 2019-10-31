@@ -323,6 +323,15 @@
       }
     ]
   },
+  "banner": {
+    "title": "Web Talks",
+    "tagline": "Three big tracks–Product, Design, and Developer focused, plus stellar keynotes and much more",
+    "location": "Tomsk / December 2019",
+    "button": {
+      "title": "pre-register for 2019",
+      "link": "registration.html"
+    }
+  },
   "footer": {
     "contacts": [
       {
@@ -401,6 +410,27 @@
     "pinCenter": {
       "lat": 56.490025,
       "lng": 84.946053
+    }
+  },
+  "uidemo": {
+    "arrowButtons": {
+      "title": "arrow buttons",
+      "elements": [
+        { "direction": "left" },
+        { "direction": "right" }
+      ]
+    },
+    "standardButtons": {
+      "title": "standard buttons",
+      "elements": [
+        {
+          "title": "button"
+        },
+        {
+          "title": "button",
+          "color": "orange"
+        }
+      ]
     }
   }
 }

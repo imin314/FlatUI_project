@@ -9,13 +9,13 @@ include ../../common.blocks/navigation-bar/navigation-bar.pug
 block content
   -
     const data = require('../../assets/data/data.json');
-    const { navigation, about, talks, footer } = data;
+    const { navigation, about, banner, talks, footer } = data;
   .index
     .index__navigation-bar
       +navigationBar(navigation)
     main.index__main
       .index__banner
-        +bannerSection()
+        +bannerSection(banner)
       .index__about
         +aboutSection(about)
       .index__events

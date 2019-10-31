@@ -2,13 +2,14 @@ mixin button(settings)
   -
     const {
       color,
-      size = '',
+      size,
       title: titleAttr = 'button',
       link: hrefAttr = false,
       isExternal = false
      } = settings;
     const targetAttr = !!isExternal ? '_blank' : false;
     const relAttr = !!isExternal ? 'noopener noreferrer' : false;
+
     const sizeModifiers = {
       small: 'button_size_small',
     };
@@ -16,15 +17,16 @@ mixin button(settings)
       reverse: 'button_color_reverse',
       orange: 'button_color_orange',
     };
+
     let className = 'button js-button';
+
     if (color in colorModifiers) {
       className += ` ${colorModifiers[color]}`;
     }
-    size.split(' ').forEach((key) => {
-      if (key in sizeModifiers) {
-        className += ` ${sizeModifiers[key]}`; 
-      }
-    });
+
+    if (size in sizeModifiers) {
+      className += ` ${sizeModifiers[size]}`; 
+    }
   a(
     class=className
     title=titleAttr
