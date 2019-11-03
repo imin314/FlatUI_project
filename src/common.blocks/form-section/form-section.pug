@@ -2,21 +2,27 @@ include ../email-form/email-form.pug
 include ../toggle-switch/toggle-switch.pug
 include ../tick-box/tick-box.pug
 
-mixin formSection()
+mixin formSection(settings = {})
+  -
+    const {
+      title = 'form elements',
+      toggleTitle = 'toggle',
+      tickboxTitle = 'tickboxes',
+    } = settings;
   section.form-section
-    h2.form-section__title form elements
+    h2.form-section__title= title
     .form-section__container
       .form-section__form
         +emailForm()
       .form-section__checkboxes
         form.form-section__toggles
-          h2.form-section__title toggles
+          h2.form-section__title= toggleTitle
           .form-section__toggle
-            +toggleSwitch()
+            +toggleSwitch({ name: 'toggle' })
           .form-section__toggle
-            +toggleSwitch({ checked: true })
+            +toggleSwitch({ name: 'toggle', checked: true })
         form.form-section__tickboxes
-          h2.form-section__title tick boxes
+          h2.form-section__title= tickboxTitle
           .form-section__tickbox
             +tickBox({ value: '1', name: 'tickbox', checked: true })
           .form-section__tickbox

@@ -1,8 +1,9 @@
 include ../news-card/news-card.pug
 
-mixin newsSection()
+mixin newsSection(settings = {})
+  - const { title = 'news & events' } = settings;
   section.news-section
-    h2.news-section__title news & events
+    h2.news-section__title= title
     .news-section__container
       .news-section__news-card
         +newsCard({

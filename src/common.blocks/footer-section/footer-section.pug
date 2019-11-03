@@ -1,7 +1,12 @@
 include ../footer-link-list/footer-link-list.pug
 
-mixin footerSection(footerData)
-  - const { contacts = [], docs = []} = footerData
+mixin footerSection(footerData = {})
+  -
+    const {
+      contacts = [],
+      docs = [],
+      copyright = '© Web Talks. All rights reserved.'
+    } = footerData;
   footer.footer-section
     .footer-section__contacts
       +footer-link-list({
@@ -14,4 +19,4 @@ mixin footerSection(footerData)
         title: 'More from Web Talks',
         data: docs,
       })
-    p.footer-section__copyright © 2018-2019 Web Talks. All rights reserved.
+    p.footer-section__copyright= copyright

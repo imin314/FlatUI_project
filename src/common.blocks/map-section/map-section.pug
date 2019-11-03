@@ -1,8 +1,9 @@
 include ../map/map.pug
 
-mixin mapSection()
+mixin mapSection(settings = {})
+  - const { title = 'location' } = settings;
   section.map-section
-    h2.map-section__title location
+    h2.map-section__title= title
     .map-section__map
       +map({
         address: {

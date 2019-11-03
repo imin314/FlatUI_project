@@ -1,9 +1,10 @@
-mixin map(settings)
+mixin map(settings = {})
   -
     const {
-      address: { street = '', city = ''},
-      mapCenter: { lat: mapLat = 26.893505, lng: mapLng = 80.967422 },
-      pinCenter: { lat: pinLat = 26.893505, lng: pinLng = 80.967422 }
+      address: { street = '', city = ''} = {},
+      mapCenter: { lat: mapLat = 26.893505, lng: mapLng = 80.967422 } = {},
+      pinCenter: { lat: pinLat = 26.893505, lng: pinLng = 80.967422 } = {},
+      title = 'Meet us!',
     } = settings;
   section.map.js-map
     .map__container.js-map__container(
@@ -13,7 +14,7 @@ mixin map(settings)
       data-plng= pinLng
     )
     .map__footer
-      .map__title Meet us!
+      .map__title= title
       .map__address
         .map__address-item.map__address-item_type_street= street
         .map__address-item.map__address-item_type_city= city

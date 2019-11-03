@@ -1,24 +1,30 @@
 include ../button/button.pug
 include ../validation-input/validation-input.pug
 
-mixin emailForm()
+mixin emailForm(settings = {})
+  -
+    const {
+      namePlaceholder = 'Your Name',
+      emailPlaceholder = 'Your Email',
+      textPlaceholder = 'Your Message',
+      buttonTitle = 'submit',
+    } = settings;
   form.email-form.js-email-form
     .email-form__input.email-form__input_type_name
       +validationInput({
         type: 'text',
         name: 'name',
-        placeholder: 'Your Name',
+        placeholder: namePlaceholder,
       })
     .email-form__input.email-form__input_type_email
       +validationInput({
         type: 'email',
         name: 'email',
-        placeholder: 'Your Email',
+        placeholder: emailPlaceholder,
       })
     textarea.email-form__message(
       name="message"
-      placeholder="Your Message"
-      arealabel="Message"
+      placeholder=textPlaceholder
     )
     .email-form__button.js-email-form__button
-      +button({ title: 'submit', color: 'reverse' })
+      +button({ title: buttonTitle, color: 'reverse' })

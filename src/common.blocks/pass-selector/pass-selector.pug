@@ -1,8 +1,9 @@
 include ../pass-info/pass-info.pug
 
-mixin passSelector()
+mixin passSelector(settings = {})
+  - const { title = 'Find the conference pass for you' } = settings;
   section.pass-selector.js-pass-selector
-    h2.pass-selector__title.js-pass-selector__title Find the conference pass for you
+    h2.pass-selector__title.js-pass-selector__title= title
     .pass-selector__options
       .pass-selector__pass-info
         +passInfo({

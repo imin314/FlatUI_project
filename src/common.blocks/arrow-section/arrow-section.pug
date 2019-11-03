@@ -1,16 +1,19 @@
 include ../arrow-button/arrow-button.pug
 
-mixin arrowSection(sectionData)
-  - const { title, elements } = sectionData;
+mixin arrowSection(settings = {})
+  - const { title = 'arrow buttons' } = settings;
   section.arrow-section
     h2.arrow-section__title= title
     .arrow-section__container
-      each item in elements
-        - const { direction } = item;
-        +arrowButton({ direction })
-      each item in elements
-        - const { direction } = item;
-        +arrowButton({ direction, disabled: true })
-      each item in elements
-        - const { direction } = item;
-        +arrowButton({ direction })
+      .arrow-section__button
+        +arrowButton({ direction: 'left' })
+      .arrow-section__button
+        +arrowButton({ direction: 'right' })
+      .arrow-section__button
+        +arrowButton({ direction: 'left', disabled: true })
+      .arrow-section__button
+        +arrowButton({ direction: 'right', disabled: true })
+      .arrow-section__button
+        +arrowButton({ direction: 'left' })
+      .arrow-section__button
+        +arrowButton({ direction: 'right' })

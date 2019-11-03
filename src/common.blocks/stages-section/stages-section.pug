@@ -1,7 +1,8 @@
 include ../bread-crumbs/bread-crumbs.pug
 
-mixin stagesSection()
+mixin stagesSection(settings = {})
+  - const { title = 'stages'} = settings;
   .stages-section
-    h1.stages-section__title stages
+    h1.stages-section__title= title
     .stages-section__bread-crumbs
       +breadCrumbs({ active: 3, max: 5 })

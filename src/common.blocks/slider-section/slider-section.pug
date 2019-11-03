@@ -1,8 +1,9 @@
 include ../slider/slider.pug
 
-mixin sliderSection()
+mixin sliderSection(settings = {})
+  - const { title = 'sliders' } = settings;
   section.slider-section
-    h2.slider-section__title sliders
+    h2.slider-section__title= title
     .slider-section__container
       .slider-section__slider
         +slider({ type: 'tip' })

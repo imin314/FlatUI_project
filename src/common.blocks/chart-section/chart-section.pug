@@ -1,8 +1,9 @@
 include ../donut-chart/donut-chart.pug
 
-mixin chartSection()
+mixin chartSection(settings = {})
+  - const { title = 'percentages / pie chart' } = settings;
   section.chart-section
-    h2.chart-section__title percentages / pie chart
+    h2.chart-section__title= title
     .chart-section__container
       .chart-section__chart
         +donutChart({ values: '0', type: 'percentage' })

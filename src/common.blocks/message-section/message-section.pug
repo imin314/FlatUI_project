@@ -1,8 +1,9 @@
 include ../messenger/messenger.pug
 
-mixin messageSection()
+mixin messageSection(settings = {})
+  - const { title = 'messaging' } = settings;
   section.message-section
-    h2.message-section__title messaging
+    h2.message-section__title= title
     .message-section__container
       +messenger({ 
         name: 'Sarah Brown',

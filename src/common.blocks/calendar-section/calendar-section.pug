@@ -1,7 +1,8 @@
 include ../calendar/calendar.pug
 
-mixin calendarSection()
+mixin calendarSection(settings = {})
+  - const { title = 'calendar' } = settings;
   section.calendar-section
-    h2.calendar-section__title calendar
+    h2.calendar-section__title= title
     .calendar-section__container
       +calendar()

@@ -1,7 +1,8 @@
 include ../toggle-switch/toggle-switch.pug
 
-mixin subscribeToggle()
+mixin subscribeToggle(settings = {})
+  - const { text = 'Subscribe to Web Talks newsletters' } = settings;
   .subscribe-toggle
-    p.subscribe-toggle__text Subscribe to Web Talks newsletters
+    p.subscribe-toggle__text= text
     .subscribe-toggle__checkbox
       +toggleSwitch(true)

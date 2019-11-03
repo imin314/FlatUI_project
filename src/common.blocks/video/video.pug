@@ -1,4 +1,5 @@
-mixin video(source)
+mixin video(settings = {})
+  - const { source = 'https://player.vimeo.com/video/62980495' } = settings;
   .video.js-video
     iframe.video__frame.js-video__frame(
       src=source

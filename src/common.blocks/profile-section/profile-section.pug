@@ -1,8 +1,9 @@
 include ../profile-card/profile-card.pug
 
-mixin profileSection()
+mixin profileSection(settings = {})
+  - const { title = 'user profile' } = settings;
   section.profile-section
-    h2.profile-section__title user profile
+    h2.profile-section__title= title
     .profile-section__container
       .profile-section__card
         +profileCard({ 

@@ -1,9 +1,10 @@
 include ../search-box/search-box.pug
 include ../drop-down/drop-down.pug
 
-mixin searchSection()
+mixin searchSection(settings = {})
+  - const { title = 'search / drop down' } = settings;
   section.search-section
-    h2.search-section__title search / drop down
+    h2.search-section__title= title
     form.search-section__form
       .search-section__search-box
         +searchBox()
