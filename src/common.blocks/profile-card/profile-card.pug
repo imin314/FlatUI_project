@@ -1,15 +1,17 @@
-mixin profileCard(profile, settings)
+mixin profileCard(profile = {}, settings = {})
   -
     const {
       img: profileImg,
       name: profileName,
       position: profilePosition,
-      links = { facebook: '', twitter: '', dribbble: '' } 
+      links = { facebook: '', twitter: '', dribbble: '' },
     } = profile;
-    const options = settings || {};
-    const { color='' } = options;
+
+    const { color='' } = settings;
+
     const image = require(`../../assets/img/${profileImg}`);
     const colorModifiers = { cyan: 'profile-card_color_cyan' };
+    
     let className = 'profile-card';
     if (color in colorModifiers) className += ` ${colorModifiers[color]}`;
   div(class = className)

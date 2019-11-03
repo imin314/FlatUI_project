@@ -370,7 +370,8 @@
         "link": "./sorry_this_link_is_dead",
         "isExternal": true
       }
-    ]
+    ],
+    "copyright": "© 2018-2019 Web Talks. All rights reserved."
   },
   "navigation": [
     {
@@ -398,39 +399,20 @@
       "text": "UI Kit Demo"
     }
   ],
-  "map": {
-    "address": {
-      "street": "14 Karla Marksa st",
-      "city": "Tomsk, Russia"
-    },
-    "mapCenter": {
-      "lat": 56.490925,
-      "lng": 84.946053
-    },
-    "pinCenter": {
-      "lat": 56.490025,
-      "lng": 84.946053
-    }
-  },
-  "uidemo": {
-    "arrowButtons": {
-      "title": "arrow buttons",
-      "elements": [
-        { "direction": "left" },
-        { "direction": "right" }
-      ]
-    },
-    "standardButtons": {
-      "title": "standard buttons",
-      "elements": [
-        {
-          "title": "button"
-        },
-        {
-          "title": "button",
-          "color": "orange"
-        }
-      ]
+  "contacts": {
+    "map": {
+      "address": {
+        "street": "14 Karla Marksa st",
+        "city": "Tomsk, Russia"
+      },
+      "mapCenter": {
+        "lat": 56.490925,
+        "lng": 84.946053
+      },
+      "pinCenter": {
+        "lat": 56.490025,
+        "lng": 84.946053
+      }
     }
   }
 }

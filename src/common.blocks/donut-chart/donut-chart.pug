@@ -1,4 +1,4 @@
-﻿mixin donutChart(settings)
+﻿mixin donutChart(settings = {})
   -
     const { type: chartType, values, colors } = settings;
     const typeModifiers = { 
@@ -16,5 +16,5 @@
       className += ` ${colorModifiers.transparent}`;
     }
   div(class=className data-values=values)
-    - if (chartType === 'percentage')
+    if (chartType === 'percentage')
       .donut-chart__label.js-donut-chart__label= values[0]

@@ -1,6 +1,6 @@
-mixin footer-link-list(options)
+mixin footer-link-list(settings = {})
   -
-    const { title: listTitle, data: listData, type: listType } = options;
+    const { title: listTitle, data: listData = [], type: listType } = settings;
     const typeModifiers = { titled: 'footer-link-list_titled' };
     let className = 'footer-link-list';
     if (listType in typeModifiers) {
@@ -15,7 +15,7 @@ mixin footer-link-list(options)
           const target = !!isExternal ? '_blank' : false;
           const rel = !!isExternal ? 'noopener noreferrer' : false;
         li.footer-link-list__list-item
-          - if (listType === 'titled')
+          if (listType === 'titled')
             p.footer-link-list__paragraph= `${title}:`
           p.footer-link-list__paragraph
             a.footer-link-list__link(

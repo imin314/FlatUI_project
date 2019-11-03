@@ -6,17 +6,13 @@
   &__title
     sectionTitle()
     margin-bottom 5rem
-    
-    @media screen and (max-width: 700px)
+    @media screen and (max-width: 672px)
       margin-bottom 3rem
 
   &__container
     display flex
     flex-flow row wrap
-    justify-content space-around
-
-    @media screen and (max-width: 700px)
-      max-width 31rem
+    justify-content space-between
 
   &__column
     display flex
@@ -35,13 +31,13 @@
     width fit-content
     margin-bottom 1.2rem
 
+    &:nth-child(-n+3)
+      @media screen and (min-width: 700px)
+        margin-right 8%
+
     &_size_small
       margin-top 0.769230769230769rem
 
-      @media screen and (min-width: 700px)
-        ^[0]__column:nth-child(even) &
-          order 2
-          margin-left 8%
-        
-        ^[0]__column:nth-child(odd) &
-          margin-right 8%
+      &:nth-last-child(-n+3)
+        @media screen and (max-width: 672px)
+          order -1

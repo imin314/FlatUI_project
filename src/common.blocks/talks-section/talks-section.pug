@@ -1,8 +1,9 @@
 include ../news-card/news-card.pug
 
-mixin talksSection(talksData)
+mixin talksSection(talksData = [])
   -
     const _ = require('lodash');
+    
     const groupBy = function groupByLodashFunction(dataToGroupOn,
       fieldNameToGroupOn,
       fieldNameForGroupName, 
@@ -13,11 +14,13 @@ mixin talksSection(talksData)
         }).value();
        return result;
     }
+
     const groupedData = groupBy(talksData, 'date', 'dateId', 'events');
+    
   section.talks-section
     each item in groupedData
       -
-        const { dateId, events } = item;
+        const { dateId, events = [] } = item;
         const date = new Date(dateId);
         const day = date.getDate();
         const month = date.toLocaleString('en-us', { month: 'long' });

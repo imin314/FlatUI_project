@@ -1,4 +1,32 @@
-mixin navigationBar(navData)
+mixin navigationBar(settings)
+  -
+    const defaultMenu = [
+      {
+        link: "index.html",
+        text: "Home"
+      },
+      {
+        link: "registration.html",
+        text: "Registration"
+      },
+      {
+        link: "schedule.html",
+        text: "Schedule"
+      },
+      {
+        link: "speakers.html",
+        text: "Speakers"
+      },
+      {
+        link: "contacts.html",
+        text: "Contacts"
+      },
+      {
+        link: "uidemo.html",
+        text: "UI Kit Demo"
+      }
+    ];
+    const navData = settings || defaultMenu;
   nav.navigation-bar
     input.navigation-bar__toggle(id="toggle" type="checkbox")
     label.navigation-bar__icon(for="toggle")

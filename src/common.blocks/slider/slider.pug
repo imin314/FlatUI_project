@@ -1,7 +1,6 @@
-mixin slider(settings)
+mixin slider(settings = {})
   -
-    const options = settings || {};
-    const { type: sliderType = '' } = options; 
+    const { type: sliderType = '' } = settings; 
     const typeModifiers = {
       tip: 'slider_type_tip js-slider_type_tip',
       scale: 'slider_type_scale js-slider_type_scale',
@@ -10,9 +9,9 @@ mixin slider(settings)
     if (sliderType in typeModifiers) className += ` ${typeModifiers[sliderType]}`; 
   div(class= className)
     .slider__container.js-slider__container
-      - if (sliderType === 'tip')
+      if (sliderType === 'tip')
         .slider__tip.js-slider__tip
-      - if (sliderType === 'scale')
+      if (sliderType === 'scale')
         ul.slider__scale
           - for (let i = 0; i <= 100; i += 25)
             li.slider__scale-item(style=`left: ${i}%`)= i

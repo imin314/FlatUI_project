@@ -1,7 +1,7 @@
 include ../news-card/news-card.pug
 include ../calendar/calendar.pug
 
-mixin eventCarousel(talksData)
+mixin eventCarousel(talksData = [])
   section.event-carousel.js-event-carousel
     .event-carousel__top
       a.event-carousel__link(href="./schedule.html" title="schedule") See all events

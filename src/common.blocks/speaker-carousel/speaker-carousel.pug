@@ -1,7 +1,7 @@
 include ../speaker-card/speaker-card.pug
 include ../arrow-button/arrow-button.pug
 
-mixin speakerCarousel(speakersData)
+mixin speakerCarousel(speakersData = [])
   section.speaker-carousel.js-speaker-carousel
     .speaker-carousel__cards.js-speaker-carousel__cards
       .speaker-carousel__card-wrapper

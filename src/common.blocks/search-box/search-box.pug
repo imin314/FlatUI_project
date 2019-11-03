@@ -1,7 +1,6 @@
-mixin searchBox(settings)
+mixin searchBox(settings = {})
   -
-    const options = settings || {};
-    const { filled = false } = options;
+    const { filled = false } = settings;
     const filledModifiers = { filled: 'search-box_filled' };
     let className = 'search-box js-search-box';
     let text = '';

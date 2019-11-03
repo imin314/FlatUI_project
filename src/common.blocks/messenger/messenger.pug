@@ -1,6 +1,6 @@
 include ../button/button.pug
 
-mixin messenger(msgData)
+mixin messenger(msgData = {})
   -
     const { image, name, inbox, outbox } = msgData;
     const bgImage = require(`../../assets/img/${image}`);

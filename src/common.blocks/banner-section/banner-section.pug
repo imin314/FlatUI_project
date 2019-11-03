@@ -1,9 +1,17 @@
 include ../button/button.pug
 
-mixin bannerSection(bannerData)
+mixin bannerSection(bannerData = {})
   -
-    const { title, tagline, location, button } = bannerData;
-    const { title: buttonTitle, link: buttonLink} = button;
+    const { 
+      title = 'Web Talks',
+      tagline = 'Three big tracks–Product, Design, and Developer focused, plus stellar keynotes and much more',
+      location = 'Tomsk',
+      button = {},
+    } = bannerData;
+    const {
+      title: buttonTitle = 'pre-register',
+      link: buttonLink = 'registration.html',
+    } = button;
   header.banner-section
     p.banner-section__location= location
     h1.banner-section__title= title

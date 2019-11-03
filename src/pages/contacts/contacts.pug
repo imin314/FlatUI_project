@@ -12,7 +12,11 @@ block title
 block content
   -
     const data = require('../../assets/data/data.json');
-    const { navigation, footer, map } = data;
+    const {
+      navigation,
+      footer,
+      contacts: { map } = {}
+    } = data;
   .contacts
     .contacts__navigation-bar
       +navigationBar(navigation)

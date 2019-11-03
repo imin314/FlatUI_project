@@ -1,9 +1,10 @@
 include ../donut-chart/donut-chart.pug
 
-mixin infogram(infogramData)
+mixin infogram(infogramData = [])
   ul.infogram
     each item in infogramData
       - const { type, value, comment } = item;
+
       if (type === 'fact')
         li.infogram__stat-item
           .infogram__number= value
@@ -11,11 +12,14 @@ mixin infogram(infogramData)
       else if (type === 'chart')
         -
           const { values, highlights } = item;
+
           const pattern = highlights.map((value) => {
             return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
           }).join('|');
+
           const findMarkedRegExp = new RegExp(`(${pattern})`, 'g');
           const splittedText = comment.split(findMarkedRegExp);
+          
         li.infogram__stat-item
           .infogram__comment
             each substring in splittedText

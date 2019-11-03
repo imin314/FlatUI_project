@@ -1,12 +1,12 @@
 include ../video/video.pug
 include ../infogram/infogram.pug
 
-mixin aboutSection(aboutData)
+mixin aboutSection(aboutData = {})
   -
-    const { intro, audience, video, infogram } = aboutData;
-    const { title: introTitle, text: introText } = intro;
-    const { title: audienceTitle, text: audienceText } = audience;
-    const { link, linkTitle, linkToEmbed, caption } = video;
+    const { infogram, intro = {}, audience = {}, video = {} } = aboutData;
+    const { title: introTitle = 'about web talks', text: introText = []} = intro;
+    const { title: audienceTitle = 'who\'s it for?', text: audienceText = []} = audience;
+    const { link, linkTitle, linkToEmbed, caption = 'See what happened last year' } = video;
   section.about-section
     .about-section__block
       .about-section__left-col
@@ -22,7 +22,7 @@ mixin aboutSection(aboutData)
         )= caption
       .about-section__right-col
         .about-section__video
-          +video(linkToEmbed)
+          +video({ source: linkToEmbed })
     .about-section__block
       .about-section__left-col
         h3.about-section__title= audienceTitle
