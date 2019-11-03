@@ -10,6 +10,7 @@ class ValidationInput {
     const $container = $(domElement);
     this.$input = $container.find('.js-validation-input__input');
     this.$bubble = $container.find('.js-validation-input__bubble');
+    this.bubbleText = { ...this.$bubble.data() };
     this.bubbleModifiers = {
       good: 'validation-input__bubble_type_good',
       error: 'validation-input__bubble_type_error',
@@ -23,18 +24,14 @@ class ValidationInput {
 
   @bind
   _handleInputBlur() {
-    const { good, error, hidden } = this.bubbleModifiers;
-    if (this.$input.valid()) {
-      this.$bubble
-        .removeClass(`${error} ${hidden}`)
-        .addClass(good)
-        .text('Thanks!');
-    } else {
-      this.$bubble
-        .removeClass(`${good} ${hidden}`)
-        .addClass(error)
-        .text('Error');
-    }
+    const isInputValid = this.$input.valid();
+    const currentState = isInputValid ? 'good' : 'error';
+    const currentClass = this.bubbleModifiers[currentState];
+    const currentText = this.bubbleText[currentState];
+    this.$bubble
+      .removeClass(Object.values(this.bubbleModifiers).join(' '))
+      .addClass(currentClass)
+      .text(currentText);
   }
 
   @bind

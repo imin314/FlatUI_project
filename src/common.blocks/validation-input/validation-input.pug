@@ -1,9 +1,10 @@
-mixin validationInput(settings)
+mixin validationInput(settings = {})
   -
     const {
      type: typeAttr = 'text',
      name: nameAttr = '',
      placeholder: placeholderAttr = '',
+     bubbleText: { good = 'thanks!', error = 'error' } = {},
     } = settings;
   label.validation-input.js-validation-input
     input.validation-input__input.js-validation-input__input(
@@ -12,4 +13,7 @@ mixin validationInput(settings)
       placeholder=placeholderAttr
       required
     )
-    .validation-input__bubble.js-validation-input__bubble.validation-input__bubble_hidden
+    .validation-input__bubble.js-validation-input__bubble.validation-input__bubble_hidden(
+      data-good=good
+      data-error=error
+    )
