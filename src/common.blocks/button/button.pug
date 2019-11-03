@@ -2,7 +2,7 @@ mixin button(settings = {})
   -
     const {
       color,
-      size,
+      size = '',
       title: titleAttr = 'button',
       link: hrefAttr = false,
       isExternal = false
@@ -12,6 +12,7 @@ mixin button(settings = {})
 
     const sizeModifiers = {
       small: 'button_size_small',
+      responsive: 'button_size_responsive',
     };
     const colorModifiers = {
       reverse: 'button_color_reverse',
@@ -24,9 +25,9 @@ mixin button(settings = {})
       className += ` ${colorModifiers[color]}`;
     }
 
-    if (size in sizeModifiers) {
-      className += ` ${sizeModifiers[size]}`; 
-    }
+    size.split(' ').forEach((key) => {
+      if (key in sizeModifiers) className += ` ${sizeModifiers[key]}`;
+    });
   a(
     class=className
     title=titleAttr
