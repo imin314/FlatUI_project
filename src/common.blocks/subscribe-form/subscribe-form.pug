@@ -1,11 +1,16 @@
 include ../validation-input/validation-input.pug
 include ../subscribe-toggle/subscribe-toggle.pug
 
-mixin subscribeForm()
+mixin subscribeForm(settings = {})
+  -
+    const {
+      namePlaceholder = 'Your Name',
+      emailPlaceholder = 'Your Email',
+    } = settings;
   section.subscribe-form.js-subscribe-form
     .subscribe-form__input
-      +validationInput({ type: 'text', name: 'name', placeholder: 'Your Name' })
+      +validationInput({ type: 'text', name: 'name', placeholder: namePlaceholder })
     .subscribe-form__input
-      +validationInput({ type: 'email', name: 'email', placeholder: 'Your Email' })
+      +validationInput({ type: 'email', name: 'email', placeholder: emailPlaceholder })
     .subscribe-form__toggle
       +subscribeToggle()

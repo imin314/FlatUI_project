@@ -1,8 +1,17 @@
 include ../button/button.pug
 
-mixin messenger(msgData = {})
+mixin messenger(settings)
   -
-    const { image, name, inbox, outbox } = msgData;
+    const {
+      image,
+      name,
+      inbox,
+      outbox,
+      outboxPlaceholder = 'Type your message...',
+      outboxRows = '3',
+      buttonTitle = 'reply',
+      } = settings;
+
     const bgImage = require(`../../assets/img/${image}`);
   .messenger
     header.messenger__header
@@ -16,10 +25,10 @@ mixin messenger(msgData = {})
         .messenger__text= inbox
       textarea.messenger__message.messenger__message_type_outbox(
         name="outbox"
-        placeholder="Type your message..."
-        rows="3"
+        placeholder=outboxPlaceholder
+        rows=outboxRows
       )= outbox
       .messenger__button
-        +button({ title: 'reply', color: 'reverse' })
+        +button({ title: buttonTitle, color: 'reverse', size: 'responsive' })
 
   

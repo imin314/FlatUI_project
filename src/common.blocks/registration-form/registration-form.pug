@@ -6,7 +6,11 @@ include ../policy-tickbox/policy-tickbox.pug
 include ../button/button.pug
 
 mixin registrationForm(settings = {})
-  - const { title = 'Join us at Web Talks 2019' } = settings;
+  -
+    const {
+      title = 'Join us at Web Talks 2019',
+      buttonTitle = 'register',
+    } = settings;
   section.registration-form.js-registration-form
     form.registration-form__form.js-registration-form__form
       header.registration-form__header.js-registration-form__header
@@ -24,4 +28,4 @@ mixin registrationForm(settings = {})
           .registration-form__policy-tickbox
             +policyTickbox()
           .registration-form__button.js-registration-form__button
-            +button({ title: 'register', color: 'reverse' })
+            +button({ title: buttonTitle, color: 'reverse' })

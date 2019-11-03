@@ -1,7 +1,8 @@
 include ../speaker-card/speaker-card.pug
 include ../arrow-button/arrow-button.pug
 
-mixin speakerCarousel(speakersData = [])
+mixin speakerCarousel(settings = {})
+  - const { linkText = 'View all speakers', speakersData = [] } = settings;
   section.speaker-carousel.js-speaker-carousel
     .speaker-carousel__cards.js-speaker-carousel__cards
       .speaker-carousel__card-wrapper
@@ -11,6 +12,6 @@ mixin speakerCarousel(speakersData = [])
     .speaker-carousel__controls
       .speaker-carousel__arrow-button.js-speaker-carousel__arrow-button
         +arrowButton({ direction:'left', size: 'small', disabled: true })
-      a.speaker-carousel__link.js-speaker-carousel__link View all speakers
+      a.speaker-carousel__link.js-speaker-carousel__link= linkText
       .speaker-carousel__arrow-button.js-speaker-carousel__arrow-button
         +arrowButton({ direction:'right', size: 'small' })

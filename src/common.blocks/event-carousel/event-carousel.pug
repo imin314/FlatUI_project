@@ -1,10 +1,16 @@
 include ../news-card/news-card.pug
 include ../calendar/calendar.pug
 
-mixin eventCarousel(talksData = [])
+mixin eventCarousel(settings = {})
+  -
+    const {
+      linkText = 'See all events',
+      linkTitle = 'schedule',
+      talksData = [],
+    } = settings;
   section.event-carousel.js-event-carousel
     .event-carousel__top
-      a.event-carousel__link(href="./schedule.html" title="schedule") See all events
+      a.event-carousel__link(href="./schedule.html" title=linkTitle)= linkText
     .event-carousel__cards.js-event-carousel__cards
       .event-carousel__card-wrapper.js-event-carousel__card-wrapper
         each talk in talksData

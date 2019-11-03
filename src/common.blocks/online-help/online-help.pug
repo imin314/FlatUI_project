@@ -1,6 +1,7 @@
 include ../messenger/messenger.pug
 
-mixin onlineHelp()
+mixin onlineHelp(settings = {})
+  - const { buttonText = 'Chat Widget' } = settings;
   .online-help.js-online-help
     .online-help__messenger.js-online-help__messenger
       +messenger({ 
@@ -8,4 +9,4 @@ mixin onlineHelp()
         image: 'sarah-brown.jpg',
         inbox: 'Hi! How can I help you?'
       })
-    button.online-help__button.js-online-help__button(aria-label="Chat Widget")
+    button.online-help__button.js-online-help__button(aria-label=buttonText)

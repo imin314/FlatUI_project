@@ -3,7 +3,14 @@ include ../button/button.pug
 mixin newsCard(cardData = {}, settings = {})
   -
     const { img: cardImg, date: cardDate, title: cardTitle, text: cardText } = cardData;
-    const { type: cardType, isCompact, color, withScrollbar } = settings;
+    const {
+      type: cardType,
+      isCompact,
+      color,
+      withScrollbar,
+      buttonTitle = 'add to calendar',
+    } = settings;
+
     const img = require(`../../common.blocks/news-card/img/${cardImg}`);
     
     const typeModifiers = { event: 'news-card_type_event' };
@@ -34,7 +41,7 @@ mixin newsCard(cardData = {}, settings = {})
         .news-card__title= cardTitle
         .news-card__text.js-news-card__text= cardText
         .news-card__button
-          +button({ title:'add to calendar', size: 'small' })
+          +button({ title: buttonTitle, size: 'small' })
       else
         .news-card__title= cardTitle
         .news-card__date= `${day} ${month} ${year}`
