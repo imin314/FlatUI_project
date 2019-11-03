@@ -1,14 +1,18 @@
 mixin searchBox(settings = {})
   -
-    const { filled = false } = settings;
+    const {
+      filled = false,
+      placeholder = 'Search',
+      notFoundText = 'I\'ve not found what I\'m looking for...',
+    } = settings;
     const filledModifiers = { filled: 'search-box_filled' };
     let className = 'search-box js-search-box';
     let text = '';
     if (filled) {
      className += ` ${filledModifiers.filled}`;
-     text = 'I\'ve not found what I\'m looking for...';
+     text = notFoundText;
     }
-  div(class = className)
+  div(class = className data-not-found = notFoundText)
     label.search-box__label
-      input.search-box__input.js-search-box__input(type="text" placeholder="Search" value=text)
+      input.search-box__input.js-search-box__input(type="text" placeholder=placeholder value=text)
     button.search-box__button.js-search-box__button(type="button")

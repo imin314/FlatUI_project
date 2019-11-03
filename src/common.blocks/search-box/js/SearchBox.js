@@ -53,8 +53,8 @@ class SearchBox {
   }
 
   _addNotFoundMessage() {
-    const notFoundMessage = "I've not found what I'm looking for...";
-    this.$input.val(notFoundMessage);
+    const notFoundText = this.$searchbox.data('not-found');
+    this.$input.val(notFoundText);
     this.$searchbox.addClass('search-box_filled');
   }
 
