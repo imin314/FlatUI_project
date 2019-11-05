@@ -14,19 +14,21 @@
     <title>UI Demo Kit</title>
   <script type="text/javascript" src="main_head.js"></script></head>
   <body>
-    <nav class="navigation-bar">
-      <input class="navigation-bar__toggle" id="toggle" type="checkbox">
-      <label class="navigation-bar__icon" for="toggle"><span class="navigation-bar__icon-line"></span><span class="navigation-bar__icon-line"></span><span class="navigation-bar__icon-line"></span></label>
-      <ul class="navigation-bar__menu">
-        <li class="navigation-bar__item"><a class="navigation-bar__link" href="index.html" title="Home">Home</a></li>
-        <li class="navigation-bar__item"><a class="navigation-bar__link" href="registration.html" title="Registration">Registration</a></li>
-        <li class="navigation-bar__item"><a class="navigation-bar__link" href="schedule.html" title="Schedule">Schedule</a></li>
-        <li class="navigation-bar__item"><a class="navigation-bar__link" href="speakers.html" title="Speakers">Speakers</a></li>
-        <li class="navigation-bar__item"><a class="navigation-bar__link" href="contacts.html" title="Contacts">Contacts</a></li>
-        <li class="navigation-bar__item"><a class="navigation-bar__link" href="uidemo.html" title="UI Kit Demo">UI Kit Demo</a></li>
-      </ul>
-    </nav>
     <div class="uidemo">
+      <div class="uidemo__navigation-bar">
+        <nav class="navigation-bar">
+          <input class="navigation-bar__toggle" id="toggle" type="checkbox">
+          <label class="navigation-bar__icon" for="toggle"><span class="navigation-bar__icon-line"></span><span class="navigation-bar__icon-line"></span><span class="navigation-bar__icon-line"></span></label>
+          <ul class="navigation-bar__menu">
+            <li class="navigation-bar__item"><a class="navigation-bar__link" href="index.html" title="Home">Home</a></li>
+            <li class="navigation-bar__item"><a class="navigation-bar__link" href="registration.html" title="Registration">Registration</a></li>
+            <li class="navigation-bar__item"><a class="navigation-bar__link" href="schedule.html" title="Schedule">Schedule</a></li>
+            <li class="navigation-bar__item"><a class="navigation-bar__link" href="speakers.html" title="Speakers">Speakers</a></li>
+            <li class="navigation-bar__item"><a class="navigation-bar__link" href="contacts.html" title="Contacts">Contacts</a></li>
+            <li class="navigation-bar__item"><a class="navigation-bar__link" href="uidemo.html" title="UI Kit Demo">UI Kit Demo</a></li>
+          </ul>
+        </nav>
+      </div>
       <main class="uidemo__main">
         <section class="uidemo__button-section">
           <section class="button-section">
@@ -124,14 +126,14 @@
             <h2 class="slider-section__title">sliders</h2>
             <div class="slider-section__container">
               <div class="slider-section__slider">
-                <div class="slider js-slider slider_type_tip js-slider_type_tip">
+                <div class="slider js-slider slider_with-tip js-slider_with-tip slider_color_orange" data-min="0" data-max="100" data-value="40" data-step="1">
                   <div class="slider__container js-slider__container">
                     <div class="slider__tip js-slider__tip"></div>
                   </div>
                 </div>
               </div>
               <div class="slider-section__slider">
-                <div class="slider js-slider slider_type_scale js-slider_type_scale">
+                <div class="slider js-slider slider_with-scale js-slider_with-scale slider_color_cyan" data-min="0" data-max="100" data-value="75" data-step="25">
                   <div class="slider__container js-slider__container">
                     <ul class="slider__scale">
                       <li class="slider__scale-item" style="left: 0%">0</li>
@@ -179,27 +181,27 @@
                   <div class="email-form__input email-form__input_type_name">
                     <label class="validation-input js-validation-input">
                       <input class="validation-input__input js-validation-input__input" type="text" name="name" placeholder="Your Name" required>
-                      <div class="validation-input__bubble js-validation-input__bubble validation-input__bubble_hidden"></div>
+                      <div class="validation-input__bubble js-validation-input__bubble validation-input__bubble_hidden" data-good="thanks!" data-error="error"></div>
                     </label>
                   </div>
-                  <div class="email-input email-form__input_type_email">
+                  <div class="email-form__input email-form__input_type_email">
                     <label class="validation-input js-validation-input">
                       <input class="validation-input__input js-validation-input__input" type="email" name="email" placeholder="Your Email" required>
-                      <div class="validation-input__bubble js-validation-input__bubble validation-input__bubble_hidden"></div>
+                      <div class="validation-input__bubble js-validation-input__bubble validation-input__bubble_hidden" data-good="thanks!" data-error="error"></div>
                     </label>
                   </div>
-                  <textarea class="email-form__message" name="message" placeholder="Your Message" arealabel="Message"></textarea>
+                  <textarea class="email-form__message" name="message" placeholder="Your Message"></textarea>
                   <div class="email-form__button js-email-form__button"><a class="button js-button button_color_reverse" title="submit" tabindex="0">submit</a>
                   </div>
                 </form>
               </div>
               <div class="form-section__checkboxes">
                 <form class="form-section__toggles">
-                  <h2 class="form-section__title">toggles</h2>
+                  <h2 class="form-section__title">toggle</h2>
                   <div class="form-section__toggle">
                     <div class="toggle-switch js-toggle-switch">
                       <label class="toggle-switch__label">
-                        <input class="toggle-switch__checkbox js-toggle-switch__checkbox" type="checkbox">
+                        <input class="toggle-switch__checkbox js-toggle-switch__checkbox" type="checkbox" name="toggle">
                         <div class="toggle-switch__slider js-toggle-switch__slider" tabindex="0"></div>
                       </label>
                     </div>
@@ -207,14 +209,14 @@
                   <div class="form-section__toggle">
                     <div class="toggle-switch js-toggle-switch">
                       <label class="toggle-switch__label">
-                        <input class="toggle-switch__checkbox js-toggle-switch__checkbox" type="checkbox" checked>
+                        <input class="toggle-switch__checkbox js-toggle-switch__checkbox" type="checkbox" name="toggle" checked>
                         <div class="toggle-switch__slider js-toggle-switch__slider" tabindex="0"></div>
                       </label>
                     </div>
                   </div>
                 </form>
                 <form class="form-section__tickboxes">
-                  <h2 class="form-section__title">tick boxes</h2>
+                  <h2 class="form-section__title">tickboxes</h2>
                   <div class="form-section__tickbox">
                     <div class="tick-box js-tick-box">
                       <label class="tick-box__label">
@@ -241,7 +243,7 @@
             <h2 class="search-section__title">search / drop down</h2>
             <form class="search-section__form">
               <div class="search-section__search-box">
-                <div class="search-box js-search-box">
+                <div class="search-box js-search-box" data-not-found="I've not found what I'm looking for...">
                   <label class="search-box__label">
                     <input class="search-box__input js-search-box__input" type="text" placeholder="Search" value="">
                   </label>
@@ -249,7 +251,7 @@
                 </div>
               </div>
               <div class="search-section__search-box">
-                <div class="search-box js-search-box search-box_filled">
+                <div class="search-box js-search-box search-box_filled" data-not-found="I've not found what I'm looking for...">
                   <label class="search-box__label">
                     <input class="search-box__input js-search-box__input" type="text" placeholder="Search" value="I've not found what I'm looking for...">
                   </label>
@@ -259,7 +261,7 @@
               <div class="search-section__drop-down">
                 <div class="drop-down js-drop-down">
                   <div class="drop-down__textarea">
-                    <div class="drop-down__label js-drop-down__label">Choose An Option</div>
+                    <div class="drop-down__label js-drop-down__label">choose an option</div>
                     <button class="drop-down__button js-drop-down__button" type="button"></button>
                   </div>
                   <ul class="drop-down__list">
@@ -304,10 +306,10 @@
         </section>
         <section class="uidemo__news-section">
           <section class="news-section">
-            <h2 class="news-section__title">news & events</h2>
+            <h2 class="news-section__title">news &amp; events</h2>
             <div class="news-section__container">
               <div class="news-section__news-card">
-                <div class="news-card js-news-card">
+                <div class="news-card js-news-card news-card_color_orange">
                   <div class="news-card__image" style="background-image: url(assets/img/article-img.jpg)"></div>
                   <div class="news-card__content">
                     <div class="news-card__title">It's all going downhill</div>
@@ -317,7 +319,7 @@
                 </div>
               </div>
               <div class="news-section__news-card">
-                <div class="news-card js-news-card news-card_type_event">
+                <div class="news-card js-news-card news-card_type_event news-card_color_cyan">
                   <div class="news-card__image" style="background-image: url(assets/img/event-img.jpg)"></div>
                   <div class="news-card__content">
                     <div class="news-card__date"><span class="news-card__day">24</span><span class="news-card__month">Aug</span></div>
@@ -343,9 +345,9 @@
                     <div class="map__address-item map__address-item_type_street">1259 California st</div>
                     <div class="map__address-item map__address-item_type_city">San francisco, Ca</div>
                   </div>
-                  <div class="map__icons">
-                    <div class="map__search js-map__search" tabindex="0"></div>
-                    <div class="map__pin js-map__pin">
+                  <div class="map__buttons">
+                    <div class="map__button js-map__button map__button_type_search js-map__button_type_search" tabindex="0"></div>
+                    <div class="map__button js-map__button map__button_type_pin js-map__button_type_pin" tabindex="0">
                       <div class="map__pin-circle"></div>
                     </div>
                   </div>
@@ -372,12 +374,12 @@
                   <div class="messenger__photo" style="background-image: url(assets/img/sarah-brown.jpg)"></div>
                 </header>
                 <div class="messenger__container">
-                  <div class="messenger__icons"><a class="messenger__bubble-icon" href="" title=""></a><a class="messenger__camera-icon" href="" title="add photo"></a></div>
+                  <div class="messenger__icons"><a class="messenger__bubble-icon"></a><a class="messenger__camera-icon"></a></div>
                   <div class="messenger__message messenger__message_type_inbox">
                     <div class="messenger__text">Hey! So are we cool to meet at the art gallery? Say 8pm</div>
                   </div>
                   <textarea class="messenger__message messenger__message_type_outbox" name="outbox" placeholder="Type your message..." rows="3">Yeah that sounds great. See you then.</textarea>
-                  <div class="messenger__button"><a class="button js-button button_color_reverse" title="reply" tabindex="0">reply</a>
+                  <div class="messenger__button"><a class="button js-button button_color_reverse button_size_responsive" title="reply" tabindex="0">reply</a>
                   </div>
                 </div>
               </div>

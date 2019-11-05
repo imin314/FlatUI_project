@@ -14,19 +14,21 @@
     <title>Web Talks 2019</title>
   <script type="text/javascript" src="main_head.js"></script></head>
   <body>
-    <nav class="navigation-bar">
-      <input class="navigation-bar__toggle" id="toggle" type="checkbox">
-      <label class="navigation-bar__icon" for="toggle"><span class="navigation-bar__icon-line"></span><span class="navigation-bar__icon-line"></span><span class="navigation-bar__icon-line"></span></label>
-      <ul class="navigation-bar__menu">
-        <li class="navigation-bar__item"><a class="navigation-bar__link" href="index.html" title="Home">Home</a></li>
-        <li class="navigation-bar__item"><a class="navigation-bar__link" href="registration.html" title="Registration">Registration</a></li>
-        <li class="navigation-bar__item"><a class="navigation-bar__link" href="schedule.html" title="Schedule">Schedule</a></li>
-        <li class="navigation-bar__item"><a class="navigation-bar__link" href="speakers.html" title="Speakers">Speakers</a></li>
-        <li class="navigation-bar__item"><a class="navigation-bar__link" href="contacts.html" title="Contacts">Contacts</a></li>
-        <li class="navigation-bar__item"><a class="navigation-bar__link" href="uidemo.html" title="UI Kit Demo">UI Kit Demo</a></li>
-      </ul>
-    </nav>
     <div class="index">
+      <div class="index__navigation-bar">
+        <nav class="navigation-bar">
+          <input class="navigation-bar__toggle" id="toggle" type="checkbox">
+          <label class="navigation-bar__icon" for="toggle"><span class="navigation-bar__icon-line"></span><span class="navigation-bar__icon-line"></span><span class="navigation-bar__icon-line"></span></label>
+          <ul class="navigation-bar__menu">
+            <li class="navigation-bar__item"><a class="navigation-bar__link" href="index.html" title="Home">Home</a></li>
+            <li class="navigation-bar__item"><a class="navigation-bar__link" href="registration.html" title="Registration">Registration</a></li>
+            <li class="navigation-bar__item"><a class="navigation-bar__link" href="schedule.html" title="Schedule">Schedule</a></li>
+            <li class="navigation-bar__item"><a class="navigation-bar__link" href="speakers.html" title="Speakers">Speakers</a></li>
+            <li class="navigation-bar__item"><a class="navigation-bar__link" href="contacts.html" title="Contacts">Contacts</a></li>
+            <li class="navigation-bar__item"><a class="navigation-bar__link" href="uidemo.html" title="UI Kit Demo">UI Kit Demo</a></li>
+          </ul>
+        </nav>
+      </div>
       <main class="index__main">
         <div class="index__banner">
           <header class="banner-section">
@@ -40,12 +42,12 @@
         <div class="index__about">
           <section class="about-section">
             <div class="about-section__block">
-              <div class="about-section__text">
-                <h3 class="about-section__title">About Web Talks 2019</h3>
-                <div class="about-section__intro">
-                  <p class="about-section__common-paragraph">field is constantly changing, where last year's cutting edge is this year's commonplace, and today's best practice is tomorrow's old hat. For well over a decade, we've tracked practices, patterns and technologies to keep our audience up to date.</p>
-                  <p class="about-section__common-paragraph">Web Talks brings together the whole team, with three curated tracks, one focused on development and engineering, one focused on design, and one focused on management. For this, we've brought together the finest minds at the intersection of technology, design, and management in an atmosphere unlike any other.</p><a class="about-section__video-link" href="https://www.youtube.com/channel/UCELSb-IYi_d5rYFOxWeOz5g" title="Watch more" target="_blank" rel="noopener noreferrer">See what happened in 2018 &gt;</a>
-                </div>
+              <div class="about-section__left-col">
+                <h3 class="about-section__title">about web talks 2019</h3>
+                <div class="about-section__text">
+                  <p class="about-section__paragraph">Our field is constantly changing, where last year's cutting edge is this year's commonplace, and today's best practice is tomorrow's old hat. For well over a decade, we've tracked practices, patterns and technologies to keep our audience up to date.</p>
+                  <p class="about-section__paragraph">Web Talks brings together the whole team, with three curated tracks, one focused on development and engineering, one focused on design, and one focused on management. For this, we've brought together the finest minds at the intersection of technology, design, and management in an atmosphere unlike any other.</p>
+                </div><a class="about-section__video-link" href="https://www.youtube.com/channel/UCELSb-IYi_d5rYFOxWeOz5g" title="Watch more" target="_blank" rel="noopener noreferrer">See what happened in 2018 &gt;</a>
               </div>
               <div class="about-section__right-col">
                 <div class="about-section__video">
@@ -56,19 +58,26 @@
               </div>
             </div>
             <div class="about-section__block">
-              <div class="about-section__text">
-                <h3 class="about-section__title">Who's it for?</h3>
-                <h4 class="about-section__subtitle">The Design Team</h4>
-                <p class="about-section__intro">UX, IxD, visual, Web, Front End and CX experts, Art Directors, Creative Directors, Experience Leads, Design Leads and Design Researchers should all attend to hear these world leading experts.</p>
-                <h4 class="about-section__subtitle">The Engineering Team</h4>
-                <p class="about-section__intro">We've got the whole front end development team covered: front end engineers, JavaScript and Web developers, engineering leads, engineering managers, devops experts, CTOs.</p>
-                <h4 class="about-section__subtitle">Leaders and Decision Makers</h4>
-                <p class="about-section__intro">To round it out, our audience is full of smart decision makers, who know taking the pulse of what's now, and next, is vital in making the right strategic decisions. Two tracks, and a mixture of deep dive and high level sessions ensures there's something for you too. Meanwhile, outside the sessions, you'll find engaging showcases of technology and design to keep you thinking.</p>
+              <div class="about-section__left-col">
+                <h3 class="about-section__title">who's it for?</h3>
+                <div class="about-section__text">
+                  <h4 class="about-section__subtitle">the design team</h4>
+                  <p class="about-section__paragraph">UX, IxD, visual, Web, Front End and CX experts, Art Directors, Creative Directors, Experience Leads, Design Leads and Design Researchers should all attend to hear these world leading experts.</p>
+                </div>
+                <div class="about-section__text">
+                  <h4 class="about-section__subtitle">the engineering team</h4>
+                  <p class="about-section__paragraph">We've got the whole front end development team covered: front end engineers, JavaScript and Web developers, engineering leads, engineering managers, devops experts, CTOs.</p>
+                </div>
+                <div class="about-section__text">
+                  <h4 class="about-section__subtitle">leaders and decision makers</h4>
+                  <p class="about-section__paragraph">To round it out, our audience is full of smart decision makers, who know taking the pulse of what's now, and next, is vital in making the right strategic decisions. Two tracks, and a mixture of deep dive and high level sessions ensures there's something for you too. Meanwhile, outside the sessions, you'll find engaging showcases of technology and design to keep you thinking.</p>
+                </div>
               </div>
               <div class="about-section__right-col">
                 <ul class="infogram">
                   <li class="infogram__stat-item">
-                    <div class="infogram__comment">Three tracks covering actual topics of <span class="infogram__topic infogram__topic_color_gray">Development</span>, <span class="infogram__topic infogram__topic_color_orange">Design</span>, and <span class="infogram__topic infogram__topic_color_cyan">Management </span>with total of 18 intense workshops and talks.</div>
+                    <div class="infogram__comment">Three tracks covering actual topics of <span class="infogram__highlight">Development</span>, <span class="infogram__highlight">Design</span>, and <span class="infogram__highlight">Management</span> with total of 18 intense workshops and talks.
+                    </div>
                     <div class="infogram__chart">
                       <div class="donut-chart js-donut-chart donut-chart_type_pie" data-values="61, 22, 17">
                       </div>
@@ -80,7 +89,7 @@
                   </li>
                   <li class="infogram__stat-item">
                     <div class="infogram__number">7</div>
-                    <div class="infogram__comment">Intense Days </div>
+                    <div class="infogram__comment"></div>
                   </li>
                 </ul>
               </div>
@@ -93,7 +102,7 @@
             <div class="event-carousel__cards js-event-carousel__cards">
               <div class="event-carousel__card-wrapper js-event-carousel__card-wrapper">
                 <div class="event-carousel__card js-event-carousel__card">
-                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_with-scrollbar">
+                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_color_cyan news-card_with-scrollbar">
                     <div class="news-card__image" style="background-image: url(assets/img/management-img.jpg)"></div>
                     <div class="news-card__content">
                       <div class="news-card__date"><span class="news-card__day">13</span><span class="news-card__month">Dec</span></div>
@@ -105,7 +114,7 @@
                   </div>
                 </div>
                 <div class="event-carousel__card js-event-carousel__card">
-                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_with-scrollbar">
+                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_color_cyan news-card_with-scrollbar">
                     <div class="news-card__image" style="background-image: url(assets/img/development-img.jpg)"></div>
                     <div class="news-card__content">
                       <div class="news-card__date"><span class="news-card__day">13</span><span class="news-card__month">Dec</span></div>
@@ -117,7 +126,7 @@
                   </div>
                 </div>
                 <div class="event-carousel__card js-event-carousel__card">
-                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_with-scrollbar">
+                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_color_cyan news-card_with-scrollbar">
                     <div class="news-card__image" style="background-image: url(assets/img/design-img.jpg)"></div>
                     <div class="news-card__content">
                       <div class="news-card__date"><span class="news-card__day">13</span><span class="news-card__month">Dec</span></div>
@@ -129,7 +138,7 @@
                   </div>
                 </div>
                 <div class="event-carousel__card js-event-carousel__card">
-                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_with-scrollbar">
+                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_color_cyan news-card_with-scrollbar">
                     <div class="news-card__image" style="background-image: url(assets/img/management-img.jpg)"></div>
                     <div class="news-card__content">
                       <div class="news-card__date"><span class="news-card__day">14</span><span class="news-card__month">Dec</span></div>
@@ -141,7 +150,7 @@
                   </div>
                 </div>
                 <div class="event-carousel__card js-event-carousel__card">
-                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_with-scrollbar">
+                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_color_cyan news-card_with-scrollbar">
                     <div class="news-card__image" style="background-image: url(assets/img/design-img.jpg)"></div>
                     <div class="news-card__content">
                       <div class="news-card__date"><span class="news-card__day">14</span><span class="news-card__month">Dec</span></div>
@@ -153,7 +162,7 @@
                   </div>
                 </div>
                 <div class="event-carousel__card js-event-carousel__card">
-                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_with-scrollbar">
+                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_color_cyan news-card_with-scrollbar">
                     <div class="news-card__image" style="background-image: url(assets/img/development-img.jpg)"></div>
                     <div class="news-card__content">
                       <div class="news-card__date"><span class="news-card__day">14</span><span class="news-card__month">Dec</span></div>
@@ -165,7 +174,7 @@
                   </div>
                 </div>
                 <div class="event-carousel__card js-event-carousel__card">
-                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_with-scrollbar">
+                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_color_cyan news-card_with-scrollbar">
                     <div class="news-card__image" style="background-image: url(assets/img/design-img.jpg)"></div>
                     <div class="news-card__content">
                       <div class="news-card__date"><span class="news-card__day">15</span><span class="news-card__month">Dec</span></div>
@@ -177,7 +186,7 @@
                   </div>
                 </div>
                 <div class="event-carousel__card js-event-carousel__card">
-                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_with-scrollbar">
+                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_color_cyan news-card_with-scrollbar">
                     <div class="news-card__image" style="background-image: url(assets/img/development-img.jpg)"></div>
                     <div class="news-card__content">
                       <div class="news-card__date"><span class="news-card__day">15</span><span class="news-card__month">Dec</span></div>
@@ -189,7 +198,7 @@
                   </div>
                 </div>
                 <div class="event-carousel__card js-event-carousel__card">
-                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_with-scrollbar">
+                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_color_cyan news-card_with-scrollbar">
                     <div class="news-card__image" style="background-image: url(assets/img/management-img.jpg)"></div>
                     <div class="news-card__content">
                       <div class="news-card__date"><span class="news-card__day">15</span><span class="news-card__month">Dec</span></div>
@@ -201,7 +210,7 @@
                   </div>
                 </div>
                 <div class="event-carousel__card js-event-carousel__card">
-                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_with-scrollbar">
+                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_color_cyan news-card_with-scrollbar">
                     <div class="news-card__image" style="background-image: url(assets/img/development-img.jpg)"></div>
                     <div class="news-card__content">
                       <div class="news-card__date"><span class="news-card__day">16</span><span class="news-card__month">Dec</span></div>
@@ -213,7 +222,7 @@
                   </div>
                 </div>
                 <div class="event-carousel__card js-event-carousel__card">
-                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_with-scrollbar">
+                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_color_cyan news-card_with-scrollbar">
                     <div class="news-card__image" style="background-image: url(assets/img/development-img.jpg)"></div>
                     <div class="news-card__content">
                       <div class="news-card__date"><span class="news-card__day">16</span><span class="news-card__month">Dec</span></div>
@@ -225,7 +234,7 @@
                   </div>
                 </div>
                 <div class="event-carousel__card js-event-carousel__card">
-                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_with-scrollbar">
+                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_color_cyan news-card_with-scrollbar">
                     <div class="news-card__image" style="background-image: url(assets/img/development-img.jpg)"></div>
                     <div class="news-card__content">
                       <div class="news-card__date"><span class="news-card__day">16</span><span class="news-card__month">Dec</span></div>
@@ -237,7 +246,7 @@
                   </div>
                 </div>
                 <div class="event-carousel__card js-event-carousel__card">
-                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_with-scrollbar">
+                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_color_cyan news-card_with-scrollbar">
                     <div class="news-card__image" style="background-image: url(assets/img/management-img.jpg)"></div>
                     <div class="news-card__content">
                       <div class="news-card__date"><span class="news-card__day">17</span><span class="news-card__month">Dec</span></div>
@@ -249,7 +258,7 @@
                   </div>
                 </div>
                 <div class="event-carousel__card js-event-carousel__card">
-                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_with-scrollbar">
+                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_color_cyan news-card_with-scrollbar">
                     <div class="news-card__image" style="background-image: url(assets/img/development-img.jpg)"></div>
                     <div class="news-card__content">
                       <div class="news-card__date"><span class="news-card__day">17</span><span class="news-card__month">Dec</span></div>
@@ -261,7 +270,7 @@
                   </div>
                 </div>
                 <div class="event-carousel__card js-event-carousel__card">
-                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_with-scrollbar">
+                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_color_cyan news-card_with-scrollbar">
                     <div class="news-card__image" style="background-image: url(assets/img/development-img.jpg)"></div>
                     <div class="news-card__content">
                       <div class="news-card__date"><span class="news-card__day">17</span><span class="news-card__month">Dec</span></div>
@@ -273,7 +282,7 @@
                   </div>
                 </div>
                 <div class="event-carousel__card js-event-carousel__card">
-                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_with-scrollbar">
+                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_color_cyan news-card_with-scrollbar">
                     <div class="news-card__image" style="background-image: url(assets/img/development-img.jpg)"></div>
                     <div class="news-card__content">
                       <div class="news-card__date"><span class="news-card__day">18</span><span class="news-card__month">Dec</span></div>
@@ -285,7 +294,7 @@
                   </div>
                 </div>
                 <div class="event-carousel__card js-event-carousel__card">
-                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_with-scrollbar">
+                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_color_cyan news-card_with-scrollbar">
                     <div class="news-card__image" style="background-image: url(assets/img/development-img.jpg)"></div>
                     <div class="news-card__content">
                       <div class="news-card__date"><span class="news-card__day">18</span><span class="news-card__month">Dec</span></div>
@@ -297,7 +306,7 @@
                   </div>
                 </div>
                 <div class="event-carousel__card js-event-carousel__card">
-                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_with-scrollbar">
+                  <div class="news-card js-news-card news-card_type_event news-card_size_compact news-card_color_cyan news-card_with-scrollbar">
                     <div class="news-card__image" style="background-image: url(assets/img/development-img.jpg)"></div>
                     <div class="news-card__content">
                       <div class="news-card__date"><span class="news-card__day">18</span><span class="news-card__month">Dec</span></div>
@@ -318,37 +327,46 @@
           </section>
         </div>
       </main>
-      <footer class="index__footer">
-        <div class="footer-section">
-          <section class="footer-section__contacts">
-            <h3 class="footer-section__header">Contact Us</h3>
-            <ul class="footer-section__list">
-              <li class="footer-section__list-item">
-                <p class="footer-section__paragraph">E-mail:</p>
-                <p class="footer-section__paragraph"><a class="footer-section__link" href="mailto:info@nonexistingwt.org">info@nonexistingwt.org</a></p>
-              </li>
-              <li class="footer-section__list-item">
-                <p class="footer-section__paragraph">Twitter:</p>
-                <p class="footer-section__paragraph"><a class="footer-section__link" href="./sorry_this_link_is_dead" title="twitter" target="_blank" rel="noopener noreferrer">@nonexistingwebtalks</a></p>
-              </li>
-              <li class="footer-section__list-item">
-                <p class="footer-section__paragraph">Phone:</p>
-                <p class="footer-section__paragraph"> <a class="footer-section__link" href="tel:+73822000000">+7 3822 000 000</a></p>
-              </li>
-            </ul>
-          </section>
-          <section class="footer-section__docs">
-            <h3 class="footer-section__header">More from Web Talks</h3>
-            <ul class="footer-section__list">
-              <li class="footer-section__list-item"><a class="footer-section__link" href="./sorry_this_link_is_dead" title="news and articles" target="_blank" rel="noopener noreferrer">News and articles</a></li>
-              <li class="footer-section__list-item"><a class="footer-section__link" href="./sorry_this_link_is_dead" title="newsleter" target="_blank" rel="noopener noreferrer">Newsletter</a></li>
-              <li class="footer-section__list-item"><a class="footer-section__link" href="./sorry_this_link_is_dead" title="terms and conditions" target="_blank" rel="noopener noreferrer">Terms and conditions</a></li>
-              <li class="footer-section__list-item"><a class="footer-section__link" href="./sorry_this_link_is_dead" title="privacy policy" target="_blank" rel="noopener noreferrer">Privacy policy</a></li>
-            </ul>
-          </section>
+      <div class="index__footer">
+        <footer class="footer-section">
+          <div class="footer-section__contacts">
+            <section class="footer-link-list footer-link-list_titled">
+              <h3 class="footer-link-list__title">Contact Us</h3>
+              <ul class="footer-link-list__list">
+                <li class="footer-link-list__list-item">
+                  <p class="footer-link-list__paragraph">E-mail:</p>
+                  <p class="footer-link-list__paragraph"><a class="footer-link-list__link" href="mailto:info@nonexistingwt.org" title="E-mail">info@nonexistingwt.org</a></p>
+                </li>
+                <li class="footer-link-list__list-item">
+                  <p class="footer-link-list__paragraph">Twitter:</p>
+                  <p class="footer-link-list__paragraph"><a class="footer-link-list__link" href="./sorry_this_link_is_dead" title="Twitter" target="_blank" rel="noopener noreferrer">@nonexistingwebtalks</a></p>
+                </li>
+                <li class="footer-link-list__list-item">
+                  <p class="footer-link-list__paragraph">Phone:</p>
+                  <p class="footer-link-list__paragraph"><a class="footer-link-list__link" href="tel:+73822000000" title="Phone">+7 3822 000 000</a></p>
+                </li>
+              </ul>
+            </section>
+          </div>
+          <div class="footer-section__docs">
+            <section class="footer-link-list">
+              <h3 class="footer-link-list__title">More from Web Talks</h3>
+              <ul class="footer-link-list__list">
+                <li class="footer-link-list__list-item">
+                  <p class="footer-link-list__paragraph"><a class="footer-link-list__link" href="./sorry_this_link_is_dead" title="newsletter" target="_blank" rel="noopener noreferrer">Newsletter</a></p>
+                </li>
+                <li class="footer-link-list__list-item">
+                  <p class="footer-link-list__paragraph"><a class="footer-link-list__link" href="./sorry_this_link_is_dead" title="terms and conditions" target="_blank" rel="noopener noreferrer">Terms and conditions</a></p>
+                </li>
+                <li class="footer-link-list__list-item">
+                  <p class="footer-link-list__paragraph"><a class="footer-link-list__link" href="./sorry_this_link_is_dead" title="privacy policy" target="_blank" rel="noopener noreferrer">Privacy policy</a></p>
+                </li>
+              </ul>
+            </section>
+          </div>
           <p class="footer-section__copyright">© 2018-2019 Web Talks. All rights reserved.</p>
-        </div>
-      </footer>
+        </footer>
+      </div>
     </div>
   <script type="text/javascript" src="main.js"></script></body>
 </html>
