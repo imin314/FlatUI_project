@@ -4,6 +4,7 @@ include ../validation-input/validation-input.pug
 mixin emailForm(settings = {})
   -
     const {
+      bubbleText,
       namePlaceholder = 'Your Name',
       emailPlaceholder = 'Your Email',
       textPlaceholder = 'Your Message',
@@ -15,12 +16,14 @@ mixin emailForm(settings = {})
         type: 'text',
         name: 'name',
         placeholder: namePlaceholder,
+        bubbleText,
       })
     .email-form__input.email-form__input_type_email
       +validationInput({
         type: 'email',
         name: 'email',
         placeholder: emailPlaceholder,
+        bubbleText,
       })
     textarea.email-form__message(
       name="message"
