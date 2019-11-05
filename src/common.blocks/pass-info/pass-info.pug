@@ -5,13 +5,14 @@ mixin passInfo(passData = {})
      price ='',
      description = '',
      tickboxValue = '',
-     checked = false
+     definitionWord = 'Pass',
+     checked = false,
     } = passData
   section.pass-info
     header.pass-info__header
       h3.pass-info__name= name
         br
-        | Pass
+        | #{definitionWord}
     p.pass-info__price= price
     p.pass-info__text= description
     .pass-info__tickbox

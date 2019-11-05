@@ -7,7 +7,7 @@ mixin profileCard(profile = {}, settings = {})
       links = { facebook: '', twitter: '', dribbble: '' },
     } = profile;
 
-    const { color='' } = settings;
+    const { color } = settings;
 
     const image = require(`../../assets/img/${profileImg}`);
     const colorModifiers = { cyan: 'profile-card_color_cyan' };
@@ -17,14 +17,14 @@ mixin profileCard(profile = {}, settings = {})
   div(class = className)
     .profile-card__photo(style=`background-image: url(${image})`)
     .profile-card__box
-      h3.profile-card__name!= profileName
-      h4.profile-card__position!= profilePosition
+      h3.profile-card__name= profileName
+      h4.profile-card__position= profilePosition
       .profile-card__icons
-        - for (let key in links)
+        each value, key in links
           a.profile-card__icon(
             class = `profile-card__icon_for-${key}`
-            href=links[key]
-            title!=key
+            href=value
+            title=key
             target="blank"
             rel="noopener noreferrer"
             tabindex="-1"

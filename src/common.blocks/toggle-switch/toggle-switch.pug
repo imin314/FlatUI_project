@@ -1,5 +1,10 @@
 mixin toggleSwitch(settings = {})
-  - const { value: valueAttr, name: nameAttr, checked: checkedAttr = false } = settings; 
+  -
+    const {
+      value: valueAttr,
+      name: nameAttr,
+      checked: checkedAttr = false,
+    } = settings;
   .toggle-switch.js-toggle-switch
     label.toggle-switch__label
       input.toggle-switch__checkbox.js-toggle-switch__checkbox(
