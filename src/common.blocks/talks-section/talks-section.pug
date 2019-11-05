@@ -26,6 +26,7 @@ mixin talksSection(talksData = [])
         const month = date.toLocaleString('en-us', { month: 'long' });
         const dayOfWeek = date.toLocaleString('en-us', {  weekday: 'long' });
         const fullDate = `${day} ${month}`;
+
       header.talks-section__header
         .talks-section__day= dayOfWeek
         .talks-section__date= fullDate
@@ -35,5 +36,5 @@ mixin talksSection(talksData = [])
           .talks-section__event
             h3.talks-section__time= eventTime
             .talks-section__card
-              +newsCard(event, { isCompact: true, color: 'reverted' })
+              +newsCard(event, { size: 'compact', color: 'cyan' })
 

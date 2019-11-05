@@ -15,7 +15,12 @@ mixin eventCarousel(settings = {})
       .event-carousel__card-wrapper.js-event-carousel__card-wrapper
         each talk in talksData
           .event-carousel__card.js-event-carousel__card
-            +newsCard(talk, { type: 'event', isCompact: true, withScrollbar: true })
+            +newsCard(talk, {
+              type: 'event',
+              color: 'cyan',
+              size: 'compact',
+              withScrollbar: true,
+            })
     .event-carousel__calendar-overlay.js-event-carousel__calendar-overlay
       .event-carousel__calendar.js-event-carousel__calendar
         +calendar()
