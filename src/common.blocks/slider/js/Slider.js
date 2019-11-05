@@ -9,7 +9,9 @@ class Slider {
   }
 
   _initialize(domElement) {
-    this._findElements(domElement);
+    this
+      ._findElements(domElement)
+      ._getSliderData();
     const settings = this._generateSliderSettings();
     this.$sliderContainer.slider(settings);
 
@@ -24,33 +26,50 @@ class Slider {
     return this;
   }
 
+  _getSliderData() {
+    this.sliderData = this.$slider.data();
+    return this;
+  }
+
   _generateSliderSettings() {
-    let typeSettings = {};
-    const settings = {
-      min: 0,
-      max: 100,
+    const {
+      min,
+      max,
+      value,
+      step,
+    } = this.sliderData;
+
+    let settings = {
+      min,
+      max,
+      value,
+      step,
       classes: {
         'ui-slider': 'slider__container',
         'ui-slider-handle': 'slider__handle',
         'ui-slider-range': 'slider__range',
       },
     };
-    if (this.$slider.hasClass('js-slider_type_tip')) {
-      typeSettings = {
-        value: 40,
-        slide: this._handleSliderSlide,
-        start: this._handleSliderStart,
-        stop: this._handleSliderStop,
+    if (this.$slider.hasClass('js-slider_with-tip')) {
+      settings = {
+        ...settings,
+        ...{
+          slide: this._handleSliderSlide,
+          start: this._handleSliderStart,
+          stop: this._handleSliderStop,
+        },
       };
-    } else if (this.$slider.hasClass('js-slider_type_scale')) {
-      typeSettings = {
-        value: 75,
-        step: 25,
-        range: 'min',
+    }
+    if (this.$slider.hasClass('js-slider_with-scale')) {
+      settings = {
+        ...settings,
+        ...{
+          range: 'min',
+        },
       };
     }
 
-    return { ...settings, ...typeSettings };
+    return settings;
   }
 
   @bind

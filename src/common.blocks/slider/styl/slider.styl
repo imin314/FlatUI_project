@@ -13,7 +13,6 @@
     letter-spacing 0.08rem
     text-align center
     color white
-    background-color color-orange
     border-radius 0.384615385rem
     transform translate(-50%, -160%)
 
@@ -44,7 +43,6 @@
     width 1.4rem
     height @width
     z-index 2
-    background-color color-orange
     border-radius 50%
     outline none
     transform translate(-50%, -40%)
@@ -54,12 +52,7 @@
     position absolute
     height inherit
     z-index 1
-    background-color color-cyan
     border-radius inherit
-
-  &_type_scale
-    & ^[0]__handle
-      background-color color-cyan
 
   &__scale
     position relative
@@ -71,3 +64,17 @@
     transform translateX(-50%)
     color darken(color-bg, 8.5)
     font bold 0.785714285714286rem font-family
+  
+  &_color_orange
+    & ^[0]__tip,
+    & ^[0]__handle,
+    & ^[0]__range
+      background-color color-orange
+
+  &_color_cyan
+    & ^[0]__tip,
+    & ^[0]__handle,
+    & ^[0]__range
+      background-color color-cyan
+
+    

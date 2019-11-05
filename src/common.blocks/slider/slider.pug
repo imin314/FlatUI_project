@@ -1,17 +1,37 @@
 mixin slider(settings = {})
   -
-    const { type: sliderType = '' } = settings; 
-    const typeModifiers = {
-      tip: 'slider_type_tip js-slider_type_tip',
-      scale: 'slider_type_scale js-slider_type_scale',
+    const {
+      withTip,
+      withScale,
+      color = 'orange',
+      min = 0,
+      max = 100,
+      step = 25,
+      value = min,
+      scaleStep = step,
+    } = settings;
+
+    const tipModifier = 'slider_with-tip js-slider_with-tip';
+    const scaleModifier = 'slider_with-scale js-slider_with-scale';
+    const colorModifiers = {
+      orange: 'slider_color_orange',
+      cyan: 'slider_color_cyan',
     };
     let className = 'slider js-slider';
-    if (sliderType in typeModifiers) className += ` ${typeModifiers[sliderType]}`; 
-  div(class= className)
+    if (!!withTip) className += ` ${tipModifier}`;
+    if (!!withScale) className += ` ${scaleModifier}`;
+    if (color in colorModifiers) className += ` ${colorModifiers[color]}`;
+  div(
+    class=className
+    data-min=min
+    data-max=max
+    data-value=value
+    data-step=step
+  )
     .slider__container.js-slider__container
-      if (sliderType === 'tip')
+      if (!!withTip)
         .slider__tip.js-slider__tip
-      if (sliderType === 'scale')
+      if (!!withScale)
         ul.slider__scale
-          - for (let i = 0; i <= 100; i += 25)
+          - for (let i = min; i <= max; i += scaleStep)
             li.slider__scale-item(style=`left: ${i}%`)= i

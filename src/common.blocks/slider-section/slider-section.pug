@@ -6,6 +6,6 @@ mixin sliderSection(settings = {})
     h2.slider-section__title= title
     .slider-section__container
       .slider-section__slider
-        +slider({ type: 'tip' })
+        +slider({ withTip: true, min: 0, max: 100, step: 1, value: 40 })
       .slider-section__slider
-        +slider({ type: 'scale' })
+        +slider({ withScale: true, color: 'cyan', min: 0, max: 100, step: 25, value: 75 })
