@@ -19,8 +19,8 @@ mixin messenger(settings)
       .messenger__photo(style=`background-image: url(${bgImage})`)
     .messenger__container
       .messenger__icons
-        a.messenger__bubble-icon
-        a.messenger__camera-icon
+        .messenger__bubble-icon
+        .messenger__camera-icon
       .messenger__message.messenger__message_type_inbox
         .messenger__text= inbox
       textarea.messenger__message.messenger__message_type_outbox(

@@ -17,5 +17,5 @@ mixin arrowButton(settings = {})
       className += ` ${disabledModifier}`;
       tabValue = '-1';
     }
-  a(class = className tabindex = tabValue)
+  div(class = className tabindex = tabValue)
     .arrow-button__arrow

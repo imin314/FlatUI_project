@@ -13,7 +13,7 @@ class SpeakerCarousel {
     this.$cards = $domElement.find('.js-speaker-carousel__cards');
     this.$rightButton = $domElement.find('.js-speaker-carousel__arrow-button .js-arrow-button_direction_right');
     this.$leftButton = $domElement.find('.js-speaker-carousel__arrow-button .js-arrow-button_direction_left');
-    this.$viewAllLink = $domElement.find('.js-speaker-carousel__link');
+    this.$controlViewButton = $domElement.find('.js-speaker-carousel__control-view-button');
     return this;
   }
 
@@ -100,7 +100,7 @@ class SpeakerCarousel {
   _addEventListeners() {
     this.$rightButton.on('click.speakers', this._handleRightButtonClick);
     this.$leftButton.on('click.speakers', this._handleLeftButtonClick);
-    this.$viewAllLink.on('click.speakers', this._handleViewAllLinkClick);
+    this.$controlViewButton.on('click.speakers', this._handleControlViewButtonClick);
     return this;
   }
 
@@ -115,17 +115,17 @@ class SpeakerCarousel {
   }
 
   @bind
-  _handleViewAllLinkClick() {
+  _handleControlViewButtonClick() {
     if (this.cardsAreExpanded) {
       this.$page.removeClass('speaker-carousel_view_full');
-      this.$viewAllLink.text('View all speakers');
+      this.$controlViewButton.text('View all speakers');
       this.cardsAreExpanded = false;
       if (!this.windowIsSmall) {
         this._updateCustomScrollBar();
       }
     } else {
       this.$page.addClass('speaker-carousel_view_full');
-      this.$viewAllLink.text('Back to compact view');
+      this.$controlViewButton.text('Back to compact view');
       this.cardsAreExpanded = true;
       if (!this.windowIsSmall) {
         this._hideCustomScrollBar();
