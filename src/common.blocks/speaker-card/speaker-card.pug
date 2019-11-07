@@ -5,4 +5,4 @@ mixin speakerCard(speakerData = {})
   article.speaker-card.js-speaker-card
     .speaker-card__profile-card
       +profileCard(speakerData)
-    p.speaker-card__text.js-speaker-card__text!= text
+    p.speaker-card__text.js-speaker-card__text= text

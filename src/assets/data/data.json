@@ -2,7 +2,7 @@
   "speakers": [
     {
       "name": "maria leonova",
-      "position": "founder &amp; lead instructor, Jack&amp;Bo",
+      "position": "founder & lead instructor, Jack & Bo",
       "img": "maria-leonova.jpg",
       "text": "Maria specialises in adding the missing pieces to many Agile transformations: training the product teams and consulting on strategy, structure, and process. A frequent speaker, Maria has had the pleasure of addressing audiences in over 20 different countries. Maria is currently writing about her experiences for O'Reilly in the book."
     },
@@ -20,9 +20,9 @@
     },
     {
       "name": "anna smith",
-      "position": "CO-FOUNDER &amp; AGILE COACH, podojo",
+      "position": "CO-FOUNDER & AGILE COACH, podojo",
       "img": "anna-smith.jpg",
-      "text": "With over 20 years of experience in complex product development in both software &amp; hardware, Anna has previously led Agile transition efforts in top telecommunications firms and worked with North Carolina State University to conduct research on Agile Test-Driven development."
+      "text": "With over 20 years of experience in complex product development in both software & hardware, Anna has previously led Agile transition efforts in top telecommunications firms and worked with North Carolina State University to conduct research on Agile Test-Driven development."
     },
     {
       "name": "ben portman",
@@ -34,7 +34,7 @@
       "name": "keith alexander",
       "position": "WEB DESIGNER, MYR Info",
       "img": "keith-alexander.jpg",
-      "text": "Keith is a designer with a background in Service &amp; Interaction Desiis a designer with a background in Service &amp; Interaction Design. During his career, Keith has served in a broad range of roles, designing digital products and services in several sectors, including healthcare, web development, and the automotive and travel &amp; leisure industries."
+      "text": "Keith is a designer with a background in Service & Interaction Desiis a designer with a background in Service & Interaction Design. During his career, Keith has served in a broad range of roles, designing digital products and services in several sectors, including healthcare, web development, and the automotive and travel & leisure industries."
     },
     {
       "name": "haruki yamada",
@@ -46,7 +46,7 @@
       "name": "marcos caceres",
       "position": "platform engineer, Mozilla",
       "img": "marcos-caceres.jpg",
-      "text": "Marcos has spent the last four years working with Mozilla&apos;s DOM team hacking on Firefox, writing PWA-related W3C specifications, and co-chairing the W3C&apos;s Web Incubator Community Group - all proudly from Melbourne, Australia! Previously, Marcos worked at Opera Software in Oslo, Norway."
+      "text": "Marcos has spent the last four years working with Mozilla's DOM team hacking on Firefox, writing PWA-related W3C specifications, and co-chairing the W3C's Web Incubator Community Group - all proudly from Melbourne, Australia! Previously, Marcos worked at Opera Software in Oslo, Norway."
     },
     {
       "name": "jack zeman",
@@ -58,7 +58,7 @@
       "name": "paul heasley",
       "position": "Technical Lead, PageUp",
       "img": "paul-heasley.jpg",
-      "text": "Paul is passionate about creating beautiful UI&apos;s that connect emotionally with users. He&apos;s excited by the opportunities that new technology opens up and is inspired by the innovators, free-thinkers and open source contributors in our community."
+      "text": "Paul is passionate about creating beautiful UI's that connect emotionally with users. He's excited by the opportunities that new technology opens up and is inspired by the innovators, free-thinkers and open source contributors in our community."
     },
     {
       "name": "Isabel Brison",
@@ -70,7 +70,7 @@
       "name": "xavier ho",
       "position": "Software Crafter, Data61",
       "img": "xavier-ho.jpg",
-      "text": "Xavier&apos;s focuses on high-impact, real-time data visualisation, data-driven engineering, and design at CSIRO Data61. His recent work on CSIRO&apos;s TraNSIT was recommended by the Office of Northern Australia. In his spare time, he fiddles with generative art, and code."
+      "text": "Xavier's focuses on high-impact, real-time data visualisation, data-driven engineering, and design at CSIRO Data61. His recent work on CSIRO's TraNSIT was recommended by the Office of Northern Australia. In his spare time, he fiddles with generative art, and code."
     },
     {
       "name": "marcin szczenski",
@@ -91,7 +91,7 @@
       "text": "Michael is an experienced Technical Consultant currently working with Readify in Sydney, Australia, a Microsoft MVP and a certified professional with more than 5 years of working experience ranging from Mobile, Cloud, Web, DevOps and Blockchain."
     },
     {
-      "name": "jason o&apos;neil",
+      "name": "jason o'neil",
       "position": "Software Engineer, Culture Amp",
       "img": "jason-o-neil.jpg",
       "text": "Jason lives in Perth and works remotely as a front-end software engineer for Culture Amp. He loves thinking about ways we can improve developer experience, and make it easier and faster for us to make high quality, accessible websites and apps."
@@ -100,7 +100,7 @@
       "name": "craig sharkie",
       "position": "Senior Developer, Seven West Media",
       "img": "craig-sharkie.jpg",
-      "text": "Founder and lead wrangler at Sydney&apos;s JavaScript meet-up, SydJS, founder at SydJS, JavaScript communities for new Developers and inexperienced Developers"
+      "text": "Founder and lead wrangler at Sydney's JavaScript meet-up, SydJS, founder at SydJS, JavaScript communities for new Developers and inexperienced Developers"
     },
     {
       "name": "helga willson",
