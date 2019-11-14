@@ -54,15 +54,16 @@
     @media screen and (max-width: 768px)
       padding 1.2rem 1.2rem 1.6rem
 
-  &__icons
+  &__buttons
     display flex
     justify-content space-between
     padding 0 0.3rem 0 0.1rem
 
-  &__bubble-icon
+  &__bubble-button
     width 1.55rem
     height @width
     background url('./img/bubble-icon.svg') no-repeat
+    border none
     cursor pointer
     noselect()
 
@@ -77,10 +78,11 @@
       @media (hover:none)
         transform scale(1.1)
 
-  &__camera-icon
+  &__camera-button
     width 1.8rem
     height 1.41rem
     background url('./img/camera-icon.svg') no-repeat
+    border none
     cursor pointer
     noselect()
 

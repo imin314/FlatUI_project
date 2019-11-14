@@ -3,12 +3,15 @@ mixin button(settings = {})
     const {
       color,
       size = '',
-      title: titleAttr = 'button',
-      link: hrefAttr = false,
-      isExternal = false
+      title = 'button',
+      link = false,
+      isExternal = false,
+      tag = 'button',
+      type = false,
+      name = false,
      } = settings;
-    const targetAttr = !!isExternal ? '_blank' : false;
-    const relAttr = !!isExternal ? 'noopener noreferrer' : false;
+    const target = !!isExternal ? '_blank' : false;
+    const rel = !!isExternal ? 'noopener noreferrer' : false;
 
     const sizeModifiers = {
       small: 'button_size_small',
@@ -28,10 +31,12 @@ mixin button(settings = {})
     size.split(' ').forEach((key) => {
       if (key in sizeModifiers) className += ` ${sizeModifiers[key]}`;
     });
-  a(
-    class=className
-    title=titleAttr
-    tabindex="0"
-    href=hrefAttr
-    target=targetAttr
-    rel=relAttr)= titleAttr
+  #{tag}(
+    class = className
+    title = title
+    tabindex = "0"
+    href = link
+    target = target
+    rel = rel
+    name = name
+    type = type)= title

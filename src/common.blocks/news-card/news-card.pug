@@ -50,7 +50,7 @@ mixin newsCard(cardData = {}, settings = {})
         .news-card__title= title
         .news-card__text.js-news-card__text= text
         .news-card__button
-          +button({ title: buttonTitle, size: 'small' })
+          +button({ title: buttonTitle, size: 'small', type: 'button', name: 'button' })
       else
         .news-card__title= title
         .news-card__date= `${day} ${month} ${year}`

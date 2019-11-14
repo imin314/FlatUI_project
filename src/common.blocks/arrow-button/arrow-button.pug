@@ -1,6 +1,6 @@
 mixin arrowButton(settings = {})
   -
-    const { direction, size, disabled } = settings;
+    const { direction, size, disabled, tag = 'button', name = false, type = false } = settings;
     const directionModifiers = {
       left: 'arrow-button_direction_left js-arrow-button_direction_left',
       right: 'arrow-button_direction_right js-arrow-button_direction_right',
@@ -17,5 +17,5 @@ mixin arrowButton(settings = {})
       className += ` ${disabledModifier}`;
       tabValue = '-1';
     }
-  div(class = className tabindex = tabValue)
+  #{tag}(class = className tabindex = tabValue name = name type = type)
     .arrow-button__arrow

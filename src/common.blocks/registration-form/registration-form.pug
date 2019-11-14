@@ -28,4 +28,4 @@ mixin registrationForm(settings = {})
           .registration-form__policy-tickbox
             +policyTickbox()
           .registration-form__button.js-registration-form__button
-            +button({ title: buttonTitle, color: 'reverse' })
+            +button({ title: buttonTitle, color: 'reverse', type: 'submit', name: 'button' })

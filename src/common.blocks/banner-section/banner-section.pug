@@ -18,6 +18,7 @@ mixin bannerSection(bannerData = {})
     p.banner-section__tagline= tagline
     .banner-section__register-button
       +button({
+        tag: 'a',
         title: buttonTitle,
         link: buttonLink,
       })

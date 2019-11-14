@@ -4,30 +4,30 @@ mixin buttonSection(settings = {})
   - const { title = 'standard buttons' } = settings;
   section.button-section
     h2.button-section__title= title
-    .button-section__container
+    form.button-section__container
       .button-section__column
         .button-section__button.button-section__button_size_small
-          +button({ title: 'button', size: 'small' })
+          +button({ title: 'button', size: 'small', type: 'button' })
         .button-section__button.button-section__button_size_small
-          +button({ title: 'button', size: 'small' })
+          +button({ title: 'button', size: 'small', type: 'button' })
         .button-section__button.button-section__button_size_small
-          +button({ title: 'button', size: 'small' })
+          +button({ title: 'button', size: 'small', type: 'button' })
         .button-section__button
-          +button({ title: 'button' })
+          +button({ title: 'button', type: 'button' })
         .button-section__button
-          +button({ title: 'button' })
+          +button({ title: 'button', type: 'button' })
         .button-section__button
-          +button({ title: 'button' })
+          +button({ title: 'button', type: 'button' })
       .button-section__column
         .button-section__button
-          +button({ title: 'button', color: 'orange' })
+          +button({ title: 'button', color: 'orange', type: 'button' })
         .button-section__button
-          +button({ title: 'button', color: 'orange' })
+          +button({ title: 'button', color: 'orange', type: 'button' })
         .button-section__button
-          +button({ title: 'button', color: 'orange' })
+          +button({ title: 'button', color: 'orange', type: 'button' })
         .button-section__button.button-section__button_size_small
-          +button({ title: 'button', color: 'orange', size: 'small'})
+          +button({ title: 'button', color: 'orange', size: 'small', type: 'button' })
         .button-section__button.button-section__button_size_small
-          +button({ title: 'button', color: 'orange', size: 'small'})
+          +button({ title: 'button', color: 'orange', size: 'small', type: 'button' })
         .button-section__button.button-section__button_size_small
-          +button({ title: 'button', color: 'orange', size: 'small'})
+          +button({ title: 'button', color: 'orange', size: 'small', type: 'button' })

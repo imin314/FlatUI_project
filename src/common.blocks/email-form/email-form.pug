@@ -30,4 +30,4 @@ mixin emailForm(settings = {})
       placeholder=textPlaceholder
     )
     .email-form__button.js-email-form__button
-      +button({ title: buttonTitle, color: 'reverse' })
+      +button({ title: buttonTitle, color: 'reverse', type: 'submit', name: 'button' })

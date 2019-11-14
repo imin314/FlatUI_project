@@ -107,11 +107,13 @@ class SpeakerCarousel {
   @bind
   _handleRightButtonClick() {
     this.$cards.mCustomScrollbar('scrollTo', '-=500');
+    return false;
   }
 
   @bind
   _handleLeftButtonClick() {
     this.$cards.mCustomScrollbar('scrollTo', '+=500');
+    return false;
   }
 
   @bind
@@ -131,6 +133,8 @@ class SpeakerCarousel {
         this._hideCustomScrollBar();
       }
     }
+    this.$controlViewButton.blur();
+    return false;
   }
 
   _updateCustomScrollBar() {

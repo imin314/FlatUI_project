@@ -2,16 +2,28 @@ include ../speaker-card/speaker-card.pug
 include ../arrow-button/arrow-button.pug
 
 mixin speakerCarousel(settings = {})
-  - const { buttonText = 'View all speakers', speakersData = [] } = settings;
+  -
+    const { buttonText = 'View all speakers', speakersData = [] } = settings;
+    const buttonClass = 'speaker-carousel__control-view-button js-speaker-carousel__control-view-button';
   section.speaker-carousel.js-speaker-carousel
     .speaker-carousel__cards.js-speaker-carousel__cards
       .speaker-carousel__card-wrapper
         each item in speakersData
           .speaker-carousel__card
             +speakerCard(item)
-    .speaker-carousel__controls
+    form.speaker-carousel__controls
       .speaker-carousel__arrow-button.js-speaker-carousel__arrow-button
-        +arrowButton({ direction:'left', size: 'small', disabled: true })
-      .speaker-carousel__control-view-button.js-speaker-carousel__control-view-button= buttonText
+        +arrowButton({
+          direction:'left',
+          size: 'small',
+          disabled: true,
+          name: 'arrow-button',
+          type: 'button',
+        })
+      button(class=buttonClass name="control-view-button" type="button")= buttonText
       .speaker-carousel__arrow-button.js-speaker-carousel__arrow-button
-        +arrowButton({ direction:'right', size: 'small' })
+        +arrowButton({
+          direction:'right',
+          size: 'small',
+          name: 'arrow-button',
+        })
