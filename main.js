@@ -16569,7 +16569,7 @@ let SpeakerCarousel = (_class = class SpeakerCarousel {
     this.$cards = $domElement.find('.js-speaker-carousel__cards');
     this.$rightButton = $domElement.find('.js-speaker-carousel__arrow-button .js-arrow-button_direction_right');
     this.$leftButton = $domElement.find('.js-speaker-carousel__arrow-button .js-arrow-button_direction_left');
-    this.$viewAllLink = $domElement.find('.js-speaker-carousel__link');
+    this.$controlViewButton = $domElement.find('.js-speaker-carousel__control-view-button');
     return this;
   }
 
@@ -16642,22 +16642,24 @@ let SpeakerCarousel = (_class = class SpeakerCarousel {
   _addEventListeners() {
     this.$rightButton.on('click.speakers', this._handleRightButtonClick);
     this.$leftButton.on('click.speakers', this._handleLeftButtonClick);
-    this.$viewAllLink.on('click.speakers', this._handleViewAllLinkClick);
+    this.$controlViewButton.on('click.speakers', this._handleControlViewButtonClick);
     return this;
   }
 
   _handleRightButtonClick() {
     this.$cards.mCustomScrollbar('scrollTo', '-=500');
+    return false;
   }
 
   _handleLeftButtonClick() {
     this.$cards.mCustomScrollbar('scrollTo', '+=500');
+    return false;
   }
 
-  _handleViewAllLinkClick() {
+  _handleControlViewButtonClick() {
     if (this.cardsAreExpanded) {
       this.$page.removeClass('speaker-carousel_view_full');
-      this.$viewAllLink.text('View all speakers');
+      this.$controlViewButton.text('View all speakers');
       this.cardsAreExpanded = false;
 
       if (!this.windowIsSmall) {
@@ -16665,13 +16667,16 @@ let SpeakerCarousel = (_class = class SpeakerCarousel {
       }
     } else {
       this.$page.addClass('speaker-carousel_view_full');
-      this.$viewAllLink.text('Back to compact view');
+      this.$controlViewButton.text('Back to compact view');
       this.cardsAreExpanded = true;
 
       if (!this.windowIsSmall) {
         this._hideCustomScrollBar();
       }
     }
+
+    this.$controlViewButton.blur();
+    return false;
   }
 
   _updateCustomScrollBar() {
@@ -16684,7 +16689,7 @@ let SpeakerCarousel = (_class = class SpeakerCarousel {
     this.$scrollBarContainer.removeAttr('style');
   }
 
-}, (_applyDecoratedDescriptor(_class.prototype, "_handleScrollbarTotalScroll", [bind_decorator__WEBPACK_IMPORTED_MODULE_0___default.a], Object.getOwnPropertyDescriptor(_class.prototype, "_handleScrollbarTotalScroll"), _class.prototype), _applyDecoratedDescriptor(_class.prototype, "_handleScrollbarTotalScrollBack", [bind_decorator__WEBPACK_IMPORTED_MODULE_0___default.a], Object.getOwnPropertyDescriptor(_class.prototype, "_handleScrollbarTotalScrollBack"), _class.prototype), _applyDecoratedDescriptor(_class.prototype, "_handleScrollbarScrollStart", [bind_decorator__WEBPACK_IMPORTED_MODULE_0___default.a], Object.getOwnPropertyDescriptor(_class.prototype, "_handleScrollbarScrollStart"), _class.prototype), _applyDecoratedDescriptor(_class.prototype, "_handleMediaQueryMatch", [bind_decorator__WEBPACK_IMPORTED_MODULE_0___default.a], Object.getOwnPropertyDescriptor(_class.prototype, "_handleMediaQueryMatch"), _class.prototype), _applyDecoratedDescriptor(_class.prototype, "_handleRightButtonClick", [bind_decorator__WEBPACK_IMPORTED_MODULE_0___default.a], Object.getOwnPropertyDescriptor(_class.prototype, "_handleRightButtonClick"), _class.prototype), _applyDecoratedDescriptor(_class.prototype, "_handleLeftButtonClick", [bind_decorator__WEBPACK_IMPORTED_MODULE_0___default.a], Object.getOwnPropertyDescriptor(_class.prototype, "_handleLeftButtonClick"), _class.prototype), _applyDecoratedDescriptor(_class.prototype, "_handleViewAllLinkClick", [bind_decorator__WEBPACK_IMPORTED_MODULE_0___default.a], Object.getOwnPropertyDescriptor(_class.prototype, "_handleViewAllLinkClick"), _class.prototype)), _class);
+}, (_applyDecoratedDescriptor(_class.prototype, "_handleScrollbarTotalScroll", [bind_decorator__WEBPACK_IMPORTED_MODULE_0___default.a], Object.getOwnPropertyDescriptor(_class.prototype, "_handleScrollbarTotalScroll"), _class.prototype), _applyDecoratedDescriptor(_class.prototype, "_handleScrollbarTotalScrollBack", [bind_decorator__WEBPACK_IMPORTED_MODULE_0___default.a], Object.getOwnPropertyDescriptor(_class.prototype, "_handleScrollbarTotalScrollBack"), _class.prototype), _applyDecoratedDescriptor(_class.prototype, "_handleScrollbarScrollStart", [bind_decorator__WEBPACK_IMPORTED_MODULE_0___default.a], Object.getOwnPropertyDescriptor(_class.prototype, "_handleScrollbarScrollStart"), _class.prototype), _applyDecoratedDescriptor(_class.prototype, "_handleMediaQueryMatch", [bind_decorator__WEBPACK_IMPORTED_MODULE_0___default.a], Object.getOwnPropertyDescriptor(_class.prototype, "_handleMediaQueryMatch"), _class.prototype), _applyDecoratedDescriptor(_class.prototype, "_handleRightButtonClick", [bind_decorator__WEBPACK_IMPORTED_MODULE_0___default.a], Object.getOwnPropertyDescriptor(_class.prototype, "_handleRightButtonClick"), _class.prototype), _applyDecoratedDescriptor(_class.prototype, "_handleLeftButtonClick", [bind_decorator__WEBPACK_IMPORTED_MODULE_0___default.a], Object.getOwnPropertyDescriptor(_class.prototype, "_handleLeftButtonClick"), _class.prototype), _applyDecoratedDescriptor(_class.prototype, "_handleControlViewButtonClick", [bind_decorator__WEBPACK_IMPORTED_MODULE_0___default.a], Object.getOwnPropertyDescriptor(_class.prototype, "_handleControlViewButtonClick"), _class.prototype)), _class);
 /* harmony default export */ __webpack_exports__["default"] = (SpeakerCarousel);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(3)))
 
@@ -17672,64 +17677,64 @@ importAll(__webpack_require__(215));
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./common.blocks/about-section/styl/about-section.styl": 34,
-	"./common.blocks/arrow-button/styl/arrow-button.styl": 36,
-	"./common.blocks/arrow-section/styl/arrow-section.styl": 38,
-	"./common.blocks/banner-section/styl/banner-section.styl": 40,
-	"./common.blocks/bread-crumbs/styl/bread-crumbs.styl": 43,
-	"./common.blocks/button-section/styl/button-section.styl": 45,
-	"./common.blocks/button/styl/button.styl": 47,
-	"./common.blocks/calendar-section/styl/calendar-section.styl": 50,
-	"./common.blocks/calendar/styl/calendar.styl": 52,
-	"./common.blocks/chart-section/styl/chart-section.styl": 54,
-	"./common.blocks/donut-chart/styl/donut-chart-mixin.styl": 56,
-	"./common.blocks/donut-chart/styl/donut-chart.styl": 58,
-	"./common.blocks/drop-down/styl/drop-down.styl": 60,
-	"./common.blocks/email-form/styl/email-form.styl": 62,
-	"./common.blocks/event-carousel/styl/event-carousel.styl": 64,
-	"./common.blocks/footer-link-list/styl/footer-link-list.styl": 67,
-	"./common.blocks/footer-section/styl/footer-section.styl": 69,
-	"./common.blocks/form-section/styl/form-section.styl": 71,
-	"./common.blocks/infogram/styl/infogram.styl": 73,
-	"./common.blocks/map-section/styl/map-section.styl": 75,
-	"./common.blocks/map/styl/map.styl": 77,
-	"./common.blocks/message-section/styl/message-section.styl": 79,
-	"./common.blocks/messenger/styl/messenger.styl": 81,
-	"./common.blocks/navigation-bar/styl/navigation-bar.styl": 85,
-	"./common.blocks/news-card/styl/news-card.styl": 87,
-	"./common.blocks/news-section/styl/news-section.styl": 89,
-	"./common.blocks/online-help/styl/online-help.styl": 91,
-	"./common.blocks/pass-info/styl/pass-info.styl": 94,
-	"./common.blocks/pass-selector/styl/pass-selector.styl": 96,
-	"./common.blocks/policy-tickbox/styl/policy-tickbox.styl": 98,
-	"./common.blocks/profile-card/styl/profile-card.styl": 100,
-	"./common.blocks/profile-section/styl/profile-section.styl": 105,
-	"./common.blocks/registration-form/styl/registration-form.styl": 107,
-	"./common.blocks/search-box/styl/search-box.styl": 109,
-	"./common.blocks/search-section/styl/search-section.styl": 111,
-	"./common.blocks/slider-section/styl/slider-section.styl": 113,
-	"./common.blocks/slider/styl/slider.styl": 115,
-	"./common.blocks/speaker-card/styl/speaker-card.styl": 117,
-	"./common.blocks/speaker-carousel/styl/speaker-carousel.styl": 119,
-	"./common.blocks/stages-section/styl/stages-section.styl": 121,
-	"./common.blocks/subscribe-form/styl/subscribe-form.styl": 123,
-	"./common.blocks/subscribe-toggle/styl/subscribe-toggle.styl": 125,
-	"./common.blocks/talks-section/styl/talks-section.styl": 127,
-	"./common.blocks/tick-box/styl/tick-box.styl": 129,
-	"./common.blocks/toggle-switch/styl/toggle-switch.styl": 131,
-	"./common.blocks/validation-input/styl/validation-input.styl": 133,
-	"./common.blocks/video-section/styl/video-section.styl": 135,
-	"./common.blocks/video/styl/video.styl": 137,
-	"./pages/contacts/styl/contacts.styl": 139,
-	"./pages/index/styl/index.styl": 141,
-	"./pages/registration/styl/registration.styl": 143,
-	"./pages/schedule/styl/schedule.styl": 145,
-	"./pages/speakers/styl/speakers.styl": 147,
-	"./pages/uidemo/styl/uidemo.styl": 149,
+	"./common.blocks/about-section/about-section.styl": 34,
+	"./common.blocks/arrow-button/arrow-button.styl": 36,
+	"./common.blocks/arrow-section/arrow-section.styl": 38,
+	"./common.blocks/banner-section/banner-section.styl": 40,
+	"./common.blocks/bread-crumbs/bread-crumbs.styl": 43,
+	"./common.blocks/button-section/button-section.styl": 45,
+	"./common.blocks/button/button.styl": 47,
+	"./common.blocks/calendar-section/calendar-section.styl": 50,
+	"./common.blocks/calendar/calendar.styl": 52,
+	"./common.blocks/chart-section/chart-section.styl": 54,
+	"./common.blocks/donut-chart/donut-chart-mixin.styl": 56,
+	"./common.blocks/donut-chart/donut-chart.styl": 58,
+	"./common.blocks/drop-down/drop-down.styl": 60,
+	"./common.blocks/email-form/email-form.styl": 62,
+	"./common.blocks/event-carousel/event-carousel.styl": 64,
+	"./common.blocks/footer-link-list/footer-link-list.styl": 67,
+	"./common.blocks/footer-section/footer-section.styl": 69,
+	"./common.blocks/form-section/form-section.styl": 71,
+	"./common.blocks/infogram/infogram.styl": 73,
+	"./common.blocks/map-section/map-section.styl": 75,
+	"./common.blocks/map/map.styl": 77,
+	"./common.blocks/message-section/message-section.styl": 79,
+	"./common.blocks/messenger/messenger.styl": 81,
+	"./common.blocks/navigation-bar/navigation-bar.styl": 85,
+	"./common.blocks/news-card/news-card.styl": 87,
+	"./common.blocks/news-section/news-section.styl": 89,
+	"./common.blocks/online-help/online-help.styl": 91,
+	"./common.blocks/pass-info/pass-info.styl": 94,
+	"./common.blocks/pass-selector/pass-selector.styl": 96,
+	"./common.blocks/policy-tickbox/policy-tickbox.styl": 98,
+	"./common.blocks/profile-card/profile-card.styl": 100,
+	"./common.blocks/profile-section/profile-section.styl": 105,
+	"./common.blocks/registration-form/registration-form.styl": 107,
+	"./common.blocks/search-box/search-box.styl": 109,
+	"./common.blocks/search-section/search-section.styl": 111,
+	"./common.blocks/slider-section/slider-section.styl": 113,
+	"./common.blocks/slider/slider.styl": 115,
+	"./common.blocks/speaker-card/speaker-card.styl": 117,
+	"./common.blocks/speaker-carousel/speaker-carousel.styl": 119,
+	"./common.blocks/stages-section/stages-section.styl": 121,
+	"./common.blocks/subscribe-form/subscribe-form.styl": 123,
+	"./common.blocks/subscribe-toggle/subscribe-toggle.styl": 125,
+	"./common.blocks/talks-section/talks-section.styl": 127,
+	"./common.blocks/tick-box/tick-box.styl": 129,
+	"./common.blocks/toggle-switch/toggle-switch.styl": 131,
+	"./common.blocks/validation-input/validation-input.styl": 133,
+	"./common.blocks/video-section/video-section.styl": 135,
+	"./common.blocks/video/video.styl": 137,
+	"./pages/contacts/contacts.styl": 139,
+	"./pages/index/index.styl": 141,
+	"./pages/registration/registration.styl": 143,
+	"./pages/schedule/schedule.styl": 145,
+	"./pages/speakers/speakers.styl": 147,
+	"./pages/uidemo/uidemo.styl": 149,
 	"./styles/fonts.styl": 151,
 	"./styles/mixins.styl": 169,
 	"./styles/variables.styl": 171,
-	"./templates/styl/layout.styl": 173
+	"./templates/layout.styl": 173
 };
 
 
@@ -18494,7 +18499,7 @@ var getUrl = __webpack_require__(4);
 var ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(83));
 var ___CSS_LOADER_URL___1___ = getUrl(__webpack_require__(84));
 // Module
-exports.push([module.i, ".messenger {\n  border-radius: 0.3rem;\n  overflow: hidden;\n}\n.messenger__header {\n  position: relative;\n  width: 100%;\n  padding: 1.2rem 1.1rem 2.2rem;\n  text-align: center;\n  background-color: #4eb7a8;\n  box-shadow: inset 0 -2.5rem 0 #46ab9d;\n}\n@media screen and (max-width: 768px) {\n  .messenger__header {\n    box-shadow: inset 0 -2rem 0 #46ab9d;\n  }\n}\n.messenger__name {\n  padding-bottom: 1.9rem;\n  font: lighter 2.428571428571429rem 'Lato', Arial, sans-serif;\n  text-transform: capitalize;\n  word-spacing: -0.02rem;\n  letter-spacing: -0.11rem;\n  color: #fff;\n  word-break: break-word;\n}\n@media screen and (max-width: 768px) {\n  .messenger__name {\n    font-size: 2rem;\n    padding-bottom: 1.3rem;\n  }\n}\n.messenger__photo {\n  position: absolute;\n  left: 50%;\n  top: 100%;\n  width: 6.5rem;\n  height: 6.5rem;\n  border: 0.274725275rem solid #e5e5e5;\n  border-radius: 50%;\n  background-size: cover;\n  background-repeat: no-repeat;\n  transform: translateX(-54%) translateY(-50%);\n  z-index: 2;\n}\n@media screen and (max-width: 768px) {\n  .messenger__photo {\n    width: 5.5rem;\n    height: 5.5rem;\n  }\n}\n.messenger__container {\n  padding: 1.5rem 1.6rem 1.9rem;\n  background-color: #f2f2f2;\n  overflow-y: hidden;\n}\n@media screen and (max-width: 768px) {\n  .messenger__container {\n    padding: 1.2rem 1.2rem 1.6rem;\n  }\n}\n.messenger__icons {\n  display: flex;\n  justify-content: space-between;\n  padding: 0 0.3rem 0 0.1rem;\n}\n.messenger__bubble-icon {\n  width: 1.55rem;\n  height: 1.55rem;\n  background: url(" + ___CSS_LOADER_URL___0___ + ") no-repeat;\n  cursor: pointer;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n  -webkit-tap-highlight-color: transparent;\n  user-select: none;\n}\n@media (hover: hover) {\n  .messenger__bubble-icon:hover {\n    transform: scale(1.1);\n  }\n}\n@media (hover: hover) {\n  .messenger__bubble-icon:active {\n    transform: scale(0.9);\n  }\n}\n@media (hover: none) {\n  .messenger__bubble-icon:active {\n    transform: scale(1.1);\n  }\n}\n.messenger__camera-icon {\n  width: 1.8rem;\n  height: 1.41rem;\n  background: url(" + ___CSS_LOADER_URL___1___ + ") no-repeat;\n  cursor: pointer;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n  -webkit-tap-highlight-color: transparent;\n  user-select: none;\n}\n@media (hover: hover) {\n  .messenger__camera-icon:hover {\n    transform: scale(1.1);\n  }\n}\n@media (hover: hover) {\n  .messenger__camera-icon:active {\n    transform: scale(0.9);\n  }\n}\n@media (hover: none) {\n  .messenger__camera-icon:active {\n    transform: scale(1.1);\n  }\n}\n.messenger__message {\n  font: bold 0.892857142857143rem 'Lato', Arial, sans-serif;\n  text-align: left;\n  letter-spacing: 0.04rem;\n  color: #8e8e8e;\n}\n@media screen and (max-width: 768px) {\n  .messenger__message {\n    font-size: 0.8rem;\n  }\n}\n.messenger__message_type_inbox {\n  position: relative;\n  margin: 1.4rem auto 0;\n  padding: 1.3rem 1.2rem 1.5rem;\n  width: 100%;\n  background-color: #fff;\n  border-radius: 0.549450549rem;\n  overflow-wrap: break-word;\n}\n@media screen and (max-width: 768px) {\n  .messenger__message_type_inbox {\n    padding: 1rem;\n    margin-top: 1rem;\n  }\n}\n.messenger__message_type_inbox::before {\n  content: '';\n  width: 0.72rem;\n  height: 0.72rem;\n  display: block;\n  position: absolute;\n  top: 0;\n  left: 50%;\n  background-color: #fff;\n  border-radius: 0.21978022rem;\n  transform: translate(-90%, -40%) rotate(45deg);\n}\n.messenger__message_type_outbox {\n  width: 98%;\n  padding: 1.12rem 1rem 1.56rem;\n  margin: 1.5rem auto 1rem;\n  background-color: #e5e5e5;\n  border: none;\n  border-radius: 0.274725275rem;\n  box-shadow: 0 0 0 0.21978022rem #fff;\n  resize: none;\n  outline: none;\n}\n@media screen and (max-width: 768px) {\n  .messenger__message_type_outbox {\n    padding: 1rem;\n    margin-top: 1rem;\n  }\n}\n.messenger__text {\n  overflow-y: auto;\n}\n.messenger__button {\n  width: 100%;\n  font-size: 0.85rem;\n}\n", ""]);
+exports.push([module.i, ".messenger {\n  border-radius: 0.3rem;\n  overflow: hidden;\n}\n.messenger__header {\n  position: relative;\n  width: 100%;\n  padding: 1.2rem 1.1rem 2.2rem;\n  text-align: center;\n  background-color: #4eb7a8;\n  box-shadow: inset 0 -2.5rem 0 #46ab9d;\n}\n@media screen and (max-width: 768px) {\n  .messenger__header {\n    box-shadow: inset 0 -2rem 0 #46ab9d;\n  }\n}\n.messenger__name {\n  padding-bottom: 1.9rem;\n  font: lighter 2.428571428571429rem 'Lato', Arial, sans-serif;\n  text-transform: capitalize;\n  word-spacing: -0.02rem;\n  letter-spacing: -0.11rem;\n  color: #fff;\n  word-break: break-word;\n}\n@media screen and (max-width: 768px) {\n  .messenger__name {\n    font-size: 2rem;\n    padding-bottom: 1.3rem;\n  }\n}\n.messenger__photo {\n  position: absolute;\n  left: 50%;\n  top: 100%;\n  width: 6.5rem;\n  height: 6.5rem;\n  border: 0.274725275rem solid #e5e5e5;\n  border-radius: 50%;\n  background-size: cover;\n  background-repeat: no-repeat;\n  transform: translateX(-54%) translateY(-50%);\n  z-index: 2;\n}\n@media screen and (max-width: 768px) {\n  .messenger__photo {\n    width: 5.5rem;\n    height: 5.5rem;\n  }\n}\n.messenger__container {\n  padding: 1.5rem 1.6rem 1.9rem;\n  background-color: #f2f2f2;\n  overflow-y: hidden;\n}\n@media screen and (max-width: 768px) {\n  .messenger__container {\n    padding: 1.2rem 1.2rem 1.6rem;\n  }\n}\n.messenger__buttons {\n  display: flex;\n  justify-content: space-between;\n  padding: 0 0.3rem 0 0.1rem;\n}\n.messenger__bubble-button {\n  width: 1.55rem;\n  height: 1.55rem;\n  background: url(" + ___CSS_LOADER_URL___0___ + ") no-repeat;\n  border: none;\n  cursor: pointer;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n  -webkit-tap-highlight-color: transparent;\n  user-select: none;\n}\n@media (hover: hover) {\n  .messenger__bubble-button:hover {\n    transform: scale(1.1);\n  }\n}\n@media (hover: hover) {\n  .messenger__bubble-button:active {\n    transform: scale(0.9);\n  }\n}\n@media (hover: none) {\n  .messenger__bubble-button:active {\n    transform: scale(1.1);\n  }\n}\n.messenger__camera-button {\n  width: 1.8rem;\n  height: 1.41rem;\n  background: url(" + ___CSS_LOADER_URL___1___ + ") no-repeat;\n  border: none;\n  cursor: pointer;\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n  -webkit-tap-highlight-color: transparent;\n  user-select: none;\n}\n@media (hover: hover) {\n  .messenger__camera-button:hover {\n    transform: scale(1.1);\n  }\n}\n@media (hover: hover) {\n  .messenger__camera-button:active {\n    transform: scale(0.9);\n  }\n}\n@media (hover: none) {\n  .messenger__camera-button:active {\n    transform: scale(1.1);\n  }\n}\n.messenger__message {\n  font: bold 0.892857142857143rem 'Lato', Arial, sans-serif;\n  text-align: left;\n  letter-spacing: 0.04rem;\n  color: #8e8e8e;\n}\n@media screen and (max-width: 768px) {\n  .messenger__message {\n    font-size: 0.8rem;\n  }\n}\n.messenger__message_type_inbox {\n  position: relative;\n  margin: 1.4rem auto 0;\n  padding: 1.3rem 1.2rem 1.5rem;\n  width: 100%;\n  background-color: #fff;\n  border-radius: 0.549450549rem;\n  overflow-wrap: break-word;\n}\n@media screen and (max-width: 768px) {\n  .messenger__message_type_inbox {\n    padding: 1rem;\n    margin-top: 1rem;\n  }\n}\n.messenger__message_type_inbox::before {\n  content: '';\n  width: 0.72rem;\n  height: 0.72rem;\n  display: block;\n  position: absolute;\n  top: 0;\n  left: 50%;\n  background-color: #fff;\n  border-radius: 0.21978022rem;\n  transform: translate(-90%, -40%) rotate(45deg);\n}\n.messenger__message_type_outbox {\n  width: 98%;\n  padding: 1.12rem 1rem 1.56rem;\n  margin: 1.5rem auto 1rem;\n  background-color: #e5e5e5;\n  border: none;\n  border-radius: 0.274725275rem;\n  box-shadow: 0 0 0 0.21978022rem #fff;\n  resize: none;\n  outline: none;\n}\n@media screen and (max-width: 768px) {\n  .messenger__message_type_outbox {\n    padding: 1rem;\n    margin-top: 1rem;\n  }\n}\n.messenger__text {\n  overflow-y: auto;\n}\n.messenger__button {\n  width: 100%;\n  font-size: 0.85rem;\n}\n", ""]);
 
 
 /***/ }),
@@ -19040,7 +19045,7 @@ exports = module.exports = __webpack_require__(0)(false);
 // Imports
 exports.i(__webpack_require__(7), "");
 // Module
-exports.push([module.i, ".speaker-carousel {\n  border-left: 0.549450549450549rem solid #fff;\n  border-right: 0.549450549450549rem solid #fff;\n}\n.speaker-carousel__cards {\n  border-radius: 0.549450549450549rem;\n  background-color: #c6c6c6;\n  width: 100%;\n  padding: 0.549450549450549rem 0.549450549450549rem 0 0.549450549450549rem;\n  margin: 3rem auto 1rem;\n}\n.speaker-carousel__card-wrapper {\n  display: flex;\n  flex-flow: row nowrap;\n  overflow-x: auto;\n  align-items: stretch;\n  justify-content: flex-start;\n}\n.speaker-carousel__card {\n  width: 21rem;\n  flex-shrink: 0;\n  overflow: hidden;\n  margin-right: 0.8rem;\n}\n@media screen and (max-width: 425px) {\n  .speaker-carousel__card {\n    width: 100%;\n    max-width: 19rem;\n  }\n}\n.speaker-carousel__card:last-child {\n  margin-right: 0;\n}\n.speaker-carousel__controls {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin-bottom: 3rem;\n}\n.speaker-carousel__controls_hidden {\n  display: none;\n}\n.speaker-carousel__arrow-button {\n  flex: auto 0 0;\n}\n.speaker-carousel__link {\n  margin: 0 1rem 0.3rem;\n  color: #4eb7a8;\n  text-decoration: underline;\n  cursor: pointer;\n  font-size: normal 1rem/1 'Lato', Arial, sans-serif;\n}\n@media (hover: hover) {\n  .speaker-carousel__link:hover {\n    text-decoration: none;\n  }\n}\n@media (hover: hover) {\n  .speaker-carousel__link:active,\n  .speaker-carousel__link:visited {\n    text-decoration: underline;\n  }\n}\n@media (hover: none) {\n  .speaker-carousel__link:active,\n  .speaker-carousel__link:visited {\n    text-decoration: none;\n  }\n}\n.speaker-carousel_view_small .speaker-carousel__arrow-button {\n  display: none;\n}\n.speaker-carousel_view_small .speaker-carousel__cards {\n  text-align: center;\n  background-color: #fff;\n}\n.speaker-carousel_view_small .speaker-carousel__card-wrapper {\n  flex-wrap: wrap;\n  justify-content: center;\n}\n.speaker-carousel_view_small .speaker-carousel__card {\n  margin: 0 0 1rem;\n}\n.speaker-carousel_view_small .speaker-carousel__card:nth-child(n+4) {\n  display: none;\n}\n.speaker-carousel_view_small.speaker-carousel_view_full .speaker-carousel__card-wrapper {\n  max-height: none;\n}\n.speaker-carousel_view_full .speaker-carousel__arrow-button {\n  display: none;\n}\n.speaker-carousel_view_full .speaker-carousel__cards {\n  text-align: center;\n  background-color: #fff;\n}\n.speaker-carousel_view_full .speaker-carousel__card-wrapper {\n  flex-wrap: wrap;\n  justify-content: center;\n}\n.speaker-carousel_view_full .speaker-carousel__card {\n  margin: 0 0.8rem 1rem 0.8rem;\n}\n.speaker-carousel_view_full.speaker-carousel_view_small .speaker-carousel__card {\n  margin: 0 0 1rem;\n  display: block;\n}\n.speaker-carousel .mCS-dark-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {\n  background-color: rgba(0,0,0,0.3);\n}\n.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {\n  background-color: rgba(0,0,0,0.5);\n}\n.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar .mCS-dark-thin.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {\n  background-color: rgba(0,0,0,0.7);\n}\n", ""]);
+exports.push([module.i, ".speaker-carousel {\n  border-left: 0.549450549450549rem solid #fff;\n  border-right: 0.549450549450549rem solid #fff;\n}\n.speaker-carousel__cards {\n  border-radius: 0.549450549450549rem;\n  background-color: #c6c6c6;\n  width: 100%;\n  padding: 0.549450549450549rem 0.549450549450549rem 0 0.549450549450549rem;\n  margin: 3rem auto 1rem;\n}\n.speaker-carousel__card-wrapper {\n  display: flex;\n  flex-flow: row nowrap;\n  overflow-x: auto;\n  align-items: stretch;\n  justify-content: flex-start;\n}\n.speaker-carousel__card {\n  width: 21rem;\n  flex-shrink: 0;\n  overflow: hidden;\n  margin-right: 0.8rem;\n}\n@media screen and (max-width: 425px) {\n  .speaker-carousel__card {\n    width: 100%;\n    max-width: 19rem;\n  }\n}\n.speaker-carousel__card:last-child {\n  margin-right: 0;\n}\n.speaker-carousel__controls {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin-bottom: 3rem;\n}\n.speaker-carousel__controls_hidden {\n  display: none;\n}\n.speaker-carousel__arrow-button {\n  flex: auto 0 0;\n}\n.speaker-carousel__control-view-button {\n  margin: 0 1rem 0.3rem;\n  color: #4eb7a8;\n  text-decoration: underline;\n  cursor: pointer;\n  font: normal 1rem/1 'Lato', Arial, sans-serif;\n  border: none;\n  background: none;\n}\n@media (hover: hover) {\n  .speaker-carousel__control-view-button:hover {\n    text-decoration: none;\n  }\n}\n@media (hover: hover) {\n  .speaker-carousel__control-view-button:active,\n  .speaker-carousel__control-view-button:visited {\n    text-decoration: underline;\n  }\n}\n@media (hover: none) {\n  .speaker-carousel__control-view-button:active,\n  .speaker-carousel__control-view-button:visited {\n    text-decoration: none;\n  }\n}\n.speaker-carousel_view_small .speaker-carousel__arrow-button {\n  display: none;\n}\n.speaker-carousel_view_small .speaker-carousel__cards {\n  text-align: center;\n  background-color: #fff;\n}\n.speaker-carousel_view_small .speaker-carousel__card-wrapper {\n  flex-wrap: wrap;\n  justify-content: center;\n}\n.speaker-carousel_view_small .speaker-carousel__card {\n  margin: 0 0 1rem;\n}\n.speaker-carousel_view_small .speaker-carousel__card:nth-child(n+4) {\n  display: none;\n}\n.speaker-carousel_view_small.speaker-carousel_view_full .speaker-carousel__card-wrapper {\n  max-height: none;\n}\n.speaker-carousel_view_full .speaker-carousel__arrow-button {\n  display: none;\n}\n.speaker-carousel_view_full .speaker-carousel__cards {\n  text-align: center;\n  background-color: #fff;\n}\n.speaker-carousel_view_full .speaker-carousel__card-wrapper {\n  flex-wrap: wrap;\n  justify-content: center;\n}\n.speaker-carousel_view_full .speaker-carousel__card {\n  margin: 0 0.8rem 1rem 0.8rem;\n}\n.speaker-carousel_view_full.speaker-carousel_view_small .speaker-carousel__card {\n  margin: 0 0 1rem;\n  display: block;\n}\n.speaker-carousel .mCS-dark-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {\n  background-color: rgba(0,0,0,0.3);\n}\n.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {\n  background-color: rgba(0,0,0,0.5);\n}\n.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar .mCS-dark-thin.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {\n  background-color: rgba(0,0,0,0.7);\n}\n", ""]);
 
 
 /***/ }),
@@ -19841,46 +19846,46 @@ module.exports = __webpack_require__.p + "assets/favicons/safari-pinned-tab.svg"
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./arrow-button/js/ArrowButton.js": 11,
-	"./arrow-button/js/init.js": 186,
-	"./button/js/Button.js": 12,
-	"./button/js/init.js": 188,
-	"./calendar/js/Calendar.js": 13,
-	"./calendar/js/init.js": 190,
-	"./donut-chart/js/DonutChart.js": 14,
-	"./donut-chart/js/init.js": 191,
-	"./drop-down/js/DropDown.js": 15,
-	"./drop-down/js/init.js": 192,
-	"./email-form/js/EmailForm.js": 16,
-	"./email-form/js/init.js": 193,
-	"./event-carousel/js/EventCarousel.js": 17,
-	"./event-carousel/js/init.js": 195,
-	"./map/js/Map.js": 9,
-	"./map/js/init.js": 198,
-	"./news-card/js/NewsCard.js": 18,
-	"./news-card/js/init.js": 199,
-	"./online-help/js/OnlineHelp.js": 19,
-	"./online-help/js/init.js": 200,
-	"./pass-selector/js/PassSelector.js": 20,
-	"./pass-selector/js/init.js": 201,
-	"./registration-form/js/RegistrationForm.js": 21,
-	"./registration-form/js/init.js": 202,
-	"./search-box/js/SearchBox.js": 22,
-	"./search-box/js/init.js": 203,
-	"./slider/js/Slider.js": 23,
-	"./slider/js/init.js": 208,
-	"./speaker-card/js/SpeakerCard.js": 24,
-	"./speaker-card/js/init.js": 209,
-	"./speaker-carousel/js/SpeakerCarousel.js": 25,
-	"./speaker-carousel/js/init.js": 210,
-	"./tick-box/js/TickBox.js": 26,
-	"./tick-box/js/init.js": 211,
-	"./toggle-switch/js/ToggleSwitch.js": 27,
-	"./toggle-switch/js/init.js": 212,
-	"./validation-input/js/ValidationInput.js": 28,
-	"./validation-input/js/init.js": 213,
-	"./video/js/Video.js": 29,
-	"./video/js/init.js": 214
+	"./arrow-button/ArrowButton.js": 11,
+	"./arrow-button/init.js": 186,
+	"./button/Button.js": 12,
+	"./button/init.js": 188,
+	"./calendar/Calendar.js": 13,
+	"./calendar/init.js": 190,
+	"./donut-chart/DonutChart.js": 14,
+	"./donut-chart/init.js": 191,
+	"./drop-down/DropDown.js": 15,
+	"./drop-down/init.js": 192,
+	"./email-form/EmailForm.js": 16,
+	"./email-form/init.js": 193,
+	"./event-carousel/EventCarousel.js": 17,
+	"./event-carousel/init.js": 195,
+	"./map/Map.js": 9,
+	"./map/init.js": 198,
+	"./news-card/NewsCard.js": 18,
+	"./news-card/init.js": 199,
+	"./online-help/OnlineHelp.js": 19,
+	"./online-help/init.js": 200,
+	"./pass-selector/PassSelector.js": 20,
+	"./pass-selector/init.js": 201,
+	"./registration-form/RegistrationForm.js": 21,
+	"./registration-form/init.js": 202,
+	"./search-box/SearchBox.js": 22,
+	"./search-box/init.js": 203,
+	"./slider/Slider.js": 23,
+	"./slider/init.js": 208,
+	"./speaker-card/SpeakerCard.js": 24,
+	"./speaker-card/init.js": 209,
+	"./speaker-carousel/SpeakerCarousel.js": 25,
+	"./speaker-carousel/init.js": 210,
+	"./tick-box/TickBox.js": 26,
+	"./tick-box/init.js": 211,
+	"./toggle-switch/ToggleSwitch.js": 27,
+	"./toggle-switch/init.js": 212,
+	"./validation-input/ValidationInput.js": 28,
+	"./validation-input/init.js": 213,
+	"./video/Video.js": 29,
+	"./video/init.js": 214
 };
 
 

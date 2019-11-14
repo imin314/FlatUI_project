@@ -48,7 +48,8 @@
                 </label>
               </div>
               <textarea class="email-form__message" name="message" placeholder="Your Message"></textarea>
-              <div class="email-form__button js-email-form__button"><a class="button js-button button_color_reverse" title="submit" tabindex="0">submit</a>
+              <div class="email-form__button js-email-form__button">
+                <button class="button js-button button_color_reverse" title="submit" tabindex="0" name="button" type="submit">submit</button>
               </div>
             </form>
           </div>
@@ -79,15 +80,19 @@
                   <div class="messenger__name">Sarah Brown</div>
                   <div class="messenger__photo" style="background-image: url(assets/img/sarah-brown.jpg)"></div>
                 </header>
-                <div class="messenger__container">
-                  <div class="messenger__icons"><a class="messenger__bubble-icon"></a><a class="messenger__camera-icon"></a></div>
+                <form class="messenger__container">
+                  <div class="messenger__buttons">
+                    <button class="messenger__bubble-button" name="bubble-button" type="button"></button>
+                    <button class="messenger__camera-button" name="camera-button" type="button"></button>
+                  </div>
                   <div class="messenger__message messenger__message_type_inbox">
                     <div class="messenger__text">Hi! How can I help you?</div>
                   </div>
                   <textarea class="messenger__message messenger__message_type_outbox" name="outbox" placeholder="Type your message..." rows="3"></textarea>
-                  <div class="messenger__button"><a class="button js-button button_color_reverse button_size_responsive" title="reply" tabindex="0">reply</a>
+                  <div class="messenger__button">
+                    <button class="button js-button button_color_reverse button_size_responsive" title="reply" tabindex="0" name="button" type="submit">reply</button>
                   </div>
-                </div>
+                </form>
               </div>
             </div>
             <button class="online-help__button js-online-help__button" aria-label="Chat Widget" title="Chat Widget"></button>
