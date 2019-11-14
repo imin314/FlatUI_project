@@ -6,7 +6,7 @@ const HtmlWebpackInjector = require('html-webpack-injector');
 module.exports = {
   entry: {
     main: './src/main.js',
-    main_head: './src/templates/js/layout.js',
+    main_head: './src/templates/layout.js',
   },
   devServer: {
     contentBase: path.resolve(__dirname, 'docs'),

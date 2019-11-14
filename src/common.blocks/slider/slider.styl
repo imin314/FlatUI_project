@@ -1,0 +1,80 @@
+@import '../../styles/variables.styl'
+@import '../../styles/mixins.styl'
+
+.slider
+  &__tip
+    display none
+    position absolute
+    width 2.472527472527473rem
+    height 1.758241758241758rem
+    padding-top 0.2747252747252747rem
+    z-index 2
+    font bold 0.92rem font-family
+    letter-spacing 0.08rem
+    text-align center
+    color white
+    border-radius 0.384615385rem
+    transform translate(-50%, -160%)
+
+    &::before
+      content ''
+      display block
+      position absolute
+      left 50%
+      bottom 0
+      width 0.5494505494505495rem
+      height @width
+      background-color inherit
+      border-radius 30%
+      transform translate(-50%, 20%) scaleY(1.3) rotate(-45deg)
+    
+    &_visible
+      display block
+
+  &__container
+    position relative
+    width 98%
+    height 0.3846153846153846rem
+    background-color color-bg
+    border-radius 0.549450549450549rem
+
+  &__handle
+    position absolute
+    width 1.4rem
+    height @width
+    z-index 2
+    border-radius 50%
+    outline none
+    transform translate(-50%, -40%)
+    cursor pointer
+
+  &__range
+    position absolute
+    height inherit
+    z-index 1
+    border-radius inherit
+
+  &__scale
+    position relative
+
+  &__scale-item
+    display inline-block
+    position absolute
+    top 1rem
+    transform translateX(-50%)
+    color darken(color-bg, 8.5)
+    font bold 0.785714285714286rem font-family
+  
+  &_color_orange
+    & ^[0]__tip,
+    & ^[0]__handle,
+    & ^[0]__range
+      background-color color-orange
+
+  &_color_cyan
+    & ^[0]__tip,
+    & ^[0]__handle,
+    & ^[0]__range
+      background-color color-cyan
+
+    

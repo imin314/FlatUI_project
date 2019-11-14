@@ -1,0 +1,59 @@
+@import '../../styles/variables.styl'
+@import '../../styles/mixins.styl'
+
+.toggle-switch
+  position relative
+  display inline-block
+  vertical-align middle
+  width 4.230769231rem
+  height 1.703296703rem
+  cursor pointer
+  noselect()
+
+  &__checkbox
+    visibility hidden
+    width 0
+    position absolute
+
+    &:checked + ^[0]__slider
+      background-color color-cyan
+      &::before
+        transform translateX(2.472527473rem)
+      &::after
+        content 'ON'
+        transform translateX(-1.483516484rem)
+
+  &__slider
+    position absolute
+    cursor pointer
+    top 0
+    left 0
+    right 0
+    bottom 0
+    background-color darken(color-bg, 9.80)
+    transition .4s
+    border-radius 2.747252747rem
+    outline none
+
+    &::before
+      position absolute
+      content ''
+      height 1.373626374rem
+      width 1.373626374rem
+      left 0.21978022rem
+      top 0.164835165rem
+      background-color white
+      transition .4s
+      border-radius 50%
+
+    &::after
+      content 'OFF'
+      position absolute
+      top 0.32967033rem
+      right 0.659340659rem
+      color white
+      font bold 0.85rem font-family
+      transition .4s
+      
+    &:focus
+      box-shadow 0 0 0.384615385rem color-outline

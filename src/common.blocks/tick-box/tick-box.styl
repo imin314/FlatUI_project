@@ -1,0 +1,54 @@
+@import '../../styles/variables.styl'
+@import '../../styles/mixins.styl'
+
+.tick-box
+  position relative
+  display inline-block
+  width 1.703296703rem
+  height @width
+  noselect()
+
+  &__input
+    visibility hidden
+    width 0
+    position absolute
+
+    &:checked + ^[0]__checkmark
+      background-color color-cyan
+      border-color color-cyan
+
+      &::after
+        border-color white
+    
+    &:focus + ^[0]__checkmark
+      box-shadow 0 0 0.384615385rem color-outline
+
+  &__checkmark
+    width 1.703296703rem
+    height @width
+    background-color color-bg
+    border 1px solid color-bg
+    border-radius 50%
+    cursor pointer
+    transition 0.3s
+    outline none
+
+    &::after
+      content ''
+      position absolute
+      left 0.43956044rem
+      top 0.494505495rem
+      width 0.769230769rem
+      height 0.43956044rem
+      border 2px solid darken(color-bg, 14.51)
+      border-top none
+      border-right none
+      transform rotate(-45deg)
+
+    &:focus
+      box-shadow 0 0 0.384615385rem color-outline
+  
+  &_color_orange
+    & ^[0]__input:checked + ^[0]__checkmark
+      background-color color-orange
+      border-color color-orange

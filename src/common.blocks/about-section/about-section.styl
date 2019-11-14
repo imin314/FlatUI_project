@@ -1,0 +1,73 @@
+@import '../../styles/variables.styl'
+@import '../../styles/mixins.styl'
+
+.about-section
+  width 100%
+  background-color color-bg
+
+  &__block
+    display flex
+    width 100%
+
+    @media screen and (max-width: 768px)
+      flex-wrap wrap
+
+  &__left-col
+    flex 32.96703297rem 2 2
+    max-width 60.44rem
+    padding 2rem
+
+  &__title
+    sectionTitle()
+    margin 2rem 0 1rem
+
+    &:first-of-type
+      margin-top 0
+
+  &__text
+    font-size 1rem
+    text-align justify
+    color color-text
+
+    &~&
+      margin-top 1rem
+
+  &__paragraph
+    padding-top 0.9rem
+
+  &__video-link
+    float right
+    margin-top 0.9rem
+    color color-orange
+    text-decoration underline
+
+    &:hover
+      @media (hover:hover)
+        text-decoration none
+
+    &:active
+      @media (hover:hover)
+        text-decoration underline
+        color color-text
+
+      @media (hover:none)
+        text-decoration none
+
+  &__right-col
+    flex 21.97802198rem 1 1
+    padding 1rem
+    text-align center
+    background-color white
+
+  &__video
+    position relative
+    top 50%
+    width 100%
+    max-width 32.96703297rem
+    margin 0 auto
+    transform translateY(-50%)
+
+  &__subtitle
+    font bold 1rem font-family
+    text-transform capitalize
+    color color-cyan

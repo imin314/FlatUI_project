@@ -1,0 +1,22 @@
+@import '../../styles/mixins.styl'
+
+.chart-section
+  &__title
+    sectionTitle()
+    margin-bottom 1.7rem
+    letter-spacing 0.06rem
+
+  &__container
+    display flex
+    justify-content space-between
+    flex-flow row nowrap
+
+    @media screen and (max-width: 900px)
+      flex-wrap wrap
+      justify-content space-around
+
+  &__chart
+    flex 6.868131868rem 0 0
+    max-width 16.48351648rem
+    margin 0 1rem 1.5rem
+    font-size 1rem

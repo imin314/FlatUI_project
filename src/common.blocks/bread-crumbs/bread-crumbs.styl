@@ -1,0 +1,59 @@
+@import '../../styles/variables.styl'
+
+.bread-crumbs
+  display flex
+  justify-content space-between
+  align-items center
+  flex-flow row nowrap
+  width 100%
+  padding 0
+
+  &__item
+    flex 9.835164835rem 1 1
+    position relative
+    z-index 0
+    list-style-type none
+    transition all 0.2s ease 
+
+    &:nth-child(1)
+      flex-basis 9.340659341rem
+
+    &:nth-child(2)
+      flex-basis 10.16483516rem
+
+    &:last-child
+      flex auto 0 0
+
+      &::after
+        display none
+
+    &::after
+      content ''
+      display block
+      position absolute
+      top 50%
+      z-index -1      
+      width 100%
+      height 0.3296703296703297rem
+      background color-orange
+      transform translateY(-50%)
+      transition all 0.2s ease
+
+    &_active 
+      &::after
+      & ~ ^[1] ^[0]__circle
+      & ~ ^[1]::after
+        background-color color-bg
+        transition all 0.2s ease
+
+  &__circle
+    width 2.032967032967033rem
+    height @width
+    padding-top 0.32967032967033rem
+    font bold 1rem font-family
+    text-align center
+    color white
+    border-radius 50%
+    background color-orange
+    transition all 0.2s ease
+

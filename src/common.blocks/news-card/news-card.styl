@@ -1,0 +1,111 @@
+@import '../../styles/variables.styl'
+@import '../../../node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css'
+
+.news-card
+  display flex
+  align-items stretch
+  width 100%
+  height 100%
+  text-align left
+  border-radius 0.274725274725275rem
+  overflow hidden
+
+  &__image
+    flex 6.758241758rem 0 2
+    min-width 4.395604396rem
+    background inherit no-repeat 0rem 0rem
+    background-clip border-box
+    background-size cover
+
+  &__content
+    display flex
+    flex-flow column nowrap
+    justify-content space-between
+    flex 13.73626374rem 2 1
+    padding 1.4rem 1.3rem 2.5rem 1.6rem
+    overflow hidden
+
+  &__title
+    flex auto 0 0
+    margin-bottom 0.7rem
+    font lighter 2rem/1 font-family
+    color white
+
+  &__date
+    flex auto 0 0
+    margin-bottom 1rem
+    font bold 0.8rem font-family
+    letter-spacing 0.05rem
+    color white
+    text-transform uppercase
+
+  &__text
+    flex auto 1 0
+    font normal 0.8rem font-family
+    color white
+    letter-spacing 0.036rem
+
+  ~/_type_event
+    & ^[0]__content
+      position relative
+      padding 1.4rem 1.5rem 1.6rem
+
+    & ^[0]__date
+      margin-bottom 1.4rem
+
+    & ^[0]__day
+      font lighter 5.1rem/4.1rem font-family
+      letter-spacing -0.2rem
+      color white
+
+    & ^[0]__month
+      font lighter 2.1rem font-family
+      color white
+      text-transform capitalize
+      margin-left 0.95rem
+
+    & ^[0]__title
+      margin-bottom 0.35rem
+      font bold 0.9rem font-family
+      color white
+      text-transform uppercase
+      letter-spacing 0.03rem
+
+    & ^[0]__text
+      min-height 2.48rem
+      margin-bottom 0.8rem
+      color white
+      font-weight normal
+
+    & ^[0]__button
+      flex auto 0 0
+      margin 0 auto
+
+  ~/_size_compact
+    & ^[0]__content
+      padding 1.3rem 1.3rem
+
+    & ^[0]__title
+      font-size 1.2rem
+
+    &^[0]_type_event
+      & ^[0]__content
+          padding 1.1rem 1.2rem 0.6rem
+      & ^[0]__date
+          margin-bottom 1rem
+      & ^[0]__title
+          font-size 0.8rem
+          line-height 1.2
+      & ^[0]__text
+          margin-bottom 0.7rem
+
+  ~/_with-scrollbar
+    & ^[0]__text
+      max-height 6em
+      overflow-y auto
+  
+  &_color_orange
+    background-color color-orange
+
+  &_color_cyan
+    background-color color-cyan

@@ -1,0 +1,63 @@
+@import '../../styles/variables.styl'
+
+.talks-section
+  text-align center
+
+  &__header
+    color color-cyan-darker
+    margin 1rem 0
+
+  &__day
+    font lighter 2rem font-family
+
+    @media screen and (max-width: 990px)
+      font-size 1.5rem
+
+  &__date
+    font bold 3rem font-family
+
+    @media screen and (max-width: 990px)
+      font-size 2rem
+
+  &__events
+    display flex
+    flex-flow row nowrap
+    justify-content space-around
+    align-items stretch
+    background-color color-bg
+    border-radius 0.549450549rem
+    margin 0 auto
+
+    @media screen and (max-width: 990px)
+      flex-wrap wrap
+      max-width 32.96703297rem
+
+  &__event
+    text-align center
+    margin 1rem
+    padding-top 2rem
+    position relative
+
+    &:not(:last-child)
+      @media screen and (max-width: 990px)
+        margin-bottom 0
+
+  &__time
+    color color-text
+    font lighter 1.3rem font-family
+    position absolute
+    top 0
+    left 50%
+    transform translateX(-50%)
+    white-space nowrap
+
+    @media screen and (max-width: 990px)
+      font-size 1.1rem
+  
+  &__card
+    height 100%
+    max-width 24.48406593rem
+    min-width 14.29175824rem
+
+
+    

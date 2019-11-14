@@ -1,0 +1,81 @@
+@import '../../styles/variables.styl'
+@import '../../styles/mixins.styl'
+@import '../../../node_modules/legit-ripple/dist/ripple.min.css'
+
+.button
+  display inline-block
+  min-width 8.406593406593407rem
+  padding 0.659340659340659rem 1rem
+  overflow hidden
+  font bold 0.857142857142857rem font-family
+  text-align center
+  text-decoration none
+  text-transform uppercase
+  letter-spacing 0.035rem
+  color color-cyan-darker
+  cursor pointer
+  background-color white
+  border solid 1px color-cyan-darker
+  border-radius 0.274725275rem
+  box-shadow 0 0.21978022rem 0 0 color-cyan-darker
+  transition all .3s, visibility 0s
+  outline none
+  noselect()
+
+  &:hover
+    @media (hover:hover)
+      color white
+      background-color color-cyan
+      border-color color-cyan
+
+  &:focus
+  &:active
+    color white
+    background-color color-cyan
+    border-color color-cyan
+
+  &:active
+    box-shadow none
+    transform translateY(0.21978022rem)
+
+  &_size_small
+    min-width 5.604395604395605rem
+    padding 0.32967032967033rem 0.96rem
+    font-size 0.714285714285714rem
+  
+  &_size_responsive
+    width 100%
+
+  &_color_orange
+    color color-orange-darker
+    background-color white
+    border-color color-orange-darker
+    box-shadow 0 0.21978022rem 0 0 color-orange-darker
+
+    &:hover
+      @media (hover:hover)
+        color white
+        background-color color-orange
+        border-color color-orange
+
+    &:focus
+    &:active
+      color white
+      background-color color-orange
+      border-color color-orange
+
+  &_color_reverse
+    color white
+    background-color color-cyan
+    border 1px solid color-cyan
+    box-shadow 0 0.21978022rem 0 0 color-cyan-darker
+
+    &:hover
+      @media (hover:hover)
+        box-shadow none
+        transform translateY(0.21978022rem)
+    
+    &:active
+    &:focus
+      box-shadow none
+      transform translateY(0.21978022rem)

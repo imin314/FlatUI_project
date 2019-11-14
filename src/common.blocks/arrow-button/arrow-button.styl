@@ -1,0 +1,81 @@
+@import '../../styles/variables.styl'
+@import '../../styles/mixins.styl'
+
+.arrow-button
+  noselect()
+  position relative
+  display inline-block
+  width 3.626373626373626rem
+  height @width
+  font-size inherit
+  background-color white
+  border 0.21978021978022rem color-cyan solid
+  border-radius 50%
+  cursor pointer
+  outline none
+
+  &_disabled
+    pointer-events none
+    background-color color-bg
+    border-color color-bg
+
+    & ^[0]__arrow
+      background-color color-bg
+      border-color white
+
+  &:hover
+    @media (hover:hover)
+      background-color color-cyan
+
+      & ^[0]__arrow
+        background-color color-cyan
+        border-color white
+
+  &:active
+    @media (hover:none)
+      background-color color-cyan
+
+      & ^[0]__arrow
+        background-color color-cyan
+        border-color white
+  
+  &:focus
+    background-color color-cyan
+
+    & ^[0]__arrow
+      background-color color-cyan
+      border-color white
+
+  &_direction_right
+    & ^[0]__arrow
+      right 50%
+      transform translate(30%, -50%) rotate(-45deg)
+
+    &:active
+      transform translateX(1px)
+
+  &_direction_left
+    & ^[0]__arrow
+      left 50%
+      transform translate(-30%, -50%) rotate(135deg)
+
+    &:active
+      transform translateX(-1px)
+      
+  &__arrow
+    position absolute
+    top 50%
+    width 1.263736263736264rem
+    height @width
+    border solid color-cyan
+    border-width 0 0.274725274725275rem 0.274725274725275rem 0
+  
+  &_size_small
+    width 1.8rem
+    height @width
+    border-width 0.15rem
+
+    & ^[0]__arrow
+      width 0.65rem
+      height @width
+      border-width 0 0.15rem 0.15rem 0

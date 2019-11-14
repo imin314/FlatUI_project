@@ -1,0 +1,147 @@
+@import '../../styles/variables.styl'
+@import '../../styles/mixins.styl'
+
+.map
+  width 100%
+  border-radius 0.274725275rem
+  overflow hidden
+  background-color color-bg
+
+  &__container
+    width 100%
+    height 28.5vw
+    min-height 14.50549451rem
+
+  &__footer
+    display flex
+    flex-flow row nowrap
+    justify-content space-between
+    align-items center
+    padding 1rem 4.3% 1.3rem
+    background-color color-orange
+
+    @media screen and (max-width: 600px)
+      flex-wrap wrap
+      padding 0.6rem 4.3%
+
+  &__title
+    color white
+    flex auto 0 0
+    font lighter 2.142857142857143rem font-family
+    margin-right 4.7%
+
+  &__address
+    flex auto 0 0
+    padding-top 0.3rem
+    text-align left
+
+    @media screen and (max-width: 600px)
+      order 2
+      flex-basis 100%
+
+  &__address-item
+    color white
+    text-transform uppercase
+    font bold 0.8928571428571429rem font-family
+
+    &_type_street
+      letter-spacing 0.045rem
+
+    &_type_city
+      letter-spacing 0.03rem
+
+  &__buttons
+    padding-top 0.3rem
+    flex-grow 1
+    display flex
+    flex-flow row nowrap
+    justify-content flex-end
+    align-items center
+
+    @media screen and (max-width: 600px)
+      order 1
+      flex 4.395604396rem 1 1
+
+  &__button
+    position relative
+    cursor pointer
+    outline none
+    noselect()
+
+    &:hover
+      @media (hover:hover)
+        transform scale(1.1)
+
+    &:active
+      @media (hover:none)
+        transform scale(1.1)
+        
+    &:focus
+      transform scale(1.1)
+
+    &_type_search
+      margin-right 1.9rem
+      flex 1.3rem 0 0
+      height 1.3rem 
+      border-radius 50%
+      border 0.1098901098901099rem solid white
+      @media screen and (max-width: 600px)
+        margin-right 1rem
+
+      &::before
+        content ''
+        position absolute
+        top 50%
+        left 0
+        height 0.1098901098901099rem
+        width 1.8rem
+        border-left 0.5494505494505495rem solid white
+        border-right 0.549450549450545rem solid white
+        transform translate(-20%,-50%)
+
+      &::after
+        content ''
+        position absolute
+        top 0
+        left 50%
+        height 1.8rem
+        width 0.1098901098901099rem
+        border-top 0.5494505494505495rem solid white
+        border-bottom 0.5494505494505495rem solid white
+        transform translate(-50%,-20%)
+
+    &_type_pin
+      align-self flex-start
+      flex 0 0 1.099rem
+      height 1.649rem
+
+      &::before
+        content ''
+        display block
+        position absolute
+        top 0.55rem
+        left 0
+        width 0.55rem
+        height 1.099rem
+        background radial-gradient(2.198rem 2.418rem at 1.099rem 0, white 50%, transparent 50%)
+        z-index 1
+      
+      &::after
+        content ''
+        display block
+        position absolute
+        top 0.55rem
+        right 0
+        width 0.55rem
+        height 1.099rem
+        background radial-gradient(2.198rem 2.418rem at -0.55rem 0, white 50%, transparent 50%)
+        z-index 1
+
+  &__pin-circle
+    position relative
+    width 1.099rem
+    height @width
+    border 0.33rem solid white
+    border-radius 50%
+    background color-orange
+    z-index 2

@@ -1,0 +1,88 @@
+@import '../../styles/variables.styl'
+@import '../../styles/mixins.styl'
+
+.drop-down
+  text-align left
+
+  &__textarea
+    display flex
+    flex-flow row nowrap
+    align-items stretch
+    background-color color-bg
+    border-radius 0.1648351648351648rem
+    overflow hidden
+
+  &__label
+    width 100%
+    padding 0.32967033rem 0.934065934rem 0.384615385rem
+    font normal 1rem ui-font-family
+    letter-spacing 0.010989011rem
+    text-transform capitalize
+    color darken(color-bg, 40.5)
+    background inherit
+    border none
+    -webkit-appearance none
+    cursor pointer
+
+  &__button
+    position relative
+    flex 2.362637363rem 0 0
+    border none
+    background-color color-cyan
+    cursor pointer
+    -webkit-appearance none
+    outline none
+
+    &::before
+      content ''
+      position absolute
+      left 50%
+      top 50%
+      height 0.714285714rem
+      width @height
+      border 0.164835165rem solid white
+      border-top none
+      border-right none
+      transform translate(-55%, -55%) rotate(-45deg)
+
+    &:hover
+    &:focus
+      @media (hover:hover)
+        background-color darken(color-cyan, 5)
+
+    &:active
+      @media (hover:none)
+        background-color darken(color-cyan, 5)
+
+    &:active::before
+      @media (hover:hover)
+        transform translate(-55%, -55%) rotate(-45deg) scale(0.9)
+
+  &__list
+    display none
+    margin 0
+    padding 0.3rem 0
+    background-color color-cyan
+    border-radius 0 0 0.2197802197802198rem 0.2197802197802198rem
+
+  &_active ^[0]__list
+    display block
+
+  &__item
+    padding 0.32967033rem 0.989010989rem
+    margin-bottom 0.21978022rem
+    font normal 1rem ui-font-family
+    letter-spacing 0.010989011rem
+    color white
+    background-color inherit
+    list-style none
+    cursor pointer
+
+    &:hover
+      @media (hover:hover)
+        background-color color-cyan-darker
+        
+    &:active
+    &:focus
+      background-color color-cyan-darker
+      

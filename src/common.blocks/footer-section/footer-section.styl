@@ -1,0 +1,33 @@
+@import '../../styles/variables.styl'
+
+.footer-section
+  display flex
+  flex-flow row wrap
+  justify-content space-between
+  width 100%
+  padding 2rem 3rem
+  color white
+  background-color color-text
+
+  @media screen and (max-width: 600px)
+    padding 1.5rem 2rem
+
+  &__contacts
+    width 50%
+    flex-shrink 0
+    text-align left
+
+  &__docs
+    width 50%
+    flex-shrink 0
+    text-align right
+    
+  &__copyright
+    width 100%
+    margin-top 2rem
+    text-align center
+    font-size 1rem
+
+    @media screen and (max-width: 600px)
+      font-size 0.8rem
+

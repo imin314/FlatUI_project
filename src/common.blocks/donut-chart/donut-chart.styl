@@ -1,0 +1,43 @@
+@import '../../styles/variables.styl'
+@import '../../styles/mixins.styl'
+
+.donut-chart
+  position relative
+
+  &__chart-container
+    fill transparent
+
+  &__ring
+    fill transparent
+    stroke color-bg
+  
+  &_type_percentage
+    & ^[0]__ring
+      stroke-width 0.10989010989011rem
+
+    & ^[0]__segment
+      stroke color-orange
+      stroke-width 0.10989010989011rem
+    
+    & ^[0]__label
+      display block
+      position absolute
+      top 46%
+      left 50%
+      font lighter 2.857142857142857rem font-family
+      color darken(color-bg, 49)
+      transform translate(-50%, -50%)
+  
+  &_type_pie
+    & ^[0]__ring
+      stroke-width 0.384615384615385rem
+
+    & ^[0]__segment
+      stroke-width 0.384615384615385rem
+      for num in (1..10)
+        &:nth-child({num + 1})
+          stroke setColorByIndex(num)
+  
+  &_color_transparent
+    & ^[0]__ring
+      stroke transparent
